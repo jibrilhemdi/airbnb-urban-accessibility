@@ -233,3 +233,69 @@ class V4PersistenceTests(unittest.TestCase):
         self.assertNotIn('PRIVATE_SENTINEL',json.dumps(result))
         self.assertEqual(result['counts'],{'raw':1})
         with self.assertRaises(FileExistsError): listing_evidence(self.conn,self.paths)
+
+    def test_stockholm_amendment_append_only_parent_failure_and_spatial_export(self):
+        import csv
+        import gzip
+        from unittest.mock import patch
+        from pyproj import Transformer
+        from src.ingestion.common import sha256_file
+        from src.v4.listings import REQUIRED, audit_listings, persist_ingestion, encoded_json
+        from src.v4.reporting import listing_evidence
+        from src.v4.stockholm_boundary import recover, qualify_regso, RESOLVED
+        from test_v4_stockholm_boundary import fixture
+        from test_v4_listings import ListingAuditTests
+        parent_scope=scope('stockholm',stamp='20261011T121000Z')
+        paths=Paths(scope('stockholm',stamp='20261011T122000Z'),self.paths.root)
+        frame, areas, policy=fixture(); native,geographic,qa=qualify_regso(frame,areas,policy)
+        project=Transformer.from_crs(3006,4326,always_xy=True)
+        csv_rows=[]
+        for number,x,price in [(1,670100,'$1,234.50'),(2,670500,'')]:
+            lon,lat=project.transform(x,6580100)
+            csv_rows.append(ListingAuditTests().row(id=str(number),longitude=str(lon),latitude=str(lat),price=price,
+                price_quote_price_per_night='' if not price else '1234.50',
+                price_quote_raw=json.dumps({'quote':{'currency':'SEK','date_match':True}})))
+        listing=paths.source('inside_airbnb','listings.csv.gz'); listing.parent.mkdir(parents=True)
+        with gzip.open(listing,'wt',newline='') as f:
+            writer=csv.DictWriter(f,fieldnames=sorted(REQUIRED));writer.writeheader();writer.writerows(csv_rows)
+        codes=paths.source('official_scope_codes','municipal_codes.html');codes.parent.mkdir(parents=True)
+        codes.write_text('<p>0180 Stockholm</p>')
+        failure_path=paths.source('official_boundary','boundary.json.receipt.json');failure_path.parent.mkdir(parents=True)
+        failure_path.write_bytes(encoded_json({'status':'BLOCKED','http_status':401,'local_location':None,
+            'source_url':'https://api.lantmateriet.se/ogc-features/v1/administrativ-indelning/collections/kommuner/items?f=json&limit=1'}))
+        def record(source,name,crs='not_spatial'):
+            return {'source_id':source,'filename':name,'source_url':'synthetic://fixture',
+                'acquired_at_utc':'2026-10-11T12:00:00Z','geographic_extent':'synthetic',
+                'source_crs':crs,'sha256':sha256_file(paths.source(source,name)),'reference_period':'2025-01-01'}
+        _,parent_manifest=freeze_sources(paths,[record('inside_airbnb','listings.csv.gz'),record('official_scope_codes','municipal_codes.html')])
+        old_rows,old_summary=audit_listings(listing,scrape_id='20260630053456',currency='SEK')
+        with self.engine.begin() as conn:
+            persist_ingestion(conn,parent_scope,parent_manifest,old_rows,old_summary,[])
+        policy.update(parent_run_id=parent_scope.run_id,parent_manifest_sha256=canonical_hash(parent_manifest),
+            parent_summary_sha256=canonical_hash(old_summary),failed_receipt_sha256=sha256_file(failure_path),listing_sha256=sha256_file(listing))
+        source=paths.source('scb_fixture','source.txt');source.parent.mkdir(parents=True);source.write_text('synthetic RegSO fixture')
+        boundary_record={**record('scb_fixture','source.txt','EPSG:3006'),'selection':{'municipality':'0180'}}
+        with self.engine.connect() as conn, conn.begin(), patch('src.v4.stockholm_boundary.scb_sources',
+                return_value=([boundary_record],boundary_record,native,geographic,qa)), patch('src.v4.listings.urlopen') as download:
+            conn.exec_driver_sql('SET TRANSACTION READ ONLY')
+            manifest,rows,summary,boundaries=recover(conn,paths,parent_scope.run_id,policy)
+            download.assert_not_called()
+        summary['boundary_qa']['private_prediction']='PRIVATE_SENTINEL'
+        summary['boundary_amendment']['private_coordinates']='PRIVATE_SENTINEL'
+        with self.engine.begin() as conn:
+            persist_ingestion(conn,paths.scope,manifest,rows,summary,boundaries)
+        with self.engine.connect() as conn, conn.begin():
+            conn.exec_driver_sql('SET TRANSACTION READ ONLY')
+            evidence=listing_evidence(conn,paths)
+            self.assertEqual(evidence['status'],RESOLVED)
+            self.assertEqual(evidence['counts']['inside_boundary_positive_price'],1)
+            self.assertEqual(evidence['counts']['outside_boundary_dwelling'],1)
+            self.assertEqual(evidence['counts']['boundary_150m_raw'],2)
+            self.assertNotIn('PRIVATE_SENTINEL',json.dumps(evidence))
+            stored_parent=conn.scalar(text('SELECT summary FROM v4_raw.listing_ingestions WHERE '+SCOPE_SQL),parent_scope.params())
+            self.assertEqual(canonical_hash(stored_parent),canonical_hash(old_summary))
+            self.assertIsNone(stored_parent['counts']['inside_boundary_raw'])
+            with self.assertRaisesRegex(RuntimeError,'immutable ingestion'):
+                recover(conn,paths,parent_scope.run_id,policy)
+        self.assertEqual(sha256_file(failure_path),policy['failed_receipt_sha256'])
+        self.assertEqual(sha256_file(listing),policy['listing_sha256'])

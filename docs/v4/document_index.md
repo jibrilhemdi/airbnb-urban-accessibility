@@ -16,6 +16,9 @@ No inaccessible V4 proposal or historical eight-model draft was reconstructed.
 | [architecture.md](architecture.md) | Active V4 isolation, command behavior and persistence contract |
 | [listing_acquisition.md](listing_acquisition.md) | Matched-source adapter, inherited rules, municipal/quote audit and blocked boundaries |
 | `listing_acquisition_audit.json` | Safe SQL-derived aggregate/provenance evidence; explicit immutable ingestion IDs, no raw rows |
+| [stockholm_boundary_amendment_20261011.md](stockholm_boundary_amendment_20261011.md) | Active Stockholm-only SCB RegSO 2025 operational boundary amendment; original failure preserved |
+| `stockholm_boundary_amendment_20261011_audit.json` | Safe SQL-derived amended Stockholm evidence; supersedes the original boundary interpretation, no private rows |
+| `config/v4/stockholm_boundary_amendment.json` | Pinned official source bytes/schema, selected 0180 IDs, QA and temporal decision; explicit recovery adapter |
 | `config/v4/listing_sources.json` | Source-selection policy, native currencies and municipal identities; unresolved geometry/vintage retained |
 | `config/v4/cities.json` | Versioned three-city evidence and unresolved fields |
 | `config/v4/research_design.json` | Active V4 machine-readable definitions, inherited candidates and unresolved gates |

@@ -101,3 +101,7 @@ v4-ingest:
 
 v4-listing-audit:
 	$(PYTHON) -m src.v4.listings audit $(V4_ARGS)
+
+.PHONY: v4-stockholm-boundary
+v4-stockholm-boundary:
+	$(PYTHON) -m src.v4.stockholm_boundary ingest $(V4_ARGS) --previous-run-id $(PREVIOUS_RUN_ID)

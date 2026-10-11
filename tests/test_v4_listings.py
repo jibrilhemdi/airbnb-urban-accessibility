@@ -155,6 +155,11 @@ class AcquisitionTests(unittest.TestCase):
             self.assertEqual(blocked['http_status'],401); self.assertIsNone(blocked['local_location'])
             self.assertFalse(paths.source('restricted','source.txt').exists())
             self.assertNotIn('credentials',json.dumps(blocked).lower())
+            before=paths.source('restricted','source.txt.receipt.json').read_bytes()
+            with patch('src.v4.listings.urlopen') as retry:
+                self.assertEqual(acquire(paths,'restricted','source.txt',response.url,**kwargs),blocked)
+                retry.assert_not_called()
+            self.assertEqual(paths.source('restricted','source.txt.receipt.json').read_bytes(),before)
 
     def test_official_unicode_catalogue_path_is_encoded_only_for_transport(self):
         with tempfile.TemporaryDirectory() as root:

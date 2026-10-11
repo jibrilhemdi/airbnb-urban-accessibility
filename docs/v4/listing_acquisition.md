@@ -1,6 +1,10 @@
 # V4 matched-listing acquisition and boundary audit
 
 Definition `v4_listing_ingestion_20261011`; acquisition only, no fitted models.
+Stockholm boundary amendment `v4_stockholm_regso_boundary_20261011` is active;
+see [the dated source amendment](stockholm_boundary_amendment_20261011.md)
+and `stockholm_boundary_amendment_20261011_audit.json`. Original receipts,
+ingestions and `listing_acquisition_audit.json` remain historical frozen evidence.
 Read the implementation contract, active specification and step log first.
 
 ## Inherited rules checked before ingestion
@@ -101,20 +105,27 @@ not independently verified. Requested check-in/checkout ranges span
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Copenhagen/Frederiksberg | 23,144 | 21,080 | 12,521 | 12,508 | 8,559 | 0 / 0 |
 | Oslo | 13,391 | 11,776 | 8,557 | 8,557 | 3,219 | 0 / 0 |
-| Stockholm catalogue extract | 4,806 | 3,834 | 2,510 | UNRESOLVED | 1,324 | 0 / 0 |
+| Stockholm, amended SCB 2025 operational union | 4,806 | 3,834 | 2,510 | 2,510 | 1,324 | 0 / 0 |
 
 These are acquisition counts, not housing-qualified prediction/OLS samples.
 PostgreSQL is authoritative; preliminary audits remain immutable and are
 superseded by the explicitly selected scopes, never summed as new listings.
 
-## Blocked boundary adapter
+Stockholm's current row is from the separate SQL ingestion
+`research_v4_stockholm_20261011T151637Z`; the other rows retain their original
+selected identities. Stockholm raw/dwelling inside counts are 4,806/3,834;
+outside counts are zero, computed against the geometry. Within 150 metres of
+the dissolved outer boundary in EPSG:3006: 96 raw / 69 dwelling / 49 positive-price
+dwelling records. No uncertainty diagnostic excludes observations.
+
+## Original blocked adapter and active Stockholm amendment
 
 Oslo uses the Kartverket municipal `0301/omrade` API with explicit EPSG:4326.
 The API's current geometry is a verified municipality, but its geometry vintage
 is not supplied; retain current-at-retrieval and mark temporal qualification
 unresolved. Do not assign a June/annual vintage from HTTP Last-Modified.
 
-Stockholm's official Lantmäteriet municipal collection probe is
+Stockholm's original official Lantmäteriet municipal collection probe is
 `https://api.lantmateriet.se/ogc-features/v1/administrativ-indelning/collections/kommuner/items?f=json&limit=1`.
 This is an authentication probe, not a selected Stockholm geometry. If access
 requires credentials, do not bypass it; qualified municipal API feature selection,
@@ -128,7 +139,21 @@ Inside-boundary counts are NULL when the official geometry is unavailable,
 never zero or the county's listing count. Resolving this blocker requires an
 authorized source/selection amendment and a new freeze.
 
-Safe public evidence and actual aggregate counts are recorded separately in
-`listing_acquisition_audit.json`. Raw rows, coordinates, IDs, host details and
+The user subsequently authorized evaluation of SCB **RegSO 2025**, distinct from
+that simplified thematic dataset. The audited GeoPackage's `kommunkod=0180`
+selects 127 valid polygons at reference 2025-01-01 in EPSG:3006. Their dissolve
+passes topology, overlap, coverage and independent official municipal-area QA.
+SCB 2025/2026 change notices support the documented temporal limitation; the
+union is SCB-derived 2025 operational geometry, not exact certified Lantmäteriet
+2026 linework. The new manifest/run and `make v4-stockholm-boundary` explicitly
+amend the source. Original 401 receipts and NULL-count ledgers are unchanged.
+Status: **RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT** for Stockholm listing
+boundaries only. The historical `v4-acquire`/`v4-ingest` adapter retains its original
+authentication probe; use the explicit amendment command documented above.
+Neither RegSO IDs nor provider labels are automatically analysis/housing areas.
+
+Original safe public evidence is preserved in `listing_acquisition_audit.json`;
+the active Stockholm counts/provenance are in the separate dated amendment audit.
+Raw rows, coordinates, IDs, host details and
 credentials are never committed. H/context/analysis-area and model-sample gates
 remain BLOCKED regardless of acquisition success.

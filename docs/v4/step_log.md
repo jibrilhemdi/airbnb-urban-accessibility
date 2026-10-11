@@ -385,3 +385,109 @@ Requested commit: `feat(v4): ingest matched city listings and study boundaries`.
 Push `HEAD` explicitly to `refs/heads/v4` on recorded origin and verify remote
 SHA equals local HEAD after commit; report outside this commit. Failure is
 LOCAL_ONLY. This entry does not record its own commit SHA or claim a future push.
+
+## Step 4 targeted Stockholm recovery — 11 October 2026
+
+Scope: user-authorized evaluation of SCB RegSO 2025 as an operational Stockholm
+municipal boundary substitute; no later steps, feature/housing assignments or
+model fits. Read AGENTS, contract, repository audit, active specification,
+listing acquisition, source policy/registry, receipts, ledger and tests. Sole
+recorded origin fetched; local/remote V4 both started at
+`7256241cf26802a015673b247fdfb627a4ba6589`, with the recorded main base in ancestry,
+clean tracked/untracked/staged state and no unfinished Git operation. Existing
+worktrees/remotes were preserved; no main/V3 branch change.
+
+Outcome: Stockholm listing-boundary acquisition is
+**RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT**. The dated
+[source amendment](stockholm_boundary_amendment_20261011.md) and separate
+`stockholm_boundary_amendment_20261011_audit.json` hold the evidence. Original
+Lantmäteriet HTTP 401 receipt, all earlier ledgers/NULL counts, previous public
+listing audit and private frozen exports remain unchanged. Airbnb was not
+downloaded again. Existing 023/024 migrations/storage were sufficient; neither
+migration was edited and no new migration was necessary.
+
+Verified source: official SCB page-linked WFS GeoPackage, CC0, actual layer
+`RegSO_2025`, geometry column `sp_geometry`, native EPSG:3006, version `2025_v2`,
+reference 2025-01-01. Retrieved 2026-10-11T15:03:48+00:00; GeoPackage SHA256
+`df9bb507bb360020885b47620a5e7bba6c633322236ddaf32ff2a20935c58a5a`.
+Actual `kommunkod=0180` selects 127 unique valid polygons; county 01 is only
+a consistency check. Dissolve: valid, nonempty, one component, zero holes,
+zero measurable overlap, complete selected coverage, zero adjacent municipal
+intersection area. Area 215.75729922473672 km² agrees with independently
+published official 2025/2026 municipality totals to 0.77526328 m², within the
+50 m² source rounding interval. Reviewed municipal-change sections of three
+official 2025/first-half-2026 notices; no municipal entries, distinct from the
+Stockholm parish merger. Accepted as SCB-derived **2025 operational geometry**,
+not exact certified Lantmäteriet June 2026 linework. Bounds/vintage limitations
+and the authenticated import option are explicit in the amendment.
+
+New immutable ingestion: `research_v4_stockholm_20261011T151637Z`, in the dedicated
+PostgreSQL/PostGIS V4 database. Manifest:
+`d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172`, combining
+eight existing verified source records and 12 separately identified SCB sources.
+Reuse existing acquisition, manifest, listing-audit and insert-only persistence
+functions. New explicit `v4-stockholm-boundary` command and pinned policy prevent
+silent substitution/reopening. Source-amendment policy participates in Stockholm
+scientific dependencies; reporting/Markdown/log edits remain excluded.
+
+Computed raw/dwelling/positive-price counts **4,806 / 3,834 / 2,510**, all inside
+the operational union, **0 outside**, invalid/duplicate/unclassified **0**.
+Preserved eligible missing-price records **1,324**, nonpositive **0**.
+Within 150 m of dissolved exterior rings in EPSG:3006: **96 / 69 / 49** for the
+same universes, all on the inside side. Membership remains covers in EPSG:4326;
+PostGIS independently reproduced inclusion and distance indicators and aggregate
+counts. The diagnostic excludes no listings. Official analysis/native housing
+IDs remain NULL on every row; RegSO components are not inferred clusters or H
+areas. Raw GeoPackage/receipts, private coordinates/rows/exports and credentials
+remain ignored. The public JSON is exactly the whitelisted SQL export.
+
+Actual checks:
+
+- `make compile`: passed.
+- `make v4-test`: **53 discovered, 40 passed, 13 opt-in DB skipped**, zero failures.
+  Six new boundary unit tests cover municipality-versus-county selection,
+  vintage/CRS/schema/ID and topology failures, no repair/fallback, exact municipal
+  area metadata, dissolve/exterior-distance behavior and scientific policy hashes.
+- `make v4-test-db`: **13 passed**, 1.329 s, fresh owned disposable PostGIS DB;
+  temporary synthetic sources only. Covers qualified boundary ingestion, parent
+  receipt and ledger preservation, append-only recovery, SQL covers/distance and safe
+  export, refusal to reopen and normal migration/isolation guards. Initial new
+  fixture distance and integer-versus-JSON key assertions were corrected and
+  the full disposable suite rerun successfully. Remaining disposable DBs: zero.
+- Safe `scripts/v4_repository_checks.py --baseline-tests`: **147 discovered,
+  111 passed, 36 explicitly skipped**, zero errors/failures, 62.600 s. Live V3
+  mutation flags disabled and candidate export isolated in a temporary root;
+  synthetic evaluation fixtures are tests only, not research results.
+- `--verify docs/v4/protected_v3_manifest.json --database`: **1,696 protected
+  V3 files, 22 applied migration hashes and five SQL fingerprints unchanged**,
+  read-only. No V3 regeneration command was invoked.
+- Original **45** inventoried V4 frozen files/receipts/manifests/private exports
+  unchanged. Original **12** ledger summaries/manifests have unchanged ordered
+  SHA256 `2f4341a739750a46faea65b05cd59c7776dc7d115acdcc63161609e966f19acb`.
+  There are now 13 immutable ingestion ledgers and **zero modelling runs**.
+  All 20 amended source hashes and 12 new receipt hashes match; public export
+  matches its recorded recovery-code/policy checksums and SQL export bytes.
+- Actual `make v4-stockholm-boundary` ingestion and `make v4-listing-audit`
+  export entry points passed under the recorded new identity. Read-only SQL
+  verifies valid/nonempty stored geometry, SRID 4326/native EPSG:3006/reference
+  2025-01-01, unchanged 023/024 hashes and zero analysis/housing assignments.
+  Ignore probes and `git diff --check` pass; final explicit staged-file review
+  is required before commit.
+
+Stockholm's listing-boundary prerequisite is cleared for a separately requested
+Step 5; none was executed or authorized here. Housing-price qualification and
+modelling remain **BLOCKED**, as do Stockholm's general metric CRS/anchor/context
+sources and Oslo's separate vintage issue. No automatic no-H ladder, narrower
+city scope, supervisor approval or retrospective preregistration is introduced.
+
+Checkpoint: **READY_TO_COMMIT — STOCKHOLM BOUNDARY RESOLVED WITH AMENDMENT**.
+Intended safe files: Makefile; `config/v4/cities.json` and
+`config/v4/stockholm_boundary_amendment.json`; `src/v4/stockholm_boundary.py`,
+`src/v4/reporting.py`, `src/v4/identity.py`; the four V4 architecture/listings/
+persistence/Stockholm-boundary test files; V4 contract, document index, active
+specification, source registry, listing acquisition, step log, dated amendment
+Markdown and its safe aggregate JSON. No raw/private source file is staged.
+Requested commit: `fix(v4): resolve Stockholm boundary via audited SCB geometry`.
+Push HEAD explicitly to recorded origin `refs/heads/v4` and verify remote/local
+SHA equality after committing; report outside this commit. Push failure means
+LOCAL_ONLY. This entry does not record its own commit SHA or claim a future push.

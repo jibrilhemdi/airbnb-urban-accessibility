@@ -208,7 +208,10 @@ private. Record all external provenance and never fill missing scientific data.
 `config/v4/research_design.json` is the versioned machine-readable specification;
 `src/v4/specification.py` exposes model metadata only. The specification step
 performed no acquisition/fitting; subsequent steps add isolated persistence and
-immutable source/audit ingestion. Municipal geometry access/vintage, H and other
-sample/context/fold gates remain BLOCKED; no V4 fitted result exists.
+immutable source/audit ingestion. Stockholm listing-boundary acquisition is
+RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT through the
+[SCB-derived 2025 operational union](stockholm_boundary_amendment_20261011.md).
+Oslo boundary vintage, H and other sample/context/fold gates remain BLOCKED;
+no V4 fitted result exists. RegSO IDs are not automatically analysis/housing areas.
 Markdown is authoritative; see [document index](document_index.md)
 for DOCX status and [source registry](source_registry.md) for unresolved inputs.

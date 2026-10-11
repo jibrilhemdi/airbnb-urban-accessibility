@@ -37,8 +37,12 @@ class CityConfigurationTests(unittest.TestCase):
         self.assertEqual(blocked, ['housing: unresolved/unqualified'])
         for city in ('oslo', 'stockholm'):
             blockers = city_blockers(VERSION, city)
-            self.assertEqual(len(blockers), 8)
-            self.assertIn('study_boundary: unresolved/unqualified', blockers)
+            self.assertEqual(len(blockers), 8 if city == 'oslo' else 7)
+            if city == 'oslo':
+                self.assertIn('study_boundary: unresolved/unqualified', blockers)
+            else:
+                self.assertFalse(any(x.startswith('study_boundary:') for x in blockers))
+                self.assertEqual(config['cities'][city]['study_boundary']['value'][0]['source_date'],'2025-01-01')
             self.assertIn('housing: unresolved/unqualified', blockers)
             self.assertEqual(config['cities'][city]['snapshot_date']['value'], '2026-06-30')
             self.assertTrue(config['cities'][city]['snapshot_date']['evidence'])

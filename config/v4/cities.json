@@ -325,15 +325,28 @@
     },
     "stockholm": {
       "study_boundary": {
-        "status": "unresolved",
-        "value": null,
-        "evidence": [
+        "status": "verified_local_evidence",
+        "value": [
           {
-            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
-            "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+            "municipality": "0180",
+            "path": "data/interim/v4/research_design_v4/research_v4_stockholm_20261011T151637Z/stockholm/2026-06-30/study_boundary.geojson",
+            "sha256": "61723f07fc6f8e730d1c8f578e5e1f779a2f450ea09cabbdf5523421305a01fa",
+            "source_url": "https://geodata.scb.se/geoserver/stat/wfs?REQUEST=GetFeature&TYPENAMES=stat%3ARegSO_2025&outputFormat=geopackage&service=WFS&version=1.1.0",
+            "source_crs": "EPSG:4326",
+            "native_crs": "EPSG:3006",
+            "source_date": "2025-01-01",
+            "acquired_at_utc": "2026-10-11T15:03:48+00:00",
+            "qualification": "SCB-derived RegSO 2025 operational geometry; RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT; not certified Lantmäteriet June 2026 linework",
+            "definition_version": "v4_stockholm_regso_boundary_20261011",
+            "manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172"
           }
         ],
-        "blocker": "Municipality 0180, distinct from county 01 (SCB verified); selected official geometry unavailable: HTTP 401. Licence, geometry vintage and API feature selection unresolved."
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172.json",
+            "sha256": "ba24796f7f5e816d6d1736dc6df3d378ffae4622b4d2837a95f619f05e7fae14"
+          }
+        ]
       },
       "snapshot_date": {
         "status": "verified_local_evidence",
@@ -384,7 +397,7 @@
         "status": "unresolved",
         "value": {
           "airbnb": "inside_airbnb:stockholm:2026-06-30",
-          "boundary": null,
+          "boundary": "scb:RegSO_2025:0180:2025_v2",
           "population": null,
           "income": null,
           "housing": null
@@ -393,6 +406,10 @@
           {
             "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
             "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+          },
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172.json",
+            "sha256": "ba24796f7f5e816d6d1736dc6df3d378ffae4622b4d2837a95f619f05e7fae14"
           }
         ]
       },
