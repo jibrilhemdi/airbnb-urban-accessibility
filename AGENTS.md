@@ -29,3 +29,34 @@
     operations.
 
 12. Every analysis table and figure must be reproducible from code.
+
+## V4 sequence safeguards
+
+Read [the V4 contract](docs/v4/IMPLEMENTATION_CONTRACT.md) and
+[the step log](docs/v4/step_log.md) at every step. Implement only the requested
+step; synthetic fixtures are tests, never research results.
+
+- Work, commit and push exclusively on `v4`, using the remote and main base
+  recorded in [the repository audit](docs/v4/repository_audit.md). Stop if other
+  work, unfinished Git operations, ambiguous lineage or divergence would mix
+  into the step. Never discard/stash other work, reset an existing V4 branch,
+  merge later main commits automatically, force-push, amend published commits,
+  change tags, push main/v3 or merge V4 into main.
+- Primary V4 models are exactly `M0=X+H`, `ME=X+H+E`, `MW=X+H+W`,
+  `MEW=X+H+E+W`. H is required neighbourhood residential sale-price context.
+  No H-suffixed models or automatic no-housing ladder.
+- Y remains log observed Airbnb nightly asking price. Fit separate city
+  models; make no causal housing-price or displacement claims.
+- Preserve V3 artifacts and applied migrations. Use separate V4 run,
+  database and output identities. Never upload raw/restricted data,
+  credentials or private row-level predictions.
+- Before finishing each step, run relevant checks, inspect and stage only
+  intended safe files, update the step log, commit, and push `HEAD` explicitly
+  to `refs/heads/v4` on the recorded remote. Set upstream on the initial push;
+  verify remote V4 SHA equals local HEAD.
+- Report status, actual tests, changed files, commit SHA, push verification
+  and blockers. Do not record a commit's own SHA inside that commit.
+- Missing data or failed scientific gates mean `BLOCKED`, never an invented
+  substitute. A safe blocker-documentation checkpoint may be committed/pushed
+  but does not authorize dependent empirical work. Push failure means
+  `LOCAL_ONLY`: stop before the next step.
