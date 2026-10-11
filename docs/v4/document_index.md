@@ -70,3 +70,20 @@ needs a supported workflow and explicit status/checksum review at A12.
 The A01 current-state audit and documentation-only amendment JSON remain dated
 checkpoint records, not claims about current runtime. Supplied DOCX files remain
 stale/superseded for reconciled live Markdown; no V3 document workflow was run.
+
+
+## A03 geography checkpoint
+
+- [geography_qualification_A03_20261011.md](geography_qualification_A03_20261011.md): current PARTIAL/BLOCKED geography decisions, operational certification limits and supported commands.
+- [geography_qualification_A03_20261011.json](geography_qualification_A03_20261011.json): safe export of authoritative SQL aggregates, native/proposed support, CRS, coverage and uncertainty diagnostics.
+- [geography_source_registry_A03_20261011.json](geography_source_registry_A03_20261011.json): actual source/receipt URLs, retrieval/reference dates, licences/unknowns, hashes and rejected/failure provenance.
+- [oslo_boundary_amendment_A03_20261011.md](oslo_boundary_amendment_A03_20261011.md): separately identified operational Oslo vintage amendment; original uncertainty preserved.
+- `config/v4/geography_A03_20261011.json`, `geography_reuse_accessibility_only.json`: city-specific frozen evidence/decisions and selected SQL summary/source hashes. A02 city/science/source policies stay unchanged.
+- `sql/v4_migrations/027_v4_geography_qualification.sql`: append-only independent geography ledger; no modification of applied migrations or model-run creation.
+
+Copenhagen inherited operational assignment passes; Oslo/Stockholm masks and metric
+CRS are accepted operationally, but their analysis areas remain BLOCKED. New-city
+context/anchors/income remain A04. No final folds or A04–A12 execution. The original
+Stockholm amendment, original acquisitions and dated A01/A02 audit documents remain
+historical facts, not overwritten status records. Supplied DOCX files remain stale/
+superseded for active live Markdown; their bytes and V3 exports are preserved.

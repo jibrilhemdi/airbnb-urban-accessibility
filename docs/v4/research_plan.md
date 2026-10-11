@@ -400,3 +400,13 @@ P1/P2 are the supplied v3 specification, deviations and results; L1 is the audit
 
 
 Live document authority: [index](document_index.md), [contract](IMPLEMENTATION_CONTRACT.md), [step mapping](step_mapping_A01_A12.md).
+
+
+Live A03 checkpoint (11 October 2026): see [the geography audit](geography_qualification_A03_20261011.md).
+Copenhagen retains 11 operational areas with explicit footprint/registration
+exceptions and complete eligible positive-price assignment. Oslo's dated mask
+is accepted operationally, while the 17-unit analysis option remains blocked by
+licence and sparse Marka support. Stockholm retains SCB 2025_v2 municipality
+0180 only as a mask; current 11-borough polygons remain unqualified. No housing
+fold rules, RegSO validation shortcut or final A06 membership is introduced.
+A04–A12 remain future work requiring their own prompt and qualified dependencies.

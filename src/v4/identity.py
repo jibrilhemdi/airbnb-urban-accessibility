@@ -172,6 +172,16 @@ def scientific_dependencies(city: str, *, root: Path = PROJECT_ROOT, design: dic
         reuse = json.loads((root / 'config/v4/listing_reuse_accessibility_only.json').read_text())
         source_policy['approved_reuse'] = {'design_id': reuse['design_id'], 'source_version': reuse['source_version'],
                                           'selection': reuse['selection'], 'city': reuse['cities'][city]}
+    geography_policy = root / 'config/v4/geography_A03_20261011.json'
+    if design_id == DEFINITION_VERSION and geography_policy.is_file():
+        geography = json.loads(geography_policy.read_text())
+        source_policy['geography_qualification'] = {'definition_version': geography['definition_version'],
+                                                   'design_id': geography['design_id'], 'city': geography['cities'][city]}
+    geography_selection = root / 'config/v4/geography_reuse_accessibility_only.json'
+    if design_id == DEFINITION_VERSION and geography_selection.is_file():
+        selected_geo = json.loads(geography_selection.read_text())
+        source_policy['geography_selection'] = {'design_id': selected_geo['design_id'],
+                                                'city': selected_geo['cities'][city]}
     amendment_path = root / 'config/v4/stockholm_boundary_amendment.json'
     if city == 'stockholm' and amendment_path.is_file():
         source_policy['boundary_amendment'] = json.loads(amendment_path.read_text())

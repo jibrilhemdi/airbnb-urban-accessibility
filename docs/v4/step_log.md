@@ -868,3 +868,141 @@ config/new SQL/tests/Makefile/Markdown; requested commit:
 Push HEAD explicitly to recorded origin refs/heads/v4 and verify actual remote
 SHA equality afterward. No own commit SHA or future push success is recorded
 inside this commit; push failure means LOCAL_ONLY and pauses the sequence.
+
+## A03 — Geography and Oslo vintage checkpoint, 11 October 2026
+
+User separately authorized A03 only under `v4_accessibility_only_20261011`.
+A02 research-readiness BLOCKED was expected, not an impediment to this geography
+checkpoint. Clean existing v4 at local/fetched origin
+`be13d5b602d361b6173c0d336483053e06d75c3d`, divergence 0/0; recorded remote remains
+`https://github.com/jibrilhemdi/airbnb-urban-accessibility.git`. Before commit,
+remote tip was rechecked equal to that starting HEAD. No main/v3/worktree ref
+change, reset/rebase/merge/stash/force or unfinished Git operation. Read applicable
+AGENTS, active contract/log/A02 audit, revised proposal/plan, actual source/code/
+SQL/tests and original acquisition/Stockholm records. V3 results and housing
+feasibility were already known; no supervisor approval/preregistration invented.
+
+**PARTIAL / BLOCKED** scientific checkpoint, not all-city geography completion.
+Copenhagen inherited 0101+0147 mask and ten official districts plus Frederiksberg
+are qualified for operational listing assignment, with actual overlap/gap/excess
+limitations retained. All 12,508 eligible positive inside observations assign
+uniquely/compatibly; two raw inside unmatched observations remain audited and
+are not eligible positive-price records. Eleven native/proposed areas meet
+current count safeguards. Counts are not forced to match V3's final sample.
+
+Oslo mask **RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT**: verified official
+Kartverket archive code0301/EPSG:25833/CCBY4.0, catalogue reference 2026-01-01,
+polygon update2025-11-11/extraction2025-12-10. Dated source, valid topology,
+extent/independent official metadata and relevant change checks support limited
+operational use; exact June2026 linework is not certified. Difference from old
+source geometry is measured, not inferred from equal area. Exact stored old/new
+SQL masks change no listing inclusion. Original API vintage warning/receipt/
+ingestion remains unchanged. See the separate dated amendment.
+
+Oslo **analysis geography remains BLOCKED**: public official existing scheme is
+15 boroughs plus Sentrum/Marka, 17 native IDs/18 polygons, including two verified
+Marka components; official workbook independently confirms codes. Layer reuse
+licence is unstated. Marka has23 dwelling-filtered/17 positive eligible listings,
+below proposed30-test support; no fabricated spatial service split, silent area
+omission, price-selected grouping or final fold. Other16 native units meet the
+current500-train/30-test count safeguards. Future8-borough reform is effective
+2028-01-01, not June2026. Nonzero registration gap/excess is reported, not repaired.
+
+Stockholm retains accepted SCB RegSO2025_v2 municipality0180/reference2025-01-01/
+EPSG:3006 mask; original amendment/127 source components are unchanged and are
+not automatically validation units. **Analysis geography BLOCKED**: official
+current11-borough polygons/stable IDs/licence/vintage/full coverage not obtained.
+Actual official metadata redirects to sign-in; HTTP200 is HTML access failure,
+not acquired geometry. Official public archive was obtained once but contains
+13 old boroughs, all clipped, with invalid Skarpnäck geometry; rejected, never
+repaired/merged into invented current units. Qualified native/holdout counts and
+area support are NULL, not zero. No RegSO analysis fallback was chosen.
+
+Selected original listing manifests are unchanged in the A02 reuse policy;
+source bytes/schema/identity/purpose were verified without redownload/reingest.
+One new, separate immutable A03 geography identity per city:
+`research_v4_<city>_20261011T210000Z` (preallocated job identifier, not a claim of
+actual retrieval/creation time). Actual timestamps are in raw receipts and SQL.
+New geography manifest hashes:
+
+- Copenhagen `352abab9128f086301837ce932ac4b1ec587f40c5accc0d6c6dbb3d7fbc5f79c`.
+- Oslo `550733b7e7107d042ce4f80c9abb186a0c8858edb9c0b76af7b5d99dde4456de`.
+- Stockholm `4109d0dcf59b15240cfdf5db26f89c1e1431c82c09e2f22c180a04c2ef96ae26`.
+
+Actual raw/dwelling/positive/inside-positive counts are
+23,144/21,080/12,521/12,508; 13,391/11,776/8,557/8,557;
+4,806/3,834/2,510/2,510. Outer150m positive flags are1,233/29/49;
+interior holes/internal municipal boundaries are excluded. Source-native and
+nine-decimal EPSG:4326 transport/metric-roundtrip gross areas are explicitly
+separate. Strict unique compatible covers assignment preserves ambiguity/NULL,
+with price-free raw/dwelling support and positive-price availability flags only.
+Private listing coordinates/IDs are not exported. All final samples/folds wait
+for A06; no comparison/model scores select geography.
+
+Implementation: `src/v4/geography.py` reuses existing acquire/source-freeze,
+identity, dedicated-DB, manifest and approved-listing readers. Versioned A03
+policy/selection; independent append-only migration027; safe aggregate/source
+registry JSON and geographic/Oslo Markdown; Makefile freeze/audit targets;
+read-only preflight amendment linkage and scientific dependency pins; synthetic
+geometry/persistence tests; active contract/index/source-registry/plan/AGENTS
+pointers. Original city/science/source policies, listing/Stockholm/housing
+acquisition audits, applied migration bytes and historical records are preserved.
+Housing is NOT_REQUIRED_SCOPE_AMENDED, never falsely qualified or restored as a
+prerequisite. No raw/private/credential data is intended for Git.
+
+Actual final checks:
+
+- `make v4-test`: **92 discovered,72 PASS,20 opt-in DB skipped**, exit0.
+  Ten new synthetic geography checks cover CRS/topology, IDs/codes, intentional
+  Marka components, no-housing/price-amount-independent support, invalid-coordinate
+  NULLs, overlap/gap/ties, municipal compatibility and narrow gate amendment.
+- `make v4-test-db`: **20/20 PASS**, exit0, disposable owned UUID DBs. Includes
+  migration idempotence/applied-hash rejection, original completed-run upgrade
+  guards and new immutable purpose/city/design/parent/child geography isolation.
+  First attempt encountered a synthetic fixture's uncommitted manifest lock;
+  only its owned blocked test statement was cancelled, fixture manifest identity
+  was corrected, and the complete suite reran successfully. No production
+  SQL/query/data was cancelled or altered by that test repair. Its residual
+  UUID test database was identified by the new027 hash/exact interrupted-test
+  creation interval/synthetic-only rows/no active sessions and cleaned up;
+  remaining disposable UUID test databases: zero.
+- Safe `scripts/v4_repository_checks.py --baseline-tests`: **186 discovered,
+  143 PASS,43 opt-in skipped**, final exit0. First concurrent documentation check
+  found a new link before its target file existed; after creating the target,
+  the full check reran and passed. No weakened/disabled historical assertion.
+  Synthetic estimation/routing fixtures are tests, not new research results.
+- `make compile` and whitespace checks: PASS.
+- `make v4-setup`: only **027_v4_geography_qualification.sql** applied to dedicated
+  `thesis_accessibility_v4`. Applied SHA256
+  `8d9df8bd6bea7beb2524f6187e6617ecf312be66031f079d8ac01ac603cc1040`.
+- Actual freeze/audit targets exercised for all three cities. Copenhagen
+  QUALIFIED exit0; Oslo/Stockholm BLOCKED exit2 with safe committed audit records.
+  Read-only audits recompute sources/QA/counts and match frozen SQL summaries;
+  independent PostGIS exact-mask inclusion and exterior150m counts agree for all
+  three cities, with zero changes against original stored masks. Repeated freeze
+  for committed Oslo identity refuses reopening before any write, expected exit2.
+- Actual read-only active preflight for all three original listing hashes:
+  BLOCKED, expected exit2, mutations0, source_reingested=false,
+  research_executed=false. Only source-qualified mask/metric blockers and exact
+  superseded Oslo vintage warning are replaced; unresolved analysis/context/
+  anchor/income/source/scientific-stage/sample/fold gates remain.
+- Protected verifier before/after: **1,696 V3 files,22 applied migration hashes,
+  five analytical SQL fingerprints unchanged**. **249** captured existing
+  raw/receipt/metadata/config/history/revision files unchanged. **Eight original
+  V4 SQL table fingerprints** unchanged, selecting original manifest IDs and
+  original migration rows; **115** current source-byte pins verified. Original
+  Stockholm401 receipt, missing original polygon and NULL-count ledger preserved.
+- Final ledger: old listing/housing ingestions remain13/3; manifests8→11 only
+  by new geography evidence; geography parents3 with **41,341** private audit rows.
+  Analytical/model runs remain **zero**. No Airbnb download, income acquisition,
+  provider contact, network/routes, empirical fit or final folds occurred.
+
+Copenhagen geography is ready for a separately requested context audit; Oslo and
+Stockholm mask/metric work is ready, but their analysis-dependent context/fold
+work remains BLOCKED on the exact inputs above. A04–A12 remain unexecuted and are
+not authorized by this checkpoint. Stage only intended safe code/config/new SQL/
+tests/Makefile/Markdown/aggregate provenance files. Requested commit:
+`feat(v4): qualify analysis geography and document Oslo vintage`.
+Push HEAD explicitly to recorded origin refs/heads/v4 and verify actual remote
+SHA equality afterward. No own commit SHA or predicted push success is recorded
+inside this commit; push failure means LOCAL_ONLY and pauses the sequence.

@@ -77,7 +77,8 @@ class V4PersistenceTests(unittest.TestCase):
 
     def test_migration_idempotence_and_applied_hash(self):
         self.assertEqual(self.first_migration, ['023_v4_multicity_persistence.sql', '024_v4_listing_boundary_audit.sql',
-                                                '025_v4_housing_source_audit.sql', '026_v4_accessibility_only_definition.sql'])
+                                                '025_v4_housing_source_audit.sql', '026_v4_accessibility_only_definition.sql',
+                                                '027_v4_geography_qualification.sql'])
         self.assertEqual(migrate(self.engine, synthetic=True), [])
         with tempfile.TemporaryDirectory() as directory:
             for original in MIGRATIONS.glob('*.sql'):
@@ -86,7 +87,7 @@ class V4PersistenceTests(unittest.TestCase):
             migration.write_text((MIGRATIONS / migration.name).read_text() + '\n-- changed fixture\n')
             with self.assertRaisesRegex(RuntimeError, 'changed'):
                 migrate(self.engine, synthetic=True, directory=Path(directory))
-        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.schema_migrations')), 4)
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.schema_migrations')), 5)
         self.assertEqual(self.conn.scalar(text("SELECT count(*) FROM information_schema.schemata WHERE schema_name LIKE 'v3_%'")), 0)
 
     def test_housing_sources_persist_native_values_nulls_and_blocked_status(self):
@@ -433,7 +434,7 @@ class V4PersistenceTests(unittest.TestCase):
                 complete_run(conn,old)
                 before=conn.scalar(text('SELECT row_to_json(r)::text FROM v4_analysis.runs r'))
                 old_record=conn.scalar(text('SELECT record FROM v4_analysis.artifacts'))
-            self.assertEqual(migrate(upgrade,synthetic=True),['026_v4_accessibility_only_definition.sql'])
+            self.assertEqual(migrate(upgrade,synthetic=True),['026_v4_accessibility_only_definition.sql', '027_v4_geography_qualification.sql'])
             self.assertEqual(migrate(upgrade,synthetic=True),[])
             with upgrade.begin() as conn:
                 self.assertEqual(before,conn.scalar(text('SELECT row_to_json(r)::text FROM v4_analysis.runs r')))
@@ -444,3 +445,35 @@ class V4PersistenceTests(unittest.TestCase):
         finally:
             upgrade.dispose()
             with self.admin.connect() as admin:admin.exec_driver_sql('DROP DATABASE "'+name+'"')
+
+
+    def test_geography_append_only_isolation_and_committed_children(self):
+        from shapely.geometry import Polygon
+        from src.v4.geography import spatial_audit, persist, evidence, DEFINITION as GEO
+        from src.v4.listings import persist_ingestion, DEFINITION as LISTINGS
+        g=Polygon([(10,59),(10.01,59),(10.01,59.01),(10,59.01)])
+        rows=[{'listing_id':'fixture_private','dwelling_eligible':True,'positive_price':False,'longitude':10.005,'latitude':59.005}]
+        area={'area_id':'fixture_area','native_id':'fixture_area','name':'Fixture','source_crs':'EPSG:4326','geom':g}
+        summary,assignments=spatial_audit(rows,g,[area],'EPSG:25833')
+        parent=scope(stamp='20261011T220000Z');geo=scope(stamp='20261011T220001Z')
+        manifest={**self.manifest,'synthetic_fixture':'A03_committed_geography'}
+        digest=canonical_hash(manifest)
+        summary.update(design_id=geo.design_id,city=geo.city,status='BLOCKED',definition_version=GEO,
+                       source_listing_run_id=parent.run_id,listing_manifest_sha256=digest,geography_manifest_sha256=digest)
+        with self.engine.begin() as conn:
+            persist_ingestion(conn,parent,manifest,[{'row_number':1,'listing_id':'fixture_private'}],
+                              {'definition_version':LISTINGS,'status':'BLOCKED','counts':{'raw':1}},[])
+            persist(conn,geo,summary,assignments,[area],g,manifest)
+        self.assertEqual(evidence(self.conn,geo),summary)
+        stored=self.conn.scalar(text('SELECT record FROM v4_spatial.geography_listing_audit WHERE '+SCOPE_SQL),geo.params())
+        self.assertNotIn('longitude',stored);self.assertFalse(stored['near_outer_150m'])
+        for query in ['UPDATE v4_spatial.geography_qualifications SET summary=summary',
+                      'DELETE FROM v4_spatial.analysis_geography','TRUNCATE v4_spatial.geography_listing_audit']:
+            with self.assertRaises(DBAPIError),self.conn.begin_nested():self.conn.execute(text(query))
+        with self.assertRaises(DBAPIError),self.conn.begin_nested():
+            self.conn.execute(text("INSERT INTO v4_spatial.geography_listing_audit VALUES (:version,:run_id,:city,:snapshot,:design_id,'late',NULL,'{}')"),geo.params())
+        with self.assertRaises(IntegrityError),self.conn.begin_nested():persist(self.conn,geo,summary,assignments,[area],g,manifest)
+        from dataclasses import replace
+        with self.assertRaisesRegex(ValueError,'identity mismatch'):
+            persist(self.conn,replace(geo,city='stockholm',run_id='synthetic_v4_stockholm_20261011T220001Z'),summary,[],[],g,manifest)
+        with self.assertRaises(ValueError):evidence(self.conn,replace(geo,run_id='synthetic_v4_oslo_20261011T220002Z'))

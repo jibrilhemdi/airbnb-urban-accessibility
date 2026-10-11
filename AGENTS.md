@@ -51,7 +51,10 @@ only the requested A01–A12 step; synthetic fixtures are tests, never research 
   coverage gates, folds and subgroups are NOT_REQUIRED_SCOPE_AMENDED. Preserve
   their historical evidence/statuses; do not pursue unsent requests. Genuine
   geography/context/accessibility gates remain. A02 implements the active registry and scope checks; full empirical readiness
-  remains BLOCKED pending city/source/sample/fold/estimator qualification.
+  remains BLOCKED pending city/source/sample/fold/estimator qualification. Read
+  [the A03 geography audit](docs/v4/geography_qualification_A03_20261011.md) for
+  qualified operational masks/CRS and remaining Oslo/Stockholm analysis blockers;
+  do not reinterpret their municipal masks as validation areas.
 - Y remains log observed Airbnb nightly asking price. Fit separate city
   models; make no causal housing-price or displacement claims.
 - Preserve V3 artifacts and applied migrations. Use separate V4 run,

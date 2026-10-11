@@ -22,8 +22,11 @@ Implement only the explicitly requested A-step. A01 authorizes document/scope
 changes and read-only/source-preservation checks, not A02 dependency refactoring,
 new migrations, provider contact, listing downloads, geography acquisition,
 routing, samples/folds or empirical fitting. A02 was separately requested and implements the scope/identity transition,
-including append-only migration 026 and read-only checks. A03–A12 remain future
-instructions and require their own user request. Synthetic fixtures are tests, never research
+including append-only migration 026 and read-only checks. A03 was separately
+authorized for geography/source-vintage qualification only; its
+[dated audit](geography_qualification_A03_20261011.md) records partial qualification,
+append-only migration 027 and genuine new-city analysis-area blockers. A04–A12
+remain future instructions and require their own user request. Synthetic fixtures are tests, never research
 results. A safe PARTIAL/BLOCKED checkpoint does not pass scientific gates.
 
 ## Scientific model contract
@@ -82,8 +85,14 @@ Housing requests remain unsent and are not to be pursued under this sequence.
 
 Stockholm's documented SCB-derived 2025 operational municipal mask remains
 RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT, not certified 2026 linework and not
-automatically analysis geography. Oslo municipal vintage remains a real blocker.
-Official analysis/context geography, metric CRS, public anchors, population,
+automatically analysis geography. The original Oslo municipal-vintage blocker remains historical evidence;
+current operational qualification is the separate A03 amendment below.
+A03 resolves Oslo municipal vintage only through its dated operational
+[amendment](oslo_boundary_amendment_A03_20261011.md); the original uncertainty
+remains preserved. Copenhagen inherited analysis assignment is qualified with
+reported registration limitations; Oslo/Stockholm analysis geography stays BLOCKED.
+City metric CRS is source-qualified separately through A03 evidence.
+Official analysis/context geography, public anchors, population,
 income mode, matched destinations/networks, common support and fold identity
 remain genuine required gates. Do not omit a city without an explicit amendment.
 
@@ -94,6 +103,8 @@ PostgreSQL/PostGIS `thesis_accessibility_v4` remains authoritative with dedicate
 not alternative stores. Preserve raw bytes, immutable receipts/ledgers, completed
 V3 artifacts and applied migrations 001–025 in their respective discovery roots.
 Migration 026 extends only the new-design schema/guards; original rows stay intact.
+Migration 027 adds independent immutable geography receipts/areas/private audits,
+without editing old rows, creating model runs or freezing final folds.
 Never update/delete/truncate historical data or regenerate frozen V3 documents
 merely to test. Source manifests are reused by verified hash, not redownload or
 duplicate ingestion. Fitted V3 reuse requires an explicit exact-dependency audit

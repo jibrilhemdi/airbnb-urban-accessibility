@@ -115,3 +115,10 @@ v4-housing-ingest:
 	$(PYTHON) -m src.v4.housing ingest $(V4_ARGS)
 v4-housing-audit:
 	$(PYTHON) -m src.v4.housing audit $(V4_ARGS)
+
+.PHONY: v4-geography-freeze v4-geography-audit
+# A03 only; reuse approved listing scopes, never execute models/routes/final folds.
+v4-geography-freeze:
+	$(PYTHON) -m src.v4.geography freeze $(V4_SCIENCE_ARGS)
+v4-geography-audit:
+	$(PYTHON) -m src.v4.geography audit $(V4_SCIENCE_ARGS)

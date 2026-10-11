@@ -19,6 +19,7 @@ def preflight(scope: Scope, *, offline: bool = False, source_manifest: str | Non
     if scope.design_id == DEFINITION_VERSION and source_manifest is None:
         blockers.append('Explicit approved listing/source manifest hash required')
     reused = None
+    geography = None
     if offline:
         blockers.append('V4 database not checked (--offline)')
     else:
@@ -38,6 +39,9 @@ def preflight(scope: Scope, *, offline: bool = False, source_manifest: str | Non
                         source = reuse_listing_source(conn, scope, source_manifest)
                         reused = {k:source[k] for k in ('source_scope', 'manifest_sha256', 'mutations', 'source_reingested')}
                         blockers.extend(source['summary'].get('blockers', []))
+                        from src.v4.geography import selected_evidence, apply_geography_amendment
+                        geography = selected_evidence(conn, scope, source_manifest)
+                        blockers = apply_geography_amendment(blockers, geography)
                     except (RuntimeError, ValueError) as error:
                         blockers.append(str(error))
                 if conn.scalar(text('SELECT count(*) FROM v4_analysis.runs WHERE version=:version AND run_id=:run_id AND city=:city AND snapshot=:snapshot'), scope.params()):
@@ -50,7 +54,9 @@ def preflight(scope: Scope, *, offline: bool = False, source_manifest: str | Non
             if engine is not None:
                 engine.dispose()
     return {**scope.params(), 'status': 'BLOCKED' if blockers else 'READY', 'blockers': blockers,
-            'mutations': 0, 'research_executed': False, 'listing_source_reuse': reused}
+            'mutations': 0, 'research_executed': False, 'listing_source_reuse': reused,
+            'geography_qualification': None if geography is None else {k:geography[k] for k in
+                ('status','mask_status','analysis_status','geography_manifest_sha256','metric_crs','blockers')}}
 
 
 def run(scope: Scope, *, offline: bool = False, source_manifest: str | None = None) -> dict:
