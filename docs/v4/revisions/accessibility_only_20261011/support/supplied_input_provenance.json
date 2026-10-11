@@ -1,0 +1,38 @@
+{
+  "thesis_results_v3.zip": {
+    "sha256": "9a9f494f28944439ee81d391af52317b9ffba568ab362025f60b284df187bd8c",
+    "bytes": 12530387
+  },
+  "Literature_Matrix_PDF_Audit_Evidence.csv": {
+    "sha256": "9a940bdae9a8ae355e2a9db728d53452635b87ae39403aa4e2655568688df3b1",
+    "bytes": 103401
+  },
+  "listing_acquisition.md": {
+    "sha256": "380c5b85bbe20af279250222187a68931e2fa74172ef13a17a01c61d14d8e43c",
+    "bytes": 8580
+  },
+  "stockholm_boundary_amendment_20261011.md": {
+    "sha256": "e56ed18c0712824e4170719f2cc212078e1925e4b673e4d77d0a598dc898b5f1",
+    "bytes": 12263
+  },
+  "housing_acquisition.md": {
+    "sha256": "809c535816227807eb43b509701bab521bac3180417630621bc40c9bb83df75d",
+    "bytes": 19277
+  },
+  "housing_access_requirements.md": {
+    "sha256": "c39fc9c9a1f00f9f16227e56f9e6127453f4bffb436511d5035e2a0b734050ee",
+    "bytes": 9387
+  },
+  "airbnb_urban_accessibility_scientific_thesis_proposal_v4.docx": {
+    "sha256": "28e901b03c222a80d05842809fbc8956b2483f2429a7d3a681bef965dc6b47d7",
+    "bytes": 53547
+  },
+  "airbnb_urban_accessibility_end_to_end_research_plan_v4.docx": {
+    "sha256": "53873ece6bd43350baa4c29c8b28fcb2500c538fd7cd1cc7e7ccba735fbf5e32",
+    "bytes": 67198
+  },
+  "airbnb_v4_codex_prompt_playbook.md": {
+    "sha256": "1b8d5b0c594a5b40f997002aa8dee39cc5896641c01c3e25d660f1cf0da3942c",
+    "bytes": 55595
+  }
+}

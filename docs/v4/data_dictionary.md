@@ -1,53 +1,38 @@
-# V4 data dictionary — active Markdown
+# V4 data dictionary — accessibility-only
 
-Definition version: `v4_housing_standard_20261011`. Decision date: 11 October
-2026. Newly authored from accessible V3 definitions and the user's decision.
-These are field specifications, not a claim that V4 columns or data exist.
-V3 results were already observed; supervisor approval is not recorded and this
-is not retrospective preregistration.
+Design ID: `v4_accessibility_only_20261011`, 11 October 2026. These are scientific
+field definitions, not a claim of implemented feature tables or sample freezes.
+V3 results and housing feasibility were already observed. Supervisor approval
+is not recorded. Runtime schema/registry adaptation remains pending A02.
 
-## Primary models
-
-| Model | Required blocks |
-| --- | --- |
-| M0 | X + H |
-| ME | X + H + E |
-| MW | X + H + W |
-| MEW | X + H + E + W |
-
-X is the inherited qualified baseline excluding H/E/W; H occurs exactly once
-in each model. V4 model identifiers include `v4_housing_standard_20261011` and
-must not be confused with V3 labels. The primary contrast is MEW versus ME,
-replacement MW versus ME, additional ME/M0, MW/M0 and MEW/M0. Mandatory
-no-income sensitivity omits only income and still includes H. No automatic
-no-H fallback, H-suffixed primary models or adding-H estimand is authorized.
-
-## Outcome and identity
+## Outcome, keys and samples
 
 | Field | Definition / rule |
 | --- | --- |
-| `city_id` | Explicit `copenhagen_frederiksberg`, `oslo` or `stockholm`; qualification remains gated |
-| `snapshot_date` | Matched June 2026 target; actual city dates require source evidence |
-| `listing_id` | Source ID; unique with city and snapshot, private analytical key |
-| `price_nightly` | Observed positive Airbnb nightly asking price in native currency; never impute |
-| `log_price` | Natural log of observed `price_nightly`; Y, never impute |
-| `analysis_area` | Qualified geographic grouping/holdout unit, not a primary feature |
-| `definition_id` | Versioned model/scenario identity, not a feature |
-| `prediction_sample_id` | One frozen housing-qualified comparison sample per city |
-| `association_sample_id` | Separate common OLS complete-case sample over X+H+E+W and observed Y |
+| `city_id` | Copenhagen–Frederiksberg, Oslo or Stockholm; explicit city scope |
+| `snapshot_date` | Verified catalogue batch 2026-06-30; distinct scrape/stay dates |
+| `listing_id` | Private source key; unique with city/snapshot after QA, no duplicate ingestion |
+| `price_nightly` | Original positive observed nightly Airbnb asking price, native DKK/NOK/SEK; never replace with quote fields or impute |
+| `log_price` | Natural log of original observed positive price; Y, never impute |
+| `analysis_area` | Qualified official grouping/holdout unit; not provider labels or a primary numeric predictor |
+| `design_id` / `definition_id` | New scientific/model identity; separate from city/run/estimator/model/validation/variant |
+| `prediction_sample_id` | S_pred: one common eligible, assigned and accessibility-supported sample per city; no residential-price filter |
+| `association_sample_id` | Separate common OLS complete cases of X+E+W and observed Y; >5% union-predictor missingness pauses inference |
 
-Conventional entire-dwelling property eligibility inherits the actual six
-types: Entire rental unit, Entire condo, Entire home, Entire townhouse,
-Entire villa, Entire loft. No primary review-count/availability restriction.
-Missing outcome, coordinates, housing or geographic/accessibility coverage
-exclusions are counted and explained; failed city housing qualification blocks
-the city rather than silently creating a no-H sample.
+Retain `room_type=Entire home/apt` and exactly: Entire rental unit, Entire condo,
+Entire home, Entire loft, Entire townhouse, Entire villa. No primary minimum
+review/activity/availability filter. Missing-price eligible listings remain in
+acquisition audits. Count observed-price, coordinate, geography and accessibility
+exclusions; NULL historical housing-area fields never define new eligibility.
+Learned encodings/imputation/scaling use training data only; all-missing required
+training predictors fail. All four models share ordered keys, outcomes and folds.
 
-## X — inherited qualified baseline only
+## X — inherited baseline and explicit live reconciliation
+
 
 | Feature | Definition |
 | --- | --- |
-| `property_type` | Inherited categorical property type, training-fitted encoding for prediction |
+| `property_type` | Actual inherited categorical control; supplied-bundle exclusion conflicts with live v3. Membership resolution pending A02, before fitting; no silent removal |
 | `accommodates` | Observed capacity |
 | `bedrooms` | Source bedrooms; missingness retained until authorized training preprocessing |
 | `bathrooms_effective` | Source-derived effective bathrooms; parser provenance retained |
@@ -70,34 +55,20 @@ The V3 native income field is `equiv_disposable_income_2024`; Copenhagen KKIND5
 and Frederiksberg nominal IFOR35 are pragmatically harmonised, not perfectly
 identical. The formula is sum(d1…d10)/10; source/selection hashes, documented
 qualification and unconfirmed City raw price-basis details are retained.
-Unavailable eligible weights remain NULL. Neither H, E nor W is embedded in X.
+Unavailable eligible weights remain NULL. E and W are separate from X; residential-price variables are outside the new scope.
 No area indicator, instant-bookable or review field is added to the primary X.
 
-## H — required neighbourhood residential sale-price context
+The revision bundle omits/excludes categorical property type although the
+actual v3 executable registry and previous V4 dictionary include it. This is a
+recorded unresolved baseline-membership decision, not evidence of a housing
+proxy and not authorization for silent predictor removal. Qualified income
+remains core; a common no-income primary mode requires a pre-fit user decision
+if new-city harmonisation fails. Mandatory matched no-income robustness remains.
+No NOK/SEK observation is inserted into a DKK-labelled field without a qualified
+source-native mapping/transformation decision.
 
-| Field | Definition / missingness rule |
-| --- | --- |
-| `housing_price_m2_native` | Prefer full-year 2025 apartment sale-price/m2, positive finite native reported value; never invent/impute |
-| `housing_price_currency` | Source-native currency, preserved without invented conversion |
-| `housing_reference_period` | Actual period and coverage; preferred 2025 full year, alternative requires explicit amendment |
-| `housing_statistic` | Source-reported mean/median/etc. must be qualified and frozen, not assumed |
-| `housing_property_scope` | Apartment residential sales; incompatible scope cannot silently substitute |
-| `housing_external_area_id` | Source area linked by an evidenced frozen geographic mapping |
-| `housing_reference_frame_id` | Within-city external-area membership/values frozen independently of Airbnb outcomes and folds |
-| `housing_midrank` | Average ordinal rank for native-price ties; one equal-weight observation per reference area |
-| `G_ref` | Positive count of areas in the frozen qualified external frame, including areas without Airbnb listings |
-| `housing_context_midrank` | Primary H: `H=(midrank-0.5)/G_ref`; no listing-weighted or fold/sample reranking |
-| `log_housing_price_m2_native` | Prespecified sensitivity log(native housing price), replaces the H scale on the same sample/folds |
-| `housing_transaction_count` | Observed source count if available; unknown remains NULL |
-| `housing_source` / `housing_source_sha256` | Actual provenance/checksum; currently unqualified, not invented |
+## E and W — matched accessibility
 
-Source/acquisition date/extent, period, unit, currency, statistic, coverage and
-mapping are scientific gates. Missing/suppressed external values cannot be
-assigned zero or silently removed to change G_ref. A city without qualified H
-is BLOCKED. Narrower-city or descriptive-only scope requires an explicit
-amendment. No housing-price outcome or gentrification score is defined.
-
-## E and W — matched accessibility features
 
 | Block | Feature | Definition |
 | --- | --- | --- |
@@ -110,25 +81,35 @@ amendment. No housing-price outcome or gentrification score is defined.
 | W | `log1p_food_w` | log(1+matched food/social POIs reachable within 10 minutes at 5 km/h) |
 | W | `log1p_culture_w` | log(1+matched cultural/tourist POIs reachable within 10 minutes at 5 km/h) |
 
-Inherited thresholds, 30 candidates, inference rules and mandatory no-income
-sensitivity are detailed in the [specification](preanalysis_specification.md).
-Numerical thresholds are safeguards, not power guarantees. Predictor learning
-stays within training data; H is externally measured and is never imputed.
-Prediction and common OLS association samples remain separate and versioned.
 
-## Implemented Step 5 source-audit fields
+Baseline speed exactly 5 km/h; include both endpoint connectors and pedestrian
+topology. Record city-appropriate CRS and matched destination universe. Preserve
+15/20-minute, 4.0/5.4 km/h and 10-minute-half-life decay sensitivities, inherited
+consolidation/taxonomy and training-only preprocessing. Missing extraction,
+unreachable destinations and genuine zero opportunities remain distinct.
 
-Definition `v4_housing_sources_20261011` preserves `source_id`,
-`source_area_id`, `geography_level`, `period`, `property_category`, `currency`,
-`unit`, `statistic`, `price_m2_native`, `sale_count`, source flags and documented
-area definitions in PostgreSQL `v4_raw.housing_area_period_audit`. NULL prices
-and unknown counts remain NULL; reported Copenhagen zero prices are retained
-as flagged source evidence, never qualified H. Oslo API category positions are
-separate from actual native geographic codes. Quarterly Copenhagen rows and
-nested Oslo levels are source audits, not additive counts of qualified areas.
+## Primary model membership
 
-The parent `v4_raw.housing_ingestions` freezes source manifest and source QA
-under version/run/city/snapshot. No `H`, `log_H`, reference ranks, listing
-assignment, analysis-area mapping or group labels are created in Step 5.
-Future housing IDs remain distinct from study masks, official analysis areas
-and provider neighbourhood labels until an authorized geographic assignment.
+| Model | Required blocks |
+| --- | --- |
+| M0 | X |
+| ME | X + E |
+| MW | X + W |
+| MEW | X + E + W |
+
+Use new design-qualified IDs; no H/residential-price/rent proxy is a primary
+or required-sensitivity feature. No-income omits only income from its qualified
+X; it is distinct from the primary revised design. Contrast directions, samples,
+validation and inference are in [preanalysis_specification.md](preanalysis_specification.md).
+
+## Retired fields retained as historical source evidence
+
+Existing nullable `native_housing_area_id`, housing source-audit records,
+midrank/log-native-price definitions and annual-sale/coverage/group thresholds
+are NOT_REQUIRED_SCOPE_AMENDED, not new-design features, sample filters or
+fold rules. Historical [housing_acquisition.md](housing_acquisition.md) and
+[housing_access_requirements.md](housing_access_requirements.md) remain unchanged
+and superseded for active dependency purposes. Preserve their original BLOCKED
+statuses and unsent requests. No property-price assignment or source request is
+authorized. See [the model contract](model_contract.md) and
+[the current-state audit](current_state_audit_20261011.md).

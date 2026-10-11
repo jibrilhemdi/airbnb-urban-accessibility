@@ -614,3 +614,139 @@ Markdown/aggregate/metadata registry documents. Requested commit:
 only to recorded origin `refs/heads/v4` and verify equality after committing;
 report the SHA/push outside this commit. This entry does not record its own
 commit SHA or claim a future push. Push failure means LOCAL_ONLY.
+
+## A01 — accessibility-only scope amendment, 11 October 2026
+
+Latest researcher request replaces the housing-inclusive V4 scientific scope.
+Active design: **v4_accessibility_only_20261011**; exactly M0=X, ME=X+E,
+MW=X+W, MEW=X+E+W. Y remains log original positive observed Airbnb nightly
+asking price, separate native-currency city models. Retain inherited listing/
+host/amenity controls, density, qualified income, centrality and matched no-income
+robustness. Income is distinct from residential prices. RQ1–RQ3 concern matched
+measurement, predictive information and cross-city/validation stability; housing
+RQ4 is withdrawn. All five paired contrasts remain, including explicit MEW/ME
+add-on reporting relative to v3's four named contrasts. V3 results and housing
+feasibility were already known. No supervisor approval or retrospective
+preregistration is asserted.
+
+Scope: A01 documentation/current-state reconciliation only. Read applicable
+root AGENTS (no ancestor/nested override), original contract and entire step log,
+active V4 documents, actual V3 specification/deviations/model registry, listing
+acquisition, dated Stockholm amendment, housing acquisition/access requirements
+and supplied revision bundle. No A02 executable refactor, acquisition, ingestion,
+migration, provider message/application/contract, route building, assignments,
+samples/folds or empirical fit. Synthetic fixtures remain tests only.
+
+Git entry state: existing `v4`, local/fetched origin both
+`25d60d36ef6d6359fbad74c20bc40c48764b7691`, the housing-source checkpoint,
+not the earlier Stockholm recovery tip. Recorded main/base
+`c1e919bca9dfbe89de9e67135fb432fdb0f020e6` retained; no divergence or unfinished
+operation. Only untracked input was the specifically authorized revision bundle;
+no unrelated tracked/untracked or staged work. Existing remote URL/worktrees and
+main/v3 identities unchanged. No reset/rebase/stash/merge or history rewrite.
+
+Imported bundle: **25 delivered files plus file_manifest.json**, every size and
+SHA256 verified. Preserve exact supplied bytes, including two reference Word
+exports; inspect their document XML/design stamps and package membership. Their
+exports are stale/superseded for reconciled active Markdown, not regenerated.
+No supported V4 Word workflow exists; V3 `make income-docs` was not run. The
+live V3 results ZIP matches supplied input hash. The bundle cites an older
+listing-acquisition hash; actual preserved Markdown and selected live SQL counts
+are explicitly reconciled in `current_state_audit_20261011.md`. Some external
+literature/draft files were not located; no inaccessible content or fresh
+literature verification is invented.
+
+Changes: amend active proposal, end-to-end plan, pre-analysis specification,
+dictionary, model/execution contract, source/dependency registry, architecture
+status, document index and AGENTS pointer. Create explicit model contract,
+documentation-only scope decision JSON, live current-state/dependency audit and
+old-to-new A01–A12 step mapping. Preserve exact before-A01 bytes of eight active
+documents plus AGENTS in a dated historical snapshot/checksum manifest, and
+preserve all previous step-log entries. No global replacement across history.
+
+Retire housing/provider acquisition and unsent access requests, price-qualified
+samples, sale-count/coverage/area thresholds, housing-area folds/ranks/log-H
+sensitivities and subgroup analysis as **NOT_REQUIRED_SCOPE_AMENDED** for the
+new design. Historical final BLOCKED and Oslo preliminary source statuses remain
+unchanged. All unexecuted old housing prompts, especially old Step 6 and its
+dependent sample/fold/subgroup instructions, are superseded. A02–A12 are mapped
+future checkpoints, not simultaneously authorized work.
+
+Actual runtime/config/code and applied SQL still encode
+`v4_housing_standard_20261011` in `research_design_v4`: canonical model registry,
+city housing prerequisite, log-native-H scenario, old model-ID SQL constraints
+and housing source/module scientific hashes. These remain intentionally intact
+pending separately requested A02. A01 does not fake housing approval, weaken
+readiness, relabel rows or claim a new executable registry/preflight exists.
+Documentation/Git changes leave legacy scientific hashes unchanged for all cities.
+
+Explicit baseline discrepancy: executable v3 and frozen prior V4 X include
+categorical `property_type`; supplied revision prose excludes it. The researcher
+was asked to resolve that difference. Without clarification, final categorical
+membership is pending A02/pre-fit resolution rather than silently changed. All
+17 inherited numeric/amenity/context controls remain required. This open decision
+is distinct from H removal and is recorded in the active model contract/dictionary.
+
+Live source counts, read from selected immutable SQL scopes:
+
+| City | Raw | Dwelling | Positive dwelling | Inside mask + positive |
+| --- | ---: | ---: | ---: | ---: |
+| Copenhagen–Frederiksberg | 23,144 | 21,080 | 12,521 | 12,508 |
+| Oslo | 13,391 | 11,776 | 8,557 | 8,557 |
+| Stockholm | 4,806 | 3,834 | 2,510 | 2,510 |
+
+These are acquisition counts, not S_pred/S_assoc. Select original Copenhagen/
+Oslo `20261011T143812Z` ingestions and amended Stockholm `20261011T151637Z`
+by their exact manifest hashes; never add superseded audits or duplicate imports.
+Missing-price dwellings and quote/date/currency limitations remain visible.
+Stockholm's accepted SCB-derived 2025 operational mask and original 401/NULL
+ledger remain unchanged. RegSO components are not automatically analysis areas.
+Oslo municipal vintage remains BLOCKED; new-city analysis/context/metric-CRS/
+anchor/density/income and matched-source/network/sample/fold qualification still
+require A03–A07. No city omission or income fallback is silently activated.
+
+Actual relevant validation (tests unchanged):
+
+- Temporary A01 documentation checks PASS: exact four-model tables/IDs,
+  retained inherited candidate-field names/E/W, retired-dependency statuses,
+  all active local links, nine exact historical snapshots and unchanged legacy
+  scientific hashes. No new executable readiness is claimed.
+- `make v4-test`: **67 discovered; 48 passed, 16 opt-in DB skipped, three
+  failing methods with eight assertion failures**. Expected scope mismatches:
+  `test_active_markdown_definitions_match_machine_configuration` still asserts
+  housing-standard active Markdown/RQs; `test_dictionary_lists_every_actual_feature_and_model_versions`
+  requires discontinued H; `test_active_links_resolve_and_docx_status_is_explicit`
+  forbids any V4 Word file despite authorized imported reference exports.
+  All links independently pass. These methods are pending proper A02 version/
+  document-scoping updates, not suppressed, weakened or falsely passed.
+- Safe `scripts/v4_repository_checks.py --baseline-tests`: **161 discovered;
+  119 passed, 39 skipped, the same three methods/eight assertion failures**.
+  Candidate export isolated in temporary storage; live V3 mutations disabled.
+  No extra failure outside the documented scope/document mismatches.
+- `make v4-test-db`: **16/16 PASS**, owned disposable PostGIS databases only;
+  preserved migrations/identity/immutability/source/audit/aggregate guards tested.
+- `make compile`: PASS. Tracked live-document `git diff --check`: PASS.
+  Staged `git diff --cached --check` returns exit 2 solely for three original
+  Markdown two-space hard breaks: supplied plan lines 7/8 and proposal line 9.
+  These are reviewed intentional source formatting, preserved to keep the
+  imported manifest hashes unchanged; no check or hook is bypassed. No other
+  staged whitespace diagnostic occurs.
+- Read-only protected verifier: **1,696 V3 files, 22 applied migration hashes
+  and five analytical SQL fingerprints unchanged**.
+- All **199** preexisting V4 raw/receipt/manifest/export file hashes unchanged;
+  all **13 listing ledgers, three housing ledgers, eight registered source
+  manifests and three V4 applied migration records** unchanged by ordered hashes.
+  **92** registered source byte checks and **43** housing receipt pins PASS;
+  original Stockholm 401 receipt unchanged. Zero empirical model runs and zero
+  new official/native housing-area assignments. No source re-download/import.
+
+Checkpoint: **PARTIAL — A01 documentary scope adopted; executable/scientific
+readiness BLOCKED pending A02 and genuine per-city dependencies**. The baseline
+membership discrepancy remains explicit until answered. This safe checkpoint
+does not authorize the next A-step. Stage only active/history/imported V4 safe
+documents and AGENTS; no source code/configuration/test/migration bytes changed,
+no raw/private/credential/individual-row file staged. Requested commit:
+`docs(v4): amend scope to three-city accessibility only`.
+Push HEAD explicitly to recorded origin `refs/heads/v4`, verify remote/local SHA
+after committing, and report outside the commit. No own commit SHA or future
+push success is recorded here; push failure means LOCAL_ONLY.

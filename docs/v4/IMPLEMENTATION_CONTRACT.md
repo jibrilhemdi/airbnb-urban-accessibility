@@ -1,180 +1,137 @@
-# V4 implementation contract
+# V4 implementation contract — accessibility-only amendment
 
-Established 11 October 2026 (Europe/Copenhagen). This contract applies to the
-V4 sequence. Read it and `step_log.md` at the start of every step, alongside
-applicable AGENTS.md / AGENTS.override.md instructions. Existing data-governance
-and scientific safeguards remain in force.
+Design ID: `v4_accessibility_only_20261011`. Amended 11 October 2026,
+Europe/Copenhagen. Continue the existing `v4` branch. Read this contract,
+[step_log.md](step_log.md) and applicable AGENTS/override instructions at every
+step. The latest user amendment supersedes housing-default instructions.
+Older contract bytes are preserved in
+[the historical snapshot](history/housing_standard_20261011_before_A01/README.md).
 
-## Authorized scope
+## Authority, history and current step
 
-Implement only the step explicitly requested. The initial checkpoint established
-the branch, repository audit and protected baseline. The 11 October 2026
-specification amendment establishes authoritative V4 Markdown, configuration
-and consistency checks; it does not authorize acquisition, ingestion,
-migration, feature construction, model fitting, pipeline execution or
-regeneration of frozen V3 documents/results.
-The subsequent architecture step authorizes V4 city configuration, isolation
-adapters, an append-only V4 migration and disposable-database tests only.
-The listing/boundary step additionally authorizes matched 30 June 2026 official
-catalogue acquisition, checksum/schema-qualified immutable V3 reuse, official
-municipal geometry acquisition/audit, dedicated local V4 database provisioning,
-append-only migration 024, raw/audit ingestion and safe aggregate provenance
-exports. It does not authorize model fitting, model samples, housing assignment,
-network features or the research pipeline. Boundary access/vintage blockers are
-recorded in [listing_acquisition.md](listing_acquisition.md) and
-`listing_acquisition_audit.json`; raw/credentials remain private.
-The targeted Stockholm recovery additionally authorizes scientifically qualified
-SCB RegSO 2025 municipal-mask derivation, a dated source amendment and separate
-immutable audit ingestion. Its documented operational 2025 geometry does not
-certify Lantmäteriet 2026 linework or authorize Step 5, H assignments or fitting.
-Original failed-access receipts and committed ledgers remain immutable.
-Step 5 separately authorizes lawful anonymous housing-source discovery and
-public downloads, native-area/period source QA, append-only migration 025,
-separate immutable housing-audit ingestions and safe aggregate exports. It
-does not authorize accepting contracts, sending applications, purchasing data,
-Step 6 spatial assignments, final H ranks, network features or model fitting.
-See [housing_acquisition.md](housing_acquisition.md) for actual acquisitions,
-preliminary versus final gates and remaining access/geographic dependencies.
-See [architecture.md](architecture.md) for implemented command behavior and
-unresolved empirical gates. The roster is `copenhagen_frederiksberg`, `oslo`,
-`stockholm`; narrower scope still requires an amendment.
-Synthetic fixtures may exercise tests; they must never be research results.
+A01 adopts the supplied revision bundle under
+`docs/v4/revisions/accessibility_only_20261011/`, reconciles actual repository
+facts and documents dependencies. Only this directory was preauthorized as
+untracked input; stop on any other unrelated edits/staged work/unfinished Git
+operation. The bundle contains proposed documents/templates, not implemented
+pipeline code, source qualifications or completed runs. V3 results and housing
+feasibility were already observed. Supervisor approval is not recorded; there
+is no retrospective preregistration claim.
 
-## Scientific contract
+Implement only the explicitly requested A-step. A01 authorizes document/scope
+changes and read-only/source-preservation checks, not A02 dependency refactoring,
+new migrations, provider contact, listing downloads, geography acquisition,
+routing, samples/folds or empirical fitting. A02–A12 are future instructions
+and require their own user request. Synthetic fixtures are tests, never research
+results. A safe PARTIAL/BLOCKED checkpoint does not pass scientific gates.
 
-The primary V4 models are exactly:
+## Scientific model contract
 
 | Model | Required blocks |
 | --- | --- |
-| M0 | X + H |
-| ME | X + H + E |
-| MW | X + H + W |
-| MEW | X + H + E + W |
+| M0 | X |
+| ME | X + E |
+| MW | X + W |
+| MEW | X + E + W |
 
-The active definition version is `v4_housing_standard_20261011`; model IDs must
-carry it so V3 M0 cannot be confused with V4 M0. X is the inherited qualified
-baseline excluding H/E/W; E and W denote matched Euclidean and walking
-accessibility. [The specification](preanalysis_specification.md),
-[dictionary](data_dictionary.md) and `config/v4/research_design.json` define
-the exact blocks. Their empirical implementation and qualification remain gated.
-H is required neighbourhood residential sale-price context in all four
-models. There are no H-suffixed models and no automatic no-housing ladder.
-Unqualified, missing or incompatible H blocks dependent empirical work;
-dropping H, inventing neighbourhood mappings or substituting another measure
-is not an acceptable way to proceed.
+Y is `log_price=log(price_nightly)`, from original positive observed Airbnb
+nightly asking price, never statistically imputed or replaced by quote fields.
+Reuse the verified 30 June 2026 batch; scrape/requested/returned-stay dates are
+separate. Retain separate native-currency city OLS/XGBoost models for exactly
+`copenhagen_frederiksberg`, `oslo`, `stockholm`. No temporal panel, residential
+outcome, gentrification score or causal housing/displacement claim.
 
-Primary contrast: MEW versus ME. Replacement: MW versus ME. Additional:
-ME/M0, MW/M0, MEW/M0. No adding-H benefit is estimated without a separately
-authorized no-H sensitivity. Prefer full-year 2025 apartment sale-price/m2,
-preserving native values and frozen within-city external-area midrank
-`H=(midrank-0.5)/G_ref`; log native price remains a prespecified sensitivity.
-All four models share a housing-qualified prediction sample and saved folds
-within city; a separate common OLS association sample is documented. Mandatory
-no-income sensitivity retains H. Preserve existing thresholds, candidates and
-inference; numerical safeguards are not power guarantees.
+X retains inherited listing/host/rental/amenity controls, population density,
+qualified income and centrality; E/W are matched Euclidean/walking measures.
+Resolve the actual-v3-versus-supplied `property_type` discrepancy explicitly as
+recorded in [model_contract.md](model_contract.md); do not silently change X.
+No H or residential-price/rent proxy enters any primary model or required
+sensitivity. There is no `no_housing` variant: accessibility-only is the primary
+revised design. Mandatory no-income removes only qualified income on matched
+rows/folds; income is distinct from property prices. New-city income requires
+qualification; a common no-income primary mode needs an explicit pre-fit
+researcher decision, never a silent fallback.
 
-The matched snapshot target is June 2026; retain OLS/XGBoost and separate city
-models. Narrower-city or descriptive-only scope requires an explicit amendment
-if a city lacks qualified H. No temporal Airbnb panel, residential-price outcome
-model or gentrification score is authorized. V3 results were already observed;
-supervisor approval is not recorded and there is no retrospective preregistration
-claim. [The document index](document_index.md) records Markdown authority and
-the absent/stale/superseded status of V4 DOCX material.
+RQ1 measures representation differences; RQ2 tests paired predictive information;
+RQ3 compares cities/validation settings. Housing RQ4 is withdrawn. Report all
+five contrasts: ME/M0, MW/M0, MEW/M0, MW/ME (replacement), MEW/ME (add-on).
+MEW versus ME is an explicit reporting amendment relative to v3's four named
+contrasts, already named in housing-inclusive V4. Negative added-minus-reference
+error favours the added model; crossing zero is not equivalence.
 
-Y remains the natural log of observed Airbnb nightly asking price:
-`log_price = log(price_nightly)` for valid observed prices. Never statistically
-impute either outcome. Fit separate models for each authorized city; do not
-infer the V4 city list from the existing V3 regional geography. Results describe
-asking-price associations/prediction, with no causal housing-price or
-displacement claims.
+One common accessibility-supported prediction sample per city serves all four
+models; separately document common OLS association complete cases of X+E+W.
+Above 5% required-predictor missingness, association inference pauses pending
+validated treatment. Learned prediction preprocessing/tuning uses training data
+only; never select variables, thresholds, taxonomy or hyperparameters from outer
+outcomes. Preserve 30 candidates, four inner spatial folds, inherited thresholds,
+no-income robustness, inference and diagnostics. New-city >=500 train/>=30 test
+primary folds and common 1.5 km geometric checks are explicit revised safeguards,
+not power guarantees. Actual qualified areas determine clusters, not 127 RegSO
+components or an assumed eleven-city count.
 
-Never silently fill missing data. Learned predictive preprocessing,
-imputation, feature selection and tuning must use training data only. Never
-use the outer test fold to choose hyperparameters, accessibility thresholds,
-POI categories, variables or preprocessing. Do not add techniques for headline
-performance. Log any departure from the pre-analysis specification before
-dependent empirical work. External sources require source, acquisition date,
-extent and checksums where possible. Spatial operations must record their CRS.
+## Retired and genuine dependencies
 
-## Data and identity isolation
+Property acquisition/access requests, H-qualified samples, housing-sale/coverage
+thresholds, native-price-area folds, H subgroup/rank and log-H analyses are
+**NOT_REQUIRED_SCOPE_AMENDED**. Preserve historical BLOCKED/preliminary source
+statuses separately; never mark those sources QUALIFIED to bypass old code.
+Housing requests remain unsent and are not to be pursued under this sequence.
 
-PostgreSQL/PostGIS remains the authoritative persistent analytical layer.
-CSV files are inspection/export artifacts, never undocumented alternative
-sources of truth. All analysis tables and figures must be generated by code.
-Raw sources, applied SQL migration bytes and completed V3 outputs are protected;
-never modify them in place or run V3 regeneration commands as a test.
+Stockholm's documented SCB-derived 2025 operational municipal mask remains
+RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT, not certified 2026 linework and not
+automatically analysis geography. Oslo municipal vintage remains a real blocker.
+Official analysis/context geography, metric CRS, public anchors, population,
+income mode, matched destinations/networks, common support and fold identity
+remain genuine required gates. Do not omit a city without an explicit amendment.
 
-The architecture step implements the following identities through
-`src.v4.cli` and `sql/v4_migrations/023_v4_multicity_persistence.sql`. No
-production database is provisioned or empirical pipeline executed by that
-step; only disposable synthetic database tests apply the migration:
+## Persistence, identity and privacy
 
-| Identity | V4 reservation |
-| --- | --- |
-| Database | `thesis_accessibility_v4`, separate from existing `thesis_accessibility` |
-| Schemas | `v4_raw`, `v4_clean`, `v4_spatial`, `v4_features`, `v4_analysis` in the V4 database |
-| Run | `research_v4_<city_slug>_<UTC timestamp>`; require an explicit city and unique ID |
-| Outputs | `outputs/v4/<version>/<run_id>/<city>/<snapshot>/` and equivalent `reports/v4/` |
-| New raw inputs | `data/raw/v4/`, with their own source freeze and provenance |
-| Configuration | `config/v4/`; separate ignored local connection file, e.g. `.env.v4` |
+PostgreSQL/PostGIS `thesis_accessibility_v4` remains authoritative with dedicated
+`.env.v4`/V4_DB settings, never V3 `.env`/DB settings. CSVs are inspection/export,
+not alternative stores. Preserve raw bytes, immutable receipts/ledgers, completed
+V3 artifacts and applied migrations 001–025 in their respective discovery roots.
+Never update/delete/truncate historical data or regenerate frozen V3 documents
+merely to test. Source manifests are reused by verified hash, not redownload or
+duplicate ingestion. Fitted V3 reuse requires an explicit exact-dependency audit
+and truthful original provenance at A08; A01 approves no fitted reuse.
 
-Do not point a future V4 runner at V3 schemas, run IDs, connection settings or
-output paths. It must verify isolation and fail closed before any mutation.
-Existing `.env` remains the V3 connection; no credentials are recorded here.
-Existing V3 runners/configuration implement the V3 specification and do not
-become V4-compliant merely because the Git branch is named V4.
+The new design requires version-qualified model identity distinct from V3 and
+`v4_housing_standard_20261011`. A01 does not relabel their SQL rows or frozen
+configuration. [The state audit](current_state_audit_20261011.md) names actual
+runtime constraints pending A02. New feature/model outputs need separate design,
+run, city, snapshot, estimator, model, validation and variant identities. Preserve
+existing scientific-versus-reporting hash separation.
 
-Never upload raw/restricted data, database dumps, archives containing research
-data, credentials, private row-level predictions, fold memberships, SHAP rows
-or listing coordinates. Public baseline evidence consists of paths, hashes,
-counts, migration identities and run statuses, with no underlying row contents.
-Future data/output roots must stay ignored; inspect Git ignore coverage before
-creating them. The current `reports/v4/` path is already ignored by `/reports/`;
-`outputs/v4/` and all private V4 roots are explicitly ignored before use.
+Never upload raw/restricted data, credentials, dumps, listing coordinates,
+private predictions/folds/SHAP or individual rows. Keep current ignored V4
+raw/intermediate/report/output roots. Public maps use 500 m cells and suppress
+fewer than five observations. Record source/date/extent/checksum/licence and CRS;
+never invent missing values or mappings. Every table/figure is code-reproducible.
 
-## Git lifecycle
+## Git completion protocol
 
-The recorded remote is `origin`, with the existing fetch/push URL
-`https://github.com/jibrilhemdi/airbnb-urban-accessibility.git`. The recorded
-base main SHA is `c1e919bca9dfbe89de9e67135fb432fdb0f020e6`. Refer to
-`repository_audit.md` for the fetched V3 evidence and initial worktree state.
-Do not create or change remote URLs. Stop if remote identity becomes ambiguous.
-
-At each step, inspect status (including staged and untracked files), worktrees
-and unfinished operations before edits. Stop if unrelated work would mix into
-the step. Never discard, automatically stash, force-switch or commit others'
-work. Ignored local research inputs are preserved, not staged.
-
-Fetch the recorded existing remote before checking lineage. If neither local
-nor remote V4 exists, create V4 from fetched main without moving local main.
-If V4 exists, resume it without recreation/reset and verify its recorded base.
-For local/remote V4 updates, permit only an unambiguous fast-forward; stop on
-divergence or unexpected lineage. Do not automatically merge later main
-commits. Inspect history/content for V3 merge evidence, including squash merges;
-do not require ancestry as the sole proof.
+Recorded remote: `origin`, existing URL
+`https://github.com/jibrilhemdi/airbnb-urban-accessibility.git`.
+Recorded main base: `c1e919bca9dfbe89de9e67135fb432fdb0f020e6`.
+Prior pushed A01 starting HEAD: `25d60d36ef6d6359fbad74c20bc40c48764b7691`.
+Keep the existing branch; do not recreate/reset it, rebase, merge later main,
+auto-stash/discard others' work, amend published commits, force-push, change tags,
+modify/push main/v3 or open/merge a PR. Fetch the existing remote; stop on ambiguity,
+divergence, unfinished operations or unrelated edits. Preserve all worktrees.
 
 Before finishing each step:
 
-1. Run relevant safe checks and inspect protected-artifact preservation.
-2. Inspect the complete diff and stage only intended safe files by explicit
-   path. Inspect the staged diff and confirm the active branch is `v4`.
-3. Update `step_log.md` with scope, changes, actual checks and blockers.
-4. Commit with the requested message. Never record that commit's own SHA inside
-   itself; report the SHA and push evidence after the commit, outside it.
-5. Initially push with `git push --set-upstream origin HEAD:refs/heads/v4`;
-   subsequently use `git push origin HEAD:refs/heads/v4`. Confirm the remote V4
-   SHA from `git ls-remote --heads origin refs/heads/v4` equals `git rev-parse HEAD`.
-6. Report status, tests actually run, changed files, commit SHA, verified push
-   and blockers. A successful local commit alone is not a completed checkpoint.
+1. Run relevant checks and source/provenance preservation verification. Scope-
+   incompatible assertions may be expected pending A02, identified by exact
+   test/reason; never claim a failed/skipped test passed or weaken global gates.
+2. Inspect the diff; update the step log; stage only intended safe paths and
+   inspect the staged diff. Confirm active branch `v4`.
+3. Commit with the requested message. Never record that commit's own SHA in it.
+4. Push `HEAD` explicitly to `refs/heads/v4` on recorded origin (upstream already
+   exists); verify `git ls-remote --heads origin refs/heads/v4` equals local HEAD.
+5. Report actual tests/files/run status/blockers/commit SHA/push verification.
 
-Never push main/v3, force-push, amend published commits, change tags or merge
-V4 into main. Never bypass authentication or approval controls.
-
-## Stop states
-
-Missing data or failed scientific gates mean **BLOCKED**, never an invented
-substitute. A safe blocker-documentation checkpoint may be committed/pushed,
-but does not authorize dependent empirical work. Resolve the specific gate in
-an explicitly requested subsequent step. A push failure means **LOCAL_ONLY**;
-report the failure and stop before the next step. No empirical V4 work is
-authorized or certified by passing this bootstrap baseline.
+Push failure means **LOCAL_ONLY** and pauses the sequence. Missing scientific
+inputs mean **BLOCKED/PARTIAL**, not invented substitutes or permission for
+later empirical work. Completion of A01 is not completion of the study.

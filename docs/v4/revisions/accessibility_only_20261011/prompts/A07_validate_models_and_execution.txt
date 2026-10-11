@@ -1,0 +1,21 @@
+# A07 — Validate the model pipeline before empirical fitting
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+Implement/reuse predictive OLS and XGBoost from one canonical registry: M0=X; ME=X+E; MW=X+W; MEW=X+E+W. Assert no residential-price columns, H-derived filters or housing requirements anywhere in the active execution path. Keep no-income sensitivity distinct from the primary model identity.
+
+Use the frozen common city samples/folds/candidates. Fit learned preprocessing inside each inner-training split and refit only on outer training. No global imputation, outer-test early stopping, outcome-driven feature deletion or reduced city tuning budget. Entirely missing required training predictors fail explicitly.
+
+Persist private OOF outcomes/predictions/losses, city/design/model/estimator/fold identity, candidates, selected parameters, seeds, source/feature/sample/fold hashes, environment and scientific code revision. Compute all five paired comparisons from saved OOF rows. Negative Delta RMSE favours the added model; include proportional reductions, MAE, defined R2 and equal-area summaries. Keep train_mean as a separate benchmark.
+
+Validate association OLS, HC3, actual-area WCR11 inference and Moran/spatial-error interfaces separately. Do not invent eleven clusters in new cities. Preserve inherited robustness and held-out SHAP handling.
+
+Implement stage checkpoints and resume only for matching immutable scientific dependencies. A code/data/design change affecting estimates creates a new identity and marks affected earlier city runs for replacement. Reporting-only changes do not relabel fitted results.
+
+Run synthetic end-to-end tests, intentional leakage/wrong-city/missing-feature failures, interruption/resume tests and authoritative database checks. Synthetic results must never enter research namespaces or thesis tables.
+
+Document the true fit budget (484K XGBoost fits per geographic city run, before sensitivities), available resources and an execution manifest. Do not promise completion or run empirical pilots that change the design based on scores. A08 is the first authorized empirical step.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: feat(v4): validate accessibility models and checkpointed execution

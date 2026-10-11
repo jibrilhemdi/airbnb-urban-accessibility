@@ -1,227 +1,100 @@
-# V4 scientific specification — active Markdown
+> **Live A01 reconciliation — 11 October 2026.** Active design:
+> `v4_accessibility_only_20261011`. This Markdown is authoritative for the new
+> scientific scope. A01 changes documentation only; the executable registry,
+> configuration and applied SQL still encode the superseded housing-inclusive
+> design until separately requested A02. No routes, assignments, model samples
+> or empirical fits were executed. V3 results and housing feasibility were
+> already known; supervisor approval is not recorded.
+>
+> Live source evidence, preservation hashes and remaining dependencies are in
+> [current_state_audit_20261011.md](current_state_audit_20261011.md). Supplied
+> literature verification is attributed to the bundle; this integration did not
+> re-audit unavailable original literature PDFs. The exact v3 results ZIP exists
+> locally and matches the supplied hash. The supplied listing-audit hash differs
+> from the current preserved audit; live selected SQL counts agree with the
+> acquired-count tables below. These counts are not final research samples.
+>
+> **Baseline reconciliation pending A02:** actual frozen v3 code includes
+> categorical `property_type`, while the supplied revision excludes it. The
+> numeric/amenity/context controls below remain inherited. This discrepancy
+> must be explicitly resolved before a new executable feature whitelist or fit;
+> A01 neither silently deletes the inherited control nor certifies a final
+> categorical membership decision. See [model_contract.md](model_contract.md).
 
-Definition version: `v4_housing_standard_20261011`. Decision date: 11 October
-2026. This newly authored V4 amendment uses the actual active V3 specification,
-dictionary, source registry, configuration and supporting documents. It does
-not reproduce an unavailable earlier V4 draft. V3 results were already observed;
-this is not retrospective preregistration. Supervisor approval is not recorded.
-Empirical execution is BLOCKED pending qualification and separate authorization.
+# Revised pre-analysis specification — accessibility-only v4
 
-## Outcome, population and city scope
+11 October 2026. Design `v4_accessibility_only_20261011`. This is a prospective amendment after v3 results and housing-source feasibility were observed. Approval status remains explicit. The accompanying plan gives full rationale and execution rules.
 
-Use a matched June 2026 Inside Airbnb snapshot target, one listing per city and
-snapshot, with separate city models. The exact 30 June 2026 batch is now verified
-in the official archive catalogue and all three detailed listing files; actual
-scrape dates extend into July and quoted requested stays into 2027. See
-[the acquisition audit](listing_acquisition.md). No newest snapshot was substituted. The user-authorized
-roster is `copenhagen_frederiksberg`, `oslo`, `stockholm`; evidence and unresolved
-fields are versioned in `config/v4/cities.json`. Copenhagen evidence is inherited
-locally; its CRS, districts and income mapping are never defaults for other cities.
-The primary product segment retains conventional residential entire dwellings,
-with the six inherited property types documented in the dictionary. There is
-no minimum-review or minimum-availability primary restriction.
+## 1. Scope and samples
 
-Y is `log_price = log(price_nightly)` for observed, positive, parseable Airbnb
-nightly asking prices in their native currency. Never statistically impute
-either outcome or combine unlike prices row by row. Count every exclusion.
-Missing outcomes remain missing. No temporal Airbnb panel, residential-price
-outcome model or gentrification score is introduced. Associations/predictions
-do not identify causal housing-price or displacement effects.
+Cities: Copenhagen–Frederiksberg, Oslo, Stockholm. Separate models; matched acquired batch 30 June 2026. Original positive observed nightly price in native currency; natural log outcome. Batch, scrape, requested and returned stay dates are distinct; no outcome replacement by quote fields. No price imputation, primary minimum-review filter, historical Airbnb panel or residential-market outcome.
 
-## Primary models
+Eligible room type Entire home/apt and property types Entire rental unit, Entire condo, Entire home, Entire loft, Entire townhouse, Entire villa. Apartment/condo sensitivity retains the first two. Verify exact inherited labels/parser against actual code.
 
-| Model | Required blocks |
-| --- | --- |
-| M0 | X + H |
-| ME | X + H + E |
-| MW | X + H + W |
-| MEW | X + H + E + W |
+S_pred is the common eligible, geographically assigned, accessibility-supported prediction sample in each city. Every model uses the same observations/outcomes/folds. No H qualification, residential-price coverage or native-price-area assignment affects membership. Preserve broader acquisition/missing-price audits. S_assoc is separate, common across OLS association models; complete-case inference requires <=5% missing any required predictor. Material missingness blocks inferential OLS pending validated amendment, not all predictive work.
 
-OLS uses an intercept plus the stated blocks; XGBoost uses the same conceptual
-features. X is exactly the inherited qualified baseline, excluding H/E/W:
-property type, accommodates, bedrooms, source-derived effective bathrooms,
-log(1+minimum nights), superhost, log(1+host listing count), the eight fixed
-amenity indicators, log population density, qualified income and prespecified
-City Hall centrality distance. No extra instant-bookable/review/reputation,
-area identifier, municipality indicator or housing feature is silently added
-to X from older supporting-draft suggestions. A new city's centrality anchor
-and context sources must be explicitly qualified before execution.
+## 2. Baseline and features
 
-H appears exactly once in each primary model. E contains separate nearest
-eligible rail and deduplicated bus Euclidean km plus log(1+food/social) and
-log(1+cultural/tourist) counts. W contains matched nearest rail and bus walking
-minutes plus the corresponding log(1+network opportunity) counts. There is
-no active eight-model ladder, H-suffixed primary label or automatic no-H fallback.
-Model IDs include the definition version, e.g.
-`v4_housing_standard_20261011:M0`; V3 M0 excludes H and is not this model.
+X: accommodates; bedrooms; effective bathrooms; log1p minimum nights; superhost; log1p host listings; Wi-Fi; dishwasher; washer; dryer; workspace; free parking; private balcony; self check-in; log population density; qualified income; central civic-anchor distance.
 
-## Research questions and paired contrasts
+Do not include primary raw coordinates, area/municipality flags, outcome-derived aggregates, reviews/reputation, availability, revenue, residential prices or housing proxies. Exact parsers come from v3. Retain accepted Copenhagen income (2024 mean of ten equivalised-disposable-income decile means /100000 DKK) and documented source qualifications. New-city income requires a concept/period/geography decision. Common no-income primary fallback requires explicit pre-fit approval; mandatory no-income sensitivity otherwise omits income only on matched rows/folds.
 
-RQ1 compares accessibility representations. RQ2 evaluates predictive accessibility
-information conditional on X+H. RQ3 compares geographic versus random validation
-and cross-city differences. RQ4 describes variation in network gains across
-externally measured housing contexts. RQ4 uses paired held-out gains at the
-external-area level against continuous frozen H, without introducing another
-primary model or choosing context partitions from outer results.
+E: nearest eligible rail and consolidated bus distances in km; log1p food/social and culture/tourism counts within rounded 833 m. W: nearest reachable rail and bus minutes; matching opportunity counts within 10 min. Same candidate destination universe within city; nearest destination can differ by representation. Speed exactly 5 km/h; both endpoint connectors; pedestrian topology. City-appropriate metric CRS, common defensible OSM policy, audited extraction/coverage. Starting buffer >=2 km, expand when required. Preserve inherited bus consolidation (3 m compatible same-representation, 0.5 m unnamed, mutually nearest compatible cross-representation pairs <=25 m).
 
-Primary contrast: MEW versus ME. Replacement contrast: MW versus ME.
+## 3. Four models and contrasts
 
-| Priority | Added / reference | Interpretation |
-| --- | --- | --- |
-| Primary | MEW / ME | Network information beyond Euclidean access, conditional on X+H |
-| Replacement | MW / ME | Walking replacing Euclidean representation with X+H fixed |
-| Additional | ME / M0 | Euclidean accessibility beyond X+H |
-| Additional | MW / M0 | Walking accessibility beyond X+H |
-| Additional | MEW / M0 | Both accessibility representations beyond X+H |
+M0=X; ME=X+E; MW=X+W; MEW=X+E+W. No H anywhere, including required sensitivities. OLS prediction and XGBoost; association OLS separately. Training mean is a separate benchmark.
 
-Delta error is added minus reference; negative ΔRMSE/ΔMAE favours added.
-RMSE and MAE on log price are primary metrics; R² is secondary. All comparisons
-are paired on identical observations/outcomes/folds within city and engine.
-No contrast estimates the incremental benefit of adding H. A separately
-authorized no-H sensitivity would be required to estimate that quantity.
-Cross-city differences remain descriptive and acknowledge source, sample,
-area-count and support differences; cities are not pooled into one estimator.
+Comparisons: ME-M0, MW-M0, MEW-M0, MW-ME, MEW-ME. The final add-on contrast is an explicit amendment relative to v3's enumerated contrast list. Replacement and add-on have different interpretations.
 
-## Housing definition and qualification
+Delta RMSE=added-reference, negative favours added. Report proportional RMSE reduction, MAE, defined R2, fold distributions, equal-area results. No automatically adopted equivalence or minimum-practical-gain threshold. Crossing zero is not equivalence. Separate city results and relative improvements; no mixed-currency raw-price pooling or three-city causal regression.
 
-Prefer full-year 2025 apartment residential sale-price/m2. Preserve native
-positive finite prices, currency, reported statistic, geography, coverage and
-source provenance. Mean/median or other source statistics must be explicitly
-qualified and frozen; their availability/comparability is not assumed.
-Alternatives to the preferred year/measure require an explicit amendment.
+## 4. Geography and validation
 
-Freeze a qualified external-area reference frame separately within each city,
-independent of Airbnb listings, outcomes and validation folds. Each reference
-area contributes once with equal weight. Include the whole frozen qualified
-frame, even where no eligible Airbnb listing is observed. G_ref is its positive
-area count. Compute average ordinal ranks for ties in native sale-price/m2 and
-use `H=(midrank-0.5)/G_ref`. Preserve reference membership, values, ties, ranks,
-G_ref, provenance and checksums. Never rerank on the listing sample, training
-fold or test fold, or weight ranks by Airbnb counts. This is a fixed external
-measurement, not learned Airbnb preprocessing. Missing/suppressed external
-prices cannot be assigned zero or silently removed to redefine the frame.
+Copenhagen official eleven-area leave-one-area-out remains the baseline where qualified. Oslo/Stockholm official analysis polygons and any price-free sparse-area grouping must be qualified/frozen; no automatic 127-RegSO clustering. Retain Stockholm's accepted operational municipal-mask amendment. A03 permits only evidence-qualified Oslo vintage recovery; no exact-date claim from a current-at-retrieval API or matching area alone.
 
-The prespecified housing-scale sensitivity replaces the midrank H feature
-with `log(housing_price_m2_native)` in the same four blocks, sample and folds;
-it does not add four primary models. Retain native units without invented
-currency conversion. Housing values/mappings are never statistically imputed.
+New-city primary folds use the explicit revised >=500 train/>=30 test safeguard. Housing area counts/80% coverage/group support no longer apply. Random outer five-fold benchmark is a different prediction setting. Common five-fold 1.5 km geometric blocks with zero/half-block origins are required for comparison; retain full v3 grid/buffer registry.
 
-Qualification must establish source, date, geographic extent, checksum,
-period, property type, unit/currency, statistic, coverage and documented area
-mapping. A city without qualified H is BLOCKED from the primary ladder.
-Listing-level housing exclusions require qualified coverage rules and an
-explicit count/reason audit. Narrower-city or descriptive-only scope requires
-an explicit amendment, never silent omission of H.
+Inner tuning: four training-only spatial folds using 1 km blocks and deterministic balancing, inherited seed 20261005. Recover exact 30 unique v3 XGBoost candidates; reconstruct only if necessary with documented pools/seed 20261006. Freeze all memberships and candidates before conditional price-model evaluation. No outer-test early stopping or outcome-guided boundaries.
 
-## Prediction and OLS association samples
+Fit imputation/encoding/scaling on the relevant training split only. Entirely missing required training columns fail. Store private OOF predictions/losses, candidate scores/choices and dependency provenance.
 
-Freeze one housing-qualified prediction sample per city using valid observed Y,
-coordinates, official assignment, qualified H and matched E/W coverage/routing.
-All four primary models use the identical sample and saved random/geographic
-outer and spatial inner folds. No easier sample is constructed for M0 or ME.
-Remaining X/E/W predictor missingness is explicit. Learned medians/indicators
-and category encodings are fitted only within the relevant training partition;
-entirely missing training predictors stop evaluation. Outer outcomes never
-choose features, taxonomy, thresholds, preprocessing or candidate pools.
+## 5. Inference and diagnostics
 
-Separately freeze/document one common OLS association sample per city: complete
-cases of the union X+H+E+W and observed Y within the prediction sample. Apply the
-inherited 5% material-missingness limit to the fraction of prediction-sample
-rows missing any predictor in that union. Above 5%, association inference is
-BLOCKED until the multiple-imputation/pooling method is separately specified
-and validated. No model-specific complete-case selection or median-imputed
-inferential fallback is permitted. Record both sample identities, counts,
-exclusions and checksums; prediction metrics refer to the prediction sample.
+Paired geographic group resampling: 2000 replications, matched losses retained, descriptive stability ranges rather than definitive independence-based intervals. Preserve actual holdout count and small-group caveats.
 
-## Inherited income sensitivity
+Association OLS: HC3; rank/condition/VIF; restricted WCR11 bootstrap-t with Webb weights, CRV1 and 9999 replications, actual qualified area clusters, not universally eleven. Wild p-values accompany HC3 intervals rather than being labelled bootstrap intervals.
 
-Keep the qualified baseline income concept: 2024 equivalised disposable income
-as the arithmetic mean of ten published decile means, divided by 100,000 DKK
-for the existing Copenhagen/Frederiksberg measure. KKIND5 and nominal IFOR35
-retain their documented processing/price-basis uncertainties; missing eligible
-weights remain NULL. Other-city income sources need their own qualification.
+Spatial Moran: 8 nearest neighbours, 499 permutations, metric coordinates. One heteroskedasticity-robust spatial-error association sensitivity if OLS MW OOF residual |I|>0.05 and permutation p<0.05. No new broad spatial-model family.
 
-Mandatory no-income sensitivity removes only `income_100k_dkk` from X and
-**still includes H**. It reuses both frozen samples, observed outcomes, saved
-outer/inner folds, engines, candidates, tuning budget and training-only
-preprocessing. Versioned scenario IDs distinguish it from primary models.
-Report coefficients, metrics, paired gains and all geographic-area results.
-Keep the inherited material-change flags: ΔRMSE sign/MW-versus-ME ranking
-reversal; coefficient sign reversal with wild p<0.05 in either specification;
-relative magnitude change ≥25% with a 0.01 coefficient floor. They do not
-choose the primary specification or establish exact income equivalence.
+## 6. Robustness and scope discipline
 
-## Inherited thresholds, tuning and inference
+Retain matched no-income; apartment/condo-only; reviewed-only; training-derived 1st/99th price trimming with full held-out evaluation; separate reputation controls; 15/20-minute opportunities; speed 4/5.4 km/h at 10 min; continuous decay with 10-minute half-life over all reachable destinations in identical frozen universe; fixed-effect association sensitivity with area-constant slopes absorbed; original 1/1.5/2 km outer grids at both origins and 500/1000 m exclusion buffers.
 
-Retain baseline speed 5.0 km/h, budgets 10/15/20 minutes and matched rounded
-Euclidean radii 833/1,250/1,667 m. Primary is 10 minutes/833 m. Speed sensitivities
-are 4.0/5.4 km/h at 10 minutes, with 667/900 m analogues. Continuous decay uses
-lambda=ln(2)/10 per minute, the identical frozen destination universe and no
-finite cutoff for reachable network destinations. Include both snap connectors
-and directed foot restrictions. Preserve taxonomy/deterministic consolidation:
-25 m mutually-nearest identity-compatible platform/stop-position pairs,
-3 m same-representation tolerance (0.5 m unnamed), conflicting refs retained.
+Report 150 m boundary-near coordinate diagnostic. Any exclusion sensitivity must use a common within-variant sample for all models. Do not claim it corrects true coordinates. Public maps: 500 m cells, at least five observations.
 
-Reuse the actual frozen **30** unique XGBoost candidates and discrete pools
-from V3, seed 20261006, as copied with a V4 identity into configuration. Keep
-four inner spatial folds on 1 km blocks, seed 20261005; random outer five folds,
-seed 20261004; geographic leave-one-qualified-area-out within each city.
-The V3 eleven-area regional count is historical, not an invented V4 city count.
-Area adequacy must pass before geographic evaluation. Save folds before fitting,
-retain training preprocessing/tuning records and compute exact held-out TreeSHAP.
+All variants are COMPLETE/INFEASIBLE/DEFERRED/FAILED/NOT_APPLICABLE with exact reasons. Pre-fit resource amendments are visible; no silent candidate or robustness reduction after results. No mandatory new urban-form/moderator dataset.
 
-Evaluate all 1,000/1,500/2,000 m geometric block variants at zero and half-block
-origins and 500/1,000 m exclusion buffers. Sensitivity folds require at least
-500 train and 30 test observations. Preserve apartment/condo-only, reviewed
-listing and training-derived 1st/99th price-trimming sensitivities; review
-covariates remain separate. No performance-selected grid or variable deletion.
+## 7. Execution history
 
-OLS retains HC3 SEs/CIs and restricted WCR11 wild-cluster bootstrap-t by qualified
-analysis area, Webb six-point weights, CRV1 studentisation, 9,999 seeded
-replications, full rank and at least six clusters. Fail inadequate designs;
-do not represent six clusters as an assurance of reliable power. Report VIF,
-rank/condition number and support/extrapolation without deleting predictors.
-Paired geographic error uncertainty resamples all qualified held-out areas in
-that city with replacement 2,000 times, retaining every listing per sampled
-area and recomputing pooled errors. Fixed V3 eleven-area indexing is not reused
-for an unqualified V4 city. Percentile intervals describe stability, not causal
-effects or third-decimal significance.
+Use a new immutable scientific identity on existing v4. Preserve all v3/acquisition/housing records. Reuse only explicit hash-qualified sources/artifacts; do not rerun imports. Housing statuses are outside new scope, not changed to qualified. Resolve real non-housing blockers before fitting. Every A-step is a separate safe commit and verified push to v4. No merge to main is requested.
 
-Retain eight-neighbour Moran's I with 499 seeded permutations. Only one
-heteroskedasticity-robust spatial-error association sensitivity is contemplated
-if OLS MW geographic residuals have |I|>0.05 and permutation p<0.05; all its
-housing-context identification/rank gates must pass. No new SAR/SDM/GWR family.
-Area fixed effects absorb area-constant H/context slopes; they cannot estimate
-those absorbed coefficients. All numerical thresholds are project safeguards,
-not power guarantees. All metric operations record the qualified CRS; inherited
-V3 operations use EPSG:25832 and source coordinates EPSG:4326. Another city's
-projected CRS must be explicitly qualified, not assumed from V3.
 
-## Governance and implementation state
+## Live repository qualifications carried forward
 
-PostgreSQL/PostGIS is authoritative. Use separate V4 database/run/output identity;
-raw data, V3 artifacts/migrations and historical drafts stay immutable. Public
-maps retain 500 m cells with at least five nonmissing plotted observations;
-restricted raw/private row-level predictions, folds, SHAP and coordinates stay
-private. Record all external provenance and never fill missing scientific data.
+The actual v3 control names/parsers and E/W fields are listed in
+[data_dictionary.md](data_dictionary.md). Random outer seed remains 20261004;
+inner seed 20261005 and candidate seed 20261006. Recover the existing candidate
+list/hash rather than reconstructing it. The inherited wild-cluster design also
+requires full rank and at least six actual clusters; six is a computational
+safeguard, never reliable-power assurance. Keep no-income material-change flags:
+paired-gain sign or MW/ME ranking reversal; accessibility-coefficient sign
+reversal with wild p<0.05 in either specification; >=25% magnitude change with
+0.01 coefficient floor. These flags do not select the primary model.
 
-`config/v4/research_design.json` is the versioned machine-readable specification;
-`src/v4/specification.py` exposes model metadata only. The specification step
-performed no acquisition/fitting; subsequent steps add isolated persistence and
-immutable source/audit ingestion. Stockholm listing-boundary acquisition is
-RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT through the
-[SCB-derived 2025 operational union](stockholm_boundary_amendment_20261011.md).
-Oslo boundary vintage, H and other sample/context/fold gates remain BLOCKED;
-no V4 fitted result exists. RegSO IDs are not automatically analysis/housing areas.
-Step 5 acquired and audited housing sources separately: Oslo's annual BOL018
-statistics pass standalone preliminary QA; its boundary remains provisional.
-Copenhagen's quarterly statistics do not establish a justified annual value;
-Stockholm's acquired alternatives do not establish 2025 neighbourhood H.
-All final joined-sample gates remain BLOCKED. No listing H, external-area ranks
-or housing groups have been calculated. The prospective safeguards remain
-20 preferred annual sales, 10 usable areas, 80% final sample coverage, and four
-areas/100 listings per lower/higher group; these are not power guarantees.
-See [the source audit](housing_acquisition.md). No scientific model definition,
-comparison, threshold, inference rule or sensitivity changes in this step.
-Markdown is authoritative; see [document index](document_index.md)
-for DOCX status and [source registry](source_registry.md) for unresolved inputs.
+All housing prerequisites/thresholds, native price-area folds, H ranks,
+log-native-H sensitivities and H-subgroup analyses are
+NOT_REQUIRED_SCOPE_AMENDED for this design. They remain historically recorded,
+not retrospectively passed. RQ4 is withdrawn. Income is not residential price.
+The three-city scientific design is adopted, but execution is BLOCKED pending
+A02–A07 and genuine per-city inputs. A01 authorizes no later A-step.

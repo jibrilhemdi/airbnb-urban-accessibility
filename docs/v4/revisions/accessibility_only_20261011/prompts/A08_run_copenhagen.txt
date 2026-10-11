@@ -1,0 +1,19 @@
+# A08 — Execute or explicitly reuse Copenhagen results
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+This prompt authorizes the frozen Copenhagen–Frederiksberg empirical analysis, not supervisor approval or any unapproved scientific change.
+
+First require qualified sources, context/income mode, sample, folds, candidates, tests and immutable run manifest. Inspect whether the completed v3 artifacts exactly match the revised outcome, row set, controls, source/feature policy, transformations, folds, tuning and estimator implementation.
+
+If exact reuse is defensible, create an explicit read-only v4 evidence linkage to the original v3 artifact/commit/hash. Do not copy values into a new table and pretend they are a new fit. Derive the new MEW-ME contrast from matched saved OOF predictions only where available and verified. If any substantive dependency differs, run new v4 estimates and explain the difference; never force N to 12,412 or overwrite v3.
+
+Execute the prescribed predictive OLS and XGBoost ladders M0/ME/MW/MEW without H, under geographic and random validation as budgeted. Use full frozen tuning and paired samples. Execute separately eligible association components; report exact blockers rather than substitute imputed inference.
+
+Verify one OOF prediction per observation/model/estimator/scheme, shared outcomes/folds, no housing predictors, candidate provenance and independently recomputed metrics. Record current scientific-code/run identities before fitting. Protected v3 and source receipts remain unchanged.
+
+Checkpoint interrupted work truthfully as PARTIAL with an implemented resume command. Do not fabricate completed folds, silently reduce candidates or adopt a favourable sensitivity. Export only safe aggregates/manifests.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: run(v4): complete Copenhagen accessibility-only primary analysis

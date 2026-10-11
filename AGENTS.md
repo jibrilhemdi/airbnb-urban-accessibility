@@ -32,9 +32,11 @@
 
 ## V4 sequence safeguards
 
-Read [the V4 contract](docs/v4/IMPLEMENTATION_CONTRACT.md) and
-[the step log](docs/v4/step_log.md) at every step. Implement only the requested
-step; synthetic fixtures are tests, never research results.
+Read [the active accessibility-only V4 contract](docs/v4/IMPLEMENTATION_CONTRACT.md),
+[the step log](docs/v4/step_log.md) and [document index](docs/v4/document_index.md)
+at every step. Design `v4_accessibility_only_20261011` supersedes the historical
+housing-inclusive instructions. Continue the existing `v4` branch and execute
+only the requested A01–A12 step; synthetic fixtures are tests, never research results.
 
 - Work, commit and push exclusively on `v4`, using the remote and main base
   recorded in [the repository audit](docs/v4/repository_audit.md). Stop if other
@@ -42,9 +44,14 @@ step; synthetic fixtures are tests, never research results.
   into the step. Never discard/stash other work, reset an existing V4 branch,
   merge later main commits automatically, force-push, amend published commits,
   change tags, push main/v3 or merge V4 into main.
-- Primary V4 models are exactly `M0=X+H`, `ME=X+H+E`, `MW=X+H+W`,
-  `MEW=X+H+E+W`. H is required neighbourhood residential sale-price context.
-  No H-suffixed models or automatic no-housing ladder.
+- Primary models are exactly `M0=X`, `ME=X+E`, `MW=X+W`, `MEW=X+E+W`.
+  Residential prices/H are absent from primary models and required sensitivities.
+  Retain density, qualified income, centrality and matched no-income robustness;
+  income is distinct from property prices. Housing acquisition, samples, sales/
+  coverage gates, folds and subgroups are NOT_REQUIRED_SCOPE_AMENDED. Preserve
+  their historical evidence/statuses; do not pursue unsent requests. Genuine
+  geography/context/accessibility gates remain. Runtime adaptation is pending
+  A02; documentary scope adoption does not make the old runner ready.
 - Y remains log observed Airbnb nightly asking price. Fit separate city
   models; make no causal housing-price or displacement claims.
 - Preserve V3 artifacts and applied migrations. Use separate V4 run,

@@ -1,85 +1,44 @@
-# V4 source registry — active Markdown
+# Active V4 source/dependency registry — accessibility-only
 
-Definition version: `v4_housing_standard_20261011`. Decision date: 11 October
-2026. Newly authored from accessible source evidence. This is a qualification
-register and current acquisition evidence, not a replacement for the authoritative
-PostgreSQL source registry. V3 results were already observed; supervisor approval
-is not recorded and this is not retrospective preregistration.
+Design ID: `v4_accessibility_only_20261011`, 11 October 2026. PostgreSQL/PostGIS
+remains authoritative. V3 results and housing feasibility were already known;
+supervisor approval is not recorded. Source acquisition and scientific adoption
+are distinct from final sample/model qualification.
 
-## Existing evidence and authoritative store
-
-The actual local V3 manifest is `data/metadata/source_manifest.json`: 195
-manifest records, including 191 under data/raw. The frozen input configuration
-contains 204 raw file identities. These describe different inventories; neither
-count is invented as V4 source coverage. Actual registration is implemented in
-`src/db/sources.py`, with provenance persisted in PostgreSQL `meta.source_files`
-and raw source rows kept immutable. Acquisition sidecars/source selections also
-carry provenance. The unlabelled `data/raw/municipalities.zip` remains frozen
-but explicitly excluded from analytical registration due to unknown provenance.
-
-Do not copy private source rows into this Markdown or version control. V4
-provenance belongs to its separate authoritative database identity. CSV exports
-are not a second analytical store. All externally acquired data require source,
-acquisition date, geographic extent and checksums where possible. Record native
-and metric CRS for spatial data/operations and explicit unknowns.
-
-## V4 qualification register
-
-| Source role | Available evidence | V4 status / required gate |
+| Role | Verified existing evidence | Active requirement/status |
 | --- | --- | --- |
-| Airbnb outcome/property/host data | Three detailed 30 June 2026 catalogue entries/files verified; Copenhagen reused at protected hash, Oslo/Stockholm officially downloaded; 90 identical columns | Acquired/ingested audit only; 41,341 source rows per selected freeze, missing-price rows retained; no model sample qualified |
-| Housing H | Step 5: Finans Danmark BM011/BM021 2025 quarterly native postal aggregates acquired; Oslo BOL018 2025 annual native apartment statistics acquired; Stockholm SCB annual regional and SökHem rolling municipal alternatives acquired and rejected as target H | Oslo standalone PRELIMINARY_QA_PASSED, PROVISIONAL_BOUNDARY; Copenhagen annual construction/licence/geography BLOCKED; Stockholm target period/measure/area BLOCKED. All final H/model gates BLOCKED; no listing assignment or reference frame frozen |
-| Population/density X | V3 City/Statistics Denmark sources, qualified geography and population 2026 Q3 | Retain concept/limitations; qualify per-city reference period, density geography and CRS |
-| Income X | V3 Copenhagen KKIND5 and Frederiksberg nominal IFOR35, 2024 ten-decile arithmetic means, documented qualified acceptance | Inherited qualification applies to those sources only; new-city sources require compatible concepts and provenance |
-| Boundaries/centrality | Copenhagen 0101 + Frederiksberg 0147 municipal geometry reused; Oslo 0301 current official geometry acquired; Stockholm 0180 operational union derived from 127 SCB RegSO 2025 polygons | Stockholm listing boundary RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT, reference 2025-01-01; original Lantmäteriet 401 retained. Oslo vintage unresolved; new-city general metric CRS/anchor and every housing crosswalk unresolved; provider labels never substituted |
-| OSM network/stations/bus/POIs E/W | Frozen V3 extraction/taxonomy and deterministic consolidation; matched endpoint universe | Qualify each city extraction/coverage/snaps/topology; preserve inherited thresholds and category rules |
-| Tuning | Actual frozen V3 30-candidate list with seed/hash, copied under a V4 configuration identity | Definition inherited; no V4 fitting or data readiness certified |
+| Listings/Y/host/dwelling | Three frozen 30 June 2026 detailed snapshots, 90 columns, separate DKK/NOK/SEK; missing-price audits retained | Reuse approved manifest scopes by hash; common final samples pending A06 |
+| Copenhagen/Frederiksberg mask | Both municipalities 0101/0147, preserved official source vintages | Retain covers policy; V4 analysis/context/feature qualification remains |
+| Oslo mask | Actual 0301 current-at-retrieval official polygon | BLOCKED vintage qualification pending requested A03; do not certify June linework |
+| Stockholm mask | SCB RegSO 2025_v2 union, municipality 0180, 127 components, reference 2025-01-01 | RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT; operational 2025 mask only, not analysis clusters |
+| Official analysis areas | Copenhagen ten districts plus Frederiksberg inherited; new-city districts not qualified | Required A03; provider labels/RegSO components never automatic districts |
+| Population/density | Copenhagen 2026Q3/gross-area context inherited | Required A04; independent new-city sources/geography/denominators pending |
+| Income | Accepted KKIND5/nominal IFOR35 2024 construction and no-income robustness | Retain qualification/limitations; new-city income and frozen comparative mode required A04 |
+| Centrality/metric CRS | Copenhagen public City Hall/EPSG:25832 inherited; Stockholm EPSG:3006 qualified for boundary QA | New-city general metric CRS/public anchors need A03/A04 evidence; no default projection/mapping |
+| Network/destinations | Frozen v3 taxonomy, consolidation, connectors and source caches | Matching city sources/extraction/coverage/reuse QA pending A05; no routes built in A01 |
+| Samples/folds/candidates | Exact v3 30-candidate list available; inherited protocol | New-city common samples/folds and selected references pending A06/A07 |
+| Housing/property-price/rent sources | All Step 5 receipts, SQL records, failed/preliminary audits preserved | NOT_REQUIRED_SCOPE_AMENDED; historically BLOCKED final qualification remains unchanged |
+| Housing access requests | Existing precise drafts/manual-import requirements | NOT_REQUIRED_SCOPE_AMENDED; remain unsent, not to be pursued |
 
-Source URLs, timestamps, checksums, native schemas and public queries are now
-recorded in the [Step 5 source comparison](housing_source_registry.json),
-[housing acquisition audit](housing_acquisition.md) and
-`config/v4/housing_sources.json`. Qualified H configuration values, joined
-coverage and reference-frame fields remain null: source acquisition is distinct
-from qualification. No source value, geographic mapping or transaction count
-is invented. Raw values and private source files stay out of Git.
-Prefer full-year 2025 apartment sale-price/m2; alternate period/measure needs
-an explicit amendment. Preserve native reported values/currency and freeze
-one qualified external-area frame per city, independent of Airbnb. Average
-tie ranks and equal area weights give `H=(midrank-0.5)/G_ref`; log native price
-is the prespecified sensitivity. Missing values cannot be silently filled or
-removed to redefine the reference frame.
+Selected scope IDs/manifests and live counts are in
+[current_state_audit_20261011.md](current_state_audit_20261011.md). The original
+[listing acquisition](listing_acquisition.md), its aggregate JSON and the
+[Stockholm amendment](stockholm_boundary_amendment_20261011.md)/separate aggregate
+JSON remain unchanged. Their old housing references are historical scope facts,
+not current instructions. Never redownload/reingest those files because design
+identity changes; do not sum superseded ingestions as new listings.
 
-Every primary model M0/ME/MW/MEW includes H exactly once. No-income sensitivity
-still includes H. A city without qualified H is BLOCKED from the primary
-ladder. Narrower-city or descriptive-only scope needs an explicit amendment;
-there is no automatic no-H fallback. None of the contrasts estimates adding-H
-benefit without a separately authorized no-H sensitivity.
+[Housing acquisition](housing_acquisition.md), [access drafts](housing_access_requirements.md),
+`housing_source_registry.json`, `housing_acquisition_audit.json`, pinned housing
+policy and migration 025 remain historical feasibility evidence. Native source
+values, licensing restrictions and failures are preserved; source permissions
+still govern retained files. No price-source crosswalk, transaction-count gate,
+80% housing-coverage gate, H-area fold, rank or subgroup becomes a dependency of
+this new design. Income/population/analysis-area crosswalks are still required.
 
-The specification step performed no acquisition/migration. Architecture added
-023 and disposable tests. The listing step provisions `thesis_accessibility_v4`,
-applies unchanged 023 plus new 024 and registers immutable source manifests/raw
-audits with version/city/batch/ingestion identity. See
-[listing acquisition](listing_acquisition.md) and `listing_acquisition_audit.json`
-for exact URLs, timestamps, licences, hashes, safe counts and blockers.
-The active Stockholm-only update is
-[the 11 October boundary-source amendment](stockholm_boundary_amendment_20261011.md)
-and its separate SQL-derived `stockholm_boundary_amendment_20261011_audit.json`.
-SCB's official GeoPackage is CC0, native EPSG:3006, version 2025_v2/reference
-2025-01-01; actual `kommunkod=0180` is used, never county 01. This municipal mask
-does not qualify RegSO as the analysis or housing geography. Official/native
-area IDs remain unassigned. Step 5 independently audits native housing sources;
-this mask does not supply qualified housing data. The old listing audit/failed receipt and every committed ingestion
-remain immutable. No source is silently replaced or retried under its old identity.
-V3 remains untouched, no V4 fitted results exist, and no
-temporal Airbnb panel, residential-price outcome model or gentrification score
-is introduced. See the [specification](preanalysis_specification.md) and
-[document index](document_index.md) for authority and interpretation limits.
-
-Step 5 uses append-only migration 025 and dedicated `v4_raw.housing_ingestions`
-and `v4_raw.housing_area_period_audit`. The SQL-derived
-`housing_acquisition_audit.json` contains safe counts/status/provenance only.
-Native price/count cells remain authoritative in PostgreSQL, separate from
-future qualified research tables. Neither a bydel/delbydel hierarchy nor RegSO
-is silently selected as the housing reference frame. See
-[unsent access requests](housing_access_requirements.md) for exact missing
-inputs; no application, terms acceptance or purchase was made.
+All sources need source URL, retrieval/reference dates, extent, licence and
+checksum; spatial sources/operations need explicit CRS. Keep raw/private content
+ignored. New unknowns remain unresolved. The supplied literature matrix and some
+external draft files are not present in the live repository; their imported
+provenance is not claimed newly verified. See the [document index](document_index.md)
+and [active model contract](model_contract.md) for current authority and A02 limits.

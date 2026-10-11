@@ -1,0 +1,21 @@
+# A12 — Finalize documents and reproducibility handover
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+Generate the final research outputs from authoritative saved results, not manually entered metrics. Do not trigger unbudgeted duplicate full fitting during reporting.
+
+Update the active revised proposal, end-to-end plan, pre-analysis/deviation record, dictionary, README, document index and claims-to-output audit to the ACTUAL implemented scope. Preserve the pre-fit versions and amendment history. If a city or required component is incomplete, state it and do not invent three-city completion.
+
+All primary tables use M0, ME, MW and MEW without residential prices, with design/estimator/variant keys. Keep reused v3 and superseded housing-inclusive evidence separate and truthfully labelled. Remove active requests to acquire housing, H-qualified samples/folds and H-based claims, not their historical audit trail.
+
+Deliver source/period/geography and sample-flow tables, variable definitions, E/W measurement diagnostics, fold maps, city metrics and all five paired contrasts, relative-gain synthesis, robustness status, association/spatial results and limitations. Distinguish association, prediction and causation throughout.
+
+Run the full relevant tests, database/provenance checks, canonical feature and no-housing-dependency checks, v3-preservation checks and independent metric recomputation. A skipped required test is not a pass. Verify scientific hashes versus reporting-only changes and non-destructive reproducibility.
+
+Review data sharing and map suppression: no identifiers, coordinates, private predictions, restricted extracts, credentials or unlicensed source material in Git. Regenerate current DOCX documents using the supported workflow and visually inspect them; otherwise clearly mark authoritative Markdown and stale exports.
+
+Write release status and an exact completion/blocker report. Commit and push only v4. Do not modify main/v3, create a tag, open/merge a pull request or publish outside the repository without a separate request.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: docs(v4): finalize accessibility-only research and reproducibility

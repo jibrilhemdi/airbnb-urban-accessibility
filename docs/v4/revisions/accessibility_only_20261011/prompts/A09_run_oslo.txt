@@ -1,0 +1,21 @@
+# A09 — Execute Oslo under the same frozen design
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+This prompt authorizes only the frozen Oslo empirical analysis. Require the accepted Oslo municipal-vintage decision, official analysis areas, qualified context/income mode, matched E/W features, S_pred, folds/candidates and passing tests.
+
+Do not inherit Copenhagen's currency, anchors, area IDs, CRS or counts. Use Oslo's recorded scope and source-manifest identity while preserving the common scientific definitions.
+
+Run predictive OLS and XGBoost for M0, ME, MW and MEW without H, under the geographic and random schemes. Keep identical Oslo observations/folds across models and the complete frozen search budget. Run association inference only when separately qualified, with actual valid area clusters.
+
+Persist and verify complete OOF rows, selected parameters, source/code lineage and all five paired contrasts. Independently recompute RMSE/MAE/R2 and relative changes. Report K, N, support limitations, missingness and actual completion.
+
+A missing housing source must not block Oslo; unresolved real geography, context decision or feature data must. Do not silently switch to random-only evaluation or omit a city.
+
+If a shared scientific-code bug is discovered, fix it in a separate versioned identity and record which prior Copenhagen results require replacement. Preserve superseded artifacts. Do not combine city scores produced by meaningfully different algorithms as an unchanged protocol.
+
+Checkpoint partial or blocked work honestly. Do not run Stockholm or merge v4 into main.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: run(v4): complete Oslo accessibility-only primary analysis

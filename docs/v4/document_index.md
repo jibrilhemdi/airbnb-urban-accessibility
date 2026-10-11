@@ -1,70 +1,59 @@
-# V4 document index and provenance
+# V4 document index — accessibility-only active scope
 
-Active definition version: `v4_housing_standard_20261011`, 11 October 2026.
-**Authoritative V4 material is Markdown plus its versioned machine-readable
-configuration.** The following five documents were absent before this step and
-are newly authored from accessible V3 evidence and the user's latest decision.
-No inaccessible V4 proposal or historical eight-model draft was reconstructed.
+Active design: **`v4_accessibility_only_20261011`**, adopted 11 October 2026.
+**Authoritative active science is reconciled Markdown**, with
+`scope_amendment_20261011.json` recording this documentation decision.
+Executable configuration/SQL integration remains explicitly pending A02; the
+old `config/v4/research_design.json` is not the active scientific authority.
+V3 results and housing feasibility were already observed; no supervisor approval
+or retrospective preregistration is claimed.
 
-| Document | Role / status |
+| Document | Current role/status |
 | --- | --- |
-| [proposal.md](proposal.md) | Active V4 proposal and revised research questions |
-| [research_plan.md](research_plan.md) | Active V4 gated research plan |
-| [preanalysis_specification.md](preanalysis_specification.md) | Active V4 scientific definitions, samples, comparisons, safeguards and inference |
-| [data_dictionary.md](data_dictionary.md) | Active V4 field/block definitions; not a claim of implemented data columns |
-| [source_registry.md](source_registry.md) | Active V4 qualification register, explicit missing evidence |
-| [architecture.md](architecture.md) | Active V4 isolation, command behavior and persistence contract |
-| [listing_acquisition.md](listing_acquisition.md) | Matched-source adapter, inherited rules, municipal/quote audit and blocked boundaries |
-| `listing_acquisition_audit.json` | Safe SQL-derived aggregate/provenance evidence; explicit immutable ingestion IDs, no raw rows |
-| [stockholm_boundary_amendment_20261011.md](stockholm_boundary_amendment_20261011.md) | Active Stockholm-only SCB RegSO 2025 operational boundary amendment; original failure preserved |
-| `stockholm_boundary_amendment_20261011_audit.json` | Safe SQL-derived amended Stockholm evidence; supersedes the original boundary interpretation, no private rows |
-| `config/v4/stockholm_boundary_amendment.json` | Pinned official source bytes/schema, selected 0180 IDs, QA and temporal decision; explicit recovery adapter |
-| `config/v4/listing_sources.json` | Source-selection policy, native currencies and municipal identities; unresolved geometry/vintage retained |
-| [housing_acquisition.md](housing_acquisition.md) | Active Step 5 source comparison, standalone QA, cross-city comparability and exact blocked gates |
-| [housing_access_requirements.md](housing_access_requirements.md) | Unsent requests, exact needed files and prospective manual-import requirements; no terms accepted |
-| `housing_source_registry.json` | Machine-readable candidate metadata and rejected alternatives; no native price cells |
-| `housing_acquisition_audit.json` | Safe SQL-derived housing counts/provenance, distinct immutable ingestion IDs; final H unqualified |
-| `config/v4/housing_sources.json` | Pinned public requests, source/receipt SHA256, licence evidence and prospective safeguards |
-| `config/v4/cities.json` | Versioned three-city evidence and unresolved fields |
-| `config/v4/research_design.json` | Active V4 machine-readable definitions, inherited candidates and unresolved gates |
-| [IMPLEMENTATION_CONTRACT.md](IMPLEMENTATION_CONTRACT.md) | Active V4 execution/Git/data governance |
-| [step_log.md](step_log.md) | Requested steps, changes, actual checks and blockers |
-| [repository_audit.md](repository_audit.md) | Preserved step-1 repository evidence, not a current research proposal |
-| `protected_v3_manifest.json` | Preserved checksum-only baseline; never replace to conceal drift |
+| [proposal.md](proposal.md) | Active accessibility-only RQ1–RQ3 proposal, imported rationale plus live reconciliation |
+| [research_plan.md](research_plan.md) | Active end-to-end A01–A12 plan; later steps not yet executed |
+| [preanalysis_specification.md](preanalysis_specification.md) | Active scientific definitions and inherited/revised safeguards |
+| [data_dictionary.md](data_dictionary.md) | Active exact field concepts and explicit categorical-control discrepancy |
+| [model_contract.md](model_contract.md) | Active four-model design; runtime/version integration pending A02 |
+| [IMPLEMENTATION_CONTRACT.md](IMPLEMENTATION_CONTRACT.md) | Active scope, preservation, Git and completion rules |
+| [source_registry.md](source_registry.md) | Active non-housing dependencies; retired versus historic statuses separated |
+| [architecture.md](architecture.md) | Actual legacy runtime/persistence capability versus new scope, A02 pending |
+| [current_state_audit_20261011.md](current_state_audit_20261011.md) | A01 live SQL/source/branch audit and genuine remaining dependencies |
+| [step_mapping_A01_A12.md](step_mapping_A01_A12.md) | Completed old steps preserved; unexecuted housing steps superseded; new gates mapped |
+| `scope_amendment_20261011.json` | Documentation-only design/retirement decision, not executable config |
+| [step_log.md](step_log.md) | Append-only execution/history/test/blocker record |
+| [repository_audit.md](repository_audit.md) | Unchanged original bootstrap audit, historical scope statements |
+| [listing_acquisition.md](listing_acquisition.md), `listing_acquisition_audit.json` | Preserved acquired source/quote/municipal evidence; historical housing references superseded |
+| [stockholm_boundary_amendment_20261011.md](stockholm_boundary_amendment_20261011.md), its audit JSON | Retained operational Stockholm mask; original failures preserved |
+| [housing_acquisition.md](housing_acquisition.md), [housing_access_requirements.md](housing_access_requirements.md), both housing registry/audit JSONs | Historical feasibility/unsent requests; NOT_REQUIRED_SCOPE_AMENDED, not qualified sources |
+| `config/v4/housing_sources.json`, housing adapter, migration 025 | Historical frozen source policy/capability; preserve, decouple at A02 |
+| `config/v4/research_design.json`, `config/v4/cities.json`, V4 source/identity/runtime code, migrations 023–025 | Preserved executable housing-standard definitions/source guards, pending A02 adaptation |
+| `config/v4/listing_sources.json`, `config/v4/stockholm_boundary_amendment.json` | Existing pinned source/mask policies retained; no new acquisition |
+| [historical snapshot](history/housing_standard_20261011_before_A01/README.md) and its file manifest | Exact before-A01 active documents/AGENTS; superseded instructions, not deleted |
+| [revision bundle](revisions/accessibility_only_20261011/README.md) and its file manifest | User-intended immutable A01 input; template/reference provenance, not executed code |
+| `protected_v3_manifest.json` | Unchanged original protected V3 files/SQL baseline |
 
-## Preserved V3 and historical material
+## V3 and supplied evidence
 
-The actual active V3 specification is `docs/preanalysis_specification.md`, with
-`docs/data_dictionary.md`, `config/research_design.json` (`research_design_v3`),
-`src/pipeline/model_specification.py`, the local source manifest and PostgreSQL
-registry. These remain authoritative for the completed V3 identity, unchanged.
-They are superseded for V4 model definitions, not rewritten as V4 material.
+`docs/preanalysis_specification.md`, `docs/deviations_from_preanalysis.md`,
+`docs/data_dictionary.md`, `config/research_design.json`, frozen candidate list
+and `src/pipeline/model_specification.py` preserve completed V3 definitions.
+Completed run `research_v3_20261004T111510Z` and its outputs remain unchanged.
+The live `thesis_results_v3.zip` matches supplied provenance. The literature
+matrix and external old V4 DOCX/playbook names referenced in supplied provenance
+were not located in this live repository; no inaccessible content is invented.
+The bundle's listing-acquisition input hash differs from the newer live preserved
+Markdown. The current-state audit records both and verifies selected SQL counts.
 
-Existing V3 supporting files are
-`docs/design/airbnb_urban_accessibility_scientific_thesis_proposal_v3.docx` and
-`docs/design/airbnb_urban_accessibility_end_to_end_research_plan_v3.docx`, including
-their preserved baseline copies. Their XML text and income addenda were read.
-Older draft wording does not supersede the actual active V3 specification.
-Historical archives/drafts remain unchanged and are not active V4 instructions.
+## DOCX and export status
 
-V3 results were already observed before this amendment, including completed
-run `research_v3_20261004T111510Z`. The amendment is prospective for V4 only;
-do not invent supervisor approval or claim retrospective preregistration.
-
-## DOCX status and supported workflow
-
-**No existing active V4 DOCX file was found in the repository; no V4 DOCX was
-generated in this step.** No supported V4 Markdown-to-DOCX regeneration workflow
-was found. The existing `make income-docs` invokes
-`src.pipeline.update_income_documentation` and appends V3 income amendments to
-the two fixed V3 files using their historical DOCX baselines. It is not a V4
-regeneration workflow and was not invoked.
-
-Existing V3 DOCX files are preserved V3 supporting material, **superseded for
-V4 use**. Any separately held earlier V4 DOCX/draft is **stale/superseded for
-active V4 decisions** until regenerated from this authoritative Markdown by a
-supported, explicitly requested V4 workflow. Its existence/content cannot be
-verified from this repository, so no fictitious path or approval is recorded.
-If an active V4 DOCX is later added, update this index with its source/version,
-workflow/checksum and regeneration status; do not distribute an unstamped or
-stale binary as the active V4 specification.
+No existing active V4 DOCX file was present at bootstrap. A01 now imports the two
+user-supplied revision Word files unchanged under the revision bundle's `docs/`
+folder; hashes and document XML/design stamps are verified. They are supplied
+reference exports, **stale/superseded for the reconciled live active Markdown**,
+not regenerated or claimed identical after live amendments/categorical review.
+The repository has no supported V4 Markdown-to-DOCX regeneration workflow.
+`make income-docs` updates fixed historical V3 income DOCX and was not invoked.
+No binary export is the authoritative active specification. Preserve imported
+Word bytes and V3 Word/supporting baselines; any future reconciled Word release
+needs a supported workflow and explicit status/checksum review at A12.
