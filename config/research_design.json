@@ -1,0 +1,201 @@
+{
+  "version": "research_design_v3",
+  "crs": {
+    "source": 4326,
+    "metric": 25832
+  },
+  "seed": 20261004,
+  "inner_seed": 20261005,
+  "candidate_seed": 20261006,
+  "analysis_areas": 11,
+  "walking_speed_kmh": 5.0,
+  "thresholds_minutes": [
+    10,
+    15,
+    20
+  ],
+  "matched_euclidean_radii_m": [
+    833,
+    1250,
+    1667
+  ],
+  "speed_sensitivity_kmh": [
+    4.0,
+    5.4
+  ],
+  "speed_radii_m": [
+    667,
+    900
+  ],
+  "decay_half_life_minutes": 10,
+  "candidate_count": 30,
+  "inner_folds": 4,
+  "area_bootstrap_replications": 2000,
+  "wild_cluster_replications": 9999,
+  "block_sizes_m": [
+    1000,
+    1500,
+    2000
+  ],
+  "grid_origin_fractions": [
+    [
+      0,
+      0
+    ],
+    [
+      0.5,
+      0.5
+    ]
+  ],
+  "buffers_m": [
+    500,
+    1000
+  ],
+  "ols_material_missing_fraction": 0.05,
+  "income_harmonisation": {
+    "status": "qualified_accepted",
+    "harmonisation_status": "qualified",
+    "reason": "Explicit protocol amendment adopts source-derived common arithmetic decile means with documented qualification and mandatory no-income sensitivity",
+    "evidence": [
+      {
+        "path": "data/raw/copenhagen_statbank/2026-10-04/income_harmonisation/KKIND5_2024.csv",
+        "sha256": "5b1f462898eccf27f9ab161a803780b24f621ba53c38e3458ee640640df031d9"
+      },
+      {
+        "path": "data/raw/copenhagen_statbank/2026-10-04/income_harmonisation/KKIND5_2024_selection.json",
+        "sha256": "428cbfcd297669421b9dfc75acc7661dcd711d5a6be547bb9974fe7001ab67a9"
+      },
+      {
+        "path": "data/raw/copenhagen_statbank/2026-10-04/income_harmonisation/KKIND5_information.html",
+        "sha256": "bc59c2cab9a0e67713980e60121072f729ba8f801a26d00c282de1dc1aff56cd"
+      },
+      {
+        "path": "data/raw/copenhagen_statbank/2026-10-04/income_harmonisation/KKIND5_selection.html",
+        "sha256": "f589f13a487cdb1e7e9a2778d71995dd2affb76eb29b6cb62cf7e691d8dd0c23"
+      },
+      {
+        "path": "data/raw/copenhagen_statbank/2026-10-04/income_harmonisation/city_income_publication_2026.pdf",
+        "sha256": "a98a77ff54a2d6252bac00546aaa6b46437e576d958039748c6249b9a2c93e26"
+      },
+      {
+        "path": "data/raw/copenhagen_statbank/2026-10-04/income_harmonisation/copenhagen_statbank_documentation.pdf",
+        "sha256": "f179cce5845a3f1b331867954a5e76382bb8259aa33a1ce8b81269a304d753fb"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/AEKVIVADISP.html",
+        "sha256": "9ff526bdbe7cd3643d876fbb5e21fbb0b8b3e1e587d27d63fabcadcee98638e3"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/AEKVIVADISP_13.html",
+        "sha256": "c39932adff73ab32a7604b8c82ed5d4c9663112f810c412581da0687866d7a7f"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/FAMAEKVIVADISP_population.html",
+        "sha256": "b752bdb3e4cebfce137d7d9a057b2b49ad4f97bcc7079c1aba3178453ab47687"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/IFOR35_2024.csv",
+        "sha256": "998bfa753dce4c5591f428830be55587c7c86a2c931c58ab5a92f3f10f890014"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/IFOR35_2024_selection.json",
+        "sha256": "ae83fbc649ca3a1a6b1d891c8b0f9bd1ae21e744130f8e3f69e2b629f3b220cc"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/IFOR35_information.html",
+        "sha256": "b4c27cb559d35e47d641fbdca79727ed86f09d217d3c10d51122cee3796fb4f1"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/IFOR35_linked_documentation.html",
+        "sha256": "dcf3e8b15245a85735f55fb687f6f0c3081607d5ed92e509043a8057c4c24ff4"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/IFOR35_tableinfo.json",
+        "sha256": "a3572c0ec7570524295caa04f80c5f2aa8ceb307b35c59f1f9ff47f414db3662"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/income_distribution.html",
+        "sha256": "a46d080f77c06ba6142baf835e81af18a565e599474cd2a378b54ad563fd06d7"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/income_statistical_presentation.html",
+        "sha256": "ba75f0fca5637c90804e2cef7648d5e843d7ab53e737a6183850bd8dfdfc7980"
+      },
+      {
+        "path": "data/raw/municipality_statbank/2026-10-04/income_harmonisation/income_statistics_2024.pdf",
+        "sha256": "888b1be07b2947261c33991db2c190176d944fba4e925ce7c8d4c466ba959dfe"
+      },
+      {
+        "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/aarsregnskab_2024.pdf",
+        "sha256": "a239910650c5385c00775621c74875675f48f1df61a78cffdefc039f07809859"
+      },
+      {
+        "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/boligredegoerelsen_2025.pdf",
+        "sha256": "dbe942ecedb4da7b70c563b79f077af69eff73bdddb2dae314488a1808e3bb94"
+      },
+      {
+        "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/fakta_om_kommunen.html",
+        "sha256": "10883f00428950f387cf145c8e9d1053ab7d4c4f927b775214ff2c10d4dabbdf"
+      },
+      {
+        "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/kommuneplan_2025_redegoerelse.pdf",
+        "sha256": "ebac780c75a37c7530137ea99949d45a0ce07408a419aac2a625b00906d2fcd6"
+      },
+      {
+        "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/kontakt.html",
+        "sha256": "cb79773d7c3e20f69376e0a97a583e9c35db11fa864b3e2f2494453ff2a01291"
+      },
+      {
+        "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/oekonomiske_noegletal.html",
+        "sha256": "ecd4a0eb1a3a04741c2268db29c07919f7a92302e2a12c8e0142346156f9963b"
+      },
+      {
+        "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/politikker_og_planer.html",
+        "sha256": "962166ff2b0dce26b267669e3adf42985589440ad5760dbf315e196d095f72d3"
+      },
+      {
+        "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/kortlaegning_verdensmaal.pdf",
+        "sha256": "90654a721d175fdb860228a480d6577e64e3b0d0dca6607cedc6885e78a416a1"
+      },
+      {
+        "path": "data/raw/copenhagen_statbank/2026-10-04/municipal_income_review/city_poverty_equivalisation_2025.pdf",
+        "sha256": "1f5886d0524e2edd2b7a559a8cda363d2d0277952fbad01c266e02d882363ca6"
+      }
+    ],
+    "decision_path": "config/qualified_income_decision.json",
+    "decision_sha256": "355ab55de7e9cdf00995979806ae818093b599ff417ee805b2ea3fb12c5cc9e9"
+  },
+  "no_income_robustness": {
+    "enabled": true,
+    "mandatory": true,
+    "feature_sets": [
+      "M0_no_income",
+      "ME_no_income",
+      "MW_no_income",
+      "MEW_no_income"
+    ],
+    "engines": [
+      "OLS",
+      "XGBoost"
+    ],
+    "outer_schemes": [
+      "random_5",
+      "geographic_11"
+    ],
+    "same_sample": true,
+    "reuse_saved_outer_and_inner_assignments": true,
+    "preprocessing": "same training-only median/indicator and category encoding",
+    "candidate_count": 30,
+    "inner_folds": 4,
+    "candidate_source": "config/xgboost_candidates.json",
+    "material_change_rules": {
+      "predictive_delta_rmse_sign_reversal": true,
+      "walking_vs_euclidean_ranking_reversal": true,
+      "ols_accessibility_direction_reversal_with_wild_support_in_either": true,
+      "coefficient_magnitude_relative_change": 0.25,
+      "coefficient_near_zero_floor": 0.01,
+      "wild_support_p_threshold": 0.05,
+      "threshold_scope": "Sensitivity flags prespecified before fitting; no model selection or exact-equivalence claim"
+    }
+  }
+}

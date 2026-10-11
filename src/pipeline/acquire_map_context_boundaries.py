@@ -31,7 +31,7 @@ def acquire() -> str:
     if directory.exists() and any(directory.iterdir()):
         raise FileExistsError(f"Incomplete/nonempty raw archive; inspect before retry: {directory}")
 
-    with urlopen(Request(SOURCE_URL, headers={"User-Agent": "thesis-urban-accessibility/phase4"}),
+    with urlopen(Request(SOURCE_URL, headers={"User-Agent": "thesis-urban-accessibility/geography"}),
                  timeout=60) as response:
         payload = response.read()
     data = json.loads(payload)

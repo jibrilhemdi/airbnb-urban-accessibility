@@ -1,1 +1,1 @@
-"""Phase 1 PostgreSQL/PostGIS infrastructure."""
+"""database setup PostgreSQL/PostGIS infrastructure."""

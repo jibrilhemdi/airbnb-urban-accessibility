@@ -1,48 +1,22 @@
-# Initial data dictionary
+# Qualified area-income dictionary
 
-This is the source-layer dictionary. The analytical dictionary should be expanded when cleaning and feature engineering begin.
+The authoritative eleven-row source freeze is `v3_features.qualified_area_income`; CSVs are exports. The analytical sample dictionary is generated separately when the full run reaches dataset construction.
 
-| Source | Object/file | Intended role | Key fields/objects | Main caveat |
-|---|---|---|---|---|
-| Inside Airbnb | `data/listings.csv.gz` | Listing-level outcomes and controls | `id`, `latitude`, `longitude`, `price`, room/property type, capacity, reviews, host/listing controls | Coordinates are anonymised; price is listed price |
-| Inside Airbnb | `data/calendar.csv.gz` | Calendar availability/restriction sensitivity | listing id, date, available, minimum nights, maximum nights | The 2026-06-30 Copenhagen file contains no calendar price field; blocks can reflect host choices as well as bookings |
-| Inside Airbnb | `data/reviews.csv.gz` | Review activity/timing | listing id, review date, reviewer/listing identifiers | Reviews are an activity proxy, not bookings |
-| Inside Airbnb | `visualisations/listings.csv` | Compact summary layer for maps/EDA | listing id, coordinates, price and summary metrics | Not a substitute for detailed listings; inspect price currency before use |
-| Inside Airbnb | `visualisations/reviews.csv` | Compact review summary layer | listing id, date/summary fields | Check exact schema before analysis |
-| Inside Airbnb | `visualisations/neighbourhoods.csv` | Neighbourhood lookup | neighbourhood names/identifiers | Provider-defined geography |
-| Inside Airbnb | `visualisations/neighbourhoods.geojson` | Neighbourhood polygons | geometry and neighbourhood attributes | Use as a descriptive geography unless boundaries are independently validated |
-| OSM/Overpass | `responses/walking_network.json` | Walkable network input | highway ways plus referenced nodes | Query is bounded to the listing extent plus buffer |
-| OSM/Overpass | `responses/amenities_and_transport.json` | Amenity/transport opportunities | amenity, tourism, leisure, shop, public transport and selected railway tags | Tag completeness varies spatially |
-| City of Copenhagen Statbank | `KKBEF1.csv` | Population context by district | total population, latest available quarter | Geography covers City of Copenhagen districts, not Frederiksberg |
-| City of Copenhagen Statbank | `KKHUS1.csv` | Household context by district | total households, 2026 Q1 (1 January reference date) | Geography covers City of Copenhagen districts, not Frederiksberg |
-| City of Copenhagen Statbank | `KKIND3.csv` | Income context by district | average disposable income for persons aged 14+, sex total, latest annual release | Income is a district-level aggregate in DKK |
-| City of Copenhagen Statbank | `KKBOL3.csv` | Dwelling/resident context by district | dwellings, occupied dwellings, residents, average residents per occupied dwelling | Housing variables use the latest available annual release |
-| Statistics Denmark StatBank | `FOLK1A.csv`, `FAM55N.csv`, `INDKP106.csv`, `BOL101.csv`, `BOL106.csv` | Frederiksberg as one proxy analysis area | population, households, average disposable income, dwelling totals, registered-population dwellings, average persons per dwelling | Source is municipality-wide, not an official district; only four fields enter the pooled analysis-area layer, with caveats. |
+| Field | Definition |
+| --- | --- |
+| `analysis_area` / `analysis_area_name` | Official ten Copenhagen districts plus Frederiksberg as eleven peer areas. Not a primary predictor. |
+| `equiv_disposable_income_2024` | Annual DKK arithmetic mean of ten published equivalised-disposable-income decile means, common year 2024. |
+| `income_100k_dkk` | Core M0 predictor: `equiv_disposable_income_2024 / 100000`; inherited by ME/MW/MEW. |
+| `source_institution` / `source_table` / `source_geography` | Copenhagen Municipality KKIND5 district codes 1001–1010; Statistics Denmark IFOR35 municipality 147 for Frederiksberg. |
+| `year` / `price_basis` | 2024; IFOR35 nominal current prices (006); KKIND5 `not_confirmed`, retained as an explicit qualification. |
+| `deciles` | Exactly ten observed ordered means as decimal strings; missing/suppressed/nonfinite/ambiguous national zero cells fail. Negative incomes remain observed values. |
+| `transformation` | Frozen common sum(d1…d10)/10. Equal weighting follows ten conceptual equal person groups; no Airbnb-dependent weights. |
+| `harmonisation_status` / `qualification` | Record metadata `qualified`; active acceptance `qualified_accepted`. Unresolved exact weighting/ties/eligibility/variable version/income-treatment/City price-basis details remain explicit. |
+| `source_path` / `source_checksum` / `source_file_id` | Immutable raw CSV, SHA-256 and PostgreSQL meta.source_files identity. All metadata/selections also checksum checked. |
+| `source_url` / `acquired_at_utc` / `geographic_extent` | Original institutional source URL, acquisition timestamp and stated extent. Preserved in the frozen record and source inventory. |
+| `eligible_person_count` | Explicit NULL; exact 2024 eligible group/district counts unavailable. Never substitute total population or listing counts. |
+| `log_population_density` | Natural log of population / gross official assignment-polygon km², EPSG:25832; population 2026 Q3. |
 
-Planned derived fields include network travel time to stops/amenities, counts within walking thresholds, distance-decay indices, and spatial validation blocks. These should not be added until the source schema and coordinate handling are inspected.
+Copenhagen published-total QA: 340620.1 vs 340949.1 DKK, signed −329 DKK, −0.0964953%, tenth decile −3376 DKK. Supportive only; weighted district reconstruction remains NULL. Historical candidate and municipal evidence tables retain their original unverified statuses.
 
-## Snapshot-specific checks
-
-- Detailed listings contain 23,144 rows and 90 columns. The `price` field is formatted with a dollar sign, but the user confirmed that its numeric values should be treated as local DKK. This is a documented assumption, not independent provider verification; no currency conversion is applied.
-- Detailed calendar contains 8,448,291 rows and 5 columns. It is useful for availability/restriction summaries in this snapshot, but not for a calendar-based price outcome.
-
-## Available pipeline outputs
-
-The local processed table at `data/processed/copenhagen/2026-06-30/` contains one row per source listing and includes:
-
-- cleaned numeric source price and `log_price_source_currency` without currency conversion;
-- non-identifying property, availability, review, and aggregate host-control fields;
-- projected `x_utm32_m`/`y_utm32_m` coordinates and distance to a fixed Copenhagen centre reference;
-- nearest OSM network node, off-network snap distance, and network degree;
-- walking time to the nearest OSM food/drink, green-space, retail, services, tourism, and transport opportunity;
-- `network_nearest_category_accessibility_index`, a minimum-version decay score based on those nearest-category times.
-
-This first index is deliberately not described as a full opportunity count within a 5/10/15-minute catchment. That richer measure can be added after the core analytical table is stable.
-
-The City context joins 10 Copenhagen districts to 20,644 listings; Frederiksberg's 2,500 listings have missing strict district fields by design. `eligible_for_district_context_model` flags that 20,644-listing strict sample. The `analysis_area_` layer covers all 23,144 listings in 11 areas, treating Frederiksberg municipality as one proxy area (`analysis_area_is_municipality_proxy = true`). Pooled population, households, disposable income, and dwelling counts carry separate period and source flags. Population is 2026 Q3 for both sources. Copenhagen households are 2026 Q1 and Frederiksberg households are 1 January 2026, both with `analysis_area_households_reference_date = 2026-01-01`; source definitions are not independently harmonised. Income is 2024 but denominators differ; dwelling definitions are not independently harmonised. Do not interpret the proxy as an official Copenhagen district. Housing resident and occupied-dwelling counts are not pooled.
-
-## Price policy for the next regenerated analytical layer
-
-The cleaning code now derives `price_nightly` (numeric source price, assumed DKK) and `log_price`. The existing processed export predates this change and has **not** been regenerated. The local export is not the intended authoritative store; the later database analytical layer should apply the same rule.
-
-Every listing ID occurs once in the current file. Retain one valid positive source price per listing regardless of `last_scraped`; do not replace or impute missing prices. `last_scraped` remains provenance, not a price-model predictor. Aggregate price-completeness counts by date are recorded in cleaning metadata because only 683 of 8,984 listings scraped on 3–4 July have prices, versus 13,177 of 14,160 on 30 June–1 July. This imbalance is a sample-selection limitation, not evidence of within-listing price changes. A future genuinely linked multi-scrape source would require a separately specified reconciliation rule.
+Mandatory no-income models omit only `income_100k_dkk`. The transparent original value remains diagnostic metadata and is excluded from their predictors. See `config/qualified_income_decision.json` and `reports/income_harmonisation_status.md`.

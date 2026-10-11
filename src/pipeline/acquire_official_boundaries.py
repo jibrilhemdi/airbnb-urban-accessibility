@@ -42,7 +42,7 @@ def acquire() -> Path:
     payloads = {}
     metadata = {"acquired_at_utc": now.isoformat(), "files": {}}
     for name, (url, expected) in SOURCES.items():
-        with urlopen(Request(url, headers={"User-Agent": "thesis-urban-accessibility/phase4"}), timeout=45) as response:
+        with urlopen(Request(url, headers={"User-Agent": "thesis-urban-accessibility/geography"}), timeout=45) as response:
             payload = response.read()
         data = json.loads(payload)
         if expected == "bydel":

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import warnings
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -19,8 +20,11 @@ PROVIDERS = {
     "copenhagen_statbank": "City of Copenhagen Statbank",
     "frederiksberg_statbank": "Statistics Denmark StatBank",
     "municipality_statbank": "Statistics Denmark StatBank",
+    "frederiksberg_municipality": "Frederiksberg Municipality",
     "official_boundaries": "Danish national geography API / Copenhagen Municipality WFS",
     "official_map_context": "Danish national geography API",
+    "official_transport": "City of Copenhagen public transport/road/path WFS",
+    "official_transport_validation": "Metro operator / Movia official source-validation evidence",
 }
 EXTENTS = {
     "inside_airbnb": "Copenhagen and Frederiksberg listing area",
@@ -28,8 +32,11 @@ EXTENTS = {
     "copenhagen_statbank": "Copenhagen Municipality districts",
     "frederiksberg_statbank": "Frederiksberg Municipality",
     "municipality_statbank": "Copenhagen and Frederiksberg municipalities",
+    "frederiksberg_municipality": "Frederiksberg Municipality",
     "official_boundaries": "Copenhagen and Frederiksberg municipalities; Copenhagen districts",
     "official_map_context": "Capital Region of Denmark municipalities (cartographic context only)",
+    "official_transport": "Per-layer Copenhagen, Frederiksberg or regional extent; see source manifest",
+    "official_transport_validation": "Metro operating network / explicitly recorded regional stop query extent",
 }
 
 
@@ -79,7 +86,7 @@ def prepare_source(
             sidecar = json.loads(metadata_path.read_text(encoding="utf-8")).get("files", {}).get(path.name, {})
     elif provider_key in {"official_boundaries", "official_map_context"} and path.name == "acquisition_metadata.json":
         sidecar = json.loads(path.read_text(encoding="utf-8"))
-    elif provider_key == "osm" and "phase05" in parts:
+    elif provider_key == "osm" and (path.parent / "acquisition_metadata.json").is_file():
         metadata_path = path.parent / "acquisition_metadata.json"
         if path.name == "acquisition_metadata.json":
             sidecar = json.loads(path.read_text(encoding="utf-8"))
@@ -92,7 +99,10 @@ def prepare_source(
         manifest_entry.get("source_date") or manifest_entry.get("osm_timestamp")
         or sidecar.get("source_date") or sidecar.get("retrieval_date")
     )
-    notes = {key: manifest_entry[key] for key in ("asset", "table", "period", "periods", "status", "superseded_by")
+    notes = {key: manifest_entry[key] for key in ("asset", "table", "period", "periods", "status", "superseded_by",
+             "source_crs", "source_page", "license", "license_status", "source_date_note", "caveats",
+             "wfs_type_name", "archive_member", "archive_path", "reference_year", "unit",
+             "price_basis", "relevant_definition", "review_role")
              if key in manifest_entry}
     if not manifest_entry:
         notes["manifest"] = "No source-manifest entry; SHA-256 computed directly from immutable raw file"
@@ -102,7 +112,7 @@ def prepare_source(
         "filename": path.name,
         "relative_path": relative_path,
         "source_name": manifest_entry.get("provider") or (
-            "OpenStreetMap via BBBike" if provider_key == "osm" and "phase05" in parts else PROVIDERS[provider_key]
+            "OpenStreetMap via BBBike" if provider_key == "osm" and (path.parent / "acquisition_metadata.json").is_file() else PROVIDERS[provider_key]
         ),
         "source_url": manifest_entry.get("source_url") or sidecar.get("source_url") or sidecar.get("landing_page") or sidecar.get("source_page"),
         "file_hash_sha256": actual_hash,
@@ -110,7 +120,7 @@ def prepare_source(
         "source_date": source_date,
         "snapshot_date": snapshot_date,
         "acquisition_date": _iso_date(manifest_entry.get("downloaded_at_utc") or sidecar.get("retrieved_at_utc") or sidecar.get("acquired_at_utc")),
-        "geographic_extent": sidecar.get("geographic_extent") or EXTENTS[provider_key],
+        "geographic_extent": manifest_entry.get("geographic_extent") or sidecar.get("geographic_extent") or EXTENTS[provider_key],
         "notes": json.dumps(notes, ensure_ascii=False) if notes else None,
     }
 
@@ -120,7 +130,20 @@ def prepare_all_sources(
 ) -> list[dict[str, Any]]:
     manifest = _manifest_entries(manifest_path)
     raw_root = project_root / "data" / "raw"
-    paths = sorted(path for path in raw_root.rglob("*") if path.is_file() and path.name != ".gitkeep")
+    paths = sorted(path for path in raw_root.rglob("*") if path.is_file()
+                   and path.name not in {".gitkeep", ".DS_Store"} and not path.name.startswith("._"))
+    quarantine_path = project_root / "config/unverified_raw_files.json"
+    quarantine = json.loads(quarantine_path.read_text()) if quarantine_path.exists() else {}
+    kept = []
+    for path in paths:
+        relative = path.relative_to(project_root).as_posix()
+        if relative in quarantine:
+            if sha256_file(path) != quarantine[relative]["sha256"]:
+                raise ValueError("Quarantined raw archive changed")
+            warnings.warn(f"Excluded from analytical source registration: {relative}: {quarantine[relative]['reason']}", stacklevel=2)
+        else:
+            kept.append(path)
+    paths = kept
     present = {path.resolve().relative_to(project_root.resolve()).as_posix() for path in paths}
     missing = sorted(set(manifest) - present)
     if missing:
