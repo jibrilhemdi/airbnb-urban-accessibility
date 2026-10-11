@@ -7,13 +7,14 @@ import csv
 from datetime import date
 from decimal import Decimal, InvalidOperation
 import gzip
+import hashlib
 import json
 import math
 from pathlib import Path
 import re
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
-from urllib.parse import quote as url_quote, urlsplit, urlunsplit
+from urllib.parse import quote as url_quote, urlsplit, urlunsplit, urlencode
 
 from pyproj import CRS, Transformer
 from shapely.geometry import Point, shape, mapping
@@ -47,18 +48,35 @@ def encoded_json(value):
 
 
 def acquire(paths, source_id, filename, url, *, extent, licence, reference_period,
-            source_crs='not_spatial', selection=None, reuse=None):
+            source_crs='not_spatial', selection=None, reuse=None, request_json=None,
+            request_form=None):
     """Exclusive raw creation + immutable receipt; cached retrieval dates never rewritten.
 
     A crash leaving bytes without a receipt fails closed. No force/replacement option.
     HTTP failures freeze only the status/URL, never a credential or response body.
     """
+    if request_json is not None and request_form is not None:
+        raise ValueError('Choose one public request encoding')
+    body = None
+    headers = {'User-Agent': USER_AGENT}
+    if request_json is not None:
+        body = json.dumps(request_json, sort_keys=True, allow_nan=False).encode()
+        headers['Content-Type'] = 'application/json'
+    elif request_form is not None:
+        body = urlencode(request_form, doseq=True).encode()
+        headers['Content-Type'] = 'application/x-www-form-urlencoded'
+    method = 'POST' if body is not None else 'GET'
+    body_hash = hashlib.sha256(body).hexdigest() if body is not None else None
+    if reuse and body is not None:
+        raise ValueError('Source reuse cannot issue a query')
     destination = paths.source(source_id, filename)
     receipt = paths.source(source_id, filename + '.receipt.json')
     if receipt.exists():
         record = json.loads(receipt.read_text())
         if record['source_url'] != url or record['selection'] != selection or record['reference_period'] != reference_period:
             raise ValueError('Immutable source selection mismatch')
+        if record.get('request_method', 'GET') != method or record.get('request_sha256') != body_hash:
+            raise ValueError('Immutable source query mismatch')
         if record['status'] == 'acquired' and sha256_file(destination) != record['sha256']:
             raise ValueError('Immutable source bytes changed')
         return record
@@ -69,6 +87,9 @@ def acquire(paths, source_id, filename, url, *, extent, licence, reference_perio
                   geographic_extent=extent, source_crs=source_crs, licence=licence,
                   reference_period=reference_period, selection=selection,
                   local_location=destination.relative_to(paths.root).as_posix())
+    if body is not None:
+        record.update(request_method=method, request_sha256=body_hash,
+                      request_json=request_json, request_form=request_form)
     if reuse:
         path, digest, original_retrieval = reuse
         if sha256_file(path) != digest:
@@ -81,7 +102,7 @@ def acquire(paths, source_id, filename, url, *, extent, licence, reference_perio
         try:
             parts = urlsplit(url)
             transport_url = urlunsplit((parts.scheme, parts.netloc, url_quote(parts.path, safe='/%:@'), parts.query, parts.fragment))
-            with urlopen(Request(transport_url, headers={'User-Agent': USER_AGENT}), timeout=180) as response:
+            with urlopen(Request(transport_url, data=body, headers=headers, method=method), timeout=180) as response:
                 # Detailed files are small enough for a single exclusive write; no partial raw files.
                 content = response.read()
                 record.update(http_status=response.status, final_url=response.url,

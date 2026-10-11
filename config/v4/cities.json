@@ -3,7 +3,7 @@
   "city_definition_version": "v4_cities_20261011",
   "target_snapshot_month": "2026-06",
   "preferred_housing_reference_year": 2025,
-  "evidence_note": "Matched 30 June 2026 catalogue/listing/schema/currency evidence frozen in V4. Study masks are official municipal geometry only; provider labels, official analysis areas and future housing areas stay distinct. Oslo vintage and Stockholm geometry unresolved; no Copenhagen context/projection defaults for other cities.",
+  "evidence_note": "Matched 30 June 2026 listings frozen in V4. Stockholm mask is the documented SCB-derived RegSO 2025 operational union; Oslo municipal vintage remains unresolved. Native analysis/housing IDs remain distinct. Step 5 housing sources are audited separately, all final H/model gates blocked. No Copenhagen projection or context defaults for other cities.",
   "cities": {
     "copenhagen_frederiksberg": {
       "study_boundary": {
@@ -211,7 +211,18 @@
       "housing": {
         "status": "unresolved",
         "value": null,
-        "evidence": []
+        "evidence": [],
+        "source_audit": {
+          "definition_version": "v4_housing_sources_20261011",
+          "run_id": "research_v4_copenhagen_frederiksberg_20261011T172619Z",
+          "manifest_sha256": "141a0a171ad4334c27711d63fda2cb54b1b6e43c1ac8d8fddd6caac21794c3cd",
+          "metadata_status": "METADATA_VERIFIED",
+          "data_status": "DATA_ACQUIRED",
+          "preliminary_qa_status": "BLOCKED",
+          "spatial_status": "SPATIAL_JOIN_PENDING",
+          "final_qualification": "BLOCKED",
+          "model_gate": "BLOCKED"
+        }
       },
       "official_analysis_area_sources": {
         "status": "inherited_not_v4_qualified",
@@ -320,7 +331,18 @@
       "housing": {
         "status": "unresolved",
         "value": null,
-        "evidence": []
+        "evidence": [],
+        "source_audit": {
+          "definition_version": "v4_housing_sources_20261011",
+          "run_id": "research_v4_oslo_20261011T172619Z",
+          "manifest_sha256": "4c03de2f2b86d69a4a1223fbbc945066cd3ae93b0576aa1567bd294999f9d16b",
+          "metadata_status": "METADATA_VERIFIED",
+          "data_status": "DATA_ACQUIRED",
+          "preliminary_qa_status": "PRELIMINARY_QA_PASSED",
+          "spatial_status": "PROVISIONAL_BOUNDARY",
+          "final_qualification": "BLOCKED",
+          "model_gate": "BLOCKED"
+        }
       }
     },
     "stockholm": {
@@ -416,7 +438,18 @@
       "housing": {
         "status": "unresolved",
         "value": null,
-        "evidence": []
+        "evidence": [],
+        "source_audit": {
+          "definition_version": "v4_housing_sources_20261011",
+          "run_id": "research_v4_stockholm_20261011T172619Z",
+          "manifest_sha256": "3e5c67efd1865e139cc827d8d4f51bd0a14a7ff000304822007b0bcafff6fe9e",
+          "metadata_status": "BLOCKED",
+          "data_status": "DATA_ACQUIRED",
+          "preliminary_qa_status": "BLOCKED",
+          "spatial_status": "SPATIAL_JOIN_PENDING",
+          "final_qualification": "BLOCKED",
+          "model_gate": "BLOCKED"
+        }
       }
     }
   }

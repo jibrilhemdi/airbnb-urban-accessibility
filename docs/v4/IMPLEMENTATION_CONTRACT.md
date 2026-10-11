@@ -28,6 +28,13 @@ SCB RegSO 2025 municipal-mask derivation, a dated source amendment and separate
 immutable audit ingestion. Its documented operational 2025 geometry does not
 certify Lantmäteriet 2026 linework or authorize Step 5, H assignments or fitting.
 Original failed-access receipts and committed ledgers remain immutable.
+Step 5 separately authorizes lawful anonymous housing-source discovery and
+public downloads, native-area/period source QA, append-only migration 025,
+separate immutable housing-audit ingestions and safe aggregate exports. It
+does not authorize accepting contracts, sending applications, purchasing data,
+Step 6 spatial assignments, final H ranks, network features or model fitting.
+See [housing_acquisition.md](housing_acquisition.md) for actual acquisitions,
+preliminary versus final gates and remaining access/geographic dependencies.
 See [architecture.md](architecture.md) for implemented command behavior and
 unresolved empirical gates. The roster is `copenhagen_frederiksberg`, `oslo`,
 `stockholm`; narrower scope still requires an amendment.

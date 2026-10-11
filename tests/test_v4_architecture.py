@@ -160,6 +160,19 @@ class ScopedFilesTests(unittest.TestCase):
         self.assertNotEqual(canonical_hash(science), canonical_hash(scientific_dependencies('oslo', design=design, source_manifests={'fixture': 'hash'})))
         self.assertNotEqual(canonical_hash(science), canonical_hash(scientific_dependencies('oslo', source_manifests={'fixture': 'changed'})))
 
+    def test_housing_policy_changes_invalidate_only_the_selected_city(self):
+        path = PROJECT_ROOT / 'config/v4/housing_sources.json'
+        native = path.read_text()
+        load_json = json.loads
+        policy = load_json(native)
+        original = scientific_dependencies('oslo')
+        policy['cities']['stockholm']['blockers'].append('Synthetic other-city change')
+        with patch('src.v4.identity.json.loads', side_effect=lambda s: deepcopy(policy) if s == native else load_json(s)):
+            self.assertEqual(original, scientific_dependencies('oslo'))
+        policy['cities']['oslo']['sources'][0]['sha256'] = '0' * 64
+        with patch('src.v4.identity.json.loads', side_effect=lambda s: deepcopy(policy) if s == native else load_json(s)):
+            self.assertNotEqual(canonical_hash(original), canonical_hash(scientific_dependencies('oslo')))
+
     def test_shared_scientific_imports_are_declared(self):
         import ast
         declared = set(scientific_dependencies('oslo')['code_and_environment'])

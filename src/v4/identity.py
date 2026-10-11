@@ -146,6 +146,14 @@ def scientific_dependencies(city: str, *, root: Path = PROJECT_ROOT, design: dic
     amendment_path = root / 'config/v4/stockholm_boundary_amendment.json'
     if city == 'stockholm' and amendment_path.is_file():
         source_policy['boundary_amendment'] = json.loads(amendment_path.read_text())
+    housing_policy_path = root / 'config/v4/housing_sources.json'
+    if housing_policy_path.is_file():
+        housing_policy = json.loads(housing_policy_path.read_text())
+        source_policy['housing_sources'] = {
+            'definition_version': housing_policy['definition_version'],
+            'safeguards': housing_policy['safeguards'],
+            'city': housing_policy['cities'][city],
+        }
     packages = re.findall(r'^([A-Za-z0-9_-]+)==', (root / 'requirements.txt').read_text(), re.M)
     from pyproj import proj_version_str
     from shapely import geos_version_string

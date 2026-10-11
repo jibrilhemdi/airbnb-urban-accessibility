@@ -193,12 +193,21 @@
       "same_prediction_sample_and_folds": true,
       "additional_primary_models": false
     },
-    "qualification_status": "BLOCKED_NOT_ASSESSED",
+    "qualification_status": "BLOCKED_STEP5_AUDITED_JOIN_PENDING",
     "source": null,
     "acquisition_date": null,
     "geographic_extent": null,
     "source_sha256": null,
-    "alternate_period_or_measure_requires_explicit_amendment": true
+    "alternate_period_or_measure_requires_explicit_amendment": true,
+    "source_audit_policy": "config/v4/housing_sources.json",
+    "source_audit_definition_version": "v4_housing_sources_20261011",
+    "prospective_safeguards": {
+      "preferred_minimum_annual_sales": 20,
+      "minimum_usable_areas": 10,
+      "minimum_final_listing_coverage": 0.8,
+      "minimum_areas_per_housing_group": 4,
+      "minimum_listings_per_housing_group": 100
+    }
   },
   "samples": {
     "prediction": "one_housing_qualified_prediction_sample_per_city_shared_by_all_four_models",

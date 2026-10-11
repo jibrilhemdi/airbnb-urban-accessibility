@@ -76,7 +76,8 @@ class V4PersistenceTests(unittest.TestCase):
         register_manifest(self.conn, self.paths.scope, self.manifest)
 
     def test_migration_idempotence_and_applied_hash(self):
-        self.assertEqual(self.first_migration, ['023_v4_multicity_persistence.sql', '024_v4_listing_boundary_audit.sql'])
+        self.assertEqual(self.first_migration, ['023_v4_multicity_persistence.sql', '024_v4_listing_boundary_audit.sql',
+                                                '025_v4_housing_source_audit.sql'])
         self.assertEqual(migrate(self.engine, synthetic=True), [])
         with tempfile.TemporaryDirectory() as directory:
             for original in MIGRATIONS.glob('*.sql'):
@@ -85,8 +86,51 @@ class V4PersistenceTests(unittest.TestCase):
             migration.write_text((MIGRATIONS / migration.name).read_text() + '\n-- changed fixture\n')
             with self.assertRaisesRegex(RuntimeError, 'changed'):
                 migrate(self.engine, synthetic=True, directory=Path(directory))
-        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.schema_migrations')), 2)
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.schema_migrations')), 3)
         self.assertEqual(self.conn.scalar(text("SELECT count(*) FROM information_schema.schemata WHERE schema_name LIKE 'v3_%'")), 0)
+
+    def test_housing_sources_persist_native_values_nulls_and_blocked_status(self):
+        from src.v4.housing import persist_housing, evidence, standalone_gates, DEFINITION
+        record = dict(source_id='fixture', source_area_id='native_0180R001', geography_level='synthetic_native_area',
+                      period='2025', price_m2_native=None, sale_count=None, currency='SEK', unit='SEK/m2', annual=True)
+        gates = standalone_gates([record], legal_reuse_verified=True, annual_measure_verified=True,
+                                 geography_definitions_verified=True, boundary_provisional=False)
+        summary = dict(definition_version=DEFINITION, parsed_rows=1, status='BLOCKED', **gates)
+        persist_housing(self.conn,self.paths.scope,self.manifest,[record],summary)
+        stored = self.conn.scalar(text('SELECT record FROM v4_raw.housing_area_period_audit WHERE '+SCOPE_SQL),self.paths.scope.params())
+        self.assertIsNone(stored['price_m2_native']);self.assertIsNone(stored['sale_count'])
+        result=evidence(self.conn,self.paths);self.assertEqual(result['parsed_rows'],1);self.assertFalse(result['listing_H_assigned'])
+        self.assertNotIn('price_m2_native',result)
+        self.assertEqual(result['per_level']['synthetic_native_area']['unknown_sale_counts'],1)
+        self.assertEqual(result['per_level']['synthetic_native_area']['preferred_annual_support_areas'],0)
+        with self.assertRaises(IntegrityError),self.conn.begin_nested():
+            persist_housing(self.conn,self.paths.scope,self.manifest,[],dict(parsed_rows=0))
+        for query in ('UPDATE v4_raw.housing_ingestions SET summary=summary',
+                      'DELETE FROM v4_raw.housing_area_period_audit','TRUNCATE v4_raw.housing_ingestions'):
+            with self.assertRaises(DBAPIError),self.conn.begin_nested():self.conn.execute(text(query))
+
+    def test_housing_duplicate_key_unregistered_sources_and_city_isolation(self):
+        from src.v4.housing import persist_housing
+        record=dict(source_id='fixture',source_area_id='same',geography_level='native',period='2025',price_m2_native=10000)
+        with self.assertRaises(ValueError),self.conn.begin_nested():
+            persist_housing(self.conn,self.paths.scope,self.manifest,[record,record],dict(parsed_rows=2))
+        with self.assertRaises(ValueError),self.conn.begin_nested():
+            persist_housing(self.conn,self.paths.scope,self.manifest,[{**record,'source_id':'unregistered'}],dict(parsed_rows=1))
+        persist_housing(self.conn,self.paths.scope,self.manifest,[record],dict(parsed_rows=1))
+        other=Paths(scope('stockholm'),self.paths.root)
+        _,manifest=freeze_sources(other,source_fixture(other))
+        persist_housing(self.conn,other.scope,manifest,[record],dict(parsed_rows=1))
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_raw.housing_area_period_audit WHERE '+SCOPE_SQL),other.scope.params()),1)
+        with self.assertRaises(ValueError):persist_housing(self.conn,other.scope,self.manifest,[],dict(parsed_rows=0))
+
+    def test_committed_housing_parent_cannot_accept_late_rows(self):
+        from src.v4.housing import persist_housing
+        from src.v4.identity import Scope
+        s=Scope('research_design_v4','stockholm','2026-06-30','synthetic_v4_stockholm_20261011T010005Z','synthetic')
+        p=Paths(s,self.paths.root);_,m=freeze_sources(p,source_fixture(p))
+        with self.engine.begin() as conn:persist_housing(conn,s,m,[],dict(parsed_rows=0,status='BLOCKED'))
+        with self.assertRaises(DBAPIError),self.conn.begin_nested():
+            self.conn.execute(text("INSERT INTO v4_raw.housing_area_period_audit VALUES (:version,:run_id,:city,:snapshot,'fixture','late','native','2025','{}'::jsonb)"),s.params())
 
     def test_city_isolation_and_duplicate_listing_ids(self):
         frame = pd.DataFrame([{'listing_id': 'same_id', 'source_area_id': 'native_area', 'price_nightly': None}])

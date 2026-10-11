@@ -115,3 +115,20 @@ sensitivity are detailed in the [specification](preanalysis_specification.md).
 Numerical thresholds are safeguards, not power guarantees. Predictor learning
 stays within training data; H is externally measured and is never imputed.
 Prediction and common OLS association samples remain separate and versioned.
+
+## Implemented Step 5 source-audit fields
+
+Definition `v4_housing_sources_20261011` preserves `source_id`,
+`source_area_id`, `geography_level`, `period`, `property_category`, `currency`,
+`unit`, `statistic`, `price_m2_native`, `sale_count`, source flags and documented
+area definitions in PostgreSQL `v4_raw.housing_area_period_audit`. NULL prices
+and unknown counts remain NULL; reported Copenhagen zero prices are retained
+as flagged source evidence, never qualified H. Oslo API category positions are
+separate from actual native geographic codes. Quarterly Copenhagen rows and
+nested Oslo levels are source audits, not additive counts of qualified areas.
+
+The parent `v4_raw.housing_ingestions` freezes source manifest and source QA
+under version/run/city/snapshot. No `H`, `log_H`, reference ranks, listing
+assignment, analysis-area mapping or group labels are created in Step 5.
+Future housing IDs remain distinct from study masks, official analysis areas
+and provider neighbourhood labels until an authorized geographic assignment.

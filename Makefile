@@ -105,3 +105,11 @@ v4-listing-audit:
 .PHONY: v4-stockholm-boundary
 v4-stockholm-boundary:
 	$(PYTHON) -m src.v4.stockholm_boundary ingest $(V4_ARGS) --previous-run-id $(PREVIOUS_RUN_ID)
+
+.PHONY: v4-housing-acquire v4-housing-ingest v4-housing-audit
+v4-housing-acquire:
+	$(PYTHON) -m src.v4.housing acquire $(V4_ARGS)
+v4-housing-ingest:
+	$(PYTHON) -m src.v4.housing ingest $(V4_ARGS)
+v4-housing-audit:
+	$(PYTHON) -m src.v4.housing audit $(V4_ARGS)

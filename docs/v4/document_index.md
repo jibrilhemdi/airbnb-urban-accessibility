@@ -20,6 +20,11 @@ No inaccessible V4 proposal or historical eight-model draft was reconstructed.
 | `stockholm_boundary_amendment_20261011_audit.json` | Safe SQL-derived amended Stockholm evidence; supersedes the original boundary interpretation, no private rows |
 | `config/v4/stockholm_boundary_amendment.json` | Pinned official source bytes/schema, selected 0180 IDs, QA and temporal decision; explicit recovery adapter |
 | `config/v4/listing_sources.json` | Source-selection policy, native currencies and municipal identities; unresolved geometry/vintage retained |
+| [housing_acquisition.md](housing_acquisition.md) | Active Step 5 source comparison, standalone QA, cross-city comparability and exact blocked gates |
+| [housing_access_requirements.md](housing_access_requirements.md) | Unsent requests, exact needed files and prospective manual-import requirements; no terms accepted |
+| `housing_source_registry.json` | Machine-readable candidate metadata and rejected alternatives; no native price cells |
+| `housing_acquisition_audit.json` | Safe SQL-derived housing counts/provenance, distinct immutable ingestion IDs; final H unqualified |
+| `config/v4/housing_sources.json` | Pinned public requests, source/receipt SHA256, licence evidence and prospective safeguards |
 | `config/v4/cities.json` | Versioned three-city evidence and unresolved fields |
 | `config/v4/research_design.json` | Active V4 machine-readable definitions, inherited candidates and unresolved gates |
 | [IMPLEMENTATION_CONTRACT.md](IMPLEMENTATION_CONTRACT.md) | Active V4 execution/Git/data governance |

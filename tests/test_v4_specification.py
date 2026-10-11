@@ -107,7 +107,9 @@ class V4ModelDefinitionTests(unittest.TestCase):
         self.assertFalse(housing["missing_housing_imputation_allowed"])
         self.assertTrue(housing["native_values_and_currency_preserved"])
         self.assertTrue(housing["alternate_period_or_measure_requires_explicit_amendment"])
-        self.assertEqual(housing["qualification_status"], "BLOCKED_NOT_ASSESSED")
+        self.assertEqual(housing["qualification_status"], "BLOCKED_STEP5_AUDITED_JOIN_PENDING")
+        self.assertEqual(housing["source_audit_definition_version"], "v4_housing_sources_20261011")
+        self.assertEqual(housing["prospective_safeguards"]["minimum_usable_areas"], 10)
         for key in ["source", "acquisition_date", "geographic_extent", "source_sha256"]:
             self.assertIsNone(housing[key])
         self.assertEqual(self.design["cities"]["authorized_roster"], ["copenhagen_frederiksberg", "oslo", "stockholm"])

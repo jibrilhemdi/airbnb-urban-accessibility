@@ -213,5 +213,15 @@ RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT through the
 [SCB-derived 2025 operational union](stockholm_boundary_amendment_20261011.md).
 Oslo boundary vintage, H and other sample/context/fold gates remain BLOCKED;
 no V4 fitted result exists. RegSO IDs are not automatically analysis/housing areas.
+Step 5 acquired and audited housing sources separately: Oslo's annual BOL018
+statistics pass standalone preliminary QA; its boundary remains provisional.
+Copenhagen's quarterly statistics do not establish a justified annual value;
+Stockholm's acquired alternatives do not establish 2025 neighbourhood H.
+All final joined-sample gates remain BLOCKED. No listing H, external-area ranks
+or housing groups have been calculated. The prospective safeguards remain
+20 preferred annual sales, 10 usable areas, 80% final sample coverage, and four
+areas/100 listings per lower/higher group; these are not power guarantees.
+See [the source audit](housing_acquisition.md). No scientific model definition,
+comparison, threshold, inference rule or sensitivity changes in this step.
 Markdown is authoritative; see [document index](document_index.md)
 for DOCX status and [source registry](source_registry.md) for unresolved inputs.

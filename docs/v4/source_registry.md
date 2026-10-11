@@ -28,15 +28,20 @@ and metric CRS for spatial data/operations and explicit unknowns.
 | Source role | Available evidence | V4 status / required gate |
 | --- | --- | --- |
 | Airbnb outcome/property/host data | Three detailed 30 June 2026 catalogue entries/files verified; Copenhagen reused at protected hash, Oslo/Stockholm officially downloaded; 90 identical columns | Acquired/ingested audit only; 41,341 source rows per selected freeze, missing-price rows retained; no model sample qualified |
-| Housing H | User-proposed full-year 2025 apartment residential sale-price/m2; no qualified V4 provider/file identified | BLOCKED: source, acquisition date, extent, checksum, unit/currency, statistic, transaction/coverage evidence and official area mapping unresolved |
+| Housing H | Step 5: Finans Danmark BM011/BM021 2025 quarterly native postal aggregates acquired; Oslo BOL018 2025 annual native apartment statistics acquired; Stockholm SCB annual regional and SökHem rolling municipal alternatives acquired and rejected as target H | Oslo standalone PRELIMINARY_QA_PASSED, PROVISIONAL_BOUNDARY; Copenhagen annual construction/licence/geography BLOCKED; Stockholm target period/measure/area BLOCKED. All final H/model gates BLOCKED; no listing assignment or reference frame frozen |
 | Population/density X | V3 City/Statistics Denmark sources, qualified geography and population 2026 Q3 | Retain concept/limitations; qualify per-city reference period, density geography and CRS |
 | Income X | V3 Copenhagen KKIND5 and Frederiksberg nominal IFOR35, 2024 ten-decile arithmetic means, documented qualified acceptance | Inherited qualification applies to those sources only; new-city sources require compatible concepts and provenance |
 | Boundaries/centrality | Copenhagen 0101 + Frederiksberg 0147 municipal geometry reused; Oslo 0301 current official geometry acquired; Stockholm 0180 operational union derived from 127 SCB RegSO 2025 polygons | Stockholm listing boundary RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT, reference 2025-01-01; original Lantmäteriet 401 retained. Oslo vintage unresolved; new-city general metric CRS/anchor and every housing crosswalk unresolved; provider labels never substituted |
 | OSM network/stations/bus/POIs E/W | Frozen V3 extraction/taxonomy and deterministic consolidation; matched endpoint universe | Qualify each city extraction/coverage/snaps/topology; preserve inherited thresholds and category rules |
 | Tuning | Actual frozen V3 30-candidate list with seed/hash, copied under a V4 configuration identity | Definition inherited; no V4 fitting or data readiness certified |
 
-No source URL, acquisition date, extent, transaction count or price value is
-invented for H. Corresponding unknown fields remain null in configuration.
+Source URLs, timestamps, checksums, native schemas and public queries are now
+recorded in the [Step 5 source comparison](housing_source_registry.json),
+[housing acquisition audit](housing_acquisition.md) and
+`config/v4/housing_sources.json`. Qualified H configuration values, joined
+coverage and reference-frame fields remain null: source acquisition is distinct
+from qualification. No source value, geographic mapping or transaction count
+is invented. Raw values and private source files stay out of Git.
 Prefer full-year 2025 apartment sale-price/m2; alternate period/measure needs
 an explicit amendment. Preserve native reported values/currency and freeze
 one qualified external-area frame per city, independent of Airbnb. Average
@@ -62,10 +67,19 @@ and its separate SQL-derived `stockholm_boundary_amendment_20261011_audit.json`.
 SCB's official GeoPackage is CC0, native EPSG:3006, version 2025_v2/reference
 2025-01-01; actual `kommunkod=0180` is used, never county 01. This municipal mask
 does not qualify RegSO as the analysis or housing geography. Official/native
-area IDs remain unassigned, and residential property-price acquisition is
-unresolved. The old listing audit/failed receipt and every committed ingestion
+area IDs remain unassigned. Step 5 independently audits native housing sources;
+this mask does not supply qualified housing data. The old listing audit/failed receipt and every committed ingestion
 remain immutable. No source is silently replaced or retried under its old identity.
 V3 remains untouched, no V4 fitted results exist, and no
 temporal Airbnb panel, residential-price outcome model or gentrification score
 is introduced. See the [specification](preanalysis_specification.md) and
 [document index](document_index.md) for authority and interpretation limits.
+
+Step 5 uses append-only migration 025 and dedicated `v4_raw.housing_ingestions`
+and `v4_raw.housing_area_period_audit`. The SQL-derived
+`housing_acquisition_audit.json` contains safe counts/status/provenance only.
+Native price/count cells remain authoritative in PostgreSQL, separate from
+future qualified research tables. Neither a bydel/delbydel hierarchy nor RegSO
+is silently selected as the housing reference frame. See
+[unsent access requests](housing_access_requirements.md) for exact missing
+inputs; no application, terms acceptance or purchase was made.

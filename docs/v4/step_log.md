@@ -491,3 +491,126 @@ Requested commit: `fix(v4): resolve Stockholm boundary via audited SCB geometry`
 Push HEAD explicitly to recorded origin `refs/heads/v4` and verify remote/local
 SHA equality after committing; report outside this commit. Push failure means
 LOCAL_ONLY. This entry does not record its own commit SHA or claim a future push.
+
+## Step 5 — housing sources and explicit qualification gates, 11 October 2026
+
+Requested scope: the attached Step 5 instruction, read together with AGENTS,
+this contract/log, active V4 specification/dictionary/source register, repository
+audit and listing acquisition/boundary amendment. This step authorizes public
+source discovery/acquisition and standalone source QA only. No Step 6, listing H
+assignment/ranking, sample construction, walking features, model fitting or
+empirical comparison was executed. Primary definitions and prospective
+safeguards remain unchanged; V3 results were already observed.
+
+Initial Git safety: clean `v4`, local/fetched origin at
+`92f607be0ed44db6746bf4b09d2bebe023d6cde3`; recorded main base
+`c1e919bca9dfbe89de9e67135fb432fdb0f020e6` retained. Sole configured remote is
+the recorded origin; no remote URL, main/v3, tag, detached worktree or existing
+commit changed. No unrelated work or unfinished Git operation was mixed in.
+
+Acquisition: 15 candidate-source comparisons, 43 immutable new receipts,
+40 acquired files (including metadata), three preserved Danish HTTP failures.
+Six actual statistical extracts: Finans Danmark BM011 and BM021 2025 Q1–Q4
+CSV, Oslo BOL018 2025 JSON-stat2, SSB 14545 Oslo 2025 JSON-stat2, SCB TAB1151
+historical bulk CSV ZIP with 2025 cells, SökHem rolling municipal sold JSON
+updated through 10 October 2026. Official Oslo geographic hierarchy XLSX,
+municipal Danish housing reports and definitions/access evidence also frozen.
+Anonymous public POST queries reuse the existing acquisition adapter, with
+query hashes and immutable receipts. No authenticated access, contract
+acceptance, application, purchase, raw redistribution or listing redownload.
+
+Findings and city gates:
+
+- Copenhagen/Frederiksberg: 605 national native postal groups × four quarters,
+  2,420 source rows. Price cells: 464 positive, 529 NULL, 1,427 reported zero;
+  every zero-price cell has zero reported sales. Seventeen NULL-price cells
+  have at least five reported sales. Preserve native evidence; do not infer
+  exact filtered price denominators from BM021 counts or construct an annual
+  mean. Copenhagen and Frederiksberg source labels are present, but this is
+  not a municipal reference frame or joined coverage. Annual construct,
+  reusable-data permission and current native postal geometry/crosswalk remain
+  BLOCKED. Both documented DAWA municipal queries returned HTTP 410. The DST
+  anonymous documentation responses are outage notices, not successful metadata.
+- Oslo: BOL018 annual 2025 apartment mean price/m² and counts acquired under
+  the public platform's documented NLOD 2.0 evidence. Actual source codes are
+  distinct from API category positions. The 452 rows include 17 bydeler, 98
+  delbydeler (2017), 336 grunnkretsområder and unresolved native code 100000.
+  Positive price/≥20-sales support is 16, 92 and 245 respectively; these nested
+  counts are not added. Fourteen unavailable mean cells retain NULL/dash.
+  PRELIMINARY_QA_PASSED; PROVISIONAL_BOUNDARY. Source-matching polygon vintage,
+  municipal boundary vintage, reference-frame choice and joined support remain
+  unresolved. No Step 4 boundary rewrite. SSB's one municipal unit is a
+  supplementary alternative, insufficient as neighbourhood H.
+- Stockholm: acquired SCB 2025 counts/total transaction price across 26 regional
+  units, not neighbourhood price/m². Acquired CC BY 4.0 SökHem rolling municipal
+  export (181 rows; 47 missing slugs, 134 unique valid slugs, no duplicate valid
+  slug), not full-year 2025 neighbourhood apartment data. These are acquired
+  alternatives, zero parsed target housing rows; this does not mean zero real
+  transactions or zero missing data. Public Mäklarstatistik export/history
+  facilities were inspected, but no download accepting contractual terms was
+  made. Prepare unsent permission requests. The SCB-derived municipal mask
+  remains resolved; native housing sources/areas remain independently BLOCKED.
+
+All final H/model gates are BLOCKED. Joined listing coverage, represented areas,
+housing-group support and external reference frame remain NULL/unfrozen.
+Preferred 20 annual sales, 10 usable areas, 80% coverage and four areas/100
+listings per group are unchanged project safeguards, not power guarantees.
+Step 6 is partially ready at Oslo source-input level; a qualified three-city
+workflow is BLOCKED by the exact source/legal/geographic dependencies above.
+No subsequent work is authorized by this safe checkpoint.
+
+Implementation: `src/v4/housing.py` reuses Paths/Scope/acquire/freeze/persistence;
+native schema/period/category/unit checks, explicit missingness, source-hash
+changes, geographic code preservation, mathematically restricted annual-mean
+helper, separate preliminary/final gates, safe exports and immutable reruns.
+Scientific hashes include selected-city housing policy; Markdown/log/reporting
+and unrelated-city changes do not invalidate unchanged scientific dependencies.
+New append-only migration **025_v4_housing_source_audit.sql** creates dedicated
+insert-only source-audit parents/children, independent of listing/model runs.
+No applied migration was edited. Documentation provides the source comparison,
+cross-city matrix, geographic dependencies and exact unsent access/import
+requirements. All raw files/receipts/private values remain ignored and unstaged.
+
+Actual new immutable housing-audit ingestions (same target snapshot 2026-06-30):
+
+| City | Run ID | Native source rows |
+| --- | --- | ---: |
+| Copenhagen/Frederiksberg | `research_v4_copenhagen_frederiksberg_20261011T172619Z` | 2,420 |
+| Oslo | `research_v4_oslo_20261011T172619Z` | 452 |
+| Stockholm | `research_v4_stockholm_20261011T172619Z` | 0 target rows; alternatives preserved |
+
+Authoritative PostgreSQL aggregates independently match frozen source QA.
+Exact manifests/URLs/timestamps/SHA256 and statuses are in
+`housing_acquisition_audit.json`. Actual commands: `make v4-setup` applied only
+025; a second migration application returned no changes. For each city,
+`make v4-housing-acquire`, `make v4-housing-ingest`, `make v4-housing-audit`
+were executed with these explicit identities. Expected exit 2/BLOCKED records
+the final gate, while preserving successful acquisition/persistence. Audit
+reruns compare identical existing export bytes. Each ingestion rerun refuses
+reopening before acquisition. No model run was created.
+
+Actual validation:
+
+- `make v4-test`: 67 discovered, 51 passed, 16 opt-in DB tests skipped.
+- `make v4-test-db`: 16/16 passed in owned disposable PostGIS databases,
+  including migration idempotence/applied hashes, duplicate/native ID and city
+  isolation, NULL preservation, independently computed SQL support counts,
+  immutable parent/late-child guards, output privacy and source separation.
+- `.venv/bin/python scripts/v4_repository_checks.py --baseline-tests`:
+  161 discovered, 122 passed, 39 opt-in database/integration tests skipped.
+  Candidate-helper writes redirected to temporary storage, no V3 regeneration.
+- `make compile`: passed. `git diff --check`: passed.
+- Read-only protected verifier: all 1,696 V3 files, 22 applied migration hashes
+  and five ordered analytical SQL fingerprints unchanged.
+- Before/after hashes: all 108 prior local V4 source/manifest/export files
+  unchanged; all 13 original listing-ingestion summaries/manifests unchanged
+  using the pre-step canonical sequence-row SHA256. Zero empirical model runs
+  and zero listing H/native housing assignments. Source and receipt pins
+  verified on cached acquisition rereads.
+
+Stage only the intended V4 adapter/config/Makefile/new migration/tests and safe
+Markdown/aggregate/metadata registry documents. Requested commit:
+`feat(v4): add housing sources and explicit qualification gates`. Push HEAD
+only to recorded origin `refs/heads/v4` and verify equality after committing;
+report the SHA/push outside this commit. This entry does not record its own
+commit SHA or claim a future push. Push failure means LOCAL_ONLY.
