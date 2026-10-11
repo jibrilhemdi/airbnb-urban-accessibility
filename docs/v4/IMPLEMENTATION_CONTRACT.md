@@ -7,10 +7,12 @@ and scientific safeguards remain in force.
 
 ## Authorized scope
 
-Implement only the step explicitly requested. This first step establishes the
-branch, repository audit, protected baseline and instructions. It does not
-authorize acquisition, ingestion, migration, feature construction, model
-fitting, pipeline execution or regeneration of frozen V3 documents/results.
+Implement only the step explicitly requested. The initial checkpoint established
+the branch, repository audit and protected baseline. The 11 October 2026
+specification amendment establishes authoritative V4 Markdown, configuration
+and consistency checks; it does not authorize acquisition, ingestion,
+migration, feature construction, model fitting, pipeline execution or
+regeneration of frozen V3 documents/results.
 Synthetic fixtures may exercise tests; they must never be research results.
 
 ## Scientific contract
@@ -24,14 +26,35 @@ The primary V4 models are exactly:
 | MW | X + H + W |
 | MEW | X + H + E + W |
 
-X denotes the prespecified non-housing baseline covariates; E and W denote
-Euclidean and walking accessibility respectively. Their final V4 variable
-definitions require their own requested implementation and scientific gates.
+The active definition version is `v4_housing_standard_20261011`; model IDs must
+carry it so V3 M0 cannot be confused with V4 M0. X is the inherited qualified
+baseline excluding H/E/W; E and W denote matched Euclidean and walking
+accessibility. [The specification](preanalysis_specification.md),
+[dictionary](data_dictionary.md) and `config/v4/research_design.json` define
+the exact blocks. Their empirical implementation and qualification remain gated.
 H is required neighbourhood residential sale-price context in all four
 models. There are no H-suffixed models and no automatic no-housing ladder.
 Unqualified, missing or incompatible H blocks dependent empirical work;
 dropping H, inventing neighbourhood mappings or substituting another measure
 is not an acceptable way to proceed.
+
+Primary contrast: MEW versus ME. Replacement: MW versus ME. Additional:
+ME/M0, MW/M0, MEW/M0. No adding-H benefit is estimated without a separately
+authorized no-H sensitivity. Prefer full-year 2025 apartment sale-price/m2,
+preserving native values and frozen within-city external-area midrank
+`H=(midrank-0.5)/G_ref`; log native price remains a prespecified sensitivity.
+All four models share a housing-qualified prediction sample and saved folds
+within city; a separate common OLS association sample is documented. Mandatory
+no-income sensitivity retains H. Preserve existing thresholds, candidates and
+inference; numerical safeguards are not power guarantees.
+
+The matched snapshot target is June 2026; retain OLS/XGBoost and separate city
+models. Narrower-city or descriptive-only scope requires an explicit amendment
+if a city lacks qualified H. No temporal Airbnb panel, residential-price outcome
+model or gentrification score is authorized. V3 results were already observed;
+supervisor approval is not recorded and there is no retrospective preregistration
+claim. [The document index](document_index.md) records Markdown authority and
+the absent/stale/superseded status of V4 DOCX material.
 
 Y remains the natural log of observed Airbnb nightly asking price:
 `log_price = log(price_nightly)` for valid observed prices. Never statistically
