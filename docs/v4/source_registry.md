@@ -65,3 +65,16 @@ New append-only SQL migration 027 and hash-pinned A03 reuse selectors preserve a
 old completed ledgers. Official analysis IDs, provider labels and future context
 IDs stay distinct. A04 and later work remain unexecuted; affected city-dependent
 analysis/context/fold tasks cannot bypass the stated source/support blockers.
+
+## A04 population, income and civic-anchor evidence
+
+[The exact A04 registry](context_source_registry_A04_20261011.json) pins official
+Oslo BEF001/INN003 schemas/queries/data/definitions and Kartverket civic point;
+Stockholm SCB FolkmDesoAldKon/Tab3InkDesoRegso native RegSO2025 statistics,
+definitions/CC0 terms and civic-address evidence; Copenhagen's four approved
+V3 population/income source copies and original selection/decision hashes.
+[The context audit](context_qualification_A04_20261011.md) distinguishes acquired,
+source-validated, spatially joined and finally qualified. Oslo statistical-service
+licence remains unresolved; no upstream/third-party licence is inferred. Exact
+failed404 receipt and previous failed/rejected geography evidence remain intact.
+No raw/statistical extract or private listing-level context is committed.

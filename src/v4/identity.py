@@ -157,7 +157,9 @@ def scientific_dependencies(city: str, *, root: Path = PROJECT_ROOT, design: dic
         design.pop(key, None)
     cities = load_cities(design_id=design_id) if cities is None else cities
     shared = ['src/ingestion/common.py', 'src/ingestion/price.py', 'src/pipeline/build_airbnb_sample.py', 'src/pipeline/output_paths.py',
-              'src/pipeline/protocol.py', 'src/pipeline/storage.py', 'src/pipeline/model_specification.py', 'requirements.txt']
+              'src/pipeline/protocol.py', 'src/pipeline/storage.py', 'src/pipeline/model_specification.py', 'src/db/connection.py',
+              'src/pipeline/qualified_income.py', 'src/pipeline/investigate_income_harmonisation.py',
+              'src/ingestion/acquire_income_evidence.py', 'src/ingestion/download_copenhagen_statbank.py', 'requirements.txt']
     files = [root / path for path in shared]
     excluded = {'cli.py', 'reporting.py'}
     if design_id == DEFINITION_VERSION:
@@ -182,6 +184,16 @@ def scientific_dependencies(city: str, *, root: Path = PROJECT_ROOT, design: dic
         selected_geo = json.loads(geography_selection.read_text())
         source_policy['geography_selection'] = {'design_id': selected_geo['design_id'],
                                                 'city': selected_geo['cities'][city]}
+    context_policy = root / 'config/v4/context_A04_20261011.json'
+    if design_id == DEFINITION_VERSION and context_policy.is_file():
+        context = json.loads(context_policy.read_text())
+        source_policy['context_qualification'] = {'definition_version':context['definition_version'],
+            'income_mode':context['income_mode'], 'income_decision':context['income_decision'], 'city':context['cities'][city],
+            'v3_evidence':context['v3_evidence'] if city=='copenhagen_frederiksberg' else []}
+    context_selection = root / 'config/v4/context_reuse_accessibility_only.json'
+    if design_id == DEFINITION_VERSION and context_selection.is_file():
+        selected_context = json.loads(context_selection.read_text())
+        source_policy['context_selection'] = {'design_id':selected_context['design_id'], 'city':selected_context['cities'][city]}
     amendment_path = root / 'config/v4/stockholm_boundary_amendment.json'
     if city == 'stockholm' and amendment_path.is_file():
         source_policy['boundary_amendment'] = json.loads(amendment_path.read_text())

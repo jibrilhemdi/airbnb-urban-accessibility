@@ -410,3 +410,13 @@ licence and sparse Marka support. Stockholm retains SCB 2025_v2 municipality
 0180 only as a mask; current 11-borough polygons remain unqualified. No housing
 fold rules, RegSO validation shortcut or final A06 membership is introduced.
 A04–A12 remain future work requiring their own prompt and qualified dependencies.
+
+
+## A04 live checkpoint
+
+[The A04 context audit](context_qualification_A04_20261011.md) records Copenhagen
+inherited context qualification and source-only Oslo/Stockholm validation.
+Unqualified geography prevents new-city joins; Stockholm civic coordinates and
+a frozen three-city income decision remain blocked. The
+[income proposal](income_decision_proposal_A04_20261011.md) is not activated.
+A05–A12 remain unexecuted; no routes, final samples/folds or fits occurred.

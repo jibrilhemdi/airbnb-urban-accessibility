@@ -20,6 +20,7 @@ def preflight(scope: Scope, *, offline: bool = False, source_manifest: str | Non
         blockers.append('Explicit approved listing/source manifest hash required')
     reused = None
     geography = None
+    context = None
     if offline:
         blockers.append('V4 database not checked (--offline)')
     else:
@@ -42,6 +43,15 @@ def preflight(scope: Scope, *, offline: bool = False, source_manifest: str | Non
                         from src.v4.geography import selected_evidence, apply_geography_amendment
                         geography = selected_evidence(conn, scope, source_manifest)
                         blockers = apply_geography_amendment(blockers, geography)
+                        from src.v4.context import selected_context, load_policy
+                        context = selected_context(conn, scope, source_manifest)
+                        if context['geography_manifest_sha256'] != geography['geography_manifest_sha256']:
+                            raise ValueError('Context/geography selected source identity mismatch')
+                        if context['anchor'] is not None:
+                            blockers = [b for b in blockers if b != 'central_anchor: unresolved/unqualified']
+                        blockers.extend('A04 context: '+b for b in context['blockers'])
+                        if load_policy()['income_decision'] == 'THREE_CITY_COMPARABILITY_BLOCKED_RESEARCHER_DECISION_REQUIRED':
+                            blockers.append('A04 context: frozen three-city income decision required before empirical fitting')
                     except (RuntimeError, ValueError) as error:
                         blockers.append(str(error))
                 if conn.scalar(text('SELECT count(*) FROM v4_analysis.runs WHERE version=:version AND run_id=:run_id AND city=:city AND snapshot=:snapshot'), scope.params()):
@@ -55,6 +65,8 @@ def preflight(scope: Scope, *, offline: bool = False, source_manifest: str | Non
                 engine.dispose()
     return {**scope.params(), 'status': 'BLOCKED' if blockers else 'READY', 'blockers': blockers,
             'mutations': 0, 'research_executed': False, 'listing_source_reuse': reused,
+            'context_qualification': None if context is None else {k:context[k] for k in
+                ('status','acquisition_status','source_validation_status','spatial_join_status','final_qualification_status','manifest_sha256','metric_crs','blockers')},
             'geography_qualification': None if geography is None else {k:geography[k] for k in
                 ('status','mask_status','analysis_status','geography_manifest_sha256','metric_crs','blockers')}}
 

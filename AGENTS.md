@@ -54,7 +54,10 @@ only the requested A01–A12 step; synthetic fixtures are tests, never research 
   remains BLOCKED pending city/source/sample/fold/estimator qualification. Read
   [the A03 geography audit](docs/v4/geography_qualification_A03_20261011.md) for
   qualified operational masks/CRS and remaining Oslo/Stockholm analysis blockers;
-  do not reinterpret their municipal masks as validation areas.
+  do not reinterpret their municipal masks as validation areas. Read
+  [the A04 context audit](docs/v4/context_qualification_A04_20261011.md) for native
+  source validation versus spatial/final qualification. No common no-income
+  primary mode is activated; the pre-fit income proposal requires an explicit decision.
 - Y remains log observed Airbnb nightly asking price. Fit separate city
   models; make no causal housing-price or displacement claims.
 - Preserve V3 artifacts and applied migrations. Use separate V4 run,

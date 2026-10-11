@@ -1006,3 +1006,141 @@ tests/Makefile/Markdown/aggregate provenance files. Requested commit:
 Push HEAD explicitly to recorded origin refs/heads/v4 and verify actual remote
 SHA equality afterward. No own commit SHA or predicted push success is recorded
 inside this commit; push failure means LOCAL_ONLY and pauses the sequence.
+
+## A04 — baseline population, income and centrality — 11 October 2026
+
+Status **PARTIAL / BLOCKED** for the three-city research design. Only separately
+requested A04 context source acquisition/validation and inherited Copenhagen
+context checks executed. No A05+, walking network/routes, sample/fold freeze,
+empirical fit, housing acquisition/contact or Airbnb download/reingestion.
+Primary design remains `v4_accessibility_only_20261011`, qualified income in X
+with matched no-income robustness; the new pre-fit proposal is NOT ACTIVATED.
+No supervisor/researcher approval is invented. V3 results and housing feasibility
+were already known, as recorded in the active contract.
+
+Entry clean existing v4 at pushed A03
+`161d556fa806197446217e59041e9d59dc341e3a`. Read applicable root AGENTS, contract,
+log, A03 geography audit/Oslo amendment, active accessibility-only specification
+and supplied revised proposal/plan/A04 instructions. Inspected actual context
+code/sources/config/SQL/migrations/tests/Makefile. Fetched recorded origin
+`https://github.com/jibrilhemdi/airbnb-urban-accessibility.git`; entry and final
+refresh have zero ahead/behind, no staged/unrelated work or unfinished operation.
+Local main `7de587997157863e0ba1d36c3f39bdd45f2b9d23`, local v3
+`6150e3f3b4e6db01dd5bf5842404212343d1344a` and detached worktree preserved.
+
+See [the full A04 audit](context_qualification_A04_20261011.md), safe SQL summary
+JSON/source registry, three city reports and
+[unactivated income decision proposal](income_decision_proposal_A04_20261011.md).
+Actual city distinctions:
+
+- **Copenhagen–Frederiksberg:** four exact V3 source files reused by SHA, original
+  selection/decision pins verified. Settled KKIND5/nominal IFOR35 2024 income
+  `(sum of ten observed decile means)/10/100000 DKK` independently reproduced
+  for all eleven SQL contexts; eligibility/weighting/KKIND5 basis caveats retained.
+  Population remains KKBEF1/FOLK1A 2026Q3 (1 July, one day after batch). Density
+  uses native source-compatible gross assignment polygons EPSG:25832; water/
+  statistical-boundary vintage limitations retained, no clipping/rescaling.
+  City Hall Square public anchor/Euclidean km definition preserved. **33 native
+  cells,23,144 private audit rows,23,066 compatible unique joins,78 NULL unmatched/
+  outside cases**. QUALIFIED_INHERITED_WITH_CAVEATS; not a final prediction sample.
+- **Oslo:** official Statbank BEF001 2026-01-01 all-age population (19 native
+  units) and INN003 2024 mean after-tax equivalised household income (17 native
+  units) acquired/validated, **36 native cells**, no missing values. Preserve
+  municipality/borough/unlocated codes and combined income88 (Sentrum/Marka/no
+  registered address); never disaggregate into16/17. EU scale/student eligibility/
+  NOK/source updates are explicit; published mean weighting/common concept and
+  city-service reuse terms remain unresolved. Official Kartverket SSR Rådhuset
+  854084/0301 point source EPSG:4258 (actual OpenAPI), target25833, CC BY4.0 is
+  validated inside the operational mask. **NOT_JOINED**, zero new-city private
+  context rows. A03 ArcGIS licence/sparse Marka and matching gross geography/
+  income88/source-term/three-city-income gates remain BLOCKED.
+- **Stockholm:** official SCB population2025-12-31/income2024, exact127 native
+  RegSO2025 IDs, mean/median thousandsSEK/eligible-person count distinct,
+  **508 native cells**, none missing. CC0, Swedish equivalence/eligibility,
+  constant2024 prices, CKM noise and source allocation limitations documented.
+  Native ID equality to municipal-mask components is not approval of validation
+  units or current11borough crosswalk. **NOT_JOINED**, zero new-city context
+  rows; current approved analysis/context geometry, public civic point/CRS and
+  three-city income decision remain BLOCKED. Official city-art interior-marker
+  lead is separately frozen as DISCOVERY_ONLY_NOT_QUALIFIED; unverified datum/
+  suitability is not promoted and original NULL-anchor records remain intact.
+
+New immutable context identities `research_v4_<city>_20261011T210800Z` are job
+identifiers, separate from actual source retrieval/SQL creation timestamps.
+Exact selected old listing/geography identity/hash linkage is recorded. New
+context manifests Copenhagen/Oslo/Stockholm respectively:
+`187f3de5cb9cf4526128c5441954d48bca99fb06044094098fb468b53ef9f91d`,
+`7396c0003e6771ea5cc278e2d691b2326b2c4a250f69f982bb92134433625a57`,
+`5881346fef1e9bdd2349dc37b428b1179f0620bd5490176e8c96a81d48e86c6d`.
+Later discovery-only manifest
+`873d2237f9a60b57d6e68e45a3b42eddc0b70f95f3bdbed1bef64769d368489a`
+is separate raw/metadata evidence, not a fourth SQL context qualification.
+
+Implementation reuses existing immutable source acquire/manifest, identity,
+approved old listing reader, A03 evidence and dedicated PostgreSQL/PostGIS APIs.
+New `src/v4/context.py`, versioned policy/selection, append-only migration028,
+strict native JSON-stat2/area/join/provenance tests, Makefile targets, read-only
+preflight state linkage and active dictionary/contract/index/plan/AGENTS pointers.
+Scientific source/context dependencies remain separate from Markdown/log changes.
+No frozen definition, applied old migration, failed source receipt or original
+completed ledger is edited; no raw/row-level data or credentials intended for Git.
+
+Actual final checks:
+
+- `make v4-test`: **100 discovered,79 PASS,21 opt-in DB skipped**, exit0.
+  Seven new synthetic context tests cover measure-order/native IDs/units/years,
+  missingness/variation/schema failure, strict many-to-one/no row multiplication/
+  NULL housing/ambiguous/outside retention, gross area/CRS and provenance hashes.
+- `make v4-test-db`: **21/21 PASS**, exit0, owned disposable UUID DBs. New context
+  test covers native NULL retention, immutable committed parent/children,
+  source/geography linkage rejection and forbidden new-city listing joins;
+  migration idempotence/hash checks and completed historical-row upgrade pass.
+  First suite attempt expected the old migration count5; only assertions for
+  newly added028 were updated to6 and the complete suite reran, without weakening
+  historical scientific tests. Remaining disposable test databases: **zero**.
+- Safe `scripts/v4_repository_checks.py --baseline-tests`: final **194 discovered,
+  150 PASS,44 opt-in skipped**, exit0. Live V3 mutation flags disabled; synthetic
+  estimation/routing fixtures are tests, not research results. Candidate fixture
+  writes remain isolated to temporary output, not frozen research documents.
+- `make compile`, source/provenance checks and `git diff --check`: PASS.
+- Actual `make v4-setup` applied only new028 to `thesis_accessibility_v4`, SHA256
+  `05c07e17db2061fd9126b4112c5a02bd34a7f58cf7327c544bdb83ed1f7ae62b`.
+  Initial local5433 connection timeouts resolved by retrying the same healthy
+  configured service; no restart/reset/environment or other-service change.
+- Actual context acquire/freeze/audit targets exercised for all three cities;
+  acquisition replay reused existing pinned receipts. Copenhagen qualification/
+  audit exit0; Oslo/Stockholm expected BLOCKED exit2. Audits recompute summary and
+  compare **every native/private SQL child** against sources/strict joins. A
+  post-freeze record-order change was detected and original source order restored;
+  no frozen records overwritten. Repeated Oslo freeze refuses reopening before
+  write, expected exit2. Final independent read-only check verifies all typed
+  cells, source-order hashes/private assignments, summaries and applied028 bytes.
+- Active preflight all three cities: expected BLOCKED exit2, **mutations0,
+  source_reingested=false,research_executed=false**. Qualified public anchor clears
+  only its exact anchor warning; ordinary geography/context/feature/price/support/
+  sample/fold/estimator/source and frozen income-mode gates stay active.
+- Protected verifier: **1,696 V3 files,22 applied migration hashes,five analytical
+  SQL fingerprints unchanged**. **335** captured original V4/config/SQL/history/
+  revision/raw/receipt files and **12 original V4 SQL table fingerprints** unchanged.
+  **147** SQL source pins plus **34** A04 raw/receipt pairs (including separate
+  discovery evidence), V3 selections and original failure pins verified. Original
+  Stockholm401/NULL ledger, A03 municipal amendment and housing history intact.
+- Final ad hoc checks corrected three read-only invocation mistakes: system
+  Python lacked project dependencies, a temporary stdout log was supplied instead
+  of the recorded protected manifest, and a diagnostic used the wrong migration
+  hash-column name. Reruns with project `.venv`, the actual repository manifest
+  and `file_hash_sha256` passed. No source/database changes resulted from them.
+- Final SQL ledger: context parents3/cells33+36+508; private Copenhagen context
+  rows23,144, Oslo/Stockholm0; original listing/housing ingestions13/3 unchanged;
+  manifests11→14 only by context source evidence. Analytical/model runs **zero**.
+
+Copenhagen inherited context is ready with its preserved caveats. New-city source
+validation and Oslo anchor are ready; geography-dependent joins/density and final
+three-city income mode remain BLOCKED. Common no-income primary/local-income
+sensitivity is a documented recommendation requiring explicit researcher decision,
+not an automatic specification change. A05–A12 remain unexecuted/unrequested.
+Requested checkpoint commit:
+`feat(v4): harmonize baseline population income and centrality`.
+Push HEAD explicitly to recorded origin refs/heads/v4 and verify remote equality
+outside this commit. No own SHA or predicted push success is recorded here;
+failed push means LOCAL_ONLY and pauses the sequence.

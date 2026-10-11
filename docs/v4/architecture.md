@@ -40,3 +40,17 @@ on housing fields; price integrity, ordinary geography, context and accessibilit
 support remain required. `v4-preflight` reports remaining blocks read-only;
 `v4-run` is an empirical refusal stub until separately requested A07 implements
 and validates dispatch. No route, sample/fold or fitted estimator is added in A02.
+
+## A04 context-only checkpoints
+
+`make v4-context-acquire`, `v4-context-freeze` and `v4-context-audit` use existing
+explicit V4 version/design/city/snapshot/run arguments. They replay pinned native
+statistical requests or read approved old sources; independent migration028
+links source/geo/listing parents. These are context checkpoints, never model
+runs. Only approved Copenhagen geometry permits private many-to-one listing
+context. Oslo/Stockholm native source cells remain separate from listing joins,
+validation units and primary-income approval. Frozen records cannot be reopened.
+See [the A04 audit](context_qualification_A04_20261011.md) for exercised commands,
+actual states, source limitations and remaining gates. Read-only preflight checks
+selected A04 source/summary evidence, reports its separate states and retains
+ordinary feature/support/sample/fold requirements and the income-policy blocker.

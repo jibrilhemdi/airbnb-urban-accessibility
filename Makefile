@@ -122,3 +122,12 @@ v4-geography-freeze:
 	$(PYTHON) -m src.v4.geography freeze $(V4_SCIENCE_ARGS)
 v4-geography-audit:
 	$(PYTHON) -m src.v4.geography audit $(V4_SCIENCE_ARGS)
+
+.PHONY: v4-context-acquire v4-context-freeze v4-context-audit
+# A04 native source qualification; no new-city listing joins, routes or fits.
+v4-context-acquire:
+	$(PYTHON) -m src.v4.context acquire $(V4_SCIENCE_ARGS)
+v4-context-freeze:
+	$(PYTHON) -m src.v4.context freeze $(V4_SCIENCE_ARGS)
+v4-context-audit:
+	$(PYTHON) -m src.v4.context audit $(V4_SCIENCE_ARGS)

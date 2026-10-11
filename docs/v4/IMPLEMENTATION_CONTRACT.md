@@ -25,8 +25,11 @@ routing, samples/folds or empirical fitting. A02 was separately requested and im
 including append-only migration 026 and read-only checks. A03 was separately
 authorized for geography/source-vintage qualification only; its
 [dated audit](geography_qualification_A03_20261011.md) records partial qualification,
-append-only migration 027 and genuine new-city analysis-area blockers. A04–A12
-remain future instructions and require their own user request. Synthetic fixtures are tests, never research
+append-only migration 027 and genuine new-city analysis-area blockers. A04 was separately
+authorized for baseline context acquisition/validation; its
+[context audit](context_qualification_A04_20261011.md) records partial qualification,
+append-only migration028, unjoined new-city sources and the unactivated income
+policy proposal. A05–A12 remain future instructions and require their own user request. Synthetic fixtures are tests, never research
 results. A safe PARTIAL/BLOCKED checkpoint does not pass scientific gates.
 
 ## Scientific model contract
@@ -105,6 +108,8 @@ V3 artifacts and applied migrations 001–025 in their respective discovery root
 Migration 026 extends only the new-design schema/guards; original rows stay intact.
 Migration 027 adds independent immutable geography receipts/areas/private audits,
 without editing old rows, creating model runs or freezing final folds.
+Migration028 adds independent immutable native context/source checkpoints and
+Copenhagen private context audits; no new-city listing join or model run.
 Never update/delete/truncate historical data or regenerate frozen V3 documents
 merely to test. Source manifests are reused by verified hash, not redownload or
 duplicate ingestion. Fitted V3 reuse requires an explicit exact-dependency audit

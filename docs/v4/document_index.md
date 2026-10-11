@@ -87,3 +87,20 @@ context/anchors/income remain A04. No final folds or A04–A12 execution. The or
 Stockholm amendment, original acquisitions and dated A01/A02 audit documents remain
 historical facts, not overwritten status records. Supplied DOCX files remain stale/
 superseded for active live Markdown; their bytes and V3 exports are preserved.
+
+## A04 context checkpoint
+
+- [context_qualification_A04_20261011.md](context_qualification_A04_20261011.md): actual source/join/final statuses, concepts, dates, gross-area limitations and commands.
+- [context_qualification_A04_20261011.json](context_qualification_A04_20261011.json): safe authoritative SQL summary export; no listing rows.
+- [context_source_registry_A04_20261011.json](context_source_registry_A04_20261011.json): exact source/request/receipt hashes and licences/unknowns; raw contents remain ignored.
+- [context_copenhagen_frederiksberg_A04_20261011.md](context_copenhagen_frederiksberg_A04_20261011.md), [context_oslo_A04_20261011.md](context_oslo_A04_20261011.md), [context_stockholm_A04_20261011.md](context_stockholm_A04_20261011.md): separate city status reports.
+- [income_decision_proposal_A04_20261011.md](income_decision_proposal_A04_20261011.md): proposed common no-income comparison/local-income sensitivity; approval required, not activated.
+- `config/v4/context_A04_20261011.json`, `context_reuse_accessibility_only.json`: separately frozen A04 context evidence/selected immutable SQL identity.
+- `sql/v4_migrations/028_v4_context_qualification.sql`: append-only independent context ledger, preserving older applied migrations/records.
+
+A04 is PARTIAL/BLOCKED for the three-city design. Copenhagen inherited context
+passes with caveats; new-city native sources validate without final spatial
+joins. Stockholm anchor and new-city geography/income-policy gates remain.
+A03 and older audits are dated preserved evidence. Active Markdown remains
+authoritative; supplied DOCX files are stale/superseded and unchanged. A05–A12
+remain unexecuted and require their own user request.

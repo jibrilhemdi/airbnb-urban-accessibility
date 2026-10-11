@@ -113,3 +113,28 @@ and superseded for active dependency purposes. Preserve their original BLOCKED
 statuses and unsent requests. No property-price assignment or source request is
 authorized. See [the model contract](model_contract.md) and
 [the current-state audit](current_state_audit_20261011.md).
+
+## A04 context source qualification — 11 October 2026
+
+Definition `v4_context_A04_20261011`, active design unchanged. See
+[the A04 audit](context_qualification_A04_20261011.md),
+[source/selection registry](context_source_registry_A04_20261011.json) and
+[unactivated income proposal](income_decision_proposal_A04_20261011.md).
+
+| Existing predictor / candidate | Definition and current qualification |
+| --- | --- |
+| `log_population_density` — Copenhagen | Preserved `log(KKBEF1/FOLK1A 2026Q3 persons / native gross assignment-polygon km2)`, EPSG:25832. Water inclusion/statistical-boundary vintage unverified; no land-only substitution, rescaling or clipping. Eleven inherited contexts checked against sources and authoritative SQL; outside/unmatched listing rows stay NULL |
+| `income_100k_dkk` — Copenhagen | Settled KKIND5/nominal IFOR35 2024: mean of ten observed decile means /100000 DKK. Exact source/selection hashes retained; pragmatic qualification and missing eligibility/weighting/basis details unchanged |
+| `distance_centre_euclidean_km` — Copenhagen | Preserved City Hall Square public point, source EPSG:4326, Euclidean km in EPSG:25832; compatible audit joins only, not final sample freeze |
+| Oslo population source | BEF001 both-sex all-age 2026-01-01 counts, distinct native total301/borough30101–30117/unlocated30199. All106 age cells summed only within each native geography. VALIDATED_NATIVE_SOURCE_ONLY; density and listing join BLOCKED on approved gross matching geography/licence |
+| Oslo income candidate | INN003 all-household mean after-tax consumption-unit income, 2024 NOK, EU scale1/0.5/0.3, students excluded. Native1–15/combined88/total100000 preserved. No automatic mapping88 to Sentrum/Marka or DKK feature activation; terms/mean-weighting/common-concept qualification unresolved |
+| Oslo public central anchor | Official SSR active approved Rådhuset854084,0301, point10.7336/59.91199, source EPSG:4258 verified OpenAPI, target EPSG:25833, CC BY4.0 ©Kartverket. Source reference date unavailable, retrieval pinned; no new-city listing-level context finalized |
+| Stockholm population source | SCB FolkmDesoAldKon, all-age/both-sex 2025-12-31 persons,127 exact0180 native RegSO2025 IDs. CKM noise and source allocation of unlocated residents documented; no redistribution. VALIDATED_NATIVE_SOURCE_ONLY; no borough joins/density approval |
+| Stockholm income candidates | SCB Tab3InkDesoRegso2024 person-assigned household economic standard; mean/median thousandsSEK and eligible-person count separate. Latest-year constant prices2024; Swedish consumption scale/full-year eligibility/shared-residence child weights differ. Native RegSO source validation is not primary-income approval or validation-area qualification |
+| Stockholm public central anchor | Official civic building/address Stadshuset/Hantverkargatan1 verified; qualified civic point/CRS unresolved, NULL/BLOCKED; separately frozen city-artwork marker is discovery-only, never guessed or promoted automatically |
+
+New-city native counts/mean/median fields reside in independent source-validation
+SQL cells, not primary X. No native statistical unit becomes an analysis/fold
+unit through its name or code. The canonical registry and matched no-income
+sensitivity remain unchanged; empirical fitting waits for a frozen researcher
+income decision and other gates. No H, residential price or rent proxy is added.
