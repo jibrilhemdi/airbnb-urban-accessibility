@@ -1,25 +1,19 @@
-> **Live A01 reconciliation — 11 October 2026.** Active design:
-> `v4_accessibility_only_20261011`. This Markdown is authoritative for the new
-> scientific scope. A01 changes documentation only; the executable registry,
-> configuration and applied SQL still encode the superseded housing-inclusive
-> design until separately requested A02. No routes, assignments, model samples
-> or empirical fits were executed. V3 results and housing feasibility were
-> already known; supervisor approval is not recorded.
+> **Live A02 reconciliation — 11 October 2026.** Active design:
+> `v4_accessibility_only_20261011`. The canonical executable registry and
+> separate new-design configuration now implement X/E/W without housing.
+> Historical configurations, source ledgers and receipts remain immutable.
+> Full empirical readiness remains BLOCKED by A03–A07 and genuine city inputs;
+> no acquisition, routes, sample/fold creation or fitting occurred in A02.
+> V3 results and housing feasibility were already known; supervisor approval
+> is not recorded. [A02 implementation audit](pipeline_scope_audit_A02_20261011.md)
+> records the actual implementation and tests; the [A01 audit](current_state_audit_20261011.md)
+> retains its original checkpoint evidence and input-version discrepancies.
 >
-> Live source evidence, preservation hashes and remaining dependencies are in
-> [current_state_audit_20261011.md](current_state_audit_20261011.md). Supplied
-> literature verification is attributed to the bundle; this integration did not
-> re-audit unavailable original literature PDFs. The exact v3 results ZIP exists
-> locally and matches the supplied hash. The supplied listing-audit hash differs
-> from the current preserved audit; live selected SQL counts agree with the
-> acquired-count tables below. These counts are not final research samples.
->
-> **Baseline reconciliation pending A02:** actual frozen v3 code includes
-> categorical `property_type`, while the supplied revision excludes it. The
-> numeric/amenity/context controls below remain inherited. This discrepancy
-> must be explicitly resolved before a new executable feature whitelist or fit;
-> A01 neither silently deletes the inherited control nor certifies a final
-> categorical membership decision. See [model_contract.md](model_contract.md).
+> **Baseline reconciliation resolved under A02:** the instruction to remove
+> only housing-derived active dependencies retains categorical `property_type`
+> from the actual frozen v3 baseline, alongside the 17 numeric/amenity/context
+> controls. This explicitly supersedes the supplied revision's prose exclusion;
+> the supplied bundle itself remains unchanged. See [model_contract.md](model_contract.md).
 
 # Scientific Thesis Proposal
 ## Urban accessibility and Airbnb asking prices

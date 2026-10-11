@@ -77,7 +77,7 @@ class V4PersistenceTests(unittest.TestCase):
 
     def test_migration_idempotence_and_applied_hash(self):
         self.assertEqual(self.first_migration, ['023_v4_multicity_persistence.sql', '024_v4_listing_boundary_audit.sql',
-                                                '025_v4_housing_source_audit.sql'])
+                                                '025_v4_housing_source_audit.sql', '026_v4_accessibility_only_definition.sql'])
         self.assertEqual(migrate(self.engine, synthetic=True), [])
         with tempfile.TemporaryDirectory() as directory:
             for original in MIGRATIONS.glob('*.sql'):
@@ -86,7 +86,7 @@ class V4PersistenceTests(unittest.TestCase):
             migration.write_text((MIGRATIONS / migration.name).read_text() + '\n-- changed fixture\n')
             with self.assertRaisesRegex(RuntimeError, 'changed'):
                 migrate(self.engine, synthetic=True, directory=Path(directory))
-        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.schema_migrations')), 3)
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.schema_migrations')), 4)
         self.assertEqual(self.conn.scalar(text("SELECT count(*) FROM information_schema.schemata WHERE schema_name LIKE 'v3_%'")), 0)
 
     def test_housing_sources_persist_native_values_nulls_and_blocked_status(self):
@@ -137,7 +137,7 @@ class V4PersistenceTests(unittest.TestCase):
         observations(self.conn, self.paths.scope, self.digest, 'fixture', frame)
         other = Paths(scope('stockholm'), self.paths.root)
         _, manifest = freeze_sources(other, source_fixture(other))
-        begin_run(self.conn, other.scope, {'synthetic': True})
+        begin_run(self.conn, other.scope, {'synthetic': True, 'design': {'design_id': other.scope.design_id}})
         digest = register_manifest(self.conn, other.scope, manifest)
         observations(self.conn, other.scope, digest, 'fixture', frame)
         self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_raw.observations')), 2)
@@ -154,7 +154,7 @@ class V4PersistenceTests(unittest.TestCase):
         from src.v4.identity import Scope
         s = self.paths.scope
         other = Scope(s.version, s.city, '2026-06-29', s.run_id, s.purpose)
-        begin_run(self.conn, other, {'synthetic': True})
+        begin_run(self.conn, other, {'synthetic': True, 'design': {'design_id': other.design_id}})
         self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.runs')), 2)
 
     def test_source_area_id_namespaces_and_recorded_crs(self):
@@ -167,7 +167,7 @@ class V4PersistenceTests(unittest.TestCase):
             self.conn.execute(query, {**s.params(), 'digest': self.digest})
         other = Paths(scope('stockholm'), self.paths.root)
         _, manifest = freeze_sources(other, source_fixture(other))
-        begin_run(self.conn, other.scope, {'synthetic': True})
+        begin_run(self.conn, other.scope, {'synthetic': True, 'design': {'design_id': other.scope.design_id}})
         digest = register_manifest(self.conn, other.scope, manifest)
         self.conn.execute(query, {**other.scope.params(), 'digest': digest})
         self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_spatial.source_areas')), 2)
@@ -188,10 +188,10 @@ class V4PersistenceTests(unittest.TestCase):
             self.conn.execute(text('UPDATE v4_raw.source_manifests SET manifest=manifest'))
 
     def test_completed_runs_and_records_cannot_be_overwritten(self):
-        persist_artifact(self.conn, self.paths.scope, 'M0', 'primary_models', 'fixture', pd.DataFrame([{'listing_id': 'private_fixture'}]))
+        persist_artifact(self.conn, self.paths.scope, 'M0', 'primary_models', 'fixture', pd.DataFrame([{'listing_id': 'private_fixture'}]), engine='OLS', validation='random')
         complete_run(self.conn, self.paths.scope)
         with self.assertRaises(DBAPIError), self.conn.begin_nested():
-            persist_artifact(self.conn, self.paths.scope, 'ME', 'primary_models', 'fixture', pd.DataFrame([{'x': 1}]))
+            persist_artifact(self.conn, self.paths.scope, 'ME', 'primary_models', 'fixture', pd.DataFrame([{'x': 1}]), engine='OLS', validation='random')
         with self.assertRaises(DBAPIError), self.conn.begin_nested():
             self.conn.execute(text("UPDATE v4_analysis.runs SET status='running'"))
         with self.assertRaises(DBAPIError), self.conn.begin_nested():
@@ -208,12 +208,12 @@ class V4PersistenceTests(unittest.TestCase):
             verify_database(self.conn)
         with self.assertRaises(RuntimeError):
             begin_run(self.conn, scope(purpose='research'), {'fixture': True})
-        with self.assertRaises(IntegrityError), self.conn.begin_nested():
+        with self.assertRaisesRegex(DBAPIError, 'design mismatch|definition_id_check'), self.conn.begin_nested():
             self.conn.execute(text('INSERT INTO v4_analysis.artifacts VALUES (:version,:run_id,:city,:snapshot,\'M0\',\'primary_models\',\'fixture\',\'0\',\'{}\')'), self.paths.scope.params())
 
     def test_aggregate_report_output_separation_no_private_rows_and_immutability(self):
         s = self.paths.scope
-        persist_artifact(self.conn, s, 'M0', 'primary_models', 'private_predictions', pd.DataFrame([{'listing_id': 'PRIVATE_SENTINEL'}]))
+        persist_artifact(self.conn, s, 'M0', 'primary_models', 'private_predictions', pd.DataFrame([{'listing_id': 'PRIVATE_SENTINEL'}]), engine='OLS', validation='random')
         self.conn.execute(text('INSERT INTO v4_analysis.aggregate_metrics VALUES '
                                '(:version,:run_id,:city,:snapshot,:definition,\'OLS\',\'random\',100,0.5,0.4)'),
                           {**s.params(), 'definition': model_definition('M0')['definition_id']})
@@ -343,3 +343,104 @@ class V4PersistenceTests(unittest.TestCase):
                 recover(conn,paths,parent_scope.run_id,policy)
         self.assertEqual(sha256_file(failure_path),policy['failed_receipt_sha256'])
         self.assertEqual(sha256_file(listing),policy['listing_sha256'])
+
+    def test_read_only_manifest_reuse_preserves_null_housing_and_all_audit_rows(self):
+        from src.v4.listings import persist_ingestion, DEFINITION
+        from src.v4.source_reuse import reuse_listing_source, read_listing_audit
+        rows=[{'row_number':1,'listing_id':'synthetic_positive','dwelling_eligible':True,
+               'price_nightly':100,'log_price':4.605170185988092,'positive_price':True,'inside_boundary':True,
+               'native_housing_area_id':None,'official_analysis_area_id':None,'housing_context_midrank':None},
+              {'row_number':2,'listing_id':'synthetic_missing','dwelling_eligible':True,'price_nightly':None,
+               'native_housing_area_id':None}]
+        persist_ingestion(self.conn,self.paths.scope,self.manifest,rows,
+                          {'definition_version':DEFINITION,'counts':{'raw':2}},[])
+        new_scope=scope(stamp='20261011T150000Z')
+        policy={'design_id':new_scope.design_id,'source_version':new_scope.version,
+                'cities':{'oslo':{'run_id':self.paths.scope.run_id,'manifest_sha256':self.digest,'snapshot':new_scope.snapshot}}}
+        before=dict(self.conn.execute(text('SELECT count(*) AS n FROM v4_raw.listing_ingestions')).mappings().one())
+        with self.conn.begin_nested():
+            result=reuse_listing_source(self.conn,new_scope,self.digest,root=self.paths.root,policy=policy)
+            selected=read_listing_audit(self.conn,new_scope,self.digest,root=self.paths.root,policy=policy)
+        self.assertEqual(result['source_scope']['run_id'],self.paths.scope.run_id)
+        self.assertEqual(result['mutations'],0);self.assertFalse(result['source_reingested'])
+        self.assertEqual(len(selected),2)
+        self.assertIsNone(selected[1]['price_nightly'])
+        self.assertIsNone(selected[0]['official_analysis_area_id'])
+        self.assertNotIn('native_housing_area_id',selected[0]);self.assertNotIn('housing_context_midrank',selected[0])
+        after=dict(self.conn.execute(text('SELECT count(*) AS n FROM v4_raw.listing_ingestions')).mappings().one())
+        self.assertEqual(before,after)
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_raw.listing_audit WHERE '+SCOPE_SQL),self.paths.scope.params()),2)
+        with self.assertRaises(ValueError):reuse_listing_source(self.conn,new_scope,'0'*64,root=self.paths.root,policy=policy)
+        with self.assertRaises(KeyError):reuse_listing_source(self.conn,scope('stockholm'),self.digest,root=self.paths.root,policy=policy)
+        self.paths.source('fixture','source.txt').write_text('changed synthetic fixture')
+        with self.assertRaisesRegex(RuntimeError,'bytes changed'):
+            reuse_listing_source(self.conn,new_scope,self.digest,root=self.paths.root,policy=policy)
+
+    def test_revised_model_version_engine_validation_and_sensitivity_isolation(self):
+        from src.v4.specification import HISTORICAL_VERSION
+        frame=pd.DataFrame([{'synthetic_statistic':1.}])
+        for engine in ['OLS','XGBoost']:
+            for validation in ['random','geographic']:
+                for sensitivity in ['primary','no_income']:
+                    persist_artifact(self.conn,self.paths.scope,'M0','primary_models','synthetic_fixture',frame,
+                                     engine=engine,validation=validation,scenario=sensitivity)
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.artifacts')),8)
+        dimensions=self.conn.execute(text('SELECT DISTINCT design_id,model,sensitivity,engine,validation FROM v4_analysis.artifact_dimensions')).all()
+        self.assertEqual(len(dimensions),8)
+        self.assertTrue(all(r.design_id==self.paths.scope.design_id and r.model=='M0' for r in dimensions))
+        with self.assertRaises(ValueError):persist_artifact(self.conn,self.paths.scope,'M0','primary_models','fixture',frame)
+        with self.assertRaisesRegex(ValueError,'metadata conflicts'):
+            persist_artifact(self.conn,self.paths.scope,'M0','primary_models','fixture',pd.DataFrame([{'engine':'XGBoost'}]),
+                             engine='OLS',validation='random')
+        with self.assertRaisesRegex(ValueError,'identity conflicts'):
+            persist_artifact(self.conn,self.paths.scope,'M0','primary_models','fixture',pd.DataFrame([{'design_id':HISTORICAL_VERSION}]),
+                             engine='OLS',validation='random')
+        with self.assertRaises(ValueError):persist_artifact(self.conn,self.paths.scope,'M0','primary_models','fixture',frame,
+            engine='OLS',validation='random',scenario='no_housing')
+        with self.assertRaises(IntegrityError),self.conn.begin_nested():
+            persist_artifact(self.conn,self.paths.scope,'M0','primary_models','synthetic_fixture',frame,engine='OLS',validation='random')
+        params={**self.paths.scope.params(),'definition':HISTORICAL_VERSION+':M0'}
+        with self.assertRaisesRegex(DBAPIError,'design mismatch'),self.conn.begin_nested():
+            self.conn.execute(text('INSERT INTO v4_analysis.aggregate_metrics '
+                '(version,run_id,city,snapshot,definition_id,engine,validation,n,rmse,mae) '
+                "VALUES (:version,:run_id,:city,:snapshot,:definition,'OLS','random',2,1,1)"),params)
+        old=scope(stamp='20261011T160000Z',design_id=HISTORICAL_VERSION)
+        begin_run(self.conn,old,{'synthetic':True})
+        persist_artifact(self.conn,old,'M0','primary_models','historical_fixture',frame)
+        with self.assertRaises(RuntimeError):complete_run(self.conn,scope(stamp='20261011T160000Z'))
+        complete_run(self.conn,old)
+        with self.assertRaisesRegex(RuntimeError,'design does not match'):
+            report(self.conn,Paths(scope(stamp='20261011T160000Z'),self.paths.root))
+        with self.assertRaises(DBAPIError),self.conn.begin_nested():
+            self.conn.execute(text("INSERT INTO v4_analysis.artifacts (version,run_id,city,snapshot,definition_id,family,artifact,record_key,record,engine,validation) VALUES (:version,:run_id,:city,:snapshot,:definition,'primary_models','fixture','0','{}','OLS','random')"),
+                              {**self.paths.scope.params(),'definition':self.paths.scope.design_id+':no_housing:M0'})
+
+    def test_append_only_upgrade_preserves_completed_historical_run_and_guards(self):
+        from src.v4.specification import HISTORICAL_VERSION
+        name='test_v4_'+uuid.uuid4().hex
+        with self.admin.connect() as admin:admin.exec_driver_sql('CREATE DATABASE "'+name+'"')
+        upgrade=create_engine(self.engine.url.set(database=name))
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                for p in MIGRATIONS.glob('*.sql'):
+                    if p.name[:3]<'026':(Path(directory)/p.name).write_bytes(p.read_bytes())
+                migrate(upgrade,synthetic=True,directory=Path(directory))
+            old=scope(design_id=HISTORICAL_VERSION)
+            with upgrade.begin() as conn:
+                begin_run(conn,old,{'synthetic':True})
+                conn.execute(text("INSERT INTO v4_analysis.artifacts VALUES (:version,:run_id,:city,:snapshot,:definition,'primary_models','historical','0',CAST(:record AS jsonb))"),
+                             {**old.params(),'definition':HISTORICAL_VERSION+':M0','record':json.dumps({'native_housing_area_id':None})})
+                complete_run(conn,old)
+                before=conn.scalar(text('SELECT row_to_json(r)::text FROM v4_analysis.runs r'))
+                old_record=conn.scalar(text('SELECT record FROM v4_analysis.artifacts'))
+            self.assertEqual(migrate(upgrade,synthetic=True),['026_v4_accessibility_only_definition.sql'])
+            self.assertEqual(migrate(upgrade,synthetic=True),[])
+            with upgrade.begin() as conn:
+                self.assertEqual(before,conn.scalar(text('SELECT row_to_json(r)::text FROM v4_analysis.runs r')))
+                self.assertEqual(old_record,conn.scalar(text('SELECT record FROM v4_analysis.artifacts')))
+                self.assertIsNone(conn.scalar(text('SELECT engine FROM v4_analysis.artifacts')))
+                for query in ["UPDATE v4_analysis.runs SET status='running'","DELETE FROM v4_analysis.artifacts","TRUNCATE v4_analysis.artifacts"]:
+                    with self.assertRaises(DBAPIError),conn.begin_nested():conn.execute(text(query))
+        finally:
+            upgrade.dispose()
+            with self.admin.connect() as admin:admin.exec_driver_sql('DROP DATABASE "'+name+'"')

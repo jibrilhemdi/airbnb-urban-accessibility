@@ -122,9 +122,11 @@ def listing_evidence(conn, paths: Paths) -> dict:
 def report(conn, paths: Paths) -> dict:
     s = paths.scope
     verify_database(conn, synthetic=s.purpose == 'synthetic')
-    row = conn.execute(text('SELECT status,scientific_sha256,scientific_dependencies FROM v4_analysis.runs WHERE ' + SCOPE_SQL), s.params()).mappings().one_or_none()
+    row = conn.execute(text('SELECT status,definition_version,scientific_sha256,scientific_dependencies FROM v4_analysis.runs WHERE ' + SCOPE_SQL), s.params()).mappings().one_or_none()
     if row is None or row['status'] != 'completed':
         raise RuntimeError('Report requires an existing completed scoped V4 run')
+    if row['definition_version'] != s.design_id:
+        raise RuntimeError('Report scientific design does not match the selected run')
     manifests = row['scientific_dependencies'].get('source_manifests', {})
     if not manifests:
         raise RuntimeError('Report requires frozen source manifests')
@@ -137,11 +139,11 @@ def report(conn, paths: Paths) -> dict:
         for record in manifest['records']:
             if sha256_file(paths.source(record['source_id'], record['filename'])) != record['sha256']:
                 raise RuntimeError('Frozen raw source bytes changed')
-    current = scientific_dependencies(s.city, source_manifests=manifests)
+    current = scientific_dependencies(s.city, source_manifests=manifests, design_id=s.design_id)
     if canonical_hash(current) != row['scientific_sha256']:
         raise RuntimeError('Scientific dependencies changed; report cannot certify an unchanged fit')
-    fields = ('definition_id', 'engine', 'validation', 'n', 'rmse', 'mae')
-    rows = conn.execute(text('SELECT ' + ','.join(fields) + ' FROM v4_analysis.aggregate_metrics WHERE ' + SCOPE_SQL + ' ORDER BY definition_id,engine,validation'), s.params()).mappings().all()
+    fields = ('design_id', 'definition_id', 'model', 'sensitivity', 'engine', 'validation', 'n', 'rmse', 'mae')
+    rows = conn.execute(text('SELECT ' + ','.join(fields) + ' FROM v4_analysis.aggregate_dimensions WHERE ' + SCOPE_SQL + ' ORDER BY definition_id,engine,validation'), s.params()).mappings().all()
     if not rows:
         raise RuntimeError('No aggregate metrics available; do not invent results')
     out = io.StringIO(newline='')

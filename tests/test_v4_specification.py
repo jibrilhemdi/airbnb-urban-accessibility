@@ -7,14 +7,14 @@ import re
 import unittest
 
 from src.pipeline.model_specification import FEATURES as V3_FEATURES
-from src.v4.specification import DEFINITION_VERSION, load_design, model_definition, validate_definition
+from src.v4.historical_specification import DEFINITION_VERSION, load_design, model_definition, validate_definition
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = {"M0": ["X", "H"], "ME": ["X", "H", "E"],
             "MW": ["X", "H", "W"], "MEW": ["X", "H", "E", "W"]}
 
 
-class V4ModelDefinitionTests(unittest.TestCase):
+class HistoricalV4ModelDefinitionTests(unittest.TestCase):
     def setUp(self):
         self.design = load_design()
 
@@ -136,48 +136,66 @@ class V4ModelDefinitionTests(unittest.TestCase):
         self.assertFalse(self.design["execution_authorized_by_this_configuration"])
 
 
+class HistoricalDocumentDefinitionTests(unittest.TestCase):
+    def test_frozen_housing_markdown_registry_and_dictionary(self):
+        design = load_design()
+        history = ROOT / "docs/v4/history/housing_standard_20261011_before_A01"
+        for relative in design["active_documents"]:
+            text = (history / Path(relative).name).read_text()
+            self.assertIn(DEFINITION_VERSION, text)
+            self.assertIn("H=(midrank-0.5)/G_ref", text)
+            if Path(relative).name != "source_registry.md":
+                rows = re.findall(r"^\| (M0|ME|MW|MEW) \| ([XHEW +]+) \|$", text, re.M)
+                self.assertEqual(dict(rows), {name: " + ".join(blocks) for name, blocks in EXPECTED.items()})
+        dictionary = (history / 'data_dictionary.md').read_text()
+        for block in design['blocks'].values():
+            for feature in block:
+                self.assertIn('`'+feature+'`', dictionary)
+
+
 class V4DocumentConsistencyTests(unittest.TestCase):
     def test_active_markdown_definitions_match_machine_configuration(self):
-        design = load_design()
-        for relative in design["active_documents"]:
+        from src.v4.specification import load_design as active_design, DEFINITION_VERSION as active_version
+        design = active_design()
+        expected = {name: " + ".join(m['blocks']) for name,m in design['primary_models'].items()}
+        for relative in design['active_documents']:
             text = (ROOT / relative).read_text()
             with self.subTest(path=relative):
-                self.assertIn(DEFINITION_VERSION, text)
-                self.assertIn("H=(midrank-0.5)/G_ref", text)
-                self.assertIn("V3 results were already observed", text)
-                self.assertIn("BLOCKED", text)
+                self.assertIn(active_version, text)
                 self.assertNotRegex(text, r"\b(?:M0|ME|MW|MEW)_H\b")
-                if Path(relative).name != "source_registry.md":
-                    rows = re.findall(r"^\| (M0|ME|MW|MEW) \| ([XHEW +]+) \|$", text, re.M)
-                    self.assertEqual(len(rows), 4)
-                    self.assertEqual(dict(rows), {name: " + ".join(blocks) for name, blocks in EXPECTED.items()})
-        for name in ["proposal.md", "research_plan.md", "preanalysis_specification.md"]:
-            text = (ROOT / "docs/v4" / name).read_text()
-            self.assertTrue(all(question in text for question in ["RQ1", "RQ2", "RQ3", "RQ4"]))
-            self.assertIn("MEW versus ME", text)
-            self.assertIn("MW versus ME", text)
+                if Path(relative).name not in {'source_registry.md', 'preanalysis_specification.md'}:
+                    rows = re.findall(r"^\| (M0|ME|MW|MEW) \| ([XEW +]+) \|", text, re.M)
+                    self.assertEqual(dict(rows), expected)
+                else:
+                    self.assertNotIn('H=(midrank-0.5)/G_ref',text)
+        for name in ['proposal.md','research_plan.md','preanalysis_specification.md']:
+            text = (ROOT/'docs/v4'/name).read_text()
+            self.assertTrue(all(q in text for q in ['RQ1','RQ2','RQ3']))
+            self.assertIn('withdrawn',text.lower())
 
     def test_dictionary_lists_every_actual_feature_and_model_versions(self):
-        text = (ROOT / "docs/v4/data_dictionary.md").read_text()
-        design = load_design()
-        for block in design["blocks"].values():
+        from src.v4.specification import load_design as active_design
+        design = active_design()
+        dictionary = (ROOT/'docs/v4/data_dictionary.md').read_text()
+        for block in design['blocks'].values():
             for feature in block:
-                self.assertIn("`" + feature + "`", text)
-        index = (ROOT / design["document_index"]).read_text()
-        for relative in design["active_documents"]:
-            self.assertIn(Path(relative).name, index)
+                self.assertIn('`'+feature+'`',dictionary)
+        index = (ROOT/design['document_index']).read_text()
+        for relative in design['active_documents']:
+            self.assertIn(Path(relative).name,index)
 
     def test_active_links_resolve_and_docx_status_is_explicit(self):
-        for path in (ROOT / "docs/v4").glob("*.md"):
-            for target in re.findall(r"\]\(([^)]+)\)", path.read_text()):
-                if "://" not in target:
-                    self.assertTrue((path.parent / target.split("#")[0]).exists(), (path, target))
-        index = (ROOT / "docs/v4/document_index.md").read_text()
-        self.assertIn("No existing active V4 DOCX file", index)
-        self.assertIn("stale/superseded", index)
-        self.assertIn("make income-docs", index)
-        self.assertFalse([p for p in (ROOT / "docs").rglob("*.docx") if "v4" in p.as_posix().lower()])
+        for path in (ROOT/'docs/v4').glob('*.md'):
+            for target in re.findall(r"\]\(([^)]+)\)",path.read_text()):
+                if '://' not in target:
+                    self.assertTrue((path.parent/target.split('#')[0]).exists(),(path,target))
+        index=(ROOT/'docs/v4/document_index.md').read_text()
+        self.assertIn('stale/superseded',index)
+        self.assertIn('make income-docs',index)
+        reference=ROOT/'docs/v4/revisions/accessibility_only_20261011/docs'
+        self.assertEqual({p.resolve() for p in (ROOT/'docs').rglob('*.docx') if 'v4' in p.as_posix().lower()},
+                         {p.resolve() for p in reference.glob('*.docx')})
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()

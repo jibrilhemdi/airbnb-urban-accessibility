@@ -1,0 +1,25 @@
+{
+  "design_id": "v4_accessibility_only_20261011",
+  "source_version": "research_design_v4",
+  "selection": "explicit_manifest_hash_only_read_only_reuse",
+  "cities": {
+    "copenhagen_frederiksberg": {
+      "run_id": "research_v4_copenhagen_frederiksberg_20261011T143812Z",
+      "manifest_sha256": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13",
+      "snapshot": "2026-06-30",
+      "boundary_temporal_status": "RETAIN_DOCUMENTED_QUALIFICATION"
+    },
+    "oslo": {
+      "run_id": "research_v4_oslo_20261011T143812Z",
+      "manifest_sha256": "c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8",
+      "snapshot": "2026-06-30",
+      "boundary_temporal_status": "BLOCKED_PENDING_A03"
+    },
+    "stockholm": {
+      "run_id": "research_v4_stockholm_20261011T151637Z",
+      "manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172",
+      "snapshot": "2026-06-30",
+      "boundary_temporal_status": "RETAIN_DOCUMENTED_QUALIFICATION"
+    }
+  }
+}

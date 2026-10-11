@@ -750,3 +750,121 @@ no raw/private/credential/individual-row file staged. Requested commit:
 Push HEAD explicitly to recorded origin `refs/heads/v4`, verify remote/local SHA
 after committing, and report outside the commit. No own commit SHA or future
 push success is recorded here; push failure means LOCAL_ONLY.
+
+## A02 — remove housing from active pipeline, 11 October 2026
+
+Current user request separately authorizes A02 only. Existing `v4` branch at
+entry/fetched origin `f5a6913c362ebaef01d828baf778164c538626cd`, clean worktree,
+no unrelated edits/staging/unfinished operations/divergence. Recorded origin
+URL/base/main/v3/worktree references retained. Read applicable root AGENTS,
+contract/log, active design/model/A01 audit and revised supplied proposal/plan,
+actual V3 feature registry, V4 code/config/SQL constraints/runners/tests/Makefile.
+No new acquisition, provider contact, Airbnb download, routing, sample/fold
+construction, estimator implementation or empirical fit occurs in this step.
+
+Canonical active design: **v4_accessibility_only_20261011**. Exactly M0=X,
+ME=X+E, MW=X+W, MEW=X+E+W; no H/residential-price/rent proxy in primary or
+required no-income features. No no_housing/log-native-H variant. Retain all
+17 inherited numeric/amenity/context controls plus categorical `property_type`.
+The A02 instruction to remove only housing-derived dependencies resolves A01's
+baseline discrepancy by retaining the actual V3 categorical control, explicitly
+superseding the supplied prose exclusion. The supplied bundle stays unchanged.
+Y remains log original positive observed nightly Airbnb price; no filling or
+quote substitution. Exact candidates, seeds, thresholds, no-income material-
+change rules, separate cities/engines/validation and five contrasts retained.
+
+Changes: separate active research-design/city/reuse-policy JSONs; canonical
+specification registry, housing-free scope check and read-only source reuse;
+version-aware city/identity/runtime/persistence/CLI/report adapters; append-only
+migration 026; scope/version/source/upgrade tests; active documentation/status/
+index/AGENTS pointer and this log. Old research/city/housing/source policies and
+all acquisition adapters stay byte-for-byte intact. The original specification
+module is preserved byte-for-byte as `src/v4/historical_specification.py`; old
+model/source assertions remain executed under their explicit historical scope.
+No globally disabled preflight or historical test and no fake H qualification.
+
+Retirement trace is in `pipeline_scope_audit_A02_20261011.md`: H-qualified
+samples/non-null housing joins, annual sales/80% coverage/native-area minimums,
+reference ranks/H-safe folds/H-group support and housing-source/module/migration
+scientific hashes are absent from active dependencies. Historical source audits
+remain BLOCKED/preliminary exactly as recorded; retired requirements are
+NOT_REQUIRED_SCOPE_AMENDED. Ordinary geographical support, analysis/context
+qualification, price integrity and missing/invalid required feature checks stay.
+There was no completed V4 H/sample/fold/model output to relabel or regenerate.
+
+Approved source hashes select the original Copenhagen/Oslo listing runs and
+amended Stockholm run exactly as A01 recorded. Explicit `--source-manifest`
+checks SQL identity/purpose/manifest/raw checksums read-only; audit SQL selects
+only whitelisted private listing fields and all rows, including missing prices
+and NULL area assignments. Housing fields never become an INNER JOIN/WHERE
+filter. Design changes create no duplicate ingestion. New analytical output/
+cache identities include design_id; raw/manifest locations are unchanged.
+Historical acquisition metadata envelopes and report paths remain unchanged;
+existing acquisition Scope default remains historical; analytical CLI explicitly
+selects the new design. Reporting uses safe aggregate dimensions and refuses a
+selected design different from the completed run. Scientific/reporting/log hashes
+remain separated; housing-policy changes no longer invalidate the new design.
+
+Migration **026_v4_accessibility_only_definition.sql** is the next actual
+migration after 025. Tested in owned disposable PostGIS databases, then applied
+through `make v4-setup` to dedicated `thesis_accessibility_v4`, with only 026
+reported newly applied. Applied hash:
+`57031e2bb082f5dd2e5ec1733d1a0db82a0a014a52ffe09a27abeaceb79a46c7`.
+No applied 023–025 bytes/records changed. Schema extends allowed design/model
+IDs, parent-design guards and separate artifact estimator/validation keys;
+derived model/sensitivity/design dimensions are views, without backfilling old
+completed rows or inventing old estimator/validation metadata. All old
+append-only/completed/source/purpose/truncation guards remain active.
+
+Actual final relevant checks:
+
+- `make v4-test`: **81 discovered, 62 PASS, 19 opt-in DB skipped**, exit 0.
+- `make v4-test-db`: **19/19 PASS**, exit 0; owned disposable UUID databases.
+  Upgrade preserves a committed completed historical run/record and its guards;
+  tests cover migration idempotence/hash rejection, model/engine/validation/
+  sensitivity isolation, conflicting artifact metadata, cross-design completion/
+  report/write refusal, all-row read-only source reuse and NULL housing fields,
+  bad hash/city/source bytes, duplicates/immutability/privacy and unchanged
+  historical housing adapter/receipt behavior.
+- Safe `scripts/v4_repository_checks.py --baseline-tests`: **175 discovered,
+  133 PASS, 42 opt-in skipped**, exit 0; temporary candidate export, live V3
+  mutation flags disabled. Historical registry/Markdown assertions now target
+  immutable historical material; active checks target the new scientific scope
+  and exact supplied reference DOCX inventory. A01's three failing methods are
+  properly scoped and now pass, without suppressing historical tests.
+- Housing-free synthetic scope tests pass with no housing files and absent/NULL
+  housing-area fields, no row filtering or filling. Invalid original prices,
+  log-price mismatches, IDs, geographic/context/support failures and entirely
+  missing/nonfinite required predictors still BLOCK. A passed scope check is
+  explicitly not empirical readiness or research data.
+- `make compile` and tracked/staged `git diff --check`: PASS.
+- Supported production V4 `make v4-setup`: SETUP_COMPLETE, only 026 applied,
+  research_executed=false; no new run/source ingestion created.
+- Actual read-only `make v4-preflight` for all three selected city hashes:
+  **BLOCKED**, expected CLI/Make exit 2, mutations=0, source_reingested=false,
+  research_executed=false. Old listing manifests/bytes reused successfully; no
+  housing or migration mismatch blocker. Copenhagen still awaits common
+  accessibility/source freeze/samples/folds/scientific dispatch; Oslo retains
+  its vintage warning/seven unresolved city fields; Stockholm retains six
+  unresolved non-housing city fields. No acquisition/run target was executed.
+- Before/after protected verifier: **1,696 V3 files**, 22 applied migration hashes
+  and five analytical SQL fingerprints unchanged.
+- **252** captured evidence/source/config/history files unchanged, exact original
+  step-log prefix retained, old specification copied exactly. **Eight** original
+  V4 SQL table fingerprints unchanged (including all raw listing/housing audit
+  rows and study geometries); original migration rows unchanged with only 026
+  appended. **92** source-byte pins/eight canonical manifests PASS. Existing
+  13 listing ingestions/three housing ingestions/eight manifests and original
+  Stockholm failed-access/NULL-count history preserved. Analytical runs remain
+  zero. No raw/restricted/private/credential file is to be staged.
+
+Checkpoint: **A02 IMPLEMENTED_SCOPE_CHECKPOINT; research readiness PARTIAL/
+BLOCKED** pending genuinely required A03–A07 city geography/context/accessibility/
+sample/fold/estimator evidence. Housing access/acquisition is not required under
+this design and is not marked historically qualified. A03 and empirical work are
+not executed or authorized by this checkpoint. Stage only intended safe code/
+config/new SQL/tests/Makefile/Markdown; requested commit:
+`refactor(v4): remove housing from active models and readiness gates`.
+Push HEAD explicitly to recorded origin refs/heads/v4 and verify actual remote
+SHA equality afterward. No own commit SHA or future push success is recorded
+inside this commit; push failure means LOCAL_ONLY and pauses the sequence.

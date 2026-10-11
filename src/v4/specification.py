@@ -1,64 +1,72 @@
-"""Read-only V4 model definitions, separate from the frozen V3 pipeline."""
+"""Canonical accessibility-only registry; frozen housing definitions stay separate."""
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-DEFINITION_VERSION = "v4_housing_standard_20261011"
-CONFIG_PATH = Path(__file__).resolve().parents[2] / "config/v4/research_design.json"
-PRIMARY_BLOCKS = {
-    "M0": ["X", "H"], "ME": ["X", "H", "E"],
-    "MW": ["X", "H", "W"], "MEW": ["X", "H", "E", "W"],
-}
+from src.pipeline.model_specification import BASE_NUMERIC, CATEGORICAL, E_NUMERIC, W_NUMERIC
+
+DEFINITION_VERSION = 'v4_accessibility_only_20261011'
+HISTORICAL_VERSION = 'v4_housing_standard_20261011'
+DEFINITIONS = (DEFINITION_VERSION, HISTORICAL_VERSION)
+CONFIG_PATH = Path(__file__).resolve().parents[2] / 'config/v4/research_design_accessibility_only.json'
+PRIMARY_BLOCKS = {'M0': ['X'], 'ME': ['X', 'E'], 'MW': ['X', 'W'], 'MEW': ['X', 'E', 'W']}
+INHERITED_BLOCKS = {'X': list(BASE_NUMERIC + CATEGORICAL), 'E': list(E_NUMERIC), 'W': list(W_NUMERIC)}
+SCENARIOS = ('primary', 'no_income')
 
 
 def validate_definition(design: dict) -> None:
-    if design.get("version") != "research_design_v4" or design.get("definition_version") != DEFINITION_VERSION:
-        raise ValueError("Require the explicit V4 definition version; V3 labels are not V4 models")
-    models = design["primary_models"]
-    if set(models) != set(PRIMARY_BLOCKS):
-        raise ValueError("Exactly M0, ME, MW and MEW are primary")
-    blocks = design["blocks"]
-    if set(blocks) != {"X", "H", "E", "W"} or blocks["H"] != ["housing_context_midrank"]:
-        raise ValueError("Require the frozen X/H/E/W blocks and single H feature")
-    union = [feature for block in blocks.values() for feature in block]
-    if len(union) != len(set(union)):
-        raise ValueError("Feature blocks must be disjoint; include H exactly once")
-    for name, expected in PRIMARY_BLOCKS.items():
-        if models[name] != {"definition_id": DEFINITION_VERSION + ":" + name, "blocks": expected}:
-            raise ValueError("Primary model definition/version mismatch: " + name)
-    if design["automatic_no_housing_fallback"] or not design["housing"]["required"]:
-        raise ValueError("Housing is mandatory; a no-H fallback is forbidden")
-    if design["cities"]["missing_qualified_housing_action"] != "BLOCKED":
-        raise ValueError("Unqualified H must block the city")
-    if design["housing"]["formula"] != "H=(midrank-0.5)/G_ref" or design["housing"]["rerank_with_airbnb_sample_or_folds"]:
-        raise ValueError("H requires the frozen external-area midrank")
-    sensitivity = design["no_income_sensitivity"]
-    if not sensitivity["mandatory"] or not sensitivity["retain_housing"] or sensitivity["omit_only"] != ["income_100k_dkk"]:
-        raise ValueError("Mandatory no-income sensitivity omits only income, retaining H")
-    if design["incremental_benefit_of_housing_estimand_authorized"]:
-        raise ValueError("Adding-H estimand needs a separately authorized no-H sensitivity")
+    if (design.get('version') != 'research_design_v4'
+            or design.get('design_id') != DEFINITION_VERSION
+            or design.get('definition_version') != DEFINITION_VERSION):
+        raise ValueError('Explicit accessibility-only design required; historical definitions are immutable')
+    if design.get('blocks') != INHERITED_BLOCKS:
+        raise ValueError('Require exact inherited X/E/W membership; no residential-price/rent proxies or silent control changes')
+    expected = {name: {'definition_id': DEFINITION_VERSION + ':' + name, 'blocks': blocks}
+                for name, blocks in PRIMARY_BLOCKS.items()}
+    if design.get('primary_models') != expected:
+        raise ValueError('Exactly the four version-qualified accessibility-only models are primary')
+    if any(key in design for key in ('housing', 'automatic_no_housing_fallback',
+                                    'incremental_benefit_of_housing_estimand_authorized')):
+        raise ValueError('Housing policy is historical, not an active dependency/variant')
+    sensitivity = design['no_income_sensitivity']
+    if (not sensitivity['mandatory'] or sensitivity['omit_only'] != ['income_100k_dkk']
+            or 'retain_housing' in sensitivity
+            or sensitivity['definition_ids'] != {name: DEFINITION_VERSION + ':no_income:' + name for name in PRIMARY_BLOCKS}):
+        raise ValueError('Mandatory no-income omits only income from the revised primary design')
+    if 'housing_missingness' in design['samples'] or 'missing_qualified_housing_action' in design['cities']:
+        raise ValueError('Retired housing sample/city gates cannot be active')
 
 
-def load_design(path: Path = CONFIG_PATH) -> dict:
-    design = json.loads(path.read_text(encoding="utf-8"))
+def load_design(path: Path = CONFIG_PATH, *, design_id: str = DEFINITION_VERSION) -> dict:
+    if design_id == HISTORICAL_VERSION:
+        from src.v4.historical_specification import load_design as historical_load
+        return historical_load() if path == CONFIG_PATH else historical_load(path)
+    if design_id != DEFINITION_VERSION:
+        raise ValueError('Unknown scientific design')
+    design = json.loads(path.read_text(encoding='utf-8'))
     validate_definition(design)
     return design
 
 
-def model_definition(name: str, *, scenario: str = "primary", design: dict | None = None) -> dict:
-    """Return versioned feature metadata only; never fit or provision anything."""
-    design = load_design() if design is None else design
+def model_definition(name: str, *, scenario: str = 'primary', design: dict | None = None,
+                     design_id: str = DEFINITION_VERSION) -> dict:
+    """Feature metadata only. Design, model and sensitivity remain separate."""
+    if design_id == HISTORICAL_VERSION:
+        from src.v4.historical_specification import model_definition as historical_model
+        result = historical_model(name, scenario=scenario, design=design)
+        return {**result, 'design_id': design_id}
+    if design_id != DEFINITION_VERSION:
+        raise ValueError('Unknown scientific design')
+    design = load_design(design_id=design_id) if design is None else design
     validate_definition(design)
-    if name not in PRIMARY_BLOCKS or scenario not in {"primary", "no_income", "log_native_housing"}:
-        raise ValueError("Unknown V4 model or prespecified sensitivity")
-    model = design["primary_models"][name]
-    features = [feature for block in model["blocks"] for feature in design["blocks"][block]]
-    identity = model["definition_id"]
-    if scenario == "no_income":
-        features.remove("income_100k_dkk")
-        identity = design["no_income_sensitivity"]["definition_ids"][name]
-    elif scenario == "log_native_housing":
-        features[features.index("housing_context_midrank")] = "log_housing_price_m2_native"
-        identity = DEFINITION_VERSION + ":log_native_housing:" + name
-    return {"definition_id": identity, "model": name, "scenario": scenario, "features": tuple(features)}
+    if name not in PRIMARY_BLOCKS or scenario not in SCENARIOS:
+        raise ValueError('Unknown model/sensitivity; no no_housing or residential-price variant')
+    model = design['primary_models'][name]
+    features = [f for block in model['blocks'] for f in design['blocks'][block]]
+    identity = model['definition_id']
+    if scenario == 'no_income':
+        features.remove('income_100k_dkk')
+        identity = design['no_income_sensitivity']['definition_ids'][name]
+    return {'design_id': DEFINITION_VERSION, 'definition_id': identity, 'model': name,
+            'scenario': scenario, 'features': tuple(features)}

@@ -14,7 +14,7 @@ from src.ingestion.common import PROJECT_ROOT, sha256_file
 from src.pipeline.output_paths import output_file
 from src.pipeline.protocol import canonical_hash
 from src.v4.cities import CITIES, VERSION, load_cities
-from src.v4.specification import load_design
+from src.v4.specification import DEFINITIONS, DEFINITION_VERSION, HISTORICAL_VERSION, load_design
 
 
 def token(value: str) -> str:
@@ -30,9 +30,13 @@ class Scope:
     snapshot: str
     run_id: str
     purpose: str = 'research'
+    # Existing acquisition adapters remain in their original identity. The active
+    # analytical CLI explicitly selects the revised design.
+    design_id: str = HISTORICAL_VERSION
 
     def __post_init__(self):
-        if self.version != VERSION or self.city not in CITIES or self.purpose not in {'research', 'synthetic'}:
+        if (self.version != VERSION or self.city not in CITIES or self.purpose not in {'research', 'synthetic'}
+                or self.design_id not in DEFINITIONS):
             raise ValueError('Explicit V4 version, city and purpose required')
         if date.fromisoformat(self.snapshot).isoformat() != self.snapshot or not self.snapshot.startswith('2026-06-'):
             raise ValueError('Matched June 2026 snapshot required')
@@ -42,8 +46,13 @@ class Scope:
         datetime.strptime(self.run_id.rsplit('_', 1)[-1], '%Y%m%dT%H%M%SZ')
 
     def params(self) -> dict:
-        return {'version': self.version, 'city': self.city, 'snapshot': self.snapshot,
-                'run_id': self.run_id, 'purpose': self.purpose}
+        params = {'version': self.version, 'city': self.city, 'snapshot': self.snapshot,
+                  'run_id': self.run_id, 'purpose': self.purpose}
+        # Do not change frozen acquisition/export envelopes simply because a new
+        # analytical design now exists. New science carries its explicit design.
+        if self.design_id != HISTORICAL_VERSION:
+            params['design_id'] = self.design_id
+        return params
 
 
 class Paths:
@@ -64,17 +73,23 @@ class Paths:
 
     def intermediate(self, name: str) -> Path:
         s = self.scope
-        return self._path('data', 'interim', 'v4', s.version, s.run_id, s.city, s.snapshot, token(name))
+        return self._path('data', 'interim', 'v4', *self._output_identity(), token(name))
+
+    def _output_identity(self) -> tuple[str, ...]:
+        s = self.scope
+        # Preserve historical source/report locations. New science gets new paths.
+        design = (s.design_id,) if s.design_id != HISTORICAL_VERSION else ()
+        return (s.version, *design, s.run_id, s.city, s.snapshot)
 
     def output(self, kind: str, family: str, name: str) -> Path:
         # Reuse V3 semantic validation, but never its unscoped destination.
         output_file(kind, family, name)
         s = self.scope
-        return self._path('outputs', 'v4', s.version, s.run_id, s.city, s.snapshot, kind, family, name)
+        return self._path('outputs', 'v4', *self._output_identity(), kind, family, name)
 
     def report(self, name: str) -> Path:
         s = self.scope
-        return self._path('reports', 'v4', s.version, s.run_id, s.city, s.snapshot, token(name))
+        return self._path('reports', 'v4', *self._output_identity(), token(name))
 
     def manifest(self, digest: str) -> Path:
         s = self.scope
@@ -86,8 +101,11 @@ class Paths:
         if set(dependencies) != required or any(value is None for value in dependencies.values()):
             raise ValueError('Complete routing/cache dependency set required')
         s = self.scope
-        digest = canonical_hash({'version': s.version, 'city': s.city, 'snapshot': s.snapshot,
-                                 'purpose': s.purpose, 'dependencies': dependencies})
+        identity = {'version': s.version, 'city': s.city, 'snapshot': s.snapshot,
+                    'purpose': s.purpose, 'dependencies': dependencies}
+        if s.design_id != HISTORICAL_VERSION:
+            identity['design_id'] = s.design_id
+        digest = canonical_hash(identity)
         return self._path('data', 'interim', 'v4', s.version, s.city, s.snapshot, 'route_cache', digest + '.json')
 
 
@@ -122,7 +140,8 @@ def freeze_sources(paths: Paths, records: list[dict]) -> tuple[Path, dict]:
 
 
 def scientific_dependencies(city: str, *, root: Path = PROJECT_ROOT, design: dict | None = None,
-                            cities: dict | None = None, source_manifests: dict | None = None) -> dict:
+                            cities: dict | None = None, source_manifests: dict | None = None,
+                            design_id: str = DEFINITION_VERSION) -> dict:
     """Separate scientific dependencies from reporting, Git metadata and Markdown.
 
     Future scientific modules under src/v4 are included automatically. New shared
@@ -131,23 +150,33 @@ def scientific_dependencies(city: str, *, root: Path = PROJECT_ROOT, design: dic
     """
     if city not in CITIES:
         raise ValueError('Authorized city required')
-    design = dict(load_design() if design is None else design)
+    design = dict(load_design(design_id=design_id) if design is None else design)
+    if design_id not in DEFINITIONS or design['definition_version'] != design_id:
+        raise ValueError('Scientific design identity mismatch')
     for key in ('active_documents', 'document_index', 'status', 'provenance', 'identities', 'execution_authorized_by_this_configuration', 'cities'):
         design.pop(key, None)
-    cities = load_cities() if cities is None else cities
+    cities = load_cities(design_id=design_id) if cities is None else cities
     shared = ['src/ingestion/common.py', 'src/ingestion/price.py', 'src/pipeline/build_airbnb_sample.py', 'src/pipeline/output_paths.py',
-              'src/pipeline/protocol.py', 'src/pipeline/storage.py', 'requirements.txt']
+              'src/pipeline/protocol.py', 'src/pipeline/storage.py', 'src/pipeline/model_specification.py', 'requirements.txt']
     files = [root / path for path in shared]
-    files += [p for p in (root / 'src/v4').glob('*.py') if p.name not in {'cli.py', 'reporting.py'}]
-    files += list((root / 'sql/v4_migrations').glob('*.sql'))
+    excluded = {'cli.py', 'reporting.py'}
+    if design_id == DEFINITION_VERSION:
+        excluded |= {'housing.py', 'historical_specification.py'}
+    files += [p for p in (root / 'src/v4').glob('*.py') if p.name not in excluded]
+    files += [p for p in (root / 'sql/v4_migrations').glob('*.sql')
+              if design_id == HISTORICAL_VERSION or p.name != '025_v4_housing_source_audit.sql']
     source_policy = json.loads((root / 'config/v4/listing_sources.json').read_text())
     source_policy = {**{k: v for k, v in source_policy.items() if k != 'cities'},
                      'city': source_policy['cities'][city]}
+    if design_id == DEFINITION_VERSION:
+        reuse = json.loads((root / 'config/v4/listing_reuse_accessibility_only.json').read_text())
+        source_policy['approved_reuse'] = {'design_id': reuse['design_id'], 'source_version': reuse['source_version'],
+                                          'selection': reuse['selection'], 'city': reuse['cities'][city]}
     amendment_path = root / 'config/v4/stockholm_boundary_amendment.json'
     if city == 'stockholm' and amendment_path.is_file():
         source_policy['boundary_amendment'] = json.loads(amendment_path.read_text())
     housing_policy_path = root / 'config/v4/housing_sources.json'
-    if housing_policy_path.is_file():
+    if design_id == HISTORICAL_VERSION and housing_policy_path.is_file():
         housing_policy = json.loads(housing_policy_path.read_text())
         source_policy['housing_sources'] = {
             'definition_version': housing_policy['definition_version'],

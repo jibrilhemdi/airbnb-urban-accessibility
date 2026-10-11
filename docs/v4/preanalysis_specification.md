@@ -1,25 +1,19 @@
-> **Live A01 reconciliation — 11 October 2026.** Active design:
-> `v4_accessibility_only_20261011`. This Markdown is authoritative for the new
-> scientific scope. A01 changes documentation only; the executable registry,
-> configuration and applied SQL still encode the superseded housing-inclusive
-> design until separately requested A02. No routes, assignments, model samples
-> or empirical fits were executed. V3 results and housing feasibility were
-> already known; supervisor approval is not recorded.
+> **Live A02 reconciliation — 11 October 2026.** Active design:
+> `v4_accessibility_only_20261011`. The canonical executable registry and
+> separate new-design configuration now implement X/E/W without housing.
+> Historical configurations, source ledgers and receipts remain immutable.
+> Full empirical readiness remains BLOCKED by A03–A07 and genuine city inputs;
+> no acquisition, routes, sample/fold creation or fitting occurred in A02.
+> V3 results and housing feasibility were already known; supervisor approval
+> is not recorded. [A02 implementation audit](pipeline_scope_audit_A02_20261011.md)
+> records the actual implementation and tests; the [A01 audit](current_state_audit_20261011.md)
+> retains its original checkpoint evidence and input-version discrepancies.
 >
-> Live source evidence, preservation hashes and remaining dependencies are in
-> [current_state_audit_20261011.md](current_state_audit_20261011.md). Supplied
-> literature verification is attributed to the bundle; this integration did not
-> re-audit unavailable original literature PDFs. The exact v3 results ZIP exists
-> locally and matches the supplied hash. The supplied listing-audit hash differs
-> from the current preserved audit; live selected SQL counts agree with the
-> acquired-count tables below. These counts are not final research samples.
->
-> **Baseline reconciliation pending A02:** actual frozen v3 code includes
-> categorical `property_type`, while the supplied revision excludes it. The
-> numeric/amenity/context controls below remain inherited. This discrepancy
-> must be explicitly resolved before a new executable feature whitelist or fit;
-> A01 neither silently deletes the inherited control nor certifies a final
-> categorical membership decision. See [model_contract.md](model_contract.md).
+> **Baseline reconciliation resolved under A02:** the instruction to remove
+> only housing-derived active dependencies retains categorical `property_type`
+> from the actual frozen v3 baseline, alongside the 17 numeric/amenity/context
+> controls. This explicitly supersedes the supplied revision's prose exclusion;
+> the supplied bundle itself remains unchanged. See [model_contract.md](model_contract.md).
 
 # Revised pre-analysis specification — accessibility-only v4
 
@@ -35,11 +29,15 @@ S_pred is the common eligible, geographically assigned, accessibility-supported 
 
 ## 2. Baseline and features
 
-X: accommodates; bedrooms; effective bathrooms; log1p minimum nights; superhost; log1p host listings; Wi-Fi; dishwasher; washer; dryer; workspace; free parking; private balcony; self check-in; log population density; qualified income; central civic-anchor distance.
+X: inherited categorical `property_type`; accommodates; bedrooms; effective bathrooms; log1p minimum nights; superhost; log1p host listings; Wi-Fi; dishwasher; washer; dryer; workspace; free parking; private balcony; self check-in; log population density; qualified income; central civic-anchor distance.
 
 Do not include primary raw coordinates, area/municipality flags, outcome-derived aggregates, reviews/reputation, availability, revenue, residential prices or housing proxies. Exact parsers come from v3. Retain accepted Copenhagen income (2024 mean of ten equivalised-disposable-income decile means /100000 DKK) and documented source qualifications. New-city income requires a concept/period/geography decision. Common no-income primary fallback requires explicit pre-fit approval; mandatory no-income sensitivity otherwise omits income only on matched rows/folds.
 
 E: nearest eligible rail and consolidated bus distances in km; log1p food/social and culture/tourism counts within rounded 833 m. W: nearest reachable rail and bus minutes; matching opportunity counts within 10 min. Same candidate destination universe within city; nearest destination can differ by representation. Speed exactly 5 km/h; both endpoint connectors; pedestrian topology. City-appropriate metric CRS, common defensible OSM policy, audited extraction/coverage. Starting buffer >=2 km, expand when required. Preserve inherited bus consolidation (3 m compatible same-representation, 0.5 m unnamed, mutually nearest compatible cross-representation pairs <=25 m).
+
+RQ1 concerns representation differences, RQ2 paired predictive information,
+and RQ3 cross-city/geographic-versus-random validation stability. Housing RQ4
+is withdrawn.
 
 ## 3. Four models and contrasts
 
@@ -97,4 +95,4 @@ log-native-H sensitivities and H-subgroup analyses are
 NOT_REQUIRED_SCOPE_AMENDED for this design. They remain historically recorded,
 not retrospectively passed. RQ4 is withdrawn. Income is not residential price.
 The three-city scientific design is adopted, but execution is BLOCKED pending
-A02–A07 and genuine per-city inputs. A01 authorizes no later A-step.
+A03–A07 and genuine per-city inputs. A02 scope checks do not authorize later A-steps.

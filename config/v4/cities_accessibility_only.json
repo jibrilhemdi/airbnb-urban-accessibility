@@ -1,0 +1,405 @@
+{
+  "version": "research_design_v4",
+  "city_definition_version": "v4_cities_accessibility_only_20261011",
+  "target_snapshot_month": "2026-06",
+  "evidence_note": "Inherited verified non-housing fields; no new geographic/context qualification in A02. Stockholm operational mask retained; Oslo boundary vintage and new-city context remain unresolved.",
+  "cities": {
+    "copenhagen_frederiksberg": {
+      "study_boundary": {
+        "status": "verified_local_evidence",
+        "value": [
+          {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_municipality.geojson",
+            "source_url": "https://api.dataforsyningen.dk/kommuner/0101?format=geojson",
+            "source_date": "2026-03-27",
+            "acquired_at_utc": "2026-09-29T09:09:47.510559+00:00",
+            "source_crs": "EPSG:4326 requested from service; GeoJSON longitude/latitude",
+            "geographic_extent": "Municipality 0101",
+            "sha256": "55967e4b499f8273ea3fcbc860bb4d91e2161292b2ad9d00c6696f06508032a1",
+            "size_bytes": 1427359
+          },
+          {
+            "path": "data/raw/official_boundaries/2026-09-29/frederiksberg_municipality.geojson",
+            "source_url": "https://api.dataforsyningen.dk/kommuner/0147?format=geojson",
+            "source_date": "2024-01-16",
+            "acquired_at_utc": "2026-09-29T09:09:47.510559+00:00",
+            "source_crs": "EPSG:4326 requested from service; GeoJSON longitude/latitude",
+            "geographic_extent": "Municipality 0147",
+            "sha256": "1d8bf7fe945e937e3eda61e3039e8265404dd93f4c256283bf409cf0865d6031",
+            "size_bytes": 85131
+          }
+        ],
+        "evidence": [
+          {
+            "path": "data/raw/official_boundaries/2026-09-29/acquisition_metadata.json",
+            "sha256": "986e35f294bed4b5039778532ef475a256bc65ac495d691327155bb0251356ba"
+          }
+        ]
+      },
+      "snapshot_date": {
+        "status": "verified_local_evidence",
+        "value": "2026-06-30",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/copenhagen_frederiksberg/2026-06-30/e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13.json",
+            "sha256": "a7634e890d749db7179ce47dd53c7b8a8a353410197f3beb4da1219c55fd44dd"
+          }
+        ]
+      },
+      "currency": {
+        "status": "verified_local_evidence",
+        "value": "DKK",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/copenhagen_frederiksberg/2026-06-30/e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13.json",
+            "sha256": "a7634e890d749db7179ce47dd53c7b8a8a353410197f3beb4da1219c55fd44dd"
+          }
+        ]
+      },
+      "metric_crs": {
+        "status": "verified_local_evidence",
+        "value": "EPSG:25832",
+        "evidence": [
+          {
+            "path": "config/project.yml",
+            "sha256": "8a4e1a5cf2a49076bac2eebae18cf26a3e88894c14d3afee43c53d9fe0f1a5a2"
+          }
+        ]
+      },
+      "central_anchor": {
+        "status": "verified_local_evidence",
+        "value": {
+          "id": "city_hall_square",
+          "longitude": 12.568809986,
+          "latitude": 55.675902629,
+          "crs": "EPSG:4326",
+          "source_url": "https://www.visitcopenhagen.nl/kobenhavn/planlaeg-din-tur/city-hall-square-gdk414247",
+          "source_accessed_on": "2026-09-29"
+        },
+        "evidence": [
+          {
+            "path": "src/pipeline/build_spatial_features.py",
+            "sha256": "cd799cc51eebd587a0f244246a2fd5414454d63a5aca3d298af61e66e5808c3a"
+          }
+        ]
+      },
+      "population_reference_period": {
+        "status": "verified_local_evidence",
+        "value": "2026Q3",
+        "evidence": [
+          {
+            "path": "src/pipeline/build_area_context.py",
+            "sha256": "9a2f65dce7b8d7537c7dd32c5f6e28ac2fafd9811c94c581d8c9fbab3de1f8cf"
+          }
+        ]
+      },
+      "income_reference_period": {
+        "status": "verified_local_evidence",
+        "value": "2024",
+        "evidence": [
+          {
+            "path": "src/pipeline/build_area_context.py",
+            "sha256": "9a2f65dce7b8d7537c7dd32c5f6e28ac2fafd9811c94c581d8c9fbab3de1f8cf"
+          },
+          {
+            "path": "config/qualified_income_decision.json",
+            "sha256": "355ab55de7e9cdf00995979806ae818093b599ff417ee805b2ea3fb12c5cc9e9"
+          }
+        ]
+      },
+      "context_mapping": {
+        "status": "verified_local_evidence",
+        "value": [
+          {
+            "source_area_id": "cph_01",
+            "income_source_id": "KKIND5",
+            "income_geography": "1001"
+          },
+          {
+            "source_area_id": "cph_02",
+            "income_source_id": "KKIND5",
+            "income_geography": "1002"
+          },
+          {
+            "source_area_id": "cph_03",
+            "income_source_id": "KKIND5",
+            "income_geography": "1003"
+          },
+          {
+            "source_area_id": "cph_04",
+            "income_source_id": "KKIND5",
+            "income_geography": "1004"
+          },
+          {
+            "source_area_id": "cph_05",
+            "income_source_id": "KKIND5",
+            "income_geography": "1005"
+          },
+          {
+            "source_area_id": "cph_06",
+            "income_source_id": "KKIND5",
+            "income_geography": "1006"
+          },
+          {
+            "source_area_id": "cph_07",
+            "income_source_id": "KKIND5",
+            "income_geography": "1007"
+          },
+          {
+            "source_area_id": "cph_08",
+            "income_source_id": "KKIND5",
+            "income_geography": "1008"
+          },
+          {
+            "source_area_id": "cph_09",
+            "income_source_id": "KKIND5",
+            "income_geography": "1009"
+          },
+          {
+            "source_area_id": "cph_10",
+            "income_source_id": "KKIND5",
+            "income_geography": "1010"
+          },
+          {
+            "source_area_id": "frederiksberg_0147",
+            "income_source_id": "IFOR35",
+            "income_geography": "147"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "config/qualified_income_decision.json",
+            "sha256": "355ab55de7e9cdf00995979806ae818093b599ff417ee805b2ea3fb12c5cc9e9"
+          },
+          {
+            "path": "src/pipeline/build_area_context.py",
+            "sha256": "9a2f65dce7b8d7537c7dd32c5f6e28ac2fafd9811c94c581d8c9fbab3de1f8cf"
+          }
+        ]
+      },
+      "source_identifiers": {
+        "status": "verified_local_evidence",
+        "value": {
+          "airbnb": "inside_airbnb:copenhagen:2026-06-30",
+          "boundary": [
+            "dataforsyningen:0101",
+            "dataforsyningen:0147",
+            "k101:bydel"
+          ],
+          "population": [
+            "KKBEF1",
+            "FOLK1A"
+          ],
+          "income": [
+            "KKIND5",
+            "IFOR35"
+          ]
+        },
+        "evidence": [
+          {
+            "path": "config/project.yml",
+            "sha256": "8a4e1a5cf2a49076bac2eebae18cf26a3e88894c14d3afee43c53d9fe0f1a5a2"
+          },
+          {
+            "path": "config/qualified_income_decision.json",
+            "sha256": "355ab55de7e9cdf00995979806ae818093b599ff417ee805b2ea3fb12c5cc9e9"
+          }
+        ]
+      },
+      "official_analysis_area_sources": {
+        "status": "inherited_not_v4_qualified",
+        "value": [
+          {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "source_url": "https://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:bydel&outputFormat=json&SRSNAME=EPSG:4326",
+            "source_date": null,
+            "acquired_at_utc": "2026-09-29T09:09:47.510559+00:00",
+            "source_crs": "EPSG:4326 requested from service; GeoJSON longitude/latitude",
+            "geographic_extent": "Copenhagen districts",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3",
+            "size_bytes": 250640
+          }
+        ],
+        "evidence": [
+          {
+            "path": "data/raw/official_boundaries/2026-09-29/acquisition_metadata.json",
+            "sha256": "986e35f294bed4b5039778532ef475a256bc65ac495d691327155bb0251356ba"
+          }
+        ]
+      }
+    },
+    "oslo": {
+      "study_boundary": {
+        "status": "unresolved",
+        "value": [
+          {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/official_boundary/boundary.json",
+            "sha256": "864c039bfaf1890460f8859865a489009a4ccbe64bbcd7c962abb59735f880fb",
+            "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/0301/omrade?utkoordsys=4326",
+            "source_crs": "EPSG:4326",
+            "source_date": null,
+            "acquired_at_utc": "2026-10-11T14:16:21+00:00",
+            "qualification": "Current official 0301 municipal geometry acquired; geometry vintage unresolved"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/oslo/2026-06-30/c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8.json",
+            "sha256": "5c232251b16e34fe602404de8b24c3b9cca19606f4c714f1ce40a0302b3b22b9"
+          }
+        ]
+      },
+      "snapshot_date": {
+        "status": "verified_local_evidence",
+        "value": "2026-06-30",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/oslo/2026-06-30/c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8.json",
+            "sha256": "5c232251b16e34fe602404de8b24c3b9cca19606f4c714f1ce40a0302b3b22b9"
+          }
+        ]
+      },
+      "currency": {
+        "status": "verified_local_evidence",
+        "value": "NOK",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/oslo/2026-06-30/c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8.json",
+            "sha256": "5c232251b16e34fe602404de8b24c3b9cca19606f4c714f1ce40a0302b3b22b9"
+          }
+        ]
+      },
+      "metric_crs": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "central_anchor": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "population_reference_period": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "income_reference_period": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "context_mapping": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "source_identifiers": {
+        "status": "unresolved",
+        "value": {
+          "airbnb": "inside_airbnb:oslo:2026-06-30",
+          "boundary": "kartverket:0301",
+          "population": null,
+          "income": null
+        },
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/oslo/2026-06-30/c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8.json",
+            "sha256": "5c232251b16e34fe602404de8b24c3b9cca19606f4c714f1ce40a0302b3b22b9"
+          }
+        ]
+      }
+    },
+    "stockholm": {
+      "study_boundary": {
+        "status": "verified_local_evidence",
+        "value": [
+          {
+            "municipality": "0180",
+            "path": "data/interim/v4/research_design_v4/research_v4_stockholm_20261011T151637Z/stockholm/2026-06-30/study_boundary.geojson",
+            "sha256": "61723f07fc6f8e730d1c8f578e5e1f779a2f450ea09cabbdf5523421305a01fa",
+            "source_url": "https://geodata.scb.se/geoserver/stat/wfs?REQUEST=GetFeature&TYPENAMES=stat%3ARegSO_2025&outputFormat=geopackage&service=WFS&version=1.1.0",
+            "source_crs": "EPSG:4326",
+            "native_crs": "EPSG:3006",
+            "source_date": "2025-01-01",
+            "acquired_at_utc": "2026-10-11T15:03:48+00:00",
+            "qualification": "SCB-derived RegSO 2025 operational geometry; RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT; not certified Lantm\u00e4teriet June 2026 linework",
+            "definition_version": "v4_stockholm_regso_boundary_20261011",
+            "manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172.json",
+            "sha256": "ba24796f7f5e816d6d1736dc6df3d378ffae4622b4d2837a95f619f05e7fae14"
+          }
+        ]
+      },
+      "snapshot_date": {
+        "status": "verified_local_evidence",
+        "value": "2026-06-30",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
+            "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+          }
+        ]
+      },
+      "currency": {
+        "status": "verified_local_evidence",
+        "value": "SEK",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
+            "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+          }
+        ]
+      },
+      "metric_crs": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "central_anchor": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "population_reference_period": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "income_reference_period": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "context_mapping": {
+        "status": "unresolved",
+        "value": null,
+        "evidence": []
+      },
+      "source_identifiers": {
+        "status": "unresolved",
+        "value": {
+          "airbnb": "inside_airbnb:stockholm:2026-06-30",
+          "boundary": "scb:RegSO_2025:0180:2025_v2",
+          "population": null,
+          "income": null
+        },
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
+            "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+          },
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172.json",
+            "sha256": "ba24796f7f5e816d6d1736dc6df3d378ffae4622b4d2837a95f619f05e7fae14"
+          }
+        ]
+      }
+    }
+  },
+  "design_id": "v4_accessibility_only_20261011"
+}

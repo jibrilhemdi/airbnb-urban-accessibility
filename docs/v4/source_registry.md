@@ -15,7 +15,7 @@ are distinct from final sample/model qualification.
 | Population/density | Copenhagen 2026Q3/gross-area context inherited | Required A04; independent new-city sources/geography/denominators pending |
 | Income | Accepted KKIND5/nominal IFOR35 2024 construction and no-income robustness | Retain qualification/limitations; new-city income and frozen comparative mode required A04 |
 | Centrality/metric CRS | Copenhagen public City Hall/EPSG:25832 inherited; Stockholm EPSG:3006 qualified for boundary QA | New-city general metric CRS/public anchors need A03/A04 evidence; no default projection/mapping |
-| Network/destinations | Frozen v3 taxonomy, consolidation, connectors and source caches | Matching city sources/extraction/coverage/reuse QA pending A05; no routes built in A01 |
+| Network/destinations | Frozen v3 taxonomy, consolidation, connectors and source caches | Matching city sources/extraction/coverage/reuse QA pending A05; no routes built in A01/A02 |
 | Samples/folds/candidates | Exact v3 30-candidate list available; inherited protocol | New-city common samples/folds and selected references pending A06/A07 |
 | Housing/property-price/rent sources | All Step 5 receipts, SQL records, failed/preliminary audits preserved | NOT_REQUIRED_SCOPE_AMENDED; historically BLOCKED final qualification remains unchanged |
 | Housing access requests | Existing precise drafts/manual-import requirements | NOT_REQUIRED_SCOPE_AMENDED; remain unsent, not to be pursued |
@@ -42,3 +42,9 @@ ignored. New unknowns remain unresolved. The supplied literature matrix and some
 external draft files are not present in the live repository; their imported
 provenance is not claimed newly verified. See the [document index](document_index.md)
 and [active model contract](model_contract.md) for current authority and A02 limits.
+
+A02 integrates the exact listing-manifest selections through read-only reuse.
+See [the A02 pipeline audit](pipeline_scope_audit_A02_20261011.md) for applied
+migration 026, checks and genuine non-housing preflight blocks. No source
+qualification, new acquisition, housing-source status or original receipt changes
+as a consequence of the design identity switch.

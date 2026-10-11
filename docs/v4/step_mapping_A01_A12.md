@@ -21,7 +21,7 @@ sequencing material, not a request to execute all twelve.
 | New step | Work | Current state / prerequisite |
 | --- | --- | --- |
 | A01 | Adopt scope, audit dependencies, preserve history | This documentation checkpoint; runtime PARTIAL/BLOCKED |
-| A02 | Canonical X/E/W registry; remove active H dependencies; versioned persistence | NOT_EXECUTED; resolve categorical-baseline discrepancy; tests and append-only changes as needed |
+| A02 | Canonical X/E/W registry; remove active H dependencies; versioned persistence | IMPLEMENTED_SCOPE_CHECKPOINT; inherited categorical retained; exact registry, manifest reuse and migration 026; empirical readiness BLOCKED |
 | A03 | Municipal/analysis geography and Oslo vintage | NOT_EXECUTED; genuine vintage/area/CRS gates |
 | A04 | Population, qualified income, centrality | NOT_EXECUTED; freeze income mode explicitly |
 | A05 | Reuse/build matched E/W | NOT_EXECUTED; sources/taxonomy/route/support QA |

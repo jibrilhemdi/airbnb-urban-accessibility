@@ -82,14 +82,24 @@ def begin_run(conn, scope: Scope, dependencies: dict, *, reporting: dict | None 
     verify_database(conn, synthetic=scope.purpose == 'synthetic')
     if scope.purpose == 'research':
         from src.v4.cities import city_blockers, load_cities
-        blockers = city_blockers(scope.version, scope.city)
-        frozen_snapshot = load_cities()['cities'][scope.city]['snapshot_date']['value']
+        blockers = city_blockers(scope.version, scope.city, design_id=scope.design_id)
+        frozen_snapshot = load_cities(design_id=scope.design_id)['cities'][scope.city]['snapshot_date']['value']
         if blockers or scope.snapshot != frozen_snapshot or not dependencies.get('source_manifests'):
-            raise RuntimeError('BLOCKED: qualified city/H and source freeze required before creating a research run')
+            raise RuntimeError('BLOCKED: qualified city and source freeze required before creating a research run')
+        if scope.design_id == DEFINITION_VERSION:
+            from src.v4.runtime import preflight
+            # Scope removal is not sample/fold/estimator qualification. Until A07
+            # implements those scientific stages, no production run may begin.
+            digest = dependencies.get('listing_source_policy', {}).get('approved_reuse', {}).get('city', {}).get('manifest_sha256')
+            if (digest not in dependencies['source_manifests']
+                    or preflight(scope, source_manifest=digest)['status'] != 'READY'):
+                raise RuntimeError('BLOCKED: full new-design scientific preflight required before creating a research run')
+    if scope.design_id == DEFINITION_VERSION and dependencies.get('design', {}).get('design_id') != scope.design_id:
+        raise ValueError('Scientific dependencies must match the explicit new design')
     conn.execute(text('INSERT INTO v4_analysis.runs '
                       '(version,run_id,city,snapshot,purpose,definition_version,scientific_sha256,scientific_dependencies,reporting_dependencies) '
                       'VALUES (:version,:run_id,:city,:snapshot,:purpose,:definition,:digest,CAST(:science AS jsonb),CAST(:reporting AS jsonb))'),
-                 {**scope.params(), 'definition': DEFINITION_VERSION, 'digest': canonical_hash(dependencies),
+                 {**scope.params(), 'definition': scope.design_id, 'digest': canonical_hash(dependencies),
                   'science': json.dumps(dependencies, allow_nan=False), 'reporting': json.dumps(reporting or {})})
 
 
@@ -120,9 +130,10 @@ def register_manifest(conn, scope: Scope, manifest: dict) -> str:
 
 def verify_record_scope(record: dict, scope: Scope) -> None:
     aliases = {'version': 'version', 'city': 'city', 'city_id': 'city',
-               'snapshot': 'snapshot', 'snapshot_date': 'snapshot', 'run_id': 'run_id'}
+               'snapshot': 'snapshot', 'snapshot_date': 'snapshot', 'run_id': 'run_id',
+               'design_id': 'design_id', 'purpose': 'purpose'}
     for field, target in aliases.items():
-        if field in record and record[field] != scope.params()[target]:
+        if field in record and record[field] != getattr(scope, target):
             raise ValueError('Record identity conflicts with explicit V4 scope: ' + field)
 
 
@@ -142,24 +153,34 @@ def observations(conn, scope: Scope, manifest_sha256: str, source_id: str, frame
                       'area': record.get('source_area_id'), 'digest': manifest_sha256, 'record': json.dumps(record, allow_nan=False)})
 
 
-def persist_artifact(conn, scope: Scope, model: str, family: str, artifact: str, frame, *, scenario: str = 'primary') -> None:
+def persist_artifact(conn, scope: Scope, model: str, family: str, artifact: str, frame, *, scenario: str = 'primary',
+                     engine: str | None = None, validation: str | None = None) -> None:
     verify_database(conn, synthetic=scope.purpose == 'synthetic')
     from src.pipeline.output_paths import FAMILIES
     from src.v4.identity import token
     if family not in FAMILIES:
         raise ValueError('Unknown semantic artifact family')
     token(artifact)
-    definition = model_definition(model, scenario=scenario)['definition_id']
+    definition = model_definition(model, scenario=scenario, design_id=scope.design_id)['definition_id']
+    if scope.design_id == DEFINITION_VERSION and (engine not in {'OLS', 'XGBoost'} or validation not in {'random', 'geographic'}):
+        raise ValueError('Explicit estimator and validation identifiers required for new-design artifacts')
     for index, record in enumerate(json_records(frame)):
         verify_record_scope(record, scope)
-        conn.execute(text('INSERT INTO v4_analysis.artifacts VALUES '
-                          '(:version,:run_id,:city,:snapshot,:definition,:family,:artifact,:key,CAST(:record AS jsonb))'),
+        dimensions = {'definition_id': definition, 'model': model, 'scenario': scenario,
+                      'sensitivity': scenario, 'engine': engine, 'validation': validation}
+        if any(key in record and record[key] != value for key, value in dimensions.items()):
+            raise ValueError('Artifact metadata conflicts with explicit model/estimator/validation/sensitivity')
+        conn.execute(text('INSERT INTO v4_analysis.artifacts '
+                          '(version,run_id,city,snapshot,definition_id,family,artifact,record_key,record,engine,validation) VALUES '
+                          '(:version,:run_id,:city,:snapshot,:definition,:family,:artifact,:key,CAST(:record AS jsonb),:engine,:validation)'),
                      {**scope.params(), 'definition': definition, 'family': family, 'artifact': artifact,
-                      'key': str(index), 'record': json.dumps(record, allow_nan=False)})
+                      'key': str(index), 'record': json.dumps(record, allow_nan=False), 'engine': engine, 'validation': validation})
 
 
 def complete_run(conn, scope: Scope) -> None:
     verify_database(conn, synthetic=scope.purpose == 'synthetic')
-    result = conn.execute(text('UPDATE v4_analysis.runs SET status=\'completed\' WHERE ' + SCOPE_SQL + " AND status='running'"), scope.params())
+    result = conn.execute(text('UPDATE v4_analysis.runs SET status=\'completed\' WHERE ' + SCOPE_SQL
+                               + " AND definition_version=:design_id AND status='running'"),
+                          {**scope.params(), 'design_id': scope.design_id})
     if result.rowcount != 1:
         raise RuntimeError('Run missing or already stopped/completed')

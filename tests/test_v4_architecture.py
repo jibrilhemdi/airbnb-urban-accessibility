@@ -14,10 +14,11 @@ from src.v4.cities import CITIES, VERSION, city_blockers, load_cities
 from src.v4.cli import main
 from src.v4.identity import Paths, Scope, cache_read, cache_write, freeze_sources, scientific_dependencies, write_once
 from src.v4.persistence import get_engine, verify_database
+from src.v4.specification import DEFINITION_VERSION, HISTORICAL_VERSION
 
 
-def scope(city='oslo', purpose='synthetic', stamp='20261011T120000Z'):
-    return Scope(VERSION, city, '2026-06-30', ('synthetic' if purpose == 'synthetic' else 'research') + '_v4_' + city + '_' + stamp, purpose)
+def scope(city='oslo', purpose='synthetic', stamp='20261011T120000Z', design_id=DEFINITION_VERSION):
+    return Scope(VERSION, city, '2026-06-30', ('synthetic' if purpose == 'synthetic' else 'research') + '_v4_' + city + '_' + stamp, purpose, design_id)
 
 
 def source_fixture(paths):
@@ -34,16 +35,19 @@ class CityConfigurationTests(unittest.TestCase):
         config = load_cities()
         self.assertEqual(set(config['cities']), set(CITIES))
         blocked = city_blockers(VERSION, 'copenhagen_frederiksberg')
-        self.assertEqual(blocked, ['housing: unresolved/unqualified'])
+        self.assertEqual(blocked, [])
+        self.assertEqual(city_blockers(VERSION, 'copenhagen_frederiksberg', design_id=HISTORICAL_VERSION),
+                         ['housing: unresolved/unqualified'])
         for city in ('oslo', 'stockholm'):
             blockers = city_blockers(VERSION, city)
-            self.assertEqual(len(blockers), 8 if city == 'oslo' else 7)
+            self.assertEqual(len(blockers), 7 if city == 'oslo' else 6)
             if city == 'oslo':
                 self.assertIn('study_boundary: unresolved/unqualified', blockers)
             else:
                 self.assertFalse(any(x.startswith('study_boundary:') for x in blockers))
                 self.assertEqual(config['cities'][city]['study_boundary']['value'][0]['source_date'],'2025-01-01')
-            self.assertIn('housing: unresolved/unqualified', blockers)
+            self.assertFalse(any('housing' in b for b in blockers))
+            self.assertIn('housing: unresolved/unqualified', city_blockers(VERSION, city, design_id=HISTORICAL_VERSION))
             self.assertEqual(config['cities'][city]['snapshot_date']['value'], '2026-06-30')
             self.assertTrue(config['cities'][city]['snapshot_date']['evidence'])
 
@@ -165,23 +169,28 @@ class ScopedFilesTests(unittest.TestCase):
         native = path.read_text()
         load_json = json.loads
         policy = load_json(native)
-        original = scientific_dependencies('oslo')
+        original = scientific_dependencies('oslo', design_id=HISTORICAL_VERSION)
         policy['cities']['stockholm']['blockers'].append('Synthetic other-city change')
         with patch('src.v4.identity.json.loads', side_effect=lambda s: deepcopy(policy) if s == native else load_json(s)):
-            self.assertEqual(original, scientific_dependencies('oslo'))
+            self.assertEqual(original, scientific_dependencies('oslo', design_id=HISTORICAL_VERSION))
         policy['cities']['oslo']['sources'][0]['sha256'] = '0' * 64
         with patch('src.v4.identity.json.loads', side_effect=lambda s: deepcopy(policy) if s == native else load_json(s)):
-            self.assertNotEqual(canonical_hash(original), canonical_hash(scientific_dependencies('oslo')))
+            self.assertNotEqual(canonical_hash(original), canonical_hash(scientific_dependencies('oslo', design_id=HISTORICAL_VERSION)))
 
     def test_shared_scientific_imports_are_declared(self):
         import ast
-        declared = set(scientific_dependencies('oslo')['code_and_environment'])
-        for path in (PROJECT_ROOT / 'src/v4').glob('*.py'):
-            if path.name in {'reporting.py', 'cli.py'}:
-                continue
-            for node in ast.walk(ast.parse(path.read_text())):
-                if isinstance(node, ast.ImportFrom) and node.module and node.module.startswith('src.') and not node.module.startswith('src.v4'):
-                    self.assertIn(node.module.replace('.', '/') + '.py', declared)
+        for design_id in (DEFINITION_VERSION, HISTORICAL_VERSION):
+            declared = set(scientific_dependencies('oslo', design_id=design_id)['code_and_environment'])
+            excluded = {'reporting.py', 'cli.py'}
+            if design_id == DEFINITION_VERSION:
+                excluded |= {'housing.py', 'historical_specification.py'}
+            for path in (PROJECT_ROOT / 'src/v4').glob('*.py'):
+                if path.name in excluded:
+                    continue
+                self.assertIn(path.relative_to(PROJECT_ROOT).as_posix(), declared)
+                for node in ast.walk(ast.parse(path.read_text())):
+                    if isinstance(node, ast.ImportFrom) and node.module and node.module.startswith('src.') and not node.module.startswith('src.v4'):
+                        self.assertIn(node.module.replace('.', '/') + '.py', declared)
 
 
 class CommandTests(unittest.TestCase):

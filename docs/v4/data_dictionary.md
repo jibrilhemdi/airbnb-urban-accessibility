@@ -3,7 +3,7 @@
 Design ID: `v4_accessibility_only_20261011`, 11 October 2026. These are scientific
 field definitions, not a claim of implemented feature tables or sample freezes.
 V3 results and housing feasibility were already observed. Supervisor approval
-is not recorded. Runtime schema/registry adaptation remains pending A02.
+is not recorded. A02 implements the canonical registry and version-isolated SQL/output identities; empirical gates remain BLOCKED.
 
 ## Outcome, keys and samples
 
@@ -32,7 +32,7 @@ training predictors fail. All four models share ordered keys, outcomes and folds
 
 | Feature | Definition |
 | --- | --- |
-| `property_type` | Actual inherited categorical control; supplied-bundle exclusion conflicts with live v3. Membership resolution pending A02, before fitting; no silent removal |
+| `property_type` | Inherited categorical control retained under A02 remove-only-housing instruction; supplied prose exclusion explicitly superseded, bundle unchanged |
 | `accommodates` | Observed capacity |
 | `bedrooms` | Source bedrooms; missingness retained until authorized training preprocessing |
 | `bathrooms_effective` | Source-derived effective bathrooms; parser provenance retained |

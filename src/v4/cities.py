@@ -7,18 +7,25 @@ from pathlib import Path
 
 from pyproj import CRS
 from src.ingestion.common import PROJECT_ROOT, sha256_file
+from src.v4.specification import DEFINITION_VERSION, HISTORICAL_VERSION
 
 VERSION = 'research_design_v4'
-CITY_VERSION = 'v4_cities_20261011'
+CITY_VERSION = 'v4_cities_accessibility_only_20261011'
 CITIES = ('copenhagen_frederiksberg', 'oslo', 'stockholm')
 FIELDS = ('study_boundary', 'snapshot_date', 'currency', 'metric_crs', 'central_anchor',
           'population_reference_period', 'income_reference_period', 'context_mapping',
-          'source_identifiers', 'housing')
+          'source_identifiers')
 
 
-def load_cities(path: Path = PROJECT_ROOT / 'config/v4/cities.json') -> dict:
+def load_cities(path: Path | None = None, *, design_id: str = DEFINITION_VERSION) -> dict:
+    if design_id not in {DEFINITION_VERSION, HISTORICAL_VERSION}:
+        raise ValueError('Explicit supported city design required')
+    historical = design_id == HISTORICAL_VERSION
+    path = path or PROJECT_ROOT / ('config/v4/cities.json' if historical else 'config/v4/cities_accessibility_only.json')
     config = json.loads(path.read_text())
-    if config.get('version') != VERSION or config.get('city_definition_version') != CITY_VERSION:
+    expected = 'v4_cities_20261011' if historical else CITY_VERSION
+    if (config.get('version') != VERSION or config.get('city_definition_version') != expected
+            or (not historical and config.get('design_id') != design_id)):
         raise ValueError('Explicit V4 city definition version required')
     if set(config['cities']) != set(CITIES):
         raise ValueError('Require exactly the authorized three cities')
@@ -26,13 +33,15 @@ def load_cities(path: Path = PROJECT_ROOT / 'config/v4/cities.json') -> dict:
 
 
 def city_blockers(version: str, city: str, *, config: dict | None = None,
-                  root: Path = PROJECT_ROOT) -> list[str]:
+                  root: Path = PROJECT_ROOT, design_id: str = DEFINITION_VERSION) -> list[str]:
     if version != VERSION or city not in CITIES:
         raise ValueError('Explicit V4 version and authorized city required')
-    config = load_cities() if config is None else config
+    if design_id not in {DEFINITION_VERSION, HISTORICAL_VERSION}:
+        raise ValueError('Explicit supported city design required')
+    config = load_cities(design_id=design_id) if config is None else config
     record = config['cities'][city]
     blockers = []
-    for field in FIELDS:
+    for field in (*FIELDS, *(['housing'] if design_id == HISTORICAL_VERSION else [])):
         node = record.get(field, {})
         value, evidence = node.get('value'), node.get('evidence', [])
         if node.get('status') != 'verified_local_evidence' or value is None or not evidence:
