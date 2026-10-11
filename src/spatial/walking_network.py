@@ -16,11 +16,11 @@ import osmium
 from pyproj import Transformer
 
 
-FILTER_VERSION = "walk_phase06_v1"
+FILTER_VERSION = "walking_network_v3"
 METRIC_EPSG = 25832
-WALK_SPEED_KMH = 4.8
+WALK_SPEED_KMH = 5.0
 METRES_PER_MINUTE = WALK_SPEED_KMH * 1000 / 60
-RADII_M = (800, 1200, 1600)
+RADII_M = tuple(METRES_PER_MINUTE * minutes for minutes in (10, 15, 20))
 LARGE_SNAP_M = 100.0
 SEVERE_SNAP_M = 250.0
 

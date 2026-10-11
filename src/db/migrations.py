@@ -15,13 +15,14 @@ LOCK_KEY = 2026092901
 
 
 def migrate(engine: Engine, migration_dir: Path = MIGRATION_DIR) -> list[str]:
-    files = sorted(migration_dir.glob("[0-9][0-9][0-9]_*.sql"))
+    legacy_dir = PROJECT_ROOT / "sql/legacy_migrations"
+    files = sorted(legacy_dir.glob("[0-9][0-9][0-9]_*.sql")) + sorted(migration_dir.glob("[0-9][0-9][0-9]_*.sql"))
     if not files or files[:3] != [
-        migration_dir / "001_enable_extensions.sql",
-        migration_dir / "002_create_schemas.sql",
-        migration_dir / "003_create_metadata_tables.sql",
+        legacy_dir / "001_enable_extensions.sql",
+        legacy_dir / "002_create_schemas.sql",
+        legacy_dir / "003_create_metadata_tables.sql",
     ]:
-        raise RuntimeError("Expected Phase 1 migrations 001, 002, and 003")
+        raise RuntimeError("Expected database setup migrations 001, 002, and 003")
     applied_now: list[str] = []
     with engine.begin() as conn:
         conn.execute(text("SELECT pg_advisory_xact_lock(:key)"), {"key": LOCK_KEY})
@@ -41,7 +42,7 @@ def migrate(engine: Engine, migration_dir: Path = MIGRATION_DIR) -> list[str]:
             applied_now.append(path.name)
             if path.name == "003_create_metadata_tables.sql":
                 for prior_name in applied_now:
-                    prior_path = migration_dir / prior_name
+                    prior_path = next(p for p in files if p.name == prior_name)
                     conn.execute(text(
                         "INSERT INTO meta.schema_migrations (migration_name, file_hash_sha256) "
                         "VALUES (:name, :digest)"
@@ -70,3 +71,28 @@ def database_check(engine: Engine, expected_name: str) -> dict[str, object]:
         migrations = conn.scalar(text("SELECT count(*) FROM meta.schema_migrations"))
     return {"database": actual_name, "postgresql_version": version, "postgis_version": postgis,
             "schemas": schemas, "applied_migrations": migrations}
+
+
+def version3_schema_check(engine: Engine) -> dict:
+    """Read-only checks for the independently persisted current analytical layer."""
+    required = ('v3_raw','v3_clean','v3_spatial','v3_features','v3_analysis')
+    relations = ('v3_raw.osm_elements','v3_clean.airbnb_listings','v3_spatial.analysis_areas',
+                 'v3_features.area_context','v3_spatial.canonical_bus_stops','v3_features.bus_accessibility',
+                 'v3_features.opportunity_variants','v3_analysis.dataset_records','v3_analysis.outer_assignments',
+                 'v3_analysis.inner_assignments','v3_analysis.artifacts')
+    with engine.connect() as conn:
+        for relation in relations:
+            if not conn.scalar(text('SELECT to_regclass(:relation) IS NOT NULL'), {'relation': relation}):
+                raise RuntimeError('Missing Version 3 database relation: ' + relation)
+        columns = set(conn.execute(text("SELECT column_name FROM information_schema.columns WHERE table_schema='v3_features' AND table_name='listing_spatial_base'")).scalars())
+        if 'provider_area_id' not in columns or 'municipality_proxy' in columns:
+            raise RuntimeError('V3 provider QA schema requires the neutral diagnostic migration')
+        populated = conn.scalar(text('SELECT count(*) FROM v3_clean.airbnb_listings'))
+        history = conn.execute(text('SELECT migration_name,trim(file_hash_sha256) FROM meta.schema_migrations ORDER BY migration_name')).all()
+    for name,digest in history:
+        directories = (PROJECT_ROOT/'sql/legacy_migrations', PROJECT_ROOT/'sql/migrations')
+        path = next((directory/name for directory in directories if (directory/name).exists()),None)
+        if path is None or sha256_file(path) != digest:
+            raise RuntimeError('Applied SQL migration identity/hash changed: ' + name)
+    return {'version3_schemas': list(required), 'required_relations': list(relations),
+            'current_clean_listing_rows': populated, 'applied_migration_hashes_verified': len(history)}

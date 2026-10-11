@@ -1,0 +1,7 @@
+{
+  "data/raw/municipalities.zip": {
+    "sha256": "24aff440cddabc4d4831f900072b3beefd0f7173a9961b73cf0c746b4c5bc3d8",
+    "status": "unverified provenance; excluded from analytical inputs",
+    "reason": "Unlabelled pre-existing raw-root archive; verified official boundary GeoJSON is used instead."
+  }
+}

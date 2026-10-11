@@ -1,4 +1,4 @@
-"""Run Phase 1 database setup, checks, registration, and raw CSV ingestion."""
+"""Run database setup database setup, checks, registration, and raw CSV ingestion."""
 
 from __future__ import annotations
 

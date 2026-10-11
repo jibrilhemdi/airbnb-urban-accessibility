@@ -60,7 +60,7 @@ with_points AS (
                 END AS point_4326
     FROM flagged
 )
-INSERT INTO clean.airbnb_listings (
+INSERT INTO v3_clean.airbnb_listings (
     snapshot_date, listing_id, source_file_id, last_scraped, neighbourhood_cleansed,
     room_type, property_type, latitude, longitude, geom, geom_25832,
     price_raw, price_nightly, log_price, accommodates, bedrooms, bathrooms,

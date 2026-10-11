@@ -1,0 +1,138 @@
+{
+  "version": "municipal_income_investigation_v3",
+  "investigation_id": "municipal_income_harmonisation_20261004_expanded",
+  "reference_year": 2024,
+  "preferred_concept": "Person-assigned family-equivalised disposable income",
+  "preferred_price_basis": "nominal_DKK_if_verified_for_both_municipalities",
+  "analysis_areas": "Frozen official crosswalk: ten Copenhagen districts plus Frederiksberg as one peer area",
+  "primary_source_intent": {
+    "Copenhagen": "Copenhagen Municipality KKIND5",
+    "Frederiksberg": "Frederiksberg Municipality matching statistic, if obtained and verified"
+  },
+  "status": "unverified",
+  "national_IFOR35_role": "Methodological support and QA only under the municipal-source route; no primary substitution",
+  "computation_rules": {
+    "weighted_deciles": "sum(n_d * mean_d) / sum(n_d); use authoritative eligible-person counts",
+    "unweighted_deciles": "sum of ten means / 10 only with official equivalent equal-person groups and documented integer/tie handling",
+    "direct_mean": "Municipality-issued 2024 mean allowed only under the matching definition and denominator",
+    "missing_frederiksberg": "NULL, never silently substituted"
+  },
+  "qa_rules": {
+    "national_identity_required": false,
+    "minor_discrepancies": "Acceptable only after municipal definition equivalence is verified and authoritative explanations are documented",
+    "rounding_only_envelope_dkk": 1,
+    "envelope_condition": "Nearest-whole-DKK source means and exact eligible weights; diagnostic, not a sufficient or unconditional acceptance test",
+    "materiality_threshold": "Not selected in the absence of matching municipal data and authoritative aggregation rules",
+    "district_reconstruction": "Where possible, use exact income-eligible weights and include unassigned geography; absent weights remain NULL"
+  },
+  "documents": [
+    {
+      "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/boligredegoerelsen_2025.pdf",
+      "url": "https://www.frederiksberg.dk/media/yvnpnuwn/boligredegoerelsen-2025.pdf",
+      "name": "Boligredegørelsen 2025",
+      "reference_year": 2022,
+      "unit": "DKK",
+      "price_basis": "Figure-specific 2022/2023 prices",
+      "definition": "Personal income before tax (15+); IND disposable personal/family income; no matching equivalised all-resident 2024 mean identified",
+      "role": "income_lead_not_accepted"
+    },
+    {
+      "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/kommuneplan_2025_redegoerelse.pdf",
+      "url": "https://www.frederiksberg.dk/media/0sophada/kommuneplan-2025-redegoerelse.pdf",
+      "name": "Kommuneplan 2025 — Redegørelse",
+      "reference_year": null,
+      "unit": null,
+      "price_basis": null,
+      "definition": "Planning and housing evidence; publication year does not establish an income reference year",
+      "role": "discovery_only"
+    },
+    {
+      "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/aarsregnskab_2024.pdf",
+      "url": "https://www.frederiksberg.dk/media/cuaduzqy/aarsregnskab_2024.pdf",
+      "name": "Årsregnskab 2024",
+      "reference_year": 2024,
+      "unit": null,
+      "price_basis": null,
+      "definition": "Municipal finances/tax and demographic key figures; not a person-assigned equivalised income mean",
+      "role": "discovery_only"
+    },
+    {
+      "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/fakta_om_kommunen.html",
+      "url": "https://www.frederiksberg.dk/kommunen/forvaltning-og-fakta-om-kommunen/fakta-om-kommunen",
+      "name": "Fakta om kommunen",
+      "reference_year": null,
+      "unit": null,
+      "price_basis": null,
+      "definition": "Demographic facts and maps; no matching income table identified",
+      "role": "discovery_only"
+    },
+    {
+      "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/oekonomiske_noegletal.html",
+      "url": "https://www.frederiksberg.dk/kommunen/oekonomi/oekonomiske-noegletal",
+      "name": "Økonomiske nøgletal",
+      "reference_year": null,
+      "unit": null,
+      "price_basis": null,
+      "definition": "Municipal financial/tax indicators; not resident disposable income",
+      "role": "discovery_only"
+    },
+    {
+      "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/politikker_og_planer.html",
+      "url": "https://www.frederiksberg.dk/politik/politikker-og-planer",
+      "name": "Politikker og planer",
+      "reference_year": null,
+      "unit": null,
+      "price_basis": null,
+      "definition": "Official publication index including Boligredegørelse",
+      "role": "discovery_only"
+    },
+    {
+      "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/kontakt.html",
+      "url": "https://www.frederiksberg.dk/kommunen/forvaltning-og-fakta-om-kommunen/kontakt",
+      "name": "Kontaktinformationer",
+      "reference_year": null,
+      "unit": null,
+      "price_basis": null,
+      "definition": "Public municipal contact routing; no messages sent",
+      "role": "contact_routing"
+    },
+    {
+      "path": "data/raw/frederiksberg_municipality/2026-10-04/municipal_income_review/kortlaegning_verdensmaal.pdf",
+      "url": "https://baeredygtig.frederiksberg.dk/media/vhnl1cng/kortlaegning_verdensmaal.pdf",
+      "name": "Kortlægning af Frederiksberg Kommunes arbejde med verdensmål",
+      "reference_year": null,
+      "unit": "DKK",
+      "price_basis": null,
+      "definition": "Sex-specific annual disposable-income lead; equivalisation and matching 2024 population not established",
+      "role": "income_lead_not_accepted"
+    },
+    {
+      "path": "data/raw/copenhagen_statbank/2026-10-04/municipal_income_review/city_poverty_equivalisation_2025.pdf",
+      "url": "https://www.kk.dk/sites/default/files/2025-11/Bilag%201.%20%28B%C3%B8rne-%29fattigdom%20i%20K%C3%B8benhavn%202025_t.pdf",
+      "name": "(Børne-)fattigdom i København 2025",
+      "institution": "Copenhagen Municipality",
+      "geographic_extent": "Copenhagen Municipality",
+      "reference_year": 2023,
+      "unit": "DKK",
+      "price_basis": null,
+      "definition": "Poverty-method equivalisation: 1 / 0.5 / 0.3; explicit KKIND5 linkage not established, poverty filter differs",
+      "role": "equivalisation_method_support_only"
+    }
+  ],
+  "search_log": {
+    "date": "2026-10-04",
+    "method": "Web search plus linked official municipal publications and methodological endnotes; reviewed independently of Airbnb outcomes",
+    "queries": [
+      "site:frederiksberg.dk ækvivaleret disponibel indkomst 2024",
+      "site:frederiksberg.dk indkomst statistik deciler",
+      "site:frederiksberg.dk statistikbank",
+      "site:frederiksberg.dk åbne data",
+      "site:frederiksberg.dk disponibel indkomst",
+      "site:frederiksberg.dk boligredegoerelse",
+      "site:kk.dk KKIND5 ækvivaleret OECD",
+      "site:kk.dk Statistikbank dokumentation indkomst"
+    ],
+    "scope_limit": "No matching public statistic identified in reviewed sources; this is not proof that no unpublished municipal statistic exists."
+  },
+  "previous_municipal_investigation_id": "municipal_income_harmonisation_20261004"
+}

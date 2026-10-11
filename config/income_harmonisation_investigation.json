@@ -1,0 +1,21 @@
+{
+  "version": "income_harmonisation_investigation_v3",
+  "reference_year": "2024",
+  "preferred_price_basis": "nominal_current_prices",
+  "candidate_tables": ["KKIND5", "IFOR35"],
+  "candidate_transformation": "sum of ten decile means divided by ten, conditional on equivalent equal-person deciles",
+  "municipality_reconstruction": "weight district means by their exact income-eligible 2024 person counts; include any unassigned geography if the municipal denominator includes it",
+  "forbidden_weights": "2026 population totals, Airbnb listing counts, equal district weights",
+  "conditional_rounding_envelope_dkk": 1.0,
+  "rounding_envelope_basis": "Two weighted averages of means individually rounded to the nearest whole DKK differ by at most 1 DKK from rounding alone. This is conditional on verified rounding and exact denominator weights; it is not an equivalence acceptance threshold.",
+  "tolerance_frozen_before_data_comparison": true,
+  "acceptance_requires": [
+    "matching income concept and equivalisation scale",
+    "matching income-distribution population and geographic allocation",
+    "documented zero/negative/missing-income handling",
+    "equal-person deciles or authoritative decile weights",
+    "matching nominal price basis, year and unit",
+    "valid district-to-municipality weights and reconciliation"
+  ],
+  "outer_outcomes_or_model_results_used": false
+}
