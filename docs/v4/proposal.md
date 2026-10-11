@@ -10,8 +10,9 @@ The study compares matched Euclidean and walking-network accessibility for
 observed Airbnb nightly asking prices, conditional on an inherited qualified
 baseline and neighbourhood residential sale-price context. Models are fitted
 separately by city. The matched snapshot target is June 2026. The authorized
-V4 city roster and source qualification remain unresolved; the existing V3
-Copenhagen/Frederiksberg regional extract does not establish that roster.
+V4 roster is `copenhagen_frederiksberg`, `oslo` and `stockholm`, explicitly
+authorized for this architecture step. Per-city source and housing qualification
+remain BLOCKED; the existing V3 extract alone does not establish V4 readiness.
 
 ## Research questions
 

@@ -70,3 +70,24 @@ income-docs:
 .PHONY: reporting
 reporting:
 	$(PYTHON) -m src.pipeline.render_reporting_figures
+
+# V4 commands require explicit identity; setup never creates/drops databases.
+V4_ARGS = --version "$(VERSION)" --city "$(CITY)" --snapshot "$(SNAPSHOT)" --run-id "$(RUN_ID)"
+.PHONY: v4-setup v4-test v4-test-db v4-preflight v4-run v4-report
+v4-setup:
+	$(PYTHON) -m src.v4.cli setup $(V4_ARGS)
+
+v4-test:
+	THESIS_V4_DB_TEST=0 $(PYTHON) -m unittest discover -s tests -p 'test_v4*.py' -v
+
+v4-test-db:
+	THESIS_V4_DB_TEST=1 $(PYTHON) -m unittest discover -s tests -p 'test_v4_persistence.py' -v
+
+v4-preflight:
+	$(PYTHON) -m src.v4.cli preflight $(V4_ARGS) $(V4_PREFLIGHT_FLAGS)
+
+v4-run:
+	$(PYTHON) -m src.v4.cli run $(V4_ARGS) $(V4_PREFLIGHT_FLAGS)
+
+v4-report:
+	$(PYTHON) -m src.v4.cli report $(V4_ARGS)

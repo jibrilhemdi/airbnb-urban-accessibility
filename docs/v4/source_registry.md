@@ -27,11 +27,11 @@ and metric CRS for spatial data/operations and explicit unknowns.
 
 | Source role | Available evidence | V4 status / required gate |
 | --- | --- | --- |
-| Airbnb outcome/property/host data | Inside Airbnb V3 Copenhagen/Frederiksberg extract dated 30 June 2026; immutable local paths/hashes | Matched June 2026 target retained; V4 roster and each city's exact snapshot/extent must be qualified |
+| Airbnb outcome/property/host data | Inside Airbnb V3 Copenhagen/Frederiksberg extract dated 30 June 2026; immutable local paths/hashes | Matched June 2026 target retained; roster explicitly authorized; each city's exact snapshot/extent must be qualified |
 | Housing H | User-proposed full-year 2025 apartment residential sale-price/m2; no qualified V4 provider/file identified | BLOCKED: source, acquisition date, extent, checksum, unit/currency, statistic, transaction/coverage evidence and official area mapping unresolved |
 | Population/density X | V3 City/Statistics Denmark sources, qualified geography and population 2026 Q3 | Retain concept/limitations; qualify per-city reference period, density geography and CRS |
 | Income X | V3 Copenhagen KKIND5 and Frederiksberg nominal IFOR35, 2024 ten-decile arithmetic means, documented qualified acceptance | Inherited qualification applies to those sources only; new-city sources require compatible concepts and provenance |
-| Boundaries/centrality | V3 official national/municipal geometry, City Hall anchor; source EPSG:4326 and operations EPSG:25832 | V4 city boundaries, housing crosswalk, public anchor and projected CRS unresolved; never fabricate |
+| Boundaries/centrality | V3 official national/municipal geometry, City Hall anchor; source EPSG:4326 and operations EPSG:25832 | Copenhagen local boundary/anchor/CRS evidence versioned in cities.json; Oslo/Stockholm and every housing crosswalk unresolved; never fabricate |
 | OSM network/stations/bus/POIs E/W | Frozen V3 extraction/taxonomy and deterministic consolidation; matched endpoint universe | Qualify each city extraction/coverage/snaps/topology; preserve inherited thresholds and category rules |
 | Tuning | Actual frozen V3 30-candidate list with seed/hash, copied under a V4 configuration identity | Definition inherited; no V4 fitting or data readiness certified |
 
@@ -50,7 +50,9 @@ ladder. Narrower-city or descriptive-only scope needs an explicit amendment;
 there is no automatic no-H fallback. None of the contrasts estimates adding-H
 benefit without a separately authorized no-H sensitivity.
 
-No external acquisition, registry insertion, migration, temporal Airbnb panel,
-residential-price outcome model or gentrification score was performed in this
-step. See the [specification](preanalysis_specification.md) and
+The specification step performed no acquisition or migration. The architecture
+step adds immutable V4 manifest registration and migration 023, tested only in
+a disposable database. No production V4 sources/results are registered and no
+temporal Airbnb panel, residential-price outcome model or gentrification score
+is introduced. See the [specification](preanalysis_specification.md) and
 [document index](document_index.md) for authority and interpretation limits.

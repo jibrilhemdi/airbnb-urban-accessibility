@@ -13,6 +13,8 @@ No inaccessible V4 proposal or historical eight-model draft was reconstructed.
 | [preanalysis_specification.md](preanalysis_specification.md) | Active V4 scientific definitions, samples, comparisons, safeguards and inference |
 | [data_dictionary.md](data_dictionary.md) | Active V4 field/block definitions; not a claim of implemented data columns |
 | [source_registry.md](source_registry.md) | Active V4 qualification register, explicit missing evidence |
+| [architecture.md](architecture.md) | Active V4 isolation, command behavior and persistence contract |
+| `config/v4/cities.json` | Versioned three-city evidence and unresolved fields |
 | `config/v4/research_design.json` | Active V4 machine-readable definitions, inherited candidates and unresolved gates |
 | [IMPLEMENTATION_CONTRACT.md](IMPLEMENTATION_CONTRACT.md) | Active V4 execution/Git/data governance |
 | [step_log.md](step_log.md) | Requested steps, changes, actual checks and blockers |

@@ -11,7 +11,10 @@ Empirical execution is BLOCKED pending qualification and separate authorization.
 
 Use a matched June 2026 Inside Airbnb snapshot target, one listing per city and
 snapshot, with separate city models. The known V3 date is 30 June 2026; other
-city dates and the V4 city roster are unresolved, not silently substituted.
+city dates remain unresolved, not silently substituted. The user-authorized
+roster is `copenhagen_frederiksberg`, `oslo`, `stockholm`; evidence and unresolved
+fields are versioned in `config/v4/cities.json`. Copenhagen evidence is inherited
+locally; its CRS, districts and income mapping are never defaults for other cities.
 The primary product segment retains conventional residential entire dwellings,
 with the six inherited property types documented in the dictionary. There is
 no minimum-review or minimum-availability primary restriction.

@@ -14,11 +14,17 @@
   },
   "cities": {
     "model_strategy": "separate_city_models",
-    "authorized_roster": [],
-    "roster_status": "BLOCKED_NOT_SPECIFIED_IN_AVAILABLE_V4_MATERIAL",
+    "authorized_roster": [
+      "copenhagen_frederiksberg",
+      "oslo",
+      "stockholm"
+    ],
+    "roster_status": "USER_AUTHORIZED_20261011_SOURCE_QUALIFICATION_BLOCKED",
     "missing_qualified_housing_action": "BLOCKED",
     "narrower_city_or_descriptive_only_scope_requires_explicit_amendment": true,
-    "city_geography_and_metric_crs_require_qualification": true
+    "city_geography_and_metric_crs_require_qualification": true,
+    "configuration": "config/v4/cities.json",
+    "city_definition_version": "v4_cities_20261011"
   },
   "snapshot": {
     "target_month": "2026-06",
@@ -687,9 +693,11 @@
       "v4_analysis"
     ],
     "run_pattern": "research_v4_<city_slug>_<UTC timestamp>",
-    "output_root": "outputs/v4/<run_id>/",
-    "report_root": "reports/v4/<run_id>/",
-    "provisioned": false
+    "output_root": "outputs/v4/<version>/<run_id>/<city>/<snapshot>/",
+    "report_root": "reports/v4/<version>/<run_id>/<city>/<snapshot>/",
+    "provisioned": false,
+    "persistence_implementation": "src/v4/persistence.py",
+    "production_provisioned": false
   },
   "active_documents": [
     "docs/v4/proposal.md",

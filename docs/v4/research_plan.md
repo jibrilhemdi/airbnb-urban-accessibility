@@ -23,7 +23,8 @@ No incremental benefit of adding H is identified by this ladder.
 
 ## Research tasks and gates
 
-1. Freeze the authorized city roster and matched June 2026 snapshot dates,
+1. The authorized roster is `copenhagen_frederiksberg`, `oslo`, `stockholm`.
+   Qualify and freeze matched June 2026 snapshot dates,
    boundaries, statistical units and projected CRS. Available V3 geography is
    evidence for its own case study only. Do not invent a second city, polygon
    crosswalk or snapshot. Missing evidence means BLOCKED.

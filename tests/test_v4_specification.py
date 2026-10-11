@@ -110,7 +110,7 @@ class V4ModelDefinitionTests(unittest.TestCase):
         self.assertEqual(housing["qualification_status"], "BLOCKED_NOT_ASSESSED")
         for key in ["source", "acquisition_date", "geographic_extent", "source_sha256"]:
             self.assertIsNone(housing[key])
-        self.assertEqual(self.design["cities"]["authorized_roster"], [])
+        self.assertEqual(self.design["cities"]["authorized_roster"], ["copenhagen_frederiksberg", "oslo", "stockholm"])
         self.assertEqual(self.design["cities"]["missing_qualified_housing_action"], "BLOCKED")
         self.assertTrue(self.design["cities"]["narrower_city_or_descriptive_only_scope_requires_explicit_amendment"])
 

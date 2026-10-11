@@ -80,3 +80,27 @@ archive/legacy_v2/notebooks/
 *.pem
 *.key
 *.p12
+
+# V4 private research identities; aggregate sharing requires a later review.
+/outputs/v4/
+/data/metadata/v4/
+/data/restricted/
+/data/housing/
+route_cache/
+private_predictions/
+listing_predictions*.csv
+listing_predictions*.json
+*.sql.dump
+*.pgdump
+credentials*.json
+secrets*.json
+!.env.v4.example
+/database_dumps/
+/db_dumps/
+*.dump.sql
+/credentials/
+/secrets/
+credentials*.yaml
+credentials*.yml
+*listing*predictions*.csv
+*listing*predictions*.json

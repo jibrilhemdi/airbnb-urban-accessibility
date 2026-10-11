@@ -23,7 +23,7 @@ PROTECTED_ROOTS = (
     "outputs", "reports", "archive", "config", "docs/design", "sql",
 )
 V4_ROOTS = ("data/raw/v4", "data/interim/v4", "data/processed/v4",
-            "data/metadata/v4", "outputs/v4", "reports/v4", "config/v4")
+            "data/metadata/v4", "outputs/v4", "reports/v4", "config/v4", "sql/v4_migrations")
 
 
 def sha256_file(path: Path) -> str:
@@ -120,6 +120,7 @@ def database_snapshot() -> dict:
 def baseline_tests() -> None:
     os.environ["THESIS_DB_TEST"] = "0"
     os.environ["THESIS_V3_INTEGRATION"] = "0"
+    os.environ["THESIS_V4_DB_TEST"] = "0"
     from src.pipeline import build_tuning_candidates as candidates
     if not candidates.PATH.is_file():
         raise RuntimeError("Missing V3 candidate freeze; baseline must not create it")

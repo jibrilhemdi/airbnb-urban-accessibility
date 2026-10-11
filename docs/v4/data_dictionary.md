@@ -26,7 +26,7 @@ no-H fallback, H-suffixed primary models or adding-H estimand is authorized.
 
 | Field | Definition / rule |
 | --- | --- |
-| `city_id` | Qualified city identifier; authorized V4 roster unresolved, no inferred mapping |
+| `city_id` | Explicit `copenhagen_frederiksberg`, `oslo` or `stockholm`; qualification remains gated |
 | `snapshot_date` | Matched June 2026 target; actual city dates require source evidence |
 | `listing_id` | Source ID; unique with city and snapshot, private analytical key |
 | `price_nightly` | Observed positive Airbnb nightly asking price in native currency; never impute |
