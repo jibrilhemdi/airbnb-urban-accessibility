@@ -10,8 +10,10 @@ Empirical execution is BLOCKED pending qualification and separate authorization.
 ## Outcome, population and city scope
 
 Use a matched June 2026 Inside Airbnb snapshot target, one listing per city and
-snapshot, with separate city models. The known V3 date is 30 June 2026; other
-city dates remain unresolved, not silently substituted. The user-authorized
+snapshot, with separate city models. The exact 30 June 2026 batch is now verified
+in the official archive catalogue and all three detailed listing files; actual
+scrape dates extend into July and quoted requested stays into 2027. See
+[the acquisition audit](listing_acquisition.md). No newest snapshot was substituted. The user-authorized
 roster is `copenhagen_frederiksberg`, `oslo`, `stockholm`; evidence and unresolved
 fields are versioned in `config/v4/cities.json`. Copenhagen evidence is inherited
 locally; its CRS, districts and income mapping are never defaults for other cities.
@@ -204,7 +206,9 @@ restricted raw/private row-level predictions, folds, SHAP and coordinates stay
 private. Record all external provenance and never fill missing scientific data.
 
 `config/v4/research_design.json` is the versioned machine-readable specification;
-`src/v4/specification.py` exposes model metadata only. No V4 runner, source
-qualification, acquisition, migration or empirical result is implemented in
-this step. Markdown is authoritative; see [document index](document_index.md)
+`src/v4/specification.py` exposes model metadata only. The specification step
+performed no acquisition/fitting; subsequent steps add isolated persistence and
+immutable source/audit ingestion. Municipal geometry access/vintage, H and other
+sample/context/fold gates remain BLOCKED; no V4 fitted result exists.
+Markdown is authoritative; see [document index](document_index.md)
 for DOCX status and [source registry](source_registry.md) for unresolved inputs.

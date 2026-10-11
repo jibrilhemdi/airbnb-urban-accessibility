@@ -131,7 +131,10 @@ def prepare_all_sources(
     manifest = _manifest_entries(manifest_path)
     raw_root = project_root / "data" / "raw"
     paths = sorted(path for path in raw_root.rglob("*") if path.is_file()
-                   and path.name not in {".gitkeep", ".DS_Store"} and not path.name.startswith("._"))
+                   and path.name not in {".gitkeep", ".DS_Store"} and not path.name.startswith("._")
+                   # The reserved V4 tree has its own manifests/database adapter.
+                   # Never register it into V3; unknown legacy providers still fail.
+                   and path.relative_to(raw_root).parts[0] != "v4")
     quarantine_path = project_root / "config/unverified_raw_files.json"
     quarantine = json.loads(quarantine_path.read_text()) if quarantine_path.exists() else {}
     kept = []

@@ -135,18 +135,21 @@ def scientific_dependencies(city: str, *, root: Path = PROJECT_ROOT, design: dic
     for key in ('active_documents', 'document_index', 'status', 'provenance', 'identities', 'execution_authorized_by_this_configuration', 'cities'):
         design.pop(key, None)
     cities = load_cities() if cities is None else cities
-    shared = ['src/ingestion/common.py', 'src/pipeline/output_paths.py',
+    shared = ['src/ingestion/common.py', 'src/ingestion/price.py', 'src/pipeline/build_airbnb_sample.py', 'src/pipeline/output_paths.py',
               'src/pipeline/protocol.py', 'src/pipeline/storage.py', 'requirements.txt']
     files = [root / path for path in shared]
     files += [p for p in (root / 'src/v4').glob('*.py') if p.name not in {'cli.py', 'reporting.py'}]
     files += list((root / 'sql/v4_migrations').glob('*.sql'))
+    source_policy = json.loads((root / 'config/v4/listing_sources.json').read_text())
+    source_policy = {**{k: v for k, v in source_policy.items() if k != 'cities'},
+                     'city': source_policy['cities'][city]}
     packages = re.findall(r'^([A-Za-z0-9_-]+)==', (root / 'requirements.txt').read_text(), re.M)
     from pyproj import proj_version_str
     from shapely import geos_version_string
     environment = {'python': sys.version, 'platform': platform.platform(),
                    'packages': {name: installed_version(name) for name in packages},
                    'proj': proj_version_str, 'geos': geos_version_string}
-    return {'design': design, 'environment': environment, 'city': city, 'city_definition_version': cities['city_definition_version'],
+    return {'design': design, 'environment': environment, 'city': city, 'listing_source_policy': source_policy, 'city_definition_version': cities['city_definition_version'],
             'city_configuration': cities['cities'][city], 'source_manifests': source_manifests or {},
             'code_and_environment': {p.relative_to(root).as_posix(): sha256_file(p) for p in sorted(files)}}
 

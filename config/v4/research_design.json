@@ -30,7 +30,11 @@
     "target_month": "2026-06",
     "matched_between_cities": true,
     "observed_v3_snapshot": "2026-06-30",
-    "v4_city_snapshot_dates": {},
+    "v4_city_snapshot_dates": {
+      "copenhagen_frederiksberg": "2026-06-30",
+      "oslo": "2026-06-30",
+      "stockholm": "2026-06-30"
+    },
     "substitute_month_allowed": false,
     "temporal_airbnb_panel": false
   },

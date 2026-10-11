@@ -2,10 +2,10 @@
 
 Architecture version: `v4_cities_20261011`. Scientific definition:
 `v4_housing_standard_20261011`. User-authorized cities are exactly
-`copenhagen_frederiksberg`, `oslo`, `stockholm`. This step implements isolation
-and persistence infrastructure, not empirical acquisition, routing or fitting.
-V3 results were already observed. Production V4 data, housing qualification and
-empirical stages remain **BLOCKED**.
+`copenhagen_frederiksberg`, `oslo`, `stockholm`. The architecture step established
+isolation/persistence; the subsequent [listing step](listing_acquisition.md)
+adds acquisition/audit ingestion only. V3 results were already observed. Housing
+qualification and modelling stages remain **BLOCKED**; no fitting is implemented.
 
 ## Reuse and city qualification
 
@@ -25,8 +25,11 @@ boundaries, 30 June snapshot, DKK, EPSG:25832, the public City Hall Square ancho
 boundary vintages and unknown district source date are retained. Evidence reuse
 is not a V4 source freeze; V3 raw paths are only read and checksum-verified.
 
-Oslo/Stockholm boundaries, exact snapshot, currency, metric CRS, public anchor,
-source identifiers, population/income reference periods and mappings remain null.
+Oslo/Stockholm now have checksum-backed 30 June snapshot and native currency
+evidence (NOK/SEK). Oslo current municipal geometry is acquired but vintage is
+unresolved; Stockholm municipality 0180 is verified separately from county 01,
+but its geometry API returns 401. Metric CRS, public anchor,
+population/income reference periods, mappings and H remain unresolved.
 No Copenhagen geometry, projection, districts, decile mapping or inferred currency
 is substituted. Qualification requires source evidence; edited/missing evidence
 or nonmetric CRS fails validation. Housing source, frozen external reference
@@ -43,7 +46,8 @@ are never inherited. `.env.v4.example` contains empty connection fields and no
 credentials. Provision the database separately; `v4-setup` never creates or drops
 production databases or changes Compose/sharing infrastructure.
 
-The next actual migration is **023**, after the 22 verified V3 migrations.
+The architecture migration is **023**, after the 22 verified V3 migrations;
+the append-only listing/boundary audit migration is **024**.
 `sql/v4_migrations/023_v4_multicity_persistence.sql` uses a separate discovery
 root so `make db-migrate` cannot accidentally apply it to V3. The V4 adapter
 checks database identity/absence of V3 or legacy schemas before DDL, then applies
@@ -71,6 +75,13 @@ be updated. A changed source creates a new manifest; existing bytes/records are
 never overwritten. Registration checks manifest scope, provenance and unique
 source IDs. Observation/source-area source IDs must exist in that scoped manifest.
 Housing crosswalks are not inferred from provider neighbourhood IDs.
+
+Migration 024 adds an independent ingestion ledger, row-number raw/audit keys
+that preserve duplicate/missing IDs, and official study geometries in EPSG:4326
+with native CRS/vintage/source-area identity. No modelling run is created.
+Audit children share the parent's creation transaction; after commit the entire
+audit is immutable. Preliminary scopes remain frozen; acquisition evidence
+selects one final audit per city, never combines duplicate snapshots.
 
 Synthetic identities use `synthetic_v4_<city>_<UTC timestamp>`, permitted only in
 an owned `test_v4_<UUID hex>` database. Research identities use
@@ -106,7 +117,8 @@ on read. Identical content can be reused; conflicting writes cannot replace it.
 Scientific dependency hashes include the scientific V4 modules, explicitly
 listed reused helpers, V4 migrations, pinned requirements, actual installed
 package/Python/PROJ/GEOS versions, scientific design,
-selected city's versioned configuration and frozen source manifests. Reporting
+selected city's versioned configuration and frozen source manifests. Acquisition
+dependencies also select only that city's source policy. Reporting
 code, CLI presentation, Markdown, logs and Git commit SHA are excluded. Editing
 V4 documentation or another city's record does not invalidate an unchanged city
 fit. New shared scientific imports must be included in the explicit dependency
@@ -139,11 +151,16 @@ the run ID already exists. Missing settings/connection/schema fail closed.
 | `v4-preflight` | Read-only city/evidence/DB checks; emits explicit BLOCKED gates; offline and database-failure paths tested |
 | `v4-run` | Calls the same preflight and refuses empirical work; refusal path tested, no model fitting implementation claimed |
 | `v4-report` | Read-only SQL selection of completed scoped runs; immutable aggregate-only CSV/receipt export; success, incompleteness, source drift and overwrite rejection tested with temporary synthetic data |
+| `v4-acquire` | Exact matched catalogue selection, immutable raw/receipt/manifest freeze and private inspection audit; no DB/model writes |
+| `v4-ingest` | Dedicated V4 DB migrations and atomic immutable raw/listing/municipal audit; safe aggregate export, no modelling run |
+| `v4-listing-audit` | Read-only SQL aggregate/provenance export with scope/count/hash checks; never exports listing records |
 
 Setup/report use the same four identity variables as the example. CLI help is
 `python -m src.v4.cli --help`; optional `--env` is supported for setup/report only.
-No production setup/run/report was executed in this step. Migration infrastructure
-is implemented; actual V4 empirical stages are future requested work. Even fully
+The architecture step used only disposable databases. The listing step explicitly
+provisioned the separate local V4 DB/private connection file and applied 023/024;
+no Compose/sharing change, V3 database mutation or modelling run occurred.
+Actual V4 modelling stages are future requested work. Even fully
 filled city settings alone do not clear source freeze, sample/fold, coverage,
 network, rank or inference gates. A city lacking qualified H remains BLOCKED;
 there is no automatic no-H fallback or narrower-city scope.

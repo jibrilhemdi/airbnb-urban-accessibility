@@ -36,16 +36,19 @@ class CityConfigurationTests(unittest.TestCase):
         blocked = city_blockers(VERSION, 'copenhagen_frederiksberg')
         self.assertEqual(blocked, ['housing: unresolved/unqualified'])
         for city in ('oslo', 'stockholm'):
-            self.assertEqual(len(city_blockers(VERSION, city)), 10)
-            for node in config['cities'][city].values():
-                self.assertIsNone(node['value'])
-                self.assertEqual(node['evidence'], [])
+            blockers = city_blockers(VERSION, city)
+            self.assertEqual(len(blockers), 8)
+            self.assertIn('study_boundary: unresolved/unqualified', blockers)
+            self.assertIn('housing: unresolved/unqualified', blockers)
+            self.assertEqual(config['cities'][city]['snapshot_date']['value'], '2026-06-30')
+            self.assertTrue(config['cities'][city]['snapshot_date']['evidence'])
 
     def test_no_city_projection_or_income_fallback(self):
         for city in ('oslo', 'stockholm'):
             record = load_cities()['cities'][city]
-            for field in ('metric_crs', 'context_mapping', 'central_anchor', 'currency'):
+            for field in ('metric_crs', 'context_mapping', 'central_anchor'):
                 self.assertIsNone(record[field]['value'])
+            self.assertEqual(record['currency']['value'], {'oslo':'NOK','stockholm':'SEK'}[city])
         mapping = load_cities()['cities']['copenhagen_frederiksberg']['context_mapping']['value']
         self.assertEqual(len(mapping), 11)
         self.assertEqual(mapping[-1]['income_source_id'], 'IFOR35')

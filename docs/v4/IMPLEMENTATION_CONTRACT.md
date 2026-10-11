@@ -15,6 +15,14 @@ migration, feature construction, model fitting, pipeline execution or
 regeneration of frozen V3 documents/results.
 The subsequent architecture step authorizes V4 city configuration, isolation
 adapters, an append-only V4 migration and disposable-database tests only.
+The listing/boundary step additionally authorizes matched 30 June 2026 official
+catalogue acquisition, checksum/schema-qualified immutable V3 reuse, official
+municipal geometry acquisition/audit, dedicated local V4 database provisioning,
+append-only migration 024, raw/audit ingestion and safe aggregate provenance
+exports. It does not authorize model fitting, model samples, housing assignment,
+network features or the research pipeline. Boundary access/vintage blockers are
+recorded in [listing_acquisition.md](listing_acquisition.md) and
+`listing_acquisition_audit.json`; raw/credentials remain private.
 See [architecture.md](architecture.md) for implemented command behavior and
 unresolved empirical gates. The roster is `copenhagen_frederiksberg`, `oslo`,
 `stockholm`; narrower scope still requires an amendment.

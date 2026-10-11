@@ -91,3 +91,13 @@ v4-run:
 
 v4-report:
 	$(PYTHON) -m src.v4.cli report $(V4_ARGS)
+
+.PHONY: v4-acquire v4-ingest v4-listing-audit
+v4-acquire:
+	$(PYTHON) -m src.v4.listings acquire $(V4_ARGS)
+
+v4-ingest:
+	$(PYTHON) -m src.v4.listings ingest $(V4_ARGS)
+
+v4-listing-audit:
+	$(PYTHON) -m src.v4.listings audit $(V4_ARGS)

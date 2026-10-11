@@ -76,14 +76,16 @@ class V4PersistenceTests(unittest.TestCase):
         register_manifest(self.conn, self.paths.scope, self.manifest)
 
     def test_migration_idempotence_and_applied_hash(self):
-        self.assertEqual(self.first_migration, ['023_v4_multicity_persistence.sql'])
+        self.assertEqual(self.first_migration, ['023_v4_multicity_persistence.sql', '024_v4_listing_boundary_audit.sql'])
         self.assertEqual(migrate(self.engine, synthetic=True), [])
         with tempfile.TemporaryDirectory() as directory:
+            for original in MIGRATIONS.glob('*.sql'):
+                (Path(directory) / original.name).write_bytes(original.read_bytes())
             migration = Path(directory) / '023_v4_multicity_persistence.sql'
             migration.write_text((MIGRATIONS / migration.name).read_text() + '\n-- changed fixture\n')
             with self.assertRaisesRegex(RuntimeError, 'changed'):
                 migrate(self.engine, synthetic=True, directory=Path(directory))
-        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.schema_migrations')), 1)
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_analysis.schema_migrations')), 2)
         self.assertEqual(self.conn.scalar(text("SELECT count(*) FROM information_schema.schemata WHERE schema_name LIKE 'v3_%'")), 0)
 
     def test_city_isolation_and_duplicate_listing_ids(self):
@@ -189,3 +191,45 @@ class V4PersistenceTests(unittest.TestCase):
         source.write_text('changed synthetic fixture')
         with self.assertRaisesRegex(RuntimeError, 'bytes changed'):
             report(self.conn, self.paths)
+
+    def test_listing_audit_preserves_duplicates_nulls_and_city_isolation(self):
+        from src.v4.listings import persist_ingestion, DEFINITION
+        rows = [{'row_number': 1, 'listing_id': 'duplicate', 'price_nightly': None},
+                {'row_number': 2, 'listing_id': 'duplicate', 'price_nightly': 100}]
+        summary = {'definition_version': DEFINITION, 'status': 'BLOCKED', 'counts': {'raw': 2}}
+        persist_ingestion(self.conn, self.paths.scope, self.manifest, rows, summary, [])
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_raw.listing_audit WHERE ' + SCOPE_SQL), self.paths.scope.params()), 2)
+        self.assertIsNone(self.conn.scalar(text("SELECT record->'price_nightly' FROM v4_raw.listing_audit WHERE row_number=1 AND " + SCOPE_SQL), self.paths.scope.params()))
+        with self.assertRaises(IntegrityError), self.conn.begin_nested():
+            persist_ingestion(self.conn, self.paths.scope, self.manifest, rows, summary, [])
+        with self.assertRaises(DBAPIError), self.conn.begin_nested():
+            self.conn.execute(text('UPDATE v4_raw.listing_audit SET record=record'))
+        with self.assertRaises(DBAPIError), self.conn.begin_nested():
+            self.conn.execute(text('TRUNCATE v4_raw.listing_audit'))
+        other = Paths(scope('stockholm'), self.paths.root)
+        _, manifest = freeze_sources(other, source_fixture(other))
+        persist_ingestion(self.conn, other.scope, manifest, rows, summary, [])
+        self.assertEqual(self.conn.scalar(text('SELECT count(*) FROM v4_raw.listing_audit WHERE ' + SCOPE_SQL), other.scope.params()), 2)
+
+    def test_committed_ingestion_cannot_accept_late_rows(self):
+        from src.v4.listings import persist_ingestion, DEFINITION
+        from test_v4_architecture import scope as fixture_scope
+        other = Paths(fixture_scope(stamp='20261011T140000Z'), self.paths.root)
+        manifest = {**self.manifest, 'synthetic_fixture': 'committed_ingestion'}
+        with self.engine.begin() as conn:
+            persist_ingestion(conn, other.scope, manifest, [{'row_number':1,'listing_id':'synthetic'}],
+                              {'definition_version':DEFINITION,'counts':{'raw':1}}, [])
+        with self.assertRaises(DBAPIError), self.conn.begin_nested():
+            self.conn.execute(text('INSERT INTO v4_raw.listing_audit VALUES '
+                                   "(:version,:run_id,:city,:snapshot,2,'late','{}')"), other.scope.params())
+
+    def test_listing_public_export_omits_private_rows_and_unknown_fields(self):
+        from src.v4.listings import persist_ingestion, DEFINITION
+        from src.v4.reporting import listing_evidence
+        summary={'definition_version':DEFINITION,'status':'BLOCKED','counts':{'raw':1,'private_prediction':'PRIVATE_SENTINEL'},
+                 'listing_id':'PRIVATE_SENTINEL','blockers':['Synthetic fixture only']}
+        persist_ingestion(self.conn,self.paths.scope,self.manifest,[{'row_number':1,'listing_id':'PRIVATE_SENTINEL'}],summary,[])
+        result=listing_evidence(self.conn,self.paths)
+        self.assertNotIn('PRIVATE_SENTINEL',json.dumps(result))
+        self.assertEqual(result['counts'],{'raw':1})
+        with self.assertRaises(FileExistsError): listing_evidence(self.conn,self.paths)

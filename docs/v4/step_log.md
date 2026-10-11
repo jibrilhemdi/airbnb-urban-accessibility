@@ -250,3 +250,138 @@ Requested commit: `feat(v4): add isolated multi-city configuration and persisten
 Push explicitly with `git push origin HEAD:refs/heads/v4`; verify remote V4 SHA
 matches local HEAD and report it outside this commit. Push failure is LOCAL_ONLY.
 This entry does not record its own commit SHA or claim a push before it occurs.
+
+## Step 4 — matched listings and official study-boundary audit
+
+11 October 2026, Europe/Copenhagen. Starting published V4 checkpoint:
+`8396046e60081604d539d83ff600198b23ea512f`. Read root AGENTS, contract,
+repository audit, amended specification, dictionary, source registry/configuration
+and this log. Initial worktree/staging area was clean; fetched recorded origin,
+confirmed local/remote V4 equality, recorded main base and expected ancestry.
+Both worktrees and main/V3 identities were preserved. No unrelated work or
+unfinished Git operation was mixed in. No raw source, applied migration,
+completed V3 output or historical document was replaced or regenerated.
+
+Scope: acquisition/ingestion audit only. No research model fitting, pipeline,
+housing assignment, prediction/OLS sample freeze, income mapping, analysis-area
+assignment or accessibility construction. The four housing-required model
+definitions, contrasts, thresholds, candidates and inference rules are unchanged.
+
+Implemented/acquired:
+
+- `src/v4/listings.py` reuses the actual six-type V3 constant and strict observed
+  price parser, checks the exact official catalogue/archive selection, freezes
+  raw receipts/manifests exclusively and audits schema, ID uniqueness, prices,
+  native quote currency, scrape/batch dates, quoted stay and municipal geometry.
+  The actual Python and SQL dwelling rules match the user's request exactly;
+  no primary review/activity threshold was introduced. The initial V3 geography
+  lookup discrepancy and V4 official-geometric audit are documented before
+  ingestion in `listing_acquisition.md`.
+- Official 30 June 2026 archive entries found for all three cities. Copenhagen
+  verified/reused at SHA `d0c81b5c30c0fa48ca2e77005d6e8418c6f491ee4af8dbac881ff7f5fd01ff71`;
+  unchanged bytes copied to V4 with original acquisition provenance. Oslo and
+  Stockholm downloaded from the exact official selected URLs, HTTP 200, with
+  hashes `2a3c604bb3113e04e65ff4573cfe7ee23b0015a0d04bc824b761c2a1b85add2c`
+  and `6d0ff60954da6e05b73ed741fe7ebbff5b57fe3b18acf4696acf5b824e4e6d6f`.
+  All three schemas have the same 90 detailed columns. No latest substitution,
+  inherited sample-count assumption, price imputation or raw-row publication.
+- Raw/dwelling/positive counts: Copenhagen 23,144 / 21,080 / 12,521;
+  Oslo 13,391 / 11,776 / 8,557; Stockholm catalogue extract 4,806 / 3,834 /
+  2,510. Missing-price eligible rows 8,559 / 3,219 / 1,324 remain in the audit.
+  Final audits have zero invalid/duplicate records and zero nonpositive eligible
+  parsed prices. These are source audits, never qualified model-sample sizes.
+- Copenhagen + Frederiksberg municipal geometries reused at original hashes,
+  vintages 27 March 2026 and 16 January 2024. District evidence moved to a
+  separate inherited analysis-area-source node; provider neighbourhood labels
+  and future housing-native areas remain separate, with no invented assignment.
+  Oslo Kartverket municipality 0301 geometry acquired with explicit EPSG:4326,
+  checksum `864c039bfaf1890460f8859865a489009a4ccbe64bbcd7c962abb59735f880fb`.
+  Oslo geometry vintage is explicitly unknown/current at retrieval, blocking
+  temporal qualification. Stockholm SCB registry confirms municipality 0180
+  in county 01; Lantmäteriet municipal items probe returns **HTTP 401**. No
+  authentication bypass, county/neighbourhood substitution or simplified SCB
+  thematic geometry (explicitly unsuitable for analysis) is used. Stockholm
+  municipal inside counts are NULL. Inside dwelling/positive counts are 12,508
+  Copenhagen/Frederiksberg and 8,557 Oslo, subject to the recorded vintage gate.
+- Native quote currencies independently confirm DKK/NOK/SEK and the official
+  dictionary defines price in local currency. The literal export dollar symbol
+  is a numeric-format artifact, never USD conversion. Actual scrape dates are
+  30 June–4 July Copenhagen, 30 June–3 July Oslo and 30 June/3 July Stockholm;
+  requested quoted-stay endpoints extend through 3 July 2027. All returned
+  dates/date_match values are NULL, not proof of a matched returned stay.
+  Flattened requested dates and observed/flattened nightly prices agree. Nested
+  rate rounding differences (3,556 / 2,369 / 793) are within half a native cent,
+  compared with Decimal strings; no alternative amount replaces the outcome.
+- Provisioned only `thesis_accessibility_v4` on the audited local server and an
+  ignored owner-only `.env.v4`, refusing any existing DB/config takeover. Applied
+  unchanged architecture migration 023 plus new append-only 024. No V3 schema
+  mutation, Compose/sharing change or credential publication. Raw/audit keys
+  preserve all rows (including invalid/duplicates in fixtures); committed audits
+  reject further inserts/updates/deletes/truncates. Audit ledgers are independent
+  of H-gated modelling runs. The V4 modelling-run count is **zero**.
+- Explicitly selected immutable ingestion IDs end in **20261011T143812Z**,
+  one per city. Earlier audits at 141934Z, 142446Z and 142610Z remain immutable and are
+  superseded for this checkpoint, not summed or treated as additional snapshots.
+  This preserves all provenance of audit refinements without overwriting rows.
+- Implemented/tested `v4-acquire`, `v4-ingest`, `v4-listing-audit`; SQL-derived
+  public evidence uses a whitelist/count/hash check and is reviewed in
+  `listing_acquisition_audit.json`. Raw rows/coordinates/host information/private
+  outputs and connection credentials remain ignored. Active V4 Markdown/index,
+  snapshot/currency configuration and selected-city scientific dependencies
+  updated. Reporting/log/Markdown edits remain outside scientific hashes.
+- Full baseline exposed V3 source discovery scanning the reserved V4 directory.
+  The sole legacy compatibility edit excludes precisely `data/raw/v4` from
+  legacy registration; unknown legacy providers still fail. Regression tested
+  with temporary fixtures. Existing V3 entry points/scientific filters and all
+  V3 source checks retain their behavior for V3 inputs.
+
+Actual checks:
+
+- `make compile`: passed on final code.
+- Final safe baseline `scripts/v4_repository_checks.py --baseline-tests`:
+  **140 discovered, 105 passed / 35 explicitly skipped**, zero failures/errors,
+  70.273s. Live V3 integration and production mutation flags disabled; candidate
+  export redirected to a temporary directory. Synthetic model fixtures are
+  tests only. Initial baseline discovery error resolved by the narrow namespace
+  exclusion, then full suite rerun successfully.
+- Final V4 targeted suite: **46 discovered,
+  34 passed / 12 opt-in DB skipped**. The full baseline includes the added
+  namespace test, Decimal rounding regression and all active definition tests.
+  Final review also added non-object quote JSON to the schema-failure cases;
+  the targeted suite passed after the guard refinement and real sources were
+  re-audited under the final adapter checksum with identical source/count evidence.
+- Final `make v4-test-db`: **12 passed**, 1.498s, in a fresh owned temporary
+  PostGIS DB. Tests migration idempotence/hash drift, city/run/snapshot isolation,
+  duplicates and NULL outcome preservation, source/CRS identities, committed
+  audit/fit immutability, late-row refusal and safe public export/overwrite refusal.
+  Initial synthetic fixture/savepoint issues were corrected and retested before
+  production application. One interrupted synthetic fixture DB was explicitly
+  removed by its known owned name after confirming no active connections;
+  final count of remaining disposable test DBs is **zero**.
+- Acquisition and ingestion/export main entry points exercised on real scoped
+  sources: Copenhagen acquisition/ingestion audit succeeds; Oslo/Stockholm emit
+  the expected **exit 2 / BLOCKED**, retaining real audit rows and exact source
+  failures. Missing Swedish access does not invent observations or municipal
+  coverage. Independent SQL selected-row counts match all three aggregates;
+  public evidence matches the exact ingestion-code SHA/schema/currency/date audit.
+- V4 production migration repeat returned `[]`; recorded 023/024 hashes match
+  files. Offline Oslo preflight remains **BLOCKED**, `mutations=0`,
+  `research_executed=false`. No research runner or model fit was invoked.
+- `--verify docs/v4/protected_v3_manifest.json --database`: all **1,696 protected
+  files, 22 applied V3 migration hashes and five SQL fingerprints unchanged**,
+  read-only. Final filesystem comparison follows all tests. Ignore probes verify
+  raw V4 listings, local `.env.v4` and private reports are excluded. Diff/staged
+  path and safe-publication checks are required before commit.
+
+Checkpoint: **READY_TO_COMMIT — BLOCKED DATA QUALIFICATION**. This safe
+acquisition/blocker checkpoint fulfils the authorized adapter/audit work but
+does not clear Stockholm geometry access/selection/licence/vintage, Oslo vintage,
+new-city projected CRS/anchor/context or any city's H/sample/fold gates.
+No narrower-city/descriptive modelling scope or no-H substitute is authorized.
+Exact source links, retrieval timestamps, licences, hashes, selection and local
+locations are in the safe audit. No supervisor approval/preregistration invented.
+
+Requested commit: `feat(v4): ingest matched city listings and study boundaries`.
+Push `HEAD` explicitly to `refs/heads/v4` on recorded origin and verify remote
+SHA equals local HEAD after commit; report outside this commit. Failure is
+LOCAL_ONLY. This entry does not record its own commit SHA or claim a future push.

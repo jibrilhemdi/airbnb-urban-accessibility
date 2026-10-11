@@ -3,7 +3,7 @@
   "city_definition_version": "v4_cities_20261011",
   "target_snapshot_month": "2026-06",
   "preferred_housing_reference_year": 2025,
-  "evidence_note": "Local V3 provenance is reusable evidence, not a V4 data freeze or permission to regenerate V3. Unknowns are intentionally unresolved. Copenhagen boundary vintages differ; district source date is unknown. New-city income units/crosswalks are not inferred from the legacy income_100k_dkk feature name.",
+  "evidence_note": "Matched 30 June 2026 catalogue/listing/schema/currency evidence frozen in V4. Study masks are official municipal geometry only; provider labels, official analysis areas and future housing areas stay distinct. Oslo vintage and Stockholm geometry unresolved; no Copenhagen context/projection defaults for other cities.",
   "cities": {
     "copenhagen_frederiksberg": {
       "study_boundary": {
@@ -28,16 +28,6 @@
             "geographic_extent": "Municipality 0147",
             "sha256": "1d8bf7fe945e937e3eda61e3039e8265404dd93f4c256283bf409cf0865d6031",
             "size_bytes": 85131
-          },
-          {
-            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
-            "source_url": "https://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:bydel&outputFormat=json&SRSNAME=EPSG:4326",
-            "source_date": null,
-            "acquired_at_utc": "2026-09-29T09:09:47.510559+00:00",
-            "source_crs": "EPSG:4326 requested from service; GeoJSON longitude/latitude",
-            "geographic_extent": "Copenhagen districts",
-            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3",
-            "size_bytes": 250640
           }
         ],
         "evidence": [
@@ -52,8 +42,8 @@
         "value": "2026-06-30",
         "evidence": [
           {
-            "path": "config/project.yml",
-            "sha256": "8a4e1a5cf2a49076bac2eebae18cf26a3e88894c14d3afee43c53d9fe0f1a5a2"
+            "path": "data/metadata/v4/research_design_v4/copenhagen_frederiksberg/2026-06-30/e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13.json",
+            "sha256": "a7634e890d749db7179ce47dd53c7b8a8a353410197f3beb4da1219c55fd44dd"
           }
         ]
       },
@@ -62,8 +52,8 @@
         "value": "DKK",
         "evidence": [
           {
-            "path": "docs/preanalysis_specification.md",
-            "sha256": "a74071f486ac1fc9c1d90e9c0f85ca73d0f9f75c87a6097068f1fabfb44b282c"
+            "path": "data/metadata/v4/research_design_v4/copenhagen_frederiksberg/2026-06-30/e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13.json",
+            "sha256": "a7634e890d749db7179ce47dd53c7b8a8a353410197f3beb4da1219c55fd44dd"
           }
         ]
       },
@@ -222,23 +212,69 @@
         "status": "unresolved",
         "value": null,
         "evidence": []
+      },
+      "official_analysis_area_sources": {
+        "status": "inherited_not_v4_qualified",
+        "value": [
+          {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "source_url": "https://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:bydel&outputFormat=json&SRSNAME=EPSG:4326",
+            "source_date": null,
+            "acquired_at_utc": "2026-09-29T09:09:47.510559+00:00",
+            "source_crs": "EPSG:4326 requested from service; GeoJSON longitude/latitude",
+            "geographic_extent": "Copenhagen districts",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3",
+            "size_bytes": 250640
+          }
+        ],
+        "evidence": [
+          {
+            "path": "data/raw/official_boundaries/2026-09-29/acquisition_metadata.json",
+            "sha256": "986e35f294bed4b5039778532ef475a256bc65ac495d691327155bb0251356ba"
+          }
+        ]
       }
     },
     "oslo": {
       "study_boundary": {
         "status": "unresolved",
-        "value": null,
-        "evidence": []
+        "value": [
+          {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/official_boundary/boundary.json",
+            "sha256": "864c039bfaf1890460f8859865a489009a4ccbe64bbcd7c962abb59735f880fb",
+            "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/0301/omrade?utkoordsys=4326",
+            "source_crs": "EPSG:4326",
+            "source_date": null,
+            "acquired_at_utc": "2026-10-11T14:16:21+00:00",
+            "qualification": "Current official 0301 municipal geometry acquired; geometry vintage unresolved"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/oslo/2026-06-30/c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8.json",
+            "sha256": "5c232251b16e34fe602404de8b24c3b9cca19606f4c714f1ce40a0302b3b22b9"
+          }
+        ]
       },
       "snapshot_date": {
-        "status": "unresolved",
-        "value": null,
-        "evidence": []
+        "status": "verified_local_evidence",
+        "value": "2026-06-30",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/oslo/2026-06-30/c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8.json",
+            "sha256": "5c232251b16e34fe602404de8b24c3b9cca19606f4c714f1ce40a0302b3b22b9"
+          }
+        ]
       },
       "currency": {
-        "status": "unresolved",
-        "value": null,
-        "evidence": []
+        "status": "verified_local_evidence",
+        "value": "NOK",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/oslo/2026-06-30/c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8.json",
+            "sha256": "5c232251b16e34fe602404de8b24c3b9cca19606f4c714f1ce40a0302b3b22b9"
+          }
+        ]
       },
       "metric_crs": {
         "status": "unresolved",
@@ -267,8 +303,19 @@
       },
       "source_identifiers": {
         "status": "unresolved",
-        "value": null,
-        "evidence": []
+        "value": {
+          "airbnb": "inside_airbnb:oslo:2026-06-30",
+          "boundary": "kartverket:0301",
+          "population": null,
+          "income": null,
+          "housing": null
+        },
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/oslo/2026-06-30/c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8.json",
+            "sha256": "5c232251b16e34fe602404de8b24c3b9cca19606f4c714f1ce40a0302b3b22b9"
+          }
+        ]
       },
       "housing": {
         "status": "unresolved",
@@ -280,17 +327,33 @@
       "study_boundary": {
         "status": "unresolved",
         "value": null,
-        "evidence": []
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
+            "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+          }
+        ],
+        "blocker": "Municipality 0180, distinct from county 01 (SCB verified); selected official geometry unavailable: HTTP 401. Licence, geometry vintage and API feature selection unresolved."
       },
       "snapshot_date": {
-        "status": "unresolved",
-        "value": null,
-        "evidence": []
+        "status": "verified_local_evidence",
+        "value": "2026-06-30",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
+            "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+          }
+        ]
       },
       "currency": {
-        "status": "unresolved",
-        "value": null,
-        "evidence": []
+        "status": "verified_local_evidence",
+        "value": "SEK",
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
+            "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+          }
+        ]
       },
       "metric_crs": {
         "status": "unresolved",
@@ -319,8 +382,19 @@
       },
       "source_identifiers": {
         "status": "unresolved",
-        "value": null,
-        "evidence": []
+        "value": {
+          "airbnb": "inside_airbnb:stockholm:2026-06-30",
+          "boundary": null,
+          "population": null,
+          "income": null,
+          "housing": null
+        },
+        "evidence": [
+          {
+            "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/d1722807bff5391a1064b995af36713d03c99586a6194c94f141fde5fd9397b6.json",
+            "sha256": "3df94b5c02f8ae97a8fbbf9f69dc630ba41c3c8bee49595335e6d2cc74e93c24"
+          }
+        ]
       },
       "housing": {
         "status": "unresolved",

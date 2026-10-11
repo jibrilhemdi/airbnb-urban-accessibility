@@ -2,7 +2,7 @@
 
 Definition version: `v4_housing_standard_20261011`. Decision date: 11 October
 2026. Newly authored from accessible source evidence. This is a qualification
-register, not a claim of V4 acquisition or a replacement for the authoritative
+register and current acquisition evidence, not a replacement for the authoritative
 PostgreSQL source registry. V3 results were already observed; supervisor approval
 is not recorded and this is not retrospective preregistration.
 
@@ -27,11 +27,11 @@ and metric CRS for spatial data/operations and explicit unknowns.
 
 | Source role | Available evidence | V4 status / required gate |
 | --- | --- | --- |
-| Airbnb outcome/property/host data | Inside Airbnb V3 Copenhagen/Frederiksberg extract dated 30 June 2026; immutable local paths/hashes | Matched June 2026 target retained; roster explicitly authorized; each city's exact snapshot/extent must be qualified |
+| Airbnb outcome/property/host data | Three detailed 30 June 2026 catalogue entries/files verified; Copenhagen reused at protected hash, Oslo/Stockholm officially downloaded; 90 identical columns | Acquired/ingested audit only; 41,341 source rows per selected freeze, missing-price rows retained; no model sample qualified |
 | Housing H | User-proposed full-year 2025 apartment residential sale-price/m2; no qualified V4 provider/file identified | BLOCKED: source, acquisition date, extent, checksum, unit/currency, statistic, transaction/coverage evidence and official area mapping unresolved |
 | Population/density X | V3 City/Statistics Denmark sources, qualified geography and population 2026 Q3 | Retain concept/limitations; qualify per-city reference period, density geography and CRS |
 | Income X | V3 Copenhagen KKIND5 and Frederiksberg nominal IFOR35, 2024 ten-decile arithmetic means, documented qualified acceptance | Inherited qualification applies to those sources only; new-city sources require compatible concepts and provenance |
-| Boundaries/centrality | V3 official national/municipal geometry, City Hall anchor; source EPSG:4326 and operations EPSG:25832 | Copenhagen local boundary/anchor/CRS evidence versioned in cities.json; Oslo/Stockholm and every housing crosswalk unresolved; never fabricate |
+| Boundaries/centrality | Copenhagen 0101 + Frederiksberg 0147 municipal geometry reused; Oslo 0301 current official geometry acquired; Stockholm 0180 municipality verified separately from county 01 | Oslo vintage unresolved; Stockholm geometry API 401; new-city metric CRS/anchor and every housing crosswalk unresolved; provider labels never substituted |
 | OSM network/stations/bus/POIs E/W | Frozen V3 extraction/taxonomy and deterministic consolidation; matched endpoint universe | Qualify each city extraction/coverage/snaps/topology; preserve inherited thresholds and category rules |
 | Tuning | Actual frozen V3 30-candidate list with seed/hash, copied under a V4 configuration identity | Definition inherited; no V4 fitting or data readiness certified |
 
@@ -50,9 +50,13 @@ ladder. Narrower-city or descriptive-only scope needs an explicit amendment;
 there is no automatic no-H fallback. None of the contrasts estimates adding-H
 benefit without a separately authorized no-H sensitivity.
 
-The specification step performed no acquisition or migration. The architecture
-step adds immutable V4 manifest registration and migration 023, tested only in
-a disposable database. No production V4 sources/results are registered and no
+The specification step performed no acquisition/migration. Architecture added
+023 and disposable tests. The listing step provisions `thesis_accessibility_v4`,
+applies unchanged 023 plus new 024 and registers immutable source manifests/raw
+audits with version/city/batch/ingestion identity. See
+[listing acquisition](listing_acquisition.md) and `listing_acquisition_audit.json`
+for exact URLs, timestamps, licences, hashes, safe counts and blockers.
+V3 remains untouched, no V4 fitted results exist, and no
 temporal Airbnb panel, residential-price outcome model or gentrification score
 is introduced. See the [specification](preanalysis_specification.md) and
 [document index](document_index.md) for authority and interpretation limits.
