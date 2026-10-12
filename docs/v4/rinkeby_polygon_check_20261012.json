@@ -1,0 +1,249 @@
+{
+  "definition_version": "rinkeby_polygon_diagnostic_20261012",
+  "design_id": "v4_accessibility_only_20261011",
+  "scope": "Targeted user-authorized polygon correspondence inspection, no new source or analysis qualification",
+  "inspection_date": "2026-10-12",
+  "run_identity": "research_v4_stockholm_20261012T140933Z",
+  "sources": {
+    "airbnb": {
+      "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/rinkeby_polygon_check_20261012/neighbourhoods.geojson",
+      "sha256": "9be3b672288e508e155f7e830b076ae9640fdf97063dad6cb7117ee116649274",
+      "receipt": {
+        "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/rinkeby_polygon_check_20261012/neighbourhoods.geojson.receipt.json",
+        "sha256": "7b56c2d891881ec85226e17600c7ab6069e6c5a630d4c00de46b8636e095a0c2"
+      }
+    },
+    "official_archive": {
+      "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_published_city_archive/source.html",
+      "sha256": "7e92c9e664ffe51aec4a2ecfa409bdd4d2fb1421aa474af3f0c80e52f1c3da27",
+      "receipt": {
+        "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_published_city_archive/source.html.receipt.json",
+        "sha256": "e94f35cdbda2bb828f5ddd3814ec4d367893bea80e2b0cb5a20c8ef09374b187"
+      },
+      "source_url": "https://dataportalen.stockholm.se/dataportalen/Data/Stadsbyggnadskontoret/SHP_utanfastigheter_nya_granser.zip",
+      "retrieved_at_utc": "2026-10-11T20:00:52+00:00",
+      "source_crs": "EPSG:3011",
+      "archive_layer": "Adm_area",
+      "member_date": "2020-12-10",
+      "qualification": "REJECTED_NOT_CURRENT_QUALIFIED_GEOGRAPHY; diagnostic use only; RAMKLIPP=yes"
+    },
+    "catalogue": {
+      "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/catalogue_3176684073/archive.json",
+      "sha256": "8a9e03dd0a5546b1c4e7434215f4da7d0d44480f0e17c1e2931024023e7bd5a7"
+    }
+  },
+  "manifest": {
+    "path": "data/metadata/v4/research_design_v4/stockholm/2026-06-30/b1a8d35f0359004f1cd339d30dab6ac699c386511e1c69eba23b6bde4a27b1c3.json",
+    "sha256": "b1a8d35f0359004f1cd339d30dab6ac699c386511e1c69eba23b6bde4a27b1c3"
+  },
+  "airbnb_receipt_record": {
+    "source_id": "rinkeby_polygon_check_20261012",
+    "filename": "neighbourhoods.geojson",
+    "source_url": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/visualisations/neighbourhoods.geojson",
+    "acquired_at_utc": "2026-10-12T14:09:33+00:00",
+    "geographic_extent": "Inside Airbnb Stockholm neighbourhoods; extent verified after decoding",
+    "source_crs": "GeoJSON geographic coordinates; validate declaration or RFC7946 CRS84 convention before metric comparison",
+    "licence": "CC BY 4.0 Inside Airbnb catalogue; original polygon provenance unverified",
+    "reference_period": "Inside Airbnb publish batch 2026-06-30; original boundary vintage unknown",
+    "selection": {
+      "city": "Stockholm",
+      "snapshot": "2026-06-30",
+      "catalogue_sha256": "8a9e03dd0a5546b1c4e7434215f4da7d0d44480f0e17c1e2931024023e7bd5a7",
+      "scope": "polygon correspondence inspection only; no analytical qualification"
+    },
+    "local_location": "data/raw/v4/research_design_v4/stockholm/2026-06-30/rinkeby_polygon_check_20261012/neighbourhoods.geojson",
+    "http_status": 200,
+    "final_url": "https://data.insideairbnb.com/sweden/stockholms-l%C3%A4n/stockholm/2026-06-30/visualisations/neighbourhoods.geojson",
+    "content_type": "application/octet-stream",
+    "last_modified": "Fri, 03 Jul 2026 21:31:07 GMT",
+    "status": "acquired",
+    "sha256": "9be3b672288e508e155f7e830b076ae9640fdf97063dad6cb7117ee116649274",
+    "size_bytes": 54355
+  },
+  "crs_interpretation": {
+    "airbnb": "OGC:CRS84, longitude/latitude WGS84 default for unlabelled GeoJSON under RFC7946 section4; original cartographic datum/date provenance otherwise unavailable",
+    "official": "EPSG:3011 declared by actual .prj; transform with always_xy",
+    "comparison": "EPSG:3006 projected metre CRS; no snapping, buffering, repairs, simplified geometry or address inference"
+  },
+  "interpretation": "Strong historical Rinkeby-Kista correspondence; shapes are not identical; no automatic label correction, income assignment, RegSO/borough crosswalk or current Järva qualification",
+  "result": {
+    "status": "HISTORICAL_CORRESPONDENCE_ONLY_CURRENT_CROSSWALK_UNQUALIFIED",
+    "metric_crs": "EPSG:3006",
+    "airbnb_feature_count": 14,
+    "official_native_count": 13,
+    "invalid_official_candidates_skipped": [
+      "Skarpnäck"
+    ],
+    "best_historical_candidate": "Rinkeby-Kista",
+    "comparisons": [
+      {
+        "name": "Rinkeby-Kista",
+        "native_id": "1",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 12.008041077889914,
+        "intersection_km2": 11.814189883915711,
+        "target_overlap_pct": 98.86961222136715,
+        "official_overlap_pct": 98.38565513961194,
+        "intersection_over_union_pct": 97.29126977623126,
+        "symmetric_difference_km2": 0.32892420133388395,
+        "hausdorff_m": 171.96552569181972
+      },
+      {
+        "name": "Spånga-Tensta",
+        "native_id": "3",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 12.86180800445941,
+        "intersection_km2": 0.027986808997717043,
+        "target_overlap_pct": 0.23421368541612098,
+        "official_overlap_pct": 0.21759622743562596,
+        "intersection_over_union_pct": 0.11292706307159903,
+        "symmetric_difference_km2": 24.755097277739385,
+        "hausdorff_m": 3396.636784103216
+      },
+      {
+        "name": "Bromma",
+        "native_id": "6",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 27.608481656284994,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 39.5577445475604,
+        "hausdorff_m": 8004.571915331272
+      },
+      {
+        "name": "Enskede-Årsta-Vantör",
+        "native_id": "14",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 21.57184714141425,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 33.52111003268965,
+        "hausdorff_m": 16799.289663851265
+      },
+      {
+        "name": "Farsta",
+        "native_id": "18",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 17.315283204432475,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 29.264546095707875,
+        "hausdorff_m": 20448.65566879173
+      },
+      {
+        "name": "Hägersten-Älvsjö",
+        "native_id": "21",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 24.219052888810715,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 36.16831578008612,
+        "hausdorff_m": 14468.059552638262
+      },
+      {
+        "name": "Hässelby-Vällingby",
+        "native_id": "4",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 25.104957034019755,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 37.05421992529517,
+        "hausdorff_m": 8037.968415027735
+      },
+      {
+        "name": "Kungsholmen",
+        "native_id": "8",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 6.960675061656102,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 18.9099379529315,
+        "hausdorff_m": 12403.738673089303
+      },
+      {
+        "name": "Norrmalm",
+        "native_id": "9",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 5.585724788090009,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 17.534987679365408,
+        "hausdorff_m": 12602.832595094642
+      },
+      {
+        "name": "Skärholmen",
+        "native_id": "24",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 10.24112878461126,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 22.19039167588666,
+        "hausdorff_m": 15326.08665855336
+      },
+      {
+        "name": "Södermalm",
+        "native_id": "11",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 10.761337922481594,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 22.710600813756994,
+        "hausdorff_m": 14537.305686788231
+      },
+      {
+        "name": "Östermalm",
+        "native_id": "10",
+        "clipped": "yes",
+        "target_area_km2": 11.9492628912754,
+        "official_area_km2": 24.034065043821844,
+        "intersection_km2": 0.0,
+        "target_overlap_pct": 0.0,
+        "official_overlap_pct": 0.0,
+        "intersection_over_union_pct": 0.0,
+        "symmetric_difference_km2": 35.98332793509725,
+        "hausdorff_m": 13749.045368777583
+      }
+    ],
+    "sql_mutations": 0,
+    "listing_assignments_changed": false,
+    "analysis_geography_qualified": false,
+    "research_executed": false
+  },
+  "software": {
+    "python": "3.13.5",
+    "shapely": "2.1.2",
+    "geos": "3.13.1",
+    "pyproj": "3.8.0",
+    "proj": "9.8.1",
+    "geopandas": "1.2.0"
+  }
+}

@@ -1144,3 +1144,76 @@ Requested checkpoint commit:
 Push HEAD explicitly to recorded origin refs/heads/v4 and verify remote equality
 outside this commit. No own SHA or predicted push success is recorded here;
 failed push means LOCAL_ONLY and pauses the sequence.
+
+## Supplementary Rinkeby-Tensta polygon check — 12 October 2026
+
+User requested verification through polygon comparison after the district-name
+comparison. This authorizes only the targeted source/geometry inspection, not
+A05+, current borough qualification, income assignment, final samples/folds,
+routes or fitting. Active design and scientific gates are unchanged.
+
+Entry clean existing v4 at pushed
+`73e69a7cadb78d2436e6c0057e3bdcc1819c4883`; fetched recorded origin, zero divergence,
+no staged/unrelated changes or unfinished operation. Read AGENTS, active contract,
+step log, A03/A04 geography/context evidence and preserved source policies.
+
+Acquired only Inside Airbnb's **2026-06-30 neighbourhood GeoJSON**, selected from
+the existing official frozen catalogue data root and verified returned schema/
+content. No listings download/reingestion. Immutable source/receipt, ignored raw
+path, retrieval2026-10-12T14:09:33Z, source SHA
+`9be3b672288e508e155f7e830b076ae9640fdf97063dad6cb7117ee116649274`,
+new discovery identity `research_v4_stockholm_20261012T140933Z`, manifest
+`b1a8d35f0359004f1cd339d30dab6ac699c386511e1c69eba23b6bde4a27b1c3`.
+Original geometry vintage remains unknown; HTTP Last-Modified2026-07-03 is separate.
+Inside Airbnb catalogue CC BY4.0 is recorded, original map provenance unverified.
+
+Reused the pinned official city archive already rejected for current analysis:
+Adm_area/EPSG:3011/member2020-12-10,13 old boroughs, RAMKLIPP=yes. Selected target
+is exactly one valid MultiPolygon among14 provider features. Unlabelled GeoJSON
+uses explicitly recorded RFC7946 default OGC:CRS84, longitude/latitude WGS84;
+comparison projects both sources to **EPSG:3006**, no repair/snap/buffer. All12
+valid historical borough candidates were compared; invalid Skarpnäck is reported
+and skipped. No private listing coordinates, IDs or prices were used.
+
+Target area **11.94926289km²**. Official historical Rinkeby-Kista ADM_ID1 covers
+**98.869612%** of target (official covered98.385655%, intersection/union97.291270%,
+symmetric difference0.32892420km², Hausdorff171.9655m). Official Spånga-Tensta
+ADM_ID3 covers **0.234214%** of target. Strong spatial evidence of approximate
+historical Rinkeby-Kista correspondence, not exact polygon identity/current Järva
+certification. Label/crosswalk/SQL records remain unchanged. Official city merger
+history was reviewed separately; it does not certify current polygon equality.
+
+Safe reproducible [report](rinkeby_polygon_check_20261012.md) and JSON record
+source/receipt/catalogue/manifest hashes, CRS interpretation, software versions
+and every public metric. New script prints diagnostics read-only, with no network,
+SQL or listing access. Document index/source registry point to the supplementary
+inspection; no frozen policy/applied migration/old audit/receipt is rewritten.
+This is a diagnostic export, not a replacement analytical store. PostgreSQL/
+PostGIS remains authoritative for existing research records; no SQL writes.
+
+Checks:
+
+- `.venv/bin/python scripts/v4_rinkeby_polygon_check.py --verify`: PASS, exact
+  recomputation against recorded safe results and source/receipt/manifest pins.
+- Three synthetic tests: **3/3 PASS**; overlap denominators/distance units,
+  disjoint geometry, invalid/empty/nonmetric refusal, duplicate/missing target
+  labels and ambiguous declared CRS refusal. No geometry repair is permitted.
+- `make v4-test`: **103 discovered,82 PASS,21 opt-in DB skipped**, exit0;
+  historical tests remain enabled and unchanged.
+- Compilation of the new script/test and whitespace checks: PASS.
+- Protected V3 verifier is run with `--database`; initial invocation without it
+  correctly refused because the recorded baseline includes SQL. Final complete
+  read-only verification PASS: 1,696 V3 files,22 applied migration hashes and five
+  analytical SQL fingerprints unchanged. No baseline recaptured or altered. Source
+  checks verify unchanged historical archive/catalogue bytes as well.
+- Raw/source GeoJSON and private data remain ignored/out of Git. Scope contains
+  only safe report/JSON/script/test/index/source-registry/log files. No SQL or
+  scientific selection changes, empirical work, access-control bypass or requests
+  to providers.
+
+Conclusion **HISTORICAL_CORRESPONDENCE_SUPPORTED / CURRENT_CROSSWALK_UNQUALIFIED**.
+Stockholm current borough geometry, income/geography/anchor/comparability gates
+remain BLOCKED; no A05+ execution. Commit this safe inspection checkpoint, push
+HEAD only to recorded origin refs/heads/v4 and verify actual remote equality
+outside the commit. Requested-work checkpoint message:
+`docs(v4): audit Rinkeby-Tensta polygon correspondence`.

@@ -78,3 +78,13 @@ source-validated, spatially joined and finally qualified. Oslo statistical-servi
 licence remains unresolved; no upstream/third-party licence is inferred. Exact
 failed404 receipt and previous failed/rejected geography evidence remain intact.
 No raw/statistical extract or private listing-level context is committed.
+
+## Targeted Rinkeby polygon inspection — 12 October 2026
+
+[The supplementary polygon report](rinkeby_polygon_check_20261012.md) records a
+new immutable June2026 Inside Airbnb neighbourhood GeoJSON receipt/manifest and
+reuse of the preserved rejected official historical archive. Exact provenance
+and diagnostics are in its JSON companion. These are discovery/inspection
+sources, not newly approved current boroughs or a RegSO/income crosswalk.
+Original acquisitions, failed receipts and active scientific source policies
+remain unchanged; no listing source was redownloaded or reingested.

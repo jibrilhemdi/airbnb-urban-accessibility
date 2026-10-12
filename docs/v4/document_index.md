@@ -104,3 +104,9 @@ joins. Stockholm anchor and new-city geography/income-policy gates remain.
 A03 and older audits are dated preserved evidence. Active Markdown remains
 authoritative; supplied DOCX files are stale/superseded and unchanged. A05–A12
 remain unexecuted and require their own user request.
+
+## Supplementary district-name verification — 12 October 2026
+
+- [rinkeby_polygon_check_20261012.md](rinkeby_polygon_check_20261012.md): targeted measured correspondence of Inside Airbnb Rinkeby-Tensta with historical official polygons; no current crosswalk or source qualification.
+- [rinkeby_polygon_check_20261012.json](rinkeby_polygon_check_20261012.json): safe source/receipt/manifest pins and reproducible public geometric diagnostics.
+- `scripts/v4_rinkeby_polygon_check.py --verify`: read-only local reproduction; no SQL, listing data, network or scientific-gate changes.
