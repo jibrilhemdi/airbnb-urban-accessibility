@@ -18,3 +18,18 @@ The [specification](preanalysis_specification.md) preserves inherited search,
 measurement, inference and robustness decisions except those explicitly amended.
 Any later scientific correction must be recorded before dependent fitting; no
 feature or grouping decision may follow performance inspection.
+
+Implementation resolution: direct official Stockholm11-unit population and
+native area spreadsheets qualified before fitting, so no unvalidated RegSO
+allocation was required. Primary source/feature/sample/fold qualification passed
+for all three predictive cities. Stockholm inferential union missingness exceeded
+the preserved5% gate before fitting; no new inferential-imputation approval or
+variable-dropping amendment was inferred. Dependent inference remains blocked.
+
+Registered source-defined sensitivities retain their inherited budgets and
+definitions. Price-tail restriction now operates within every inner/outer
+training fit, evaluating the full held-out set. Source-specific native density
+vintage/land-denominator checks address Stockholm's documented construction
+limits; incompatible provider polygon denominators are not invented for any
+city. Reported gains, SHAP rankings or transfer diagnostic coefficients never
+alter the scientific registry or fitted source pipeline.

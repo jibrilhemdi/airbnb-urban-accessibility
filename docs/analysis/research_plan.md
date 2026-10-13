@@ -26,3 +26,14 @@ There is one active runner; previous commands remain reproduction interfaces.
 
 The [execution log](execution_log.md) records actual status. Configuration or
 synthetic tests do not establish empirical readiness or completed research.
+
+Implemented: all three provider geographies, native densities, same-time civic
+anchors/OSM networks/destinations, matched features, reference/common samples,
+frozen folds, primary OLS/XGBoost prediction, random/both1.5km benchmarks and all
+six relative-price transfers. Copenhagen/Oslo association and triggered spatial/
+fixed-effect inference are complete. Stockholm association and dependent
+inference are blocked by the frozen5% union missingness guard. Independent
+registered robustness and final reporting are being completed; their actual
+statuses are certified by generated selectors/audits, never inferred from a
+configuration or this plan. The exhaustive registry and release audit distinguish
+scientific completion from accounted-for blocked/infeasible work.

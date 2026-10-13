@@ -28,3 +28,21 @@ New externally acquired files require immutable receipts containing source URL,
 acquisition UTC time, extent, reference/snapshot time, explicit CRS, checksum and
 licence. Failures remain failures with their response hashes; no downloaded HTML
 error is labeled acquired data. Raw and restricted content remains off Git.
+
+Selected source qualification is now implemented for all three prediction
+samples. `geography_audit.json`, `context_audit.json`, `accessibility_audit.json`
+and `sample_audit.json` are dated freeze evidence; their earlier pending-fit
+statuses are preserved rather than rewritten to describe later stages.
+Model/transfer/reporting selectors certify those later stages separately.
+Stockholm uses the directly published11-unit2025 population and2024 native
+land+water area spreadsheets pinned in `stockholm_population_sources.json`;
+no RegSO allocation was needed. Native area/vintage/footprint and unspecified
+city-source redistribution licence limitations remain explicit. All newly
+acquired OSM objects use the common2026-06-30T23:59:59Z snapshot. Failed
+overloaded/timeout attempts remain in the attempt registries with checksums.
+
+The generated `outputs/tables/research/new_source_receipts.csv` indexes selected
+new source receipts; original approved listing/mask/context manifest references
+remain in the city/source registries and preservation evidence. A transport
+receipt's pending-validation label is original acquisition evidence, not the
+final scientific qualification status. No raw licence is retroactively invented.

@@ -283,3 +283,28 @@ aggregate figures visually reviewed; final publication contribution figure
 will shorten its clipped axis label while preserving the initial output.
 Reporting generator implemented but not executed until all robustness selectors
 and independent geometric summaries exist. Git completion is recorded afterward.
+
+Robustness implementation checkpointbe68a991b595b8387505090040bcc496d999b267
+pushed exclusively to recorded origin refs/heads/v4; remote/local equality
+verified. Remote main andv3 still match recordedc1e919bca9dfbe89de9e67135fb432fdb0f020e6
+and6150e3f3b4e6db01dd5bf5842404212343d1344a respectively; local branches also
+unchanged. Full test discovery with owned PostGIS opt-in:227 tests,183 PASS,
+44 historical opt-in integrations skipped, zero failures (153.621s). All four
+owned disposable PostGIS tests pass within this run. Compileall/whitespace PASS.
+
+All seven completed Stockholm basic/training sensitivity families independently
+verified:56 performance rows/70 paired contrasts, saved hashes/losses and paired
+keys/outcomes PASS. Four additional Stockholm1/2km grid variants complete;
+cross-city summaries await Copenhagen/Oslo completion. All156 nested reputation
+inner training partitions independently checked: every required source training
+predictor has observed support; all39 outer training partitions likewise pass.
+No target outcome is used by this support check. Existing source-price/reference
+definitions, thresholds and candidate budget remain unchanged.
+
+Added reproducibility/deviation/document-index documentation, generated report
+template and read-only release audit. A dependency-driven completion runner
+launches the already registered measurement model sensitivities only after all
+three immutable measurement packages are selected, verifies completed grid and
+sensitivity outputs, then generates/audits aggregate reporting. Its private logs
+and models remain ignored. No full-release claim is made while those dependencies
+are running; Stockholm's inference gate remains blocked.

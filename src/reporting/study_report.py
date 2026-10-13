@@ -166,7 +166,8 @@ def run():
         software={'python':platform.python_version(),'platform':platform.platform(),'packages':{name:version(name) for name in ['numpy','pandas','scipy','scikit-learn','xgboost','statsmodels','shapely','pyproj','networkx','SQLAlchemy','psycopg2-binary','openpyxl','libpysal','spreg','matplotlib','joblib']}}
         write_once(PROJECT_ROOT/'docs/analysis/software_environment.json',(json.dumps(software,indent=2)+'\n').encode())
         inventory=[]
-        for directory in ['outputs/tables/research','outputs/figures/research','outputs/metrics']:
+        metric_schemes=['neighbourhood','random','transfer','robustness']+[f'blocks_{size}m_origin_{origin}' for size in [1000,1500,2000] for origin in ['0_0','0p5_0p5']]
+        for directory in ['outputs/tables/research','outputs/figures/research',*['outputs/metrics/'+scheme for scheme in metric_schemes]]:
             for path in sorted((PROJECT_ROOT/directory).rglob('*')):
                 if path.is_file():inventory.append({'path':path.relative_to(PROJECT_ROOT).as_posix(),'bytes':path.stat().st_size,'sha256':sha256_file(path)})
         write_once(PROJECT_ROOT/'docs/analysis/public_output_inventory.json',(json.dumps(inventory,indent=2)+'\n').encode())
