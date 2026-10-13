@@ -1,0 +1,949 @@
+city,scope,estimator,model,term,mean_abs,mean_signed,n,target_city
+copenhagen,neighbourhood_heldout,XGBoost,M0,distance_centre_euclidean_km,0.11124819421708691,0.0007102186590313722,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,accommodates,0.10763993145217056,-0.0006752355173734563,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,bedrooms,0.08746466347360199,-0.0003905699604289513,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,log_population_density,0.04411332395491141,-0.01708555090649371,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,log1p_minimum_nights,0.04082351713592367,0.0009858305204325992,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,amenity_dishwasher,0.03220849518628389,0.0005243811014020124,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,bathrooms_effective,0.031554555796637816,-0.0024958448772564234,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,amenity_washer,0.021741914627801676,0.00044168372550273857,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,log1p_host_listings_count,0.015206123307481568,0.0011845585658698042,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,amenity_workspace,0.015046962404616185,-6.288648925278079e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,amenity_private_balcony,0.014658911209413074,0.00021642797634853592,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,property_type_Entire rental unit,0.013931408449173541,-0.00010714458568420364,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,amenity_free_parking,0.010118866050930325,-0.00016059983664399097,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,superhost,0.009070463774705134,0.000153906937281173,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,amenity_dryer,0.008832318604387742,-0.00022159923817755716,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,property_type_Entire home,0.004044519723445239,0.0003767175120690021,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,amenity_self_checkin,0.0033298625374990356,-1.5175268171181424e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,property_type_Entire villa,0.002260786479562682,-0.000236924646189441,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,missingindicator_bedrooms,0.0016619130541901542,-6.652652100352096e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,property_type_Entire townhouse,0.001204724224599293,7.253625773658418e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,amenity_wifi,0.0011215641868328916,-0.0002906514593757427,12408,
+copenhagen,neighbourhood_heldout,XGBoost,M0,property_type_Entire loft,0.0010188907592992502,-2.4738237729994804e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,accommodates,0.10654274490440498,0.0006032302800543741,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,bedrooms,0.08940063508839455,-0.0012188049545913166,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,distance_centre_euclidean_km,0.08091473751927299,0.004872884785377159,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,log1p_culture_e,0.046882786899156,-0.020052579814742337,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,log1p_minimum_nights,0.0395523960463286,0.0009258009784877166,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,amenity_dishwasher,0.031862764776953,0.0009060647116770701,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,bathrooms_effective,0.029443382391484724,-0.00326485575193307,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,log_population_density,0.02355805271072316,-0.0062141241357052,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,amenity_washer,0.01859309137695881,0.0005846408115559308,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,amenity_private_balcony,0.014311090511145496,0.00021039417447662792,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,nearest_bus_euclidean_km,0.013563481888360995,-0.00032643909627979667,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,log1p_host_listings_count,0.013258986363350303,0.001073270087241346,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,amenity_workspace,0.013134456576470404,-6.419014322568567e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,log1p_food_e,0.012928282268297703,0.0031511365053556815,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,property_type_Entire rental unit,0.012785111070507529,0.00022522725167465726,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,amenity_free_parking,0.008537354292732405,0.00032617712361145314,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,superhost,0.007909168593291657,0.00026858248696517246,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,amenity_dryer,0.006936092447298017,-0.00018575358747697815,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,nearest_station_euclidean_km,0.006921717444378828,0.0008543621580556271,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,property_type_Entire home,0.002875211021509184,0.00037412051027361674,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,amenity_self_checkin,0.0026606108305569022,-0.00012038368320617385,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,property_type_Entire villa,0.0019330491510184857,-0.0001465922729118025,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,missingindicator_bedrooms,0.0014147766564566646,-9.085496200398751e-06,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,property_type_Entire townhouse,0.0010594572558677213,5.494789600296587e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,amenity_wifi,0.0010148000164863663,-0.00021310722761120924,12408,
+copenhagen,neighbourhood_heldout,XGBoost,ME,property_type_Entire loft,0.000908102087673002,-1.3164647376373044e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,accommodates,0.1069847399034432,-0.0004078301600201808,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,bedrooms,0.0886991117690949,-0.0003033871806551223,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,distance_centre_euclidean_km,0.07737480588628334,0.004308118891261993,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,log1p_culture_e,0.044351099888767835,-0.015543451460223621,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,log1p_minimum_nights,0.03966400163092961,0.0006337994910016426,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,amenity_dishwasher,0.031461842194400944,0.0010773175718719295,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,bathrooms_effective,0.028550332519114503,-0.003154279008051337,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,log_population_density,0.0243174242810727,-0.003808704738701713,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,amenity_washer,0.018524236605397922,0.000487359043693632,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,property_type_Entire rental unit,0.013497825444753555,0.00022938805170966551,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,amenity_private_balcony,0.013450974073044988,-3.451590584074373e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,log1p_host_listings_count,0.013172639702570755,0.0006368550988728061,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,amenity_workspace,0.012666579132764087,-6.850190769438655e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,nearest_bus_walking_minutes,0.010521639566941233,-0.00024763261048525937,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,nearest_station_walking_minutes,0.009890460723391965,0.0016405374034355448,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,log1p_food_w,0.009655209122899527,0.0059586312134333646,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,log1p_food_e,0.009501795706919194,0.0012830222126922566,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,nearest_bus_euclidean_km,0.008176812198622823,-2.8011275051083783e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,log1p_culture_w,0.008122807273241843,-0.0052634668509841135,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,amenity_free_parking,0.007975049268100512,-0.0002999037486159908,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,superhost,0.007759005503526254,0.00028415544134818995,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,amenity_dryer,0.00692968627334479,-0.0001847534103487395,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,nearest_station_euclidean_km,0.006191824767262303,0.00022737677648419888,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,property_type_Entire home,0.0028608860282792604,8.203534362919298e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,property_type_Entire villa,0.0018005896251471565,-4.081720983816193e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,amenity_self_checkin,0.0018003724392093065,5.179656672247084e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,missingindicator_bedrooms,0.0014112307980911184,-3.894219547654634e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,amenity_wifi,0.0009592352923446713,-0.0002721307099495997,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,property_type_Entire loft,0.0009104507671385912,-1.1383509287555632e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MEW,property_type_Entire townhouse,0.0008926586381463455,5.051604038899788e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,accommodates,0.10780583016039517,-0.00045533078698787254,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,distance_centre_euclidean_km,0.092854973024883,0.005207880502435848,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,bedrooms,0.08901894482680618,-0.000511238507604164,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,log1p_minimum_nights,0.039497291473150516,0.0008054767064713416,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,log1p_culture_w,0.037167779195908156,-0.010402972302203767,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,amenity_dishwasher,0.03168014340177552,0.0008682467748811173,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,bathrooms_effective,0.029563789225694404,-0.0031778837909975034,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,log_population_density,0.023453933281978378,-0.004539493616791713,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,amenity_washer,0.017990371964022204,0.0003807129522665714,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,nearest_bus_walking_minutes,0.01716132216046122,-0.00015679867758925644,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,amenity_private_balcony,0.013882562647543664,0.0001947836350227543,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,log1p_food_w,0.013706502692407554,0.007096518760959795,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,log1p_host_listings_count,0.013389456666356424,0.0010371498563385628,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,amenity_workspace,0.013333788299951207,-5.3166651896114644e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,property_type_Entire rental unit,0.013313923402736674,0.00038402708448051904,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,nearest_station_walking_minutes,0.009474017466619897,0.002395692976864391,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,amenity_free_parking,0.008370121583654815,-0.0002974478678317327,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,superhost,0.008357280540052628,0.00028944843738413925,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,amenity_dryer,0.007601678429326774,-0.00013770988135399385,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,property_type_Entire home,0.0033057418889406187,0.00013112693848050597,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,amenity_self_checkin,0.0023520034024467474,-1.9935384777840447e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,property_type_Entire villa,0.0018437954430808544,-8.17066687767212e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,missingindicator_bedrooms,0.001509708757642962,-3.5604448817373755e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,property_type_Entire townhouse,0.0010268734923607344,-1.340346154271663e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,property_type_Entire loft,0.0009095560937568675,-1.0061011774806713e-05,12408,
+copenhagen,neighbourhood_heldout,XGBoost,MW,amenity_wifi,0.0007731061579092334,-0.00020972736034356184,12408,
+oslo,neighbourhood_heldout,XGBoost,M0,accommodates,0.1276837703130244,-0.00020139737959136412,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,distance_centre_euclidean_km,0.12641347864672794,0.005776712162617005,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,bedrooms,0.09002853257776831,-0.003033713266564854,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,bathrooms_effective,0.05049424559823135,-0.002796217544981178,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,log1p_minimum_nights,0.037600825285472136,0.00032904631419665155,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,log_population_density,0.03540623216901638,-0.014490242964694628,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,amenity_free_parking,0.02776440607964436,0.0007671645565083153,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,property_type_Entire rental unit,0.019292909390077294,3.4227478943056706e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,missingindicator_bedrooms,0.018078695807163963,0.002058269847656141,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,log1p_host_listings_count,0.015362570083903527,0.0005576243302213733,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,amenity_workspace,0.012654204141723503,-9.34403374370056e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,amenity_private_balcony,0.011958378427988447,0.0004558564645539271,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,amenity_dryer,0.00712281938337673,0.00011719421511603535,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,property_type_Entire home,0.006512352684087557,2.4603346530678923e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,amenity_dishwasher,0.004570034538171841,0.0002838481184327829,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,superhost,0.0036141225801486617,-0.0005651513889254025,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,amenity_washer,0.0032168082401886396,0.00022925009520322992,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,amenity_self_checkin,0.001608274565010675,8.858824424102901e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,amenity_wifi,0.0013682051499896767,4.493617681204005e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,property_type_Entire villa,0.0010420945249089162,-6.728715662519924e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,property_type_Entire townhouse,0.0002438627823087989,7.511468585216525e-06,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,property_type_Entire loft,4.696388211778e-06,3.6103093986295894e-06,8529,
+oslo,neighbourhood_heldout,XGBoost,M0,missingindicator_log1p_minimum_nights,0.0,0.0,7272,
+oslo,neighbourhood_heldout,XGBoost,ME,accommodates,0.1321091582336476,0.0018362781775417324,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,distance_centre_euclidean_km,0.1163670113733416,0.012230097720205842,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,bedrooms,0.0866445379120788,-0.0010040732646965631,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,bathrooms_effective,0.055427373764624366,-0.006718750680554499,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,log1p_minimum_nights,0.035669571618418376,0.0005157181188028435,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,log_population_density,0.034293284469474605,-0.010043541862104018,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,amenity_free_parking,0.026232732592301477,-0.0014001741297875,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,property_type_Entire rental unit,0.019240548766149005,-0.00025484573763981595,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,log1p_culture_e,0.018177003378752297,0.0006022042810080721,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,missingindicator_bedrooms,0.01707099000193914,0.0012282639852348137,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,log1p_food_e,0.013755663549685567,0.0019166364843952466,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,nearest_station_euclidean_km,0.012330370679534935,0.0010639102452221008,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,log1p_host_listings_count,0.011741562645688843,0.00026757855556416464,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,amenity_workspace,0.01115739405905241,8.142677241466133e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,amenity_private_balcony,0.009919146204539384,7.113738545954612e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,nearest_bus_euclidean_km,0.009600236153080803,-0.00018849114449494183,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,amenity_dryer,0.005889803309094774,9.853498444808168e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,property_type_Entire home,0.004048275443914495,-0.0006768710701845126,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,amenity_dishwasher,0.003789141236449179,0.0001413822049707476,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,amenity_washer,0.002195799935216277,8.055393414334315e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,superhost,0.001510273334467121,-0.0002491283582710388,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,amenity_self_checkin,0.000977531994171392,0.00016144841476586075,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,amenity_wifi,0.0008314752069066997,3.153692398746239e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,property_type_Entire villa,0.0006428549142072935,3.1309119752332767e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,property_type_Entire townhouse,8.749493780776643e-05,-1.7924626084651398e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,property_type_Entire loft,0.0,0.0,8529,
+oslo,neighbourhood_heldout,XGBoost,ME,missingindicator_log1p_minimum_nights,0.0,0.0,7272,
+oslo,neighbourhood_heldout,XGBoost,MEW,accommodates,0.13535785979551354,0.00017317484746337598,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,distance_centre_euclidean_km,0.10176536651269034,0.004021646879772779,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,bedrooms,0.08657987373110997,0.00010448821856281328,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,bathrooms_effective,0.05267443146081837,-0.00579554663820596,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,log1p_minimum_nights,0.03518921531845352,0.0005313394824718133,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,log_population_density,0.032872548350007344,-0.008377739170145327,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,amenity_free_parking,0.02433531701682501,5.618367720426338e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,property_type_Entire rental unit,0.018006474078189668,-0.00018863013849646876,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,missingindicator_bedrooms,0.016725107139950037,0.0015866619325737043,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,log1p_culture_w,0.014311626557617684,-8.722605812412294e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,log1p_culture_e,0.013114206602320664,0.0003854909219573068,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,log1p_host_listings_count,0.011228661312393959,0.0002712606136113288,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,amenity_workspace,0.011209282961019466,-0.00010753085256452307,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,nearest_station_euclidean_km,0.00979866450553774,0.0012960145842790412,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,amenity_private_balcony,0.009312121057518467,2.8530080969096966e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,log1p_food_w,0.009160906127882293,0.0001689561141750869,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,log1p_food_e,0.008142449280752542,0.003024689077735442,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,nearest_bus_euclidean_km,0.00803757094552025,0.00041873936195227523,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,amenity_dryer,0.0058135875253589805,9.936010544601623e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,nearest_bus_walking_minutes,0.004770080801342672,-0.0002393443392604329,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,amenity_dishwasher,0.003767644475827509,0.00017423500843709224,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,property_type_Entire home,0.0036642845199643882,-0.00045300437193201206,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,nearest_station_walking_minutes,0.0035099439535635907,5.57043630665381e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,amenity_washer,0.0016383071993041494,6.45885595077047e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,superhost,0.0009909087727990853,-0.00011634103443742716,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,amenity_wifi,0.0008057113013444526,2.4344128138291396e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,property_type_Entire villa,0.0006497601611292778,4.652270736855952e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,amenity_self_checkin,0.00047790170506271164,0.00011719290597433667,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,property_type_Entire townhouse,5.337075827320205e-05,-1.6399181778391906e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,property_type_Entire loft,0.0,0.0,8529,
+oslo,neighbourhood_heldout,XGBoost,MEW,missingindicator_log1p_minimum_nights,0.0,0.0,7272,
+oslo,neighbourhood_heldout,XGBoost,MW,accommodates,0.1318240885885058,0.000729719348556364,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,distance_centre_euclidean_km,0.11096513075742334,0.005416312799413637,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,bedrooms,0.08699307159015494,-0.0010863715670429968,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,bathrooms_effective,0.05428529596214998,-0.004865372797627356,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,log1p_minimum_nights,0.03639617271449842,0.0007502122548021687,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,log_population_density,0.036284970331401906,-0.008651867591994883,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,amenity_free_parking,0.026119817100451758,-0.0012295547302675627,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,log1p_culture_w,0.02010834864028214,0.002370092176643139,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,property_type_Entire rental unit,0.018702420960666172,-0.0005415855880464949,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,missingindicator_bedrooms,0.017558667549351554,0.0017304453243012182,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,log1p_food_w,0.013784069339162038,0.0035543279672285047,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,log1p_host_listings_count,0.012607648832986207,0.0007470935443880998,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,amenity_workspace,0.011413567673904989,-3.3115778182991404e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,amenity_private_balcony,0.010960768367312848,0.0002271954594716544,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,nearest_station_walking_minutes,0.01091578963073632,0.00035118716056204585,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,nearest_bus_walking_minutes,0.00946945779998503,-0.00021773596590808042,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,amenity_dryer,0.006463367431697784,9.062894051584295e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,property_type_Entire home,0.003784355816486961,-0.0008735245974034426,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,amenity_dishwasher,0.003370554542146595,0.00012044751773856084,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,amenity_washer,0.002362667729371324,9.614775075680061e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,superhost,0.0021227268974033904,-0.0005054497037890714,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,amenity_wifi,0.0009456061550416075,1.8539604586487136e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,property_type_Entire villa,0.0007133391273785002,-9.111520370230125e-05,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,amenity_self_checkin,0.0006517036443622154,0.00016751929619388927,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,property_type_Entire townhouse,2.4492464708605156e-05,-5.660017455133803e-06,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,property_type_Entire loft,0.0,0.0,8529,
+oslo,neighbourhood_heldout,XGBoost,MW,missingindicator_log1p_minimum_nights,0.0,0.0,7272,
+stockholm,neighbourhood_heldout,XGBoost,M0,distance_centre_euclidean_km,0.24996976200738485,0.021497372231345423,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,bedrooms,0.1562237510621038,0.003681412096007617,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,accommodates,0.1506254931526419,-0.0049743948732376775,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,log1p_minimum_nights,0.08244310673184525,0.0021434143928958866,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,bathrooms_effective,0.057054280218842554,-0.004045213525957346,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,log_population_density,0.05181982449171547,-0.033226923087143104,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,amenity_dishwasher,0.04114377339797949,0.0006915471436295338,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,property_type_Entire rental unit,0.03542192021575206,-0.007136839796566891,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,missingindicator_bedrooms,0.024128061097921552,-0.00048714660179011805,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,amenity_free_parking,0.023471933555122528,-0.002590492465204367,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,amenity_washer,0.018256182638620458,0.00019546262098988146,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,log1p_host_listings_count,0.013921579246071014,0.0020663331160481056,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,property_type_Entire home,0.01152807882009914,0.0014668898564112,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,amenity_self_checkin,0.009852425924627331,-0.0001962558004259095,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,property_type_Entire villa,0.006949303298138776,-0.0006936153845594662,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,amenity_workspace,0.005684803581313603,-0.0009131477589814999,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,amenity_dryer,0.005616617424045594,0.0001924020677475648,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,superhost,0.00464652747610263,0.00037028436917187386,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,amenity_private_balcony,0.0039087264185102815,0.0009062357370576156,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,amenity_wifi,0.00245169910193779,7.961166964884901e-05,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,property_type_Entire townhouse,0.0017836352407242654,4.047386550982828e-05,2495,
+stockholm,neighbourhood_heldout,XGBoost,M0,property_type_Entire loft,2.256740648415521e-05,1.375425456868408e-06,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,distance_centre_euclidean_km,0.17300450286864374,0.025712101550386446,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,accommodates,0.16800182735040906,-0.01194603595391301,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,bedrooms,0.14421933342569473,0.009990439096170353,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,log1p_food_e,0.08278002328600875,0.009987051231045423,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,log1p_minimum_nights,0.07873066670127411,0.0031013534919691007,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,bathrooms_effective,0.04944912794616574,-0.006739417328429852,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,log1p_culture_e,0.04848967074839254,-0.008311891637419752,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,amenity_dishwasher,0.04072502826402087,-0.0005521595925988558,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,property_type_Entire rental unit,0.026048270328145825,-0.0028979758599508025,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,missingindicator_bedrooms,0.018629956635635325,-0.0004279398886143474,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,log_population_density,0.018552372865777503,-0.00808365564772614,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,nearest_bus_euclidean_km,0.015027349336518371,-0.0021724540144301037,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,amenity_washer,0.01218932806589442,-0.0004313072028072021,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,amenity_free_parking,0.011530426851490546,0.001260116585961474,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,nearest_station_euclidean_km,0.010384596650542217,0.0014350276068652017,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,log1p_host_listings_count,0.006110357505640641,0.0006816303674970336,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,property_type_Entire villa,0.005304272485176523,-0.00048578343949540106,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,property_type_Entire home,0.004529801188904665,0.0016914883019523471,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,amenity_workspace,0.002796155628873052,-0.00034632908931223186,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,amenity_private_balcony,0.002556658615433704,0.001054594642822437,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,amenity_dryer,0.0024160117455508524,0.00011551407280607609,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,amenity_self_checkin,0.001968872454071351,-0.00011151866539387743,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,superhost,0.0015632383654180788,-0.0003834730558633246,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,property_type_Entire townhouse,0.001140960377061512,1.0117880713902899e-05,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,amenity_wifi,0.0005201651668217611,-1.5647470792248645e-05,2495,
+stockholm,neighbourhood_heldout,XGBoost,ME,property_type_Entire loft,6.919029116336483e-06,-6.085651762032193e-06,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,accommodates,0.16796807358684723,-0.011114205478055764,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,distance_centre_euclidean_km,0.15566362945985188,0.02080161027684199,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,bedrooms,0.14462436587933053,0.0094269285325072,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,log1p_minimum_nights,0.07745761918307624,0.0027685583446161797,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,log1p_food_w,0.0609167248441652,0.003027793066681107,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,bathrooms_effective,0.048567741901524186,-0.006995240304682531,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,amenity_dishwasher,0.03927202130983283,-0.00039907773949190945,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,log1p_food_e,0.035252421321769624,0.007840142245644718,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,log1p_culture_w,0.02939297935785825,0.003554531857655078,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,log1p_culture_e,0.026528815602605373,-0.005762648135023555,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,property_type_Entire rental unit,0.02399887353823873,-0.0028459571951436613,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,missingindicator_bedrooms,0.018482895850116213,-0.0008714815531717334,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,nearest_bus_euclidean_km,0.015410960576650586,-0.0014890294521828326,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,nearest_station_walking_minutes,0.013974817497507605,0.001336622912429025,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,nearest_bus_walking_minutes,0.012777749933242766,-0.0018015291473188963,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,log_population_density,0.011694985021097752,-0.0022911562873363044,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,amenity_free_parking,0.011608715352386736,0.001815746625710861,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,amenity_washer,0.011553875705465977,-0.0004095189660470415,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,nearest_station_euclidean_km,0.008249094133955992,0.0013133840919283307,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,property_type_Entire villa,0.005397284858722897,-0.00018832384109896476,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,log1p_host_listings_count,0.005370069795112057,0.0007203821123921753,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,property_type_Entire home,0.003050748290009293,0.0011563156073295206,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,amenity_private_balcony,0.002289156090727099,0.0008285397531352771,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,amenity_workspace,0.0021649832947392617,-0.00013067754405415464,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,amenity_dryer,0.0020567056900886484,0.00013520001449653942,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,amenity_self_checkin,0.0017896254863090891,-0.00011563444806528285,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,superhost,0.001392709817316531,-0.00040131077565781667,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,property_type_Entire townhouse,0.0013051207068966216,-0.0002100898214018502,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,amenity_wifi,0.000377392335388856,-1.5565171825821055e-06,2495,
+stockholm,neighbourhood_heldout,XGBoost,MEW,property_type_Entire loft,6.431184968556966e-07,-6.431184968556966e-07,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,distance_centre_euclidean_km,0.17004075909332272,0.02119660986110779,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,accommodates,0.15991564763466604,-0.009053726057000987,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,bedrooms,0.14963329891751034,0.007665912038153798,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,log1p_food_w,0.08923037109233044,0.005336398524344191,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,log1p_minimum_nights,0.07877323712406407,0.0036130318476032056,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,bathrooms_effective,0.05069639996089133,-0.007634698441156461,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,log1p_culture_w,0.04172328689440443,-0.0003487384338497034,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,amenity_dishwasher,0.039675537318752736,0.0007416720780168842,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,property_type_Entire rental unit,0.02521997415805926,-0.003762395649715392,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,log_population_density,0.01971294783147614,-0.008490666384092904,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,missingindicator_bedrooms,0.019486230973691822,-0.0005088513020896362,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,nearest_station_walking_minutes,0.018735240620260916,0.0018871463009587726,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,nearest_bus_walking_minutes,0.014186957879061076,-0.002665999260909689,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,amenity_free_parking,0.014127494786146987,0.0002225122159885388,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,amenity_washer,0.013193495984260353,0.00017887872885209558,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,log1p_host_listings_count,0.008413225819464071,0.0015619946823294331,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,property_type_Entire home,0.0067428046447944754,0.0010023999235906917,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,property_type_Entire villa,0.006268029596949582,-0.0008449849730939838,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,amenity_self_checkin,0.0037417567403483596,-6.013697349848524e-05,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,amenity_private_balcony,0.0037041434918520136,0.0009983333912563163,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,amenity_dryer,0.0029679292064595177,-0.00012118844154543924,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,amenity_workspace,0.0029231693788734085,-0.00025415535112993686,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,superhost,0.002453845257667797,-1.744246975123791e-06,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,property_type_Entire townhouse,0.0015105429779281392,-0.0002828568440254494,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,amenity_wifi,0.0007107450895829627,1.818370433420842e-05,2495,
+stockholm,neighbourhood_heldout,XGBoost,MW,property_type_Entire loft,0.0,0.0,2495,
+copenhagen,directional_transfer,XGBoost,M0,accommodates,0.10919449478387833,0.014958531595766544,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,bedrooms,0.09296123683452606,0.007026357110589743,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,bathrooms_effective,0.031130202114582062,-8.631875971332192e-06,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,log1p_minimum_nights,0.04330168291926384,0.001436300459317863,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,superhost,0.010768872685730457,0.002001409186050296,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,log1p_host_listings_count,0.014242132194340229,0.0009422382572665811,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,amenity_wifi,0.0008310274570249021,-6.274952465901151e-05,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,amenity_dishwasher,0.031050972640514374,0.0035241134464740753,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,amenity_washer,0.018850503489375114,0.007459989283233881,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,amenity_dryer,0.007729889824986458,-0.0011546777095645666,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,amenity_workspace,0.015109342522919178,0.0012125512585043907,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,amenity_free_parking,0.010791990906000137,0.0033338614739477634,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,amenity_private_balcony,0.016522858291864395,0.0020830496214330196,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,amenity_self_checkin,0.0029239628929644823,-0.000107250947621651,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,log_population_density,0.03736621141433716,-0.036677878350019455,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,distance_centre_euclidean_km,0.11577941477298737,-0.018379967659711838,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,missingindicator_bedrooms,0.004509837832301855,-0.003118295455351472,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire home,0.004098600707948208,0.0003619079652708024,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire loft,0.001477627782151103,0.0003717444196809083,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire rental unit,0.00919223204255104,-0.0008220839081332088,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire townhouse,0.0007310136570595205,-0.00030185916693881154,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire villa,0.0016647815937176347,-0.0006983006605878472,8529,oslo
+copenhagen,directional_transfer,XGBoost,M0,accommodates,0.12777715921401978,0.029890546575188637,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,bedrooms,0.10842388868331909,0.019241251051425934,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,bathrooms_effective,0.043194640427827835,0.020014947280287743,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,log1p_minimum_nights,0.05792233720421791,-0.01800347864627838,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,superhost,0.01169365644454956,0.0030527727212756872,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,log1p_host_listings_count,0.02554677426815033,0.013962519355118275,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,amenity_wifi,0.0011415850603953004,-5.219389277044684e-05,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,amenity_dishwasher,0.03109305165708065,-0.003998574800789356,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,amenity_washer,0.020313145592808723,-0.002105880994349718,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,amenity_dryer,0.009617037139832973,0.0016648907912895083,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,amenity_workspace,0.012670552358031273,0.0007198243984021246,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,amenity_free_parking,0.007759138476103544,0.0005965657765045762,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,amenity_private_balcony,0.015853414312005043,0.0001761689636623487,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,amenity_self_checkin,0.0036763751413673162,-0.0003023702884092927,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,log_population_density,0.04494844004511833,-0.03327411413192749,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,distance_centre_euclidean_km,0.15672077238559723,-0.060658831149339676,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,missingindicator_bedrooms,0.005190026480704546,-0.0038743624463677406,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire home,0.006332509685307741,0.0026130147743970156,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire loft,0.0015881090657785535,0.0005951059865765274,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire rental unit,0.008845487609505653,-0.0020168456248939037,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire townhouse,0.0009266627603210509,-1.7274884157814085e-05,2495,stockholm
+copenhagen,directional_transfer,XGBoost,M0,property_type_Entire villa,0.004456755705177784,0.0020947037264704704,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,accommodates,0.11453835666179657,0.01809545047581196,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,bedrooms,0.0881761908531189,0.004183919169008732,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,bathrooms_effective,0.03164895996451378,0.00028177417698316276,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,log1p_minimum_nights,0.04152712598443031,0.000978721771389246,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,superhost,0.008733803406357765,0.0015262338565662503,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,log1p_host_listings_count,0.012803603895008564,0.00040902788168750703,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,amenity_wifi,0.0006943017360754311,-0.00012845669698435813,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,amenity_dishwasher,0.030363354831933975,0.00385353178717196,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,amenity_washer,0.017263565212488174,0.006944696418941021,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,amenity_dryer,0.006671176757663488,-0.000853463017847389,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,amenity_workspace,0.01399210188537836,0.0009752295445650816,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,amenity_free_parking,0.012473815120756626,0.004536247346550226,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,amenity_private_balcony,0.013728301972150803,0.0013472756836563349,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,amenity_self_checkin,0.0023048792500048876,-0.0001237306569237262,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,log_population_density,0.013174979947507381,-0.008698377758264542,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,distance_centre_euclidean_km,0.09341540187597275,-0.020920727401971817,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,nearest_station_euclidean_km,0.00884556770324707,-0.0014237912837415934,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,nearest_bus_euclidean_km,0.01211811974644661,0.0017532212659716606,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,log1p_food_e,0.010001841001212597,0.0024992641992866993,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,log1p_culture_e,0.05933685600757599,-0.004546539392322302,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,missingindicator_bedrooms,0.004869967233389616,-0.0034153203014284372,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire home,0.002251420170068741,0.0002882749540731311,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire loft,0.0013026976957917213,0.0003270350571256131,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire rental unit,0.011346581391990185,-0.0007007560925558209,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire townhouse,0.000662525009829551,-0.0002637612633407116,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire villa,0.0015250759897753596,-0.0007489684503525496,8529,oslo
+copenhagen,directional_transfer,XGBoost,ME,accommodates,0.1351553350687027,0.03357168287038803,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,bedrooms,0.10520528256893158,0.016231026500463486,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,bathrooms_effective,0.045750755816698074,0.021913545206189156,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,log1p_minimum_nights,0.05604693293571472,-0.018221823498606682,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,superhost,0.009498088620603085,0.0024089498911052942,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,log1p_host_listings_count,0.02203013002872467,0.011322882026433945,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,amenity_wifi,0.0007451972924172878,-0.0002382026141276583,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,amenity_dishwasher,0.030011435970664024,-0.0030459987465292215,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,amenity_washer,0.018365714699029922,-0.0020310671534389257,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,amenity_dryer,0.007937476970255375,0.0015360915567725897,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,amenity_workspace,0.011693342588841915,0.00034800253342837095,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,amenity_free_parking,0.00982204731553793,0.002753685461357236,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,amenity_private_balcony,0.012977072969079018,-0.0002995807444676757,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,amenity_self_checkin,0.00237496430054307,-0.0003194196615368128,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,log_population_density,0.021797243505716324,-0.007856777869164944,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,distance_centre_euclidean_km,0.1384056955575943,-0.07020353525876999,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,nearest_station_euclidean_km,0.00946700107306242,-0.00047028352855704725,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,nearest_bus_euclidean_km,0.01436696294695139,0.00035197497345507145,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,log1p_food_e,0.009605695493519306,0.004144217353314161,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,log1p_culture_e,0.08745769411325455,-0.0013041376369073987,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,missingindicator_bedrooms,0.005503235384821892,-0.004176932852715254,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire home,0.003431989112868905,0.0015044956235215068,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire loft,0.0014742461498826742,0.0005457300576381385,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire rental unit,0.01194973848760128,-0.0009727930882945657,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire townhouse,0.0008780674543231726,3.610653948271647e-05,2495,stockholm
+copenhagen,directional_transfer,XGBoost,ME,property_type_Entire villa,0.004059258848428726,0.0019462493946775794,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,accommodates,0.11528702825307846,0.014937964268028736,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,bedrooms,0.08484203368425369,0.008348760195076466,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,bathrooms_effective,0.031423941254615784,0.000270765129243955,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,log1p_minimum_nights,0.042707741260528564,0.0016535345930606127,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,superhost,0.009423520416021347,0.001585144898854196,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,log1p_host_listings_count,0.011450697667896748,0.00030539347790181637,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,amenity_wifi,0.0008439112571068108,-0.00018251375877298415,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,amenity_dishwasher,0.029924431815743446,0.0037365490570664406,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,amenity_washer,0.017374949529767036,0.007000722456723452,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,amenity_dryer,0.007063750643283129,-0.0011886360589414835,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,amenity_workspace,0.013537149876356125,0.0008409752044826746,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,amenity_free_parking,0.01017853058874607,0.0018275300972163677,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,amenity_private_balcony,0.014189559035003185,0.0013664107536897063,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,amenity_self_checkin,0.0018467449117451906,-0.00012968489318154752,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,log_population_density,0.015618360601365566,-0.009559486992657185,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,distance_centre_euclidean_km,0.10808158665895462,-0.014760639518499374,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,nearest_station_walking_minutes,0.01178635936230421,0.007477107457816601,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,nearest_bus_walking_minutes,0.016310270875692368,0.0010256870882585645,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,log1p_food_w,0.00908602774143219,-0.0037925175856798887,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,log1p_culture_w,0.04849162697792053,0.0001384766073897481,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,missingindicator_bedrooms,0.004716641269624233,-0.0032700137235224247,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire home,0.0031579078640788794,0.0006786668673157692,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire loft,0.0012893809471279383,0.00033727195113897324,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire rental unit,0.00910760648548603,-0.0007389133679680526,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire townhouse,0.0007867362583056092,-0.00032061515958048403,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire villa,0.0015317099168896675,-0.0005397035274654627,8529,oslo
+copenhagen,directional_transfer,XGBoost,MW,accommodates,0.13363151252269745,0.03151524439454079,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,bedrooms,0.10470730066299438,0.021224888041615486,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,bathrooms_effective,0.043380822986364365,0.02051672339439392,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,log1p_minimum_nights,0.05673590674996376,-0.01804591715335846,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,superhost,0.009853237308561802,0.00244144513271749,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,log1p_host_listings_count,0.01951546035706997,0.010074421763420105,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,amenity_wifi,0.0009723036200739443,-0.00022614694898948073,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,amenity_dishwasher,0.030078209936618805,-0.003289985004812479,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,amenity_washer,0.01897132210433483,-0.0019932417199015617,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,amenity_dryer,0.008296212181448936,0.001201167469844222,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,amenity_workspace,0.01204170286655426,-0.00011157702829223126,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,amenity_free_parking,0.007230558432638645,-0.00048631647950969636,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,amenity_private_balcony,0.013870351947844028,-0.0008516698726452887,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,amenity_self_checkin,0.0022443649359047413,-0.0003889940562658012,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,log_population_density,0.02644973248243332,-0.013848347589373589,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,distance_centre_euclidean_km,0.14789097011089325,-0.06910618394613266,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,nearest_station_walking_minutes,0.00817165058106184,-0.001198885147459805,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,nearest_bus_walking_minutes,0.018640799447894096,0.0014744773507118225,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,log1p_food_w,0.0096568139269948,-0.0035415389575064182,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,log1p_culture_w,0.07119377702474594,0.012191228568553925,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,missingindicator_bedrooms,0.005286505911499262,-0.003997004125267267,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire home,0.005018125753849745,0.002761423122137785,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire loft,0.0014182858867570758,0.0005731150740757585,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire rental unit,0.009747364558279514,-0.0013385231141000986,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire townhouse,0.0010424063075333834,1.4902057046128903e-06,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MW,property_type_Entire villa,0.0047032455913722515,0.0027291893493384123,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,accommodates,0.11622131615877151,0.019525734707713127,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,bedrooms,0.08610913157463074,0.004186872858554125,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,bathrooms_effective,0.030698752030730247,-0.00039644388016313314,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,log1p_minimum_nights,0.041512373834848404,0.0013634938513860106,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,superhost,0.00862683355808258,0.0015483432216569781,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,log1p_host_listings_count,0.012420796789228916,0.0005173419485799968,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,amenity_wifi,0.0007592258043587208,-8.570675709052011e-05,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,amenity_dishwasher,0.02998930774629116,0.003585857804864645,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,amenity_washer,0.017491836100816727,0.006998470518738031,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,amenity_dryer,0.006293909158557653,-0.0009279763326048851,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,amenity_workspace,0.01363876461982727,0.0009341284167021513,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,amenity_free_parking,0.012210841290652752,0.004322001710534096,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,amenity_private_balcony,0.013592834584414959,0.0012133645359426737,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,amenity_self_checkin,0.001855699811130762,-7.412156264763325e-05,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,log_population_density,0.009592955932021141,-0.0039707329124212265,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,distance_centre_euclidean_km,0.09090536087751389,-0.01838957518339157,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,nearest_station_euclidean_km,0.011317919008433819,-0.006037271581590176,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,nearest_bus_euclidean_km,0.008642937988042831,0.0018839099211618304,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,log1p_food_e,0.007142846006900072,0.0034025658387690783,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,log1p_culture_e,0.057453807443380356,-0.0021764906123280525,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,nearest_station_walking_minutes,0.012043051421642303,0.006909843534231186,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,nearest_bus_walking_minutes,0.007557972334325314,-0.00042495987145230174,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,log1p_food_w,0.003969128243625164,-0.0010287909535691142,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,log1p_culture_w,0.008353742770850658,-0.005416960455477238,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,missingindicator_bedrooms,0.004514636006206274,-0.0030956279952079058,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire home,0.0023317327722907066,1.1788157280534506e-05,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire loft,0.0013147334102541208,0.0003393884398974478,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire rental unit,0.011441456153988838,-0.0010590398451313376,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire townhouse,0.0006082250620238483,-0.0002463512937538326,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire villa,0.0013760981382802129,-0.0005584978498518467,8529,oslo
+copenhagen,directional_transfer,XGBoost,MEW,accommodates,0.13690520823001862,0.03622221201658249,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,bedrooms,0.10429418087005615,0.01715734414756298,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,bathrooms_effective,0.041956476867198944,0.01907884143292904,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,log1p_minimum_nights,0.054782502353191376,-0.018000593408942223,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,superhost,0.009116331115365028,0.0019936775788664818,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,log1p_host_listings_count,0.020507439970970154,0.01037667877972126,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,amenity_wifi,0.0006893077515996993,-0.00018275128968525678,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,amenity_dishwasher,0.030494078993797302,-0.0033762690145522356,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,amenity_washer,0.018570294603705406,-0.0019281781278550625,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,amenity_dryer,0.0070839072577655315,0.0012698331847786903,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,amenity_workspace,0.012343057431280613,0.0004649974580388516,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,amenity_free_parking,0.009808945469558239,0.0026386547833681107,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,amenity_private_balcony,0.012892435304820538,-0.0009888733038678765,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,amenity_self_checkin,0.0019618605729192495,-0.0002510662889108062,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,log_population_density,0.016568390652537346,-0.007372409105300903,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,distance_centre_euclidean_km,0.13286913931369781,-0.06894088536500931,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,nearest_station_euclidean_km,0.00857500359416008,-0.0014201551675796509,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,nearest_bus_euclidean_km,0.010646400973200798,0.0009789502946659923,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,log1p_food_e,0.007199367508292198,0.003766466863453388,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,log1p_culture_e,0.0826779305934906,-0.002462520496919751,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,nearest_station_walking_minutes,0.006905744317919016,-0.00027351436438038945,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,nearest_bus_walking_minutes,0.00870984885841608,-0.0004835083382204175,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,log1p_food_w,0.0036013105418533087,-0.00020030827727168798,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,log1p_culture_w,0.013167601078748703,0.003945833537727594,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,missingindicator_bedrooms,0.004971385467797518,-0.003714989870786667,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire home,0.0036499029956758022,0.00134822737891227,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire loft,0.0015168363461270928,0.0005948652396909893,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire rental unit,0.011451227590441704,-0.0018586615333333611,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire townhouse,0.0008265484939329326,1.7887664398585912e-06,2495,stockholm
+copenhagen,directional_transfer,XGBoost,MEW,property_type_Entire villa,0.0041664037853479385,0.002314391080290079,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,accommodates,0.11991705000400543,-0.014432779513299465,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,bedrooms,0.09596430510282516,-0.011194751597940922,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,bathrooms_effective,0.0451972521841526,-0.008729388006031513,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,log1p_minimum_nights,0.034372080117464066,0.0009910628432407975,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,superhost,0.004867042880505323,0.0006664771353825927,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,log1p_host_listings_count,0.018462395295500755,0.0038381905760616064,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,amenity_wifi,0.002161026233807206,-3.5742072213906795e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,amenity_dishwasher,0.00690575921908021,-0.0007976860506460071,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,amenity_washer,0.003979499451816082,-0.0012037864653393626,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,amenity_dryer,0.009377460926771164,0.0016251563793048263,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,amenity_workspace,0.0133493822067976,-0.0009696506895124912,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,amenity_free_parking,0.024858368560671806,-0.008852358907461166,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,amenity_private_balcony,0.013651566579937935,-0.0009250254952348769,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,amenity_self_checkin,0.0016781628364697099,0.00026132006314583123,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,log_population_density,0.05031318590044975,-0.05031318590044975,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,distance_centre_euclidean_km,0.1085933968424797,0.026974041014909744,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,missingindicator_bedrooms,0.013360442593693733,0.009029223583638668,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,missingindicator_log1p_minimum_nights,0.0,0.0,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,property_type_Entire home,0.00788967590779066,-0.0011646400671452284,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,property_type_Entire loft,0.0,0.0,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,property_type_Entire rental unit,0.01974886655807495,0.0017675732960924506,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,property_type_Entire townhouse,6.821134593337774e-05,-3.4849730582209304e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,property_type_Entire villa,0.001729206764139235,0.0005547440960071981,12408,copenhagen
+oslo,directional_transfer,XGBoost,M0,accommodates,0.14483042061328888,0.02662828378379345,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,bedrooms,0.10656356811523438,0.012586446478962898,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,bathrooms_effective,0.07328804582357407,0.02928551286458969,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,log1p_minimum_nights,0.05888302996754646,-0.01739267073571682,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,superhost,0.005380307324230671,0.0002112262009177357,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,log1p_host_listings_count,0.02349742501974106,0.00800770241767168,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,amenity_wifi,0.002130318433046341,-7.102284143911675e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,amenity_dishwasher,0.006444358266890049,-0.0013852709671482444,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,amenity_washer,0.005290463101118803,-0.0026543166022747755,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,amenity_dryer,0.009953277185559273,0.0031333263032138348,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,amenity_workspace,0.013516508974134922,0.0005720556364394724,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,amenity_free_parking,0.026396986097097397,-0.0012765172868967056,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,amenity_private_balcony,0.01204587146639824,-0.0022559701465070248,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,amenity_self_checkin,0.0037642009556293488,-0.00048040749970823526,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,log_population_density,0.06877988576889038,-0.03645717352628708,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,distance_centre_euclidean_km,0.16098381578922272,-0.043665170669555664,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,missingindicator_bedrooms,0.02243201993405819,-0.0018830952467396855,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,missingindicator_log1p_minimum_nights,0.0,0.0,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,property_type_Entire home,0.012056659907102585,0.004056611564010382,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,property_type_Entire loft,0.0,0.0,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,property_type_Entire rental unit,0.017112893983721733,-0.0004983788239769638,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,property_type_Entire townhouse,0.00018105196068063378,1.1173145139764529e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,M0,property_type_Entire villa,0.004822388291358948,0.0037599452771246433,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,accommodates,0.13156776130199432,-0.016307253390550613,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,bedrooms,0.09025301039218903,-0.007892869412899017,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,bathrooms_effective,0.0441410206258297,-0.00910845585167408,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,log1p_minimum_nights,0.030576365068554878,0.001556816161610186,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,superhost,0.0016386188799515367,2.9141618142602965e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,log1p_host_listings_count,0.015879420563578606,0.0048048533499240875,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,amenity_wifi,0.0011154632084071636,6.019174543325789e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,amenity_dishwasher,0.0050169117748737335,-0.0003763662825804204,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,amenity_washer,0.002586830873042345,-0.0009568711393512785,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,amenity_dryer,0.007478623650968075,0.0014178017154335976,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,amenity_workspace,0.012309622019529343,-0.0009523587650619447,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,amenity_free_parking,0.021018531173467636,-0.0074753290973603725,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,amenity_private_balcony,0.011651110835373402,-0.0007645326550118625,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,amenity_self_checkin,0.0008429416338913143,0.0001286222250200808,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,log_population_density,0.039270512759685516,-0.039270512759685516,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,distance_centre_euclidean_km,0.08940498530864716,0.017120245844125748,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,nearest_station_euclidean_km,0.010566162876784801,-0.0071967411786317825,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,nearest_bus_euclidean_km,0.010522469878196716,-0.0009974463609978557,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,log1p_food_e,0.016733992844820023,0.005948170553892851,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,log1p_culture_e,0.017361115664243698,0.0010402878979220986,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,missingindicator_bedrooms,0.011857100762426853,0.008106819353997707,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,missingindicator_log1p_minimum_nights,0.0,0.0,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,property_type_Entire home,0.0030164995696395636,-0.0004289531789254397,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,property_type_Entire loft,0.0,0.0,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,property_type_Entire rental unit,0.020272238180041313,0.0015697736525908113,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,property_type_Entire townhouse,0.0001542465470265597,-4.215006629237905e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,property_type_Entire villa,0.001223202096298337,0.00034277650411240757,12408,copenhagen
+oslo,directional_transfer,XGBoost,ME,accommodates,0.15788783133029938,0.027791505679488182,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,bedrooms,0.10341248661279678,0.017841380089521408,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,bathrooms_effective,0.07204150408506393,0.02884441427886486,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,log1p_minimum_nights,0.0523528978228569,-0.01858806051313877,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,superhost,0.0023560230620205402,9.911194501910359e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,log1p_host_listings_count,0.018146321177482605,0.007439862936735153,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,amenity_wifi,0.0011398597853258252,-4.4840435293735936e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,amenity_dishwasher,0.004623225424438715,-0.0006645077373832464,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,amenity_washer,0.0029113036580383778,-0.0015069718938320875,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,amenity_dryer,0.007877620868384838,0.00263197161257267,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,amenity_workspace,0.0121007040143013,0.00037803826853632927,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,amenity_free_parking,0.02297360450029373,-0.0008440306410193443,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,amenity_private_balcony,0.010312742553651333,-0.0016953243175521493,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,amenity_self_checkin,0.0011632846435531974,0.0001546571438666433,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,log_population_density,0.05266721174120903,-0.023099174723029137,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,distance_centre_euclidean_km,0.1355370581150055,-0.04453509300947189,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,nearest_station_euclidean_km,0.014197178184986115,-0.007954848930239677,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,nearest_bus_euclidean_km,0.010838093236088753,-0.0029044351540505886,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,log1p_food_e,0.016435325145721436,0.00010090287833008915,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,log1p_culture_e,0.0250938031822443,0.00325795984826982,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,missingindicator_bedrooms,0.018674558028578758,-0.0020401296205818653,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,missingindicator_log1p_minimum_nights,0.0,0.0,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,property_type_Entire home,0.004857101012021303,0.0015515625709667802,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,property_type_Entire loft,0.0,0.0,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,property_type_Entire rental unit,0.019272102043032646,-0.00027150724781677127,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,property_type_Entire townhouse,0.00016485278320033103,-5.845619671163149e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,ME,property_type_Entire villa,0.0034604771062731743,0.0026600032579153776,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,accommodates,0.12972404062747955,-0.013941544108092785,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,bedrooms,0.08704381436109543,-0.010289453901350498,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,bathrooms_effective,0.04601845145225525,-0.0101407365873456,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,log1p_minimum_nights,0.03158825635910034,0.0017942211125046015,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,superhost,0.0023002519737929106,0.0002533990773372352,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,log1p_host_listings_count,0.015990765765309334,0.003931489773094654,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,amenity_wifi,0.0018018927657976747,7.654615910723805e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,amenity_dishwasher,0.005778809078037739,-0.0005825494299642742,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,amenity_washer,0.0035664658062160015,-0.0012813626090064645,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,amenity_dryer,0.008001033216714859,0.0011964811710640788,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,amenity_workspace,0.011879241093993187,-0.0007118548383004963,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,amenity_free_parking,0.022101987153291702,-0.006318594794720411,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,amenity_private_balcony,0.012502502650022507,-0.0006744246929883957,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,amenity_self_checkin,0.0009942586766555905,0.00032702882890589535,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,log_population_density,0.044502194970846176,-0.044502194970846176,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,distance_centre_euclidean_km,0.09512549638748169,0.01665237545967102,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,nearest_station_walking_minutes,0.010737139731645584,-0.005619565956294537,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,nearest_bus_walking_minutes,0.011827925220131874,-0.0001363235933240503,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,log1p_food_w,0.015995172783732414,0.0028622373938560486,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,log1p_culture_w,0.018671048805117607,-0.0009936337592080235,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,missingindicator_bedrooms,0.01162734441459179,0.007948655635118484,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,missingindicator_log1p_minimum_nights,0.0,0.0,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,property_type_Entire home,0.0046988860704004765,-0.0005919498507864773,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,property_type_Entire loft,0.0,0.0,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,property_type_Entire rental unit,0.019878527149558067,0.0017180447466671467,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,property_type_Entire townhouse,0.0001968925935216248,-4.5863736886531115e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,property_type_Entire villa,0.0013185882708057761,0.000373476737877354,12408,copenhagen
+oslo,directional_transfer,XGBoost,MW,accommodates,0.15537554025650024,0.028798148036003113,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,bedrooms,0.09940482676029205,0.013967739418148994,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,bathrooms_effective,0.07258377969264984,0.027942005544900894,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,log1p_minimum_nights,0.054493069648742676,-0.016538342460989952,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,superhost,0.0027442099526524544,0.00030077630071900785,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,log1p_host_listings_count,0.019294187426567078,0.006538398563861847,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,amenity_wifi,0.00145056564360857,0.00013583475083578378,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,amenity_dishwasher,0.00484474329277873,-0.0010983721585944295,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,amenity_washer,0.0042020417749881744,-0.002228537341579795,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,amenity_dryer,0.008519378490746021,0.002554887905716896,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,amenity_workspace,0.011449783109128475,0.000804090581368655,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,amenity_free_parking,0.024542884901165962,0.00034316550591029227,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,amenity_private_balcony,0.011129799298942089,-0.0017390367574989796,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,amenity_self_checkin,0.002152176108211279,-0.0001332105020992458,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,log_population_density,0.05752163007855415,-0.02247653342783451,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,distance_centre_euclidean_km,0.14734061062335968,-0.05083673074841499,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,nearest_station_walking_minutes,0.014349945820868015,-0.0072806584648787975,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,nearest_bus_walking_minutes,0.011879878118634224,-1.8862445358536206e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,log1p_food_w,0.013823664747178555,-0.001725194975733757,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,log1p_culture_w,0.025880727916955948,0.0013545453548431396,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,missingindicator_bedrooms,0.018809961155056953,-0.0019460213370621204,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,missingindicator_log1p_minimum_nights,0.0,0.0,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,property_type_Entire home,0.0064614564180374146,0.002097529359161854,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,property_type_Entire loft,0.0,0.0,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,property_type_Entire rental unit,0.01894332654774189,-0.0004008626565337181,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,property_type_Entire townhouse,0.000211308230063878,-6.067205686122179e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,MW,property_type_Entire villa,0.0038470893632620573,0.0029511430766433477,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,accommodates,0.13473916053771973,-0.017169177532196045,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,bedrooms,0.08876077830791473,-0.008486934006214142,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,bathrooms_effective,0.04362332448363304,-0.009302782826125622,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,log1p_minimum_nights,0.029795126989483833,0.0017800955101847649,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,superhost,0.0010686545865610242,-5.002261241315864e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,log1p_host_listings_count,0.015147633850574493,0.0042397212237119675,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,amenity_wifi,0.0011048831511288881,4.001968773081899e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,amenity_dishwasher,0.004407117608934641,-0.0003189473063685,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,amenity_washer,0.0027029262855648994,-0.0010235199006274343,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,amenity_dryer,0.007553215138614178,0.001374715124256909,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,amenity_workspace,0.011906813830137253,-0.0008834541076794267,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,amenity_free_parking,0.019787335768342018,-0.0074289594776928425,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,amenity_private_balcony,0.010780745185911655,-0.000611663912422955,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,amenity_self_checkin,0.00038258766289800406,5.824697655043565e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,log_population_density,0.03524138778448105,-0.03524138778448105,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,distance_centre_euclidean_km,0.08217287808656693,0.016286471858620644,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,nearest_station_euclidean_km,0.007690780330449343,-0.005239345133304596,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,nearest_bus_euclidean_km,0.008570713922381401,-0.0003823433071374893,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,log1p_food_e,0.010644251480698586,0.0040728626772761345,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,log1p_culture_e,0.009873478673398495,-0.0006808407488279045,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,nearest_station_walking_minutes,0.003054362954571843,-0.0012722194660454988,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,nearest_bus_walking_minutes,0.005795386154204607,-0.0006844582967460155,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,log1p_food_w,0.008379046805202961,0.001315627247095108,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,log1p_culture_w,0.013869894668459892,-0.0020334036089479923,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,missingindicator_bedrooms,0.011527594178915024,0.00805874913930893,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,missingindicator_log1p_minimum_nights,0.0,0.0,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire home,0.0026136846281588078,-0.00028740146080963314,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire loft,0.0,0.0,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire rental unit,0.01997005008161068,0.0015136164147406816,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire townhouse,0.0001686055911704898,-3.4015367418760434e-05,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire villa,0.001278461772017181,0.00036603474291041493,12408,copenhagen
+oslo,directional_transfer,XGBoost,MEW,accommodates,0.1605944037437439,0.027782289311289787,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,bedrooms,0.10134199261665344,0.017389437183737755,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,bathrooms_effective,0.07125027477741241,0.028302788734436035,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,log1p_minimum_nights,0.05156895890831947,-0.01771296188235283,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,superhost,0.0015871458454057574,-0.00013760146975982934,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,log1p_host_listings_count,0.016833899542689323,0.007162348832935095,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,amenity_wifi,0.0010913463775068521,-4.5030097680864856e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,amenity_dishwasher,0.004086154047399759,-0.00047569547314196825,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,amenity_washer,0.003018740564584732,-0.001595732755959034,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,amenity_dryer,0.008079607039690018,0.0026423376984894276,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,amenity_workspace,0.011429714038968086,0.0005524549633264542,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,amenity_free_parking,0.021495673805475235,-0.0015023669693619013,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,amenity_private_balcony,0.009444480761885643,-0.0015296544879674911,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,amenity_self_checkin,0.00048042446724139154,2.487400934114703e-06,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,log_population_density,0.04877494275569916,-0.015865007415413857,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,distance_centre_euclidean_km,0.12387614697217941,-0.038192443549633026,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,nearest_station_euclidean_km,0.01063880417495966,-0.0052453335374593735,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,nearest_bus_euclidean_km,0.009159212931990623,-0.0017826880794018507,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,log1p_food_e,0.011671348474919796,0.0017675325507298112,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,log1p_culture_e,0.013734781183302402,-0.0010148794390261173,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,nearest_station_walking_minutes,0.0038783939089626074,-0.0019085104577243328,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,nearest_bus_walking_minutes,0.006458889227360487,-0.0003778048267122358,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,log1p_food_w,0.00826684758067131,-0.0023369567934423685,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,log1p_culture_w,0.01724967360496521,-0.0005689436802640557,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,missingindicator_bedrooms,0.017973152920603752,-0.0013618327211588621,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,missingindicator_log1p_minimum_nights,0.0,0.0,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire home,0.004004810005426407,0.001345901400782168,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire loft,0.0,0.0,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire rental unit,0.018827950581908226,-0.0004696029063779861,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire townhouse,0.00017669588851276785,-4.9414080422138795e-05,2495,stockholm
+oslo,directional_transfer,XGBoost,MEW,property_type_Entire villa,0.00362848280929029,0.002805245341733098,2495,stockholm
+stockholm,directional_transfer,XGBoost,M0,accommodates,0.14087945222854614,-0.034414149820804596,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,bedrooms,0.11627381294965744,-0.03714558482170105,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,bathrooms_effective,0.04211728274822235,-0.025524422526359558,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,log1p_minimum_nights,0.05997646227478981,0.03340279310941696,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,superhost,0.004492408595979214,-0.0015459328424185514,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,log1p_host_listings_count,0.007303046528249979,0.004994554910808802,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,amenity_wifi,0.0012949060183018446,0.00011828001879621297,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,amenity_dishwasher,0.04701409116387367,0.0066575221717357635,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,amenity_washer,0.026824738830327988,0.00581347057595849,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,amenity_dryer,0.0072158342227339745,0.0012332717888057232,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,amenity_workspace,0.005134635139256716,-0.0007694588275626302,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,amenity_free_parking,0.02012309804558754,-0.004803584888577461,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,amenity_private_balcony,0.0066974228248000145,0.0017385961255058646,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,amenity_self_checkin,0.0055075339041650295,0.000727353966794908,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,log_population_density,0.06470482796430588,-0.044746823608875275,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,distance_centre_euclidean_km,0.16857680678367615,0.10147754102945328,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,missingindicator_bedrooms,0.020655233412981033,0.015405774116516113,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire home,0.004968184046447277,-0.0019451563712209463,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire loft,6.023561581969261e-05,-1.9488594261929393e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire rental unit,0.025627829134464264,-0.00511955376714468,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire townhouse,0.0014826069818809628,-2.6753357815323398e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire villa,0.004342507570981979,-0.0028488158714026213,12408,copenhagen
+stockholm,directional_transfer,XGBoost,M0,accommodates,0.13871274888515472,-0.012700307182967663,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,bedrooms,0.10759370774030685,-0.02753482200205326,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,bathrooms_effective,0.04547500237822533,-0.02197863906621933,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,log1p_minimum_nights,0.0708061009645462,0.029538791626691818,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,superhost,0.004374200478196144,-0.0008700665784999728,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,log1p_host_listings_count,0.00694601284340024,0.0014945713337510824,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,amenity_wifi,0.0013456454034894705,0.00012822472490370274,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,amenity_dishwasher,0.04145178571343422,0.008961212821304798,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,amenity_washer,0.02389637939631939,0.012969891540706158,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,amenity_dryer,0.006359030492603779,0.0020628978963941336,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,amenity_workspace,0.004536694381386042,-0.0009530137176625431,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,amenity_free_parking,0.02246660180389881,0.0020587327890098095,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,amenity_private_balcony,0.005425598938018084,0.002027548151090741,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,amenity_self_checkin,0.006797586567699909,0.0004944805987179279,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,log_population_density,0.054421331733465195,-0.019420750439167023,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,distance_centre_euclidean_km,0.19740287959575653,0.07575944066047668,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,missingindicator_bedrooms,0.029385069385170937,0.006143002305179834,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire home,0.007447589188814163,-0.002709124004468322,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire loft,7.29258026694879e-05,-3.005391818078351e-06,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire rental unit,0.029555274173617363,-0.006785595789551735,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire townhouse,0.0011490728938952088,0.00035044836113229394,8529,oslo
+stockholm,directional_transfer,XGBoost,M0,property_type_Entire villa,0.003907206933945417,-0.003194202436134219,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,accommodates,0.15745289623737335,-0.041680362075567245,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,bedrooms,0.10895190387964249,-0.03337042033672333,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,bathrooms_effective,0.04009084403514862,-0.025578103959560394,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,log1p_minimum_nights,0.05713598430156708,0.032766301184892654,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,superhost,0.002376470249146223,-0.000872417411301285,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,log1p_host_listings_count,0.0054647778160870075,0.004167807754129171,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,amenity_wifi,0.0007536773919127882,-1.7653110262472183e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,amenity_dishwasher,0.04499334841966629,0.006805954966694117,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,amenity_washer,0.02080495096743107,0.004470669198781252,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,amenity_dryer,0.006077121011912823,0.0014393544988706708,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,amenity_workspace,0.0020759471226483583,-0.0005798024940304458,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,amenity_free_parking,0.010830320417881012,-0.0018761454848572612,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,amenity_private_balcony,0.0037057355511933565,0.0007086264668032527,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,amenity_self_checkin,0.0014619235880672932,2.7277705157757737e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,log_population_density,0.013539363630115986,-0.00963002722710371,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,distance_centre_euclidean_km,0.10772236436605453,0.08800998330116272,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,nearest_station_euclidean_km,0.009943246841430664,0.0011983826989308,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,nearest_bus_euclidean_km,0.01899508386850357,3.278482108726166e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,log1p_food_e,0.0622289814054966,-0.0010261806892231107,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,log1p_culture_e,0.03740639612078667,-0.001596602494828403,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,missingindicator_bedrooms,0.01784810982644558,0.013520694337785244,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire home,0.003099610563367605,-0.0016026394441723824,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire loft,0.00014156957331579179,-3.877599010593258e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire rental unit,0.02108055166900158,-0.0014559397241100669,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire townhouse,0.0008008333970792592,-0.00012310408055782318,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire villa,0.004033691715449095,-0.0028364176396280527,12408,copenhagen
+stockholm,directional_transfer,XGBoost,ME,accommodates,0.1532307267189026,-0.017276037484407425,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,bedrooms,0.10306461900472641,-0.02476782537996769,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,bathrooms_effective,0.04489312693476677,-0.023785240948200226,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,log1p_minimum_nights,0.06315336376428604,0.026283500716090202,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,superhost,0.0025768964551389217,-0.00040719329263083637,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,log1p_host_listings_count,0.00542353093624115,0.0024595356080681086,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,amenity_wifi,0.0008054044446907938,-0.0001107847856474109,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,amenity_dishwasher,0.04382301867008209,0.009372427128255367,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,amenity_washer,0.021196398884058,0.011211802251636982,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,amenity_dryer,0.005263650789856911,0.0019408324733376503,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,amenity_workspace,0.003404574701562524,-0.000718135735951364,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,amenity_free_parking,0.014009188860654831,0.0028304047882556915,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,amenity_private_balcony,0.0033505361061543226,0.0010056144092231989,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,amenity_self_checkin,0.0020261236932128668,-2.1790920072817244e-05,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,log_population_density,0.01154413167387247,-0.005407093092799187,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,distance_centre_euclidean_km,0.12985722720623016,0.06341399252414703,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,nearest_station_euclidean_km,0.012598635628819466,0.001832501613534987,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,nearest_bus_euclidean_km,0.018926657736301422,-0.00032533766352571547,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,log1p_food_e,0.05857716500759125,-0.009673148393630981,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,log1p_culture_e,0.03239741548895836,-0.00011592076771194115,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,missingindicator_bedrooms,0.023433227092027664,0.005513477139174938,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire home,0.003322375239804387,-0.0015848302282392979,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire loft,0.00016779069846961647,-2.7585729185375385e-06,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire rental unit,0.02265091985464096,-0.0034118611365556717,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire townhouse,0.000635469623375684,8.599738794146106e-05,8529,oslo
+stockholm,directional_transfer,XGBoost,ME,property_type_Entire villa,0.003915078472346067,-0.003255965420976281,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,accommodates,0.1596071571111679,-0.03939802199602127,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,bedrooms,0.10940754413604736,-0.03340153023600578,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,bathrooms_effective,0.04001697897911072,-0.026410505175590515,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,log1p_minimum_nights,0.056845687329769135,0.03253656253218651,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,superhost,0.0027694753371179104,-0.001221011159941554,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,log1p_host_listings_count,0.007445782423019409,0.0058275251649320126,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,amenity_wifi,0.0007945263059809804,-3.213106174371205e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,amenity_dishwasher,0.04025500640273094,0.0063135940581560135,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,amenity_washer,0.02056802250444889,0.004974589217454195,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,amenity_dryer,0.006533828563988209,0.0014794411836192012,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,amenity_workspace,0.0014893625630065799,-0.0003368623147252947,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,amenity_free_parking,0.01143350824713707,-0.002465837402269244,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,amenity_private_balcony,0.0053175343200564384,0.0007328232168219984,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,amenity_self_checkin,0.003847479820251465,0.0006362039712257683,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,log_population_density,0.010339814238250256,-0.00648667523637414,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,distance_centre_euclidean_km,0.11030126363039017,0.0897219181060791,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,nearest_station_walking_minutes,0.017116470262408257,0.005224582273513079,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,nearest_bus_walking_minutes,0.012228655628859997,-8.49039715831168e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,log1p_food_w,0.06517236679792404,-0.002283134264871478,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,log1p_culture_w,0.03138032928109169,-0.0019803245086222887,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,missingindicator_bedrooms,0.01740475930273533,0.01323013287037611,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire home,0.0034256200306117535,-0.00167590263299644,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire loft,0.0,0.0,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire rental unit,0.0194834116846323,-0.0018757954239845276,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire townhouse,0.0009581352351233363,-0.00011621095472946763,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire villa,0.003676566993817687,-0.0024457513354718685,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MW,accommodates,0.15557387471199036,-0.015376991592347622,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,bedrooms,0.1052011251449585,-0.024850178509950638,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,bathrooms_effective,0.04367593303322792,-0.024189341813325882,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,log1p_minimum_nights,0.0632135346531868,0.026334181427955627,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,superhost,0.0027415244840085506,-0.0006401932332664728,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,log1p_host_listings_count,0.006146244704723358,0.0025434645358473063,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,amenity_wifi,0.0009083189070224762,-0.00011770171113312244,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,amenity_dishwasher,0.04134378209710121,0.008979229256510735,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,amenity_washer,0.020391255617141724,0.011293048970401287,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,amenity_dryer,0.005183361936360598,0.001828039763495326,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,amenity_workspace,0.0018134934362024069,-0.00028222904074937105,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,amenity_free_parking,0.014246450737118721,0.002415592083707452,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,amenity_private_balcony,0.005118920933455229,0.0011406318517401814,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,amenity_self_checkin,0.004685739055275917,0.0006131723057478666,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,log_population_density,0.0089578190818429,-0.00229563913308084,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,distance_centre_euclidean_km,0.13261106610298157,0.06596753001213074,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,nearest_station_walking_minutes,0.021827874705195427,-7.961875235196203e-05,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,nearest_bus_walking_minutes,0.011424721218645573,-0.00014670105883851647,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,log1p_food_w,0.06880760192871094,-0.008952023461461067,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,log1p_culture_w,0.028611909598112106,-0.0001711340737529099,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,missingindicator_bedrooms,0.023574186488986015,0.005314385984092951,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire home,0.003619481809437275,-0.0015161080518737435,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire loft,0.0,0.0,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire rental unit,0.022119862958788872,-0.003736182814463973,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire townhouse,0.0007273286464624107,0.00012879539281129837,8529,oslo
+stockholm,directional_transfer,XGBoost,MW,property_type_Entire villa,0.0035300026647746563,-0.002862317021936178,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,accommodates,0.16026224195957184,-0.037989091128110886,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,bedrooms,0.11069483309984207,-0.03320295363664627,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,bathrooms_effective,0.04038909450173378,-0.027762962505221367,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,log1p_minimum_nights,0.057406436651945114,0.0332304984331131,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,superhost,0.0020064697600901127,-0.0007222456624731421,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,log1p_host_listings_count,0.0036074547097086906,0.0025701236445456743,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,amenity_wifi,0.0009408243931829929,-1.0963123713736422e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,amenity_dishwasher,0.043480366468429565,0.00624355673789978,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,amenity_washer,0.017751745879650116,0.003901634830981493,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,amenity_dryer,0.004308904521167278,0.001015102374367416,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,amenity_workspace,0.0017849430441856384,-0.00048023820272646844,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,amenity_free_parking,0.009538574144244194,-0.0022166722919791937,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,amenity_private_balcony,0.003906733822077513,0.0006858299020677805,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,amenity_self_checkin,0.0032652043737471104,0.0005344473174773157,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,log_population_density,0.005771724507212639,-0.0022613955661654472,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,distance_centre_euclidean_km,0.10173603147268295,0.08394244313240051,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,nearest_station_euclidean_km,0.010161264799535275,0.0007592482143081725,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,nearest_bus_euclidean_km,0.015983525663614273,0.0006627191905863583,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,log1p_food_e,0.02544974349439144,0.0011106346501037478,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,log1p_culture_e,0.016919223591685295,-0.0013500081840902567,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,nearest_station_walking_minutes,0.014494323171675205,0.005389004480093718,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,nearest_bus_walking_minutes,0.01386572327464819,-3.792790448642336e-05,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,log1p_food_w,0.048399973660707474,-0.004376866854727268,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,log1p_culture_w,0.016361357644200325,-0.0016563802491873503,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,missingindicator_bedrooms,0.017066385596990585,0.012689493596553802,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire home,0.0014163963496685028,-0.0007110901060514152,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire loft,0.0,0.0,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire rental unit,0.02113860659301281,-0.0026731896214187145,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire townhouse,0.0008626114577054977,-0.00012041285663144663,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire villa,0.002992471447214484,-0.0019466577796265483,12408,copenhagen
+stockholm,directional_transfer,XGBoost,MEW,accommodates,0.15691502392292023,-0.013942315243184566,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,bedrooms,0.1037871390581131,-0.023760788142681122,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,bathrooms_effective,0.044821228832006454,-0.025891127064824104,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,log1p_minimum_nights,0.06268645823001862,0.026238687336444855,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,superhost,0.0019579834770411253,-0.0003108945384155959,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,log1p_host_listings_count,0.003660624846816063,0.00132151844445616,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,amenity_wifi,0.0010481489589437842,-7.315020775422454e-05,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,amenity_dishwasher,0.04253610223531723,0.008672617375850677,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,amenity_washer,0.017475374042987823,0.009402846917510033,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,amenity_dryer,0.004042377695441246,0.0014804102247580886,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,amenity_workspace,0.002625328255817294,-0.0004475097230169922,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,amenity_free_parking,0.012468140572309494,0.0020899097435176373,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,amenity_private_balcony,0.0036629061214625835,0.0010025035589933395,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,amenity_self_checkin,0.004385863430798054,0.000477360503282398,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,log_population_density,0.0065694814547896385,-0.0007642035488970578,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,distance_centre_euclidean_km,0.12021235376596451,0.060246750712394714,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,nearest_station_euclidean_km,0.013289104215800762,0.00787044595927,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,nearest_bus_euclidean_km,0.015592607669532299,0.0007801542524248362,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,log1p_food_e,0.022816525772213936,-0.0019248712342232466,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,log1p_culture_e,0.017647376284003258,0.0014954968355596066,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,nearest_station_walking_minutes,0.021065808832645416,-0.0049097719602286816,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,nearest_bus_walking_minutes,0.012562863528728485,0.00019608362345024943,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,log1p_food_w,0.05261582136154175,-0.010005488060414791,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,log1p_culture_w,0.012088811956346035,-0.0032013317104429007,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,missingindicator_bedrooms,0.022920113056898117,0.004392931237816811,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire home,0.0015961873577907681,-0.000701075594406575,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire loft,0.0,0.0,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire rental unit,0.024134939536452293,-0.004864368587732315,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire townhouse,0.0006935395067557693,0.00010369332449045032,8529,oslo
+stockholm,directional_transfer,XGBoost,MEW,property_type_Entire villa,0.0029616025276482105,-0.002371755661442876,8529,oslo

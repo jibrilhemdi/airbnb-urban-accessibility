@@ -1,0 +1,10 @@
+# Claims And Limitations
+
+Generated from explicitly pinned final SQL/results; definitions, selection limits and source identities remain unchanged.
+
+| research_question | supports | does_not_support |
+| --- | --- | --- |
+| RQ1 | Measurement differences on matched destination universes | Same-destination circuity, complete OSM coverage or causal price effects |
+| RQ2 | City-specific paired predictive changes and complementary adjusted associations | Universal network superiority, causal coefficients or statistical equivalence |
+| RQ3 | Observed heterogeneity across correlated fixed geographic designs | Independent replication across grids or generalization to all Nordic cities |
+| RQ4 | Directional relative-price performance using an observed target reference | Zero-shot absolute-price deployment, target recalibration or pseudo-independent six-direction tests |

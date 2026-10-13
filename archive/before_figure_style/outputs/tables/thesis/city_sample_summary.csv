@@ -1,0 +1,4 @@
+city,raw_listings,eligible_conventional_dwellings,positive_price_listings,inside_study_area,geography_assigned,common_accessibility_support,prediction_n,association_n,operational_neighbourhoods,association_missing_percent,association_missing_limit_percent,reference_n,reference_mean_log_price,reference_geometric_mean_native_price,currency
+Copenhagen,23144,21080,12521,12508,12508,12408,12408,12285,11,0.9912959381044486,10.0,12508,7.50557821177844,1818.1562402538832,DKK
+Oslo,13391,11776,8557,8557,8557,8529,8529,8152,17,4.420213389611912,10.0,8557,7.62464489617017,2048.0530643895067,NOK
+Stockholm,4806,3834,2510,2510,2510,2495,2495,2348,11,5.891783567134269,10.0,2510,7.7112065845990125,2233.235220438514,SEK

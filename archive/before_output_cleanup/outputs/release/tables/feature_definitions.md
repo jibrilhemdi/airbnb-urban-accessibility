@@ -1,0 +1,31 @@
+# Feature Definitions
+
+Generated from explicitly pinned final SQL/results; definitions, selection limits and source identities remain unchanged.
+
+| block | feature | concept | source | unit | transformation | common_construction | qualification |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| X | accommodates | Guest capacity | Original detailed Inside Airbnb export | count | none | accommodates | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | bedrooms | Bedrooms | Original detailed Inside Airbnb export | count | none | bedrooms | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | bathrooms_effective | Bathrooms | Original detailed Inside Airbnb export | bathrooms | explicit parser provenance | Structured bathrooms, else inherited exact text parser | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | log1p_minimum_nights | Minimum nights | Original detailed Inside Airbnb export | count | log1p | minimum nights | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | superhost | Superhost | Original detailed Inside Airbnb export | 0/1 | t/true/yes and f/false/no mapping; missing NULL | Source superhost status | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | log1p_host_listings_count | Host listings | Original detailed Inside Airbnb export | count | log1p | host listings count | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | amenity_wifi | Wi-Fi | Original detailed Inside Airbnb export | 0/1 | missing JSON retained NULL | Prespecified exact source amenity indicator | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | amenity_dishwasher | Dishwasher | Original detailed Inside Airbnb export | 0/1 | missing JSON retained NULL | Prespecified exact source amenity indicator | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | amenity_washer | Washer | Original detailed Inside Airbnb export | 0/1 | missing JSON retained NULL | Prespecified exact source amenity indicator | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | amenity_dryer | Dryer | Original detailed Inside Airbnb export | 0/1 | missing JSON retained NULL | Prespecified exact source amenity indicator | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | amenity_workspace | Workspace | Original detailed Inside Airbnb export | 0/1 | missing JSON retained NULL | Prespecified exact source amenity indicator | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | amenity_free_parking | Free parking | Original detailed Inside Airbnb export | 0/1 | missing JSON retained NULL | Prespecified exact source amenity indicator | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | amenity_private_balcony | Private balcony | Original detailed Inside Airbnb export | 0/1 | missing JSON retained NULL | Prespecified exact source amenity indicator | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | amenity_self_checkin | Self check-in | Original detailed Inside Airbnb export | 0/1 | missing JSON retained NULL | Prespecified exact source amenity indicator | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| X | log_population_density | Population density | Qualified native official population and compatible gross area | persons/km² | natural log | Official population / compatible matching area | QUALIFIED_SOURCE_NATIVE_WITH_RECORDED_LIMITS; see context_audit.json |
+| X | distance_centre_euclidean_km | Civic-centre distance | Frozen OSM civic object and accepted city metric CRS | km | none | Metric Euclidean distance to frozen OSM civic anchor | QUALIFIED_SOURCE_NATIVE_WITH_RECORDED_LIMITS; see context_audit.json |
+| X | property_type | Property type | Original detailed Inside Airbnb export | category | source-only one-hot; unknown levels ignored | One of six conventional dwelling types | FRESH_SOURCE_PARSED; missingness audited in sample_audit.json |
+| E | nearest_station_euclidean_km | Rail: straight-line km | Matched frozen OSM destinations and Euclidean/directed-foot routing | km | none | Nearest matched named rail/metro/urban-rail station | MATCHED_SOURCE_RECOMPUTED; see accessibility_audit.json and sample_audit.json |
+| E | nearest_bus_euclidean_km | Bus: straight-line km | Matched frozen OSM destinations and Euclidean/directed-foot routing | km | none | Nearest matched consolidated bus stop | MATCHED_SOURCE_RECOMPUTED; see accessibility_audit.json and sample_audit.json |
+| E | log1p_food_e | Food: log(1 + Euclidean count) | Matched frozen OSM destinations and Euclidean/directed-foot routing | count | log1p; 833m E /10min W | Matched destination opportunity count | MATCHED_SOURCE_RECOMPUTED; see accessibility_audit.json and sample_audit.json |
+| E | log1p_culture_e | Culture: log(1 + Euclidean count) | Matched frozen OSM destinations and Euclidean/directed-foot routing | count | log1p; 833m E /10min W | Matched destination opportunity count | MATCHED_SOURCE_RECOMPUTED; see accessibility_audit.json and sample_audit.json |
+| W | nearest_station_walking_minutes | Rail: walking minutes | Matched frozen OSM destinations and Euclidean/directed-foot routing | minutes | none | Minimum directed foot-network cost to matched rail stations including both connectors | MATCHED_SOURCE_RECOMPUTED; see accessibility_audit.json and sample_audit.json |
+| W | nearest_bus_walking_minutes | Bus: walking minutes | Matched frozen OSM destinations and Euclidean/directed-foot routing | minutes | none | Minimum directed foot-network cost to matched bus stops including both connectors | MATCHED_SOURCE_RECOMPUTED; see accessibility_audit.json and sample_audit.json |
+| W | log1p_food_w | Food: log(1 + walking count) | Matched frozen OSM destinations and Euclidean/directed-foot routing | count | log1p; 833m E /10min W | Matched destination opportunity count | MATCHED_SOURCE_RECOMPUTED; see accessibility_audit.json and sample_audit.json |
+| W | log1p_culture_w | Culture: log(1 + walking count) | Matched frozen OSM destinations and Euclidean/directed-foot routing | count | log1p; 833m E /10min W | Matched destination opportunity count | MATCHED_SOURCE_RECOMPUTED; see accessibility_audit.json and sample_audit.json |

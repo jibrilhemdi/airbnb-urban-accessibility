@@ -1,0 +1,23 @@
+# A01 — Amend the active scope; preserve completed work
+
+The user has changed the research scope: remove residential housing/property prices and only extend the v3 accessibility study to Copenhagen–Frederiksberg, Oslo and Stockholm. This replaces the old housing-inclusive v4 instructions. Continue the EXISTING v4 branch; do not recreate it from main.
+
+First read applicable AGENTS.md, docs/v4/IMPLEMENTATION_CONTRACT.md, the step log, active design documents, actual v3 specification, listing_acquisition.md, stockholm_boundary_amendment_20261011.md, housing_acquisition.md and housing_access_requirements.md. Locate their actual repository paths. Also read the newly supplied revision bundle at docs/v4/revisions/accessibility_only_20261011/.
+
+That newly copied bundle is an explicitly intended untracked input for this step. Stop on any OTHER unrelated tracked/untracked changes, staged work, unfinished Git operations or divergent history. Confirm v4, the recorded remote and prior pushed HEAD; do not assume the reported earlier Stockholm commit is the current tip. Fetch/check safely without resetting or rebasing.
+
+Adopt design_id v4_accessibility_only_20261011:
+M0=X; ME=X+E; MW=X+W; MEW=X+E+W.
+Y remains log original positive observed Airbnb nightly price. H is removed from every primary model and required sensitivity. Retain density, qualified income, centrality and inherited no-income robustness; do not equate income with residential prices.
+
+Update active proposal, end-to-end plan, pre-analysis specification, dictionary, model contract, document index and AGENTS pointer. Use the supplied revision as the intended scientific amendment, reconciling actual live implementation facts explicitly. Preserve older versions/learning history, not a global text replacement. Log that v3 results and housing feasibility were already known. Do not invent supervisor approval.
+
+Retire property-price acquisition/access, price-qualified samples, housing coverage/sales thresholds, H-area folds and H-subgroup analyses from the new design. Record NOT_REQUIRED_SCOPE_AMENDED separately; do not relabel historically BLOCKED data as qualified.
+
+Preserve all listing/raw/SQL receipts, Stockholm's operational municipal-mask amendment, housing acquisitions and applied migrations. Oslo's boundary-vintage issue and new-city analysis/context qualification remain genuine dependencies. Do not send access requests, redownload Airbnb, build routes or fit models.
+
+Write a current-state/dependency audit and a mapping from old steps to new A01–A12. Mark unexecuted housing prompts superseded. Scope-incompatible tests may be reported as expected pending A02, never falsely passed or weakened globally. If the imported bundle is absent, stop and name the missing path.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: docs(v4): amend scope to three-city accessibility only

@@ -1,0 +1,184 @@
+{
+  "status": "PARTIAL_BLOCKED",
+  "design_id": "v4_accessibility_only_20261011",
+  "cities": {
+    "copenhagen_frederiksberg": {
+      "city": "copenhagen_frederiksberg",
+      "anchor": {
+        "name": "Copenhagen City Hall Square",
+        "status": "QUALIFIED_INHERITED_OPERATIONAL",
+        "licence": "INHERITED_V3_PUBLIC_ANCHOR",
+        "evidence": [
+          {
+            "path": "src/pipeline/build_spatial_features.py",
+            "sha256": "cd799cc51eebd587a0f244246a2fd5414454d63a5aca3d298af61e66e5808c3a"
+          }
+        ],
+        "source_crs": "EPSG:4326",
+        "source_url": "https://www.visitcopenhagen.nl/kobenhavn/planlaeg-din-tur/city-hall-square-gdk414247",
+        "accessed_on": "2026-09-29",
+        "coordinates": [
+          12.568809986,
+          55.675902629
+        ],
+        "reference_date": null
+      },
+      "run_id": "research_v4_copenhagen_frederiksberg_20261011T210800Z",
+      "status": "QUALIFIED",
+      "purpose": "research",
+      "version": "research_design_v4",
+      "blockers": [],
+      "snapshot": "2026-06-30",
+      "design_id": "v4_accessibility_only_20261011",
+      "metric_crs": "EPSG:25832",
+      "diagnostics": {
+        "joined_rows": 23066,
+        "listing_rows": 23144,
+        "income_period": "2024",
+        "population_period": "2026Q3 (2026-07-01; one day after batch)",
+        "density_definition": "log(population/gross native assignment polygon km2); water inclusion and statistical boundary vintage unverified; no rescaling",
+        "qualified_area_count": 11,
+        "income_records_sha256": "53d6522c6db041d3cfaafebe44b313980ebab7c7381f0529d41d342316d1637d",
+        "income_decision_sha256": "355ab55de7e9cdf00995979806ae818093b599ff417ee805b2ea3fb12c5cc9e9",
+        "unmatched_or_outside_rows": 78,
+        "district_population_sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009",
+        "municipality_population_sha256": "62af775af77d0cdfd82a50f497c3ffd8c1ec18e57ca7c7821b2a51c815b5caa8"
+      },
+      "income_mode": "QUALIFIED_INCOME_PRIMARY_WITH_MATCHED_NO_INCOME_SENSITIVITY",
+      "policy_sha256": "c77b2239fd53b270b0ccd66b3fb2f308a5cee5433d802caaf86677a786a7fbb2",
+      "listing_run_id": "research_v4_copenhagen_frederiksberg_20261011T143812Z",
+      "samples_frozen": false,
+      "manifest_sha256": "187f3de5cb9cf4526128c5441954d48bca99fb06044094098fb468b53ef9f91d",
+      "geography_run_id": "research_v4_copenhagen_frederiksberg_20261011T210000Z",
+      "research_executed": false,
+      "source_reingested": false,
+      "acquisition_status": "REUSED_APPROVED_V3",
+      "definition_version": "v4_context_A04_20261011",
+      "spatial_join_status": "JOINED_INHERITED_OPERATIONAL_WITH_UNMATCHED_RETAINED",
+      "native_context_cells": 33,
+      "listing_manifest_sha256": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13",
+      "source_validation_status": "QUALIFIED_INHERITED_WITH_CAVEATS",
+      "geography_manifest_sha256": "352abab9128f086301837ce932ac4b1ec587f40c5accc0d6c6dbb3d7fbc5f79c",
+      "final_qualification_status": "QUALIFIED_INHERITED_WITH_CAVEATS",
+      "private_assignments_sha256": "1d1ca1c600b046b011d72a416b1b05703f5d686ec239252edd43533bedc850c4",
+      "native_context_records_sha256": "f0ad1b3b555187acba3e380248b3a7447661616eae523fc3fce14777bc54d3a1"
+    },
+    "oslo": {
+      "city": "oslo",
+      "anchor": {
+        "name": "Oslo Rådhuset",
+        "status": "QUALIFIED_OFFICIAL_REPRESENTATION_POINT",
+        "licence": "CC BY 4.0 ©Kartverket",
+        "selection": "Exactly one active approved Rådhus, municipality 0301; default CRS 4258 verified in frozen OpenAPI",
+        "source_crs": "EPSG:4258",
+        "source_url": "https://ws.geonorge.no/stedsnavn/v1/navn?knr=0301&sok=R%C3%A5dhuset&treffPerSide=100&side=1",
+        "coordinates": [
+          10.7336,
+          59.91199
+        ],
+        "stedsnummer": 854084,
+        "reference_date": null
+      },
+      "run_id": "research_v4_oslo_20261011T210800Z",
+      "status": "BLOCKED",
+      "purpose": "research",
+      "version": "research_design_v4",
+      "blockers": [
+        "Oslo borough ArcGIS item/layer reuse licence is not stated; public availability alone is insufficient qualification",
+        "Marka native area 17 has 17 positive eligible listings, below proposed 30-test safeguard; no authorized/verified service-area spatial split or adjacent grouping is frozen",
+        "Area-dependent density/context assignment NOT_JOINED; qualified matching analysis geometry required",
+        "Three-city income concept/scaling not qualified; frozen pre-fit researcher income decision required",
+        "INN003 combines Sentrum, Marka and no registered address (88); cannot distribute to polygons 16/17",
+        "Oslo statistical-source reuse licence unresolved; SSB upstream licence does not establish city-service terms"
+      ],
+      "snapshot": "2026-06-30",
+      "design_id": "v4_accessibility_only_20261011",
+      "metric_crs": "EPSG:25833",
+      "diagnostics": {
+        "income": {
+          "native_cells": 17,
+          "missing_cells": 0,
+          "source_updated": "2026-08-03T06:00:00Z",
+          "distinct_observed_values": 17
+        },
+        "population": {
+          "native_cells": 19,
+          "missing_cells": 0,
+          "source_updated": "2026-03-03T15:00:00Z",
+          "distinct_observed_values": 19
+        }
+      },
+      "income_mode": "QUALIFIED_INCOME_PRIMARY_WITH_MATCHED_NO_INCOME_SENSITIVITY",
+      "policy_sha256": "b31a1e1e361edc3ded6b334e585a0a7b75d05acdd1f5d962e37188ef79eea654",
+      "listing_run_id": "research_v4_oslo_20261011T143812Z",
+      "samples_frozen": false,
+      "manifest_sha256": "7396c0003e6771ea5cc278e2d691b2326b2c4a250f69f982bb92134433625a57",
+      "geography_run_id": "research_v4_oslo_20261011T210000Z",
+      "research_executed": false,
+      "source_reingested": false,
+      "acquisition_status": "ACQUIRED_NATIVE_STATISTICS",
+      "definition_version": "v4_context_A04_20261011",
+      "spatial_join_status": "NOT_JOINED_BLOCKED_GEOGRAPHY",
+      "native_context_cells": 36,
+      "listing_manifest_sha256": "c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8",
+      "source_validation_status": "VALIDATED_NATIVE_SOURCE_ONLY",
+      "geography_manifest_sha256": "550733b7e7107d042ce4f80c9abb186a0c8858edb9c0b76af7b5d99dde4456de",
+      "final_qualification_status": "BLOCKED",
+      "private_assignments_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "native_context_records_sha256": "1d6677bfe56308b3e7b50d7c419a4c54eea5b20fb05effac69ffdfdc1b0a1503"
+    },
+    "stockholm": {
+      "city": "stockholm",
+      "anchor": null,
+      "run_id": "research_v4_stockholm_20261011T210800Z",
+      "status": "BLOCKED",
+      "purpose": "research",
+      "version": "research_design_v4",
+      "blockers": [
+        "Current official 11-borough polygons with stable IDs, licence and valid full-city coverage remain unavailable: official metadata redirects to sign-in; public city archive is old, clipped and contains invalid geometry",
+        "Area-dependent density/context assignment NOT_JOINED; qualified matching analysis geometry required",
+        "Three-city income concept/scaling not qualified; frozen pre-fit researcher income decision required",
+        "Public civic building/address verified as Stadshuset, Hantverkargatan 1; official city/tourism pages do not expose a verifiable point coordinate. Require a public source coordinate with explicit CRS/provenance; no guessed geocode."
+      ],
+      "snapshot": "2026-06-30",
+      "design_id": "v4_accessibility_only_20261011",
+      "metric_crs": "EPSG:3006",
+      "diagnostics": {
+        "income": {
+          "native_cells": 381,
+          "missing_cells": 0,
+          "source_updated": "2026-01-20T07:00:00Z",
+          "distinct_observed_values": 371
+        },
+        "population": {
+          "native_cells": 127,
+          "missing_cells": 0,
+          "source_updated": "2026-03-24T07:00:00Z",
+          "distinct_observed_values": 127
+        },
+        "native_id_mask_match": {
+          "count": 127,
+          "status": "EXACT_NATIVE_ID_MATCH_ONLY_NOT_ANALYSIS_APPROVAL"
+        }
+      },
+      "income_mode": "QUALIFIED_INCOME_PRIMARY_WITH_MATCHED_NO_INCOME_SENSITIVITY",
+      "policy_sha256": "086b921416ad27e464a72dcfe29ac99292a3d808d21f4271a0d2ebed7ac8f6b3",
+      "listing_run_id": "research_v4_stockholm_20261011T151637Z",
+      "samples_frozen": false,
+      "manifest_sha256": "5881346fef1e9bdd2349dc37b428b1179f0620bd5490176e8c96a81d48e86c6d",
+      "geography_run_id": "research_v4_stockholm_20261011T210000Z",
+      "research_executed": false,
+      "source_reingested": false,
+      "acquisition_status": "ACQUIRED_NATIVE_STATISTICS",
+      "definition_version": "v4_context_A04_20261011",
+      "spatial_join_status": "NOT_JOINED_BLOCKED_GEOGRAPHY",
+      "native_context_cells": 508,
+      "listing_manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172",
+      "source_validation_status": "VALIDATED_NATIVE_SOURCE_ONLY",
+      "geography_manifest_sha256": "4109d0dcf59b15240cfdf5db26f89c1e1431c82c09e2f22c180a04c2ef96ae26",
+      "final_qualification_status": "BLOCKED",
+      "private_assignments_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "native_context_records_sha256": "c5b9217f9e38d48f99c60cebceb098a77e4d17d2c509d0848306061c96a7c5bb"
+    }
+  }
+}

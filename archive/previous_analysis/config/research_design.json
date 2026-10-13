@@ -1,0 +1,724 @@
+{
+  "version": "research_design_v4",
+  "definition_version": "v4_housing_standard_20261011",
+  "status": "SPECIFICATION_ONLY_EMPIRICAL_BLOCKED",
+  "decision_date": "2026-10-11",
+  "provenance": {
+    "basis": "User decision after V3 results were observed; new V4 Markdown authored from accessible repository evidence",
+    "v3_results_already_observed": true,
+    "supervisor_approval": "not_recorded",
+    "retrospective_preregistration_claim": false,
+    "inherited_specification": "docs/preanalysis_specification.md",
+    "inherited_config": "config/research_design.json",
+    "inherited_config_sha256": "09baf75666ea68244a365caebc90c1e667d45c9c8909c09a17b287b0d22670da"
+  },
+  "cities": {
+    "model_strategy": "separate_city_models",
+    "authorized_roster": [
+      "copenhagen_frederiksberg",
+      "oslo",
+      "stockholm"
+    ],
+    "roster_status": "USER_AUTHORIZED_20261011_SOURCE_QUALIFICATION_BLOCKED",
+    "missing_qualified_housing_action": "BLOCKED",
+    "narrower_city_or_descriptive_only_scope_requires_explicit_amendment": true,
+    "city_geography_and_metric_crs_require_qualification": true,
+    "configuration": "config/v4/cities.json",
+    "city_definition_version": "v4_cities_20261011"
+  },
+  "snapshot": {
+    "target_month": "2026-06",
+    "matched_between_cities": true,
+    "observed_v3_snapshot": "2026-06-30",
+    "v4_city_snapshot_dates": {
+      "copenhagen_frederiksberg": "2026-06-30",
+      "oslo": "2026-06-30",
+      "stockholm": "2026-06-30"
+    },
+    "substitute_month_allowed": false,
+    "temporal_airbnb_panel": false
+  },
+  "outcome": {
+    "field": "log_price",
+    "native_field": "price_nightly",
+    "definition": "log(observed positive Airbnb nightly asking price)",
+    "imputation_allowed": false,
+    "native_currency_preserved": true,
+    "residential_price_outcome_model": false,
+    "gentrification_score": false,
+    "causal_housing_price_or_displacement_claims": false
+  },
+  "engines": [
+    "OLS",
+    "XGBoost"
+  ],
+  "blocks": {
+    "X": [
+      "accommodates",
+      "bedrooms",
+      "bathrooms_effective",
+      "log1p_minimum_nights",
+      "superhost",
+      "log1p_host_listings_count",
+      "amenity_wifi",
+      "amenity_dishwasher",
+      "amenity_washer",
+      "amenity_dryer",
+      "amenity_workspace",
+      "amenity_free_parking",
+      "amenity_private_balcony",
+      "amenity_self_checkin",
+      "log_population_density",
+      "income_100k_dkk",
+      "distance_centre_euclidean_km",
+      "property_type"
+    ],
+    "H": [
+      "housing_context_midrank"
+    ],
+    "E": [
+      "nearest_station_euclidean_km",
+      "nearest_bus_euclidean_km",
+      "log1p_food_e",
+      "log1p_culture_e"
+    ],
+    "W": [
+      "nearest_station_walking_minutes",
+      "nearest_bus_walking_minutes",
+      "log1p_food_w",
+      "log1p_culture_w"
+    ]
+  },
+  "primary_models": {
+    "M0": {
+      "definition_id": "v4_housing_standard_20261011:M0",
+      "blocks": [
+        "X",
+        "H"
+      ]
+    },
+    "ME": {
+      "definition_id": "v4_housing_standard_20261011:ME",
+      "blocks": [
+        "X",
+        "H",
+        "E"
+      ]
+    },
+    "MW": {
+      "definition_id": "v4_housing_standard_20261011:MW",
+      "blocks": [
+        "X",
+        "H",
+        "W"
+      ]
+    },
+    "MEW": {
+      "definition_id": "v4_housing_standard_20261011:MEW",
+      "blocks": [
+        "X",
+        "H",
+        "E",
+        "W"
+      ]
+    }
+  },
+  "automatic_no_housing_fallback": false,
+  "comparisons": [
+    {
+      "role": "primary",
+      "added": "MEW",
+      "reference": "ME"
+    },
+    {
+      "role": "replacement",
+      "added": "MW",
+      "reference": "ME"
+    },
+    {
+      "role": "additional",
+      "added": "ME",
+      "reference": "M0"
+    },
+    {
+      "role": "additional",
+      "added": "MW",
+      "reference": "M0"
+    },
+    {
+      "role": "additional",
+      "added": "MEW",
+      "reference": "M0"
+    }
+  ],
+  "comparison_sign": "added_minus_reference; negative error differences favour added",
+  "incremental_benefit_of_housing_estimand_authorized": false,
+  "research_questions": [
+    {
+      "id": "RQ1",
+      "text": "How do matched Euclidean and walking-network accessibility representations differ within each city?"
+    },
+    {
+      "id": "RQ2",
+      "text": "What predictive accessibility information remains conditional on the qualified baseline X and housing context H?"
+    },
+    {
+      "id": "RQ3",
+      "text": "How do geographic versus random validation and cross-city differences change prediction error and accessibility comparisons?"
+    },
+    {
+      "id": "RQ4",
+      "text": "How do held-out network gains vary across externally measured housing contexts within and between cities?"
+    }
+  ],
+  "housing": {
+    "required": true,
+    "feature": "housing_context_midrank",
+    "preferred_measure": "full-year 2025 apartment residential sale-price per square metre",
+    "preferred_reference_year": 2025,
+    "statistic": "source_reported_statistic_to_be_qualified_and_frozen",
+    "native_field": "housing_price_m2_native",
+    "native_values_and_currency_preserved": true,
+    "reference_frame": "qualified external areas within each city; frozen independently of Airbnb sample, outcomes and folds",
+    "rank_method": "average_ordinal_rank_of_ties",
+    "rank_area_weighting": "one_equal_weight_per_external_area",
+    "formula": "H=(midrank-0.5)/G_ref",
+    "denominator": "G_ref=count of areas in the frozen qualified external reference frame",
+    "rerank_with_airbnb_sample_or_folds": false,
+    "missing_housing_imputation_allowed": false,
+    "sensitivity": {
+      "id": "log_native_housing",
+      "transform": "log(housing_price_m2_native)",
+      "role": "replace H scale in the same four block definitions",
+      "same_prediction_sample_and_folds": true,
+      "additional_primary_models": false
+    },
+    "qualification_status": "BLOCKED_STEP5_AUDITED_JOIN_PENDING",
+    "source": null,
+    "acquisition_date": null,
+    "geographic_extent": null,
+    "source_sha256": null,
+    "alternate_period_or_measure_requires_explicit_amendment": true,
+    "source_audit_policy": "config/v4/housing_sources.json",
+    "source_audit_definition_version": "v4_housing_sources_20261011",
+    "prospective_safeguards": {
+      "preferred_minimum_annual_sales": 20,
+      "minimum_usable_areas": 10,
+      "minimum_final_listing_coverage": 0.8,
+      "minimum_areas_per_housing_group": 4,
+      "minimum_listings_per_housing_group": 100
+    }
+  },
+  "samples": {
+    "prediction": "one_housing_qualified_prediction_sample_per_city_shared_by_all_four_models",
+    "shared_primary_outcome_observations": true,
+    "saved_outer_and_inner_folds_shared": true,
+    "outcome_missingness": "exclude and report; never impute",
+    "housing_missingness": "exclude and report only under qualified coverage rules; failed city qualification blocks the city",
+    "predictor_learning": "training_only; entirely missing training predictor blocks evaluation",
+    "ols_association": "separate_common_complete_case_sample_per_city_over_union_X_H_E_W_and_observed_Y",
+    "association_missingness_denominator": "housing-qualified prediction sample; union-of-core predictor missingness",
+    "association_material_missingness_action": "BLOCKED_until_multiple_imputation_and_pooling_explicitly_specified_and_validated",
+    "no_income_reuses_primary_prediction_and_association_samples": true
+  },
+  "validation": {
+    "random_outer_folds": 5,
+    "geographic_outer": "leave_one_qualified_analysis_area_out_within_city",
+    "v3_geographic_area_count": 11,
+    "v4_area_counts": {},
+    "inner_spatial_block_m": 1000,
+    "all_variants_evaluated_no_best_grid_selection": true,
+    "outer_test_design_selection_allowed": false
+  },
+  "inherited_safeguards": {
+    "crs": {
+      "source": 4326,
+      "metric": 25832
+    },
+    "seed": 20261004,
+    "inner_seed": 20261005,
+    "candidate_seed": 20261006,
+    "walking_speed_kmh": 5.0,
+    "thresholds_minutes": [
+      10,
+      15,
+      20
+    ],
+    "matched_euclidean_radii_m": [
+      833,
+      1250,
+      1667
+    ],
+    "speed_sensitivity_kmh": [
+      4.0,
+      5.4
+    ],
+    "speed_radii_m": [
+      667,
+      900
+    ],
+    "decay_half_life_minutes": 10,
+    "candidate_count": 30,
+    "inner_folds": 4,
+    "area_bootstrap_replications": 2000,
+    "wild_cluster_replications": 9999,
+    "block_sizes_m": [
+      1000,
+      1500,
+      2000
+    ],
+    "grid_origin_fractions": [
+      [
+        0,
+        0
+      ],
+      [
+        0.5,
+        0.5
+      ]
+    ],
+    "buffers_m": [
+      500,
+      1000
+    ],
+    "ols_material_missing_fraction": 0.05
+  },
+  "additional_inherited_safeguards": {
+    "minimum_sensitivity_train_n": 500,
+    "minimum_sensitivity_test_n": 30,
+    "minimum_wild_cluster_areas": 6,
+    "ols_baseline_covariance": "HC3",
+    "wild_method": "restricted WCR11; Webb six-point weights; CRV1 studentisation",
+    "moran_neighbours": 8,
+    "moran_permutations": 499,
+    "spatial_error_trigger_abs_moran_i": 0.05,
+    "spatial_error_trigger_p": 0.05,
+    "spatial_error_scope": "one heteroskedasticity-robust association sensitivity if OLS MW geographic residuals meet both strict thresholds",
+    "coefficient_sign_wild_p": 0.05,
+    "coefficient_magnitude_relative_change": 0.25,
+    "coefficient_near_zero_floor": 0.01,
+    "publication_grid_m": 500,
+    "publication_min_nonmissing_cell_n": 5,
+    "numeric_thresholds_are_power_guarantees": false
+  },
+  "tuning": {
+    "version": "xgboost_candidates_v4_housing_standard_20261011",
+    "candidate_count": 30,
+    "candidate_seed": 20261006,
+    "search_space": {
+      "max_depth": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "n_estimators": [
+        180,
+        250,
+        350,
+        500,
+        700
+      ],
+      "learning_rate": [
+        0.02,
+        0.04,
+        0.06,
+        0.1
+      ],
+      "min_child_weight": [
+        3,
+        5,
+        7,
+        10,
+        15
+      ],
+      "subsample": [
+        0.7,
+        0.85,
+        1.0
+      ],
+      "colsample_bytree": [
+        0.7,
+        0.85,
+        1.0
+      ],
+      "reg_alpha": [
+        0,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "reg_lambda": [
+        5,
+        15,
+        25,
+        50
+      ]
+    },
+    "candidates": [
+      {
+        "max_depth": 3,
+        "n_estimators": 180,
+        "learning_rate": 0.04,
+        "min_child_weight": 3,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 15
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 350,
+        "learning_rate": 0.02,
+        "min_child_weight": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 25
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 700,
+        "learning_rate": 0.06,
+        "min_child_weight": 3,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0.5,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 180,
+        "learning_rate": 0.04,
+        "min_child_weight": 3,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0.1,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 180,
+        "learning_rate": 0.06,
+        "min_child_weight": 7,
+        "subsample": 0.85,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 180,
+        "learning_rate": 0.06,
+        "min_child_weight": 7,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0.5,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 350,
+        "learning_rate": 0.04,
+        "min_child_weight": 7,
+        "subsample": 0.7,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0.5,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 4,
+        "n_estimators": 350,
+        "learning_rate": 0.04,
+        "min_child_weight": 10,
+        "subsample": 0.7,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 700,
+        "learning_rate": 0.1,
+        "min_child_weight": 15,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0.1,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 5,
+        "n_estimators": 350,
+        "learning_rate": 0.1,
+        "min_child_weight": 3,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0.5,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 350,
+        "learning_rate": 0.04,
+        "min_child_weight": 10,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 1.0,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 350,
+        "learning_rate": 0.06,
+        "min_child_weight": 7,
+        "subsample": 0.85,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.5,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 700,
+        "learning_rate": 0.02,
+        "min_child_weight": 7,
+        "subsample": 0.85,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 1.0,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 4,
+        "n_estimators": 500,
+        "learning_rate": 0.1,
+        "min_child_weight": 5,
+        "subsample": 0.7,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 350,
+        "learning_rate": 0.06,
+        "min_child_weight": 15,
+        "subsample": 1.0,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0.1,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 4,
+        "n_estimators": 700,
+        "learning_rate": 0.02,
+        "min_child_weight": 7,
+        "subsample": 1.0,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 700,
+        "learning_rate": 0.1,
+        "min_child_weight": 5,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 15
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 180,
+        "learning_rate": 0.06,
+        "min_child_weight": 3,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 250,
+        "learning_rate": 0.04,
+        "min_child_weight": 10,
+        "subsample": 0.85,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.5,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 500,
+        "learning_rate": 0.02,
+        "min_child_weight": 5,
+        "subsample": 0.7,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0.1,
+        "reg_lambda": 25
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 500,
+        "learning_rate": 0.06,
+        "min_child_weight": 10,
+        "subsample": 0.85,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 180,
+        "learning_rate": 0.06,
+        "min_child_weight": 5,
+        "subsample": 0.85,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 4,
+        "n_estimators": 700,
+        "learning_rate": 0.06,
+        "min_child_weight": 15,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 25
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 250,
+        "learning_rate": 0.1,
+        "min_child_weight": 3,
+        "subsample": 0.85,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0,
+        "reg_lambda": 15
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 180,
+        "learning_rate": 0.02,
+        "min_child_weight": 7,
+        "subsample": 0.85,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0.5,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 350,
+        "learning_rate": 0.06,
+        "min_child_weight": 15,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 50
+      },
+      {
+        "max_depth": 5,
+        "n_estimators": 500,
+        "learning_rate": 0.04,
+        "min_child_weight": 3,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 6,
+        "n_estimators": 500,
+        "learning_rate": 0.04,
+        "min_child_weight": 15,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 700,
+        "learning_rate": 0.02,
+        "min_child_weight": 5,
+        "subsample": 0.85,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 5
+      },
+      {
+        "max_depth": 4,
+        "n_estimators": 500,
+        "learning_rate": 0.06,
+        "min_child_weight": 15,
+        "subsample": 0.7,
+        "colsample_bytree": 0.85,
+        "reg_alpha": 0.5,
+        "reg_lambda": 15
+      }
+    ],
+    "candidates_sha256": "f39bf9451ed9f81d168c120117fc4ac1ac15d18590c9393c7b363a712597a901",
+    "inherited_candidate_file": "config/xgboost_candidates.json",
+    "inherited_candidate_file_sha256": "35cd1586fc5386777f2aea044226130f000be7742e1ddb4585365d08f8d2a0ac"
+  },
+  "income": {
+    "baseline_feature": "income_100k_dkk",
+    "qualified_v3_definition": "2024 equivalised disposable income; arithmetic mean of ten published decile means divided by 100000; Copenhagen KKIND5 and Frederiksberg nominal IFOR35",
+    "v3_qualification": "qualified_accepted_with_documented_processing_uncertainties",
+    "new_city_sources_require_qualification": true,
+    "native_v3_value_field": "equiv_disposable_income_2024",
+    "unresolved_eligible_weights_remain_null": true
+  },
+  "no_income_sensitivity": {
+    "mandatory": true,
+    "role": "sensitivity_not_primary_ladder",
+    "omit_only": [
+      "income_100k_dkk"
+    ],
+    "retain_housing": true,
+    "definition_ids": {
+      "M0": "v4_housing_standard_20261011:no_income:M0",
+      "ME": "v4_housing_standard_20261011:no_income:ME",
+      "MW": "v4_housing_standard_20261011:no_income:MW",
+      "MEW": "v4_housing_standard_20261011:no_income:MEW"
+    },
+    "same_prediction_and_association_samples": true,
+    "same_saved_outer_and_inner_folds": true,
+    "same_engines_candidates_and_preprocessing": true,
+    "material_change_rules": {
+      "predictive_delta_rmse_sign_reversal": true,
+      "walking_vs_euclidean_ranking_reversal": true,
+      "ols_accessibility_direction_reversal_with_wild_support_in_either": true,
+      "coefficient_magnitude_relative_change": 0.25,
+      "coefficient_near_zero_floor": 0.01,
+      "wild_support_p_threshold": 0.05,
+      "threshold_scope": "Sensitivity flags prespecified before fitting; no model selection or exact-equivalence claim"
+    }
+  },
+  "identities": {
+    "database": "thesis_accessibility_v4",
+    "schemas": [
+      "v4_raw",
+      "v4_clean",
+      "v4_spatial",
+      "v4_features",
+      "v4_analysis"
+    ],
+    "run_pattern": "research_v4_<city_slug>_<UTC timestamp>",
+    "output_root": "outputs/v4/<version>/<run_id>/<city>/<snapshot>/",
+    "report_root": "reports/v4/<version>/<run_id>/<city>/<snapshot>/",
+    "provisioned": false,
+    "persistence_implementation": "src/v4/persistence.py",
+    "production_provisioned": false
+  },
+  "active_documents": [
+    "docs/v4/proposal.md",
+    "docs/v4/research_plan.md",
+    "docs/v4/preanalysis_specification.md",
+    "docs/v4/data_dictionary.md",
+    "docs/v4/source_registry.md"
+  ],
+  "document_index": "docs/v4/document_index.md",
+  "execution_authorized_by_this_configuration": false
+}

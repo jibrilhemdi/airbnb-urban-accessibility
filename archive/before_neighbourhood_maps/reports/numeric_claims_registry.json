@@ -1,0 +1,440 @@
+[
+  {
+    "id": "RQ1_Copenhagen_station_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Copenhagen",
+      "concept": "station",
+      "representation": "Euclidean"
+    },
+    "value": 0.404388456143006,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Copenhagen_station_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Copenhagen",
+      "concept": "station",
+      "representation": "Walking"
+    },
+    "value": 0.637526574681781,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Copenhagen_bus_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Copenhagen",
+      "concept": "bus",
+      "representation": "Euclidean"
+    },
+    "value": 0.1295728806600495,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Copenhagen_bus_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Copenhagen",
+      "concept": "bus",
+      "representation": "Walking"
+    },
+    "value": 0.2186166611230766,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Copenhagen_food_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Copenhagen",
+      "concept": "food",
+      "representation": "Euclidean"
+    },
+    "value": 84.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Copenhagen_food_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Copenhagen",
+      "concept": "food",
+      "representation": "Walking"
+    },
+    "value": 47.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Copenhagen_culture_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Copenhagen",
+      "concept": "culture",
+      "representation": "Euclidean"
+    },
+    "value": 6.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Copenhagen_culture_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Copenhagen",
+      "concept": "culture",
+      "representation": "Walking"
+    },
+    "value": 3.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Oslo_station_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Oslo",
+      "concept": "station",
+      "representation": "Euclidean"
+    },
+    "value": 0.668308503189484,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Oslo_station_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Oslo",
+      "concept": "station",
+      "representation": "Walking"
+    },
+    "value": 0.896560773634723,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Oslo_bus_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Oslo",
+      "concept": "bus",
+      "representation": "Euclidean"
+    },
+    "value": 0.137143560996615,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Oslo_bus_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Oslo",
+      "concept": "bus",
+      "representation": "Walking"
+    },
+    "value": 0.2187285023673052,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Oslo_food_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Oslo",
+      "concept": "food",
+      "representation": "Euclidean"
+    },
+    "value": 63.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Oslo_food_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Oslo",
+      "concept": "food",
+      "representation": "Walking"
+    },
+    "value": 35.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Oslo_culture_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Oslo",
+      "concept": "culture",
+      "representation": "Euclidean"
+    },
+    "value": 8.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Oslo_culture_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Oslo",
+      "concept": "culture",
+      "representation": "Walking"
+    },
+    "value": 4.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Stockholm_station_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Stockholm",
+      "concept": "station",
+      "representation": "Euclidean"
+    },
+    "value": 0.388101255606976,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Stockholm_station_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Stockholm",
+      "concept": "station",
+      "representation": "Walking"
+    },
+    "value": 0.6403614879683803,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Stockholm_bus_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Stockholm",
+      "concept": "bus",
+      "representation": "Euclidean"
+    },
+    "value": 0.123360300328742,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Stockholm_bus_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Stockholm",
+      "concept": "bus",
+      "representation": "Walking"
+    },
+    "value": 0.2167289535358184,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Stockholm_food_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Stockholm",
+      "concept": "food",
+      "representation": "Euclidean"
+    },
+    "value": 51.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Stockholm_food_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Stockholm",
+      "concept": "food",
+      "representation": "Walking"
+    },
+    "value": 28.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Stockholm_culture_Euclidean",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Stockholm",
+      "concept": "culture",
+      "representation": "Euclidean"
+    },
+    "value": 4.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ1_Stockholm_culture_Walking",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
+    "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "column": "median",
+    "filters": {
+      "city": "Stockholm",
+      "concept": "culture",
+      "representation": "Walking"
+    },
+    "value": 2.0,
+    "meaning": "Frozen median accessibility"
+  },
+  {
+    "id": "RQ2_Copenhagen_ME",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Copenhagen",
+      "estimator": "XGBoost",
+      "added": "ME",
+      "reference": "M0"
+    },
+    "value": -0.0090176695431921,
+    "meaning": "XGBoost primary ΔRMSE"
+  },
+  {
+    "id": "RQ2_Copenhagen_MW",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Copenhagen",
+      "estimator": "XGBoost",
+      "added": "MW",
+      "reference": "M0"
+    },
+    "value": -0.0094646143611937,
+    "meaning": "XGBoost primary ΔRMSE"
+  },
+  {
+    "id": "RQ2_Copenhagen_MEW",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Copenhagen",
+      "estimator": "XGBoost",
+      "added": "MEW",
+      "reference": "M0"
+    },
+    "value": -0.0106690650146865,
+    "meaning": "XGBoost primary ΔRMSE"
+  },
+  {
+    "id": "RQ2_Oslo_ME",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Oslo",
+      "estimator": "XGBoost",
+      "added": "ME",
+      "reference": "M0"
+    },
+    "value": 0.0006791732772873,
+    "meaning": "XGBoost primary ΔRMSE"
+  },
+  {
+    "id": "RQ2_Oslo_MW",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Oslo",
+      "estimator": "XGBoost",
+      "added": "MW",
+      "reference": "M0"
+    },
+    "value": 0.0008790853089583,
+    "meaning": "XGBoost primary ΔRMSE"
+  },
+  {
+    "id": "RQ2_Oslo_MEW",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Oslo",
+      "estimator": "XGBoost",
+      "added": "MEW",
+      "reference": "M0"
+    },
+    "value": 0.0023584102876016,
+    "meaning": "XGBoost primary ΔRMSE"
+  },
+  {
+    "id": "RQ2_Stockholm_ME",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Stockholm",
+      "estimator": "XGBoost",
+      "added": "ME",
+      "reference": "M0"
+    },
+    "value": -0.0170910195169586,
+    "meaning": "XGBoost primary ΔRMSE"
+  },
+  {
+    "id": "RQ2_Stockholm_MW",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Stockholm",
+      "estimator": "XGBoost",
+      "added": "MW",
+      "reference": "M0"
+    },
+    "value": -0.0198938306265776,
+    "meaning": "XGBoost primary ΔRMSE"
+  },
+  {
+    "id": "RQ2_Stockholm_MEW",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
+    "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "column": "delta_rmse",
+    "filters": {
+      "city": "Stockholm",
+      "estimator": "XGBoost",
+      "added": "MEW",
+      "reference": "M0"
+    },
+    "value": -0.0185856843124516,
+    "meaning": "XGBoost primary ΔRMSE"
+  }
+]

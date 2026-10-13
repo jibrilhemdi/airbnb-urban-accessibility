@@ -1,0 +1,21 @@
+# A11 — Run robustness and compare cities
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+Use the frozen protocol and saved OOF evidence. Require comparable city definitions; do not silently mix old v3, housing-inclusive v4 and new estimates. Authorized reuse must retain its actual original identity.
+
+Execute the registered robustness programme in its frozen priority order: matched no-income; apartment/condo and reviewed samples; training-only price trimming; reputation controls; matched 15/20-minute, speed and decay alternatives; geometric blocks and buffers; location/boundary uncertainty; eligible association/spatial checks. All variants exclude H. No-income changes only income on the declared common sample/folds.
+
+For every check, report COMPLETE, INFEASIBLE, DEFERRED, FAILED or NOT_APPLICABLE with reasons and dependencies. Do not quietly trim held-out observations, change candidate budgets, average unmatched fold metrics or remove unfavourable results. Explicit scope/resource amendments remain visible.
+
+From paired OOF rows compute ME-M0, MW-M0, MEW-M0, MW-ME and MEW-ME for each city and estimator. Use 2,000 paired geographic group resamples as stability summaries; acknowledge overlapping training sets and few groups. Negative Delta RMSE favours added features. Add proportional improvements, equal-area summaries, K/N and support diagnostics.
+
+Address RQ1 with E/W route/opportunity comparisons, RQ2 with paired model gains, and RQ3 with administrative/random/common-geometric comparisons. Do not regress national effects on three city estimates or claim gentrification, causal amenity values or observed tourist routes.
+
+Route disagreement versus gain can be an explicitly exploratory interpretation using existing features, not a new mandatory RQ or excuse for additional datasets. No H-subgroup chapter.
+
+Retain raw/city prices separately. Build safe aggregate comparative tables/figures using established project presentation conventions, privacy suppression and actual source licences.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: analysis(v4): evaluate robustness and comparative accessibility gains

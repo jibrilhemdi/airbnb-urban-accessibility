@@ -1,0 +1,13 @@
+# Recovery — interrupted checkpoint or failed push
+
+Read AGENTS.md, the revised accessibility-only contract, current step log and Git status. Resume ONLY the last interrupted A-step on branch v4. Do not restart the full sequence, recreate the branch, change scientific definitions or revive housing gates.
+
+Identify the last verified remote checkpoint, exact unpushed local commits, run/source manifests and recorded failure. Do not discard or auto-stash unrelated edits, force-push, reset, amend published commits, merge main or fabricate authentication success.
+
+For a push failure with a valid existing commit, resolve only the explicitly understood remote/authentication issue using authorized capabilities, push that commit to the recorded refs/heads/v4 and verify SHA equality. Do not make a duplicate scientific commit just to retry a push. Divergence or ambiguous access remains blocked.
+
+For a failed empirical run, inspect actual checkpoint/resume support. Resume only with unchanged scientific dependencies and an implemented tested command. Changed sources/features/folds/code affecting estimates require a new identity and a supersession record, not overwriting old results. Never reduce tuning to make completion easier without a scientific amendment.
+
+Preserve v3 and all housing/listing/boundary source ledgers. Retired housing requirements are NOT_REQUIRED_SCOPE_AMENDED for the new design, while genuine non-housing failures stay active.
+
+Run relevant verification, update the step log, commit only new safe intended changes if any, push only v4 and report actual completion, run IDs, remaining folds/tests, blockers, SHA and remote verification. Stop before the next A-step.

@@ -1,0 +1,416 @@
+{
+  "version": "research_design_v4",
+  "design_id": "v4_accessibility_only_20261011",
+  "definition_version": "v4_geography_A03_20261011",
+  "date": "2026-10-11",
+  "cities": {
+    "copenhagen_frederiksberg": {
+      "metric_crs": "EPSG:25832",
+      "sources": [
+        {
+          "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+          "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3",
+          "source_url": "https://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:bydel&outputFormat=json&SRSNAME=EPSG:4326",
+          "source_date": null,
+          "acquired_at_utc": "2026-09-29T09:09:47.510559+00:00",
+          "source_crs": "EPSG:4326",
+          "geographic_extent": "Copenhagen districts",
+          "size_bytes": 250640,
+          "source_id": "a03_20261011_inherited_districts",
+          "filename": "copenhagen_districts.geojson",
+          "licence": "Inherited official public WFS; https://www.kk.dk/om-kommunen/fakta-og-statistik/kort-og-data (data for free use); no newly certified June vintage",
+          "reference_period": "unknown source reference; inherited retrieval 2026-09-29"
+        }
+      ],
+      "failed_or_rejected_receipts": [],
+      "run_id": "research_v4_copenhagen_frederiksberg_20261011T210000Z",
+      "districts": {
+        "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+        "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+      },
+      "status": "QUALIFIED",
+      "mask_status": "QUALIFIED_INHERITED_OPERATIONAL",
+      "analysis_status": "QUALIFIED_INHERITED_OPERATIONAL",
+      "blockers": [],
+      "certification_limits": "Retains inherited V3 ten districts plus Frederiksberg and both municipalities; minor registered overlap/gap/shoreline mismatch is audited, not repaired. Strict unique and municipality-compatible covers assignment. All positive eligible inside listings have unique compatible assignments; this is not exact June linework certification or a frozen A06 sample."
+    },
+    "oslo": {
+      "metric_crs": "EPSG:25833",
+      "sources": [
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_arcgis_app/source.json",
+          "sha256": "c5f3d608fece12bcdf618b33cc0e46f19146969ca91b65138b20bb6a244f2aa5",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_arcgis_app/source.json.receipt.json",
+            "sha256": "04ee65392622d6f37cd8cb47c8f1fdf8e5de84f1500a0ebd1cff7992ea420b71"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "source at retrieval; content reference dates to be verified"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_arcgis_webmap/source.json",
+          "sha256": "4f72e4b2090047ccfc5c4e06f286bd9c319f3cf6b02d587b0922b1f7ac146926",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_arcgis_webmap/source.json.receipt.json",
+            "sha256": "8a4c15d81725114de1962f78b0a104c408f002e6a9d413160ecc08092a6f5b2e"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "source at retrieval; content reference dates to be verified"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_item/item.json",
+          "sha256": "32ac0b959695f63767146c78827923427604b1c1c50b2caa9354e180824a6a50",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_item/item.json.receipt.json",
+            "sha256": "97761803f46d631cae3cc2e65b7b4b0d663c2dedebb9f58b421a20dd2b05a7e0"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_metadata/source.json",
+          "sha256": "59d2a45e6f6fdecc1c314dd64bc7f428390c27ff6c99efa1c93e52fdd80983c6",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_metadata/source.json.receipt.json",
+            "sha256": "163d7b0dba1bd0d16351c5308d5dc035d383505460f36ebceacbb9edc244a69c"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "source at retrieval; content reference dates to be verified"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+          "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson.receipt.json",
+            "sha256": "e67b76962c6a98d2d5f65c3de3b536522e6949dbd1c236705029ebceacb4268a"
+          },
+          "qualified_provenance": {
+            "evidence_role": "provisional_analysis_geometry; licence unresolved",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "2004 scheme; layer data last edited 2023-11-03; retrieved 2026-10-11",
+            "source_crs": "EPSG:25833"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_dated_municipal_metadata/page.html",
+          "sha256": "a0faf367bd5155130d3d5029135e64bf09e2b7640ebc63fe4559e91ba2673110",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_dated_municipal_metadata/page.html.receipt.json",
+            "sha256": "014129182c928263f2482068644b1dd6da552cbb526ef33637f1f68eccd32705"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_dated_municipality/oslo.zip",
+          "sha256": "b369204c77ca806aacf2986d209da2ae3684e9c5a9586f0a2f567b0d88d25863",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_dated_municipality/oslo.zip.receipt.json",
+            "sha256": "e08a841402d943bd31b21f07d20eea1bc2eb98ed0b81786fdb06f47d55787c44"
+          },
+          "qualified_provenance": {
+            "evidence_role": "qualified_operational_municipal_mask",
+            "licence": "CC BY 4.0, © Kartverket; https://kartverket.no/en/api-and-data/terms-of-use",
+            "reference_period": "catalogue 2026-01-01; polygon updated 2025-11-11; extraction 2025-12-10",
+            "source_crs": "EPSG:25833"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_kartverket_terms/page.html",
+          "sha256": "65613a36f62105e78159202463bbf87e198cd428c8332363dcce5ba2f4425d46",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_kartverket_terms/page.html.receipt.json",
+            "sha256": "ae0e77f66be895089c7f90c0a3f6de03e762abad1fc07794f1acf60a8d5959f5"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_municipalities_atom/source.html",
+          "sha256": "135a8c56764424b666ab8238839c850c7b7f9190f37c87e472c2817527e2d3c4",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_municipalities_atom/source.html.receipt.json",
+            "sha256": "0144e529bfc8b62feeb028a253d662a7d42de3ecfabdb8385a2e2528f2566a44"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "source at retrieval; content reference dates to be verified"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_oslo_geo_page/page.html",
+          "sha256": "b0fc0702239ecc52d0dcf2ff7a15ea2df7f376289fb387900c0a87c1a27d2a6a",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_oslo_geo_page/page.html.receipt.json",
+            "sha256": "145488dde569df94318c2b3ea59c67cb87d09f49d806688c476e5e736a557680"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_oslo_official_codes/codes.xlsx",
+          "sha256": "1b332a4cad66a821505a703764e5281860acdb5197648240c18a26340ffa1c76",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_oslo_official_codes/codes.xlsx.receipt.json",
+            "sha256": "f972307c520f0d732ee7665e2a81890b9516717cf942ad702dd7ed6d1f9ddcba"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_oslo_reform/page.html",
+          "sha256": "ffefd5d73f73cce7e9aa42aaa1aabf116340a3f9ede8104a479bc39f31084435",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_oslo_reform/page.html.receipt.json",
+            "sha256": "c71e42fb399704e8ead2c2ac7fda2a7bb65b9102bc3985e7a018a1fa66a0910d"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_ssb_area/page.html",
+          "sha256": "90d268494cd0e6d6fb9067a206f4f3264b262fe9cca7fb04958302baf6c3d81b",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_ssb_area/page.html.receipt.json",
+            "sha256": "492d35d1f739a3b885a4ef544e28a2b67905cef8599f27bd0587e0350c3a913f"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_ssb_area_metadata/metadata.json",
+          "sha256": "148016add9c3fc720b034f26509f32cd70015c27ca84b59761ed074c8fe47159",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_ssb_area_metadata/metadata.json.receipt.json",
+            "sha256": "b8ef22d9d4d3362236c9c11185d8955a09cbc844b6bd05ef0b2f38fe97eec64b"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_ssb_area_values/areas.json",
+          "sha256": "4f1eeb2ef0e83d90d3eba6e6a4bb23868040ae0376b70373dbe1e243eb81e8e2",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_ssb_area_values/areas.json.receipt.json",
+            "sha256": "7297218003a80de129188374b87b59dacdd41f1a152ecdb16436cd26025a01f7"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "2025 and 2026 annual land and freshwater area"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_ssb_changes/page.html",
+          "sha256": "461ac9845b8d920709a286208b084d75483cd43237e2ad4b51fb9bfe865cbdad",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_ssb_changes/page.html.receipt.json",
+            "sha256": "456ab01a9fa9d9c6ad490836e39afc570e1e5cb73a50593f68c96f31358a4e68"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        }
+      ],
+      "failed_or_rejected_receipts": [],
+      "run_id": "research_v4_oslo_20261011T210000Z",
+      "municipality_archive": {
+        "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_dated_municipality/oslo.zip",
+        "sha256": "b369204c77ca806aacf2986d209da2ae3684e9c5a9586f0a2f567b0d88d25863"
+      },
+      "municipality_member": "Basisdata_0301_Oslo_25833_Kommuner_GeoJSON.geojson",
+      "municipality_attributes": {
+        "kommunenummer": "0301",
+        "kommunenavn": "Oslo",
+        "oppdateringsdato": "2025-11-11T12:30:34+01:00",
+        "datauttaksdato": "2025-12-10T15:42:08+01:00"
+      },
+      "codes": {
+        "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_oslo_official_codes/codes.xlsx",
+        "sha256": "1b332a4cad66a821505a703764e5281860acdb5197648240c18a26340ffa1c76"
+      },
+      "native_codes": {
+        "01": "Gamle Oslo",
+        "02": "Grünerløkka",
+        "03": "Sagene",
+        "04": "St. Hanshaugen",
+        "05": "Frogner",
+        "06": "Ullern",
+        "07": "Vestre Aker",
+        "08": "Nordre Aker",
+        "09": "Bjerke",
+        "10": "Grorud",
+        "11": "Stovner",
+        "12": "Alna",
+        "13": "Østensjø",
+        "14": "Nordstrand",
+        "15": "Søndre Nordstrand",
+        "16": "Sentrum",
+        "17": "Marka"
+      },
+      "boroughs": {
+        "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+        "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+      },
+      "status": "BLOCKED",
+      "mask_status": "RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT",
+      "analysis_status": "BLOCKED",
+      "blockers": [
+        "Oslo borough ArcGIS item/layer reuse licence is not stated; public availability alone is insufficient qualification",
+        "Marka native area 17 has 17 positive eligible listings, below proposed 30-test safeguard; no authorized/verified service-area spatial split or adjacent grouping is frozen"
+      ],
+      "certification_limits": "Operational Kartverket municipality 0301: catalogue reference 2026-01-01, source extraction 2025-12-10, polygon update 2025-11-11. No relevant enacted municipal change found for June 2026; exact June linework is not certified. Old API differs by sub-metre registration; equal area is not proof. Public borough scheme has 15 boroughs plus Sentrum/Marka (17 units/18 components), not future 2028 reform. Statistical land/freshwater area excludes sea; gross geometry includes sea. Borough QA is provisional, not approved context/fold geography."
+    },
+    "stockholm": {
+      "metric_crs": "EPSG:3006",
+      "sources": [
+        {
+          "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_borough_official_list/page.html",
+          "sha256": "5313a05f53a0b3d1770ec8339e21d43d77a20d7d2a80b6014837818538da860e",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_borough_official_list/page.html.receipt.json",
+            "sha256": "711741a5c88da221ccb9141a8c7c53d5293b54218e8a023527c3ea08c3fe752a"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_district_find_page/page.html",
+          "sha256": "ef18a81b43db2384e8e2e5bd7470671a7ae6a64bb8a1858dd283dd865d610732",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_district_find_page/page.html.receipt.json",
+            "sha256": "f3dae3cf6d7f4587e32b01da478df435cbc89e9b62a53426dffb2fe8db23aa81"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "content reference dates to be verified for A03"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_district_metadata_official/source.html",
+          "sha256": "cd20b4dd4bf6e7debbba474448684cde2d0344b35e5cc2e23d0e49c119929e49",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_district_metadata_official/source.html.receipt.json",
+            "sha256": "dc76a7c0d916a0c237d0719d974c22c373c99cb6c655c795b81231e0722b59be"
+          },
+          "qualified_provenance": {
+            "evidence_role": "FAILED_GEOMETRY_ACCESS_SIGNIN_REDIRECT",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "source at retrieval; content reference dates to be verified"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_districts_catalogue/source.html",
+          "sha256": "28d2e4c845d68d7e0472a91b063c227948a2af55a28ac06cc23271d76148db42",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_districts_catalogue/source.html.receipt.json",
+            "sha256": "2957f5c55a7e9fade2cdcabe164af7bc48980810f3d170efe4bf7cd5dbe14029"
+          },
+          "qualified_provenance": {
+            "evidence_role": "discovery_evidence_only",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "source at retrieval; content reference dates to be verified"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_public_search/source.html",
+          "sha256": "cd20b4dd4bf6e7debbba474448684cde2d0344b35e5cc2e23d0e49c119929e49",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_public_search/source.html.receipt.json",
+            "sha256": "cb42ce260a2f8c616aae8c2966f819088be843948938125f1dedeffe9f2adf63"
+          },
+          "qualified_provenance": {
+            "evidence_role": "FAILED_GEOMETRY_ACCESS_SIGNIN_REDIRECT",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "source at retrieval; content reference dates to be verified"
+          }
+        },
+        {
+          "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_published_city_archive/source.html",
+          "sha256": "7e92c9e664ffe51aec4a2ecfa409bdd4d2fb1421aa474af3f0c80e52f1c3da27",
+          "receipt": {
+            "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_published_city_archive/source.html.receipt.json",
+            "sha256": "e94f35cdbda2bb828f5ddd3814ec4d367893bea80e2b0cb5a20c8ef09374b187"
+          },
+          "qualified_provenance": {
+            "evidence_role": "rejected_old_clipped_invalid_geometry",
+            "licence": "UNRESOLVED for analytical reuse; receipt/public publisher availability is not a licence",
+            "reference_period": "Adm_area member 2020-12-10; HTTP Last-Modified 2025-11-14 does not update the old scheme",
+            "source_crs": "EPSG:3011"
+          }
+        }
+      ],
+      "failed_or_rejected_receipts": [
+        {
+          "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_district_record/source.json.receipt.json",
+          "sha256": "ae1136fe98b82c1daabcd3149d541833021b718304a4f6ba393da816962d1e4a"
+        }
+      ],
+      "run_id": "research_v4_stockholm_20261011T210000Z",
+      "archive": {
+        "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/a03_20261011_published_city_archive/source.html",
+        "sha256": "7e92c9e664ffe51aec4a2ecfa409bdd4d2fb1421aa474af3f0c80e52f1c3da27"
+      },
+      "status": "BLOCKED",
+      "mask_status": "RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT",
+      "analysis_status": "BLOCKED",
+      "current_borough_names": [
+        "Bromma",
+        "Enskede-Årsta-Vantör",
+        "Farsta",
+        "Hägersten-Älvsjö",
+        "Hässelby-Vällingby",
+        "Järva",
+        "Kungsholmen",
+        "Norra innerstaden",
+        "Skarpnäck",
+        "Skärholmen",
+        "Södermalm"
+      ],
+      "blockers": [
+        "Current official 11-borough polygons with stable IDs, licence and valid full-city coverage remain unavailable: official metadata redirects to sign-in; public city archive is old, clipped and contains invalid geometry"
+      ],
+      "certification_limits": "Retain accepted SCB RegSO 2025_v2 mask: municipality 0180, reference 2025-01-01; 127 components are not analysis/validation areas. Public archive 13 old boroughs is rejected, not repaired or merged to fabricate 11. Native/holdout support remains NULL until suitable polygons are acquired. No RegSO analysis alternative authorized/qualified here."
+    }
+  }
+}

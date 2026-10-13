@@ -1,0 +1,23 @@
+# A02 — Remove housing requirements from the active pipeline
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+Inspect active code/configuration/database constraints. Implement the new design without removing historical housing data or rewriting an immutable definition.
+
+Build one canonical primary registry: M0=X; ME=X+E; MW=X+W; MEW=X+E+W. H and all residential-price/rent proxies must be absent from features, SQL selection, model prerequisites, reports and required sensitivities. There is no no_housing variant; this is the primary revised design. Preserve estimator, city, model, validation and sensitivity identifiers separately.
+
+Retain inherited capacity/bedroom/bathroom, rental/host, eight amenity, density, qualified-income and centrality controls. Do not silently alter their definitions. Remove only housing-derived active dependencies.
+
+Trace downstream remnants: H-qualified samples, non-null housing-area joins, annual sales thresholds, 80% housing coverage gates, native-H-area minimums, H reference ranks, H-safe folds, H-group support and housing-source dependency hashes. Retire them explicitly for this design rather than spoofing approvals. Ordinary geographic support tests remain.
+
+Use the existing authoritative PostgreSQL/PostGIS architecture. Inspect actual migrations; add a new append-only migration/definition only if needed. Do not edit applied migration bytes, completed rows, old failure receipts or frozen design policies. Keep historical housing adapters/audits intact and excluded from the new runner's required path.
+
+Allow explicit read-only reuse of approved old listing/source scopes by manifest hash; changing design ID must not trigger duplicate ingestion. New feature/model outputs get new identities. Preserve v3 isolation and current source guards.
+
+Test that a revised pipeline with no housing files and NULL housing-area fields passes this scope check, while invalid Airbnb prices, unresolved required geography and actual context/feature failures still block. Test exact feature membership, model-version isolation and no accidental housing row filters. Do not disable all preflight or suppress historical tests to get a green run.
+
+No new source acquisition, routing or empirical fitting in this step.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: refactor(v4): remove housing from active models and readiness gates

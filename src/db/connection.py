@@ -15,7 +15,7 @@ from src.ingestion.common import PROJECT_ROOT
 def database_settings(env_path: Path | None = None) -> dict[str, str]:
     path = env_path or PROJECT_ROOT / ".env"
     if not path.is_file():
-        raise RuntimeError("No .env file. Copy .env.example to .env and set DB_PASSWORD.")
+        raise RuntimeError("No .env file. Copy config/environment.example to .env and set DB_PASSWORD.")
     load_dotenv(path, override=False)
     names = ("DB_HOST", "DB_PORT", "DB_NAME", "DB_USER", "DB_PASSWORD")
     settings = {name: os.environ.get(name, "") for name in names}

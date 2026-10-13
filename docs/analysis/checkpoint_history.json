@@ -1,0 +1,18 @@
+{
+  "checkpoint_commits_before_final_publication": [
+    "2f2acb63cd1443349d89e00d4bbfd82e409f0a36 docs: freeze final three-city research design",
+    "a8bffb6de2e7f3a0d457ab2a36ac78e9956c169f feat: freeze operational geography and price references",
+    "8cdeb674357b09ef2d87ed98165691c783247e87 feat: harmonize population density and civic anchors",
+    "685c37f26f8620152d1347831e2c0f200b637939 feat: rebuild matched accessibility and freeze validation",
+    "2fcb689a9ede82ef5b658d29f541b197f14402ee analysis: rerun city models and six directional transfers",
+    "be68a991b595b8387505090040bcc496d999b267 analysis: implement registered robustness and descriptive reporting",
+    "80e1acd70c869b9d9552437ec61120c896a1c6e1 chore: add reproducibility and release verification",
+    "51f61621aeb28ffeceae611942e8d3c8d2b4bee4 analysis: verify geometric validation and measurement variants",
+    "c1be05fbfbe2a13ae5f342a798f620a5a30dea9c analysis: publish verified research results and inference blocker",
+    "e55e91d5b5d39fb8bb7c9e77f2d742452aa835c7 analysis: verify Stockholm missingness against original source",
+    "facd7e4734579bb9a8ac670b6be774e9c73be46e docs: amend association missingness threshold to 10 percent",
+    "d1f8c118087443ac1a0a7cd02de86bb2e8ec8506 analysis: rerun three-city association inference",
+    "66744258bc5ede440f6acf9687998c60812ead16 docs: correct pending historical package recovery status"
+  ],
+  "final_checkpoint_sha": "Supplied externally after commit/push"
+}

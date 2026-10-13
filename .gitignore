@@ -1,4 +1,11 @@
 # Local/raw research data. Keep source files out of version control.
+/runs/
+/data/derived/
+/data/intermediate/
+/outputs/metrics/
+/outputs/models/
+/outputs/diagnostics/
+/outputs/accessibility/
 data/raw/*
 data/interim/*
 data/processed/*
@@ -69,7 +76,6 @@ archive/legacy_v2/notebooks/
 
 # Local credentials and packaged data.
 .env.*
-!.env.example
 *.zip
 *.dump
 *.backup
@@ -80,3 +86,26 @@ archive/legacy_v2/notebooks/
 *.pem
 *.key
 *.p12
+
+# V4 private research identities; aggregate sharing requires a later review.
+/outputs/v4/
+/data/metadata/v4/
+/data/restricted/
+/data/housing/
+route_cache/
+private_predictions/
+listing_predictions*.csv
+listing_predictions*.json
+*.sql.dump
+*.pgdump
+credentials*.json
+secrets*.json
+/database_dumps/
+/db_dumps/
+*.dump.sql
+/credentials/
+/secrets/
+credentials*.yaml
+credentials*.yml
+*listing*predictions*.csv
+*listing*predictions*.json

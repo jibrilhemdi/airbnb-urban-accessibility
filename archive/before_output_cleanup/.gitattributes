@@ -1,0 +1,6 @@
+# Matplotlib SVG path serialization includes harmless trailing separators.
+# Preserve the exact registered vector bytes; check source/document whitespace.
+outputs/figures/thesis/*.svg -whitespace
+outputs/release/figures/*.svg -whitespace
+archive/before_figure_style/outputs/figures/thesis/*.svg -whitespace
+archive/before_figure_style/outputs/release/figures/*.svg -whitespace

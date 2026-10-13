@@ -145,7 +145,10 @@ class EvaluatorSmokeTest(unittest.TestCase):
         from contextlib import contextmanager
         from src.pipeline.run_primary_models import evaluate_cv
         from src.pipeline.build_tuning_candidates import build
-        build();frame=synthetic_frame(n_per_area=8)
+        # Verify the frozen candidates without exporting test files into outputs/.
+        with patch('src.pipeline.build_tuning_candidates.write_json'):
+            build()
+        frame=synthetic_frame(n_per_area=8)
         fold,train,test=make_outer(frame)['geographic_11'][0]
         class MemoryEngine:
             @contextmanager

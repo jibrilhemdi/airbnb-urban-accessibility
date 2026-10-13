@@ -1,0 +1,21 @@
+# A05 — Build matched Euclidean and walking accessibility
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+Reuse the v3 algorithms where scientifically compatible. Begin with an outcome-blind audit of city qualification and graph/destination source dates. Do not route a geography-blocked city or silently mix different OSM observation policies.
+
+Reuse Copenhagen features only if source, taxonomy, algorithm, CRS, scope and extraction dependencies match the new design. Otherwise compute separate v4 features; never overwrite v3. Explicitly link cached artifacts to their originating source manifests, not a guessed path.
+
+Keep identical eligible destination universes for E and W within each city: rail/metro/commuter stops, consolidated bus stops, food/social and culture/tourism opportunities. Preserve exact v3 taxonomy and identity-compatible consolidation; log local tagging exceptions before fitting. Do not choose categories using Airbnb price results.
+
+Baseline: exactly 5 km/h; 10-minute walking opportunities; rounded 833-metre Euclidean opportunities; nearest rail and bus separately; E distances in km, W in minutes; log1p counts. Nearest eligible objects may differ by representation. Include origin/destination connector distances and actual pedestrian restrictions/topology.
+
+Use city-appropriate metric projections. Start with the declared >=2 km extraction buffer, expanding where coverage/nearest-destination audits demand it. Keep listing study boundaries distinct from the wider graph/POI extent. Do not join bridges or underpasses merely because geometry is nearby.
+
+Distinguish genuine zero opportunities, unreachable destinations and missing source/routing data. Test snaps, connectors, route lengths, disconnected components, E/W bounds within rounding tolerance and common candidate universes. Preserve the inherited 15/20-minute, speed and decay interfaces without fitting models.
+
+Write feature and measurement-coverage audits; describe residual OSM timing limitations rather than claiming a reconstruction of June 2026. No housing data checks or geographic housing joins may execute.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: feat(v4): extend matched accessibility features to all cities

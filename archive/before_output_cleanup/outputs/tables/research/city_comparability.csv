@@ -1,0 +1,4 @@
+city,prediction_n,association_n,association_missing_fraction,operational_groups,minimum_group_n,metric_crs,association_status
+copenhagen,12408,12285,0.009912959381044487,11,221,EPSG:25832,COMPLETE_ASSOCIATION
+oslo,8529,8152,0.04420213389611912,17,32,EPSG:25833,COMPLETE_ASSOCIATION
+stockholm,2495,2348,0.058917835671342685,11,38,EPSG:3006,COMPLETE_ASSOCIATION

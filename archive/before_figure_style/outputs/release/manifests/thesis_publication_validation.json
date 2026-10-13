@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "artifact_files": 98,
+  "figure_sets": 18,
+  "table_and_aggregate_views": 22,
+  "main_figures": 10,
+  "main_tables": 8,
+  "appendix_figures": 8,
+  "privacy_bins_verified": 1709,
+  "final_run_lineage": "PASS",
+  "numeric_claims_trace": "PASS",
+  "independent_point_contrast_recalculation": "PASS",
+  "links_checked": 127,
+  "visible_version_markers": "NONE",
+  "clipped_labels": "NONE",
+  "models_refitted": false
+}

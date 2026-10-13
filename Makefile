@@ -1,72 +1,71 @@
 PYTHON ?= .venv/bin/python
-.PHONY: db-up db-down db-connect db-psql db-diagnose db-migrate db-check db-register compile test integration-test preflight smoke pipeline reproduce audit candidates migration-audit income-evidence income-deciles income-audit income-docs municipal-income-evidence
+.DEFAULT_GOAL := study-status
+.PHONY: study-status study-design study-test study-setup study-geography-freeze study-geography-audit study-test-db
+study-status:
+	$(PYTHON) -m src.study.cli status
+study-design:
+	$(PYTHON) -m src.study.cli design
+study-test:
+	$(PYTHON) -m unittest discover -s tests -p 'test_study*.py' -v
+study-test-db:
+	THESIS_STUDY_DB_TEST=1 $(PYTHON) -m unittest discover -s tests -p 'test_study_store.py' -v
+study-setup:
+	$(PYTHON) -m src.study.cli setup
+study-geography-freeze:
+	$(PYTHON) -m src.study.cli geography-freeze
+study-geography-audit:
+	$(PYTHON) -m src.study.cli geography-audit
+.PHONY: study-context-freeze study-context-audit
+study-context-freeze:
+	$(PYTHON) -m src.study.cli context-freeze
+study-context-audit:
+	$(PYTHON) -m src.study.cli context-audit
 
-db-up:
-	docker compose --env-file .env up -d --wait --wait-timeout 120 db
+STUDY_CITY ?= copenhagen
+STUDY_SCHEME ?= neighbourhood
+.PHONY: study-sample-freeze study-prefit-freeze study-within-city study-transfer study-association study-spatial study-robustness study-training-sensitivity study-measurements study-finish study-report study-preservation
+study-sample-freeze:
+	$(PYTHON) -m src.study.cli sample-freeze
+study-prefit-freeze:
+	$(PYTHON) -m src.study.cli prefit-freeze
+study-within-city:
+	$(PYTHON) -m src.study.cli within-city --city "$(STUDY_CITY)" --scheme "$(STUDY_SCHEME)"
+study-transfer:
+	$(PYTHON) -m src.study.cli transfer
+study-association:
+	$(PYTHON) -m src.reporting.study_diagnostics
+study-spatial:
+	$(PYTHON) -m src.reporting.study_spatial
+study-robustness:
+	$(PYTHON) -m src.reporting.study_robustness --city "$(STUDY_CITY)"
+study-training-sensitivity:
+	$(PYTHON) -m src.reporting.study_training_sensitivity --city "$(STUDY_CITY)"
+study-measurements:
+	$(PYTHON) -m src.reporting.study_measurement_sensitivity
+study-finish:
+	$(PYTHON) scripts/study_finish_queue.py
+study-report:
+	$(PYTHON) -m src.reporting.study_report
+study-preservation:
+	$(PYTHON) scripts/study_preservation.py --verify-store --database
 
-db-down:
-	docker compose --env-file .env down
-
-db-connect:
-	$(PYTHON) -m src.db.cli connect
-
-db-psql:
-	docker compose --env-file .env exec db sh -c 'exec psql -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"'
-
-db-diagnose:
-	$(PYTHON) -m src.db.diagnose
-
-db-migrate:
-	$(PYTHON) -m src.db.cli migrate
-
-db-check:
-	$(PYTHON) -m src.db.cli check
-
-db-register:
-	$(PYTHON) -m src.db.cli register-sources
-
+# Historical commands and migration identities are preserved in archive/.
+.PHONY: compile test integration-test
 compile:
-	$(PYTHON) -m compileall src
-
+	$(PYTHON) -m compileall -q src scripts tests
 test:
 	$(PYTHON) -m unittest discover -s tests -v
-
 integration-test:
-	THESIS_DB_TEST=1 THESIS_V3_INTEGRATION=1 $(PYTHON) -m unittest discover -s tests -v
+	THESIS_STUDY_DB_TEST=1 $(PYTHON) -m unittest discover -s tests -p 'test_study*.py' -v
 
-preflight:
-	$(PYTHON) -m src.pipeline.run_pipeline --preflight
-
-smoke:
-	$(PYTHON) -m src.pipeline.run_pipeline --smoke
-
-candidates:
-	$(PYTHON) -m src.pipeline.build_tuning_candidates
-
-pipeline reproduce:
-	$(PYTHON) -m src.pipeline.run_pipeline --run
-
-audit:
-	$(PYTHON) -m src.pipeline.audit_reproducibility --repository-only
-
-migration-audit:
-	$(PYTHON) -m src.pipeline.build_migration_audit
-
-income-evidence:
-	$(PYTHON) -m src.ingestion.acquire_income_evidence
-
-income-deciles:
-	$(PYTHON) -m src.ingestion.acquire_income_evidence --deciles
-
-income-audit:
-	$(PYTHON) -m src.pipeline.qualified_income
-
-municipal-income-evidence:
-	$(PYTHON) -m src.ingestion.acquire_municipal_income_evidence
-
-income-docs:
-	$(PYTHON) -m src.pipeline.update_income_documentation
-
-.PHONY: reporting
-reporting:
-	$(PYTHON) -m src.pipeline.render_reporting_figures
+.PHONY: thesis-outputs thesis-synthesis thesis-check thesis-science-check thesis-release
+thesis-outputs:
+	$(PYTHON) -m src.reporting.thesis_outputs
+thesis-synthesis:
+	$(PYTHON) -m src.reporting.thesis_synthesis
+thesis-check:
+	$(PYTHON) -m src.reporting.thesis_validate
+thesis-science-check:
+	$(PYTHON) -m src.reporting.thesis_validate --science
+thesis-release:
+	$(PYTHON) -m src.reporting.thesis_release

@@ -1,21 +1,68 @@
-# Airbnb urban accessibility thesis — Version 3
+# Airbnb prices and urban accessibility
 
-The active project uses a purpose-based pipeline and PostgreSQL/PostGIS as its authoritative persistent analytical layer. Immutable raw sources remain locally under `data/raw`. The previous committed version is available on the `v2` Git branch; local analysis archives, result freezes and checksums remain in `archive/legacy_v2`.
+This thesis studies Copenhagen–Frederiksberg, Oslo and Stockholm using June 2026
+Inside Airbnb listings. It asks how walking and straight-line accessibility
+differ, what they add to nightly-price prediction, how results vary across
+neighbourhoods, and how pricing relationships transfer between capital cities.
 
-The public `v3` branch contains source code, tests, SQL migrations, methodological documentation and configuration. Datasets, metadata exports, database dumps, archives, generated reports/results, supporting Word documents, credentials and packaging ZIPs are excluded. The source-derived income acceptance file `config/qualified_income_decision.json` also remains local. Running the empirical pipeline requires these local inputs and the PostgreSQL/PostGIS database, including the frozen dataset certificate under `outputs/tables/analysis_dataset`; a fresh clone alone cannot reproduce the existing results. Source checksums and acquisition references remain in the frozen-input configuration. No raw files or scientific settings were changed to prepare this branch.
+The analysis is complete. Start with the [results](reports/research_results.md),
+[findings by research question](reports/findings_by_research_question.md), and
+[thesis figure/table guide](reports/thesis_figure_recommendations.md).
 
-The frozen design compares M0, ME, MW and MEW over 11 peer `analysis_area` units. M0 includes property, prespecified amenities, host/rental variables, log population density, harmonised income and City Hall centrality. Rail and deduplicated bus accessibility remain separate core measures. The baseline assumes 5.0 km/h, a 10-minute network budget and an 833 m rounded Euclidean analogue. See [the protocol](docs/preanalysis_specification.md) and [migration audit](docs/migration_rerun_audit.md).
+## Data and methods
+
+| City | Prediction sample | Complete-case association sample |
+| --- | ---: | ---: |
+| Copenhagen–Frederiksberg | 12,408 | 12,285 |
+| Oslo | 8,529 | 8,152 |
+| Stockholm | 2,495 | 2,348 |
+
+The study combines observed Airbnb asking prices, Inside Airbnb neighbourhood
+polygons, official population density, and OpenStreetMap pedestrian networks
+and destinations. Housing prices and income are excluded. Missing nightly prices
+are excluded, never imputed.
+
+**M0** contains dwelling, host, amenity, density and centrality controls;
+**ME** adds Euclidean accessibility; **MW** adds walking accessibility;
+**MEW** adds both. OLS and XGBoost use identical city samples and folds.
+Neighbourhood holdouts are primary; random and spatial-block validation are
+comparisons. Preprocessing and tuning use training data only.
+
+All six directional transfers use source-city fitting and tuning, with no target
+refitting. Within-city outcomes are log nightly prices; transfer outcomes are
+city-relative log prices. Results are observational. Accessibility improves
+primary XGBoost point errors in Copenhagen and Stockholm, with small adverse
+changes in Oslo; walking is not universally superior. The
+[10% complete-case eligibility amendment](docs/analysis/association_missingness_amendment_20261013.md)
+was made after observing missingness and is explicitly disclosed.
+
+## Use and reproduce the project
+
+| Location | Purpose |
+| --- | --- |
+| `src/study/` | Scientific workflow, samples, validation and models |
+| `src/reporting/` | Frozen-result figures, tables, reports and map context |
+| `config/study/` | Scientific definitions and immutable run selectors |
+| `outputs/figures/`, `tables/`, `metrics/` | Current 300-dpi PNG figures and CSV/Markdown results |
+| `reports/` | Findings, writing guidance, provenance and verification |
+| `docs/analysis/` | Methods, source registry, decisions and execution log |
+| `archive/` | Checksum-preserved previous outputs and implementation |
+
+Install the pinned dependencies in the audited Python 3.13 environment. Connection
+settings use one `.env`; [config/environment.example](config/environment.example)
+is the template. PostgreSQL/PostGIS is the persistent data layer.
 
 ```sh
-make compile
+python -m pip install -r requirements.txt
+make study-status
+make thesis-check
+make thesis-release
 make test
-make db-check
-make db-migrate
-make smoke
-make preflight
-make pipeline
 ```
 
-The full runner verifies frozen inputs, qualified income acceptance and a fresh V3 namespace. The explicit income amendment adopts Copenhagen Municipality KKIND5 and Statistics Denmark nominal IFOR35 for 2024 with a common arithmetic mean of ten decile means. See [the protocol](docs/preanalysis_specification.md) for the qualified income decision. Income remains core; mandatory M0/ME/MW/MEW_no_income models use the same sample, saved folds, preprocessing and tuning budget. `make income-audit` validates and exports the authoritative SQL source freeze. Earlier investigations and the unsent enquiry draft remain preserved locally. `make income-docs` reproduces the current amendment in both local supporting DOCX copies. Run `make preflight`, then `make pipeline` once it passes.
-
-Rebuild the thesis figure gallery from completed SQL results with `make reporting`. Open `reports/reporting_figures_v3.html` for pastel figures and PNG downloads. Reporting refreshes have their own audit certificate; the original empirical run and certificate remain preserved. See `docs/reproducibility.md` for provenance and figure disclosure rules.
+`outputs/thesis_results.zip` is the portable public package. Scientific
+reproduction also requires private sources and saved predictions; see the
+[reproduction guide](docs/analysis/reproducibility.md) and
+[specification](docs/analysis/preanalysis_specification.md). Completed selectors
+prevent accidental refitting. Raw data, credentials, fitted models and individual
+predictions stay outside the public release. Work remains on `v4`.

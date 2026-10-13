@@ -1,0 +1,910 @@
+{
+  "purpose": "Authorized path consolidation; original bytes and persisted identities retained",
+  "files": [
+    {
+      "original_path": "history/compatibility/db_sources.py",
+      "archived_path": "archive/compatibility/db_sources.py",
+      "sha256": "a556e5bc1f91c1a11d55be8d2c6df2586c77be86ae59babdd1b0d352fdcf8fc2",
+      "bytes": 9799
+    },
+    {
+      "original_path": "history/implementation/cli_before_release.py",
+      "archived_path": "archive/implementation/cli_before_release.py",
+      "sha256": "9f0d8a74bd6575140e9359ab0cab07905b4120ad21a5002e3504b845b33c4e01",
+      "bytes": 3399
+    },
+    {
+      "original_path": "history/implementation/evaluation_before_transfer_artifacts.py",
+      "archived_path": "archive/implementation/evaluation_before_transfer_artifacts.py",
+      "sha256": "af857988835c843c34a58e238b6263058cc14c082538aa496401a58d390f25ee",
+      "bytes": 11788
+    },
+    {
+      "original_path": "history/prefit_review/predictive_readiness_before_association_annotation.json",
+      "archived_path": "archive/prefit_review/predictive_readiness_before_association_annotation.json",
+      "sha256": "2f9128241a4f3368ffcaad0246be4755a294673649e3e284f33e08518de42de1",
+      "bytes": 3787
+    },
+    {
+      "original_path": "history/previous_scope/AGENTS.md",
+      "archived_path": "archive/previous_scope/AGENTS.md",
+      "sha256": "b420d9e00100f59e240225ebf2f28605fb499db79517d595a251bcbd03eca0c1",
+      "bytes": 4362
+    },
+    {
+      "original_path": "history/previous_scope/Makefile",
+      "archived_path": "archive/previous_scope/Makefile",
+      "sha256": "a3f04ef1a12bddd0214083c4cce408153e5fe0583b0d76effe13b411a154e0aa",
+      "bytes": 3915
+    },
+    {
+      "original_path": "history/previous_scope/README.md",
+      "archived_path": "archive/previous_scope/README.md",
+      "sha256": "14952f0f27722a02f75b96bbd21fb6465b39e85337ebbe1aeb9810f3f5353d23",
+      "bytes": 2888
+    },
+    {
+      "original_path": "history/research_request/request.txt",
+      "archived_path": "archive/research_request/request.txt",
+      "sha256": "71fdd22f7f0430252631d4fa77a4fadb8cdf25f12c0cfd63a1808c30712ffda9",
+      "bytes": 42957
+    },
+    {
+      "original_path": "src/v4/__init__.py",
+      "archived_path": "archive/previous_analysis/source/__init__.py",
+      "sha256": "9e7c7ca2dbd071fb3632657b36b2c9a19978406c4a7d450999ab6e00d4e9d203",
+      "bytes": 84
+    },
+    {
+      "original_path": "src/v4/cities.py",
+      "archived_path": "archive/previous_analysis/source/cities.py",
+      "sha256": "03a1b79cdb87e708ebb8f42a95b971981c541633e3d43bbfd1f23746ab84dc7a",
+      "bytes": 4854
+    },
+    {
+      "original_path": "src/v4/cli.py",
+      "archived_path": "archive/previous_analysis/source/cli.py",
+      "sha256": "45dfb962718e81e93077c45429941ac8eafae4f9bbff3206c824bc3fc9785854",
+      "bytes": 3283
+    },
+    {
+      "original_path": "src/v4/context.py",
+      "archived_path": "archive/previous_analysis/source/context.py",
+      "sha256": "4c4eee08a24cd8819521fd3ca1cc415902fbd367b850a74acd8a5dc317e0bd7d",
+      "bytes": 30997
+    },
+    {
+      "original_path": "src/v4/geography.py",
+      "archived_path": "archive/previous_analysis/source/geography.py",
+      "sha256": "f68a35065fa97cd3431b13d3a811e2a63a07fa357c06012ab7f28006a0d2fdb0",
+      "bytes": 30369
+    },
+    {
+      "original_path": "src/v4/historical_specification.py",
+      "archived_path": "archive/previous_analysis/source/historical_specification.py",
+      "sha256": "92e204538a17c602ead8618922b3a519da813133c28810ee59708ccad0fba479",
+      "bytes": 3612
+    },
+    {
+      "original_path": "src/v4/housing.py",
+      "archived_path": "archive/previous_analysis/source/housing.py",
+      "sha256": "e3e9c7573b1f0e1ee46a7e911422bdc029ac41d38bb287930e70bfedbfa8b9a3",
+      "bytes": 32736
+    },
+    {
+      "original_path": "src/v4/identity.py",
+      "archived_path": "archive/previous_analysis/source/identity.py",
+      "sha256": "5668a60ecc8fb3ee580893582bc52b2be2fe54ecb8b31392059d704bd85aaaa4",
+      "bytes": 13439
+    },
+    {
+      "original_path": "src/v4/listings.py",
+      "archived_path": "archive/previous_analysis/source/listings.py",
+      "sha256": "692639821c207394edffc02db1832ae7fbe3d9c2c204d8520c6879fcede781a5",
+      "bytes": 28719
+    },
+    {
+      "original_path": "src/v4/persistence.py",
+      "archived_path": "archive/previous_analysis/source/persistence.py",
+      "sha256": "a5a2cb0aafbd0eb1218b38f3e18b2f6a32db94ebc794b5de7f391f6d66abb78f",
+      "bytes": 11753
+    },
+    {
+      "original_path": "src/v4/readiness.py",
+      "archived_path": "archive/previous_analysis/source/readiness.py",
+      "sha256": "b9e650b5eeb880b5104103fbcef59450320960c49addcac5dd8bb5d98d84039f",
+      "bytes": 3714
+    },
+    {
+      "original_path": "src/v4/reporting.py",
+      "archived_path": "archive/previous_analysis/source/reporting.py",
+      "sha256": "57cf755e426bf9111c360f1d984660d64f81f2a91419d65148349ea23c948302",
+      "bytes": 12209
+    },
+    {
+      "original_path": "src/v4/runtime.py",
+      "archived_path": "archive/previous_analysis/source/runtime.py",
+      "sha256": "60bbc77436161ec0405bcd20f3dd7c6cfc624d032184340ed16292458e259045",
+      "bytes": 5248
+    },
+    {
+      "original_path": "src/v4/source_reuse.py",
+      "archived_path": "archive/previous_analysis/source/source_reuse.py",
+      "sha256": "299a0dfaae930653c4452d253a86af7159debfde2acf453cdf4947f955a3780f",
+      "bytes": 3972
+    },
+    {
+      "original_path": "src/v4/specification.py",
+      "archived_path": "archive/previous_analysis/source/specification.py",
+      "sha256": "9f8cb7ae63716dbd167a78e54446bd973a4474390f03e2e819765a43021de7b0",
+      "bytes": 4258
+    },
+    {
+      "original_path": "src/v4/stockholm_boundary.py",
+      "archived_path": "archive/previous_analysis/source/stockholm_boundary.py",
+      "sha256": "41540467767ce33059236da391f0602cdd65f131d4754b3d4fdc8f5eaa0eb3e2",
+      "bytes": 18829
+    },
+    {
+      "original_path": "config/v4/cities.json",
+      "archived_path": "archive/previous_analysis/config/cities.json",
+      "sha256": "65dc95aee5e958e170d72a9f359fa86e116002fcb2ad02a0f9dd06e3f4d2cf3c",
+      "bytes": 17102
+    },
+    {
+      "original_path": "config/v4/cities_accessibility_only.json",
+      "archived_path": "archive/previous_analysis/config/cities_accessibility_only.json",
+      "sha256": "05a855c0a9dc1bb32d5a53bf4601cc5ee37b097640bae42db94990c10bb85e32",
+      "bytes": 14972
+    },
+    {
+      "original_path": "config/v4/context_A04_20261011.json",
+      "archived_path": "archive/previous_analysis/config/context_A04_20261011.json",
+      "sha256": "c326e22be187d4cc5f2e5108a6346d14a114618ba144bedf34e7f9d191bae812",
+      "bytes": 82995
+    },
+    {
+      "original_path": "config/v4/context_reuse_accessibility_only.json",
+      "archived_path": "archive/previous_analysis/config/context_reuse_accessibility_only.json",
+      "sha256": "457af73a77c1620c152127af4be302ef329ab4785f26ecaa1d8603f3030a7a90",
+      "bytes": 1041
+    },
+    {
+      "original_path": "config/v4/geography_A03_20261011.json",
+      "archived_path": "archive/previous_analysis/config/geography_A03_20261011.json",
+      "sha256": "edef5a63e92014559cbea2b43e08fefbcac856e969316a6193cb7e3961bfeb3d",
+      "bytes": 23827
+    },
+    {
+      "original_path": "config/v4/geography_reuse_accessibility_only.json",
+      "archived_path": "archive/previous_analysis/config/geography_reuse_accessibility_only.json",
+      "sha256": "3440436967f7d32a57687cc83ca6d597c072d1f80635fb64c519a23d9a9bd25e",
+      "bytes": 1115
+    },
+    {
+      "original_path": "config/v4/housing_sources.json",
+      "archived_path": "archive/previous_analysis/config/housing_sources.json",
+      "sha256": "79e486fb00923f96a7c93bede00579843f55b07a7c076101863a9b21f831166b",
+      "bytes": 96850
+    },
+    {
+      "original_path": "config/v4/listing_reuse_accessibility_only.json",
+      "archived_path": "archive/previous_analysis/config/listing_reuse_accessibility_only.json",
+      "sha256": "f1e850dfc8831ffe27397ce0e3c5af20498ff0f58034a7cfc192ca584a68da5b",
+      "bytes": 1013
+    },
+    {
+      "original_path": "config/v4/listing_sources.json",
+      "archived_path": "archive/previous_analysis/config/listing_sources.json",
+      "sha256": "2d42754d39a38db522936dc347a63c91c4b8e247f6baebb840e2b63eb0a812bb",
+      "bytes": 1870
+    },
+    {
+      "original_path": "config/v4/research_design.json",
+      "archived_path": "archive/previous_analysis/config/research_design.json",
+      "sha256": "f0cdb6b44b96b2e0f842e24494b6bae5490f27638a164c6c3442be95679c342c",
+      "bytes": 20237
+    },
+    {
+      "original_path": "config/v4/research_design_accessibility_only.json",
+      "archived_path": "archive/previous_analysis/config/research_design_accessibility_only.json",
+      "sha256": "3af3667c5fbc218f4c85ce03dc57478117c70e314114c5e39a92e96323806016",
+      "bytes": 18540
+    },
+    {
+      "original_path": "config/v4/stockholm_boundary_amendment.json",
+      "archived_path": "archive/previous_analysis/config/stockholm_boundary_amendment.json",
+      "sha256": "3673f1bccc9d79f4b8d7cfabdb2763e4ab30a33f4a58b21eb4c6fb488bde9189",
+      "bytes": 16151
+    },
+    {
+      "original_path": "docs/v4/IMPLEMENTATION_CONTRACT.md",
+      "archived_path": "archive/previous_analysis/docs/IMPLEMENTATION_CONTRACT.md",
+      "sha256": "600b5d6ae8fe091c67a8d871744a078647b7c9a449be9602aa7cb447fdd9456c",
+      "bytes": 9809
+    },
+    {
+      "original_path": "docs/v4/architecture.md",
+      "archived_path": "archive/previous_analysis/docs/architecture.md",
+      "sha256": "2bf9d09cd3061fcfb91a561adae74d68b8c4b5f838f5e255d6c0554108c8919e",
+      "bytes": 3692
+    },
+    {
+      "original_path": "docs/v4/context_copenhagen_frederiksberg_A04_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/context_copenhagen_frederiksberg_A04_20261011.md",
+      "sha256": "6b567363aa5eb9d381e4261a77e99b3ec2d7ea19e1092c25ac8477d9dd16aaf8",
+      "bytes": 1887
+    },
+    {
+      "original_path": "docs/v4/context_oslo_A04_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/context_oslo_A04_20261011.md",
+      "sha256": "9a695f08d22ebd7ab2a2aae174515c42401f7eaf614c4697fd22f536f07e21f3",
+      "bytes": 1923
+    },
+    {
+      "original_path": "docs/v4/context_qualification_A04_20261011.json",
+      "archived_path": "archive/previous_analysis/docs/context_qualification_A04_20261011.json",
+      "sha256": "c500832d7e5b720842df2ac3ad1dae5d7da3fe1f30b8730207caa8eb9a619240",
+      "bytes": 9497
+    },
+    {
+      "original_path": "docs/v4/context_qualification_A04_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/context_qualification_A04_20261011.md",
+      "sha256": "866d4b4a0c9531c6f52a8396e14764cdf618a895920f338c04df3eaa46c76aff",
+      "bytes": 13842
+    },
+    {
+      "original_path": "docs/v4/context_source_registry_A04_20261011.json",
+      "archived_path": "archive/previous_analysis/docs/context_source_registry_A04_20261011.json",
+      "sha256": "5ddb12335bd2b99e7d5ef5ccd888621c885270463d4f419f6357fe6fe8254e67",
+      "bytes": 91906
+    },
+    {
+      "original_path": "docs/v4/context_stockholm_A04_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/context_stockholm_A04_20261011.md",
+      "sha256": "1737d5be7defab8a96ea4228147993597e6ac89bfe69f62cb0b8fe4ea211ea5d",
+      "bytes": 2351
+    },
+    {
+      "original_path": "docs/v4/current_state_audit_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/current_state_audit_20261011.md",
+      "sha256": "1fa574fe16c55d2f99159e57c74272203258f8bd73da5b17c8875e861c2ff9e6",
+      "bytes": 13060
+    },
+    {
+      "original_path": "docs/v4/data_dictionary.md",
+      "archived_path": "archive/previous_analysis/docs/data_dictionary.md",
+      "sha256": "ae36910bd78bea589c9c49a15a68d5a91c9869902dd4814da6865565db55c646",
+      "bytes": 10738
+    },
+    {
+      "original_path": "docs/v4/document_index.md",
+      "archived_path": "archive/previous_analysis/docs/document_index.md",
+      "sha256": "1953e15301878084bfcaea176e019605b96d0ce286cb07da1ccd4a831e23b23a",
+      "bytes": 10290
+    },
+    {
+      "original_path": "docs/v4/geography_qualification_A03_20261011.json",
+      "archived_path": "archive/previous_analysis/docs/geography_qualification_A03_20261011.json",
+      "sha256": "d1527cd1f09e78235487b4cbba3de94547f865d1aa43cc0e756715997e617d3a",
+      "bytes": 29563
+    },
+    {
+      "original_path": "docs/v4/geography_qualification_A03_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/geography_qualification_A03_20261011.md",
+      "sha256": "e9e0bdd85c3dd8c29840762ca68a80c9764d11b5f1566f9c25647121bd2abcd2",
+      "bytes": 15031
+    },
+    {
+      "original_path": "docs/v4/geography_source_registry_A03_20261011.json",
+      "archived_path": "archive/previous_analysis/docs/geography_source_registry_A03_20261011.json",
+      "sha256": "ccfbdf2896d65e565a926b9508e765b89acf77a4c41e3ae15b0ec7178b4d2b8a",
+      "bytes": 31942
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/AGENTS_before_A01.txt",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/AGENTS_before_A01.txt",
+      "sha256": "f966232103dd9c675d4f095551461e04526b77c8c48ee4e5d84acfeca3893013",
+      "bytes": 3190
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/IMPLEMENTATION_CONTRACT.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/IMPLEMENTATION_CONTRACT.md",
+      "sha256": "0595afe1129ce98651542369261e8abe8dabce224e738bd496a88521e1deaea3",
+      "bytes": 10692
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/README.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/README.md",
+      "sha256": "8163864e86c3718bc597031449f268d771c78fed1cc373293a62c2145833fca5",
+      "bytes": 644
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/architecture.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/architecture.md",
+      "sha256": "529efbb1eb3fc96ed218aba546df0c8681c584c1f96e5001890b8c9e80b7f87a",
+      "bytes": 11121
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/data_dictionary.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/data_dictionary.md",
+      "sha256": "269bd7a7f06430735e5f63ecead8d2ec60f00455ad46fc24469e3774e10f6a4a",
+      "bytes": 8631
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/document_index.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/document_index.md",
+      "sha256": "230cf038dbd9c8e36e48da6fe55922650bee5fec8caa3820ad1f954e111c8a9e",
+      "bytes": 5500
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/file_manifest.json",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/file_manifest.json",
+      "sha256": "ca3d55ebf1652fdbb51610355a5f74cdf4b9350c5edc665da7cbdb5755dbb9f2",
+      "bytes": 1702
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/preanalysis_specification.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/preanalysis_specification.md",
+      "sha256": "5cdb3bef2db26c7139b832504cdf3385a6dd284cea8c336fcdd8c6501f2f5425",
+      "bytes": 14097
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/proposal.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/proposal.md",
+      "sha256": "0c86fb13b54742aabff942e30a39975a725c611379b465ef40838608e3c59645",
+      "bytes": 3971
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/research_plan.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/research_plan.md",
+      "sha256": "779613462f13dfdb0ccc4ec3c9c5bb9cedc06c4731423fd014cf2a50cbb6cf69",
+      "bytes": 5318
+    },
+    {
+      "original_path": "docs/v4/history/housing_standard_20261011_before_A01/source_registry.md",
+      "archived_path": "archive/previous_analysis/docs/history/housing_standard_20261011_before_A01/source_registry.md",
+      "sha256": "9b9751ea45602a5639af19d8050c29bbeac23539f1b91ef7680795ef21f14395",
+      "bytes": 7096
+    },
+    {
+      "original_path": "docs/v4/housing_access_requirements.md",
+      "archived_path": "archive/previous_analysis/docs/housing_access_requirements.md",
+      "sha256": "c39fc9c9a1f00f9f16227e56f9e6127453f4bffb436511d5035e2a0b734050ee",
+      "bytes": 9387
+    },
+    {
+      "original_path": "docs/v4/housing_acquisition.md",
+      "archived_path": "archive/previous_analysis/docs/housing_acquisition.md",
+      "sha256": "809c535816227807eb43b509701bab521bac3180417630621bc40c9bb83df75d",
+      "bytes": 19277
+    },
+    {
+      "original_path": "docs/v4/housing_acquisition_audit.json",
+      "archived_path": "archive/previous_analysis/docs/housing_acquisition_audit.json",
+      "sha256": "6823097ebca717b4e6005bfe498b83f038c854086f07ead2c3aecdaa9478e805",
+      "bytes": 55516
+    },
+    {
+      "original_path": "docs/v4/housing_source_registry.json",
+      "archived_path": "archive/previous_analysis/docs/housing_source_registry.json",
+      "sha256": "1289cfc646fdabcf22ed4e21123eac55f1bdd80e7fe9d036ca651d46c4732111",
+      "bytes": 46775
+    },
+    {
+      "original_path": "docs/v4/income_decision_proposal_A04_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/income_decision_proposal_A04_20261011.md",
+      "sha256": "a851f1e5ec1897fd858f37c989980bcd462cbce85a8554ca8fa36d008dbadb6c",
+      "bytes": 3506
+    },
+    {
+      "original_path": "docs/v4/listing_acquisition.md",
+      "archived_path": "archive/previous_analysis/docs/listing_acquisition.md",
+      "sha256": "4fe869657afad360c53d25890d89ef4793a1e3fd83fb3d79ab0fdfd5c873204a",
+      "bytes": 10390
+    },
+    {
+      "original_path": "docs/v4/listing_acquisition_audit.json",
+      "archived_path": "archive/previous_analysis/docs/listing_acquisition_audit.json",
+      "sha256": "e1127f9bb7417160dbaf0d9fb365368a8abc3854a6591f8d2b6689f10aa0c98b",
+      "bytes": 44681
+    },
+    {
+      "original_path": "docs/v4/model_contract.md",
+      "archived_path": "archive/previous_analysis/docs/model_contract.md",
+      "sha256": "d4aac87f7044f262a2853366cf14139c735b1faa4962ca38cdc6c4d557cf4cfb",
+      "bytes": 5120
+    },
+    {
+      "original_path": "docs/v4/oslo_boundary_amendment_A03_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/oslo_boundary_amendment_A03_20261011.md",
+      "sha256": "7637f28030d4733be18ed449a84b5d7905d577a28c3a6a3b450db8e54bea9167",
+      "bytes": 7927
+    },
+    {
+      "original_path": "docs/v4/pipeline_scope_audit_A02_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/pipeline_scope_audit_A02_20261011.md",
+      "sha256": "a9b434af74d453ba3f32a4373a9d4989ce45213e33ec218da07afbfa411a3b2f",
+      "bytes": 11271
+    },
+    {
+      "original_path": "docs/v4/preanalysis_specification.md",
+      "archived_path": "archive/previous_analysis/docs/preanalysis_specification.md",
+      "sha256": "7ffcaad4957e39303b600243a63ea597fe70daa6102f69ddfab8ef2ab2fcf010",
+      "bytes": 9985
+    },
+    {
+      "original_path": "docs/v4/proposal.md",
+      "archived_path": "archive/previous_analysis/docs/proposal.md",
+      "sha256": "05209487770baafd4fa3a6bcbb76134b890d44369525c260888608fa5460376e",
+      "bytes": 29591
+    },
+    {
+      "original_path": "docs/v4/protected_v3_manifest.json",
+      "archived_path": "archive/previous_analysis/docs/protected_v3_manifest.json",
+      "sha256": "2ef92016429509fc75d35d20a3531781406303c26f558c02d8257aaa38c551cd",
+      "bytes": 358841
+    },
+    {
+      "original_path": "docs/v4/repository_audit.md",
+      "archived_path": "archive/previous_analysis/docs/repository_audit.md",
+      "sha256": "744fe0b0224a7b807f7f020e9fd5a2ecf860a67b27ce761a9ccd50610982cb0b",
+      "bytes": 13247
+    },
+    {
+      "original_path": "docs/v4/research_plan.md",
+      "archived_path": "archive/previous_analysis/docs/research_plan.md",
+      "sha256": "9d8b7de47c01445ac15ea026818c2c3faaa58c3d53ebdd1c8ceba155bcf8d712",
+      "bytes": 38513
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/CODEX_PLAYBOOK.md",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/CODEX_PLAYBOOK.md",
+      "sha256": "0faa09677c48b9e52ab800dbe75a17855b31ce40de7342d91298889a9fe830a8",
+      "bytes": 41876
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/README.md",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/README.md",
+      "sha256": "964e2293d925d5dbe81c1fd0ea192ad93b39a6d96350ca6ab63fd0a27ba9090c",
+      "bytes": 2711
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/RECOVERY_PROMPT.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/RECOVERY_PROMPT.txt",
+      "sha256": "56ca78338fa84d99ce747912065628a8f619bbe9b7be1c076965010f01c507d0",
+      "bytes": 1696
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/docs/end_to_end_plan_v4_accessibility_only.docx",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/docs/end_to_end_plan_v4_accessibility_only.docx",
+      "sha256": "961e2014c0e81c5323184180cb52960a39ad263b2eb17a78c29e39e814615ca3",
+      "bytes": 55741
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/docs/end_to_end_plan_v4_accessibility_only.md",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/docs/end_to_end_plan_v4_accessibility_only.md",
+      "sha256": "3044c488d6f956848ed0759fb0fe3287034efcc20c8efe843299c61df08e1e69",
+      "bytes": 35725
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/docs/scientific_proposal_v4_accessibility_only.docx",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/docs/scientific_proposal_v4_accessibility_only.docx",
+      "sha256": "8d1eff34c5e0f5022a720593db43e8170f7ed20d71a647aedda259dfeccb47c3",
+      "bytes": 51136
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/docs/scientific_proposal_v4_accessibility_only.md",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/docs/scientific_proposal_v4_accessibility_only.md",
+      "sha256": "afaaa91744eff1ae33e58eca545bd88bef86e414e16eb1d8eb1b222b3329613d",
+      "bytes": 28271
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/file_manifest.json",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/file_manifest.json",
+      "sha256": "f849f25d464dcd873bf21e458e79128a7e03f48782903e065d513b00436af139",
+      "bytes": 4514
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A01_amend_scope_and_preserve_evidence.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A01_amend_scope_and_preserve_evidence.txt",
+      "sha256": "ce7faf33b7aa3676539d3ade4e0a877bc4ed7c613f8eb236de1167b907fc4f01",
+      "bytes": 3593
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A02_remove_housing_from_active_dependencies.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A02_remove_housing_from_active_dependencies.txt",
+      "sha256": "1831b5972e0f702aabbd31a82a922c487da52dea1d844a481d1349bc4665b3fe",
+      "bytes": 3333
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A03_qualify_geography_and_oslo_vintage.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A03_qualify_geography_and_oslo_vintage.txt",
+      "sha256": "ed34924324a3044349c7df69e3a0b37dd83250526804cfe6e51589b7c59b6d1e",
+      "bytes": 3487
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A04_qualify_baseline_context.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A04_qualify_baseline_context.txt",
+      "sha256": "d01260ce8e4991ab51b6b08e5fdaf830d8c20576964f35aa5946b20c482af7df",
+      "bytes": 3252
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A05_build_matched_accessibility.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A05_build_matched_accessibility.txt",
+      "sha256": "8ea5a8b3f0e5f899e9b6a50abd09960ecfb92f07b7a9a9ff30571b508ad69d93",
+      "bytes": 3189
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A06_freeze_samples_folds_and_candidates.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A06_freeze_samples_folds_and_candidates.txt",
+      "sha256": "a05669451fe506797754ea0f8f46031ce3e3008362314f8b23734f0bf5518149",
+      "bytes": 3243
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A07_validate_models_and_execution.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A07_validate_models_and_execution.txt",
+      "sha256": "fc74d8fffe4fa714da8107f2af5f90cad70c0cbcc185d522aab8f31dae0cca18",
+      "bytes": 3214
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A08_run_copenhagen.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A08_run_copenhagen.txt",
+      "sha256": "2cbd08a5ac153755c6dcf7e2375780acc32f266a365929baa0f816458e4aff29",
+      "bytes": 2841
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A09_run_oslo.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A09_run_oslo.txt",
+      "sha256": "3800df1f6af54e95bd85dad0d4300683dcb797fff5118943fa76c0154753ead5",
+      "bytes": 2668
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A10_run_stockholm.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A10_run_stockholm.txt",
+      "sha256": "3a123284ebb8ee346667207edfb9bdbb6386a9a252b560c0c97e10069ec0e435",
+      "bytes": 2746
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A11_robustness_and_cross_city_synthesis.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A11_robustness_and_cross_city_synthesis.txt",
+      "sha256": "d861b5684f8507787e4d1dd10e3ceecad0c9355323fe336637b33bd79d12f2c8",
+      "bytes": 3100
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A12_release_and_documentation.txt",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/prompts/A12_release_and_documentation.txt",
+      "sha256": "2bdba7361372801dbfc70fdf4baa9802a7bbcadad82f0c0cb17c8357def778a6",
+      "bytes": 3149
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/support/IMPLEMENTATION_CONTRACT.md",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/support/IMPLEMENTATION_CONTRACT.md",
+      "sha256": "a7e031b71e4caa9f8872afc60adf9a0ebc2165be236eded31c2c20d1bcc9e843",
+      "bytes": 3718
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/support/PREANALYSIS_SPECIFICATION.md",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/support/PREANALYSIS_SPECIFICATION.md",
+      "sha256": "d35f6338d52b7a2b6d00af5767af41130b807db4c1da4e2c45dc37c63e4f2921",
+      "bytes": 7403
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/support/SCOPE_CHANGELOG.md",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/support/SCOPE_CHANGELOG.md",
+      "sha256": "f1e16c3b0bb09c259aa88154241f805ffafca845ccfb1dcb5340b6044f838d4a",
+      "bytes": 2643
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/support/SOURCE_REGISTRY.md",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/support/SOURCE_REGISTRY.md",
+      "sha256": "8790f4d290f65f630de558e1b9ddfe7fc87dbfcf6d66b4a22832cc7f4f31add3",
+      "bytes": 3997
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/support/model_spec_template.json",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/support/model_spec_template.json",
+      "sha256": "fe2a789f3f0510810819827f35f17979e2801dedcc09525779178709b872509e",
+      "bytes": 3135
+    },
+    {
+      "original_path": "docs/v4/revisions/accessibility_only_20261011/support/supplied_input_provenance.json",
+      "archived_path": "archive/previous_analysis/docs/revisions/accessibility_only_20261011/support/supplied_input_provenance.json",
+      "sha256": "725ac3b10f8c4bcd3f039365ecc39972614e043ff2a3e89504dada521a20e548",
+      "bytes": 1360
+    },
+    {
+      "original_path": "docs/v4/rinkeby_polygon_check_20261012.json",
+      "archived_path": "archive/previous_analysis/docs/rinkeby_polygon_check_20261012.json",
+      "sha256": "bf1ddd36a2ca49b6580128a1f2852fed5b02a2831db481ffece9b59d5737a003",
+      "bytes": 10343
+    },
+    {
+      "original_path": "docs/v4/rinkeby_polygon_check_20261012.md",
+      "archived_path": "archive/previous_analysis/docs/rinkeby_polygon_check_20261012.md",
+      "sha256": "4a93ffc29a453cc5017157575d643b210aedb65f975b0a057d3a6c5f5c1ca8b9",
+      "bytes": 5047
+    },
+    {
+      "original_path": "docs/v4/scope_amendment_20261011.json",
+      "archived_path": "archive/previous_analysis/docs/scope_amendment_20261011.json",
+      "sha256": "114df8229d482f9522b7c5ec2d832abe642d2547efc690c1b41a1203aebe35f3",
+      "bytes": 2895
+    },
+    {
+      "original_path": "docs/v4/source_registry.md",
+      "archived_path": "archive/previous_analysis/docs/source_registry.md",
+      "sha256": "f6701ee9c7e6aca3fed9f148d3206e1658351a0e99328ff81be1cb9971da8466",
+      "bytes": 7286
+    },
+    {
+      "original_path": "docs/v4/step_log.md",
+      "archived_path": "archive/previous_analysis/docs/step_log.md",
+      "sha256": "dea48bfc99e5b52dffd68bc59287daab24f43dcbea12b6d0e264ddc82cc28711",
+      "bytes": 86866
+    },
+    {
+      "original_path": "docs/v4/step_mapping_A01_A12.md",
+      "archived_path": "archive/previous_analysis/docs/step_mapping_A01_A12.md",
+      "sha256": "647d917bde85e027e939726f63522f828cc9f79c84b7a1eb141de192a519fb2b",
+      "bytes": 3776
+    },
+    {
+      "original_path": "docs/v4/stockholm_boundary_amendment_20261011.md",
+      "archived_path": "archive/previous_analysis/docs/stockholm_boundary_amendment_20261011.md",
+      "sha256": "e56ed18c0712824e4170719f2cc212078e1925e4b673e4d77d0a598dc898b5f1",
+      "bytes": 12263
+    },
+    {
+      "original_path": "docs/v4/stockholm_boundary_amendment_20261011_audit.json",
+      "archived_path": "archive/previous_analysis/docs/stockholm_boundary_amendment_20261011_audit.json",
+      "sha256": "69468a6e285cc69fffa1340538c39440c5c9467764b8ca5660c99793b433246e",
+      "bytes": 34880
+    },
+    {
+      "original_path": "sql/v4_migrations/023_v4_multicity_persistence.sql",
+      "archived_path": "archive/previous_analysis/migrations/023_v4_multicity_persistence.sql",
+      "sha256": "a5082cd5147069239f3b68951de25ddcedd462c20cef32ab71ea1e2e92373893",
+      "bytes": 9719
+    },
+    {
+      "original_path": "sql/v4_migrations/024_v4_listing_boundary_audit.sql",
+      "archived_path": "archive/previous_analysis/migrations/024_v4_listing_boundary_audit.sql",
+      "sha256": "c519162548ac2005bb1e289d93b9ae0c77d600cd06f624443dbad23bad266ddc",
+      "bytes": 4312
+    },
+    {
+      "original_path": "sql/v4_migrations/025_v4_housing_source_audit.sql",
+      "archived_path": "archive/previous_analysis/migrations/025_v4_housing_source_audit.sql",
+      "sha256": "39d06c9b97eb8c93f48d9deb1acb93cb3d5172cc9f91dd5724af3a5293154f8e",
+      "bytes": 2758
+    },
+    {
+      "original_path": "sql/v4_migrations/026_v4_accessibility_only_definition.sql",
+      "archived_path": "archive/previous_analysis/migrations/026_v4_accessibility_only_definition.sql",
+      "sha256": "57031e2bb082f5dd2e5ec1733d1a0db82a0a014a52ffe09a27abeaceb79a46c7",
+      "bytes": 3757
+    },
+    {
+      "original_path": "sql/v4_migrations/027_v4_geography_qualification.sql",
+      "archived_path": "archive/previous_analysis/migrations/027_v4_geography_qualification.sql",
+      "sha256": "8d9df8bd6bea7beb2524f6187e6617ecf312be66031f079d8ac01ac603cc1040",
+      "bytes": 5766
+    },
+    {
+      "original_path": "sql/v4_migrations/028_v4_context_qualification.sql",
+      "archived_path": "archive/previous_analysis/migrations/028_v4_context_qualification.sql",
+      "sha256": "05c07e17db2061fd9126b4112c5a02bd34a7f58cf7327c544bdb83ed1f7ae62b",
+      "bytes": 5442
+    },
+    {
+      "original_path": "scripts/v4_repository_checks.py",
+      "archived_path": "archive/previous_analysis/scripts/v4_repository_checks.py",
+      "sha256": "95390bc7593aedb24e66cd6657fdfb4c8b856c81ca9b59dec4f6d83e74679ce3",
+      "bytes": 7972
+    },
+    {
+      "original_path": "scripts/v4_rinkeby_polygon_check.py",
+      "archived_path": "archive/previous_analysis/scripts/v4_rinkeby_polygon_check.py",
+      "sha256": "f7a42cf7804e7e14c9c17d01c96f8adfae84f454a2a0dacfa896858731cdd2dc",
+      "bytes": 6834
+    },
+    {
+      "original_path": "tests/test_v4_accessibility_only.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_accessibility_only.py",
+      "sha256": "7dea9806155689c183fc00c92025ecdbd25a428080901131e3d0b97d8d49fb12",
+      "bytes": 11533
+    },
+    {
+      "original_path": "tests/test_v4_architecture.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_architecture.py",
+      "sha256": "76c098463afd997f5bf7c97c9770046e2b1f53574c7b414d1a2da43493c2c8ba",
+      "bytes": 14893
+    },
+    {
+      "original_path": "tests/test_v4_context.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_context.py",
+      "sha256": "318057241a0f12888dd8707d8067f1171d2276c265a4b0f6cb89506ced481669",
+      "bytes": 5778
+    },
+    {
+      "original_path": "tests/test_v4_geography.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_geography.py",
+      "sha256": "792a7d84fbb4769b83797523c53ec01ba1f6677608a0f0c29828cc94bfda0b00",
+      "bytes": 7178
+    },
+    {
+      "original_path": "tests/test_v4_housing.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_housing.py",
+      "sha256": "4b67e4b68bf40003f97882d8b626a08d58f727c252ea32f139f3e67f2c535fbe",
+      "bytes": 10124
+    },
+    {
+      "original_path": "tests/test_v4_listings.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_listings.py",
+      "sha256": "c03537f3e20d9d9c314d5693a91cf7284895f6a3fd42a82005948a29878fb16b",
+      "bytes": 11910
+    },
+    {
+      "original_path": "tests/test_v4_persistence.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_persistence.py",
+      "sha256": "3f91e446e655b601ea68a7aeebd84b67d511ea09f3cda07d2491dcb6ad4122a2",
+      "bytes": 38550
+    },
+    {
+      "original_path": "tests/test_v4_rinkeby_polygon_check.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_rinkeby_polygon_check.py",
+      "sha256": "692101b12f9a942e21d24edfab1ed02ded0f5feaec6071f764d5c611476d344f",
+      "bytes": 1894
+    },
+    {
+      "original_path": "tests/test_v4_specification.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_specification.py",
+      "sha256": "0c0dacb2d2261fbe1d1911385a47477ce384c7af53b44f9367bddd4ed9cfc7c5",
+      "bytes": 12556
+    },
+    {
+      "original_path": "tests/test_v4_stockholm_boundary.py",
+      "archived_path": "archive/previous_analysis/tests/test_v4_stockholm_boundary.py",
+      "sha256": "578bad01ae6055e66ac7ecf4847691493ad6288fa68ceeb2af23a4dd816faf62",
+      "bytes": 6764
+    },
+    {
+      "original_path": "requirements-study.txt",
+      "archived_path": "archive/before_association_amendment/requirements-study.txt",
+      "sha256": "471283c86cbe5aaf74bf5afd313428d8d0203bd4539a9b141981867386d3c78d",
+      "bytes": 36
+    },
+    {
+      "original_path": ".python-version",
+      "archived_path": "archive/before_association_amendment/.python-version",
+      "sha256": "e72b03ed5b70312f2782f2b05055c55b24670e126d50e24c4f2c559bf288f810",
+      "bytes": 7
+    },
+    {
+      "original_path": ".env.v4.example",
+      "archived_path": "archive/previous_analysis/.env.v4.example",
+      "sha256": "c1c8e33c66e04273d0d52cfb6c8483b969126ceb300e079b346ff9e7f39ad7bb",
+      "bytes": 210
+    },
+    {
+      "original_path": "outputs/tables/research/association_coefficients.csv",
+      "archived_path": "archive/before_association_amendment/outputs/tables/research/association_coefficients.csv",
+      "sha256": "d869a0e969a747b59860fc25b5196746a14b85fdec08ec1a87e032bf1427338b",
+      "bytes": 46603
+    },
+    {
+      "original_path": "outputs/tables/research/association_vif.csv",
+      "archived_path": "archive/before_association_amendment/outputs/tables/research/association_vif.csv",
+      "sha256": "fda0da7fa33a0efdb1363f0cf5b15f5d2caf602fa5f5bf3c4b18aa102ae5dccc",
+      "bytes": 10215
+    },
+    {
+      "original_path": "outputs/tables/research/spatial_association_coefficients.csv",
+      "archived_path": "archive/before_association_amendment/outputs/tables/research/spatial_association_coefficients.csv",
+      "sha256": "f604fe26026edc739c860a52c5b89ddf8af382afdc11a53653505b90c691a854",
+      "bytes": 73594
+    },
+    {
+      "original_path": "outputs/tables/research/association_execution_status.csv",
+      "archived_path": "archive/before_association_amendment/outputs/tables/research/association_execution_status.csv",
+      "sha256": "ddff8cd71289f157814ce502e525abe0a8d738217cf7f37912b799aa2521e89b",
+      "bytes": 357
+    },
+    {
+      "original_path": "outputs/tables/research/city_comparability.csv",
+      "archived_path": "archive/before_association_amendment/outputs/tables/research/city_comparability.csv",
+      "sha256": "5f93aeafb60aa9494d6f526af52aeff01f3d962edd39cb1a2089a0a1c0ca8326",
+      "bytes": 378
+    },
+    {
+      "original_path": "outputs/tables/research/robustness_registry.csv",
+      "archived_path": "archive/before_association_amendment/outputs/tables/research/robustness_registry.csv",
+      "sha256": "51cfa6169dccec1b278aa7c2b77e6c8a730a09ea74df4b2ce14bb79d47ca26f8",
+      "bytes": 76884
+    },
+    {
+      "original_path": ".env.example",
+      "archived_path": "archive/previous_scope/.env.example",
+      "sha256": "cfc55ea3bf7a728e80ac28db09ba1186100bf072d22e48a6d6b0e669715ed34d",
+      "bytes": 178
+    },
+    {
+      "original_path": ".env.study.example",
+      "archived_path": "archive/previous_scope/.env.study.example",
+      "sha256": "3642517181f484e37e5b05d56a5b6c91732b47cd70f2ef2691b6bd3e81fec2cd",
+      "bytes": 228
+    },
+    {
+      "original_path": ".env.example",
+      "archived_path": "config/environment.example",
+      "sha256": "6b55e971f4280ffe26dd2fb8592c8ce1cb3bbc1e3fedad5c1eb22a738fe4bd65",
+      "bytes": 391
+    },
+    {
+      "original_path": "src/db/connection.py",
+      "archived_path": "archive/implementation/connection_before_template_move.py",
+      "sha256": "83b0cd7fb21b3f8a8f6d156ad4cff645dec773ba5cfadad8262803de48439891",
+      "bytes": 1609
+    },
+    {
+      "original_path": "docs/scientific_proposal.md",
+      "archived_path": "archive/before_thesis_reporting/docs/scientific_proposal.md",
+      "sha256": "a1d367ab1c6568441296e66b6fc83c6a7d39c861308d816f272e40c0a1cec469",
+      "bytes": 3680,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/research_plan.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/research_plan.md",
+      "sha256": "b6674c965f2f7aae14ec9d73ecdeb2acbb70d401e51a1031469a1e18f48ea795",
+      "bytes": 2955,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/reproducibility.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/reproducibility.md",
+      "sha256": "e8e988950a2629ad78d2ae6a4d51f1bb0480c0badc18a8f14c850c6c08582046",
+      "bytes": 9677,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/source_registry.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/source_registry.md",
+      "sha256": "ac8408784f442a40d2eb0b30a06675cc8378c58a7d907461a0779a42e9f83509",
+      "bytes": 3690,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/document_index.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/document_index.md",
+      "sha256": "25b5fd224c6d058a9adf85fedcad31839e5ebc49c2e905cd661cecfbba1af051",
+      "bytes": 5138,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/implementation_contract.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/implementation_contract.md",
+      "sha256": "bb7dfc4617e0a361884d3c6d004489ceb5362fe0cdb1e91b55998e18056a2dc3",
+      "bytes": 4757,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "README.md",
+      "archived_path": "archive/before_thesis_reporting/README.md",
+      "sha256": "ca1868ade28a03dc7ace79ec2033157555c3b1cd1f170af34e4a2fa699e27413",
+      "bytes": 2383,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "Makefile",
+      "archived_path": "archive/before_thesis_reporting/Makefile",
+      "sha256": "8b4c40b76aa313fee1707869de5ee1aa44e19e739d6043a35f3c19e5a4a7ed59",
+      "bytes": 2291,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    }
+  ],
+  "researcher_exclusions": {
+    "thesis_results_v3.zip": "Researcher explicitly declined recovery on 13 October 2026: no longer needed; skip it"
+  }
+}

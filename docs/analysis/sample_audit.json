@@ -1,0 +1,1589 @@
+{
+  "copenhagen": {
+    "sample": {
+      "city": "copenhagen",
+      "status": "COMMON_SAMPLES_FROZEN",
+      "prediction_n": 12408,
+      "association_n": 12285,
+      "association_missing_fraction": 0.009912959381044487,
+      "association_inference_status": "READY_FOR_RANK_DIAGNOSTIC",
+      "sample_flow": [
+        {
+          "stage": "raw",
+          "n": 23144
+        },
+        {
+          "stage": "eligible_dwelling",
+          "n": 21080
+        },
+        {
+          "stage": "positive_observed_price",
+          "n": 12521
+        },
+        {
+          "stage": "inside_study_area",
+          "n": 12508
+        },
+        {
+          "stage": "unique_operational_geography",
+          "n": 12508
+        },
+        {
+          "stage": "qualified_context",
+          "n": 12508
+        },
+        {
+          "stage": "matched_accessibility_support",
+          "n": 12408
+        },
+        {
+          "stage": "common_prediction",
+          "n": 12408
+        },
+        {
+          "stage": "common_ols_association",
+          "n": 12285
+        }
+      ],
+      "group_counts": {
+        "Amager Vest": 1051,
+        "Amager Øst": 982,
+        "Bispebjerg": 532,
+        "Brønshøj-Husum": 221,
+        "Frederiksberg": 1304,
+        "Indre By": 1833,
+        "Nørrebro": 2181,
+        "Valby": 463,
+        "Vanløse": 273,
+        "Vesterbro-Kongens Enghave": 2161,
+        "Østerbro": 1407
+      },
+      "record_sha256": "938d7a392759882988b12f7f38e0d21492eef8e48218fa3f0814465a8cdd95e9",
+      "required_predictor_missing": {
+        "accommodates": 0,
+        "bedrooms": 123,
+        "bathrooms_effective": 0,
+        "log1p_minimum_nights": 0,
+        "superhost": 0,
+        "log1p_host_listings_count": 0,
+        "amenity_wifi": 0,
+        "amenity_dishwasher": 0,
+        "amenity_washer": 0,
+        "amenity_dryer": 0,
+        "amenity_workspace": 0,
+        "amenity_free_parking": 0,
+        "amenity_private_balcony": 0,
+        "amenity_self_checkin": 0,
+        "log_population_density": 0,
+        "distance_centre_euclidean_km": 0,
+        "property_type": 0,
+        "nearest_station_euclidean_km": 0,
+        "nearest_bus_euclidean_km": 0,
+        "log1p_food_e": 0,
+        "log1p_culture_e": 0,
+        "nearest_station_walking_minutes": 0,
+        "nearest_bus_walking_minutes": 0,
+        "log1p_food_w": 0,
+        "log1p_culture_w": 0
+      },
+      "all_models_same_rows": true,
+      "historical_sample_reused": false,
+      "outcome_imputed": false,
+      "metric_crs": "EPSG:25832",
+      "support": [
+        {
+          "group": "Amager Vest",
+          "test_n": 1051,
+          "train_n": 11357,
+          "former_30_met": true
+        },
+        {
+          "group": "Amager Øst",
+          "test_n": 982,
+          "train_n": 11426,
+          "former_30_met": true
+        },
+        {
+          "group": "Bispebjerg",
+          "test_n": 532,
+          "train_n": 11876,
+          "former_30_met": true
+        },
+        {
+          "group": "Brønshøj-Husum",
+          "test_n": 221,
+          "train_n": 12187,
+          "former_30_met": true
+        },
+        {
+          "group": "Frederiksberg",
+          "test_n": 1304,
+          "train_n": 11104,
+          "former_30_met": true
+        },
+        {
+          "group": "Indre By",
+          "test_n": 1833,
+          "train_n": 10575,
+          "former_30_met": true
+        },
+        {
+          "group": "Nørrebro",
+          "test_n": 2181,
+          "train_n": 10227,
+          "former_30_met": true
+        },
+        {
+          "group": "Valby",
+          "test_n": 463,
+          "train_n": 11945,
+          "former_30_met": true
+        },
+        {
+          "group": "Vanløse",
+          "test_n": 273,
+          "train_n": 12135,
+          "former_30_met": true
+        },
+        {
+          "group": "Vesterbro-Kongens Enghave",
+          "test_n": 2161,
+          "train_n": 10247,
+          "former_30_met": true
+        },
+        {
+          "group": "Østerbro",
+          "test_n": 1407,
+          "train_n": 11001,
+          "former_30_met": true
+        }
+      ],
+      "primary_fold_status": "QUALIFIED"
+    },
+    "validation": {
+      "city": "copenhagen",
+      "status": "FOLDS_FROZEN",
+      "outer_test_membership_n": 99264,
+      "inner_membership_n": 471504,
+      "outer_hash": "1cfc02f276c773d31d0bcd95deb75cadb13416139d618fdb0a0a4d09bd7ccba1",
+      "inner_hash": "b42d4eab6db723ae708f7e079d15385539f3d37e9d04af165ee4566aa5a50913",
+      "metric_crs": "EPSG:25832",
+      "training_rule": "Outer train is complement of saved test membership; inner train is complement within outer train",
+      "outcomes_used_for_membership": false,
+      "folds": [
+        {
+          "scheme": "neighbourhood",
+          "fold": "Amager Vest",
+          "train_n": 11357,
+          "test_n": 1051,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Amager Øst",
+          "train_n": 11426,
+          "test_n": 982,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Bispebjerg",
+          "train_n": 11876,
+          "test_n": 532,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Brønshøj-Husum",
+          "train_n": 12187,
+          "test_n": 221,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Frederiksberg",
+          "train_n": 11104,
+          "test_n": 1304,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Indre By",
+          "train_n": 10575,
+          "test_n": 1833,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Nørrebro",
+          "train_n": 10227,
+          "test_n": 2181,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Valby",
+          "train_n": 11945,
+          "test_n": 463,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Vanløse",
+          "train_n": 12135,
+          "test_n": 273,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Vesterbro-Kongens Enghave",
+          "train_n": 10247,
+          "test_n": 2161,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Østerbro",
+          "train_n": 11001,
+          "test_n": 1407,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "1",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "2",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "3",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "4",
+          "train_n": 9927,
+          "test_n": 2481,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "5",
+          "train_n": 9927,
+          "test_n": 2481,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "1",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "2",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "3",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "4",
+          "train_n": 9927,
+          "test_n": 2481,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "5",
+          "train_n": 9927,
+          "test_n": 2481,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 9927,
+          "test_n": 2481,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 9927,
+          "test_n": 2481,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "1",
+          "train_n": 9927,
+          "test_n": 2481,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "2",
+          "train_n": 9921,
+          "test_n": 2487,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "3",
+          "train_n": 9928,
+          "test_n": 2480,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "4",
+          "train_n": 9928,
+          "test_n": 2480,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "5",
+          "train_n": 9928,
+          "test_n": 2480,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 9923,
+          "test_n": 2485,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 9927,
+          "test_n": 2481,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 9928,
+          "test_n": 2480,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 9925,
+          "test_n": 2483,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 9929,
+          "test_n": 2479,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "1",
+          "train_n": 9932,
+          "test_n": 2476,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "2",
+          "train_n": 9932,
+          "test_n": 2476,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "3",
+          "train_n": 9917,
+          "test_n": 2491,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "4",
+          "train_n": 9918,
+          "test_n": 2490,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "5",
+          "train_n": 9933,
+          "test_n": 2475,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 9931,
+          "test_n": 2477,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 9933,
+          "test_n": 2475,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 9917,
+          "test_n": 2491,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 9925,
+          "test_n": 2483,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 9926,
+          "test_n": 2482,
+          "inner_folds": 4
+        }
+      ],
+      "sample": {
+        "run_id": "copenhagen_sample_20261013t014237616829z",
+        "summary_sha256": "f9e7dc8b643e25942a207ebfde11caa4bdc3a870570658d18398ea69aed96f3e"
+      }
+    }
+  },
+  "oslo": {
+    "sample": {
+      "city": "oslo",
+      "status": "COMMON_SAMPLES_FROZEN",
+      "prediction_n": 8529,
+      "association_n": 8152,
+      "association_missing_fraction": 0.04420213389611912,
+      "association_inference_status": "READY_FOR_RANK_DIAGNOSTIC",
+      "sample_flow": [
+        {
+          "stage": "raw",
+          "n": 13391
+        },
+        {
+          "stage": "eligible_dwelling",
+          "n": 11776
+        },
+        {
+          "stage": "positive_observed_price",
+          "n": 8557
+        },
+        {
+          "stage": "inside_study_area",
+          "n": 8557
+        },
+        {
+          "stage": "unique_operational_geography",
+          "n": 8557
+        },
+        {
+          "stage": "qualified_context",
+          "n": 8557
+        },
+        {
+          "stage": "matched_accessibility_support",
+          "n": 8529
+        },
+        {
+          "stage": "common_prediction",
+          "n": 8529
+        },
+        {
+          "stage": "common_ols_association",
+          "n": 8152
+        }
+      ],
+      "group_counts": {
+        "Alna": 135,
+        "Bjerke": 208,
+        "Frogner": 1257,
+        "Gamle Oslo": 1542,
+        "Grorud": 51,
+        "Grünerløkka": 1589,
+        "Marka": 32,
+        "Nordre Aker": 359,
+        "Nordstrand": 431,
+        "Sagene": 932,
+        "Sentrum": 147,
+        "St. Hanshaugen": 985,
+        "Stovner": 33,
+        "Søndre Nordstrand": 82,
+        "Ullern": 248,
+        "Vestre Aker": 263,
+        "Østensjø": 235
+      },
+      "record_sha256": "7fb83885c86cf43a2f3488b1ead8d8a48bfba0382c55f16740ce171da3513a51",
+      "required_predictor_missing": {
+        "accommodates": 0,
+        "bedrooms": 376,
+        "bathrooms_effective": 0,
+        "log1p_minimum_nights": 1,
+        "superhost": 0,
+        "log1p_host_listings_count": 0,
+        "amenity_wifi": 0,
+        "amenity_dishwasher": 0,
+        "amenity_washer": 0,
+        "amenity_dryer": 0,
+        "amenity_workspace": 0,
+        "amenity_free_parking": 0,
+        "amenity_private_balcony": 0,
+        "amenity_self_checkin": 0,
+        "log_population_density": 0,
+        "distance_centre_euclidean_km": 0,
+        "property_type": 0,
+        "nearest_station_euclidean_km": 0,
+        "nearest_bus_euclidean_km": 0,
+        "log1p_food_e": 0,
+        "log1p_culture_e": 0,
+        "nearest_station_walking_minutes": 0,
+        "nearest_bus_walking_minutes": 0,
+        "log1p_food_w": 0,
+        "log1p_culture_w": 0
+      },
+      "all_models_same_rows": true,
+      "historical_sample_reused": false,
+      "outcome_imputed": false,
+      "metric_crs": "EPSG:25833",
+      "support": [
+        {
+          "group": "Alna",
+          "test_n": 135,
+          "train_n": 8394,
+          "former_30_met": true
+        },
+        {
+          "group": "Bjerke",
+          "test_n": 208,
+          "train_n": 8321,
+          "former_30_met": true
+        },
+        {
+          "group": "Frogner",
+          "test_n": 1257,
+          "train_n": 7272,
+          "former_30_met": true
+        },
+        {
+          "group": "Gamle Oslo",
+          "test_n": 1542,
+          "train_n": 6987,
+          "former_30_met": true
+        },
+        {
+          "group": "Grorud",
+          "test_n": 51,
+          "train_n": 8478,
+          "former_30_met": true
+        },
+        {
+          "group": "Grünerløkka",
+          "test_n": 1589,
+          "train_n": 6940,
+          "former_30_met": true
+        },
+        {
+          "group": "Marka",
+          "test_n": 32,
+          "train_n": 8497,
+          "former_30_met": true
+        },
+        {
+          "group": "Nordre Aker",
+          "test_n": 359,
+          "train_n": 8170,
+          "former_30_met": true
+        },
+        {
+          "group": "Nordstrand",
+          "test_n": 431,
+          "train_n": 8098,
+          "former_30_met": true
+        },
+        {
+          "group": "Sagene",
+          "test_n": 932,
+          "train_n": 7597,
+          "former_30_met": true
+        },
+        {
+          "group": "Sentrum",
+          "test_n": 147,
+          "train_n": 8382,
+          "former_30_met": true
+        },
+        {
+          "group": "St. Hanshaugen",
+          "test_n": 985,
+          "train_n": 7544,
+          "former_30_met": true
+        },
+        {
+          "group": "Stovner",
+          "test_n": 33,
+          "train_n": 8496,
+          "former_30_met": true
+        },
+        {
+          "group": "Søndre Nordstrand",
+          "test_n": 82,
+          "train_n": 8447,
+          "former_30_met": true
+        },
+        {
+          "group": "Ullern",
+          "test_n": 248,
+          "train_n": 8281,
+          "former_30_met": true
+        },
+        {
+          "group": "Vestre Aker",
+          "test_n": 263,
+          "train_n": 8266,
+          "former_30_met": true
+        },
+        {
+          "group": "Østensjø",
+          "test_n": 235,
+          "train_n": 8294,
+          "former_30_met": true
+        }
+      ],
+      "primary_fold_status": "QUALIFIED"
+    },
+    "validation": {
+      "city": "oslo",
+      "status": "FOLDS_FROZEN",
+      "outer_test_membership_n": 68232,
+      "inner_membership_n": 375276,
+      "outer_hash": "42b4c4a3478a3b29b671fe6bfb1b599e3621efe161ae01abb31fbdb1b17e4d23",
+      "inner_hash": "0272c703654422211c06111ab5a25556dd290109ec0e71948ccff8ae2258226b",
+      "metric_crs": "EPSG:25833",
+      "training_rule": "Outer train is complement of saved test membership; inner train is complement within outer train",
+      "outcomes_used_for_membership": false,
+      "folds": [
+        {
+          "scheme": "neighbourhood",
+          "fold": "Alna",
+          "train_n": 8394,
+          "test_n": 135,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Bjerke",
+          "train_n": 8321,
+          "test_n": 208,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Frogner",
+          "train_n": 7272,
+          "test_n": 1257,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Gamle Oslo",
+          "train_n": 6987,
+          "test_n": 1542,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Grorud",
+          "train_n": 8478,
+          "test_n": 51,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Grünerløkka",
+          "train_n": 6940,
+          "test_n": 1589,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Marka",
+          "train_n": 8497,
+          "test_n": 32,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Nordre Aker",
+          "train_n": 8170,
+          "test_n": 359,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Nordstrand",
+          "train_n": 8098,
+          "test_n": 431,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Sagene",
+          "train_n": 7597,
+          "test_n": 932,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Sentrum",
+          "train_n": 8382,
+          "test_n": 147,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "St. Hanshaugen",
+          "train_n": 7544,
+          "test_n": 985,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Stovner",
+          "train_n": 8496,
+          "test_n": 33,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Søndre Nordstrand",
+          "train_n": 8447,
+          "test_n": 82,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Ullern",
+          "train_n": 8281,
+          "test_n": 248,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Vestre Aker",
+          "train_n": 8266,
+          "test_n": 263,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Østensjø",
+          "train_n": 8294,
+          "test_n": 235,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "1",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "2",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "3",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "4",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "5",
+          "train_n": 6824,
+          "test_n": 1705,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "1",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "2",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "3",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "4",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "5",
+          "train_n": 6824,
+          "test_n": 1705,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 6824,
+          "test_n": 1705,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "1",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "2",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "3",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "4",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "5",
+          "train_n": 6824,
+          "test_n": 1705,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 6824,
+          "test_n": 1705,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "1",
+          "train_n": 6700,
+          "test_n": 1829,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "2",
+          "train_n": 6854,
+          "test_n": 1675,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "3",
+          "train_n": 6854,
+          "test_n": 1675,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "4",
+          "train_n": 6854,
+          "test_n": 1675,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "5",
+          "train_n": 6854,
+          "test_n": 1675,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 6823,
+          "test_n": 1706,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 6824,
+          "test_n": 1705,
+          "inner_folds": 4
+        }
+      ],
+      "sample": {
+        "run_id": "oslo_sample_20261013t014519442961z",
+        "summary_sha256": "3c55e819cf21bd1200edd815286458af7505e312854b5cf3f6b939a859264c42"
+      }
+    }
+  },
+  "stockholm": {
+    "sample": {
+      "city": "stockholm",
+      "status": "COMMON_SAMPLES_FROZEN",
+      "prediction_n": 2495,
+      "association_n": 2348,
+      "association_missing_fraction": 0.058917835671342685,
+      "association_inference_status": "BLOCKED_MATERIAL_MISSINGNESS",
+      "sample_flow": [
+        {
+          "stage": "raw",
+          "n": 4806
+        },
+        {
+          "stage": "eligible_dwelling",
+          "n": 3834
+        },
+        {
+          "stage": "positive_observed_price",
+          "n": 2510
+        },
+        {
+          "stage": "inside_study_area",
+          "n": 2510
+        },
+        {
+          "stage": "unique_operational_geography",
+          "n": 2510
+        },
+        {
+          "stage": "qualified_context",
+          "n": 2510
+        },
+        {
+          "stage": "matched_accessibility_support",
+          "n": 2495
+        },
+        {
+          "stage": "common_prediction",
+          "n": 2495
+        },
+        {
+          "stage": "common_ols_association",
+          "n": 2348
+        }
+      ],
+      "group_counts": {
+        "Bromma": 170,
+        "Enskede-Årsta-Vantör": 220,
+        "Farsta": 100,
+        "Hägersten-Älvsjö": 343,
+        "Hässelby-Vällingby": 81,
+        "Järva": 91,
+        "Kungsholmen": 235,
+        "Norra innerstaden": 423,
+        "Skarpnäck": 99,
+        "Skärholmen": 38,
+        "Södermalm": 695
+      },
+      "record_sha256": "9459460b35ced9c46211317dc47db5f5af9f318241f163a1f965d7d205f8c53e",
+      "required_predictor_missing": {
+        "accommodates": 0,
+        "bedrooms": 147,
+        "bathrooms_effective": 0,
+        "log1p_minimum_nights": 0,
+        "superhost": 0,
+        "log1p_host_listings_count": 0,
+        "amenity_wifi": 0,
+        "amenity_dishwasher": 0,
+        "amenity_washer": 0,
+        "amenity_dryer": 0,
+        "amenity_workspace": 0,
+        "amenity_free_parking": 0,
+        "amenity_private_balcony": 0,
+        "amenity_self_checkin": 0,
+        "log_population_density": 0,
+        "distance_centre_euclidean_km": 0,
+        "property_type": 0,
+        "nearest_station_euclidean_km": 0,
+        "nearest_bus_euclidean_km": 0,
+        "log1p_food_e": 0,
+        "log1p_culture_e": 0,
+        "nearest_station_walking_minutes": 0,
+        "nearest_bus_walking_minutes": 0,
+        "log1p_food_w": 0,
+        "log1p_culture_w": 0
+      },
+      "all_models_same_rows": true,
+      "historical_sample_reused": false,
+      "outcome_imputed": false,
+      "metric_crs": "EPSG:3006",
+      "support": [
+        {
+          "group": "Bromma",
+          "test_n": 170,
+          "train_n": 2325,
+          "former_30_met": true
+        },
+        {
+          "group": "Enskede-Årsta-Vantör",
+          "test_n": 220,
+          "train_n": 2275,
+          "former_30_met": true
+        },
+        {
+          "group": "Farsta",
+          "test_n": 100,
+          "train_n": 2395,
+          "former_30_met": true
+        },
+        {
+          "group": "Hägersten-Älvsjö",
+          "test_n": 343,
+          "train_n": 2152,
+          "former_30_met": true
+        },
+        {
+          "group": "Hässelby-Vällingby",
+          "test_n": 81,
+          "train_n": 2414,
+          "former_30_met": true
+        },
+        {
+          "group": "Järva",
+          "test_n": 91,
+          "train_n": 2404,
+          "former_30_met": true
+        },
+        {
+          "group": "Kungsholmen",
+          "test_n": 235,
+          "train_n": 2260,
+          "former_30_met": true
+        },
+        {
+          "group": "Norra innerstaden",
+          "test_n": 423,
+          "train_n": 2072,
+          "former_30_met": true
+        },
+        {
+          "group": "Skarpnäck",
+          "test_n": 99,
+          "train_n": 2396,
+          "former_30_met": true
+        },
+        {
+          "group": "Skärholmen",
+          "test_n": 38,
+          "train_n": 2457,
+          "former_30_met": true
+        },
+        {
+          "group": "Södermalm",
+          "test_n": 695,
+          "train_n": 1800,
+          "former_30_met": true
+        }
+      ],
+      "primary_fold_status": "QUALIFIED"
+    },
+    "validation": {
+      "city": "stockholm",
+      "status": "FOLDS_FROZEN",
+      "outer_test_membership_n": 19960,
+      "inner_membership_n": 94810,
+      "outer_hash": "0f42c90230e211e47718691968b622613440fa43b0358feaeb08f15e201d152f",
+      "inner_hash": "a7b0991588f7870c0ba0524e58cc4f41dec8dc5035507edd838bf87a5db12220",
+      "metric_crs": "EPSG:3006",
+      "training_rule": "Outer train is complement of saved test membership; inner train is complement within outer train",
+      "outcomes_used_for_membership": false,
+      "folds": [
+        {
+          "scheme": "neighbourhood",
+          "fold": "Bromma",
+          "train_n": 2325,
+          "test_n": 170,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Enskede-Årsta-Vantör",
+          "train_n": 2275,
+          "test_n": 220,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Farsta",
+          "train_n": 2395,
+          "test_n": 100,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Hägersten-Älvsjö",
+          "train_n": 2152,
+          "test_n": 343,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Hässelby-Vällingby",
+          "train_n": 2414,
+          "test_n": 81,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Järva",
+          "train_n": 2404,
+          "test_n": 91,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Kungsholmen",
+          "train_n": 2260,
+          "test_n": 235,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Norra innerstaden",
+          "train_n": 2072,
+          "test_n": 423,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Skarpnäck",
+          "train_n": 2396,
+          "test_n": 99,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Skärholmen",
+          "train_n": 2457,
+          "test_n": 38,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "neighbourhood",
+          "fold": "Södermalm",
+          "train_n": 1800,
+          "test_n": 695,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "1",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "2",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "3",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "4",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "random",
+          "fold": "5",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "1",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "2",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "3",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "4",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0_0",
+          "fold": "5",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1000m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "1",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "2",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "3",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "4",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0_0",
+          "fold": "5",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_1500m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "1",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "2",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "3",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "4",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0_0",
+          "fold": "5",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "1",
+          "train_n": 1995,
+          "test_n": 500,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "2",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "3",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "4",
+          "train_n": 1996,
+          "test_n": 499,
+          "inner_folds": 4
+        },
+        {
+          "scheme": "blocks_2000m_origin_0p5_0p5",
+          "fold": "5",
+          "train_n": 1997,
+          "test_n": 498,
+          "inner_folds": 4
+        }
+      ],
+      "sample": {
+        "run_id": "stockholm_sample_20261013t014730598505z",
+        "summary_sha256": "fb85fe4652493b9e2aec412193a2b67ca961e1d63f7ff61e4c578370e4f281c7"
+      }
+    }
+  }
+}

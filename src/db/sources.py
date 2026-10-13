@@ -14,6 +14,14 @@ from src.ingestion.common import MANIFEST_PATH, PROJECT_ROOT, sha256_file
 
 
 RAW_ROOT = PROJECT_ROOT / "data" / "raw"
+# These explicit namespaces have independent immutable receipts/selection and
+# analytical-store adapters. Unknown legacy providers continue to fail closed.
+ISOLATED_SOURCE_ROOTS = frozenset({
+    'v4', 'cartographic_context', 'neighbourhoods', 'osm_civic', 'osm_civic_identity',
+    'osm_network', 'osm_destinations', 'osm_network_fragment', 'osm_destinations_fragment',
+    'osm_network_recovery', 'osm_destinations_recovery', 'osm_destinations_completion',
+    'osm_destination_geometry', 'population_discovery', 'population_catalogue', 'population_direct',
+})
 PROVIDERS = {
     "inside_airbnb": "Inside Airbnb",
     "osm": "OpenStreetMap via Overpass",
@@ -131,7 +139,10 @@ def prepare_all_sources(
     manifest = _manifest_entries(manifest_path)
     raw_root = project_root / "data" / "raw"
     paths = sorted(path for path in raw_root.rglob("*") if path.is_file()
-                   and path.name not in {".gitkeep", ".DS_Store"} and not path.name.startswith("._"))
+                   and path.name not in {".gitkeep", ".DS_Store"} and not path.name.startswith("._")
+                   # Keep separately scoped research sources out of historical
+                   # registration. Unknown legacy providers still fail.
+                   and path.relative_to(raw_root).parts[0] not in ISOLATED_SOURCE_ROOTS)
     quarantine_path = project_root / "config/unverified_raw_files.json"
     quarantine = json.loads(quarantine_path.read_text()) if quarantine_path.exists() else {}
     kept = []

@@ -1,0 +1,13 @@
+city,concept,n,euclidean_median_km,network_median_km,nearest_measure_difference_median_km,interpretation,euclidean_median_opportunities,network_median_opportunities,zero_network_fraction,difference_mean
+copenhagen,station,12408,0.404388456143006,0.637526574681781,0.18351757975779062,Same category universe; nearest destination may differ. Difference is not same-destination circuity.,,,,
+copenhagen,bus,12408,0.12957288066004952,0.21861666112307665,0.07836289534250263,Same category universe; nearest destination may differ. Difference is not same-destination circuity.,,,,
+copenhagen,food,12408,,,,,84.0,47.0,0.007011605415860735,-49.601144422952935
+copenhagen,culture,12408,,,,,6.0,3.0,0.18915215989684075,-5.940764023210832
+oslo,station,8529,0.668308503189484,0.896560773634723,0.21023137285186344,Same category universe; nearest destination may differ. Difference is not same-destination circuity.,,,,
+oslo,bus,8529,0.137143560996615,0.21872850236730523,0.0730946295327751,Same category universe; nearest destination may differ. Difference is not same-destination circuity.,,,,
+oslo,food,8529,,,,,63.0,35.0,0.09555633720248563,-38.06354789541564
+oslo,culture,8529,,,,,8.0,4.0,0.23414233790596786,-5.038808770078555
+stockholm,station,2495,0.388101255606976,0.6403614879683803,0.20277529233805397,Same category universe; nearest destination may differ. Difference is not same-destination circuity.,,,,
+stockholm,bus,2495,0.123360300328742,0.21672895353581847,0.0823836756506594,Same category universe; nearest destination may differ. Difference is not same-destination circuity.,,,,
+stockholm,food,2495,,,,,51.0,28.0,0.05571142284569138,-42.811623246492985
+stockholm,culture,2495,,,,,4.0,2.0,0.3623246492985972,-6.602404809619238

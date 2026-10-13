@@ -1,0 +1,21 @@
+# A10 — Execute Stockholm under the same frozen design
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+This prompt authorizes only the frozen Stockholm empirical analysis. Require its accepted operational municipal mask and independently qualified analysis areas, context/income mode, source/feature manifests, common S_pred, folds/candidates and tests.
+
+The 127 SCB components in the municipal boundary amendment are NOT automatically 127 analysis clusters. Preserve the actual approved analysis/fold definition. Do not reopen property-price access or impose housing-transaction-count/coverage thresholds.
+
+Run predictive OLS and XGBoost for M0, ME, MW and MEW without H, with geographic and random validation and the full common tuning budget. All models share the same Stockholm observations/folds. Use native currency and the verified city-specific metric CRS and anchor.
+
+Verify observed-price validity, paired OOF completeness, whole official-area primary holdouts, candidate/code lineage and independently recomputed metrics. Respect actual smaller-sample fold feasibility; no outcome-based area merging or reduced model search.
+
+Run the association component only when its separate missingness/inference requirements pass. Document operational-boundary and source-coordinate uncertainty. No missing housing dataset is a blocker under this design.
+
+Preserve earlier city estimates. Shared scientific changes require identified affected reruns before comparative claims. A blocked city is reported as blocked, not silently replaced with provider labels or excluded from the thesis title.
+
+Checkpoint truthfully, export safe aggregates and stop before synthesis.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: run(v4): complete Stockholm accessibility-only primary analysis

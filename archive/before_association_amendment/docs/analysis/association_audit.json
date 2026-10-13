@@ -1,0 +1,108 @@
+{
+  "copenhagen": {
+    "city": "copenhagen",
+    "status": "COMPLETE_ASSOCIATION",
+    "association_n": 12285,
+    "missing_fraction": 0.009912959381044487,
+    "models": [
+      {
+        "model": "M0",
+        "n": 12285,
+        "adjusted_r2": 0.46112247153974806,
+        "condition_number": 240.279044961597,
+        "aic": 7229.480414287766,
+        "bic": 7392.635368556782,
+        "rank": 22
+      },
+      {
+        "model": "ME",
+        "n": 12285,
+        "adjusted_r2": 0.4791401466313273,
+        "condition_number": 290.6685922019737,
+        "aic": 6815.692719142804,
+        "bic": 7008.512210551641,
+        "rank": 26
+      },
+      {
+        "model": "MW",
+        "n": 12285,
+        "adjusted_r2": 0.4750145392178938,
+        "condition_number": 357.3692488445482,
+        "aic": 6912.6159434207,
+        "bic": 7105.435434829537,
+        "rank": 26
+      },
+      {
+        "model": "MEW",
+        "n": 12285,
+        "adjusted_r2": 0.47914923642710505,
+        "condition_number": 407.19805411114027,
+        "aic": 6819.4691876863835,
+        "bic": 7041.9532162350415,
+        "rank": 30
+      }
+    ],
+    "coefficients_produced": true,
+    "covariance": "HC3; restricted Webb WCR11/CRV1 sensitivity; actual operational groups",
+    "income_required": false,
+    "outcome_imputed": false,
+    "interpretation": "Adjusted associations; no causal effect"
+  },
+  "oslo": {
+    "city": "oslo",
+    "status": "COMPLETE_ASSOCIATION",
+    "association_n": 8152,
+    "missing_fraction": 0.04420213389611912,
+    "models": [
+      {
+        "model": "M0",
+        "n": 8152,
+        "adjusted_r2": 0.49004895785244107,
+        "condition_number": 159.21326440590684,
+        "aic": 6212.1912084630385,
+        "bic": 6366.323617110895,
+        "rank": 22
+      },
+      {
+        "model": "ME",
+        "n": 8152,
+        "adjusted_r2": 0.49347259460455806,
+        "condition_number": 178.3822056447785,
+        "aic": 6161.265114798658,
+        "bic": 6343.4215977461245,
+        "rank": 26
+      },
+      {
+        "model": "MW",
+        "n": 8152,
+        "adjusted_r2": 0.49228829808664276,
+        "condition_number": 257.5788999636286,
+        "aic": 6180.302814158196,
+        "bic": 6362.459297105663,
+        "rank": 26
+      },
+      {
+        "model": "MEW",
+        "n": 8152,
+        "adjusted_r2": 0.4940210245946266,
+        "condition_number": 380.02302256981835,
+        "aic": 6156.420170792884,
+        "bic": 6366.600728039961,
+        "rank": 30
+      }
+    ],
+    "coefficients_produced": true,
+    "covariance": "HC3; restricted Webb WCR11/CRV1 sensitivity; actual operational groups",
+    "income_required": false,
+    "outcome_imputed": false,
+    "interpretation": "Adjusted associations; no causal effect"
+  },
+  "stockholm": {
+    "city": "stockholm",
+    "status": "BLOCKED_MATERIAL_MISSINGNESS",
+    "missing_fraction": 0.058917835671342685,
+    "reason": "Union required-predictor missingness exceeds frozen5% guard; no inferential median imputation",
+    "association_n": 2348,
+    "coefficients_produced": false
+  }
+}

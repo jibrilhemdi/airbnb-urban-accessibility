@@ -1,0 +1,21 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_SCIENTIFIC_BLOCKERS",
+  "design_id": "three_city_accessibility_transfer",
+  "source_files_checksum_verified": 87,
+  "source_receipts_checksum_verified": 38,
+  "immutable_sql_packages_verified": 742,
+  "saved_model_files_checksum_verified": 1176,
+  "transfer_predictions_reproduced_from_frozen_source_pipelines": 48,
+  "distinct_shared_source_models": 24,
+  "public_aggregate_artifacts_checksum_verified": 59,
+  "public_row_privacy_and_cell_support": "PASS",
+  "neutral_migration_integrity": "PASS",
+  "main_sha_unchanged": "7de587997157863e0ba1d36c3f39bdd45f2b9d23",
+  "previous_branch_sha_unchanged": "6150e3f3b4e6db01dd5bf5842404212343d1344a",
+  "primary_random_six_grid_frozen_sample_cardinality": "PASS",
+  "full_rerun_complete": false,
+  "primary_prediction_cities_complete": 3,
+  "six_transfer_directions_complete": true,
+  "blocker": "Stockholm association union predictor missingness exceeds frozen5% guard; dependent inference blocked",
+  "historical_numeric_results_reused_as_final": false
+}

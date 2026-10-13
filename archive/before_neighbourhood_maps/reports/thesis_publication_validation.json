@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "artifact_files": 62,
+  "figure_sets": 18,
+  "table_and_aggregate_views": 22,
+  "main_figures": 10,
+  "main_tables": 8,
+  "appendix_figures": 8,
+  "privacy_bins_verified": 1709,
+  "final_run_lineage": "PASS",
+  "numeric_claims_trace": "PASS",
+  "independent_point_contrast_recalculation": "PASS",
+  "links_checked": 148,
+  "visible_version_markers": "NONE",
+  "clipped_labels": "NONE",
+  "caption_and_header_overlap": "NONE",
+  "data_annotations_outside_panels": "NONE",
+  "plotted_value_clipping": "NONE",
+  "square_map_panels_verified": 6,
+  "neighbourhood_boundaries_per_map": [
+    11,
+    17,
+    11
+  ],
+  "figure_formats": [
+    "PNG"
+  ],
+  "models_refitted": false
+}

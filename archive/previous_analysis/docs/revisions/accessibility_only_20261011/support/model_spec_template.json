@@ -1,0 +1,135 @@
+{
+  "template_only": true,
+  "integration_note": "Map to actual repository schema; do not overwrite frozen configs.",
+  "design_id": "v4_accessibility_only_20261011",
+  "branch": "v4",
+  "supersedes_active_scope": "housing-inclusive v4",
+  "cities": [
+    "copenhagen_frederiksberg",
+    "oslo",
+    "stockholm"
+  ],
+  "snapshot": "2026-06-30",
+  "outcome": {
+    "field": "original_observed_nightly_price",
+    "transform": "natural_log",
+    "positive_only": true,
+    "impute": false,
+    "separate_city_native_currency_models": true
+  },
+  "housing": {
+    "included": false,
+    "required_for_readiness": false,
+    "sample_filter": false,
+    "fold_rule": false,
+    "preserve_historical_artifacts": true
+  },
+  "income": {
+    "default": "include_qualified",
+    "new_city_qualification": "pending_live_repository_check",
+    "matched_no_income_sensitivity": true,
+    "common_no_income_primary_fallback": "explicit_prefit_researcher_decision_required"
+  },
+  "baseline_concepts": [
+    "accommodates",
+    "bedrooms",
+    "effective_bathrooms",
+    "log1p_minimum_nights",
+    "superhost",
+    "log1p_host_listings",
+    "wifi",
+    "dishwasher",
+    "washer",
+    "dryer",
+    "workspace",
+    "free_parking",
+    "private_balcony",
+    "self_check_in",
+    "log_population_density",
+    "qualified_income",
+    "central_anchor_distance"
+  ],
+  "models": {
+    "M0": [
+      "X"
+    ],
+    "ME": [
+      "X",
+      "E"
+    ],
+    "MW": [
+      "X",
+      "W"
+    ],
+    "MEW": [
+      "X",
+      "E",
+      "W"
+    ]
+  },
+  "comparisons": [
+    {
+      "added": "ME",
+      "reference": "M0"
+    },
+    {
+      "added": "MW",
+      "reference": "M0"
+    },
+    {
+      "added": "MEW",
+      "reference": "M0"
+    },
+    {
+      "added": "MW",
+      "reference": "ME"
+    },
+    {
+      "added": "MEW",
+      "reference": "ME"
+    }
+  ],
+  "delta_definition": "added_minus_reference_negative_is_better",
+  "accessibility": {
+    "speed_kmh": 5,
+    "walk_minutes": 10,
+    "euclidean_metres_rounded": 833,
+    "same_destination_universes": true,
+    "endpoint_connectors": true
+  },
+  "validation": {
+    "primary": "qualified_official_area_holdouts",
+    "copenhagen_expected_areas": 11,
+    "new_city_area_selection": "prefit_source_geometry_and_count_qualification",
+    "minimum_train": 500,
+    "minimum_test": 30,
+    "random_outer_folds": 5,
+    "inner_spatial_folds": 4,
+    "inner_block_m": 1000,
+    "common_outer_block_m": 1500,
+    "common_outer_origins": [
+      "zero",
+      "half_block_diagonal"
+    ],
+    "housing_nesting_required": false
+  },
+  "tuning": {
+    "candidates": 30,
+    "candidate_seed_if_reconstruction_required": 20261006,
+    "inner_seed": 20261005,
+    "recover_existing_list_first": true,
+    "outer_test_early_stopping": false
+  },
+  "inference": {
+    "geographic_stability_replications": 2000,
+    "wild_cluster_replications": 9999,
+    "wild_cluster_count": "actual_qualified_analysis_areas",
+    "moran_k": 8,
+    "moran_permutations": 499
+  },
+  "publication": {
+    "grid_m": 500,
+    "minimum_cell_observations": 5
+  },
+  "execution_status": "documentation_template_not_executed"
+}

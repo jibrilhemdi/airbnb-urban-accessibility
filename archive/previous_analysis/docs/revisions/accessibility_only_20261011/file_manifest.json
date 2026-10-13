@@ -1,0 +1,131 @@
+{
+  "design_id": "v4_accessibility_only_20261011",
+  "notice": "Hashes of delivered files excluding this manifest; no live-repository validation or model execution is asserted.",
+  "files": [
+    {
+      "path": "CODEX_PLAYBOOK.md",
+      "bytes": 41876,
+      "sha256": "0faa09677c48b9e52ab800dbe75a17855b31ce40de7342d91298889a9fe830a8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2711,
+      "sha256": "964e2293d925d5dbe81c1fd0ea192ad93b39a6d96350ca6ab63fd0a27ba9090c"
+    },
+    {
+      "path": "RECOVERY_PROMPT.txt",
+      "bytes": 1696,
+      "sha256": "56ca78338fa84d99ce747912065628a8f619bbe9b7be1c076965010f01c507d0"
+    },
+    {
+      "path": "docs/end_to_end_plan_v4_accessibility_only.docx",
+      "bytes": 55741,
+      "sha256": "961e2014c0e81c5323184180cb52960a39ad263b2eb17a78c29e39e814615ca3"
+    },
+    {
+      "path": "docs/end_to_end_plan_v4_accessibility_only.md",
+      "bytes": 35725,
+      "sha256": "3044c488d6f956848ed0759fb0fe3287034efcc20c8efe843299c61df08e1e69"
+    },
+    {
+      "path": "docs/scientific_proposal_v4_accessibility_only.docx",
+      "bytes": 51136,
+      "sha256": "8d1eff34c5e0f5022a720593db43e8170f7ed20d71a647aedda259dfeccb47c3"
+    },
+    {
+      "path": "docs/scientific_proposal_v4_accessibility_only.md",
+      "bytes": 28271,
+      "sha256": "afaaa91744eff1ae33e58eca545bd88bef86e414e16eb1d8eb1b222b3329613d"
+    },
+    {
+      "path": "prompts/A01_amend_scope_and_preserve_evidence.txt",
+      "bytes": 3593,
+      "sha256": "ce7faf33b7aa3676539d3ade4e0a877bc4ed7c613f8eb236de1167b907fc4f01"
+    },
+    {
+      "path": "prompts/A02_remove_housing_from_active_dependencies.txt",
+      "bytes": 3333,
+      "sha256": "1831b5972e0f702aabbd31a82a922c487da52dea1d844a481d1349bc4665b3fe"
+    },
+    {
+      "path": "prompts/A03_qualify_geography_and_oslo_vintage.txt",
+      "bytes": 3487,
+      "sha256": "ed34924324a3044349c7df69e3a0b37dd83250526804cfe6e51589b7c59b6d1e"
+    },
+    {
+      "path": "prompts/A04_qualify_baseline_context.txt",
+      "bytes": 3252,
+      "sha256": "d01260ce8e4991ab51b6b08e5fdaf830d8c20576964f35aa5946b20c482af7df"
+    },
+    {
+      "path": "prompts/A05_build_matched_accessibility.txt",
+      "bytes": 3189,
+      "sha256": "8ea5a8b3f0e5f899e9b6a50abd09960ecfb92f07b7a9a9ff30571b508ad69d93"
+    },
+    {
+      "path": "prompts/A06_freeze_samples_folds_and_candidates.txt",
+      "bytes": 3243,
+      "sha256": "a05669451fe506797754ea0f8f46031ce3e3008362314f8b23734f0bf5518149"
+    },
+    {
+      "path": "prompts/A07_validate_models_and_execution.txt",
+      "bytes": 3214,
+      "sha256": "fc74d8fffe4fa714da8107f2af5f90cad70c0cbcc185d522aab8f31dae0cca18"
+    },
+    {
+      "path": "prompts/A08_run_copenhagen.txt",
+      "bytes": 2841,
+      "sha256": "2cbd08a5ac153755c6dcf7e2375780acc32f266a365929baa0f816458e4aff29"
+    },
+    {
+      "path": "prompts/A09_run_oslo.txt",
+      "bytes": 2668,
+      "sha256": "3800df1f6af54e95bd85dad0d4300683dcb797fff5118943fa76c0154753ead5"
+    },
+    {
+      "path": "prompts/A10_run_stockholm.txt",
+      "bytes": 2746,
+      "sha256": "3a123284ebb8ee346667207edfb9bdbb6386a9a252b560c0c97e10069ec0e435"
+    },
+    {
+      "path": "prompts/A11_robustness_and_cross_city_synthesis.txt",
+      "bytes": 3100,
+      "sha256": "d861b5684f8507787e4d1dd10e3ceecad0c9355323fe336637b33bd79d12f2c8"
+    },
+    {
+      "path": "prompts/A12_release_and_documentation.txt",
+      "bytes": 3149,
+      "sha256": "2bdba7361372801dbfc70fdf4baa9802a7bbcadad82f0c0cb17c8357def778a6"
+    },
+    {
+      "path": "support/IMPLEMENTATION_CONTRACT.md",
+      "bytes": 3718,
+      "sha256": "a7e031b71e4caa9f8872afc60adf9a0ebc2165be236eded31c2c20d1bcc9e843"
+    },
+    {
+      "path": "support/PREANALYSIS_SPECIFICATION.md",
+      "bytes": 7403,
+      "sha256": "d35f6338d52b7a2b6d00af5767af41130b807db4c1da4e2c45dc37c63e4f2921"
+    },
+    {
+      "path": "support/SCOPE_CHANGELOG.md",
+      "bytes": 2643,
+      "sha256": "f1e16c3b0bb09c259aa88154241f805ffafca845ccfb1dcb5340b6044f838d4a"
+    },
+    {
+      "path": "support/SOURCE_REGISTRY.md",
+      "bytes": 3997,
+      "sha256": "8790f4d290f65f630de558e1b9ddfe7fc87dbfcf6d66b4a22832cc7f4f31add3"
+    },
+    {
+      "path": "support/model_spec_template.json",
+      "bytes": 3135,
+      "sha256": "fe2a789f3f0510810819827f35f17979e2801dedcc09525779178709b872509e"
+    },
+    {
+      "path": "support/supplied_input_provenance.json",
+      "bytes": 1360,
+      "sha256": "725ac3b10f8c4bcd3f039365ecc39972614e043ff2a3e89504dada521a20e548"
+    }
+  ]
+}

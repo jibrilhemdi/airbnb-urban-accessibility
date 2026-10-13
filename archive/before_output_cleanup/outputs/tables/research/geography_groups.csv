@@ -1,0 +1,40 @@
+city,name,area_km2,raw_components,former_support_30,eligible_positive_n,pre_feature_support_15,prediction_n
+copenhagen,Amager Vest,19.392900474047384,['Amager Vest'],True,1067,True,1051
+copenhagen,Amager Øst,9.835845670510793,['Amager st'],True,983,True,982
+copenhagen,Bispebjerg,6.834665409038624,['Bispebjerg'],True,535,True,532
+copenhagen,Brønshøj-Husum,8.736514421537388,['Brnshj-Husum'],True,221,True,221
+copenhagen,Frederiksberg,8.71068981998995,['Frederiksberg'],True,1305,True,1304
+copenhagen,Indre By,10.387318915267347,['Indre By'],True,1840,True,1833
+copenhagen,Nørrebro,4.104594646281956,['Nrrebro'],True,2209,True,2181
+copenhagen,Valby,9.231329572243634,['Valby'],True,480,True,463
+copenhagen,Vanløse,6.697480196423295,['Vanlse'],True,273,True,273
+copenhagen,Vesterbro-Kongens Enghave,8.484780532386544,['Vesterbro-Kongens Enghave'],True,2175,True,2161
+copenhagen,Østerbro,9.835982048177007,['sterbro'],True,1420,True,1407
+oslo,Alna,13.748321221697642,['Alna'],True,135,True,135
+oslo,Bjerke,8.07598344016244,['Bjerke'],True,208,True,208
+oslo,Frogner,14.979367698729451,['Frogner'],True,1258,True,1257
+oslo,Gamle Oslo,15.236940886365863,['Gamle Oslo'],True,1550,True,1542
+oslo,Grorud,7.08486164845325,['Grorud'],True,51,True,51
+oslo,Grünerløkka,5.246830652818517,['Grünerløkka'],True,1590,True,1589
+oslo,Marka,301.7762273422304,['Marka'],True,32,True,32
+oslo,Nordre Aker,13.871344995875713,['Nordre Aker'],True,360,True,359
+oslo,Nordstrand,28.123037979419653,['Nordstrand'],True,433,True,431
+oslo,Sagene,3.148290613761835,['Sagene'],True,937,True,932
+oslo,Sentrum,2.53951826492404,['Sentrum'],True,147,True,147
+oslo,St. Hanshaugen,3.683336916388947,['St. Hanshaugen'],True,991,True,985
+oslo,Stovner,7.114124487774665,['Stovner'],True,33,True,33
+oslo,Søndre Nordstrand,18.30798376703108,['Søndre Nordstrand'],True,84,True,82
+oslo,Ullern,10.02497325292214,['Ullern'],True,249,True,248
+oslo,Vestre Aker,16.891665105604176,['Vestre Aker'],True,264,True,263
+oslo,Østensjø,11.24819661488641,['Østensjø'],True,235,True,235
+stockholm,Bromma,27.46246426176599,['Bromma'],True,170,True,170
+stockholm,Enskede-Årsta-Vantör,21.683140112291223,['Enskede-Årsta-Vantörs'],True,220,True,220
+stockholm,Farsta,17.10134481005181,['Farsta'],True,101,True,100
+stockholm,Hägersten-Älvsjö,24.338909883049777,"['Hägersten-Liljeholmens', 'Älvsjö']",True,345,True,343
+stockholm,Hässelby-Vällingby,24.730628074710545,['Hässelby-Vällingby'],True,81,True,81
+stockholm,Järva,24.833238842605624,"['Rinkeby-Tensta', 'Spånga-Tensta']",True,92,True,91
+stockholm,Kungsholmen,7.092209932390969,['Kungsholmens'],True,235,True,235
+stockholm,Norra innerstaden,29.94672085836143,"['Norrmalms', 'Östermalms']",True,426,True,423
+stockholm,Skarpnäck,17.544079171022688,['Skarpnäcks'],True,100,True,99
+stockholm,Skärholmen,10.31028129295032,['Skärholmens'],True,39,True,38
+stockholm,Södermalm,10.63463531943252,['Södermalms'],True,701,True,695

@@ -1,0 +1,83 @@
+{
+  "design_id": "v4_accessibility_only_20261011",
+  "amendment_date": "2026-10-11",
+  "checkpoint": "A01",
+  "status": "PARTIAL_DOCUMENTATION_ADOPTED_RUNTIME_PENDING_A02",
+  "models": {
+    "M0": [
+      "X"
+    ],
+    "ME": [
+      "X",
+      "E"
+    ],
+    "MW": [
+      "X",
+      "W"
+    ],
+    "MEW": [
+      "X",
+      "E",
+      "W"
+    ]
+  },
+  "outcome": {
+    "field": "price_nightly",
+    "source": "original_observed_airbnb_price",
+    "transform": "natural_log",
+    "positive_only": true,
+    "impute": false
+  },
+  "cities": [
+    "copenhagen_frederiksberg",
+    "oslo",
+    "stockholm"
+  ],
+  "snapshot": "2026-06-30",
+  "housing_scope_status": "NOT_REQUIRED_SCOPE_AMENDED",
+  "retired_dependencies": {
+    "residential_property_price_acquisition": "NOT_REQUIRED_SCOPE_AMENDED",
+    "housing_provider_access_requests": "NOT_REQUIRED_SCOPE_AMENDED",
+    "housing_price_predictors_and_rent_proxies": "NOT_REQUIRED_SCOPE_AMENDED",
+    "housing_qualified_prediction_and_association_samples": "NOT_REQUIRED_SCOPE_AMENDED",
+    "annual_housing_sales_threshold": "NOT_REQUIRED_SCOPE_AMENDED",
+    "housing_listing_coverage_threshold": "NOT_REQUIRED_SCOPE_AMENDED",
+    "native_housing_area_minimums": "NOT_REQUIRED_SCOPE_AMENDED",
+    "housing_area_fold_nesting": "NOT_REQUIRED_SCOPE_AMENDED",
+    "external_housing_midrank_and_log_native_sensitivity": "NOT_REQUIRED_SCOPE_AMENDED",
+    "housing_subgroup_support_and_network_gain_analysis": "NOT_REQUIRED_SCOPE_AMENDED"
+  },
+  "historical_housing_qualification": "BLOCKED; unchanged in historical ledgers",
+  "runtime_definition_unchanged": "v4_housing_standard_20261011",
+  "runtime_source_namespace_unchanged": "research_design_v4",
+  "baseline_categorical_reconciliation": "PENDING_EXPLICIT_RESOLUTION: actual v3 includes property_type; imported prose excludes it",
+  "v3_results_already_observed": true,
+  "housing_feasibility_already_observed": true,
+  "supervisor_approval": "not_recorded",
+  "retrospective_preregistration_claim": false,
+  "models_fitted": 0,
+  "routes_built": 0,
+  "sources_acquired": 0,
+  "new_ingestions": 0,
+  "new_migrations": 0,
+  "next_step": "A02 only when requested; empirical work BLOCKED pending A02-A07 and city dependencies",
+  "imported_bundle_manifest_sha256": "f849f25d464dcd873bf21e458e79128a7e03f48782903e065d513b00436af139",
+  "unchanged_v4_sql": {
+    "listing_ingestions": {
+      "rows": 13,
+      "sha256": "2de6f04c64fbcb1b13ad8f6f7c5a8d333f29b69b8f5e5ddf184b403dae8f5185"
+    },
+    "housing_ingestions": {
+      "rows": 3,
+      "sha256": "66b8839e8fd1f1ccaf66906736c8f0b64dc8c54f344f2a2574f078ff5505e1ee"
+    },
+    "source_manifests": {
+      "rows": 8,
+      "sha256": "4d20ad9ba6fb8bf0e56213afe70dce983ee26315cfd1fbb1228cfbec9e2fdfcb"
+    },
+    "schema_migrations": {
+      "rows": 3,
+      "sha256": "ecc51804504f0f03503ded32cbe8ffcf51eece6a4277e08e6650e79885ef11cd"
+    }
+  }
+}

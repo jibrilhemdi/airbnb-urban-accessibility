@@ -1,0 +1,37 @@
+{
+  "version": "research_design_v4",
+  "definition_version": "v4_listing_ingestion_20261011",
+  "snapshot": "2026-06-30",
+  "catalogue_url": "https://insideairbnb.com/get-the-data/",
+  "dictionary_url": "https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/export?format=csv",
+  "licence": "https://creativecommons.org/licenses/by/4.0/",
+  "price_format": "inside_airbnb_us_export",
+  "cities": {
+    "copenhagen_frederiksberg": {
+      "catalogue_city": "Copenhagen",
+      "currency": "DKK",
+      "reuse_path": "data/raw/inside_airbnb/copenhagen/2026-06-30/data/listings.csv.gz",
+      "reuse_sha256": "d0c81b5c30c0fa48ca2e77005d6e8418c6f491ee4af8dbac881ff7f5fd01ff71",
+      "original_retrieval": "2026-09-21T21:53:10+00:00",
+      "municipalities": ["0101", "0147"]
+    },
+    "oslo": {
+      "catalogue_city": "Oslo",
+      "currency": "NOK",
+      "municipalities": ["0301"],
+      "boundary_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/0301/omrade?utkoordsys=4326",
+      "boundary_licence": "https://creativecommons.org/licenses/by/4.0/",
+      "boundary_vintage": null
+    },
+    "stockholm": {
+      "catalogue_city": "Stockholm",
+      "currency": "SEK",
+      "municipalities": ["0180"],
+      "scope_codes_url": "https://www.scb.se/hitta-statistik/regional-statistik-och-kartor/regionala-indelningar/lan-och-kommuner/lan-och-kommuner-i-kodnummerordning/",
+      "boundary_url": "https://api.lantmateriet.se/ogc-features/v1/administrativ-indelning/collections/kommuner/items?f=json&limit=1",
+      "boundary_licence": null,
+      "boundary_vintage": null,
+      "boundary_note": "SCB verifies Stockholm municipality 0180 in county 01. This URL is an authentication probe only, not a selected Stockholm geometry. API feature selection and vintage remain unresolved. County extract is not municipal scope."
+    }
+  }
+}

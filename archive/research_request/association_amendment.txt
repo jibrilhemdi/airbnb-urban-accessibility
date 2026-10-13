@@ -1,0 +1,359 @@
+Continue the existing thesis analysis from the current `v4` branch and current repository state.
+
+Do NOT restart the project, reacquire sources, rebuild accessibility, refit completed predictive models, or rerun completed cross-city transfer experiments unless a dependency check proves they are affected.
+
+The latest progress archive shows:
+
+- all three city predictive M0/ME/MW/MEW ladders are complete;
+- all six directional relative-price transfer experiments are complete;
+- registered predictive robustness checks are complete;
+- Copenhagen and Oslo association analyses are complete;
+- Stockholm association inference is the sole remaining scientific blocker;
+- Stockholm has 147 rows with genuinely missing `bedrooms` in a 2,495-row prediction sample;
+- 2,348 complete cases remain;
+- missing fraction = 0.058917835671342685;
+- missing `bedrooms` values were verified against the original checksum-pinned source and are true source blanks, not parser errors.
+
+The researcher now explicitly changes the association missingness eligibility threshold from **5% to 10%**.
+
+This is an intentional POST-OBSERVATION methodological amendment made after seeing Stockholm's 5.89% missingness.
+
+Do not present the 10% threshold as preregistered or originally frozen.
+
+======================================================================
+1. GIT / REPOSITORY SAFETY
+======================================================================
+
+First:
+
+- read all applicable AGENTS instructions;
+- read the current implementation contract, decision log, deviations log, preanalysis specification, research plan, scientific proposal, execution log, association audit, missingness-source audit, release audit and publication report;
+- inspect current branch, worktree, local HEAD and `origin/v4`;
+- verify main and v3 remain unchanged;
+- verify whether the latest missingness-source checkpoint was committed and pushed.
+
+Work only on existing branch `v4`.
+
+Do not reset, rebase, force-push or rewrite published history.
+
+Do not modify main or v3.
+
+Do not delete or rewrite historical audits documenting the previous 5% rule.
+
+Preserve old reports/audits as historical evidence where appropriate.
+
+======================================================================
+2. SCIENTIFIC AMENDMENT
+======================================================================
+
+Change the association-analysis material-missingness eligibility rule:
+
+OLD:
+- more than 5% missing any required union X+E+W predictor blocks inferential association analysis.
+
+NEW:
+- more than 10% missing any required union X+E+W predictor blocks inferential association analysis.
+
+Apply the new 10% threshold uniformly to:
+
+- Copenhagen;
+- Oslo;
+- Stockholm.
+
+Do NOT create a Stockholm-only exception.
+
+The rule controls whether complete-case association inference is permitted.
+
+It does NOT authorize inferential imputation.
+
+Retain:
+
+- complete-case association analysis;
+- no median-imputed inferential substitute;
+- same required predictor union X+E+W;
+- same outcome;
+- same model definitions;
+- same HC3 baseline;
+- same wild-cluster inference;
+- same diagnostics;
+- same spatial diagnostic triggers;
+- same area fixed-effect/spatial-error rules.
+
+Stockholm still uses only its genuinely complete cases.
+
+Do not fill or reconstruct the 147 missing bedroom values.
+
+Do not substitute `beds`.
+
+Do not interpret missing bedrooms as zero bedrooms/studios.
+
+Do not drop bedrooms from Stockholm only.
+
+======================================================================
+3. DOCUMENT THE AMENDMENT TRANSPARENTLY
+======================================================================
+
+Create a dated scientific amendment explaining:
+
+- previous threshold = 5%;
+- new threshold = 10%;
+- Stockholm observed missingness = 5.891783567%;
+- the decision was made after observing the missingness rate;
+- the motivation is to permit complete-case inference when predictor missingness remains below 10%;
+- no missing values are imputed for inferential OLS;
+- the complete-case Stockholm sample remains 2,348 observations;
+- the amendment changes eligibility for association inference only;
+- it does not change predictive samples, fitted predictive models, transfer models, accessibility features or outcomes.
+
+Explain that the 10% value is a researcher-design threshold, not a universal statistical standard.
+
+Update ACTIVE scientific documents accordingly, including as applicable:
+
+- `docs/analysis/preanalysis_specification.md`
+- `docs/analysis/research_plan.md`
+- `docs/scientific_proposal.md`
+- `docs/analysis/implementation_contract.md`
+- `docs/analysis/decision_log.md`
+- `docs/analysis/deviations_from_preanalysis.md`
+- `docs/analysis/data_dictionary.md`
+- reproducibility/document index/status documentation
+
+Do not rewrite old execution logs to pretend 10% was always the rule.
+
+Historical references to the old 5% blocker should remain where they describe what actually happened at that earlier checkpoint.
+
+======================================================================
+4. UPDATE ACTIVE CONFIGURATION / CODE / TESTS
+======================================================================
+
+Find the actual machine-readable/config/code implementation of the 5% association gate.
+
+Change only the active association missingness threshold to 10%.
+
+Do not accidentally change unrelated uses of:
+
+- 0.05 significance levels;
+- Moran p-value thresholds;
+- other 5% statistical criteria.
+
+Add/update tests establishing:
+
+- missing fraction 0.099 passes;
+- missing fraction 0.10 passes if the rule is "more than 10% blocks";
+- missing fraction >0.10 fails;
+- Stockholm 0.058917835671342685 passes;
+- complete-case filtering remains unchanged;
+- no inferential imputation is introduced;
+- predictive training preprocessing remains unaffected;
+- income and housing variables remain absent from the active primary design.
+
+Preserve the reproducible missingness-source audit proving Stockholm bedroom blanks are original source values.
+
+======================================================================
+5. RERUN THE ASSOCIATION STAGE FOR ALL THREE CITIES
+======================================================================
+
+Because the eligibility rule changed globally, rerun the association/inference pipeline for all three cities under the same final rule.
+
+Do NOT reuse old coefficient tables as final outputs.
+
+Use the existing frozen scientific inputs, samples and feature definitions.
+
+For each city:
+
+- reconstruct/verify the common union complete-case association sample;
+- record prediction N;
+- record complete-case association N;
+- record missing fraction;
+- confirm the 10% gate status;
+- fit the prescribed OLS association models;
+- compute HC3 estimates/SE/CIs;
+- run the existing 9,999-replication restricted Webb wild-cluster procedure over the operational geographic groups;
+- recompute VIF/rank/condition diagnostics;
+- recompute residual spatial diagnostics using the existing 8-nearest-neighbour / 499-permutation specification;
+- execute the registered spatial-error sensitivity if its frozen trigger fires;
+- execute the registered area-fixed-effect association sensitivity according to the existing specification;
+- record absorbed area-constant predictors correctly.
+
+Do not choose new variables or diagnostics based on the rerun results.
+
+Stockholm should now be scientifically eligible because 5.89% < 10%.
+
+If another genuine numerical or identification problem occurs during Stockholm fitting, report that new blocker rather than silently altering the model.
+
+======================================================================
+6. WHAT MUST NOT BE REFIT
+======================================================================
+
+Do not refit the already completed:
+
+- primary within-city predictive OLS ladders;
+- primary within-city XGBoost ladders;
+- random CV predictive runs;
+- six geometric-block predictive variants;
+- six cross-city transfer directions;
+- accessibility feature construction;
+- population density;
+- OSM network features;
+- samples/folds used by prediction;
+- relative-price benchmarks;
+- SHAP outputs whose fitted predictive models are unchanged.
+
+Before relying on them, verify their dependency hashes remain unchanged by this amendment.
+
+The association threshold is not a dependency of those fitted predictive/transfer artifacts.
+
+If hashes confirm this, preserve them exactly.
+
+======================================================================
+7. REGENERATE ALL ASSOCIATION-DEPENDENT OUTPUTS
+======================================================================
+
+Regenerate all tables, figures, JSON summaries and prose that depend on association results.
+
+At minimum inspect/update:
+
+- association coefficient table;
+- association VIF/diagnostics table;
+- spatial association coefficient table;
+- association execution status;
+- primary results JSON;
+- robustness audit;
+- findings;
+- research report;
+- publication research report;
+- final artifact inventories;
+- publication audit;
+- release audit;
+- final publication check;
+- reproducibility documentation.
+
+Stockholm should no longer appear as `BLOCKED_MATERIAL_MISSINGNESS` if the association run completes successfully.
+
+Do not manually type Stockholm coefficients into documents.
+
+All published values must derive from regenerated authoritative artifacts.
+
+======================================================================
+8. UPDATE FINAL SCIENTIFIC STATUS
+======================================================================
+
+If Stockholm association inference and all its dependent registered checks complete successfully, update overall release status from:
+
+`PARTIAL / BLOCKED`
+
+to the project's appropriate COMPLETE/READY status.
+
+The release audit should then reflect:
+
+- 3/3 predictive cities complete;
+- 3/3 association cities complete;
+- 6/6 transfer directions complete;
+- required robustness accounted for;
+- full rerun complete = true, if no other blocker remains;
+- historical numeric results reused as final = false.
+
+Do not declare full completion merely because the missingness gate passed.
+
+Verify every registered required analysis actually completed.
+
+======================================================================
+9. SCIENTIFIC INTERPRETATION
+======================================================================
+
+Preserve the main thesis framing:
+
+RQ1:
+accessibility measurement.
+
+RQ2:
+within-city predictive contribution and complementary adjusted associations.
+
+RQ3:
+geographic generalization and cross-city consistency.
+
+RQ4:
+directional cross-city relative-price transferability.
+
+Stockholm association estimates are adjusted observational associations, not causal effects.
+
+The threshold amendment must be disclosed in limitations/deviations.
+
+Do not hide that it was changed after inspecting missingness.
+
+======================================================================
+10. VALIDATION
+======================================================================
+
+After rerunning association inference and regenerating outputs:
+
+Run:
+
+- active unit tests;
+- PostGIS/integration tests;
+- compile/static checks;
+- protected historical-file verification;
+- SQL/migration integrity;
+- source checksum verification;
+- fitted predictive/model artifact checksum verification;
+- transfer-prediction reproducibility verification;
+- independent recalculation of association outputs where supported;
+- publication artifact hash/privacy/link checks.
+
+Confirm:
+
+- predictive artifacts are unchanged;
+- transfer artifacts are unchanged;
+- only association-dependent scientific results changed;
+- raw sources are unchanged;
+- original missingness audit remains valid;
+- main/v3 remain unchanged.
+
+======================================================================
+11. GIT CHECKPOINTS
+======================================================================
+
+Use clear incremental commits, for example:
+
+1. `docs: amend association missingness threshold to 10 percent`
+2. `analysis: rerun three-city association inference`
+3. `docs: finalize complete research release`
+
+Use actual repository needs rather than forcing exactly these boundaries.
+
+After each major checkpoint:
+
+- inspect diff;
+- run relevant tests;
+- stage only intended files;
+- commit;
+- push only `HEAD:refs/heads/v4`;
+- verify local HEAD equals remote `origin/v4`.
+
+Do not force-push.
+
+======================================================================
+12. FINAL HANDOVER
+======================================================================
+
+At the end report:
+
+1. previous and new missingness thresholds;
+2. explicit post-observation amendment status;
+3. complete-case N and missing fraction for all three cities;
+4. Stockholm association execution status;
+5. Stockholm coefficient/inference output locations;
+6. any triggered Stockholm spatial-error/fixed-effect checks;
+7. whether predictive models were correctly left unchanged;
+8. whether all six transfers were correctly left unchanged;
+9. regenerated final outputs;
+10. final release status;
+11. tests passed;
+12. commits created;
+13. final local/remote `v4` SHA;
+14. confirmation main/v3 unchanged;
+15. any remaining scientific limitations.
+
+If the association rerun succeeds and no other blocker remains, continue through final publication/release completion automatically.
+
+Do not stop after merely changing the threshold.

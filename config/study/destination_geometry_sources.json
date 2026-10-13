@@ -1,0 +1,80 @@
+{
+  "copenhagen": [
+    {
+      "source_url": "https://overpass-api.de/api/interpreter",
+      "city": "copenhagen",
+      "role": "osm_destination_geometry",
+      "acquired_at_utc": "2026-10-13T01:32:43.132853+00:00",
+      "geographic_extent": "Explicit IDs of the already frozen common June destination universe; full object/member geometry",
+      "source_crs": "EPSG:4326",
+      "licence": "ODbL; © OpenStreetMap contributors",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "status": "transport_success_pending_validation",
+      "http_status": 200,
+      "failure": null,
+      "headers": {
+        "Last-Modified": null,
+        "ETag": null,
+        "Content-Type": "application/json"
+      },
+      "sha256": "43dfc4187baaf40fc26513307eff71be4827aa0e2ac1ca81ea077a78968f177a",
+      "size_bytes": 513913,
+      "request_body_sha256": "f8477621a2fd3c95a8f0208c52dd776fa35d83e4afcdc2844eca0158a9a0eef3",
+      "path": "data/raw/osm_destination_geometry/copenhagen/20261013T013243132853Z/response.json",
+      "receipt_path": "data/raw/osm_destination_geometry/copenhagen/20261013T013243132853Z/receipt.json",
+      "receipt_sha256": "3e27b71626bfc1ba27f4fdba8bbfc9abaa1d3b0cb8ef17649593aeb10d26fdb8"
+    }
+  ],
+  "oslo": [
+    {
+      "source_url": "https://overpass-api.de/api/interpreter",
+      "city": "oslo",
+      "role": "osm_destination_geometry",
+      "acquired_at_utc": "2026-10-13T01:32:46.128738+00:00",
+      "geographic_extent": "Explicit IDs of the already frozen common June destination universe; full object/member geometry",
+      "source_crs": "EPSG:4326",
+      "licence": "ODbL; © OpenStreetMap contributors",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "status": "transport_success_pending_validation",
+      "http_status": 200,
+      "failure": null,
+      "headers": {
+        "Last-Modified": null,
+        "ETag": null,
+        "Content-Type": "application/json"
+      },
+      "sha256": "e5f7cdae180216239ea7b28deefc83023fb8a5f177b955dad95ecb36b7ed11b3",
+      "size_bytes": 1997532,
+      "request_body_sha256": "041cd73e204007f8ed7af6ed3aa4045c301bd019a60545d9ccc4816500ee8f2d",
+      "path": "data/raw/osm_destination_geometry/oslo/20261013T013246128738Z/response.json",
+      "receipt_path": "data/raw/osm_destination_geometry/oslo/20261013T013246128738Z/receipt.json",
+      "receipt_sha256": "f159ed602735c6f909a39bad6241bba594d7f3ba4d3279f23964687e3d4bf9b1"
+    }
+  ],
+  "stockholm": [
+    {
+      "source_url": "https://overpass-api.de/api/interpreter",
+      "city": "stockholm",
+      "role": "osm_destination_geometry",
+      "acquired_at_utc": "2026-10-13T01:32:51.026660+00:00",
+      "geographic_extent": "Explicit IDs of the already frozen common June destination universe; full object/member geometry",
+      "source_crs": "EPSG:4326",
+      "licence": "ODbL; © OpenStreetMap contributors",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "status": "transport_success_pending_validation",
+      "http_status": 200,
+      "failure": null,
+      "headers": {
+        "Last-Modified": null,
+        "ETag": null,
+        "Content-Type": "application/json"
+      },
+      "sha256": "da04cc40cd0cf29ac06d5a6bf81993245394b310d7edb4e9d65ed731fb80c45a",
+      "size_bytes": 376693,
+      "request_body_sha256": "1b58380a239929fe22e86ca4300250ceab742e37f8c0c98ac757ee6405ff6ac5",
+      "path": "data/raw/osm_destination_geometry/stockholm/20261013T013251026660Z/response.json",
+      "receipt_path": "data/raw/osm_destination_geometry/stockholm/20261013T013251026660Z/receipt.json",
+      "receipt_sha256": "3851f2678b87c823260a3c019c154e9af94acafe0aa9ca980e0d09d177e080f3"
+    }
+  ]
+}

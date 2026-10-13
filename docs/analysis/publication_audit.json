@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "previous72_artifacts_preserved_at_original_or_archived_paths": true,
+  "association_cities_complete": 3,
+  "association_execution": [
+    {
+      "city": "copenhagen",
+      "association_execution_status": "COMPLETE_ASSOCIATION",
+      "prediction_n": 12408,
+      "association_n": 12285,
+      "missing_fraction": 0.009912959381044487,
+      "association_missing_limit": 0.1,
+      "inferential_imputation": false,
+      "complete_case_records_sha256": "65c20b5b22f12cb0e4374199950e87783baceb9a6f824e862acfd16a8609d4a5"
+    },
+    {
+      "city": "oslo",
+      "association_execution_status": "COMPLETE_ASSOCIATION",
+      "prediction_n": 8529,
+      "association_n": 8152,
+      "missing_fraction": 0.04420213389611912,
+      "association_missing_limit": 0.1,
+      "inferential_imputation": false,
+      "complete_case_records_sha256": "6866ada9f01fb697ce8ae81bf97184437e7bd991ba84ccd60453d2561a21a6f3"
+    },
+    {
+      "city": "stockholm",
+      "association_execution_status": "COMPLETE_ASSOCIATION",
+      "prediction_n": 2495,
+      "association_n": 2348,
+      "missing_fraction": 0.058917835671342685,
+      "association_missing_limit": 0.1,
+      "inferential_imputation": false,
+      "complete_case_records_sha256": "be4273651fc68f365388512f4cb23ff04fce8a09b5deb52c895aac88f19255ce"
+    }
+  ],
+  "spatial_execution": [
+    {
+      "city": "copenhagen",
+      "spatial_error_status": "COMPLETE",
+      "fixed_effect_status": "COMPLETE",
+      "metric_crs": "EPSG:25832",
+      "absorbed_predictor": "log_population_density",
+      "trigger": "OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation"
+    },
+    {
+      "city": "oslo",
+      "spatial_error_status": "COMPLETE",
+      "fixed_effect_status": "COMPLETE",
+      "metric_crs": "EPSG:25833",
+      "absorbed_predictor": "log_population_density",
+      "trigger": "OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation"
+    },
+    {
+      "city": "stockholm",
+      "spatial_error_status": "COMPLETE",
+      "fixed_effect_status": "COMPLETE",
+      "metric_crs": "EPSG:3006",
+      "absorbed_predictor": "log_population_density",
+      "trigger": "OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation"
+    }
+  ],
+  "association_only_outputs_regenerated": true,
+  "post_observation_amendment": true,
+  "old_missingness_limit": 0.05,
+  "new_missingness_limit": 0.1,
+  "code_sha256": "656e6d15338daa92bb0cd8611dc93c6235dfaa10ca1d708012bc813234f6ddbc"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "package_files": 131,
+  "zip_entries": 131,
+  "links_checked": 93,
+  "manifest_sha256": "6786c63189ab169f5a2ed2cc995a329aae783a70a261409d072da82dc08c30d5",
+  "zip_sha256": "a41214c62166e743f135c81953f30e9977f7330f307953a2dca3945adbf45b40",
+  "zip_bytes": 5987368,
+  "private_data_check": "PASS",
+  "all_release_hashes": "PASS",
+  "models_refitted": false
+}

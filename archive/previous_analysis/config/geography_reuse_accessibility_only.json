@@ -1,0 +1,25 @@
+{
+  "design_id": "v4_accessibility_only_20261011",
+  "source_version": "research_design_v4",
+  "definition_version": "v4_geography_A03_20261011",
+  "cities": {
+    "copenhagen_frederiksberg": {
+      "run_id": "research_v4_copenhagen_frederiksberg_20261011T210000Z",
+      "snapshot": "2026-06-30",
+      "geography_manifest_sha256": "352abab9128f086301837ce932ac4b1ec587f40c5accc0d6c6dbb3d7fbc5f79c",
+      "summary_sha256": "014894ce8030c9a1cd12251bef3ac0427faae19808ea8f6507326a603d6de299"
+    },
+    "oslo": {
+      "run_id": "research_v4_oslo_20261011T210000Z",
+      "snapshot": "2026-06-30",
+      "geography_manifest_sha256": "550733b7e7107d042ce4f80c9abb186a0c8858edb9c0b76af7b5d99dde4456de",
+      "summary_sha256": "2f9fc9a6a5ef570e2d62a16a3f9421da4bded1b6db2c573c7041e7450cfdfb5c"
+    },
+    "stockholm": {
+      "run_id": "research_v4_stockholm_20261011T210000Z",
+      "snapshot": "2026-06-30",
+      "geography_manifest_sha256": "4109d0dcf59b15240cfdf5db26f89c1e1431c82c09e2f22c180a04c2ef96ae26",
+      "summary_sha256": "7b16d5e30ebb5134a902251e13f99fc968b2b666b7df20e71338de5433f89356"
+    }
+  }
+}

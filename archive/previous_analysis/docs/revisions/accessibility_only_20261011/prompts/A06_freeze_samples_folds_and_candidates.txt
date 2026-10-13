@@ -1,0 +1,23 @@
+# A06 — Freeze common samples, spatial folds and tuning
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+Read the approved geography/context/feature decisions. No empirical fitting or model-score inspection is permitted in this step.
+
+Build one S_pred per city: inherited eligible entire-dwelling sample, positive original Airbnb price, valid operational scope/analysis assignment and common E/W feature support. ALL FOUR models share identical ordered keys/outcomes. Do not start from an old H-qualified subset or filter NULL housing fields. Keep the larger audit universe and sample attrition.
+
+Define the common OLS association sample separately under the inherited <=5% any-required-predictor missingness rule. Above it, flag association inference only as blocked pending a validated amendment; do not substitute globally imputed inference. Learned prediction preprocessing stays inside training later.
+
+Primary outer folds: Copenhagen's qualified eleven official areas; qualified Oslo/Stockholm official areas with deterministic, pre-fit sparse-area grouping if justified. Apply the explicit revised >=500 train/>=30 test rule and report actual K. No outcome-driven grouping or invented 11-cluster labels.
+
+Freeze random five-fold benchmarking and common 1.5 km five-fold geometric blocks at zero and half-block origins. Preserve the broader inherited robustness registry. No H-area nesting rules.
+
+Use four training-only spatial inner folds based on 1 km blocks and the inherited deterministic balancing/seeds. Recover and hash the exact 30-candidate v3 list; reconstruct only if genuinely absent, with a documented deviation. Verify inner feasibility and outer-test exclusion.
+
+Freeze observation/fold manifests, source/feature hashes, candidate list, income mode, all five contrasts and robustness priorities. Comparisons are ME-M0, MW-M0, MEW-M0, MW-ME and MEW-ME; note the last is explicitly added in this amendment.
+
+If the primary income mode or a required city input remains unresolved, checkpoint honestly and do not release that empirical run. Do not remove a city or income silently. Test pairing, disjointness, count rules and reproducibility.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: feat(v4): freeze accessibility samples spatial validation and tuning

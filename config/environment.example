@@ -1,0 +1,13 @@
+# Copy to .env; choose a strong, unique local password before starting Docker.
+DB_HOST=127.0.0.1
+DB_PORT=5433
+DB_NAME=thesis_accessibility
+DB_USER=thesis_researcher
+DB_PASSWORD=
+
+# Dedicated analysis connection; set separately to preserve database isolation.
+STUDY_DB_HOST=127.0.0.1
+STUDY_DB_PORT=5433
+STUDY_DB_NAME=thesis_accessibility_v4
+STUDY_DB_USER=thesis_researcher
+STUDY_DB_PASSWORD=

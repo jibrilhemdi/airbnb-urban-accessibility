@@ -1,0 +1,1442 @@
+# COMPLETE THESIS ANALYSIS RERUN — THREE-CITY ACCESSIBILITY AND CROSS-CITY TRANSFER
+
+Work directly in the existing thesis repository.
+
+This is a comprehensive implementation request. Carry the work through end-to-end unless a genuine external blocker prevents a dependent scientific stage.
+
+Do NOT ask for confirmation between ordinary implementation stages. Use the scientific decisions in this prompt as authoritative.
+
+The existing repository contains substantial completed work, source acquisitions, audits, tests, migrations, historical results and reusable code. Preserve all of it. The goal is NOT to rewrite the project from scratch.
+
+The goal is:
+
+1. preserve historical work and provenance;
+2. simplify and normalize the active project structure;
+3. reuse reliable code and immutable source data wherever scientifically valid;
+4. rerun every scientific transformation and analysis under the final design;
+5. produce fresh analytical datasets, folds, models, predictions, diagnostics, tables and figures;
+6. document the complete workflow reproducibly.
+
+The Git branch `v4` is the ONLY intended version identifier.
+
+Do not introduce new active folder names, output names, run IDs, document names or scientific IDs containing labels such as:
+
+- `v1`, `v2`, `v3`, `v4`;
+- `A01`, `A02`, `A03`, etc.;
+- `version_...`;
+- similar sequential version markers.
+
+Historical immutable implementation objects such as already-applied migration filenames, database records or archived evidence do NOT need destructive renaming when doing so would compromise provenance. Preserve them behind compatibility/history mechanisms.
+
+For all NEW and ACTIVE paths, use functional names only, for example:
+
+- `docs/`
+- `config/`
+- `src/`
+- `data/raw/`
+- `data/derived/`
+- `outputs/metrics/`
+- `outputs/figures/`
+- `outputs/models/`
+- `reports/`
+- `history/`
+- `runs/copenhagen/`
+- `runs/oslo/`
+- `runs/stockholm/`
+- `runs/transfer/copenhagen_to_oslo/`
+
+Do not create `v4/`, `A05/`, `output_v4/`, etc.
+
+Use `Copenhagen` in active scientific writing, configuration and reporting. Define once that:
+
+> Copenhagen refers to the combined Copenhagen–Frederiksberg study area.
+
+After that, do not repeatedly write “Copenhagen–Frederiksberg” unless needed for source provenance or geographic clarification.
+
+======================================================================
+0. PREFLIGHT, REPOSITORY AUDIT AND GIT SAFETY
+======================================================================
+
+Before editing anything:
+
+- Read all applicable `AGENTS.md` / project instructions.
+- Read the current scientific proposal and end-to-end research plan.
+- Read the implementation contract, decision log, step log, source registry, data dictionary, geographic audits, context audits, Stockholm boundary amendment, Rinkeby polygon check and any existing pre-analysis specification.
+- Inspect the actual repository, Makefile, configs, Python modules, SQL, tests, environment files, source manifests, database state and Git history.
+- Inspect the V3 implementation because much of its code should be reused.
+- Identify which current modules are scientifically reusable versus tied to superseded specifications.
+- Identify all existing active paths that contain version/stage naming.
+- Identify all immutable historical artifacts that must not be rewritten.
+
+Git requirements:
+
+- Work ONLY on the existing `v4` branch.
+- Fetch the configured remote and verify local/remote state.
+- Do not recreate the branch.
+- Do not reset, rebase, force-push or rewrite published history.
+- Do not modify or push `main` or `v3`.
+- Stop if unrelated user changes or unfinished Git operations would be mixed into this work.
+- Preserve historical commits.
+- Use normal incremental commits during this comprehensive task.
+- Push only `HEAD:refs/heads/v4`.
+- Verify remote/local equality after each major checkpoint.
+
+Before changing active paths, create a safe path/refactor inventory recording:
+
+- old active path;
+- new neutral functional path;
+- whether content is moved, reused or archived;
+- checksum before/after;
+- compatibility implications.
+
+Do not delete historical scientific evidence simply to clean the folder structure.
+
+======================================================================
+1. FINAL SCIENTIFIC SCOPE
+======================================================================
+
+Study three cities:
+
+- Copenhagen
+- Oslo
+- Stockholm
+
+Airbnb observation target:
+
+- Inside Airbnb detailed listings corresponding to the preserved June 2026 snapshot, targeted at 30 June 2026.
+
+Use the already acquired and verified raw listing files when their hashes match the preserved source manifests.
+
+Do NOT redownload Airbnb merely because the analysis is being rerun.
+
+However, ALL derived scientific work must be recomputed under the final design.
+
+The study remains observational and predictive.
+
+Do NOT make causal claims about:
+
+- Airbnb causing housing prices;
+- gentrification;
+- displacement;
+- accessibility causing Airbnb prices.
+
+Residential property prices are OUT OF SCOPE.
+
+District/neighbourhood income is REMOVED from all primary models and required analyses.
+
+Previously acquired housing-price and income evidence must be preserved as historical feasibility work but must not remain an active dependency.
+
+======================================================================
+2. FINAL RESEARCH QUESTIONS
+======================================================================
+
+Use FOUR research questions.
+
+RQ1 — ACCESSIBILITY MEASUREMENT
+
+How do Euclidean and walking-network measures characterize urban accessibility differently across Copenhagen, Oslo and Stockholm?
+
+Required evidence includes:
+
+- matched Euclidean/network nearest-destination measures;
+- opportunity measures;
+- route-versus-straight-line differences;
+- spatial distributions;
+- city comparisons;
+- network/POI coverage diagnostics.
+
+RQ2 — WITHIN-CITY PREDICTIVE CONTRIBUTION
+
+How much predictive information do Euclidean and walking-network accessibility measures add to Airbnb asking-price models within each city?
+
+Use actual log nightly asking price as the outcome.
+
+Compare M0, ME, MW and MEW.
+
+RQ3 — GEOGRAPHIC GENERALIZATION AND CROSS-CITY CONSISTENCY
+
+How robust are the predictive gains from accessibility when models are evaluated in geographically unseen neighbourhoods, and how consistent are those gains across Copenhagen, Oslo and Stockholm?
+
+Primary geographic validation uses operational Inside Airbnb neighbourhood groups.
+
+Random CV is a benchmark.
+
+Uniform geometric spatial blocking is a robustness analysis.
+
+RQ4 — CROSS-CITY TRANSFERABILITY
+
+To what extent do Airbnb pricing relationships learned in one city transfer to another city, and does accessibility improve this transferability?
+
+Use pairwise directional city transfer.
+
+Use CITY-RELATIVE LOG PRICE only for this RQ.
+
+Do NOT pool two cities to predict the third in the primary transfer experiment.
+
+======================================================================
+3. SAMPLE DEFINITION
+======================================================================
+
+Retain the established Airbnb product segment unless the actual V3 code proves a documented difference:
+
+`room_type == "Entire home/apt"`
+
+and the six conventional dwelling types:
+
+- Entire rental unit
+- Entire condo
+- Entire home
+- Entire loft
+- Entire townhouse
+- Entire villa
+
+Outcome requires:
+
+- observed original nightly asking price;
+- strictly positive price.
+
+No primary price imputation.
+
+Do not introduce a review-count or activity threshold into the primary sample unless it already belongs to the frozen scientific specification and is explicitly justified.
+
+Retain missing-price eligible listings in source/sample-flow auditing.
+
+Preserve source prices in native currency.
+
+Do not convert within-city outcomes into EUR or another currency.
+
+======================================================================
+4. CITY GEOGRAPHY
+======================================================================
+
+Use the preserved accepted municipal study masks for source/study-area QA.
+
+Do not restart the previous official-boundary hunt unless required to correct a demonstrated error.
+
+For primary geographic validation, use the Inside Airbnb neighbourhood geography associated with the preserved June 2026 data.
+
+Preserve:
+
+- raw neighbourhood label;
+- raw neighbourhood polygon/source;
+- operational validation-group label.
+
+Never overwrite raw labels.
+
+--------------------------------------------------
+4.1 Copenhagen
+--------------------------------------------------
+
+Use 11 operational groups.
+
+The study area includes Copenhagen and Frederiksberg, but active scientific text uses “Copenhagen”.
+
+Normalize spelling only in the DERIVED operational label.
+
+Known spelling mappings include:
+
+- `Amager st` -> `Amager Øst`
+- `Brnshj-Husum` -> `Brønshøj-Husum`
+- `Nrrebro` -> `Nørrebro`
+- `Vanlse` -> `Vanløse`
+- `sterbro` -> `Østerbro`
+
+Other six names already correspond.
+
+Preserve original source strings separately.
+
+--------------------------------------------------
+4.2 Oslo
+--------------------------------------------------
+
+Use the 17 Inside Airbnb neighbourhood groups:
+
+- Alna
+- Bjerke
+- Frogner
+- Gamle Oslo
+- Grorud
+- Grünerløkka
+- Marka
+- Nordre Aker
+- Nordstrand
+- Sagene
+- Sentrum
+- St. Hanshaugen
+- Stovner
+- Søndre Nordstrand
+- Ullern
+- Vestre Aker
+- Østensjø
+
+These match the intended 15 boroughs plus Sentrum and Marka.
+
+Do not require the previously problematic official borough polygon source for primary geographic CV if the Inside Airbnb neighbourhood polygons/assignments pass the operational QA.
+
+--------------------------------------------------
+4.3 Stockholm
+--------------------------------------------------
+
+Preserve all 14 raw Inside Airbnb labels.
+
+Create a separate frozen 11-group operational validation variable.
+
+Use:
+
+- Bromma -> Bromma
+- Enskede-Årsta-Vantörs -> Enskede-Årsta-Vantör
+- Farsta -> Farsta
+- Hägersten-Liljeholmens + Älvsjö -> Hägersten-Älvsjö
+- Hässelby-Vällingby -> Hässelby-Vällingby
+- Kungsholmens -> Kungsholmen
+- Norrmalms + Östermalms -> Norra innerstaden
+- Skarpnäcks -> Skarpnäck
+- Skärholmens -> Skärholmen
+- Södermalms -> Södermalm
+- Spånga-Tensta + Rinkeby-Tensta -> Järva
+
+For `Rinkeby-Tensta`, preserve and cite the existing polygon-check evidence.
+
+The existing check found approximately:
+
+- 98.87% coverage by historical Rinkeby-Kista comparison polygon;
+- 0.23% by historical Spånga-Tensta.
+
+Interpret this as strong evidence of a likely source naming error, NOT exact polygon identity.
+
+Do not rename the raw polygon or raw listing field.
+
+Do not pretend the operational grouping recreates exact current official Stockholm borough boundaries.
+
+It is an operational grouping for geographic validation.
+
+--------------------------------------------------
+4.4 Geography QA
+--------------------------------------------------
+
+For all cities:
+
+- Check every eligible listing has exactly one operational neighbourhood assignment.
+- Report unmatched/ambiguous cases.
+- Compare listing `neighbourhood_cleansed` against polygon assignment.
+- Audit overlaps/gaps.
+- Report area and listing counts.
+- Preserve raw assignments.
+
+Do not choose or modify neighbourhood groupings based on model outcomes.
+
+======================================================================
+5. MINIMUM GEOGRAPHIC HOLDOUT SUPPORT
+======================================================================
+
+Primary outer geographic validation uses operational neighbourhoods.
+
+Minimum outer test observations:
+
+**15**
+
+Minimum complementary outer training observations:
+
+**500**
+
+This 15-observation threshold is an explicit methodological amendment made after geographic-support inspection and before final rerun fitting.
+
+Document that transparently.
+
+Do not claim it was originally preregistered.
+
+The threshold is a project feasibility safeguard, not a universal statistical rule.
+
+If any operational neighbourhood has fewer than 15 observations AFTER the final common prediction sample is frozen:
+
+- do not silently exclude it;
+- do not lower the threshold;
+- do not create an outcome-driven grouping;
+- stop the primary fold freeze for that city and document the exact problem.
+
+Retain the former 30-observation criterion as a robustness/support diagnostic where feasible.
+
+======================================================================
+6. POPULATION DENSITY
+======================================================================
+
+Retain population density as a baseline contextual predictor.
+
+Do NOT restore income.
+
+Use official population statistics already acquired where scientifically valid.
+
+Aim for population density at the operational neighbourhood level.
+
+Definition:
+
+`population_density = population / matching_area_km2`
+
+Model representation may retain the inherited `log(population_density)` transformation if confirmed by V3.
+
+Use source-native population and area definitions wherever possible.
+
+Do not average density values across component areas.
+
+Aggregate using:
+
+`sum(population) / sum(area)`
+
+when aggregation is scientifically valid.
+
+--------------------------------------------------
+6.1 Copenhagen
+--------------------------------------------------
+
+Reuse the validated official population data underlying the 11 operational areas.
+
+Preserve documented temporal and area-definition caveats.
+
+--------------------------------------------------
+6.2 Oslo
+--------------------------------------------------
+
+Use the validated official population data for the corresponding 17 operational areas.
+
+Do not distribute municipality totals or “unlocated” population across neighbourhoods.
+
+Verify each operational group maps to the intended official population unit.
+
+Use a compatible documented area denominator.
+
+--------------------------------------------------
+6.3 Stockholm
+--------------------------------------------------
+
+Target the 11 operational groups.
+
+Priority:
+
+1. use direct official 11-borough population/area statistics when a reproducible source exists;
+2. otherwise aggregate the already acquired 127 RegSO population units through a validated crosswalk.
+
+Do NOT area-weight population across split RegSO units without an explicitly justified source-supported method.
+
+If a RegSO cannot be assigned cleanly, document it and resolve the crosswalk before fitting.
+
+Do not treat raw RegSO count = 127 as validation fold count.
+
+======================================================================
+7. CITY-CENTRE / CENTRALITY CONTROL
+======================================================================
+
+Retain the city-centre distance control.
+
+Use a consistent OSM-based method across all three cities.
+
+Use the corresponding civic/town-hall feature:
+
+- Copenhagen City Hall / Rådhus
+- Oslo Rådhus
+- Stockholm Stadshuset
+
+Query/identify the OSM feature reproducibly.
+
+Freeze:
+
+- OSM element identifier;
+- feature name;
+- coordinates;
+- tags;
+- source snapshot/retrieval date.
+
+Do not use an arbitrary remembered coordinate.
+
+Compute straight-line metric distance from each listing to the frozen civic anchor.
+
+======================================================================
+8. OSM SOURCE STRATEGY
+======================================================================
+
+Use OpenStreetMap consistently for:
+
+- walking network;
+- rail/transit destinations required by the specification;
+- bus destinations;
+- food/social destinations;
+- culture/tourism destinations;
+- civic anchors where specified.
+
+Use the SAME tagging taxonomy and processing logic across all three cities.
+
+Prefer the inherited V3 destination taxonomy where it can be applied consistently.
+
+Do not introduce city-specific destination definitions unless the difference is structurally necessary and explicitly documented.
+
+Freeze the exact taxonomy before inspecting model results.
+
+Attempt to use a harmonized OSM observation date as close as practically possible to the June 2026 Airbnb snapshot.
+
+Preferred target:
+
+`2026-06-30`
+
+If a historical OSM query is technically reliable, use the same historical date across cities.
+
+If historical OSM extraction is not reliable/available:
+
+- use one common frozen retrieval/snapshot date for all cities;
+- document the temporal mismatch;
+- do not mix arbitrary per-city vintages without explanation.
+
+Follow ODbL attribution requirements.
+
+======================================================================
+9. ACCESSIBILITY FEATURES
+======================================================================
+
+Reuse the established V3 conceptual definitions unless the current code audit shows a documented reason to correct them.
+
+Euclidean and walking-network measures must use the SAME destination universe within each city.
+
+Core accessibility blocks:
+
+E = Euclidean accessibility.
+
+W = walking-network accessibility.
+
+Retain matched concepts such as:
+
+- nearest rail access;
+- nearest bus access;
+- food/social opportunities;
+- culture/tourism opportunities.
+
+Retain, if confirmed from V3:
+
+- walking speed = 5 km/h;
+- network opportunity threshold = 10 minutes;
+- Euclidean opportunity radius approximately 833 m;
+- nearest Euclidean distance in km;
+- nearest network distance/travel time in minutes;
+- `log1p` opportunity counts.
+
+Do not alter radii or walking speed after viewing predictive results.
+
+Perform explicit network QA:
+
+- graph completeness;
+- disconnected components;
+- snapping distances;
+- routing failures;
+- duplicate POIs;
+- topology;
+- edge direction/access restrictions;
+- unrealistic routes;
+- zero-opportunity cases;
+- missing-route cases.
+
+Differentiate true zero accessibility from failed routing.
+
+Use city-specific metric CRSs as appropriate, but identical conceptual definitions.
+
+======================================================================
+10. PRIMARY MODEL DEFINITIONS
+======================================================================
+
+Exactly four substantive models:
+
+M0 = X
+
+ME = X + E
+
+MW = X + W
+
+MEW = X + E + W
+
+X is the common baseline predictor set.
+
+Recover the inherited V3 baseline registry.
+
+REMOVE income from X.
+
+REMOVE all housing/property-price variables.
+
+Retain other V3 baseline predictors only if they can be constructed with the SAME substantive meaning across all three cities.
+
+Examples may include:
+
+- accommodates;
+- bedrooms;
+- bathrooms;
+- property type;
+- host/listing characteristics;
+- population density;
+- city-centre distance;
+- other already-established common listing/context controls.
+
+Do not silently keep a Copenhagen-only control in the cross-city feature set.
+
+Produce an explicit feature harmonization table:
+
+`feature | Copenhagen | Oslo | Stockholm | common definition | units | transformation | qualification`
+
+Any feature that cannot be harmonized before fitting must either:
+
+- be fixed consistently across all cities; or
+- be removed from all three primary models through a documented pre-fit amendment.
+
+Never make the decision based on predictive performance.
+
+======================================================================
+11. ESTIMATORS
+======================================================================
+
+Retain:
+
+- OLS
+- XGBoost
+
+OLS serves primarily as an interpretable association model.
+
+XGBoost serves primarily as the nonlinear prediction model.
+
+Do not interpret either as causal.
+
+Recover and reuse the existing 30-candidate XGBoost tuning set where valid.
+
+Do not silently retune the candidate search space based on observed final results.
+
+Any transformations/imputation/encoding learned from data must be fit only on training data within validation.
+
+Categorical handling must safely support target-city levels not observed in the source city.
+
+Do not leak target outcomes into predictors or preprocessing.
+
+======================================================================
+12. TWO DISTINCT OUTCOMES
+======================================================================
+
+There are TWO outcomes for TWO different analyses.
+
+Do not replace one with the other.
+
+--------------------------------------------------
+12.1 Within-city outcome
+--------------------------------------------------
+
+For RQ2 and RQ3:
+
+`y_actual = log(original positive Airbnb nightly asking price)`
+
+Native currency remains.
+
+Estimate models separately within each city.
+
+--------------------------------------------------
+12.2 Cross-city transfer outcome
+--------------------------------------------------
+
+For RQ4 only:
+
+Define a frozen city-relative log-price outcome.
+
+For city `c`:
+
+`mu_c = mean(log(price))`
+
+computed from a frozen city reference sample defined BEFORE accessibility/model-specific exclusions.
+
+Use:
+
+`y_relative_ic = log(price_ic) - mu_c`
+
+The reference sample should be:
+
+- eligible conventional entire-home listings;
+- inside the accepted study area;
+- positive observed original price;
+- before accessibility feature availability/model-specific filtering.
+
+Freeze and report:
+
+- reference sample count;
+- `mu_c`;
+- geometric-mean benchmark `exp(mu_c)`;
+- source hashes.
+
+Do not recompute the benchmark separately for M0/ME/MW/MEW.
+
+Interpretation:
+
+`y_relative = 0` means approximately the city's geometric-mean nightly price.
+
+Positive values indicate relatively expensive listings within that city.
+
+Negative values indicate relatively cheaper listings.
+
+Do not call this absolute-price prediction.
+
+======================================================================
+13. WITHIN-CITY VALIDATION
+======================================================================
+
+Primary validation:
+
+**leave-one-operational-neighbourhood-out geographic validation**
+
+Run separately for each city.
+
+All four models must use:
+
+- identical final observation sample;
+- identical outcomes;
+- identical outer folds.
+
+Tune XGBoost using training data only.
+
+Inner validation must preserve spatial structure using an appropriate source-city-only procedure.
+
+Do not use outer test outcomes for tuning or early stopping.
+
+Primary metric:
+
+- RMSE in log price.
+
+Also report:
+
+- MAE;
+- R²;
+- fold-level RMSE;
+- sample counts.
+
+Primary model contrasts:
+
+- ME − M0
+- MW − M0
+- MEW − M0
+- MW − ME
+- MEW − ME
+
+Use consistent sign convention:
+
+`delta_RMSE = added_or_candidate_model - reference_model`
+
+Negative means better prediction.
+
+Report proportional change as well.
+
+Use paired losses because models are evaluated on the same held-out observations.
+
+Use geographical/fold-level resampling for stability summaries rather than treating every listing as independent.
+
+======================================================================
+14. RANDOM AND GEOMETRIC-BLOCK VALIDATION
+======================================================================
+
+Random CV:
+
+Use as a benchmark showing how performance changes when spatial separation is relaxed.
+
+Do not call it the primary validation.
+
+Geometric block robustness:
+
+Use a common fixed spatial grid such as the previously proposed 1.5 km scale, subject to exact implementation audit.
+
+Freeze block origin and construction before fitting.
+
+Use this to test whether conclusions depend on administrative/Inside-Airbnb neighbourhood definitions.
+
+Do not replace neighbourhood validation with geometric blocks in the primary specification.
+
+======================================================================
+15. CROSS-CITY TRANSFER EXPERIMENT
+======================================================================
+
+RQ4 uses six directional experiments:
+
+1. Copenhagen -> Oslo
+2. Copenhagen -> Stockholm
+3. Oslo -> Copenhagen
+4. Oslo -> Stockholm
+5. Stockholm -> Copenhagen
+6. Stockholm -> Oslo
+
+Do NOT pool two training cities.
+
+Do NOT fit any target-city model in these transfer tests.
+
+Do NOT recalibrate the intercept using target data.
+
+Do NOT retune using target outcomes.
+
+For each direction:
+
+A. Use source-city relative outcome.
+
+B. Tune the model using SOURCE-CITY data only, using the frozen source-city tuning protocol.
+
+C. Refit the selected model on the full eligible SOURCE-CITY analytical sample.
+
+D. Apply the complete fitted source-city preprocessing/model pipeline unchanged to the TARGET-CITY predictors.
+
+E. Evaluate predictions against TARGET-CITY `y_relative`.
+
+Target-city observed prices may be used ONLY to:
+
+- compute the frozen target-city relative-price benchmark;
+- construct the evaluation outcome;
+- calculate evaluation metrics.
+
+They must not influence:
+
+- feature definitions;
+- source preprocessing;
+- parameter estimation;
+- hyperparameter tuning;
+- feature selection;
+- model choice.
+
+This is therefore:
+
+**cross-city transferability of relative pricing relationships**
+
+NOT:
+
+**zero-shot absolute-price prediction of an unseen city**.
+
+State this explicitly in reporting.
+
+======================================================================
+16. CROSS-CITY METRICS
+======================================================================
+
+For every directional transfer and model:
+
+Primary:
+
+- RMSE of relative log price.
+
+Secondary:
+
+- MAE;
+- R²;
+- Pearson correlation;
+- Spearman rank correlation where useful.
+
+Compare:
+
+- M0
+- ME
+- MW
+- MEW
+
+using identical target observations.
+
+Report:
+
+- ME − M0;
+- MW − M0;
+- MEW − M0;
+- MW − ME;
+- MEW − ME.
+
+Use target-neighbourhood-level paired resampling for uncertainty/stability summaries where feasible.
+
+Do not claim independence of individual listings within neighbourhoods.
+
+Do not aggregate the six directional tests into a single pseudo-independent significance test unless a valid method is explicitly justified.
+
+Emphasize pattern consistency and heterogeneity.
+
+======================================================================
+17. SCIENTIFIC INTERPRETATION
+======================================================================
+
+RQ1 asks:
+
+Are Euclidean and network accessibility actually different?
+
+RQ2 asks:
+
+Do those differences improve actual Airbnb price prediction within a city?
+
+RQ3 asks:
+
+Do the predictive gains survive geographic separation, and are they consistent across cities?
+
+RQ4 asks:
+
+Do learned pricing relationships transfer to another city, and does accessibility make them more transferable?
+
+All outcomes are valid.
+
+Do not frame the study so that walking-network accessibility must win.
+
+Possible valid conclusions include:
+
+- network accessibility materially improves prediction;
+- Euclidean and network accessibility perform similarly;
+- combining them provides complementary information;
+- gains differ across cities;
+- network features improve within-city prediction but not transfer;
+- network features improve transfer despite small within-city gains;
+- no meaningful gain is observed.
+
+A negligible result is still a scientific result.
+
+======================================================================
+18. COMPLETE RERUN REQUIREMENT
+======================================================================
+
+The user explicitly wants a genuine complete rerun.
+
+Interpret this as:
+
+REUSE ALLOWED:
+
+- immutable raw source files whose checksums match;
+- existing verified Airbnb downloads;
+- tested reusable source adapters;
+- reusable SQL/Python functions;
+- reusable OSM taxonomy code;
+- reusable model utility code;
+- frozen XGBoost candidate definitions;
+- source metadata and provenance;
+- unit/integration tests;
+- verified historical audit evidence.
+
+REUSE NOT ALLOWED AS FINAL RESULTS:
+
+- previous derived feature tables;
+- previous final analytical samples;
+- previous fold assignments;
+- previous trained models;
+- previous predictions;
+- previous SHAP outputs;
+- previous inferential results;
+- previous metrics;
+- previous result tables;
+- previous final figures;
+- previous thesis-result prose.
+
+Regenerate under the final design:
+
+1. operational geography assignments;
+2. population-density assignments;
+3. OSM destination universe;
+4. Euclidean features;
+5. network features;
+6. centrality;
+7. analytical samples;
+8. relative-price benchmarks;
+9. validation folds;
+10. tuning;
+11. OLS fits;
+12. XGBoost fits;
+13. OOF predictions;
+14. cross-city transfer predictions;
+15. metrics;
+16. uncertainty/stability summaries;
+17. diagnostics;
+18. SHAP/interpretability outputs if retained;
+19. robustness checks;
+20. figures;
+21. tables;
+22. final research reports.
+
+Do not copy previous numeric results into the new final outputs.
+
+Previous results may be compared only as historical sanity checks.
+
+======================================================================
+19. ACTIVE PROJECT STRUCTURE CLEANUP
+======================================================================
+
+Normalize ACTIVE project structure so branch `v4` is the only version marker.
+
+Prefer functional paths.
+
+Example target organization:
+
+`config/`
+- `research_design.json`
+- `cities.json`
+- `features.json`
+- `validation.json`
+- `sources.json`
+
+`src/`
+- `sources/`
+- `geography/`
+- `context/`
+- `accessibility/`
+- `modeling/`
+- `transfer/`
+- `reporting/`
+
+`data/`
+- `raw/`
+- `intermediate/`
+- `derived/`
+
+`runs/`
+- `copenhagen/`
+- `oslo/`
+- `stockholm/`
+- `transfer/`
+
+`outputs/`
+- `metrics/`
+- `tables/`
+- `figures/`
+- `models/`
+- `diagnostics/`
+
+`reports/`
+
+`docs/`
+- `scientific_proposal.md`
+- `research_plan.md`
+- `preanalysis_specification.md`
+- `data_dictionary.md`
+- `source_registry.md`
+- `decision_log.md`
+- `deviations_from_preanalysis.md`
+- `reproducibility.md`
+
+`history/`
+
+This is an architectural target, not an instruction to blindly recreate directories already handled cleanly another way.
+
+Reuse existing code.
+
+Prefer refactoring/moving over duplicating.
+
+Do not maintain two active parallel pipelines.
+
+Version-specific historical objects may remain accessible via `history/` or compatibility adapters.
+
+Do not rename applied migrations or immutable database records merely for aesthetics if doing so breaks provenance.
+
+New active code/output must not introduce version labels.
+
+======================================================================
+20. DATABASE / PERSISTENCE
+======================================================================
+
+Inspect current database architecture first.
+
+Preserve all historical databases/schemas/rows.
+
+Do not overwrite completed historical runs.
+
+For the final rerun, use neutral active identifiers with no version token.
+
+Examples:
+
+- purpose `primary`
+- city `copenhagen`
+- run ID `copenhagen_primary_20261013T...`
+- transfer run `copenhagen_to_oslo_20261013T...`
+
+Do not use:
+
+- `research_v4_...`
+- `A07_...`
+- similar version/stage IDs for NEW active runs.
+
+If a new neutral active database/schema is required, provision it without overwriting existing data.
+
+All result writes must remain immutable once completed.
+
+======================================================================
+21. SAMPLE FREEZE
+======================================================================
+
+Before model fitting, freeze per city:
+
+- reference-price sample;
+- common prediction sample;
+- common OLS association sample;
+- raw operational neighbourhood;
+- final validation group;
+- all X/E/W features;
+- fold membership;
+- source hashes;
+- feature hashes.
+
+M0, ME, MW and MEW must use the same prediction rows within a city.
+
+Do not let missingness differ by model.
+
+If a required E or W feature cannot be calculated for a listing, apply the frozen common-support rule consistently.
+
+Report attrition from:
+
+raw ->
+eligible dwelling ->
+positive price ->
+inside study area ->
+operational geography ->
+context ->
+accessibility support ->
+final prediction sample ->
+OLS association sample.
+
+======================================================================
+22. OLS ASSOCIATION ANALYSIS
+======================================================================
+
+Use a common association sample.
+
+Do not median-impute inferential OLS simply to increase N unless this was already scientifically approved.
+
+Report:
+
+- coefficients;
+- robust uncertainty as specified by the final methodology;
+- diagnostics;
+- spatial residual diagnostics.
+
+Interpret coefficients as adjusted associations.
+
+Do not claim causal willingness-to-pay or treatment effects.
+
+======================================================================
+23. XGBOOST INTERPRETABILITY
+======================================================================
+
+If SHAP is retained:
+
+- compute it only after models are frozen;
+- report it descriptively;
+- distinguish predictive contribution from causal effect;
+- use matched samples;
+- provide city-specific and cross-city interpretation separately.
+
+Do not use SHAP to choose the final scientific feature set after seeing outcomes.
+
+======================================================================
+24. ROBUSTNESS CHECKS
+======================================================================
+
+At minimum evaluate:
+
+- random CV versus geographic CV;
+- common geometric spatial blocks;
+- former 30-test-observation support diagnostic;
+- apartment/condo-only sample if already registered;
+- alternative walking thresholds if already prespecified, such as 15/20 minutes;
+- boundary-near listing sensitivity;
+- missing-price audit;
+- reviewed-only listing sensitivity if already justified;
+- reasonable price-tail sensitivity learned from training only;
+- population-density construction sensitivity where necessary.
+
+Do NOT restore district income as a required primary robustness analysis.
+
+If local-income models are retained historically, label them exploratory/historical and do not allow them to redefine the main three-city comparison.
+
+Do NOT restore housing-price analysis.
+
+======================================================================
+25. QUALITY ASSURANCE BEFORE FITTING
+======================================================================
+
+Before fitting any empirical model, produce a pre-fit freeze report demonstrating:
+
+- source files verified;
+- geography mappings frozen;
+- Stockholm 14-to-11 mapping frozen;
+- population density complete;
+- civic anchors frozen;
+- OSM snapshot/taxonomy frozen;
+- E/W destination universes matched;
+- common feature registry frozen;
+- no income feature;
+- no housing feature;
+- reference-price benchmarks frozen;
+- final samples frozen;
+- validation folds frozen;
+- transfer directions frozen;
+- candidate set frozen;
+- no model outcome inspected to make these choices.
+
+If a genuine scientific blocker remains, stop fitting the dependent analysis and clearly report it.
+
+Do not invent a silent workaround.
+
+======================================================================
+26. REPORTING OUTPUTS
+======================================================================
+
+Create reproducible final outputs.
+
+At minimum:
+
+RQ1:
+- Euclidean/network measurement comparison tables.
+- Route/straight-line discrepancy distributions.
+- City-specific accessibility maps.
+- Opportunity-count comparisons.
+
+RQ2:
+- M0/ME/MW/MEW within-city performance tables.
+- OLS association tables.
+- XGBoost performance.
+- feature/SHAP summaries where retained.
+
+RQ3:
+- neighbourhood geographic-CV results;
+- random-CV comparison;
+- common spatial-block robustness;
+- cross-city consistency figure/table.
+
+RQ4:
+- six directional transfer matrices;
+- model-specific transfer RMSE;
+- accessibility gain matrix;
+- relative-price prediction diagnostics;
+- directional asymmetry discussion.
+
+Also create:
+
+- sample-flow table;
+- source table;
+- city comparability table;
+- geography table;
+- feature dictionary;
+- robustness registry;
+- limitations table.
+
+Do not manually type result values into documents.
+
+Reports must read results from authoritative generated artifacts.
+
+======================================================================
+27. SCIENTIFIC PROPOSAL AND RESEARCH PLAN
+======================================================================
+
+Update the repository's active scientific proposal and end-to-end research plan to reflect the IMPLEMENTED final design.
+
+They must contain the four RQs above.
+
+Use `Copenhagen` throughout after the one-time study-area definition.
+
+Remove active discussion of:
+
+- housing/property price;
+- gentrification outcome;
+- district income;
+- H models;
+- old staged A/V labels.
+
+Explain that:
+
+- previous analyses were observed before this final rerun;
+- the study was amended transparently;
+- final reported results come from the complete rerun.
+
+Do not present the final design as retrospectively preregistered.
+
+======================================================================
+28. CLAIMS DISCIPLINE
+======================================================================
+
+Allowed claims depend on results, but structurally:
+
+You MAY discuss:
+
+- associations;
+- predictive contribution;
+- geographic generalization;
+- transferability;
+- consistency/heterogeneity across cities;
+- measurement differences;
+- incremental predictive information.
+
+You may NOT infer:
+
+- accessibility causes prices;
+- Airbnb causes neighbourhood change;
+- Airbnb causes housing prices;
+- network accessibility is universally superior;
+- three capitals represent all Nordic/European cities.
+
+Be particularly careful that cross-city relative-price transfer measures structural transferability after removing citywide price-level differences.
+
+It is NOT absolute-price deployment in a truly unseen city.
+
+======================================================================
+29. TESTING AND REPRODUCIBILITY
+======================================================================
+
+Expand tests as necessary.
+
+Require:
+
+- source checksum tests;
+- city isolation;
+- raw-label preservation;
+- operational neighbourhood mapping;
+- Stockholm grouping;
+- population aggregation;
+- no income in active feature registry;
+- no housing in active feature registry;
+- identical rows across four models;
+- 14 observations fail outer test threshold;
+- 15 observations pass;
+- >=500 training support;
+- spatial fold integrity;
+- source-only preprocessing in transfer;
+- no target-price leakage except relative benchmark/evaluation;
+- no target tuning;
+- six directional transfer identities;
+- output immutability;
+- historical evidence preservation;
+- active path naming contains no stage/version labels where prohibited.
+
+Run:
+
+- unit tests;
+- PostGIS/integration tests;
+- baseline preservation tests;
+- compile/static checks;
+- SQL/migration integrity;
+- independent metric recalculation from saved predictions.
+
+======================================================================
+30. EXECUTION ORDER
+======================================================================
+
+Carry out the work in this logical order within this single comprehensive task:
+
+PHASE 1
+Repository audit, preservation, active scientific specification, neutral naming refactor.
+
+PHASE 2
+Geography normalization and operational neighbourhood freeze.
+
+PHASE 3
+Population density and civic-anchor completion.
+
+PHASE 4
+OSM acquisition/snapshot freeze and matched destination taxonomy.
+
+PHASE 5
+Recompute Euclidean and walking-network features for all three cities.
+
+PHASE 6
+Freeze reference outcomes, final samples and geographic validation.
+
+PHASE 7
+Run within-city OLS and XGBoost for Copenhagen, Oslo and Stockholm.
+
+PHASE 8
+Run random/geometric validation and robustness required for RQ3.
+
+PHASE 9
+Create relative-price outcomes and execute all six cross-city transfer directions.
+
+PHASE 10
+Complete robustness, diagnostics, figures, tables and final documentation.
+
+Do not treat Copenhagen as already finished.
+
+Rerun Copenhagen under the same final protocol as Oslo and Stockholm.
+
+======================================================================
+31. CHECKPOINT COMMITS
+======================================================================
+
+This is one comprehensive Codex task, but use clean Git checkpoints internally.
+
+Suggested commit structure:
+
+1. `docs: freeze final three-city research design`
+2. `refactor: normalize active project structure`
+3. `feat: harmonize city geography and context`
+4. `feat: rebuild matched accessibility features`
+5. `feat: freeze analytical samples and validation`
+6. `analysis: rerun within-city models`
+7. `analysis: run cross-city transfer experiments`
+8. `analysis: complete robustness and final reporting`
+
+Adjust commit boundaries to the actual repository if needed.
+
+Do not use version/stage labels in new commit subjects.
+
+After each checkpoint:
+
+- run relevant tests;
+- inspect staged files;
+- commit;
+- push only to `origin/v4`;
+- verify remote SHA.
+
+Do not commit raw restricted/private data, credentials or listing-level private outputs.
+
+======================================================================
+32. WHEN TO STOP
+======================================================================
+
+Do NOT stop merely because:
+
+- historical documents use old names;
+- old housing/income audits exist;
+- previous results exist;
+- reusable code comes from V3;
+- some old database schemas contain version identifiers.
+
+Those are preservation/history issues.
+
+STOP the dependent scientific stage only if:
+
+- a required source is genuinely unavailable;
+- source licensing prohibits the intended use;
+- geography cannot be defensibly assigned;
+- final neighbourhood support violates the frozen threshold;
+- OSM extraction cannot produce matched E/W destination universes;
+- critical feature harmonization cannot be resolved;
+- database integrity would be endangered;
+- fitting cannot be completed without changing the frozen scientific design.
+
+Continue all independent work that is not blocked.
+
+Do not invent or silently relax a scientific rule to get a result.
+
+======================================================================
+33. FINAL HANDOVER
+======================================================================
+
+At completion, provide a concise but complete handover containing:
+
+1. final scientific design actually implemented;
+2. four RQs;
+3. active repository structure;
+4. historical material preserved;
+5. sources reused versus newly acquired;
+6. final sample sizes by city;
+7. operational neighbourhood counts;
+8. population-density construction;
+9. OSM snapshot/taxonomy;
+10. M0/ME/MW/MEW feature registry;
+11. within-city validation design;
+12. random/spatial robustness design;
+13. relative-price benchmark values and reference sample sizes;
+14. six cross-city transfer directions;
+15. model/tuning protocol;
+16. completed robustness checks;
+17. result/output locations;
+18. tests and verification;
+19. deviations from this design;
+20. unresolved limitations;
+21. Git commits;
+22. final remote `v4` SHA;
+23. confirmation that `main` and `v3` were unchanged.
+
+Also explicitly state:
+
+- whether the full rerun completed for all three cities;
+- whether all six transfer experiments completed;
+- whether any result is partial or blocked;
+- whether any old numerical result was reused instead of recomputed.
+
+Success means a scientifically coherent, fully rerun, reproducible three-city study that reuses reliable infrastructure while regenerating every derived analytical result under the final approved design.

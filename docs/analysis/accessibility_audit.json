@@ -1,0 +1,260 @@
+{
+  "copenhagen": {
+    "city": "copenhagen",
+    "status": "FEATURES_RECOMPUTED_PENDING_SAMPLE_FOLD_QA",
+    "source_snapshot": "2026-06-30T23:59:59Z",
+    "listing_source": {
+      "city": "copenhagen",
+      "snapshot": "2026-06-30",
+      "currency": "DKK",
+      "listing_manifest_sha256": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13",
+      "listing_sha256": "d0c81b5c30c0fa48ca2e77005d6e8418c6f491ee4af8dbac881ff7f5fd01ff71",
+      "source_reingested": false,
+      "counts": {
+        "quote_rows": 14095,
+        "quote_date_mismatch": 0,
+        "quote_date_match_unresolved": 14095,
+        "quote_returned_dates_missing": 14095,
+        "positive_price_currency_unresolved": 0,
+        "price_quote_difference": 0,
+        "raw": 23144,
+        "dwelling_filtered": 21080,
+        "positive_price": 12521,
+        "eligible_missing_price": 8559,
+        "eligible_nonpositive_price": 0,
+        "inside_boundary_raw": 23068,
+        "inside_boundary_dwelling": 21021,
+        "inside_boundary_positive_price": 12508,
+        "boundary_unclassified": 0,
+        "duplicate_records": 0,
+        "invalid_records": 0,
+        "invalid_or_duplicate_records": 0,
+        "quote_flattened_rounding_difference": 3556,
+        "quote_without_dates": 0,
+        "positive_price_without_quote": 0
+      },
+      "mask_summary_sha256": "014894ce8030c9a1cd12251bef3ac0427faae19808ea8f6507326a603d6de299",
+      "covers_crs": "EPSG:4326",
+      "metric_crs": "EPSG:25832"
+    },
+    "graph": {
+      "metric_crs": "EPSG:25832",
+      "nodes": 227010,
+      "arcs": 519010,
+      "weak_components": 460,
+      "largest_component_nodes": 223421,
+      "included_ways": 67728,
+      "excluded_ways": 6541
+    },
+    "destinations": {
+      "raw_selected_candidates": 2949,
+      "raw_bus": 3282,
+      "canonical_counts": {
+        "cultural_tourist": 331,
+        "food_social": 2517,
+        "station": 82,
+        "bus": 2291
+      },
+      "position_methods": {
+        "osm_node": 4935,
+        "projected_point_on_surface": 208,
+        "osm_nonpolygon_relation_center": 1,
+        "projected_line_midpoint": 77
+      },
+      "metric_crs": "EPSG:25832"
+    },
+    "measurements": {
+      "counts": {
+        "station_routing_failures": 100,
+        "bus_routing_failures": 85,
+        "food_true_zero_network_10": 167,
+        "culture_true_zero_network_10": 2446,
+        "common_support": 12408,
+        "snap_over_100m": 3,
+        "snap_over_250m": 0
+      },
+      "unique_origin_nodes": 8342,
+      "dijkstra_nodes_explored": 69359878,
+      "metric_crs": "EPSG:25832",
+      "same_destination_universe": true,
+      "connector_rule": "Both endpoints; directed pedestrian edges; no unreachable-to-zero conversion"
+    },
+    "destination_universe_sha256": "49344223d2bb2000889bdac435b19682eda19598330b3eb147c353e6d6b2c1a8",
+    "records_sha256": "2beb88229de50b4550dd6144cbfae5238a55f107cb94fa05dc72ded874c9e350",
+    "feature_n": 12508,
+    "historical_features_reused": false,
+    "empirical_models_fitted": false
+  },
+  "oslo": {
+    "city": "oslo",
+    "status": "FEATURES_RECOMPUTED_PENDING_SAMPLE_FOLD_QA",
+    "source_snapshot": "2026-06-30T23:59:59Z",
+    "listing_source": {
+      "city": "oslo",
+      "snapshot": "2026-06-30",
+      "currency": "NOK",
+      "listing_manifest_sha256": "c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8",
+      "listing_sha256": "2a3c604bb3113e04e65ff4573cfe7ee23b0015a0d04bc824b761c2a1b85add2c",
+      "source_reingested": false,
+      "counts": {
+        "raw": 13391,
+        "dwelling_filtered": 11776,
+        "positive_price": 8557,
+        "eligible_missing_price": 3219,
+        "eligible_nonpositive_price": 0,
+        "inside_boundary_raw": 13391,
+        "inside_boundary_dwelling": 11776,
+        "inside_boundary_positive_price": 8557,
+        "boundary_unclassified": 0,
+        "duplicate_records": 0,
+        "invalid_records": 0,
+        "invalid_or_duplicate_records": 0,
+        "quote_rows": 10060,
+        "quote_date_mismatch": 0,
+        "quote_date_match_unresolved": 10060,
+        "quote_returned_dates_missing": 10060,
+        "positive_price_currency_unresolved": 0,
+        "quote_flattened_rounding_difference": 2369,
+        "price_quote_difference": 0,
+        "quote_without_dates": 0,
+        "positive_price_without_quote": 0
+      },
+      "mask_summary_sha256": "2f9fc9a6a5ef570e2d62a16a3f9421da4bded1b6db2c573c7041e7450cfdfb5c",
+      "covers_crs": "EPSG:4326",
+      "metric_crs": "EPSG:25833"
+    },
+    "graph": {
+      "metric_crs": "EPSG:25833",
+      "nodes": 1013201,
+      "arcs": 2158918,
+      "weak_components": 700,
+      "largest_component_nodes": 972012,
+      "included_ways": 144551,
+      "excluded_ways": 6428,
+      "zero_length_segments": 5
+    },
+    "destinations": {
+      "raw_selected_candidates": 2252,
+      "raw_bus": 6228,
+      "canonical_counts": {
+        "cultural_tourist": 524,
+        "food_social": 1576,
+        "station": 139,
+        "bus": 4520
+      },
+      "position_methods": {
+        "osm_node": 4914,
+        "projected_point_on_surface": 1781,
+        "projected_line_midpoint": 64
+      },
+      "metric_crs": "EPSG:25833"
+    },
+    "measurements": {
+      "counts": {
+        "station_routing_failures": 26,
+        "bus_routing_failures": 26,
+        "food_true_zero_network_10": 840,
+        "culture_true_zero_network_10": 2025,
+        "common_support": 8529,
+        "snap_over_100m": 0,
+        "snap_over_250m": 0
+      },
+      "unique_origin_nodes": 7024,
+      "dijkstra_nodes_explored": 140647997,
+      "metric_crs": "EPSG:25833",
+      "same_destination_universe": true,
+      "connector_rule": "Both endpoints; directed pedestrian edges; no unreachable-to-zero conversion"
+    },
+    "destination_universe_sha256": "786839a65b950dd463969c47dd1c3da5dbe80d5642404602a7264ea5dfc101fc",
+    "records_sha256": "8080d43bbcd1c529ef9743fc824196080bfdcc1e1ef316aca2bd7ddff5cbc74c",
+    "feature_n": 8557,
+    "historical_features_reused": false,
+    "empirical_models_fitted": false
+  },
+  "stockholm": {
+    "city": "stockholm",
+    "status": "FEATURES_RECOMPUTED_PENDING_SAMPLE_FOLD_QA",
+    "source_snapshot": "2026-06-30T23:59:59Z",
+    "listing_source": {
+      "city": "stockholm",
+      "snapshot": "2026-06-30",
+      "currency": "SEK",
+      "listing_manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172",
+      "listing_sha256": "6d0ff60954da6e05b73ed741fe7ebbff5b57fe3b18acf4696acf5b824e4e6d6f",
+      "source_reingested": false,
+      "counts": {
+        "quote_rows": 3344,
+        "quote_date_mismatch": 0,
+        "quote_date_match_unresolved": 3344,
+        "quote_returned_dates_missing": 3344,
+        "positive_price_currency_unresolved": 0,
+        "price_quote_difference": 0,
+        "raw": 4806,
+        "dwelling_filtered": 3834,
+        "positive_price": 2510,
+        "eligible_missing_price": 1324,
+        "eligible_nonpositive_price": 0,
+        "inside_boundary_raw": 4806,
+        "inside_boundary_dwelling": 3834,
+        "inside_boundary_positive_price": 2510,
+        "boundary_unclassified": 0,
+        "duplicate_records": 0,
+        "invalid_records": 0,
+        "invalid_or_duplicate_records": 0,
+        "quote_flattened_rounding_difference": 793,
+        "quote_without_dates": 0,
+        "positive_price_without_quote": 0
+      },
+      "mask_summary_sha256": "7b16d5e30ebb5134a902251e13f99fc968b2b666b7df20e71338de5433f89356",
+      "covers_crs": "EPSG:4326",
+      "metric_crs": "EPSG:3006"
+    },
+    "graph": {
+      "metric_crs": "EPSG:3006",
+      "nodes": 636697,
+      "arcs": 1412408,
+      "weak_components": 1039,
+      "largest_component_nodes": 618822,
+      "included_ways": 136477,
+      "excluded_ways": 12879,
+      "zero_length_segments": 1
+    },
+    "destinations": {
+      "raw_selected_candidates": 4461,
+      "raw_bus": 4531,
+      "canonical_counts": {
+        "cultural_tourist": 676,
+        "food_social": 3565,
+        "station": 193,
+        "bus": 4518
+      },
+      "position_methods": {
+        "osm_node": 8700,
+        "projected_point_on_surface": 248,
+        "projected_line_midpoint": 4
+      },
+      "metric_crs": "EPSG:3006"
+    },
+    "measurements": {
+      "counts": {
+        "station_routing_failures": 14,
+        "bus_routing_failures": 11,
+        "food_true_zero_network_10": 151,
+        "culture_true_zero_network_10": 919,
+        "common_support": 2495,
+        "snap_over_100m": 0,
+        "snap_over_250m": 0
+      },
+      "unique_origin_nodes": 2254,
+      "dijkstra_nodes_explored": 17311991,
+      "metric_crs": "EPSG:3006",
+      "same_destination_universe": true,
+      "connector_rule": "Both endpoints; directed pedestrian edges; no unreachable-to-zero conversion"
+    },
+    "destination_universe_sha256": "595811831dc5667b6974afab8a2afb95baedfb2cf41d5a1d93465bb33df19ef1",
+    "records_sha256": "f703a88d956803443170f3f99239b035facf8c57303ee646efee1b117c776483",
+    "feature_n": 2510,
+    "historical_features_reused": false,
+    "empirical_models_fitted": false
+  }
+}

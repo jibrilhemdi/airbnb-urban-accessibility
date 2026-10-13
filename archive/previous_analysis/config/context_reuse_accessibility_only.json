@@ -1,0 +1,24 @@
+{
+  "design_id": "v4_accessibility_only_20261011",
+  "definition_version": "v4_context_A04_20261011",
+  "cities": {
+    "copenhagen_frederiksberg": {
+      "run_id": "research_v4_copenhagen_frederiksberg_20261011T210800Z",
+      "snapshot": "2026-06-30",
+      "manifest_sha256": "187f3de5cb9cf4526128c5441954d48bca99fb06044094098fb468b53ef9f91d",
+      "summary_sha256": "37bc4856dba63df5f2a925487ce9e2f028dbb051deac95ebbd6b49bea2df823e"
+    },
+    "oslo": {
+      "run_id": "research_v4_oslo_20261011T210800Z",
+      "snapshot": "2026-06-30",
+      "manifest_sha256": "7396c0003e6771ea5cc278e2d691b2326b2c4a250f69f982bb92134433625a57",
+      "summary_sha256": "0672c23ab0d840e437a58229534783e08a4b7a30a505cef30830e147bbfc4e82"
+    },
+    "stockholm": {
+      "run_id": "research_v4_stockholm_20261011T210800Z",
+      "snapshot": "2026-06-30",
+      "manifest_sha256": "5881346fef1e9bdd2349dc37b428b1179f0620bd5490176e8c96a81d48e86c6d",
+      "summary_sha256": "929935f61699088ad2a77c197483a7ef9fc45cbb97c29dc1d7d16221c0964301"
+    }
+  }
+}

@@ -1,0 +1,889 @@
+# COMPLETE THE THESIS-READY REPORTING AND OUTPUT LAYER
+
+Work directly in the existing thesis repository on branch `v4`.
+
+The numerical/scientific estimation pipeline has already been completed to a substantial extent:
+
+- three-city primary predictive analyses completed;
+- Copenhagen, Oslo and Stockholm association analyses completed under the approved 10% association-missingness amendment;
+- all six pairwise cross-city relative-price transfer experiments completed;
+- registered predictive robustness checks completed;
+- frozen source, feature, sample, validation and model artifacts already exist.
+
+However, the project is NOT yet considered fully complete because the thesis-ready reporting/output layer has not been comprehensively audited against the scientific proposal and research questions.
+
+This task is therefore:
+
+**AUDIT ALL FINAL REQUIRED DELIVERABLES, GENERATE MISSING THESIS-READY FIGURES/TABLES/REPORTS FROM THE EXISTING FROZEN RESULTS, UPDATE FINAL DOCUMENTATION, AND BUILD A COMPLETE RELEASE PACKAGE.**
+
+Do NOT casually rerun the scientific analysis.
+
+======================================================================
+0. CRITICAL SCOPE
+======================================================================
+
+This is primarily a REPORTING / SYNTHESIS / RELEASE task.
+
+Do NOT:
+
+- reacquire Airbnb data;
+- reacquire OSM;
+- rebuild networks;
+- rebuild accessibility features;
+- change operational neighbourhoods;
+- change population density;
+- change model specifications;
+- change samples;
+- change folds;
+- retune XGBoost;
+- refit completed predictive models;
+- refit completed transfer models;
+- change the 10% association-missingness amendment;
+- alter existing scientific results merely to generate nicer figures.
+
+Reuse authoritative frozen outputs.
+
+Only rerun a scientific computation if an integrity audit demonstrates that an output required for reporting genuinely does not exist but can be deterministically reconstructed from already-frozen inputs without changing the design.
+
+If such reconstruction is required:
+
+1. document exactly why;
+2. reuse the frozen scientific dependencies;
+3. do not change any scientific choice;
+4. distinguish reconstruction from a new analysis.
+
+======================================================================
+1. PREFLIGHT AND REPOSITORY SAFETY
+======================================================================
+
+Before making changes:
+
+- Read all applicable `AGENTS.md`.
+- Confirm current branch is `v4`.
+- Fetch the configured remote.
+- Confirm local/remote state.
+- Check worktree and staging area.
+- Do not mix unrelated user changes.
+- Do not reset, rebase, force-push or rewrite published history.
+- Do not modify `main` or `v3`.
+
+Read the current active:
+
+- scientific proposal;
+- end-to-end research plan;
+- preanalysis specification;
+- implementation contract;
+- decision log;
+- deviations log;
+- data dictionary;
+- source registry;
+- reproducibility documentation;
+- release audit;
+- publication audit;
+- findings/research report;
+- robustness registry;
+- model/result manifests.
+
+Also inspect all existing:
+
+- `outputs/figures/`
+- `outputs/tables/`
+- `outputs/metrics/`
+- `outputs/diagnostics/`
+- `outputs/models/`
+- `reports/`
+- `runs/`
+- release/publication directories.
+
+Do not assume the existing “PASS_COMPLETE” publication audit means every scientifically useful thesis figure exists.
+
+======================================================================
+2. FINAL SCIENTIFIC DESIGN TO REPORT
+======================================================================
+
+The final thesis has FOUR research questions.
+
+RQ1 — ACCESSIBILITY MEASUREMENT
+
+How do Euclidean and walking-network measures characterize urban accessibility differently across Copenhagen, Oslo and Stockholm?
+
+RQ2 — WITHIN-CITY PREDICTIVE CONTRIBUTION
+
+How much predictive information do Euclidean and walking-network accessibility measures add to Airbnb asking-price models within each city?
+
+RQ3 — GEOGRAPHIC GENERALIZATION AND CROSS-CITY CONSISTENCY
+
+How robust are the predictive gains from accessibility when models are evaluated in geographically unseen neighbourhoods, and how consistent are those gains across Copenhagen, Oslo and Stockholm?
+
+RQ4 — CROSS-CITY TRANSFERABILITY
+
+To what extent do Airbnb pricing relationships learned in one city transfer to another city, and does accessibility improve this transferability?
+
+Within-city outcome:
+
+`log(original positive Airbnb nightly asking price)`
+
+Cross-city outcome:
+
+city-relative log price:
+
+`log(price_ic) - mean_city(log(price))`
+
+Cross-city transfer directions:
+
+1. Copenhagen -> Oslo
+2. Copenhagen -> Stockholm
+3. Oslo -> Copenhagen
+4. Oslo -> Stockholm
+5. Stockholm -> Copenhagen
+6. Stockholm -> Oslo
+
+Primary model ladder:
+
+- M0 = X
+- ME = X + E
+- MW = X + W
+- MEW = X + E + W
+
+Income is NOT in the active primary models.
+
+Housing/property-price variables are NOT in the active primary models.
+
+Use `Copenhagen` in active scientific writing after the one-time clarification that the study area includes Frederiksberg.
+
+======================================================================
+3. BUILD A DELIVERABLE-GAP AUDIT BEFORE GENERATING ANYTHING
+======================================================================
+
+Create:
+
+`reports/deliverable_gap_audit.md`
+
+and a machine-readable counterpart such as:
+
+`reports/deliverable_gap_audit.json`
+
+Map every RQ to:
+
+- required evidence;
+- existing output;
+- existing filename;
+- source artifact/run;
+- current status;
+- thesis usefulness;
+- publication readiness;
+- missing output;
+- action required.
+
+Statuses should distinguish:
+
+- `READY_EXISTING`
+- `EXISTS_NEEDS_REDESIGN`
+- `MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS`
+- `MISSING_REQUIRES_SCIENTIFIC_RECONSTRUCTION`
+- `NOT_NEEDED`
+- `BLOCKED`
+
+Do not generate redundant figures merely because they are easy.
+
+Prefer a small number of strong, interpretable thesis figures over a large catalogue of weak figures.
+
+======================================================================
+4. AUDIT EXISTING FIGURES
+======================================================================
+
+Inspect every existing figure visually and programmatically.
+
+For each figure check:
+
+- correct city labels;
+- no obsolete V/A version markers;
+- readable title;
+- readable axis labels;
+- proper units;
+- legend readability;
+- adequate font size;
+- correct model names;
+- correct sign convention;
+- comparable scales where meaningful;
+- no clipped labels;
+- no overlapping annotations;
+- no duplicated information;
+- valid source/results lineage;
+- no stale numeric values;
+- publication-resolution export;
+- suitable aspect ratio for thesis use.
+
+Classify each figure as:
+
+- KEEP
+- REDESIGN
+- REPLACE
+- DROP
+
+Do not overwrite frozen historical figures without preserving provenance.
+
+Active thesis-ready outputs should use functional filenames rather than versioned filenames.
+
+======================================================================
+5. REQUIRED THESIS FIGURES
+======================================================================
+
+Audit whether the following figures already exist in a publication-ready form.
+
+Generate only those missing or inadequate.
+
+--------------------------------------------------
+FIGURE GROUP A — STUDY DESIGN / SAMPLE
+--------------------------------------------------
+
+A1. Three-city study-area map
+
+Show:
+
+- Copenhagen
+- Oslo
+- Stockholm
+
+with operational neighbourhood boundaries used for primary geographic validation.
+
+This should communicate geographic study design, not individual private Airbnb locations.
+
+If listing locations are shown, use permitted aggregation/suppression rules.
+
+A2. Sample-flow figure or compact visual
+
+For each city:
+
+raw ->
+eligible entire dwelling ->
+positive price ->
+inside study area ->
+geography assigned ->
+common accessibility support ->
+final prediction sample ->
+OLS complete-case sample
+
+This can be a compact flow chart, grouped bar figure or table if a figure adds little value.
+
+--------------------------------------------------
+FIGURE GROUP B — RQ1 ACCESSIBILITY MEASUREMENT
+--------------------------------------------------
+
+B1. Euclidean versus walking-network nearest-access comparison.
+
+At minimum show the relationship between straight-line and walking-network accessibility for relevant destination classes.
+
+Prefer a clear city-faceted scatter/hexbin/distribution design.
+
+B2. Network detour / divergence figure.
+
+Show where or how strongly network accessibility diverges from Euclidean accessibility.
+
+Examples:
+
+- network/Euclidean ratio;
+- network minus Euclidean standardized measure;
+- route-circuity distribution.
+
+Use only metrics actually supported by frozen outputs.
+
+B3. Opportunity-count comparison.
+
+Compare Euclidean versus walking-network reachable opportunities for:
+
+- food/social;
+- culture/tourism;
+- any other frozen opportunity categories.
+
+B4. Accessibility spatial maps.
+
+Create a compact, thesis-useful set of maps showing accessibility variation in each city.
+
+Avoid generating dozens of redundant maps.
+
+Prefer one carefully selected measure or a small harmonized panel that directly supports RQ1.
+
+--------------------------------------------------
+FIGURE GROUP C — RQ2 WITHIN-CITY PREDICTION
+--------------------------------------------------
+
+C1. Main within-city model-performance figure.
+
+For each city compare:
+
+- M0
+- ME
+- MW
+- MEW
+
+Primary focus:
+
+geographic-validation RMSE.
+
+Include uncertainty/fold variation where supported.
+
+Make ME versus MW and MEW versus ME visually interpretable.
+
+C2. Accessibility gain relative to baseline.
+
+Show percentage or absolute RMSE change relative to M0.
+
+Use the frozen sign convention consistently.
+
+C3. Euclidean versus network comparison.
+
+Create one figure focused specifically on:
+
+- MW − ME
+- MEW − ME
+
+for all three cities.
+
+This should make the central thesis comparison immediately visible.
+
+C4. Association/OLS accessibility coefficient figure.
+
+Use the final three-city association analyses.
+
+Include uncertainty intervals.
+
+Clearly distinguish:
+
+- adjusted associations;
+- predictive results.
+
+Do not imply causality.
+
+C5. Predictive interpretation figure.
+
+If SHAP or equivalent final predictive interpretation already exists and is scientifically useful, produce one consistent three-city figure.
+
+Do not create SHAP merely because the library supports it if it adds no interpretive value.
+
+--------------------------------------------------
+FIGURE GROUP D — RQ3 GEOGRAPHIC GENERALIZATION
+--------------------------------------------------
+
+D1. Validation-strategy comparison.
+
+Compare performance under:
+
+- random CV;
+- primary neighbourhood geographic CV;
+- geometric/spatial-block robustness.
+
+Do this across the three cities.
+
+The purpose is to show how evaluation difficulty changes when spatial separation increases.
+
+D2. Fold/neighbourhood-level performance variation.
+
+Show RMSE or paired accessibility gain across held-out neighbourhoods.
+
+This is important because citywide averages may hide substantial spatial heterogeneity.
+
+D3. Robustness-summary figure.
+
+Summarize the direction/stability of major registered robustness contrasts.
+
+Do not reduce robustness to arbitrary “pass/fail” coloring.
+
+Show actual effect/performance changes where practical.
+
+--------------------------------------------------
+FIGURE GROUP E — RQ4 CROSS-CITY TRANSFER
+--------------------------------------------------
+
+E1. Cross-city transfer RMSE matrix.
+
+For all six directions.
+
+Create separate or clearly distinguishable panels for:
+
+- M0
+- ME
+- MW
+- MEW
+
+or use a design that makes model comparison easy.
+
+E2. Accessibility transfer-gain matrix.
+
+Show improvement/deterioration relative to M0 for:
+
+- ME
+- MW
+- MEW
+
+for all six directions.
+
+E3. Network versus Euclidean transfer comparison.
+
+Directly visualize:
+
+- MW − ME
+- MEW − ME
+
+across the six directional transfers.
+
+E4. Transfer prediction diagnostic.
+
+For each target city or transfer direction where useful, show actual relative log price versus predicted relative log price.
+
+Avoid six near-identical figures if a compact faceted design works.
+
+E5. Directional asymmetry figure.
+
+Explicitly compare:
+
+- Copenhagen -> Oslo versus Oslo -> Copenhagen;
+- Copenhagen -> Stockholm versus Stockholm -> Copenhagen;
+- Oslo -> Stockholm versus Stockholm -> Oslo.
+
+The purpose is to demonstrate whether transferability depends on direction.
+
+--------------------------------------------------
+FIGURE GROUP F — DIAGNOSTICS / LIMITATIONS
+--------------------------------------------------
+
+Generate only when scientifically useful:
+
+- residual spatial diagnostics;
+- OLS residual diagnostics;
+- missingness/sample-support diagnostics;
+- fold-size/support diagnostics.
+
+These may belong in an appendix rather than the main thesis.
+
+======================================================================
+6. REQUIRED THESIS TABLES
+======================================================================
+
+Audit and generate publication-ready tables for:
+
+T1. City/sample summary.
+
+Include:
+
+- raw listings;
+- eligible conventional dwellings;
+- positive-price listings;
+- final prediction N;
+- association N;
+- operational neighbourhood count;
+- price benchmark where relevant.
+
+T2. Feature-definition table.
+
+For every active X/E/W feature:
+
+- concept;
+- source;
+- unit;
+- transformation;
+- common construction across cities.
+
+T3. Accessibility descriptive statistics.
+
+By city and accessibility representation.
+
+T4. Main predictive performance.
+
+Rows:
+
+city × estimator × validation.
+
+Columns:
+
+M0 / ME / MW / MEW.
+
+T5. Paired model contrasts.
+
+Include:
+
+- ME − M0
+- MW − M0
+- MEW − M0
+- MW − ME
+- MEW − ME
+
+with uncertainty/stability summaries.
+
+T6. OLS association results.
+
+Three-city final results after the approved 10% missingness amendment.
+
+T7. Geographic-validation versus random/spatial-block comparison.
+
+T8. Cross-city transfer performance.
+
+All six directions × four models.
+
+T9. Cross-city transfer contrasts.
+
+Accessibility gain and network-versus-Euclidean contrasts.
+
+T10. Robustness registry summary.
+
+Include:
+
+- robustness check;
+- city;
+- estimand;
+- result;
+- interpretation;
+- status.
+
+T11. Claims/limitations table.
+
+For each RQ:
+
+- what evidence supports;
+- what evidence does not support.
+
+======================================================================
+7. IDENTIFY THE MINIMUM MAIN-THESIS FIGURE SET
+======================================================================
+
+Not every generated figure belongs in the main thesis.
+
+After generating/auditing outputs, produce:
+
+`reports/thesis_figure_recommendations.md`
+
+Recommend:
+
+- approximately 6–10 main-text figures;
+- approximately 6–10 main-text tables maximum;
+- remaining outputs for appendices.
+
+For every recommended main figure/table state:
+
+- research question;
+- reason it belongs in main text;
+- key takeaway;
+- suggested thesis section.
+
+Avoid redundancy.
+
+======================================================================
+8. RQ-BY-RQ FINDINGS SYNTHESIS
+======================================================================
+
+Create:
+
+`reports/findings_by_research_question.md`
+
+Structure exactly by:
+
+RQ1
+RQ2
+RQ3
+RQ4
+
+For each:
+
+1. Evidence used.
+2. Headline result.
+3. Important quantitative results.
+4. City heterogeneity.
+5. Robustness.
+6. Interpretation.
+7. What cannot be claimed.
+8. Recommended figures/tables.
+
+Do NOT add unsupported causal interpretations.
+
+Do NOT manually invent values.
+
+Every numeric statement must be traceable to generated authoritative outputs.
+
+======================================================================
+9. FINAL SCIENTIFIC CLAIMS AUDIT
+======================================================================
+
+Create/update:
+
+`docs/final_claims_for_thesis.md`
+
+Classify candidate claims as:
+
+- SUPPORTED
+- SUPPORTED_WITH_QUALIFICATION
+- NOT_SUPPORTED
+- DO_NOT_CLAIM
+
+Examples of distinctions to enforce:
+
+Supported if results show it:
+- accessibility improves prediction in a particular city;
+- Euclidean and walking measures perform similarly;
+- transferability differs by source/target city;
+- geographic validation is harder than random CV.
+
+Do not claim:
+- accessibility causes Airbnb prices;
+- walking accessibility is universally superior;
+- results generalize to all Nordic cities;
+- transfer experiment predicts absolute target-city prices;
+- relative-price transfer is zero-shot absolute deployment.
+
+======================================================================
+10. UPDATE SCIENTIFIC PROPOSAL AND RESEARCH PLAN
+======================================================================
+
+Update the repository's ACTIVE scientific proposal and end-to-end research plan so they match what was actually implemented.
+
+Use FOUR RQs.
+
+Use `Copenhagen` in ordinary scientific prose.
+
+Reflect:
+
+- income removed;
+- property prices removed;
+- Inside Airbnb neighbourhood geographic validation;
+- 15-observation outer-test minimum;
+- 10% association missingness threshold as a transparent post-observation amendment;
+- pairwise cross-city relative-price transfer;
+- six directional experiments;
+- complete rerun of Copenhagen, Oslo and Stockholm.
+
+Do not pretend post-observation amendments were preregistered.
+
+Do not rewrite history.
+
+======================================================================
+11. FINAL THESIS-READY REPORT
+======================================================================
+
+Produce a comprehensive:
+
+`reports/research_results.md`
+
+This should be suitable as the primary factual basis for writing the thesis Results section.
+
+Structure:
+
+1. Final samples.
+2. RQ1 — measurement.
+3. RQ2 — within-city prediction.
+4. RQ2 complementary OLS associations.
+5. RQ3 — geographic generalization.
+6. RQ3 — cross-city consistency.
+7. RQ4 — cross-city transferability.
+8. Robustness.
+9. Main limitations.
+10. Claims supported.
+
+Every table/figure reference must resolve to an existing output.
+
+No stale references.
+
+======================================================================
+12. FIGURE / TABLE STYLE
+======================================================================
+
+Use one consistent publication style.
+
+Requirements:
+
+- readable at thesis-page width;
+- no unnecessary chart titles if captions carry the explanation;
+- concise axis labels;
+- units explicitly stated;
+- city names consistently `Copenhagen`, `Oslo`, `Stockholm`;
+- model labels consistently M0, ME, MW, MEW;
+- consistent ordering M0 -> ME -> MW -> MEW;
+- consistent validation naming;
+- consistent sign convention;
+- no unnecessary decorative elements;
+- accessible legends;
+- vector output where practical (PDF/SVG);
+- high-resolution PNG for convenient review;
+- deterministic output.
+
+Do not hardcode arbitrary presentation values into scientific calculations.
+
+======================================================================
+13. FINAL RELEASE PACKAGE
+======================================================================
+
+The previous archive showed an incomplete/empty effective release area.
+
+Create a real final release package containing safe, reproducible thesis artifacts.
+
+For example:
+
+`outputs/release/`
+
+with:
+
+- `figures/`
+- `tables/`
+- `metrics/`
+- `reports/`
+- `manifests/`
+
+Do NOT include:
+
+- raw Airbnb rows;
+- private coordinates;
+- host identifiers;
+- credentials;
+- restricted source files;
+- row-level private predictions if repository policy prohibits them.
+
+Include a release manifest containing:
+
+- filename;
+- SHA256;
+- source run/artifact;
+- research question;
+- publication status;
+- generation command.
+
+Create a compressed safe release artifact if existing repository conventions support it.
+
+======================================================================
+14. DOCUMENT EXPORTS
+======================================================================
+
+If the repository has a supported DOCX/PDF generation workflow for:
+
+- scientific proposal;
+- research plan;
+- results/report;
+
+regenerate the active exports.
+
+Visually inspect rendered pages for:
+
+- clipping;
+- page breaks;
+- table overflow;
+- figure legibility;
+- broken citations/links;
+- stale version labels.
+
+If no supported document-generation pipeline exists, do NOT invent an unreliable one.
+
+Instead clearly identify Markdown as authoritative and document the export limitation.
+
+======================================================================
+15. DO NOT USE OLD NUMERIC RESULTS
+======================================================================
+
+The active thesis figures/tables must use the final complete rerun results.
+
+Do not accidentally pull old Copenhagen/V3 metrics into the final reporting layer.
+
+Implement explicit run/artifact provenance checks.
+
+Where old and new artifacts have the same model labels, require a final-run identity/hash check.
+
+======================================================================
+16. VALIDATION
+======================================================================
+
+Run all appropriate tests after reporting completion.
+
+At minimum:
+
+- unit tests;
+- PostGIS/integration tests where relevant;
+- compile/static checks;
+- provenance checks;
+- protected historical artifact checks;
+- release-manifest hash verification;
+- figure/table existence checks;
+- stale-link checks;
+- stale-version-label checks;
+- no-private-data release checks;
+- independent metric recomputation where supported.
+
+Add tests ensuring every main-thesis recommended figure/table:
+
+- exists;
+- has a registered provenance source;
+- uses final rerun results;
+- has no obsolete version/stage naming.
+
+======================================================================
+17. GIT CHECKPOINTS
+======================================================================
+
+This is one comprehensive reporting-completion task.
+
+Use logical commits such as:
+
+1. `audit: map thesis deliverables to research questions`
+2. `reporting: complete thesis figures and tables`
+3. `docs: synthesize final research findings`
+4. `release: assemble thesis-ready research package`
+
+Use actual repository needs rather than forcing exactly these commits.
+
+After each major checkpoint:
+
+- run relevant checks;
+- inspect diff;
+- stage only intended safe files;
+- commit;
+- push only to `origin/v4`;
+- verify remote equality.
+
+Do not modify `main` or `v3`.
+
+======================================================================
+18. FINAL COMPLETION CRITERIA
+======================================================================
+
+Do NOT call the thesis-output layer complete merely because model execution is complete.
+
+Completion requires:
+
+- RQ1–RQ4 each have adequate final evidence;
+- every required main result has a table/figure or a documented reason why prose/table-only reporting is preferable;
+- thesis figure recommendations exist;
+- thesis table recommendations exist;
+- findings-by-RQ synthesis exists;
+- final claims audit exists;
+- final research report exists;
+- active proposal/research plan match implemented science;
+- release package is populated;
+- all referenced artifacts exist;
+- publication/release audits pass against this expanded deliverable set.
+
+======================================================================
+19. FINAL HANDOVER
+======================================================================
+
+At completion report:
+
+1. current branch and final SHA;
+2. confirmation local/remote `v4` match;
+3. whether any scientific model was refit;
+4. if yes, exact reason;
+5. figures found existing and kept;
+6. figures redesigned;
+7. new figures generated;
+8. tables found existing;
+9. new tables generated;
+10. main-thesis recommended figures;
+11. appendix figures;
+12. main-thesis recommended tables;
+13. RQ1 headline finding;
+14. RQ2 headline finding;
+15. RQ3 headline finding;
+16. RQ4 headline finding;
+17. final supported/not-supported claims;
+18. final release-package location;
+19. proposal/research-plan export status;
+20. tests and release-audit results;
+21. any genuinely remaining missing deliverable.
+
+Success means:
+
+**the frozen scientific analyses are converted into a complete, publication-ready, thesis-ready reporting package—not merely that the model pipeline reports COMPLETE.**

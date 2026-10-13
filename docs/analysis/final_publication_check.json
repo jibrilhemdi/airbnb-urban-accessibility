@@ -1,0 +1,18 @@
+{
+  "status": "PASS_COMPLETE",
+  "public_artifacts_verified": 77,
+  "previous72_artifacts_preserved": true,
+  "fitted_code_dependency_checks": 20460,
+  "fitted_packages_code_verified": 682,
+  "estimation_and_preprocessing_modules_unchanged": true,
+  "all_recorded_fitted_code_snapshots_preserved": true,
+  "public_csv_privacy_and_map_support": "PASS",
+  "publication_report_links_checked": 74,
+  "full_rerun_complete": true,
+  "primary_prediction_cities_complete": 3,
+  "association_cities_complete": 3,
+  "six_transfer_directions_complete": true,
+  "post_observation_amendment_disclosed": true,
+  "active_dependency_file": "requirements.txt",
+  "historical_evidence_directory": "archive/"
+}

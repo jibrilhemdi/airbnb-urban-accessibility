@@ -1,0 +1,43 @@
+{
+  "historical_definition": "v4_housing_standard_20261011",
+  "source_commit": "25d60d36ef6d6359fbad74c20bc40c48764b7691",
+  "status": "SUPERSEDED_ACTIVE_SCOPE; immutable historical snapshot",
+  "files": {
+    "docs/v4/IMPLEMENTATION_CONTRACT.md": {
+      "snapshot": "IMPLEMENTATION_CONTRACT.md",
+      "sha256": "0595afe1129ce98651542369261e8abe8dabce224e738bd496a88521e1deaea3"
+    },
+    "docs/v4/proposal.md": {
+      "snapshot": "proposal.md",
+      "sha256": "0c86fb13b54742aabff942e30a39975a725c611379b465ef40838608e3c59645"
+    },
+    "docs/v4/research_plan.md": {
+      "snapshot": "research_plan.md",
+      "sha256": "779613462f13dfdb0ccc4ec3c9c5bb9cedc06c4731423fd014cf2a50cbb6cf69"
+    },
+    "docs/v4/preanalysis_specification.md": {
+      "snapshot": "preanalysis_specification.md",
+      "sha256": "5cdb3bef2db26c7139b832504cdf3385a6dd284cea8c336fcdd8c6501f2f5425"
+    },
+    "docs/v4/data_dictionary.md": {
+      "snapshot": "data_dictionary.md",
+      "sha256": "269bd7a7f06430735e5f63ecead8d2ec60f00455ad46fc24469e3774e10f6a4a"
+    },
+    "docs/v4/source_registry.md": {
+      "snapshot": "source_registry.md",
+      "sha256": "9b9751ea45602a5639af19d8050c29bbeac23539f1b91ef7680795ef21f14395"
+    },
+    "docs/v4/document_index.md": {
+      "snapshot": "document_index.md",
+      "sha256": "230cf038dbd9c8e36e48da6fe55922650bee5fec8caa3820ad1f954e111c8a9e"
+    },
+    "docs/v4/architecture.md": {
+      "snapshot": "architecture.md",
+      "sha256": "529efbb1eb3fc96ed218aba546df0c8681c584c1f96e5001890b8c9e80b7f87a"
+    },
+    "AGENTS.md": {
+      "snapshot": "AGENTS_before_A01.txt",
+      "sha256": "f966232103dd9c675d4f095551461e04526b77c8c48ee4e5d84acfeca3893013"
+    }
+  }
+}

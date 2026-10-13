@@ -1,0 +1,288 @@
+{
+  "design_id": "three_city_accessibility_transfer",
+  "adopted_date": "2026-10-13",
+  "snapshot": "2026-06-30",
+  "cities": [
+    "copenhagen",
+    "oslo",
+    "stockholm"
+  ],
+  "models": {
+    "M0": [
+      "accommodates",
+      "bedrooms",
+      "bathrooms_effective",
+      "log1p_minimum_nights",
+      "superhost",
+      "log1p_host_listings_count",
+      "amenity_wifi",
+      "amenity_dishwasher",
+      "amenity_washer",
+      "amenity_dryer",
+      "amenity_workspace",
+      "amenity_free_parking",
+      "amenity_private_balcony",
+      "amenity_self_checkin",
+      "log_population_density",
+      "distance_centre_euclidean_km",
+      "property_type"
+    ],
+    "ME": [
+      "accommodates",
+      "bedrooms",
+      "bathrooms_effective",
+      "log1p_minimum_nights",
+      "superhost",
+      "log1p_host_listings_count",
+      "amenity_wifi",
+      "amenity_dishwasher",
+      "amenity_washer",
+      "amenity_dryer",
+      "amenity_workspace",
+      "amenity_free_parking",
+      "amenity_private_balcony",
+      "amenity_self_checkin",
+      "log_population_density",
+      "distance_centre_euclidean_km",
+      "property_type",
+      "nearest_station_euclidean_km",
+      "nearest_bus_euclidean_km",
+      "log1p_food_e",
+      "log1p_culture_e"
+    ],
+    "MW": [
+      "accommodates",
+      "bedrooms",
+      "bathrooms_effective",
+      "log1p_minimum_nights",
+      "superhost",
+      "log1p_host_listings_count",
+      "amenity_wifi",
+      "amenity_dishwasher",
+      "amenity_washer",
+      "amenity_dryer",
+      "amenity_workspace",
+      "amenity_free_parking",
+      "amenity_private_balcony",
+      "amenity_self_checkin",
+      "log_population_density",
+      "distance_centre_euclidean_km",
+      "property_type",
+      "nearest_station_walking_minutes",
+      "nearest_bus_walking_minutes",
+      "log1p_food_w",
+      "log1p_culture_w"
+    ],
+    "MEW": [
+      "accommodates",
+      "bedrooms",
+      "bathrooms_effective",
+      "log1p_minimum_nights",
+      "superhost",
+      "log1p_host_listings_count",
+      "amenity_wifi",
+      "amenity_dishwasher",
+      "amenity_washer",
+      "amenity_dryer",
+      "amenity_workspace",
+      "amenity_free_parking",
+      "amenity_private_balcony",
+      "amenity_self_checkin",
+      "log_population_density",
+      "distance_centre_euclidean_km",
+      "property_type",
+      "nearest_station_euclidean_km",
+      "nearest_bus_euclidean_km",
+      "log1p_food_e",
+      "log1p_culture_e",
+      "nearest_station_walking_minutes",
+      "nearest_bus_walking_minutes",
+      "log1p_food_w",
+      "log1p_culture_w"
+    ]
+  },
+  "blocks": {
+    "X": [
+      "accommodates",
+      "bedrooms",
+      "bathrooms_effective",
+      "log1p_minimum_nights",
+      "superhost",
+      "log1p_host_listings_count",
+      "amenity_wifi",
+      "amenity_dishwasher",
+      "amenity_washer",
+      "amenity_dryer",
+      "amenity_workspace",
+      "amenity_free_parking",
+      "amenity_private_balcony",
+      "amenity_self_checkin",
+      "log_population_density",
+      "distance_centre_euclidean_km",
+      "property_type"
+    ],
+    "E": [
+      "nearest_station_euclidean_km",
+      "nearest_bus_euclidean_km",
+      "log1p_food_e",
+      "log1p_culture_e"
+    ],
+    "W": [
+      "nearest_station_walking_minutes",
+      "nearest_bus_walking_minutes",
+      "log1p_food_w",
+      "log1p_culture_w"
+    ]
+  },
+  "excluded_dependencies": [
+    "income",
+    "residential_prices"
+  ],
+  "estimators": [
+    "OLS",
+    "XGBoost"
+  ],
+  "outcomes": {
+    "within_city": "log_original_positive_price",
+    "transfer": "log_original_positive_price_minus_frozen_city_reference_mean"
+  },
+  "sample": {
+    "room_type": "Entire home/apt",
+    "property_types": [
+      "Entire rental unit",
+      "Entire condo",
+      "Entire home",
+      "Entire loft",
+      "Entire townhouse",
+      "Entire villa"
+    ],
+    "primary_review_threshold": null
+  },
+  "validation": {
+    "primary": "leave_one_operational_neighbourhood_out",
+    "minimum_test": 15,
+    "minimum_train": 500,
+    "former_test_diagnostic": 30,
+    "random_folds": 5,
+    "inner_spatial_folds": 4,
+    "inner_grid_m": 1000,
+    "random_seed": 20261004,
+    "inner_seed": 20261005,
+    "geometric_sizes_m": [
+      1000,
+      1500,
+      2000
+    ],
+    "geometric_origins_fractions": [
+      [
+        0,
+        0
+      ],
+      [
+        0.5,
+        0.5
+      ]
+    ],
+    "geometric_folds": 5,
+    "buffers_m": [
+      500,
+      1000
+    ]
+  },
+  "accessibility": {
+    "walking_speed_kmh": 5,
+    "primary_minutes": 10,
+    "euclidean_radius_m": 833,
+    "thresholds_minutes": [
+      10,
+      15,
+      20
+    ],
+    "matched_radii_m": [
+      833,
+      1250,
+      1667
+    ],
+    "speed_sensitivity_kmh": [
+      4,
+      5.4
+    ],
+    "decay_half_life_minutes": 10,
+    "preferred_osm_timestamp": "2026-06-30T23:59:59Z",
+    "extraction_buffer_m": 2000,
+    "taxonomy_compatibility": "src/pipeline/osm_taxonomy.py",
+    "bus_compatibility": "src/pipeline/build_bus_euclidean_accessibility.py"
+  },
+  "candidates": {
+    "path": "config/xgboost_candidates.json",
+    "file_sha256": "35cd1586fc5386777f2aea044226130f000be7742e1ddb4585365d08f8d2a0ac",
+    "count": 30
+  },
+  "contrasts": [
+    [
+      "ME",
+      "M0"
+    ],
+    [
+      "MW",
+      "M0"
+    ],
+    [
+      "MEW",
+      "M0"
+    ],
+    [
+      "MW",
+      "ME"
+    ],
+    [
+      "MEW",
+      "ME"
+    ]
+  ],
+  "transfer_directions": [
+    [
+      "copenhagen",
+      "oslo"
+    ],
+    [
+      "copenhagen",
+      "stockholm"
+    ],
+    [
+      "oslo",
+      "copenhagen"
+    ],
+    [
+      "oslo",
+      "stockholm"
+    ],
+    [
+      "stockholm",
+      "copenhagen"
+    ],
+    [
+      "stockholm",
+      "oslo"
+    ]
+  ],
+  "association_missing_limit": 0.05,
+  "group_bootstrap_replications": 2000,
+  "wild_cluster_replications": 9999,
+  "robustness": [
+    "random_cv",
+    "geometric_blocks",
+    "former_support_threshold",
+    "apartment_condo",
+    "reviewed_only",
+    "training_price_tail",
+    "reputation",
+    "walking_15_20",
+    "walking_speed",
+    "continuous_decay",
+    "boundary_near",
+    "population_density",
+    "area_fixed_effects",
+    "geographic_buffers"
+  ]
+}

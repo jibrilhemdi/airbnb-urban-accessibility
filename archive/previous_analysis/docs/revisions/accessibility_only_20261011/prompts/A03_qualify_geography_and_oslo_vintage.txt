@@ -1,0 +1,23 @@
+# A03 — Qualify city geography and resolve Oslo vintage
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+Reuse the three acquired June listing snapshots and preserved municipal geometries; verify hashes and chosen ingestion identities. Do not repeat Airbnb downloads or count superseded ingestions twice.
+
+Copenhagen: retain both municipalities and the ten official districts plus Frederiksberg as peer analysis areas. Verify scope/assignment compatibility without forcing acquisition counts to equal v3's final sample.
+
+Stockholm: retain the accepted SCB RegSO 2025_v2 municipal mask, code 0180, reference 2025-01-01. The 127 components are not automatically validation areas. Acquire/qualify official analysis-area polygons and map their IDs/vintage separately; a RegSO analysis option requires its own documented suitability decision.
+
+Oslo: this prompt authorizes a TARGETED boundary-vintage recovery/amendment. Inspect official municipality source, code, licence, change information and available source-dated geometry. Prefer verifiable dated polygons. If exact June 2026 geometry cannot be obtained, operational use of a documented source is authorized only after identity, valid topology, extent, independent metadata/area and relevant change checks support it. Record source/reference/retrieval dates and exact certification limits. Equal area alone does not prove linework identity. Inadequate/conflicting evidence means BLOCKED, not automatic acceptance.
+
+Preserve old receipts and add a separately identified new amendment; do not overwrite or relabel the original uncertainty. Use legitimate public sources, not credentials, purchases, terms acceptance or access-control bypasses.
+
+For Oslo/Stockholm, choose a documented official borough/district level using substantive comparability and price-free listing support. Validate nonoverlap/coverage, stable IDs, source CRS, city-specific metric CRS, deterministic boundary ties and any adjacent-area grouping. Do not choose geography using price-model scores or import old housing-area fold rules.
+
+Report native area and proposed holdout counts, coverage, gross areas and boundary-near flags. Preserve unmatched/uncertain cases in audits; no exact-address inference. Freeze qualified sources, but final fold memberships wait for A06.
+
+No income acquisition, route computation or modelling yet. State which city-dependent tasks are ready or blocked.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: feat(v4): qualify analysis geography and document Oslo vintage

@@ -1,0 +1,1058 @@
+[
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 364
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 2177
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 5626
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 3032
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 763
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 257
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 164
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 25
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 78
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 656
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 3242
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 4062
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 2177
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 1789
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 246
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 152
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 6
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 4289
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 6769
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 1290
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 60
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 1619
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 5837
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 4467
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 440
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 44
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 1
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 136
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 711
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 2101
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 1878
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 1579
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 1711
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 382
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 31
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 24
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 185
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 1165
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 1949
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 1619
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 2425
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 957
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 182
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 23
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 2698
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 4698
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 1058
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 63
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 7
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 2
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 3
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 1014
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 4099
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 2982
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 363
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 52
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 16
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 1
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 2
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 113
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 500
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 981
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 489
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 190
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 163
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 40
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 16
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 3
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Euclidean",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 26
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 160
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 685
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 642
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 398
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 353
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 144
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 75
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 12
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "measure": "Walking",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 941
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 1239
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 282
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 16
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 9
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 8
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Euclidean",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.0,
+    "upper_km": 0.1,
+    "n": 328
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.1,
+    "upper_km": 0.25,
+    "n": 1159
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.25,
+    "upper_km": 0.5,
+    "n": 839
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.5,
+    "upper_km": 0.75,
+    "n": 132
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 0.75,
+    "upper_km": 1.0,
+    "n": 16
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 1.0,
+    "upper_km": 1.5,
+    "n": 18
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 1.5,
+    "upper_km": 2.0,
+    "n": 3
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 2.0,
+    "upper_km": 3.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 3.0,
+    "upper_km": 5.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 5.0,
+    "upper_km": 10.0,
+    "n": 0
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "measure": "Walking",
+    "lower_km": 10.0,
+    "upper_km": null,
+    "n": 0
+  }
+]

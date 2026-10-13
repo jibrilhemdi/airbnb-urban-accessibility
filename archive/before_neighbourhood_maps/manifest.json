@@ -1,0 +1,921 @@
+{
+  "purpose": "Neighbourhood maps with surrounding municipalities, white study borders, grey context borders, capital legends, verified civic stars and project README rewrite",
+  "base_checkpoint": "f01d794fe6e4b8bb5fa83d8941b65031e1cff5b5",
+  "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+  "files": [
+    {
+      "original_path": "README.md",
+      "archived_path": "archive/before_neighbourhood_maps/README.md",
+      "sha256": "1df63b078f59d5f3824c506ef7275353f1148d246de2cb2396ebba9f611772f1",
+      "bytes": 2259
+    },
+    {
+      "original_path": "docs/analysis/document_index.md",
+      "archived_path": "archive/before_neighbourhood_maps/docs/analysis/document_index.md",
+      "sha256": "a6dc8c14abd621787d1aa0722c2e4293bbde792aca53f6d45c16e37013f425d6",
+      "bytes": 7113
+    },
+    {
+      "original_path": "docs/analysis/execution_log.md",
+      "archived_path": "archive/before_neighbourhood_maps/docs/analysis/execution_log.md",
+      "sha256": "dc989d31fc15b4f4acec168dd9edb7526811a7fefd8329d7776ad074af15ef91",
+      "bytes": 55356
+    },
+    {
+      "original_path": "outputs/README.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/README.md",
+      "sha256": "bdc5241de1d10eb272456685de8f0e9037982a355eaccebc96da5350d3ce7b4a",
+      "bytes": 1741
+    },
+    {
+      "original_path": "outputs/figures/accessibility_spatial.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/accessibility_spatial.png",
+      "sha256": "986470ef640ee578ca6ed9d29f6aa451b08459154620945b71f36b227a09aa81",
+      "bytes": 790498
+    },
+    {
+      "original_path": "outputs/figures/association_accessibility.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/association_accessibility.png",
+      "sha256": "017162dcfda781622b2ef19bb9c40b720340c344588be2742933005b4ee4eac8",
+      "bytes": 362438
+    },
+    {
+      "original_path": "outputs/figures/directional_transfer_asymmetry.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/directional_transfer_asymmetry.png",
+      "sha256": "c3a4f73bdaecee756638488caaa55dbdae76f86235974cc361ec100479ddbf5a",
+      "bytes": 249353
+    },
+    {
+      "original_path": "outputs/figures/heldout_feature_contributions.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/heldout_feature_contributions.png",
+      "sha256": "8a5d5d3f0bc7aa30a01b3e0092d02b99f0d65c90ed58af1e2713f47e0e30de32",
+      "bytes": 325665
+    },
+    {
+      "original_path": "outputs/figures/nearest_access_divergence.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/nearest_access_divergence.png",
+      "sha256": "3ebb79d2985829716bc086f193114341cd2706cc8bbc19dc2d19b3e923af3622",
+      "bytes": 209966
+    },
+    {
+      "original_path": "outputs/figures/nearest_access_relationship.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/nearest_access_relationship.png",
+      "sha256": "678126c13bd6ca45bc566c5a9cc2705a87436263e18ec1ad8fa48f17a51e39cb",
+      "bytes": 610123
+    },
+    {
+      "original_path": "outputs/figures/neighbourhood_performance_variation.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/neighbourhood_performance_variation.png",
+      "sha256": "f2508f0366a53ef4a0a7fc50ba600630ec16a3cc56ea11394131621b409f3cdc",
+      "bytes": 480116
+    },
+    {
+      "original_path": "outputs/figures/opportunity_comparison.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/opportunity_comparison.png",
+      "sha256": "93cfab52d24fcb27cfb7f008f6b3959d8f84f007d3c8c23b2dcf6dc9900baa45",
+      "bytes": 278338
+    },
+    {
+      "original_path": "outputs/figures/paired_accessibility_contrasts.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/paired_accessibility_contrasts.png",
+      "sha256": "43ccf8e4de1dd7453d612d4d400d0a9e54771d93024e83fbbd23e3352065c093",
+      "bytes": 349319
+    },
+    {
+      "original_path": "outputs/figures/primary_model_performance.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/primary_model_performance.png",
+      "sha256": "466c35d3aca74cf7d7217705a1bd3f8fe50143013140ba8d02c735039c92cd16",
+      "bytes": 289624
+    },
+    {
+      "original_path": "outputs/figures/residual_spatial_diagnostics.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/residual_spatial_diagnostics.png",
+      "sha256": "f56f1f63c8859129bd231ec40be8cd686af9d0d33fce5c400d20b5adef085cf1",
+      "bytes": 249647
+    },
+    {
+      "original_path": "outputs/figures/robustness_contrasts.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/robustness_contrasts.png",
+      "sha256": "f21802596828c7ed2dbdc5b4a5ebf4f7b9de3846a4cd15aa09493966c3e74df4",
+      "bytes": 656218
+    },
+    {
+      "original_path": "outputs/figures/study_areas.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/study_areas.png",
+      "sha256": "c606e8d664371998f8fcd49f6a1a50ad2e962acb16031275ffe7af10d760f6c9",
+      "bytes": 808019
+    },
+    {
+      "original_path": "outputs/figures/transfer_accessibility_gains.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/transfer_accessibility_gains.png",
+      "sha256": "c7d96f2521065f30ce52b959264fb9fa94cb8377249bf27769aab210a1d73fe4",
+      "bytes": 451725
+    },
+    {
+      "original_path": "outputs/figures/transfer_network_comparison.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/transfer_network_comparison.png",
+      "sha256": "c56b606e457271c74c46bacdf30695e260d2630c9b82d0d16ff10ea6f7dc37a6",
+      "bytes": 365082
+    },
+    {
+      "original_path": "outputs/figures/transfer_performance.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/transfer_performance.png",
+      "sha256": "f6ebc9c9b8b7900ea8083030e484ed2e1bfb27f9ca17cc87a28abf3ba49eafb4",
+      "bytes": 467641
+    },
+    {
+      "original_path": "outputs/figures/transfer_prediction_diagnostics.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/transfer_prediction_diagnostics.png",
+      "sha256": "cf3156676fb81b51654d88669ee5916d21625f6c36466ff39a80735467ab15fd",
+      "bytes": 461570
+    },
+    {
+      "original_path": "outputs/figures/validation_strategy_comparison.png",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/figures/validation_strategy_comparison.png",
+      "sha256": "74c862ec5782df55afe317553b5ed45f7374a8b9d7d7fc699a387792254d0d46",
+      "bytes": 727129
+    },
+    {
+      "original_path": "outputs/metrics/accessibility_spatial_cells.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/accessibility_spatial_cells.csv",
+      "sha256": "aa551c6d27415051661f9b2e65825c430a144f1d3ce70ef7babc3d1f56010386",
+      "bytes": 41038
+    },
+    {
+      "original_path": "outputs/metrics/accessibility_spatial_cells.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/accessibility_spatial_cells.md",
+      "sha256": "a30ba79fdab20d5599a5c05af8146be8bcc4436e6cd6a030871d4667b1d7f78a",
+      "bytes": 47556
+    },
+    {
+      "original_path": "outputs/metrics/directional_transfer_asymmetry.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/directional_transfer_asymmetry.csv",
+      "sha256": "8f570a1d35005b1b9190f0e5ddbc37d1fbf38604b49fde9e192a705e9f24d077",
+      "bytes": 2431
+    },
+    {
+      "original_path": "outputs/metrics/directional_transfer_asymmetry.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/directional_transfer_asymmetry.md",
+      "sha256": "f0fa7900a63764f6e3bf5836bf12e45f648b56a2eb4d70f99b9deb3ac67b0214",
+      "bytes": 2196
+    },
+    {
+      "original_path": "outputs/metrics/heldout_feature_contributions.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/heldout_feature_contributions.csv",
+      "sha256": "478eec62d8572d80f05b86a99061a9eea88fbee0ec49f32db3602e445ad3d7f2",
+      "bytes": 35478
+    },
+    {
+      "original_path": "outputs/metrics/heldout_feature_contributions.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/heldout_feature_contributions.md",
+      "sha256": "94c461b57e3421d99b212426e56c48ee790782dc4ba2c7ef11470588fa3dfdef",
+      "bytes": 34103
+    },
+    {
+      "original_path": "outputs/metrics/nearest_access_divergence.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/nearest_access_divergence.csv",
+      "sha256": "7455d90657f5ca616ef3b72d1ea97c054f3a1b25d549299e6c9c672bb089b89b",
+      "bytes": 1839
+    },
+    {
+      "original_path": "outputs/metrics/nearest_access_divergence.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/nearest_access_divergence.md",
+      "sha256": "c21e2506b33373eb961beebd3e611935d27430f6145195f81538562f50caa596",
+      "bytes": 1606
+    },
+    {
+      "original_path": "outputs/metrics/nearest_access_relationship_bins.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/nearest_access_relationship_bins.csv",
+      "sha256": "7f51a71857fcf6efe50b95a0bdb7461ef15b5515f739b3678eadc900e83bd259",
+      "bytes": 28476
+    },
+    {
+      "original_path": "outputs/metrics/nearest_access_relationship_bins.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/nearest_access_relationship_bins.md",
+      "sha256": "a6a127f0369f053d94542a4874c6a11d118ca300d4fe0149957c8f73adf9aefa",
+      "bytes": 22478
+    },
+    {
+      "original_path": "outputs/metrics/neighbourhood_performance.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/neighbourhood_performance.csv",
+      "sha256": "45a736767149253db89a195d3ab5a9c73a9fb7bff33a9afd1432e3ffd61eb8ca",
+      "bytes": 46275
+    },
+    {
+      "original_path": "outputs/metrics/neighbourhood_performance.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/neighbourhood_performance.md",
+      "sha256": "725e38f93062fdb6a0ab11816a3a8b3db8b17831729d4f0755c59049d777a4ed",
+      "bytes": 35629
+    },
+    {
+      "original_path": "outputs/metrics/neighbourhood_support.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/neighbourhood_support.csv",
+      "sha256": "9e52ea3063f648c2cf7b1a65769af13e433060ceb677618423c5a3e9da7cf435",
+      "bytes": 1609
+    },
+    {
+      "original_path": "outputs/metrics/neighbourhood_support.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/neighbourhood_support.md",
+      "sha256": "bd6a09ec6bcadaf61372f867934f7e60056743c844915ff7eeb6cc86778b3c72",
+      "bytes": 2228
+    },
+    {
+      "original_path": "outputs/metrics/residual_spatial_diagnostics.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/residual_spatial_diagnostics.csv",
+      "sha256": "45611a0d2860e298c50ac644510e8b961e8d92f52e22b510051e3e9c39f805d7",
+      "bytes": 2329
+    },
+    {
+      "original_path": "outputs/metrics/residual_spatial_diagnostics.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/residual_spatial_diagnostics.md",
+      "sha256": "3f123f61a86d580f22ea994a01be1673f04bef36732ecc49acaedea647269126",
+      "bytes": 2407
+    },
+    {
+      "original_path": "outputs/metrics/robustness_contrasts.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/robustness_contrasts.csv",
+      "sha256": "ed86cce24b22ec30d52cf1681442da15421e2b76f41cd80e94e93ff034fefc7e",
+      "bytes": 85709
+    },
+    {
+      "original_path": "outputs/metrics/robustness_contrasts.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/robustness_contrasts.md",
+      "sha256": "9eddc4a3656802d3403c2c131c9e5590d1b8c8a10fd26f71a94fcf7ae9404ece",
+      "bytes": 74868
+    },
+    {
+      "original_path": "outputs/metrics/transfer_prediction_bins.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/transfer_prediction_bins.csv",
+      "sha256": "c598b56c71e594be6c081b2afa0d256666695c40993dc8df2fddd697ffca68a6",
+      "bytes": 57178
+    },
+    {
+      "original_path": "outputs/metrics/transfer_prediction_bins.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/metrics/transfer_prediction_bins.md",
+      "sha256": "0961ba0efc796e3271553b66babacdfe1dc4274efe5e9b8431f7574187f45f92",
+      "bytes": 42541
+    },
+    {
+      "original_path": "outputs/tables/accessibility_descriptive_statistics.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/accessibility_descriptive_statistics.csv",
+      "sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+      "bytes": 3809
+    },
+    {
+      "original_path": "outputs/tables/accessibility_descriptive_statistics.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/accessibility_descriptive_statistics.md",
+      "sha256": "1adde94cae3a6f9f4d22937bfac113a1fbfa17c4be6bab9fc824e91ee17df7e8",
+      "bytes": 3981
+    },
+    {
+      "original_path": "outputs/tables/association_results.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/association_results.csv",
+      "sha256": "d2a9adb886c50103f48292218454040ad48296ccc32d853e7c5e1c427bb35b09",
+      "bytes": 70042
+    },
+    {
+      "original_path": "outputs/tables/association_results.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/association_results.md",
+      "sha256": "03829d04ed82252311af4b69f47ae56d8ea9d399457342f93b826dd520aae059",
+      "bytes": 1627
+    },
+    {
+      "original_path": "outputs/tables/city_sample_summary.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/city_sample_summary.csv",
+      "sha256": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
+      "bytes": 712
+    },
+    {
+      "original_path": "outputs/tables/city_sample_summary.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/city_sample_summary.md",
+      "sha256": "31bc975be45718b167ff9cb0cb01fe4e1f0e22193ce8d6b0a12f280b723233b8",
+      "bytes": 679
+    },
+    {
+      "original_path": "outputs/tables/claims_and_limitations.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/claims_and_limitations.csv",
+      "sha256": "ce51bb1c4d3696eb5c28780fb115cc7396414d244762d045bd3d6af09f464677",
+      "bytes": 670
+    },
+    {
+      "original_path": "outputs/tables/claims_and_limitations.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/claims_and_limitations.md",
+      "sha256": "3e3b72fa219863e1c34dba1c00093102e8f6976bfe8dd36d5c6661227974f2ad",
+      "bytes": 873
+    },
+    {
+      "original_path": "outputs/tables/feature_definitions.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/feature_definitions.csv",
+      "sha256": "f21ad180c235a8e7e1e80866daeab9642401b362a6a85e37e4e5a6ce298ad4f5",
+      "bytes": 5643
+    },
+    {
+      "original_path": "outputs/tables/feature_definitions.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/feature_definitions.md",
+      "sha256": "44f38f75c2514db68eab66246101d3ed55149b365d1cf7f92c88e25e1db53d4b",
+      "bytes": 6305
+    },
+    {
+      "original_path": "outputs/tables/paired_model_contrasts.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/paired_model_contrasts.csv",
+      "sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+      "bytes": 6917
+    },
+    {
+      "original_path": "outputs/tables/paired_model_contrasts.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/paired_model_contrasts.md",
+      "sha256": "8b724d42013b0e702f2ea0050c578ac4978bda678939fc68fbaccdc96701fd77",
+      "bytes": 2443
+    },
+    {
+      "original_path": "outputs/tables/primary_predictive_performance.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/primary_predictive_performance.csv",
+      "sha256": "668068de61b0feba1134d0e5acfc142f837ea5f4f9f481139672e6b0e2144605",
+      "bytes": 3250
+    },
+    {
+      "original_path": "outputs/tables/primary_predictive_performance.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/primary_predictive_performance.md",
+      "sha256": "96a726e571612542bc6ee920f587e06f1de57c9fd8c0d6d3a4546902a362dcb1",
+      "bytes": 589
+    },
+    {
+      "original_path": "outputs/tables/robustness_registry.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/robustness_registry.csv",
+      "sha256": "5ab268dd9a3d151e64fecf4e82ce86efdb68d713604247513af928346aa75162",
+      "bytes": 16708
+    },
+    {
+      "original_path": "outputs/tables/robustness_registry.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/robustness_registry.md",
+      "sha256": "b17b036198f75721afb458e005cfbdf8517ef43b5c801edb61d6ccc3733581c5",
+      "bytes": 17880
+    },
+    {
+      "original_path": "outputs/tables/sample_flow.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/sample_flow.csv",
+      "sha256": "441a58c52de158d747d5a5df9189393a34ab89f867a18017cdc4875f98d8a82c",
+      "bytes": 939
+    },
+    {
+      "original_path": "outputs/tables/sample_flow.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/sample_flow.md",
+      "sha256": "127daa7149c750a189c52aa36780716707a362c1d08e0a520819ce60bea67b2e",
+      "bytes": 1280
+    },
+    {
+      "original_path": "outputs/tables/transfer_contrasts.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/transfer_contrasts.csv",
+      "sha256": "72edab7fd9fa412bfb927de23e6a9e39388ceeb15b1669f2a66286c6e367d12d",
+      "bytes": 13363
+    },
+    {
+      "original_path": "outputs/tables/transfer_contrasts.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/transfer_contrasts.md",
+      "sha256": "d7b32aaccb331fca0e3941de66980d13d3b3befc946a56206cabf2de9b528042",
+      "bytes": 4543
+    },
+    {
+      "original_path": "outputs/tables/transfer_performance.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/transfer_performance.csv",
+      "sha256": "810c468e8370f3963634c9dc88dbe14d2e2c694d5ca26298447db7c94945018d",
+      "bytes": 6191
+    },
+    {
+      "original_path": "outputs/tables/transfer_performance.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/transfer_performance.md",
+      "sha256": "28d7ed6bdef63aab807d2ecd219de6135d8ca155449e141c3c7d2bb666920999",
+      "bytes": 1098
+    },
+    {
+      "original_path": "outputs/tables/validation_comparison.csv",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/validation_comparison.csv",
+      "sha256": "040a1e3edb3ff1252a0059d028fbff084104a02c3a75435176d42c6b8b264435",
+      "bytes": 26247
+    },
+    {
+      "original_path": "outputs/tables/validation_comparison.md",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/tables/validation_comparison.md",
+      "sha256": "65641e8d3d2bdfae9fe19c3fbc093ffb95d6236798b7ab81d62a74ed3cb40848",
+      "bytes": 1859
+    },
+    {
+      "original_path": "outputs/thesis_results.zip",
+      "archived_path": "archive/before_neighbourhood_maps/outputs/thesis_results.zip",
+      "sha256": "c8ba78d5528e8a3da7ed46aa4bd1eb878fd2f85964db7d6006098eed8fc2df04",
+      "bytes": 7601373
+    },
+    {
+      "original_path": "reports/airbnb_sample_airbnb_cleaning.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/airbnb_sample_airbnb_cleaning.md",
+      "sha256": "1601241c36692398b44fdbe3cbae2fa5090a00ad1924cfba3ad25a2dba10ad17",
+      "bytes": 1064
+    },
+    {
+      "original_path": "reports/deliverable_gap_audit.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/deliverable_gap_audit.json",
+      "sha256": "116a20b17f5b527b7604eece8d6c4ada8e420c2addea7ca588eae2f95a6b100c",
+      "bytes": 68508
+    },
+    {
+      "original_path": "reports/deliverable_gap_audit.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/deliverable_gap_audit.md",
+      "sha256": "334f448955ab7eb72f35a2add2ecc68ce7d5a5d12e817ac6e2c76ddd30154f99",
+      "bytes": 8914
+    },
+    {
+      "original_path": "reports/findings_by_research_question.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/findings_by_research_question.md",
+      "sha256": "0f649aeccdadfb8562028d307b178851b954e874908b4c24385a2810d4c30709",
+      "bytes": 11237
+    },
+    {
+      "original_path": "reports/frederiksberg_income_evidence_request.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/frederiksberg_income_evidence_request.md",
+      "sha256": "3d2ebadc0558a8f43c8728efbe26aafee16117182df377bd94f3e7d8e924e7a2",
+      "bytes": 1760
+    },
+    {
+      "original_path": "reports/frozen_reporting_sources.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/frozen_reporting_sources.json",
+      "sha256": "6116de6d93594d3ad028825785973c630aeee8825e6d3c7eb59cec09b16b5f72",
+      "bytes": 262761
+    },
+    {
+      "original_path": "reports/frozen_science_verification.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/frozen_science_verification.json",
+      "sha256": "42396cb83ecb140fbd97f30b9e7ab5a6c64fc8a05579a34e6ffdecc8193e8fab",
+      "bytes": 1567
+    },
+    {
+      "original_path": "reports/income_harmonisation_previous_sources.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/income_harmonisation_previous_sources.md",
+      "sha256": "c476114a3bde01272f59215f67ce591e5b13d12cd4d3cb0c2ee69edd8036a2f8",
+      "bytes": 2486
+    },
+    {
+      "original_path": "reports/income_harmonisation_status.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/income_harmonisation_status.md",
+      "sha256": "fa4ce2b4f4e561f87e0d9ca37488cedc369e720165fb3b0ba2e1c7443efc0d7f",
+      "bytes": 4274
+    },
+    {
+      "original_path": "reports/numeric_claims_registry.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/numeric_claims_registry.json",
+      "sha256": "775daa421cc1ac26b1b1c8a945cf59e7b9400a81fbf7a814dc88aa0c3a57b4b9",
+      "bytes": 13897
+    },
+    {
+      "original_path": "reports/official_transport_source_inventory.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/official_transport_source_inventory.md",
+      "sha256": "4a4d8de47610ce1f5932fe538eedeb3de1b9802fc23e89fee2dd59cfcd18af6a",
+      "bytes": 24573
+    },
+    {
+      "original_path": "reports/research_results.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/research_results.md",
+      "sha256": "2318a4c770ee42b57b723fdb6135b0addfc7c987261feadc330f0fbc75205b5e",
+      "bytes": 14169
+    },
+    {
+      "original_path": "reports/research_results_v3.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/research_results_v3.md",
+      "sha256": "d6c99ad313869cecb12fd4f761d3cb831bfff95e65ba29178adfd8fac56f0f66",
+      "bytes": 20559
+    },
+    {
+      "original_path": "reports/thesis_artifact_manifest.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_artifact_manifest.json",
+      "sha256": "c24073d0f5f49120e3f31f1ee7d603a661e5f2b6d8aae87d8e3c7eaf818161d0",
+      "bytes": 242633
+    },
+    {
+      "original_path": "reports/thesis_completion_checks.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_completion_checks.json",
+      "sha256": "34ea1d42cee8ab786c25344cfaab406459c10490465870420bc228a9e4ee33a2",
+      "bytes": 2649
+    },
+    {
+      "original_path": "reports/thesis_delivery_audit.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_delivery_audit.json",
+      "sha256": "96757ae85e5013539d2fcf78842e1049933d40d6885c95348157161f66260afe",
+      "bytes": 31715
+    },
+    {
+      "original_path": "reports/thesis_delivery_audit.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_delivery_audit.md",
+      "sha256": "830ac369f20bf531ddc20b237374b30957f8a8dd57de6dcb4e8253505b283f20",
+      "bytes": 1168
+    },
+    {
+      "original_path": "reports/thesis_figure_recommendations.md",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_figure_recommendations.md",
+      "sha256": "c80a726cc7a5fbb16871349cbb85768dcb8e0210b9830f9a9487d944e2ec881a",
+      "bytes": 9937
+    },
+    {
+      "original_path": "reports/thesis_publication_validation.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_publication_validation.json",
+      "sha256": "52908fdabcad426fa18d3f58ee63db4fc4fadba04ada40f37d04d933d9068375",
+      "bytes": 700
+    },
+    {
+      "original_path": "reports/thesis_recommendations.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_recommendations.json",
+      "sha256": "66102d933471855b0b1a3cb540fb267572fbe7be7eb8d86bec1d242a46e5e094",
+      "bytes": 15639
+    },
+    {
+      "original_path": "reports/thesis_release_manifest.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_release_manifest.json",
+      "sha256": "1e07a4bd8c9f1c3c927df61d65adfc4ca10e9f3635a36a7a6341a39fde2c5ab8",
+      "bytes": 260715
+    },
+    {
+      "original_path": "reports/thesis_style_review.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_style_review.json",
+      "sha256": "8f5eaccd51e31fb571399b9b7da6bf1a2628af929105916d241ea653eafd32ae",
+      "bytes": 2692
+    },
+    {
+      "original_path": "reports/thesis_synthesis_manifest.json",
+      "archived_path": "archive/before_neighbourhood_maps/reports/thesis_synthesis_manifest.json",
+      "sha256": "76ae45f0c46633dfcbc7cf6c06224aea03e251db4e09a553cf637a30b3e4c6a3",
+      "bytes": 5484
+    },
+    {
+      "original_path": "src/reporting/thesis_audit.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_audit.py",
+      "sha256": "f12b98e8447bfc01dcdcc39a0334d82c0fc4dd85c7da73019bc9880a8c97dfcd",
+      "bytes": 12643
+    },
+    {
+      "original_path": "src/reporting/thesis_outputs.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_outputs.py",
+      "sha256": "6bc37ac489e13c1c9aeee5ae272db21c1a239fd982568e8682a97425dadcaa28",
+      "bytes": 44947
+    },
+    {
+      "original_path": "src/reporting/thesis_refresh.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_refresh.py",
+      "sha256": "30f7bc7613111cb5641d86eb8f7498728a16f659319e24d0173c984e3365d30b",
+      "bytes": 4875
+    },
+    {
+      "original_path": "src/reporting/thesis_release.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_release.py",
+      "sha256": "c9b26c82cee8dee7d57876ec9cdfd0c602af66443f5089cfaf6d26f00c5e1e36",
+      "bytes": 14645
+    },
+    {
+      "original_path": "src/reporting/thesis_sources.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_sources.py",
+      "sha256": "a2ccf3b68922e310b1d0995ec33afbc050ab5128c446d7319fe18acae58fa431",
+      "bytes": 10010
+    },
+    {
+      "original_path": "src/reporting/thesis_style.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_style.py",
+      "sha256": "b7d570364677c314fcfd8e592073d44e7de8daa67f0ad3c33901fa53c6e309d2",
+      "bytes": 10234
+    },
+    {
+      "original_path": "src/reporting/thesis_synthesis.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_synthesis.py",
+      "sha256": "fbebd4aac28ff378e68ae57f58f8d682c2aa6aac4acccc6ec8c36ac010e1c05d",
+      "bytes": 28197
+    },
+    {
+      "original_path": "src/reporting/thesis_tables.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_tables.py",
+      "sha256": "5b5d55af44b1ee6eb3c9d7b0d32beb214d29fa5705f97b980d8a0c71b1b47261",
+      "bytes": 14894
+    },
+    {
+      "original_path": "src/reporting/thesis_validate.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/reporting/thesis_validate.py",
+      "sha256": "426f2c77d9782d4c977c66a2c945b95e33cc336ecec922deb513a8047f9e553e",
+      "bytes": 12369
+    },
+    {
+      "original_path": "src/study/archive.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/study/archive.py",
+      "sha256": "2a2042d820d8834ae8ea02d26d3a106323400e0fb302f909b437ace54766e030",
+      "bytes": 1670
+    },
+    {
+      "original_path": "tests/test_thesis_reporting.py",
+      "archived_path": "archive/before_neighbourhood_maps/tests/test_thesis_reporting.py",
+      "sha256": "177d4d188617c25edb5c4625a1c82cb641312b2d93c7eff4cb19e23d1098d515",
+      "bytes": 5353
+    },
+    {
+      "original_path": "docs/analysis/source_registry.md",
+      "archived_path": "archive/before_neighbourhood_maps/docs/analysis/source_registry.md",
+      "sha256": "804c0a3cd54a9ee6442a9fdcc862a9ef1c8fff4cc218c4e509b22d7d810f5068",
+      "bytes": 3721
+    },
+    {
+      "original_path": "src/db/sources.py",
+      "archived_path": "archive/before_neighbourhood_maps/src/db/sources.py",
+      "sha256": "690c6203490045471dba3f59f744cd7d84371648dd75fa7dd9be8923510c6378",
+      "bytes": 10344
+    },
+    {
+      "original_path": "docs/analysis/path_inventory.json",
+      "archived_path": "archive/before_neighbourhood_maps/docs/analysis/path_inventory.json",
+      "sha256": "b2320a9ffcc16f04fb79ac4edf24513fb88c6fae6f2924c401f1286ec3f4a0ca",
+      "bytes": 144761
+    }
+  ],
+  "numeric_exports_immutable": [
+    {
+      "original_path": "outputs/tables/city_sample_summary.csv",
+      "current_path": "outputs/tables/city_sample_summary.csv",
+      "sha256": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f"
+    },
+    {
+      "original_path": "outputs/tables/city_sample_summary.md",
+      "current_path": "outputs/tables/city_sample_summary.md",
+      "sha256": "31bc975be45718b167ff9cb0cb01fe4e1f0e22193ce8d6b0a12f280b723233b8"
+    },
+    {
+      "original_path": "outputs/tables/feature_definitions.csv",
+      "current_path": "outputs/tables/feature_definitions.csv",
+      "sha256": "f21ad180c235a8e7e1e80866daeab9642401b362a6a85e37e4e5a6ce298ad4f5"
+    },
+    {
+      "original_path": "outputs/tables/feature_definitions.md",
+      "current_path": "outputs/tables/feature_definitions.md",
+      "sha256": "44f38f75c2514db68eab66246101d3ed55149b365d1cf7f92c88e25e1db53d4b"
+    },
+    {
+      "original_path": "outputs/tables/accessibility_descriptive_statistics.csv",
+      "current_path": "outputs/tables/accessibility_descriptive_statistics.csv",
+      "sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e"
+    },
+    {
+      "original_path": "outputs/tables/accessibility_descriptive_statistics.md",
+      "current_path": "outputs/tables/accessibility_descriptive_statistics.md",
+      "sha256": "1adde94cae3a6f9f4d22937bfac113a1fbfa17c4be6bab9fc824e91ee17df7e8"
+    },
+    {
+      "original_path": "outputs/tables/primary_predictive_performance.csv",
+      "current_path": "outputs/tables/primary_predictive_performance.csv",
+      "sha256": "668068de61b0feba1134d0e5acfc142f837ea5f4f9f481139672e6b0e2144605"
+    },
+    {
+      "original_path": "outputs/tables/primary_predictive_performance.md",
+      "current_path": "outputs/tables/primary_predictive_performance.md",
+      "sha256": "96a726e571612542bc6ee920f587e06f1de57c9fd8c0d6d3a4546902a362dcb1"
+    },
+    {
+      "original_path": "outputs/tables/paired_model_contrasts.csv",
+      "current_path": "outputs/tables/paired_model_contrasts.csv",
+      "sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599"
+    },
+    {
+      "original_path": "outputs/tables/paired_model_contrasts.md",
+      "current_path": "outputs/tables/paired_model_contrasts.md",
+      "sha256": "8b724d42013b0e702f2ea0050c578ac4978bda678939fc68fbaccdc96701fd77"
+    },
+    {
+      "original_path": "outputs/tables/association_results.csv",
+      "current_path": "outputs/tables/association_results.csv",
+      "sha256": "d2a9adb886c50103f48292218454040ad48296ccc32d853e7c5e1c427bb35b09"
+    },
+    {
+      "original_path": "outputs/tables/association_results.md",
+      "current_path": "outputs/tables/association_results.md",
+      "sha256": "03829d04ed82252311af4b69f47ae56d8ea9d399457342f93b826dd520aae059"
+    },
+    {
+      "original_path": "outputs/tables/validation_comparison.csv",
+      "current_path": "outputs/tables/validation_comparison.csv",
+      "sha256": "040a1e3edb3ff1252a0059d028fbff084104a02c3a75435176d42c6b8b264435"
+    },
+    {
+      "original_path": "outputs/tables/validation_comparison.md",
+      "current_path": "outputs/tables/validation_comparison.md",
+      "sha256": "65641e8d3d2bdfae9fe19c3fbc093ffb95d6236798b7ab81d62a74ed3cb40848"
+    },
+    {
+      "original_path": "outputs/tables/transfer_performance.csv",
+      "current_path": "outputs/tables/transfer_performance.csv",
+      "sha256": "810c468e8370f3963634c9dc88dbe14d2e2c694d5ca26298447db7c94945018d"
+    },
+    {
+      "original_path": "outputs/tables/transfer_performance.md",
+      "current_path": "outputs/tables/transfer_performance.md",
+      "sha256": "28d7ed6bdef63aab807d2ecd219de6135d8ca155449e141c3c7d2bb666920999"
+    },
+    {
+      "original_path": "outputs/tables/transfer_contrasts.csv",
+      "current_path": "outputs/tables/transfer_contrasts.csv",
+      "sha256": "72edab7fd9fa412bfb927de23e6a9e39388ceeb15b1669f2a66286c6e367d12d"
+    },
+    {
+      "original_path": "outputs/tables/transfer_contrasts.md",
+      "current_path": "outputs/tables/transfer_contrasts.md",
+      "sha256": "d7b32aaccb331fca0e3941de66980d13d3b3befc946a56206cabf2de9b528042"
+    },
+    {
+      "original_path": "outputs/tables/robustness_registry.csv",
+      "current_path": "outputs/tables/robustness_registry.csv",
+      "sha256": "5ab268dd9a3d151e64fecf4e82ce86efdb68d713604247513af928346aa75162"
+    },
+    {
+      "original_path": "outputs/tables/robustness_registry.md",
+      "current_path": "outputs/tables/robustness_registry.md",
+      "sha256": "b17b036198f75721afb458e005cfbdf8517ef43b5c801edb61d6ccc3733581c5"
+    },
+    {
+      "original_path": "outputs/tables/claims_and_limitations.csv",
+      "current_path": "outputs/tables/claims_and_limitations.csv",
+      "sha256": "ce51bb1c4d3696eb5c28780fb115cc7396414d244762d045bd3d6af09f464677"
+    },
+    {
+      "original_path": "outputs/tables/claims_and_limitations.md",
+      "current_path": "outputs/tables/claims_and_limitations.md",
+      "sha256": "3e3b72fa219863e1c34dba1c00093102e8f6976bfe8dd36d5c6661227974f2ad"
+    },
+    {
+      "original_path": "outputs/tables/sample_flow.csv",
+      "current_path": "outputs/tables/sample_flow.csv",
+      "sha256": "441a58c52de158d747d5a5df9189393a34ab89f867a18017cdc4875f98d8a82c"
+    },
+    {
+      "original_path": "outputs/tables/sample_flow.md",
+      "current_path": "outputs/tables/sample_flow.md",
+      "sha256": "127daa7149c750a189c52aa36780716707a362c1d08e0a520819ce60bea67b2e"
+    },
+    {
+      "original_path": "outputs/metrics/nearest_access_divergence.csv",
+      "current_path": "outputs/metrics/nearest_access_divergence.csv",
+      "sha256": "7455d90657f5ca616ef3b72d1ea97c054f3a1b25d549299e6c9c672bb089b89b"
+    },
+    {
+      "original_path": "outputs/metrics/nearest_access_divergence.md",
+      "current_path": "outputs/metrics/nearest_access_divergence.md",
+      "sha256": "c21e2506b33373eb961beebd3e611935d27430f6145195f81538562f50caa596"
+    },
+    {
+      "original_path": "outputs/metrics/neighbourhood_performance.csv",
+      "current_path": "outputs/metrics/neighbourhood_performance.csv",
+      "sha256": "45a736767149253db89a195d3ab5a9c73a9fb7bff33a9afd1432e3ffd61eb8ca"
+    },
+    {
+      "original_path": "outputs/metrics/neighbourhood_performance.md",
+      "current_path": "outputs/metrics/neighbourhood_performance.md",
+      "sha256": "725e38f93062fdb6a0ab11816a3a8b3db8b17831729d4f0755c59049d777a4ed"
+    },
+    {
+      "original_path": "outputs/metrics/neighbourhood_support.csv",
+      "current_path": "outputs/metrics/neighbourhood_support.csv",
+      "sha256": "9e52ea3063f648c2cf7b1a65769af13e433060ceb677618423c5a3e9da7cf435"
+    },
+    {
+      "original_path": "outputs/metrics/neighbourhood_support.md",
+      "current_path": "outputs/metrics/neighbourhood_support.md",
+      "sha256": "bd6a09ec6bcadaf61372f867934f7e60056743c844915ff7eeb6cc86778b3c72"
+    },
+    {
+      "original_path": "outputs/metrics/robustness_contrasts.csv",
+      "current_path": "outputs/metrics/robustness_contrasts.csv",
+      "sha256": "ed86cce24b22ec30d52cf1681442da15421e2b76f41cd80e94e93ff034fefc7e"
+    },
+    {
+      "original_path": "outputs/metrics/robustness_contrasts.md",
+      "current_path": "outputs/metrics/robustness_contrasts.md",
+      "sha256": "9eddc4a3656802d3403c2c131c9e5590d1b8c8a10fd26f71a94fcf7ae9404ece"
+    },
+    {
+      "original_path": "outputs/metrics/heldout_feature_contributions.csv",
+      "current_path": "outputs/metrics/heldout_feature_contributions.csv",
+      "sha256": "478eec62d8572d80f05b86a99061a9eea88fbee0ec49f32db3602e445ad3d7f2"
+    },
+    {
+      "original_path": "outputs/metrics/heldout_feature_contributions.md",
+      "current_path": "outputs/metrics/heldout_feature_contributions.md",
+      "sha256": "94c461b57e3421d99b212426e56c48ee790782dc4ba2c7ef11470588fa3dfdef"
+    },
+    {
+      "original_path": "outputs/metrics/directional_transfer_asymmetry.csv",
+      "current_path": "outputs/metrics/directional_transfer_asymmetry.csv",
+      "sha256": "8f570a1d35005b1b9190f0e5ddbc37d1fbf38604b49fde9e192a705e9f24d077"
+    },
+    {
+      "original_path": "outputs/metrics/directional_transfer_asymmetry.md",
+      "current_path": "outputs/metrics/directional_transfer_asymmetry.md",
+      "sha256": "f0fa7900a63764f6e3bf5836bf12e45f648b56a2eb4d70f99b9deb3ac67b0214"
+    },
+    {
+      "original_path": "outputs/metrics/residual_spatial_diagnostics.csv",
+      "current_path": "outputs/metrics/residual_spatial_diagnostics.csv",
+      "sha256": "45611a0d2860e298c50ac644510e8b961e8d92f52e22b510051e3e9c39f805d7"
+    },
+    {
+      "original_path": "outputs/metrics/residual_spatial_diagnostics.md",
+      "current_path": "outputs/metrics/residual_spatial_diagnostics.md",
+      "sha256": "3f123f61a86d580f22ea994a01be1673f04bef36732ecc49acaedea647269126"
+    },
+    {
+      "original_path": "outputs/metrics/accessibility_spatial_cells.csv",
+      "current_path": "outputs/metrics/accessibility_spatial_cells.csv",
+      "sha256": "aa551c6d27415051661f9b2e65825c430a144f1d3ce70ef7babc3d1f56010386"
+    },
+    {
+      "original_path": "outputs/metrics/accessibility_spatial_cells.md",
+      "current_path": "outputs/metrics/accessibility_spatial_cells.md",
+      "sha256": "a30ba79fdab20d5599a5c05af8146be8bcc4436e6cd6a030871d4667b1d7f78a"
+    },
+    {
+      "original_path": "outputs/metrics/nearest_access_relationship_bins.csv",
+      "current_path": "outputs/metrics/nearest_access_relationship_bins.csv",
+      "sha256": "7f51a71857fcf6efe50b95a0bdb7461ef15b5515f739b3678eadc900e83bd259"
+    },
+    {
+      "original_path": "outputs/metrics/nearest_access_relationship_bins.md",
+      "current_path": "outputs/metrics/nearest_access_relationship_bins.md",
+      "sha256": "a6a127f0369f053d94542a4874c6a11d118ca300d4fe0149957c8f73adf9aefa"
+    },
+    {
+      "original_path": "outputs/metrics/transfer_prediction_bins.csv",
+      "current_path": "outputs/metrics/transfer_prediction_bins.csv",
+      "sha256": "c598b56c71e594be6c081b2afa0d256666695c40993dc8df2fddd697ffca68a6"
+    },
+    {
+      "original_path": "outputs/metrics/transfer_prediction_bins.md",
+      "current_path": "outputs/metrics/transfer_prediction_bins.md",
+      "sha256": "0961ba0efc796e3271553b66babacdfe1dc4274efe5e9b8431f7574187f45f92"
+    }
+  ],
+  "unchanged_other_figures": [
+    {
+      "original_path": "outputs/figures/nearest_access_relationship.png",
+      "sha256": "678126c13bd6ca45bc566c5a9cc2705a87436263e18ec1ad8fa48f17a51e39cb"
+    },
+    {
+      "original_path": "outputs/figures/nearest_access_divergence.png",
+      "sha256": "3ebb79d2985829716bc086f193114341cd2706cc8bbc19dc2d19b3e923af3622"
+    },
+    {
+      "original_path": "outputs/figures/opportunity_comparison.png",
+      "sha256": "93cfab52d24fcb27cfb7f008f6b3959d8f84f007d3c8c23b2dcf6dc9900baa45"
+    },
+    {
+      "original_path": "outputs/figures/primary_model_performance.png",
+      "sha256": "466c35d3aca74cf7d7217705a1bd3f8fe50143013140ba8d02c735039c92cd16"
+    },
+    {
+      "original_path": "outputs/figures/paired_accessibility_contrasts.png",
+      "sha256": "43ccf8e4de1dd7453d612d4d400d0a9e54771d93024e83fbbd23e3352065c093"
+    },
+    {
+      "original_path": "outputs/figures/association_accessibility.png",
+      "sha256": "017162dcfda781622b2ef19bb9c40b720340c344588be2742933005b4ee4eac8"
+    },
+    {
+      "original_path": "outputs/figures/heldout_feature_contributions.png",
+      "sha256": "8a5d5d3f0bc7aa30a01b3e0092d02b99f0d65c90ed58af1e2713f47e0e30de32"
+    },
+    {
+      "original_path": "outputs/figures/validation_strategy_comparison.png",
+      "sha256": "74c862ec5782df55afe317553b5ed45f7374a8b9d7d7fc699a387792254d0d46"
+    },
+    {
+      "original_path": "outputs/figures/neighbourhood_performance_variation.png",
+      "sha256": "f2508f0366a53ef4a0a7fc50ba600630ec16a3cc56ea11394131621b409f3cdc"
+    },
+    {
+      "original_path": "outputs/figures/robustness_contrasts.png",
+      "sha256": "f21802596828c7ed2dbdc5b4a5ebf4f7b9de3846a4cd15aa09493966c3e74df4"
+    },
+    {
+      "original_path": "outputs/figures/transfer_performance.png",
+      "sha256": "f6ebc9c9b8b7900ea8083030e484ed2e1bfb27f9ca17cc87a28abf3ba49eafb4"
+    },
+    {
+      "original_path": "outputs/figures/transfer_accessibility_gains.png",
+      "sha256": "c7d96f2521065f30ce52b959264fb9fa94cb8377249bf27769aab210a1d73fe4"
+    },
+    {
+      "original_path": "outputs/figures/transfer_network_comparison.png",
+      "sha256": "c56b606e457271c74c46bacdf30695e260d2630c9b82d0d16ff10ea6f7dc37a6"
+    },
+    {
+      "original_path": "outputs/figures/transfer_prediction_diagnostics.png",
+      "sha256": "cf3156676fb81b51654d88669ee5916d21625f6c36466ff39a80735467ab15fd"
+    },
+    {
+      "original_path": "outputs/figures/directional_transfer_asymmetry.png",
+      "sha256": "c3a4f73bdaecee756638488caaa55dbdae76f86235974cc361ec100479ddbf5a"
+    },
+    {
+      "original_path": "outputs/figures/residual_spatial_diagnostics.png",
+      "sha256": "f56f1f63c8859129bd231ec40be8cd686af9d0d33fce5c400d20b5adef085cf1"
+    }
+  ],
+  "models_refitted": false,
+  "scientific_choice_changes": false
+}

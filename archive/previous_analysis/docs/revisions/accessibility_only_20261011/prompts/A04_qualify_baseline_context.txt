@@ -1,0 +1,21 @@
+# A04 — Qualify population, income and centrality
+
+Read applicable AGENTS.md, the active v4 implementation contract, step log and the revised proposal/plan under docs/v4/revisions/accessibility_only_20261011/. Inspect actual paths and commands; do not invent them. Work only on the existing v4 branch. Implement only this prompt, then stop.
+
+Acquire/validate only the inherited non-price baseline context for the three cities: population density, qualified income and central civic-anchor distance. Housing and property portals remain out of scope.
+
+Preserve Copenhagen's accepted v3 KKIND5/nominal IFOR35 2024 equivalised-disposable-income calculation and its documented caveats. Do not reopen that settled construction merely because H was abandoned. Recover its exact source/selection hashes and formula. Retain v3 density/anchor definitions as the starting point.
+
+For Oslo and Stockholm, prefer official public statistics with explicit reference year, population/household unit, equivalence treatment, native currency, statistic, geography and licence. Use confirmed selectors and boundaries. Do not describe gross earnings, household median and equivalised mean as the same construct. Keep metadata-checked, acquired, joined and accepted states distinct.
+
+Construct log density from documented population and gross matching polygon area. Record water inclusion and source timing; do not substitute listing density or redistribute municipal totals without a justified method. Qualify public anchor coordinates and the appropriate metric CRS per city.
+
+Baseline income policy: retain qualified income in primary X with a matched no-income sensitivity. If a defensible three-city concept cannot be qualified, write a concise pre-fit decision recommending the common no-income comparison and separately labelled local-income models. Do not activate that change or vary the primary concept by city without an explicit researcher decision. Safe context/feature work may continue; empirical fitting must wait for a frozen income mode.
+
+Test many-to-one assignment, native IDs, units, years, missingness, within-city variation, no row multiplication, gross-area calculation and predictor provenance. Do not globally impute missing predictors. Carry source qualifications into the active dictionary.
+
+Report exact resolved and outstanding context requirements. No walking routing, sample freeze or model fits in this step.
+
+Completion protocol: run relevant tests and source/provenance checks; inspect the diff; update the step log; stage only intended safe files; commit with the message below; push HEAD explicitly to the recorded remote's refs/heads/v4; verify remote SHA equals local HEAD. Never force-push, modify main/v3, auto-stash, rewrite published history, upload private/raw data or merge a pull request. Stop on unrelated edits, ambiguous/divergent Git state or unverified dependencies. A blocked scientific task can have a safe documentation/code checkpoint, but report BLOCKED/PARTIAL; a failed push is LOCAL_ONLY and pauses the sequence. Report actual tests, files, run status, blockers, commit SHA and push verification. Do not put a commit's own SHA inside itself.
+
+Commit: feat(v4): harmonize baseline population income and centrality

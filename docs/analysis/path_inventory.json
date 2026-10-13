@@ -1,0 +1,2160 @@
+{
+  "starting_head": "55571d42601024d75e941f207c53a57552edbf9f",
+  "recorded_main_base": "c1e919bca9dfbe89de9e67135fb432fdb0f020e6",
+  "remote": "origin",
+  "files": [
+    {
+      "old_path": ".env.example",
+      "functional_destination": ".env.example",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "cfc55ea3bf7a728e80ac28db09ba1186100bf072d22e48a6d6b0e669715ed34d",
+      "sha256_after": "cfc55ea3bf7a728e80ac28db09ba1186100bf072d22e48a6d6b0e669715ed34d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": ".env.v4.example",
+      "functional_destination": ".env.v4.example",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c1c8e33c66e04273d0d52cfb6c8483b969126ceb300e079b346ff9e7f39ad7bb",
+      "sha256_after": "c1c8e33c66e04273d0d52cfb6c8483b969126ceb300e079b346ff9e7f39ad7bb",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": ".gitignore",
+      "functional_destination": ".gitignore",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5fecc5be7e775a67a0612a4590b6e55986dcc845ebf8309297b8041ba061a3ed",
+      "sha256_after": "2ef62027c8ab0d6f683c9af608480164499e1a9fbe492fadcddd4432ece31ec3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": ".python-version",
+      "functional_destination": ".python-version",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e72b03ed5b70312f2782f2b05055c55b24670e126d50e24c4f2c559bf288f810",
+      "sha256_after": "e72b03ed5b70312f2782f2b05055c55b24670e126d50e24c4f2c559bf288f810",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "AGENTS.md",
+      "functional_destination": "AGENTS.md",
+      "action": "replace_active_entry_keep_prior_bytes",
+      "sha256_before": "b420d9e00100f59e240225ebf2f28605fb499db79517d595a251bcbd03eca0c1",
+      "sha256_after": "ae3d0ce8c8b33dd71eda45c2e1f5aba0468753ef9036202ce4a7001b7e9f2f7e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "Makefile",
+      "functional_destination": "Makefile",
+      "action": "replace_active_entry_keep_prior_bytes",
+      "sha256_before": "a3f04ef1a12bddd0214083c4cce408153e5fe0583b0d76effe13b411a154e0aa",
+      "sha256_after": "257fcf70b6776d27b532c475e9d462e9695ced94b6bd87483aa34610f0dc3d42",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "README.md",
+      "functional_destination": "README.md",
+      "action": "replace_active_entry_keep_prior_bytes",
+      "sha256_before": "14952f0f27722a02f75b96bbd21fb6465b39e85337ebbe1aeb9810f3f5353d23",
+      "sha256_after": "61404acf6f3fb4c21832db8f3b6c305ee2f9c2713ad3b6c0521d388c4b0bef79",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "compose.yaml",
+      "functional_destination": "compose.yaml",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "94de3e09c7de02cf423ceba57d23d567da4d7a040a147ea14e1c2bec82291928",
+      "sha256_after": "94de3e09c7de02cf423ceba57d23d567da4d7a040a147ea14e1c2bec82291928",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/frozen_inputs.json",
+      "functional_destination": "config/frozen_inputs.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "64bf28ee4ca66cd5d19f31d4f36afb4c03dadfd53bfcf91c27e89027798e954f",
+      "sha256_after": "64bf28ee4ca66cd5d19f31d4f36afb4c03dadfd53bfcf91c27e89027798e954f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/frozen_inputs_before_income_investigation.json",
+      "functional_destination": "config/frozen_inputs_before_income_investigation.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a023c30357b80b4abddb58ecea8d748c0c08b6509a698f6623a72f245bf8f3d3",
+      "sha256_after": "a023c30357b80b4abddb58ecea8d748c0c08b6509a698f6623a72f245bf8f3d3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/frozen_inputs_before_municipal_income_investigation.json",
+      "functional_destination": "config/frozen_inputs_before_municipal_income_investigation.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f14952a5e34be7f48da5b2d34d0f31c2bbdb41887a097c70ca42b45a3d5c1576",
+      "sha256_after": "f14952a5e34be7f48da5b2d34d0f31c2bbdb41887a097c70ca42b45a3d5c1576",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/income_harmonisation_investigation.json",
+      "functional_destination": "config/income_harmonisation_investigation.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "6bce297f29c5fb32f2af77e745977e7bc3df45e74b3cb45e2c1fee506cf3a7f7",
+      "sha256_after": "6bce297f29c5fb32f2af77e745977e7bc3df45e74b3cb45e2c1fee506cf3a7f7",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/municipal_income_investigation.json",
+      "functional_destination": "config/municipal_income_investigation.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "35cbab884b48b234bc6b859adc6299aca42be2bb1dea85842cb48b4114d4e638",
+      "sha256_after": "35cbab884b48b234bc6b859adc6299aca42be2bb1dea85842cb48b4114d4e638",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/osmconf.ini",
+      "functional_destination": "config/osmconf.ini",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9b6e828f138a40678da0598bc42e6f04d5d1b2aa1dfe5774200d7a9e19c4159a",
+      "sha256_after": "9b6e828f138a40678da0598bc42e6f04d5d1b2aa1dfe5774200d7a9e19c4159a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/project.yml",
+      "functional_destination": "config/project.yml",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "8a4e1a5cf2a49076bac2eebae18cf26a3e88894c14d3afee43c53d9fe0f1a5a2",
+      "sha256_after": "8a4e1a5cf2a49076bac2eebae18cf26a3e88894c14d3afee43c53d9fe0f1a5a2",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/research_design.json",
+      "functional_destination": "config/research_design.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "09baf75666ea68244a365caebc90c1e667d45c9c8909c09a17b287b0d22670da",
+      "sha256_after": "09baf75666ea68244a365caebc90c1e667d45c9c8909c09a17b287b0d22670da",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/unverified_raw_files.json",
+      "functional_destination": "config/unverified_raw_files.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "84d2d7329df1fd13e159881f259a633005b49bdf7bc8ee42e93e167eff42df29",
+      "sha256_after": "84d2d7329df1fd13e159881f259a633005b49bdf7bc8ee42e93e167eff42df29",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/cities.json",
+      "functional_destination": "config/v4/cities.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "65dc95aee5e958e170d72a9f359fa86e116002fcb2ad02a0f9dd06e3f4d2cf3c",
+      "sha256_after": "65dc95aee5e958e170d72a9f359fa86e116002fcb2ad02a0f9dd06e3f4d2cf3c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/cities_accessibility_only.json",
+      "functional_destination": "config/study/cities.json",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "05a855c0a9dc1bb32d5a53bf4601cc5ee37b097640bae42db94990c10bb85e32",
+      "sha256_after": "05a855c0a9dc1bb32d5a53bf4601cc5ee37b097640bae42db94990c10bb85e32",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/context_A04_20261011.json",
+      "functional_destination": "config/v4/context_A04_20261011.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c326e22be187d4cc5f2e5108a6346d14a114618ba144bedf34e7f9d191bae812",
+      "sha256_after": "c326e22be187d4cc5f2e5108a6346d14a114618ba144bedf34e7f9d191bae812",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/context_reuse_accessibility_only.json",
+      "functional_destination": "config/v4/context_reuse_accessibility_only.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "457af73a77c1620c152127af4be302ef329ab4785f26ecaa1d8603f3030a7a90",
+      "sha256_after": "457af73a77c1620c152127af4be302ef329ab4785f26ecaa1d8603f3030a7a90",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/geography_A03_20261011.json",
+      "functional_destination": "config/v4/geography_A03_20261011.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "edef5a63e92014559cbea2b43e08fefbcac856e969316a6193cb7e3961bfeb3d",
+      "sha256_after": "edef5a63e92014559cbea2b43e08fefbcac856e969316a6193cb7e3961bfeb3d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/geography_reuse_accessibility_only.json",
+      "functional_destination": "config/v4/geography_reuse_accessibility_only.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "3440436967f7d32a57687cc83ca6d597c072d1f80635fb64c519a23d9a9bd25e",
+      "sha256_after": "3440436967f7d32a57687cc83ca6d597c072d1f80635fb64c519a23d9a9bd25e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/housing_sources.json",
+      "functional_destination": "config/v4/housing_sources.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "79e486fb00923f96a7c93bede00579843f55b07a7c076101863a9b21f831166b",
+      "sha256_after": "79e486fb00923f96a7c93bede00579843f55b07a7c076101863a9b21f831166b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/listing_reuse_accessibility_only.json",
+      "functional_destination": "config/v4/listing_reuse_accessibility_only.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f1e850dfc8831ffe27397ce0e3c5af20498ff0f58034a7cfc192ca584a68da5b",
+      "sha256_after": "f1e850dfc8831ffe27397ce0e3c5af20498ff0f58034a7cfc192ca584a68da5b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/listing_sources.json",
+      "functional_destination": "config/v4/listing_sources.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "2d42754d39a38db522936dc347a63c91c4b8e247f6baebb840e2b63eb0a812bb",
+      "sha256_after": "2d42754d39a38db522936dc347a63c91c4b8e247f6baebb840e2b63eb0a812bb",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/research_design.json",
+      "functional_destination": "config/v4/research_design.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f0cdb6b44b96b2e0f842e24494b6bae5490f27638a164c6c3442be95679c342c",
+      "sha256_after": "f0cdb6b44b96b2e0f842e24494b6bae5490f27638a164c6c3442be95679c342c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/research_design_accessibility_only.json",
+      "functional_destination": "config/study/design.json",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "3af3667c5fbc218f4c85ce03dc57478117c70e314114c5e39a92e96323806016",
+      "sha256_after": "3af3667c5fbc218f4c85ce03dc57478117c70e314114c5e39a92e96323806016",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/v4/stockholm_boundary_amendment.json",
+      "functional_destination": "config/v4/stockholm_boundary_amendment.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "3673f1bccc9d79f4b8d7cfabdb2763e4ab30a33f4a58b21eb4c6fb488bde9189",
+      "sha256_after": "3673f1bccc9d79f4b8d7cfabdb2763e4ab30a33f4a58b21eb4c6fb488bde9189",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "config/xgboost_candidates.json",
+      "functional_destination": "config/xgboost_candidates.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "35cd1586fc5386777f2aea044226130f000be7742e1ddb4585365d08f8d2a0ac",
+      "sha256_after": "35cd1586fc5386777f2aea044226130f000be7742e1ddb4585365d08f8d2a0ac",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "data/interim/.gitkeep",
+      "functional_destination": "data/interim/.gitkeep",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "data/processed/.gitkeep",
+      "functional_destination": "data/processed/.gitkeep",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "data/raw/.gitkeep",
+      "functional_destination": "data/raw/.gitkeep",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/data_dictionary.md",
+      "functional_destination": "docs/data_dictionary.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "ebfea03ab34d30b59fb426a70cfbc3173d756db48ee2374570558158086aa910",
+      "sha256_after": "ebfea03ab34d30b59fb426a70cfbc3173d756db48ee2374570558158086aa910",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/data_governance.md",
+      "functional_destination": "docs/data_governance.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "215817c4b0295d6d0b9cc378b12b76dcdd555728fd7867b6b356d263f4c9b3fb",
+      "sha256_after": "215817c4b0295d6d0b9cc378b12b76dcdd555728fd7867b6b356d263f4c9b3fb",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/decision_log.md",
+      "functional_destination": "docs/decision_log.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "ea6f7c0ad0094c1c97f4f445ea4ab12a8652f9017f575dbcd0ca6f9f2e44df78",
+      "sha256_after": "ea6f7c0ad0094c1c97f4f445ea4ab12a8652f9017f575dbcd0ca6f9f2e44df78",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/deviations_from_preanalysis.md",
+      "functional_destination": "docs/deviations_from_preanalysis.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1a02441949d41e91e3f835e9d8df30e84fd278c92fd41a042a0e60326c563197",
+      "sha256_after": "1a02441949d41e91e3f835e9d8df30e84fd278c92fd41a042a0e60326c563197",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/migration_mapping.json",
+      "functional_destination": "docs/migration_mapping.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1fd4b9a68d8b72e2a820a7e34835959d7e1305606d339e6e3726aeda05b54025",
+      "sha256_after": "1fd4b9a68d8b72e2a820a7e34835959d7e1305606d339e6e3726aeda05b54025",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/migration_rerun_audit.md",
+      "functional_destination": "docs/migration_rerun_audit.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "4d2edba0330b09cd3e9ecb95f01e2adad10cb9672245e04f9029a44c16b35a75",
+      "sha256_after": "4d2edba0330b09cd3e9ecb95f01e2adad10cb9672245e04f9029a44c16b35a75",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/preanalysis_specification.md",
+      "functional_destination": "docs/preanalysis_specification.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a74071f486ac1fc9c1d90e9c0f85ca73d0f9f75c87a6097068f1fabfb44b282c",
+      "sha256_after": "a74071f486ac1fc9c1d90e9c0f85ca73d0f9f75c87a6097068f1fabfb44b282c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/reproducibility.md",
+      "functional_destination": "docs/reproducibility.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0bcd4071c8945e0bd3980fa4c747ff29db654cda6cab15cc12255dc6fcfb519f",
+      "sha256_after": "0bcd4071c8945e0bd3980fa4c747ff29db654cda6cab15cc12255dc6fcfb519f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/IMPLEMENTATION_CONTRACT.md",
+      "functional_destination": "docs/analysis/implementation_contract.md",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "600b5d6ae8fe091c67a8d871744a078647b7c9a449be9602aa7cb447fdd9456c",
+      "sha256_after": "600b5d6ae8fe091c67a8d871744a078647b7c9a449be9602aa7cb447fdd9456c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/architecture.md",
+      "functional_destination": "docs/v4/architecture.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "2bf9d09cd3061fcfb91a561adae74d68b8c4b5f838f5e255d6c0554108c8919e",
+      "sha256_after": "2bf9d09cd3061fcfb91a561adae74d68b8c4b5f838f5e255d6c0554108c8919e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/context_copenhagen_frederiksberg_A04_20261011.md",
+      "functional_destination": "docs/v4/context_copenhagen_frederiksberg_A04_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "6b567363aa5eb9d381e4261a77e99b3ec2d7ea19e1092c25ac8477d9dd16aaf8",
+      "sha256_after": "6b567363aa5eb9d381e4261a77e99b3ec2d7ea19e1092c25ac8477d9dd16aaf8",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/context_oslo_A04_20261011.md",
+      "functional_destination": "docs/v4/context_oslo_A04_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9a695f08d22ebd7ab2a2aae174515c42401f7eaf614c4697fd22f536f07e21f3",
+      "sha256_after": "9a695f08d22ebd7ab2a2aae174515c42401f7eaf614c4697fd22f536f07e21f3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/context_qualification_A04_20261011.json",
+      "functional_destination": "docs/v4/context_qualification_A04_20261011.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c500832d7e5b720842df2ac3ad1dae5d7da3fe1f30b8730207caa8eb9a619240",
+      "sha256_after": "c500832d7e5b720842df2ac3ad1dae5d7da3fe1f30b8730207caa8eb9a619240",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/context_qualification_A04_20261011.md",
+      "functional_destination": "docs/v4/context_qualification_A04_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "866d4b4a0c9531c6f52a8396e14764cdf618a895920f338c04df3eaa46c76aff",
+      "sha256_after": "866d4b4a0c9531c6f52a8396e14764cdf618a895920f338c04df3eaa46c76aff",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/context_source_registry_A04_20261011.json",
+      "functional_destination": "docs/v4/context_source_registry_A04_20261011.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5ddb12335bd2b99e7d5ef5ccd888621c885270463d4f419f6357fe6fe8254e67",
+      "sha256_after": "5ddb12335bd2b99e7d5ef5ccd888621c885270463d4f419f6357fe6fe8254e67",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/context_stockholm_A04_20261011.md",
+      "functional_destination": "docs/v4/context_stockholm_A04_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1737d5be7defab8a96ea4228147993597e6ac89bfe69f62cb0b8fe4ea211ea5d",
+      "sha256_after": "1737d5be7defab8a96ea4228147993597e6ac89bfe69f62cb0b8fe4ea211ea5d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/current_state_audit_20261011.md",
+      "functional_destination": "docs/v4/current_state_audit_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1fa574fe16c55d2f99159e57c74272203258f8bd73da5b17c8875e861c2ff9e6",
+      "sha256_after": "1fa574fe16c55d2f99159e57c74272203258f8bd73da5b17c8875e861c2ff9e6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/data_dictionary.md",
+      "functional_destination": "docs/analysis/data_dictionary.md",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "ae36910bd78bea589c9c49a15a68d5a91c9869902dd4814da6865565db55c646",
+      "sha256_after": "ae36910bd78bea589c9c49a15a68d5a91c9869902dd4814da6865565db55c646",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/document_index.md",
+      "functional_destination": "docs/v4/document_index.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1953e15301878084bfcaea176e019605b96d0ce286cb07da1ccd4a831e23b23a",
+      "sha256_after": "1953e15301878084bfcaea176e019605b96d0ce286cb07da1ccd4a831e23b23a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/geography_qualification_A03_20261011.json",
+      "functional_destination": "docs/v4/geography_qualification_A03_20261011.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "d1527cd1f09e78235487b4cbba3de94547f865d1aa43cc0e756715997e617d3a",
+      "sha256_after": "d1527cd1f09e78235487b4cbba3de94547f865d1aa43cc0e756715997e617d3a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/geography_qualification_A03_20261011.md",
+      "functional_destination": "docs/v4/geography_qualification_A03_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e9e0bdd85c3dd8c29840762ca68a80c9764d11b5f1566f9c25647121bd2abcd2",
+      "sha256_after": "e9e0bdd85c3dd8c29840762ca68a80c9764d11b5f1566f9c25647121bd2abcd2",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/geography_source_registry_A03_20261011.json",
+      "functional_destination": "docs/v4/geography_source_registry_A03_20261011.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "ccfbdf2896d65e565a926b9508e765b89acf77a4c41e3ae15b0ec7178b4d2b8a",
+      "sha256_after": "ccfbdf2896d65e565a926b9508e765b89acf77a4c41e3ae15b0ec7178b4d2b8a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/AGENTS_before_A01.txt",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/AGENTS_before_A01.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f966232103dd9c675d4f095551461e04526b77c8c48ee4e5d84acfeca3893013",
+      "sha256_after": "f966232103dd9c675d4f095551461e04526b77c8c48ee4e5d84acfeca3893013",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/IMPLEMENTATION_CONTRACT.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/IMPLEMENTATION_CONTRACT.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0595afe1129ce98651542369261e8abe8dabce224e738bd496a88521e1deaea3",
+      "sha256_after": "0595afe1129ce98651542369261e8abe8dabce224e738bd496a88521e1deaea3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/README.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/README.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "8163864e86c3718bc597031449f268d771c78fed1cc373293a62c2145833fca5",
+      "sha256_after": "8163864e86c3718bc597031449f268d771c78fed1cc373293a62c2145833fca5",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/architecture.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/architecture.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "529efbb1eb3fc96ed218aba546df0c8681c584c1f96e5001890b8c9e80b7f87a",
+      "sha256_after": "529efbb1eb3fc96ed218aba546df0c8681c584c1f96e5001890b8c9e80b7f87a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/data_dictionary.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/data_dictionary.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "269bd7a7f06430735e5f63ecead8d2ec60f00455ad46fc24469e3774e10f6a4a",
+      "sha256_after": "269bd7a7f06430735e5f63ecead8d2ec60f00455ad46fc24469e3774e10f6a4a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/document_index.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/document_index.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "230cf038dbd9c8e36e48da6fe55922650bee5fec8caa3820ad1f954e111c8a9e",
+      "sha256_after": "230cf038dbd9c8e36e48da6fe55922650bee5fec8caa3820ad1f954e111c8a9e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/file_manifest.json",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/file_manifest.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "ca3d55ebf1652fdbb51610355a5f74cdf4b9350c5edc665da7cbdb5755dbb9f2",
+      "sha256_after": "ca3d55ebf1652fdbb51610355a5f74cdf4b9350c5edc665da7cbdb5755dbb9f2",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/preanalysis_specification.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/preanalysis_specification.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5cdb3bef2db26c7139b832504cdf3385a6dd284cea8c336fcdd8c6501f2f5425",
+      "sha256_after": "5cdb3bef2db26c7139b832504cdf3385a6dd284cea8c336fcdd8c6501f2f5425",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/proposal.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/proposal.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0c86fb13b54742aabff942e30a39975a725c611379b465ef40838608e3c59645",
+      "sha256_after": "0c86fb13b54742aabff942e30a39975a725c611379b465ef40838608e3c59645",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/research_plan.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/research_plan.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "779613462f13dfdb0ccc4ec3c9c5bb9cedc06c4731423fd014cf2a50cbb6cf69",
+      "sha256_after": "779613462f13dfdb0ccc4ec3c9c5bb9cedc06c4731423fd014cf2a50cbb6cf69",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/history/housing_standard_20261011_before_A01/source_registry.md",
+      "functional_destination": "docs/v4/history/housing_standard_20261011_before_A01/source_registry.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9b9751ea45602a5639af19d8050c29bbeac23539f1b91ef7680795ef21f14395",
+      "sha256_after": "9b9751ea45602a5639af19d8050c29bbeac23539f1b91ef7680795ef21f14395",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/housing_access_requirements.md",
+      "functional_destination": "docs/v4/housing_access_requirements.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c39fc9c9a1f00f9f16227e56f9e6127453f4bffb436511d5035e2a0b734050ee",
+      "sha256_after": "c39fc9c9a1f00f9f16227e56f9e6127453f4bffb436511d5035e2a0b734050ee",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/housing_acquisition.md",
+      "functional_destination": "docs/v4/housing_acquisition.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "809c535816227807eb43b509701bab521bac3180417630621bc40c9bb83df75d",
+      "sha256_after": "809c535816227807eb43b509701bab521bac3180417630621bc40c9bb83df75d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/housing_acquisition_audit.json",
+      "functional_destination": "docs/v4/housing_acquisition_audit.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "6823097ebca717b4e6005bfe498b83f038c854086f07ead2c3aecdaa9478e805",
+      "sha256_after": "6823097ebca717b4e6005bfe498b83f038c854086f07ead2c3aecdaa9478e805",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/housing_source_registry.json",
+      "functional_destination": "docs/v4/housing_source_registry.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1289cfc646fdabcf22ed4e21123eac55f1bdd80e7fe9d036ca651d46c4732111",
+      "sha256_after": "1289cfc646fdabcf22ed4e21123eac55f1bdd80e7fe9d036ca651d46c4732111",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/income_decision_proposal_A04_20261011.md",
+      "functional_destination": "docs/v4/income_decision_proposal_A04_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a851f1e5ec1897fd858f37c989980bcd462cbce85a8554ca8fa36d008dbadb6c",
+      "sha256_after": "a851f1e5ec1897fd858f37c989980bcd462cbce85a8554ca8fa36d008dbadb6c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/listing_acquisition.md",
+      "functional_destination": "docs/v4/listing_acquisition.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "4fe869657afad360c53d25890d89ef4793a1e3fd83fb3d79ab0fdfd5c873204a",
+      "sha256_after": "4fe869657afad360c53d25890d89ef4793a1e3fd83fb3d79ab0fdfd5c873204a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/listing_acquisition_audit.json",
+      "functional_destination": "docs/v4/listing_acquisition_audit.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e1127f9bb7417160dbaf0d9fb365368a8abc3854a6591f8d2b6689f10aa0c98b",
+      "sha256_after": "e1127f9bb7417160dbaf0d9fb365368a8abc3854a6591f8d2b6689f10aa0c98b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/model_contract.md",
+      "functional_destination": "docs/v4/model_contract.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "d4aac87f7044f262a2853366cf14139c735b1faa4962ca38cdc6c4d557cf4cfb",
+      "sha256_after": "d4aac87f7044f262a2853366cf14139c735b1faa4962ca38cdc6c4d557cf4cfb",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/oslo_boundary_amendment_A03_20261011.md",
+      "functional_destination": "docs/v4/oslo_boundary_amendment_A03_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "7637f28030d4733be18ed449a84b5d7905d577a28c3a6a3b450db8e54bea9167",
+      "sha256_after": "7637f28030d4733be18ed449a84b5d7905d577a28c3a6a3b450db8e54bea9167",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/pipeline_scope_audit_A02_20261011.md",
+      "functional_destination": "docs/v4/pipeline_scope_audit_A02_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a9b434af74d453ba3f32a4373a9d4989ce45213e33ec218da07afbfa411a3b2f",
+      "sha256_after": "a9b434af74d453ba3f32a4373a9d4989ce45213e33ec218da07afbfa411a3b2f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/preanalysis_specification.md",
+      "functional_destination": "docs/analysis/preanalysis_specification.md",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "7ffcaad4957e39303b600243a63ea597fe70daa6102f69ddfab8ef2ab2fcf010",
+      "sha256_after": "7ffcaad4957e39303b600243a63ea597fe70daa6102f69ddfab8ef2ab2fcf010",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/proposal.md",
+      "functional_destination": "docs/scientific_proposal.md",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "05209487770baafd4fa3a6bcbb76134b890d44369525c260888608fa5460376e",
+      "sha256_after": "05209487770baafd4fa3a6bcbb76134b890d44369525c260888608fa5460376e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/protected_v3_manifest.json",
+      "functional_destination": "docs/v4/protected_v3_manifest.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "2ef92016429509fc75d35d20a3531781406303c26f558c02d8257aaa38c551cd",
+      "sha256_after": "2ef92016429509fc75d35d20a3531781406303c26f558c02d8257aaa38c551cd",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/repository_audit.md",
+      "functional_destination": "docs/v4/repository_audit.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "744fe0b0224a7b807f7f020e9fd5a2ecf860a67b27ce761a9ccd50610982cb0b",
+      "sha256_after": "744fe0b0224a7b807f7f020e9fd5a2ecf860a67b27ce761a9ccd50610982cb0b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/research_plan.md",
+      "functional_destination": "docs/analysis/research_plan.md",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "9d8b7de47c01445ac15ea026818c2c3faaa58c3d53ebdd1c8ceba155bcf8d712",
+      "sha256_after": "9d8b7de47c01445ac15ea026818c2c3faaa58c3d53ebdd1c8ceba155bcf8d712",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/CODEX_PLAYBOOK.md",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/CODEX_PLAYBOOK.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0faa09677c48b9e52ab800dbe75a17855b31ce40de7342d91298889a9fe830a8",
+      "sha256_after": "0faa09677c48b9e52ab800dbe75a17855b31ce40de7342d91298889a9fe830a8",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/README.md",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/README.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "964e2293d925d5dbe81c1fd0ea192ad93b39a6d96350ca6ab63fd0a27ba9090c",
+      "sha256_after": "964e2293d925d5dbe81c1fd0ea192ad93b39a6d96350ca6ab63fd0a27ba9090c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/RECOVERY_PROMPT.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/RECOVERY_PROMPT.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "56ca78338fa84d99ce747912065628a8f619bbe9b7be1c076965010f01c507d0",
+      "sha256_after": "56ca78338fa84d99ce747912065628a8f619bbe9b7be1c076965010f01c507d0",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/docs/end_to_end_plan_v4_accessibility_only.docx",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/docs/end_to_end_plan_v4_accessibility_only.docx",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "961e2014c0e81c5323184180cb52960a39ad263b2eb17a78c29e39e814615ca3",
+      "sha256_after": "961e2014c0e81c5323184180cb52960a39ad263b2eb17a78c29e39e814615ca3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/docs/end_to_end_plan_v4_accessibility_only.md",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/docs/end_to_end_plan_v4_accessibility_only.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "3044c488d6f956848ed0759fb0fe3287034efcc20c8efe843299c61df08e1e69",
+      "sha256_after": "3044c488d6f956848ed0759fb0fe3287034efcc20c8efe843299c61df08e1e69",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/docs/scientific_proposal_v4_accessibility_only.docx",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/docs/scientific_proposal_v4_accessibility_only.docx",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "8d1eff34c5e0f5022a720593db43e8170f7ed20d71a647aedda259dfeccb47c3",
+      "sha256_after": "8d1eff34c5e0f5022a720593db43e8170f7ed20d71a647aedda259dfeccb47c3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/docs/scientific_proposal_v4_accessibility_only.md",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/docs/scientific_proposal_v4_accessibility_only.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "afaaa91744eff1ae33e58eca545bd88bef86e414e16eb1d8eb1b222b3329613d",
+      "sha256_after": "afaaa91744eff1ae33e58eca545bd88bef86e414e16eb1d8eb1b222b3329613d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/file_manifest.json",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/file_manifest.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f849f25d464dcd873bf21e458e79128a7e03f48782903e065d513b00436af139",
+      "sha256_after": "f849f25d464dcd873bf21e458e79128a7e03f48782903e065d513b00436af139",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A01_amend_scope_and_preserve_evidence.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A01_amend_scope_and_preserve_evidence.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "ce7faf33b7aa3676539d3ade4e0a877bc4ed7c613f8eb236de1167b907fc4f01",
+      "sha256_after": "ce7faf33b7aa3676539d3ade4e0a877bc4ed7c613f8eb236de1167b907fc4f01",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A02_remove_housing_from_active_dependencies.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A02_remove_housing_from_active_dependencies.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1831b5972e0f702aabbd31a82a922c487da52dea1d844a481d1349bc4665b3fe",
+      "sha256_after": "1831b5972e0f702aabbd31a82a922c487da52dea1d844a481d1349bc4665b3fe",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A03_qualify_geography_and_oslo_vintage.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A03_qualify_geography_and_oslo_vintage.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "ed34924324a3044349c7df69e3a0b37dd83250526804cfe6e51589b7c59b6d1e",
+      "sha256_after": "ed34924324a3044349c7df69e3a0b37dd83250526804cfe6e51589b7c59b6d1e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A04_qualify_baseline_context.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A04_qualify_baseline_context.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "d01260ce8e4991ab51b6b08e5fdaf830d8c20576964f35aa5946b20c482af7df",
+      "sha256_after": "d01260ce8e4991ab51b6b08e5fdaf830d8c20576964f35aa5946b20c482af7df",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A05_build_matched_accessibility.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A05_build_matched_accessibility.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "8ea5a8b3f0e5f899e9b6a50abd09960ecfb92f07b7a9a9ff30571b508ad69d93",
+      "sha256_after": "8ea5a8b3f0e5f899e9b6a50abd09960ecfb92f07b7a9a9ff30571b508ad69d93",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A06_freeze_samples_folds_and_candidates.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A06_freeze_samples_folds_and_candidates.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a05669451fe506797754ea0f8f46031ce3e3008362314f8b23734f0bf5518149",
+      "sha256_after": "a05669451fe506797754ea0f8f46031ce3e3008362314f8b23734f0bf5518149",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A07_validate_models_and_execution.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A07_validate_models_and_execution.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "fc74d8fffe4fa714da8107f2af5f90cad70c0cbcc185d522aab8f31dae0cca18",
+      "sha256_after": "fc74d8fffe4fa714da8107f2af5f90cad70c0cbcc185d522aab8f31dae0cca18",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A08_run_copenhagen.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A08_run_copenhagen.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "2cbd08a5ac153755c6dcf7e2375780acc32f266a365929baa0f816458e4aff29",
+      "sha256_after": "2cbd08a5ac153755c6dcf7e2375780acc32f266a365929baa0f816458e4aff29",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A09_run_oslo.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A09_run_oslo.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "3800df1f6af54e95bd85dad0d4300683dcb797fff5118943fa76c0154753ead5",
+      "sha256_after": "3800df1f6af54e95bd85dad0d4300683dcb797fff5118943fa76c0154753ead5",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A10_run_stockholm.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A10_run_stockholm.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "3a123284ebb8ee346667207edfb9bdbb6386a9a252b560c0c97e10069ec0e435",
+      "sha256_after": "3a123284ebb8ee346667207edfb9bdbb6386a9a252b560c0c97e10069ec0e435",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A11_robustness_and_cross_city_synthesis.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A11_robustness_and_cross_city_synthesis.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "d861b5684f8507787e4d1dd10e3ceecad0c9355323fe336637b33bd79d12f2c8",
+      "sha256_after": "d861b5684f8507787e4d1dd10e3ceecad0c9355323fe336637b33bd79d12f2c8",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/prompts/A12_release_and_documentation.txt",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/prompts/A12_release_and_documentation.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "2bdba7361372801dbfc70fdf4baa9802a7bbcadad82f0c0cb17c8357def778a6",
+      "sha256_after": "2bdba7361372801dbfc70fdf4baa9802a7bbcadad82f0c0cb17c8357def778a6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/support/IMPLEMENTATION_CONTRACT.md",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/support/IMPLEMENTATION_CONTRACT.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a7e031b71e4caa9f8872afc60adf9a0ebc2165be236eded31c2c20d1bcc9e843",
+      "sha256_after": "a7e031b71e4caa9f8872afc60adf9a0ebc2165be236eded31c2c20d1bcc9e843",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/support/PREANALYSIS_SPECIFICATION.md",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/support/PREANALYSIS_SPECIFICATION.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "d35f6338d52b7a2b6d00af5767af41130b807db4c1da4e2c45dc37c63e4f2921",
+      "sha256_after": "d35f6338d52b7a2b6d00af5767af41130b807db4c1da4e2c45dc37c63e4f2921",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/support/SCOPE_CHANGELOG.md",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/support/SCOPE_CHANGELOG.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f1e16c3b0bb09c259aa88154241f805ffafca845ccfb1dcb5340b6044f838d4a",
+      "sha256_after": "f1e16c3b0bb09c259aa88154241f805ffafca845ccfb1dcb5340b6044f838d4a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/support/SOURCE_REGISTRY.md",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/support/SOURCE_REGISTRY.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "8790f4d290f65f630de558e1b9ddfe7fc87dbfcf6d66b4a22832cc7f4f31add3",
+      "sha256_after": "8790f4d290f65f630de558e1b9ddfe7fc87dbfcf6d66b4a22832cc7f4f31add3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/support/model_spec_template.json",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/support/model_spec_template.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "fe2a789f3f0510810819827f35f17979e2801dedcc09525779178709b872509e",
+      "sha256_after": "fe2a789f3f0510810819827f35f17979e2801dedcc09525779178709b872509e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/revisions/accessibility_only_20261011/support/supplied_input_provenance.json",
+      "functional_destination": "docs/v4/revisions/accessibility_only_20261011/support/supplied_input_provenance.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "725ac3b10f8c4bcd3f039365ecc39972614e043ff2a3e89504dada521a20e548",
+      "sha256_after": "725ac3b10f8c4bcd3f039365ecc39972614e043ff2a3e89504dada521a20e548",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/rinkeby_polygon_check_20261012.json",
+      "functional_destination": "docs/v4/rinkeby_polygon_check_20261012.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "bf1ddd36a2ca49b6580128a1f2852fed5b02a2831db481ffece9b59d5737a003",
+      "sha256_after": "bf1ddd36a2ca49b6580128a1f2852fed5b02a2831db481ffece9b59d5737a003",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/rinkeby_polygon_check_20261012.md",
+      "functional_destination": "docs/v4/rinkeby_polygon_check_20261012.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "4a93ffc29a453cc5017157575d643b210aedb65f975b0a057d3a6c5f5c1ca8b9",
+      "sha256_after": "4a93ffc29a453cc5017157575d643b210aedb65f975b0a057d3a6c5f5c1ca8b9",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/scope_amendment_20261011.json",
+      "functional_destination": "docs/v4/scope_amendment_20261011.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "114df8229d482f9522b7c5ec2d832abe642d2547efc690c1b41a1203aebe35f3",
+      "sha256_after": "114df8229d482f9522b7c5ec2d832abe642d2547efc690c1b41a1203aebe35f3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/source_registry.md",
+      "functional_destination": "docs/analysis/source_registry.md",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "f6701ee9c7e6aca3fed9f148d3206e1658351a0e99328ff81be1cb9971da8466",
+      "sha256_after": "f6701ee9c7e6aca3fed9f148d3206e1658351a0e99328ff81be1cb9971da8466",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/step_log.md",
+      "functional_destination": "docs/v4/step_log.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f6ba20ebbb65afa0968bb4580289604dcfe85313f665cd7cd5f5c72586654ff4",
+      "sha256_after": "0d4516e95c4580d9e971e2639111892e2a4e9a1f3178e7fea9564de6552455bc",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/step_mapping_A01_A12.md",
+      "functional_destination": "docs/v4/step_mapping_A01_A12.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "647d917bde85e027e939726f63522f828cc9f79c84b7a1eb141de192a519fb2b",
+      "sha256_after": "647d917bde85e027e939726f63522f828cc9f79c84b7a1eb141de192a519fb2b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/stockholm_boundary_amendment_20261011.md",
+      "functional_destination": "docs/v4/stockholm_boundary_amendment_20261011.md",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e56ed18c0712824e4170719f2cc212078e1925e4b673e4d77d0a598dc898b5f1",
+      "sha256_after": "e56ed18c0712824e4170719f2cc212078e1925e4b673e4d77d0a598dc898b5f1",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "docs/v4/stockholm_boundary_amendment_20261011_audit.json",
+      "functional_destination": "docs/v4/stockholm_boundary_amendment_20261011_audit.json",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "69468a6e285cc69fffa1340538c39440c5c9467764b8ca5660c99793b433246e",
+      "sha256_after": "69468a6e285cc69fffa1340538c39440c5c9467764b8ca5660c99793b433246e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "outputs/figures/.gitkeep",
+      "functional_destination": "outputs/figures/.gitkeep",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "outputs/tables/.gitkeep",
+      "functional_destination": "outputs/tables/.gitkeep",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "requirements.txt",
+      "functional_destination": "requirements.txt",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "90e5c0a00478e78f9d1be53f48d70fd09e87116f7449bb30e60d31887857854a",
+      "sha256_after": "90e5c0a00478e78f9d1be53f48d70fd09e87116f7449bb30e60d31887857854a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "scripts/plot_random_vs_loao_validation.py",
+      "functional_destination": "scripts/plot_random_vs_loao_validation.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c103e3e3827bcb29faf035d9794be709af2071890f480a505afe4982164c5525",
+      "sha256_after": "c103e3e3827bcb29faf035d9794be709af2071890f480a505afe4982164c5525",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "scripts/v4_repository_checks.py",
+      "functional_destination": "scripts/v4_repository_checks.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "95390bc7593aedb24e66cd6657fdfb4c8b856c81ca9b59dec4f6d83e74679ce3",
+      "sha256_after": "95390bc7593aedb24e66cd6657fdfb4c8b856c81ca9b59dec4f6d83e74679ce3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "scripts/v4_rinkeby_polygon_check.py",
+      "functional_destination": "scripts/v4_rinkeby_polygon_check.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f7a42cf7804e7e14c9c17d01c96f8adfae84f454a2a0dacfa896858731cdd2dc",
+      "sha256_after": "f7a42cf7804e7e14c9c17d01c96f8adfae84f454a2a0dacfa896858731cdd2dc",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/001_enable_extensions.sql",
+      "functional_destination": "sql/legacy_migrations/001_enable_extensions.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a6f930447ac37ac87795cfa0652ad6d44f6cf683422cb0226f00b181e33fb1bd",
+      "sha256_after": "a6f930447ac37ac87795cfa0652ad6d44f6cf683422cb0226f00b181e33fb1bd",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/002_create_schemas.sql",
+      "functional_destination": "sql/legacy_migrations/002_create_schemas.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "88e678eb59fa650b760f481dd853683c55e09bbd667616298ecd7dd4a29ff909",
+      "sha256_after": "88e678eb59fa650b760f481dd853683c55e09bbd667616298ecd7dd4a29ff909",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/003_create_metadata_tables.sql",
+      "functional_destination": "sql/legacy_migrations/003_create_metadata_tables.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "86dc1185a4f2341418bec9ffd5d281f9c94e252463e9d1b7d829d530560f8467",
+      "sha256_after": "86dc1185a4f2341418bec9ffd5d281f9c94e252463e9d1b7d829d530560f8467",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/004_create_clean_airbnb_listings.sql",
+      "functional_destination": "sql/legacy_migrations/004_create_clean_airbnb_listings.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5435d0efa860c9323d16860f8c7149d918b887221f9089eac6dc0563fd5bcfc4",
+      "sha256_after": "5435d0efa860c9323d16860f8c7149d918b887221f9089eac6dc0563fd5bcfc4",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/005_create_context_measures.sql",
+      "functional_destination": "sql/legacy_migrations/005_create_context_measures.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "82f7b8d3efec070793710f60c9276ac4a0fa480ad5b6359aae0aa9721d7ae5cf",
+      "sha256_after": "82f7b8d3efec070793710f60c9276ac4a0fa480ad5b6359aae0aa9721d7ae5cf",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/006_create_spatial_foundation.sql",
+      "functional_destination": "sql/legacy_migrations/006_create_spatial_foundation.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5755613ab4be4eab9368ef1ca7cebe09110cdf8cf7f0018ce318d5dbf0581de3",
+      "sha256_after": "5755613ab4be4eab9368ef1ca7cebe09110cdf8cf7f0018ce318d5dbf0581de3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/007_official_geography.sql",
+      "functional_destination": "sql/legacy_migrations/007_official_geography.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "210a50038fe7dcea89f984160689fb230f9e69acbb39c4efd001d85a57ce829b",
+      "sha256_after": "210a50038fe7dcea89f984160689fb230f9e69acbb39c4efd001d85a57ce829b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/008_map_context_municipalities.sql",
+      "functional_destination": "sql/legacy_migrations/008_map_context_municipalities.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a9e91d943134b3960d79d9cadcc542ec0ad027f74c8b2e996b5629ce693a819c",
+      "sha256_after": "a9e91d943134b3960d79d9cadcc542ec0ad027f74c8b2e996b5629ce693a819c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/009_phase5_euclidean_accessibility.sql",
+      "functional_destination": "sql/legacy_migrations/009_phase5_euclidean_accessibility.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f6b5a08931d078b141344a66908aff1e65fea934e2ffcd82ecf7217330e163e6",
+      "sha256_after": "f6b5a08931d078b141344a66908aff1e65fea934e2ffcd82ecf7217330e163e6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/010_walking_accessibility.sql",
+      "functional_destination": "sql/legacy_migrations/010_walking_accessibility.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "611a9f6fdb84ab6318e0f873302c0d0b95b2f795454e64cf39e38df15eb31f77",
+      "sha256_after": "611a9f6fdb84ab6318e0f873302c0d0b95b2f795454e64cf39e38df15eb31f77",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/011_analysis_dataset_v1.sql",
+      "functional_destination": "sql/legacy_migrations/011_analysis_dataset_v1.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c9e1a10e91a2e78bf16fdd01db72fb732b84e0341408b534eefdc1e02870c18d",
+      "sha256_after": "c9e1a10e91a2e78bf16fdd01db72fb732b84e0341408b534eefdc1e02870c18d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/012_phase7_spatial_cv_folds.sql",
+      "functional_destination": "sql/legacy_migrations/012_phase7_spatial_cv_folds.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "486518447c3d4417da602b0d10e4b9609d389ad38e0d70133b4cab4ba5936a9e",
+      "sha256_after": "486518447c3d4417da602b0d10e4b9609d389ad38e0d70133b4cab4ba5936a9e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/013_phase8_cv_assignments.sql",
+      "functional_destination": "sql/legacy_migrations/013_phase8_cv_assignments.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "3bbce25e2ce320cfbee548e78c8fb2c839d9b2d08566ba317255a993ef43513f",
+      "sha256_after": "3bbce25e2ce320cfbee548e78c8fb2c839d9b2d08566ba317255a993ef43513f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/014_phase9_bus_stop_proximity.sql",
+      "functional_destination": "sql/legacy_migrations/014_phase9_bus_stop_proximity.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "491e85e0df214a22b7be601ea882bbba354d982be17a2ac601a7677310aad006",
+      "sha256_after": "491e85e0df214a22b7be601ea882bbba354d982be17a2ac601a7677310aad006",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/015_phase10_bus_walking.sql",
+      "functional_destination": "sql/legacy_migrations/015_phase10_bus_walking.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "4dfea80fc1a1e39339ea379cf9e128d61dc92f72cb6a89f5a7d9e958efc6ecf6",
+      "sha256_after": "4dfea80fc1a1e39339ea379cf9e128d61dc92f72cb6a89f5a7d9e958efc6ecf6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/016_analysis_area_context.sql",
+      "functional_destination": "sql/legacy_migrations/016_analysis_area_context.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "6317f66a986519b1b70ee8b2bfad7768cacaef1f6b6d142f90b28303281df033",
+      "sha256_after": "6317f66a986519b1b70ee8b2bfad7768cacaef1f6b6d142f90b28303281df033",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/017_destination_boundary_sensitivity.sql",
+      "functional_destination": "sql/legacy_migrations/017_destination_boundary_sensitivity.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c707d8d4bb36a4d160b8660b7c9b96ae7b6b0c98207bfe0b2726452133bb43f6",
+      "sha256_after": "c707d8d4bb36a4d160b8660b7c9b96ae7b6b0c98207bfe0b2726452133bb43f6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/legacy_migrations/018_official_transport_source_assessment.sql",
+      "functional_destination": "sql/legacy_migrations/018_official_transport_source_assessment.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "80438907a550a6ef8244687800bd703e593db2375b34f9090f6a415b656f9319",
+      "sha256_after": "80438907a550a6ef8244687800bd703e593db2375b34f9090f6a415b656f9319",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/migrations/019_version3_foundation.sql",
+      "functional_destination": "sql/migrations/019_version3_foundation.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "cbc6f7451aaffe905d0484ea188da3f41986d5f8e0b7bd0069add1c1984491c9",
+      "sha256_after": "cbc6f7451aaffe905d0484ea188da3f41986d5f8e0b7bd0069add1c1984491c9",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/migrations/020_version3_analysis.sql",
+      "functional_destination": "sql/migrations/020_version3_analysis.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "96ebf1472a28022117e7658c04327668573d631fe866ab3361ada425810be6d0",
+      "sha256_after": "96ebf1472a28022117e7658c04327668573d631fe866ab3361ada425810be6d0",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/migrations/021_neutral_provider_diagnostics.sql",
+      "functional_destination": "sql/migrations/021_neutral_provider_diagnostics.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "76a836f7b0f0b18cad80f41bc7dae042dcec8c2e37bf9083afc7641cc28a772e",
+      "sha256_after": "76a836f7b0f0b18cad80f41bc7dae042dcec8c2e37bf9083afc7641cc28a772e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/migrations/022_qualified_area_income.sql",
+      "functional_destination": "sql/migrations/022_qualified_area_income.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "55d78e4ff44abd6628683b41c6c89a097e6afa49a004ffe3580bdc0f2c057838",
+      "sha256_after": "55d78e4ff44abd6628683b41c6c89a097e6afa49a004ffe3580bdc0f2c057838",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/queries/build_clean_airbnb_listings.sql",
+      "functional_destination": "sql/queries/build_clean_airbnb_listings.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "bca8e015238d4f4abf5c18a35756ce151422e0deb598d4fd40aba719a109db76",
+      "sha256_after": "bca8e015238d4f4abf5c18a35756ce151422e0deb598d4fd40aba719a109db76",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/v4_migrations/023_v4_multicity_persistence.sql",
+      "functional_destination": "sql/v4_migrations/023_v4_multicity_persistence.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a5082cd5147069239f3b68951de25ddcedd462c20cef32ab71ea1e2e92373893",
+      "sha256_after": "a5082cd5147069239f3b68951de25ddcedd462c20cef32ab71ea1e2e92373893",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/v4_migrations/024_v4_listing_boundary_audit.sql",
+      "functional_destination": "sql/v4_migrations/024_v4_listing_boundary_audit.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c519162548ac2005bb1e289d93b9ae0c77d600cd06f624443dbad23bad266ddc",
+      "sha256_after": "c519162548ac2005bb1e289d93b9ae0c77d600cd06f624443dbad23bad266ddc",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/v4_migrations/025_v4_housing_source_audit.sql",
+      "functional_destination": "sql/v4_migrations/025_v4_housing_source_audit.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "39d06c9b97eb8c93f48d9deb1acb93cb3d5172cc9f91dd5724af3a5293154f8e",
+      "sha256_after": "39d06c9b97eb8c93f48d9deb1acb93cb3d5172cc9f91dd5724af3a5293154f8e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/v4_migrations/026_v4_accessibility_only_definition.sql",
+      "functional_destination": "sql/v4_migrations/026_v4_accessibility_only_definition.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "57031e2bb082f5dd2e5ec1733d1a0db82a0a014a52ffe09a27abeaceb79a46c7",
+      "sha256_after": "57031e2bb082f5dd2e5ec1733d1a0db82a0a014a52ffe09a27abeaceb79a46c7",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/v4_migrations/027_v4_geography_qualification.sql",
+      "functional_destination": "sql/v4_migrations/027_v4_geography_qualification.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "8d9df8bd6bea7beb2524f6187e6617ecf312be66031f079d8ac01ac603cc1040",
+      "sha256_after": "8d9df8bd6bea7beb2524f6187e6617ecf312be66031f079d8ac01ac603cc1040",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "sql/v4_migrations/028_v4_context_qualification.sql",
+      "functional_destination": "sql/v4_migrations/028_v4_context_qualification.sql",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "05c07e17db2061fd9126b4112c5a02bd34a7f58cf7327c544bdb83ed1f7ae62b",
+      "sha256_after": "05c07e17db2061fd9126b4112c5a02bd34a7f58cf7327c544bdb83ed1f7ae62b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/__init__.py",
+      "functional_destination": "src/__init__.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/db/__init__.py",
+      "functional_destination": "src/db/__init__.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "380022c1d62b4f11818bea15e84856c8433b4e4cdb451938c2308d1fff0e700c",
+      "sha256_after": "380022c1d62b4f11818bea15e84856c8433b4e4cdb451938c2308d1fff0e700c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/db/cli.py",
+      "functional_destination": "src/db/cli.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e1b286d5a4aecae26188ddc31af126a2ad6799dacdc4e38234b4632fd3014ae9",
+      "sha256_after": "e1b286d5a4aecae26188ddc31af126a2ad6799dacdc4e38234b4632fd3014ae9",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/db/connection.py",
+      "functional_destination": "src/db/connection.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "83b0cd7fb21b3f8a8f6d156ad4cff645dec773ba5cfadad8262803de48439891",
+      "sha256_after": "83b0cd7fb21b3f8a8f6d156ad4cff645dec773ba5cfadad8262803de48439891",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/db/diagnose.py",
+      "functional_destination": "src/db/diagnose.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "b67a5c80e92d7b09d2897bcb8a2cfab981d87643ebfd0bb99db5e23ee7cfb862",
+      "sha256_after": "b67a5c80e92d7b09d2897bcb8a2cfab981d87643ebfd0bb99db5e23ee7cfb862",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/db/migrations.py",
+      "functional_destination": "src/db/migrations.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "49b650d67bea822353d22e229470c72bc35b14e7fcec7f6f3b60b62cdcdea195",
+      "sha256_after": "49b650d67bea822353d22e229470c72bc35b14e7fcec7f6f3b60b62cdcdea195",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/db/raw_csv.py",
+      "functional_destination": "src/db/raw_csv.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a961929a7820fe38ffc23b9877b193acf128334e50b71cbcbfdeb5b657af1380",
+      "sha256_after": "a961929a7820fe38ffc23b9877b193acf128334e50b71cbcbfdeb5b657af1380",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/db/sources.py",
+      "functional_destination": "src/db/sources.py",
+      "action": "extend_historical_source_isolation_with_exact_archived_code",
+      "sha256_before": "a556e5bc1f91c1a11d55be8d2c6df2586c77be86ae59babdd1b0d352fdcf8fc2",
+      "sha256_after": "ccef372547117e8e02b83556a9a44c4e8397e58e7706f3ae46d6da3d2e400d2d",
+      "compatibility": "Explicit new-source roots excluded from old source registration; unknown legacy providers still fail. Original code preserved byte-for-byte; no raw files or historical SQL changed.",
+      "archive_path": "history/compatibility/db_sources.py",
+      "subsequent_compatibility_extensions": [
+        {
+          "reason": "Keep new presentation-only cartographic source receipts out of legacy source ingestion",
+          "prior_sha256_after": "690c6203490045471dba3f59f744cd7d84371648dd75fa7dd9be8923510c6378",
+          "archived_prior_code": "archive/before_neighbourhood_maps/src/db/sources.py",
+          "active_sha256_after": "ccef372547117e8e02b83556a9a44c4e8397e58e7706f3ae46d6da3d2e400d2d"
+        }
+      ]
+    },
+    {
+      "old_path": "src/ingestion/__init__.py",
+      "functional_destination": "src/ingestion/__init__.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/acquire_income_evidence.py",
+      "functional_destination": "src/ingestion/acquire_income_evidence.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9e7e682ecca8c8256f00ee553452f91b3e1f30c052aee967548e57debd3d3e8a",
+      "sha256_after": "9e7e682ecca8c8256f00ee553452f91b3e1f30c052aee967548e57debd3d3e8a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/acquire_municipal_income_evidence.py",
+      "functional_destination": "src/ingestion/acquire_municipal_income_evidence.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f9fb0786cd8525286e018c87ff59faf9e5ecf50aa1c394b514fbfe68b60bc63a",
+      "sha256_after": "f9fb0786cd8525286e018c87ff59faf9e5ecf50aa1c394b514fbfe68b60bc63a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/build_manifest.py",
+      "functional_destination": "src/ingestion/build_manifest.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "d95320e44183304b3860ffd74ec4d462789918b09023c972c266abad4b32590f",
+      "sha256_after": "d95320e44183304b3860ffd74ec4d462789918b09023c972c266abad4b32590f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/common.py",
+      "functional_destination": "src/ingestion/common.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "957c27ac697e8f0bc6abee542ca2d5ab94bf72315a28137ffe8bcee00400c65e",
+      "sha256_after": "957c27ac697e8f0bc6abee542ca2d5ab94bf72315a28137ffe8bcee00400c65e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/download_copenhagen_statbank.py",
+      "functional_destination": "src/ingestion/download_copenhagen_statbank.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5c7cfb2888412b3b78ef208ee0b7457cbaef953e69c89badf7c5a1f3f3f8144b",
+      "sha256_after": "5c7cfb2888412b3b78ef208ee0b7457cbaef953e69c89badf7c5a1f3f3f8144b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/download_frederiksberg_statbank.py",
+      "functional_destination": "src/ingestion/download_frederiksberg_statbank.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "4d83d312a9222e31bc35e57bebece97a1d697cc2885bd33db40aab30a6a47cb9",
+      "sha256_after": "4d83d312a9222e31bc35e57bebece97a1d697cc2885bd33db40aab30a6a47cb9",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/download_inside_airbnb.py",
+      "functional_destination": "src/ingestion/download_inside_airbnb.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c3657f7f00f676209431ba2d9bee82ac73db6f9e3c357b7a76874e5ae0751b60",
+      "sha256_after": "c3657f7f00f676209431ba2d9bee82ac73db6f9e3c357b7a76874e5ae0751b60",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/download_municipality_statbank.py",
+      "functional_destination": "src/ingestion/download_municipality_statbank.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "3c428edc30e434ca8628071b50827af2a4fac491835b731cc143164a4e3091ad",
+      "sha256_after": "3c428edc30e434ca8628071b50827af2a4fac491835b731cc143164a4e3091ad",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/download_official_transport.py",
+      "functional_destination": "src/ingestion/download_official_transport.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "2e028b850323f682432a6ee288828dd611c48382115cbebadf1d95de648e6dc6",
+      "sha256_after": "2e028b850323f682432a6ee288828dd611c48382115cbebadf1d95de648e6dc6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/download_osm_overpass.py",
+      "functional_destination": "src/ingestion/download_osm_overpass.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "99cec662c998c550f93818dd2a10536569af1b5a8cba6771bf672b52fff98e1c",
+      "sha256_after": "99cec662c998c550f93818dd2a10536569af1b5a8cba6771bf672b52fff98e1c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/ingestion/price.py",
+      "functional_destination": "src/ingestion/price.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e64398a106551f0f7a51fa801293b9207dbd9d72220bec602023b10b493ea98e",
+      "sha256_after": "e64398a106551f0f7a51fa801293b9207dbd9d72220bec602023b10b493ea98e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/__init__.py",
+      "functional_destination": "src/pipeline/__init__.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0614759adaba9f6adad2e0f9e04b0c307b2360a2403636de7486d79632dcc253",
+      "sha256_after": "0614759adaba9f6adad2e0f9e04b0c307b2360a2403636de7486d79632dcc253",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/acquire_map_context_boundaries.py",
+      "functional_destination": "src/pipeline/acquire_map_context_boundaries.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "09554f3a61efca74e9ebdd8fd7ed7ec4a49d0237c6f23e8be7e4d641f32df0c4",
+      "sha256_after": "09554f3a61efca74e9ebdd8fd7ed7ec4a49d0237c6f23e8be7e4d641f32df0c4",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/acquire_official_boundaries.py",
+      "functional_destination": "src/pipeline/acquire_official_boundaries.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0f9cd2e46134a91e6d2d89f05e6b4a7aab446e0a9afd825d0aa984e1c1383c9a",
+      "sha256_after": "0f9cd2e46134a91e6d2d89f05e6b4a7aab446e0a9afd825d0aa984e1c1383c9a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/acquire_osm.py",
+      "functional_destination": "src/pipeline/acquire_osm.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "fc62416f7b0e08699aec8454cabfe79379af39ce94519cb87b062b9be9a478e8",
+      "sha256_after": "fc62416f7b0e08699aec8454cabfe79379af39ce94519cb87b062b9be9a478e8",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/assess_official_transport.py",
+      "functional_destination": "src/pipeline/assess_official_transport.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "d7d100478e6a34b1d53d59e7152b819cff54eae5d195f0cee30c7219fc2783d8",
+      "sha256_after": "d7d100478e6a34b1d53d59e7152b819cff54eae5d195f0cee30c7219fc2783d8",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/audit_destination_boundary.py",
+      "functional_destination": "src/pipeline/audit_destination_boundary.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "7c16294a2d27d24628cee46b8f14164e0c7ce72e88291493c6422c51069ac718",
+      "sha256_after": "7c16294a2d27d24628cee46b8f14164e0c7ce72e88291493c6422c51069ac718",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/audit_price_observability.py",
+      "functional_destination": "src/pipeline/audit_price_observability.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "2a040719f3e041bd5404387eb6f7c580248c547dae89a83fbd58a95ec82229b9",
+      "sha256_after": "2a040719f3e041bd5404387eb6f7c580248c547dae89a83fbd58a95ec82229b9",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/audit_reproducibility.py",
+      "functional_destination": "src/pipeline/audit_reproducibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "7ff7f160ab8431b27a2ef3b80cbb3e4d9245abeddbd47ee186c32a481826d2b6",
+      "sha256_after": "7ff7f160ab8431b27a2ef3b80cbb3e4d9245abeddbd47ee186c32a481826d2b6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_airbnb_sample.py",
+      "functional_destination": "src/pipeline/build_airbnb_sample.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "99daf01395856b1f7107031da910b8f8a4c410e5ee13e4a410f367915aa57716",
+      "sha256_after": "99daf01395856b1f7107031da910b8f8a4c410e5ee13e4a410f367915aa57716",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_analysis_areas.py",
+      "functional_destination": "src/pipeline/build_analysis_areas.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5d3f622d731213794e90caf1069c86ecc1ab67a82ec8ae3cc19355d62a59a800",
+      "sha256_after": "5d3f622d731213794e90caf1069c86ecc1ab67a82ec8ae3cc19355d62a59a800",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_analysis_dataset.py",
+      "functional_destination": "src/pipeline/build_analysis_dataset.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a3d750ae20cc6ea565ac4a03f58b7386dcca8ecc37c998ffdbfc7d710f9005b4",
+      "sha256_after": "a3d750ae20cc6ea565ac4a03f58b7386dcca8ecc37c998ffdbfc7d710f9005b4",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_area_context.py",
+      "functional_destination": "src/pipeline/build_area_context.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9a2f65dce7b8d7537c7dd32c5f6e28ac2fafd9811c94c581d8c9fbab3de1f8cf",
+      "sha256_after": "9a2f65dce7b8d7537c7dd32c5f6e28ac2fafd9811c94c581d8c9fbab3de1f8cf",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_bus_euclidean_accessibility.py",
+      "functional_destination": "src/pipeline/build_bus_euclidean_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "577d79c0ccf473889bfce31c94a9fb092c3a917e3f9d75369ed884afa7579b3d",
+      "sha256_after": "577d79c0ccf473889bfce31c94a9fb092c3a917e3f9d75369ed884afa7579b3d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_bus_walking_accessibility.py",
+      "functional_destination": "src/pipeline/build_bus_walking_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "393630545ea79e8813951507549b2ff895d93c583a901c5057cc2855f18f5d87",
+      "sha256_after": "393630545ea79e8813951507549b2ff895d93c583a901c5057cc2855f18f5d87",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_euclidean_accessibility.py",
+      "functional_destination": "src/pipeline/build_euclidean_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9ceec4af8dbe37a5a8423fd70452ed81844bd01c82aaaa9c184d754fc3fe61f9",
+      "sha256_after": "9ceec4af8dbe37a5a8423fd70452ed81844bd01c82aaaa9c184d754fc3fe61f9",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_final_outputs.py",
+      "functional_destination": "src/pipeline/build_final_outputs.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c8a0f9910ad99382eb216b392fea0c84b9f9ad0f9ad11dc781cccda364e2cdc9",
+      "sha256_after": "c8a0f9910ad99382eb216b392fea0c84b9f9ad0f9ad11dc781cccda364e2cdc9",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_migration_audit.py",
+      "functional_destination": "src/pipeline/build_migration_audit.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f9be3f49756386c02d05d6225ea973af4c389070d0e6f4aa01ed964888c4184e",
+      "sha256_after": "f9be3f49756386c02d05d6225ea973af4c389070d0e6f4aa01ed964888c4184e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_opportunity_variants.py",
+      "functional_destination": "src/pipeline/build_opportunity_variants.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "6125139dd9d1ae07309992a77cbf457ddaa221e3e3fef13d708f8e2764c44a95",
+      "sha256_after": "6125139dd9d1ae07309992a77cbf457ddaa221e3e3fef13d708f8e2764c44a95",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_spatial_features.py",
+      "functional_destination": "src/pipeline/build_spatial_features.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "cd799cc51eebd587a0f244246a2fd5414454d63a5aca3d298af61e66e5808c3a",
+      "sha256_after": "cd799cc51eebd587a0f244246a2fd5414454d63a5aca3d298af61e66e5808c3a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_tuning_candidates.py",
+      "functional_destination": "src/pipeline/build_tuning_candidates.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f2ab1ce0410af4814927005a6a21ab5a75fa9c6bd580ca5311ab48f1195c2cf7",
+      "sha256_after": "f2ab1ce0410af4814927005a6a21ab5a75fa9c6bd580ca5311ab48f1195c2cf7",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_validation_splits.py",
+      "functional_destination": "src/pipeline/build_validation_splits.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "6f6ee221e394ada0aabb7f0828d6f27987b4ad225a4220b269b2513f8b09a049",
+      "sha256_after": "6f6ee221e394ada0aabb7f0828d6f27987b4ad225a4220b269b2513f8b09a049",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/build_walking_accessibility.py",
+      "functional_destination": "src/pipeline/build_walking_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9ccdc8f28cb964e2dcd2c816d99ad1dfe9c6e34aaff4b29ac6a88e2f0fe5bb20",
+      "sha256_after": "9ccdc8f28cb964e2dcd2c816d99ad1dfe9c6e34aaff4b29ac6a88e2f0fe5bb20",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/export_claims_audit.py",
+      "functional_destination": "src/pipeline/export_claims_audit.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "401357ecc085a2013e49cfaab5bfa999c3e7f1d865ea08f83c1b57b79d5a783b",
+      "sha256_after": "401357ecc085a2013e49cfaab5bfa999c3e7f1d865ea08f83c1b57b79d5a783b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/export_walking_accessibility.py",
+      "functional_destination": "src/pipeline/export_walking_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "766d15ff983f3916ea6dd7fec2de64d308c94b5ed1e475574bc6bcbc9e8d5605",
+      "sha256_after": "766d15ff983f3916ea6dd7fec2de64d308c94b5ed1e475574bc6bcbc9e8d5605",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/inference.py",
+      "functional_destination": "src/pipeline/inference.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "78aa6c28f95e2361c673d46a240b64fffd75222fa5230323fc8c7e98405c72bb",
+      "sha256_after": "78aa6c28f95e2361c673d46a240b64fffd75222fa5230323fc8c7e98405c72bb",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/ingest_area_context.py",
+      "functional_destination": "src/pipeline/ingest_area_context.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "94cbfa0f26b574e43f1a29b7dc5fb42304542db4222464e6d2cdc0d13cc1f85c",
+      "sha256_after": "94cbfa0f26b574e43f1a29b7dc5fb42304542db4222464e6d2cdc0d13cc1f85c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/investigate_income_harmonisation.py",
+      "functional_destination": "src/pipeline/investigate_income_harmonisation.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "d69732baf516be1141933e8678ada187dcaddf28099c5ec178da948aa248284c",
+      "sha256_after": "d69732baf516be1141933e8678ada187dcaddf28099c5ec178da948aa248284c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/model_specification.py",
+      "functional_destination": "src/pipeline/model_specification.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "6e5fcf6604244b9f39e266b8f9e59ddd7b8ba8dfc7d013de0d9adf86446dbfee",
+      "sha256_after": "6e5fcf6604244b9f39e266b8f9e59ddd7b8ba8dfc7d013de0d9adf86446dbfee",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/osm_taxonomy.py",
+      "functional_destination": "src/pipeline/osm_taxonomy.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e354bf01d272984ba2eb05c45c15e13668f6fd2c366ce21226a5b2a8bf4aff22",
+      "sha256_after": "e354bf01d272984ba2eb05c45c15e13668f6fd2c366ce21226a5b2a8bf4aff22",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/output_paths.py",
+      "functional_destination": "src/pipeline/output_paths.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "43f6e914a59a2e05f9d64087044a7b46364b31b242df0ec16a6bc1cfc727addc",
+      "sha256_after": "43f6e914a59a2e05f9d64087044a7b46364b31b242df0ec16a6bc1cfc727addc",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/prepare_final_outputs.py",
+      "functional_destination": "src/pipeline/prepare_final_outputs.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "863660170576c344ad6ffbcaf7381b0305017e85ab33c3737eaa5fe01072023b",
+      "sha256_after": "863660170576c344ad6ffbcaf7381b0305017e85ab33c3737eaa5fe01072023b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/protocol.py",
+      "functional_destination": "src/pipeline/protocol.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "22590e52cc0d36838a3df6dc8e26d4840a9a94ee240351b1f952495ca6d17286",
+      "sha256_after": "22590e52cc0d36838a3df6dc8e26d4840a9a94ee240351b1f952495ca6d17286",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/qa_accessibility.py",
+      "functional_destination": "src/pipeline/qa_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1381b109af30a416cce246427c35c1cbba9f11fd5ac1bcd51091908ede5ef215",
+      "sha256_after": "1381b109af30a416cce246427c35c1cbba9f11fd5ac1bcd51091908ede5ef215",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/qa_euclidean_accessibility.py",
+      "functional_destination": "src/pipeline/qa_euclidean_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "392ec38b1c4af2fde3840fa4b870d7dfb89998fe304f715926842f5f760c402c",
+      "sha256_after": "392ec38b1c4af2fde3840fa4b870d7dfb89998fe304f715926842f5f760c402c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/qa_walking_accessibility.py",
+      "functional_destination": "src/pipeline/qa_walking_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "fa2759594aa5d56a1475e76e895b1df3ae56ee803d0739b8cb641c1bc3e8b165",
+      "sha256_after": "fa2759594aa5d56a1475e76e895b1df3ae56ee803d0739b8cb641c1bc3e8b165",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/qualified_income.py",
+      "functional_destination": "src/pipeline/qualified_income.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "b9143a2f9fb99db8b6ca9f0b5d8a4e8361898633547da3e46b95298647f0058a",
+      "sha256_after": "b9143a2f9fb99db8b6ca9f0b5d8a4e8361898633547da3e46b95298647f0058a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/rebuild_project.py",
+      "functional_destination": "src/pipeline/rebuild_project.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "48fc17254ad8d8eb9f245e16cc063303d2fe9330e641a6e413c66003bb013029",
+      "sha256_after": "48fc17254ad8d8eb9f245e16cc063303d2fe9330e641a6e413c66003bb013029",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/render_reporting_figures.py",
+      "functional_destination": "src/pipeline/render_reporting_figures.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5a7e27e29564bdc09ac8acdfc31c5b426421a289289bc3a10d15c2497e111660",
+      "sha256_after": "5a7e27e29564bdc09ac8acdfc31c5b426421a289289bc3a10d15c2497e111660",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/reporting_figures.py",
+      "functional_destination": "src/pipeline/reporting_figures.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5903d17c13991b4c90a5ae6762c12f474888ef14b079f022a842b53a1259c7f6",
+      "sha256_after": "5903d17c13991b4c90a5ae6762c12f474888ef14b079f022a842b53a1259c7f6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/review_municipal_income_sources.py",
+      "functional_destination": "src/pipeline/review_municipal_income_sources.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f1f64b6b9901336a64963c406cdd7e9ed6af18d83900ba2949dd68d5ec28ccc4",
+      "sha256_after": "f1f64b6b9901336a64963c406cdd7e9ed6af18d83900ba2949dd68d5ec28ccc4",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/run_boundary_sensitivity.py",
+      "functional_destination": "src/pipeline/run_boundary_sensitivity.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9b87a40a0643fef46949b12c192f4924f3635675518be020e41eb6de96c82b8d",
+      "sha256_after": "9b87a40a0643fef46949b12c192f4924f3635675518be020e41eb6de96c82b8d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/run_income_robustness.py",
+      "functional_destination": "src/pipeline/run_income_robustness.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "31621223592a2a67953aaa013b0b057598c838603cb4a65c7b7125dfa31272de",
+      "sha256_after": "31621223592a2a67953aaa013b0b057598c838603cb4a65c7b7125dfa31272de",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/run_pipeline.py",
+      "functional_destination": "src/pipeline/run_pipeline.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "96baeb71d5eb30cb624846ae8a1382a65437fdf33abfbc97290efcbfc546fa48",
+      "sha256_after": "96baeb71d5eb30cb624846ae8a1382a65437fdf33abfbc97290efcbfc546fa48",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/run_primary_models.py",
+      "functional_destination": "src/pipeline/run_primary_models.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "85267eca3741bd3b47f1d8caff1337e538a0b294e9a3d66c5a8da03b49f490d3",
+      "sha256_after": "85267eca3741bd3b47f1d8caff1337e538a0b294e9a3d66c5a8da03b49f490d3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/run_robustness_analyses.py",
+      "functional_destination": "src/pipeline/run_robustness_analyses.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e2f4d0f2ecba9bfcf50c82744b121d6a064d413b4ada8b06922d091e939b34a3",
+      "sha256_after": "e2f4d0f2ecba9bfcf50c82744b121d6a064d413b4ada8b06922d091e939b34a3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/run_spatial_diagnostics.py",
+      "functional_destination": "src/pipeline/run_spatial_diagnostics.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "61b293e663f52aaef6f8350137c9566a10cd5fc9f00570df3c1204ddd26647a1",
+      "sha256_after": "61b293e663f52aaef6f8350137c9566a10cd5fc9f00570df3c1204ddd26647a1",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/run_spatial_error_robustness.py",
+      "functional_destination": "src/pipeline/run_spatial_error_robustness.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f9751a39d4686b696f07056d6cd1ea6a34af855b67540e725b4653fd4dd4474d",
+      "sha256_after": "f9751a39d4686b696f07056d6cd1ea6a34af855b67540e725b4653fd4dd4474d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/smoke_checks.py",
+      "functional_destination": "src/pipeline/smoke_checks.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "dda659d473688eea4979f54cb4909889737527c60a96469cfe095c009795e4af",
+      "sha256_after": "dda659d473688eea4979f54cb4909889737527c60a96469cfe095c009795e4af",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/storage.py",
+      "functional_destination": "src/pipeline/storage.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "7ec3f8dce331ba3a421e4d1c37c6fff277edc47fda6909cecdad3414c20a4e3c",
+      "sha256_after": "7ec3f8dce331ba3a421e4d1c37c6fff277edc47fda6909cecdad3414c20a4e3c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/pipeline/update_income_documentation.py",
+      "functional_destination": "src/pipeline/update_income_documentation.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "6c646c06f764eb03e387b9a8467058fe33866a7983af00b45084d0bdd527050f",
+      "sha256_after": "6c646c06f764eb03e387b9a8467058fe33866a7983af00b45084d0bdd527050f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/spatial/spatial_diagnostics.py",
+      "functional_destination": "src/spatial/spatial_diagnostics.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "b5cb1835d4188382792eef82f34325e37b3a3ff54077aab57bcbf9524ee419a2",
+      "sha256_after": "b5cb1835d4188382792eef82f34325e37b3a3ff54077aab57bcbf9524ee419a2",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/spatial/walking_network.py",
+      "functional_destination": "src/spatial/walking_network.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "dfadcf11b5bc2c62ae287cad888f59ca33aa1d5a37a7a19aa0d93c65f9343074",
+      "sha256_after": "dfadcf11b5bc2c62ae287cad888f59ca33aa1d5a37a7a19aa0d93c65f9343074",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/spatial/walking_routing.py",
+      "functional_destination": "src/spatial/walking_routing.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "59601531453aa2a461a54882daa8c17f9522aa62f6cd0505d5e58c65eed3248f",
+      "sha256_after": "59601531453aa2a461a54882daa8c17f9522aa62f6cd0505d5e58c65eed3248f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/__init__.py",
+      "functional_destination": "src/v4/__init__.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9e7c7ca2dbd071fb3632657b36b2c9a19978406c4a7d450999ab6e00d4e9d203",
+      "sha256_after": "9e7c7ca2dbd071fb3632657b36b2c9a19978406c4a7d450999ab6e00d4e9d203",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/cities.py",
+      "functional_destination": "src/v4/cities.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "03a1b79cdb87e708ebb8f42a95b971981c541633e3d43bbfd1f23746ab84dc7a",
+      "sha256_after": "03a1b79cdb87e708ebb8f42a95b971981c541633e3d43bbfd1f23746ab84dc7a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/cli.py",
+      "functional_destination": "src/study/cli.py",
+      "action": "supersede_preserve_historical_object",
+      "sha256_before": "45dfb962718e81e93077c45429941ac8eafae4f9bbff3206c824bc3fc9785854",
+      "sha256_after": "45dfb962718e81e93077c45429941ac8eafae4f9bbff3206c824bc3fc9785854",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/context.py",
+      "functional_destination": "src/v4/context.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "4c4eee08a24cd8819521fd3ca1cc415902fbd367b850a74acd8a5dc317e0bd7d",
+      "sha256_after": "4c4eee08a24cd8819521fd3ca1cc415902fbd367b850a74acd8a5dc317e0bd7d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/geography.py",
+      "functional_destination": "src/v4/geography.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f68a35065fa97cd3431b13d3a811e2a63a07fa357c06012ab7f28006a0d2fdb0",
+      "sha256_after": "f68a35065fa97cd3431b13d3a811e2a63a07fa357c06012ab7f28006a0d2fdb0",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/historical_specification.py",
+      "functional_destination": "src/v4/historical_specification.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "92e204538a17c602ead8618922b3a519da813133c28810ee59708ccad0fba479",
+      "sha256_after": "92e204538a17c602ead8618922b3a519da813133c28810ee59708ccad0fba479",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/housing.py",
+      "functional_destination": "src/v4/housing.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e3e9c7573b1f0e1ee46a7e911422bdc029ac41d38bb287930e70bfedbfa8b9a3",
+      "sha256_after": "e3e9c7573b1f0e1ee46a7e911422bdc029ac41d38bb287930e70bfedbfa8b9a3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/identity.py",
+      "functional_destination": "src/v4/identity.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "5668a60ecc8fb3ee580893582bc52b2be2fe54ecb8b31392059d704bd85aaaa4",
+      "sha256_after": "5668a60ecc8fb3ee580893582bc52b2be2fe54ecb8b31392059d704bd85aaaa4",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/listings.py",
+      "functional_destination": "src/v4/listings.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "692639821c207394edffc02db1832ae7fbe3d9c2c204d8520c6879fcede781a5",
+      "sha256_after": "692639821c207394edffc02db1832ae7fbe3d9c2c204d8520c6879fcede781a5",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/persistence.py",
+      "functional_destination": "src/v4/persistence.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "a5a2cb0aafbd0eb1218b38f3e18b2f6a32db94ebc794b5de7f391f6d66abb78f",
+      "sha256_after": "a5a2cb0aafbd0eb1218b38f3e18b2f6a32db94ebc794b5de7f391f6d66abb78f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/readiness.py",
+      "functional_destination": "src/v4/readiness.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "b9e650b5eeb880b5104103fbcef59450320960c49addcac5dd8bb5d98d84039f",
+      "sha256_after": "b9e650b5eeb880b5104103fbcef59450320960c49addcac5dd8bb5d98d84039f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/reporting.py",
+      "functional_destination": "src/v4/reporting.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "57cf755e426bf9111c360f1d984660d64f81f2a91419d65148349ea23c948302",
+      "sha256_after": "57cf755e426bf9111c360f1d984660d64f81f2a91419d65148349ea23c948302",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/runtime.py",
+      "functional_destination": "src/v4/runtime.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "60bbc77436161ec0405bcd20f3dd7c6cfc624d032184340ed16292458e259045",
+      "sha256_after": "60bbc77436161ec0405bcd20f3dd7c6cfc624d032184340ed16292458e259045",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/source_reuse.py",
+      "functional_destination": "src/v4/source_reuse.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "299a0dfaae930653c4452d253a86af7159debfde2acf453cdf4947f955a3780f",
+      "sha256_after": "299a0dfaae930653c4452d253a86af7159debfde2acf453cdf4947f955a3780f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/specification.py",
+      "functional_destination": "src/v4/specification.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "9f8cb7ae63716dbd167a78e54446bd973a4474390f03e2e819765a43021de7b0",
+      "sha256_after": "9f8cb7ae63716dbd167a78e54446bd973a4474390f03e2e819765a43021de7b0",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "src/v4/stockholm_boundary.py",
+      "functional_destination": "src/v4/stockholm_boundary.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "41540467767ce33059236da391f0602cdd65f131d4754b3d4fdc8f5eaa0eb3e2",
+      "sha256_after": "41540467767ce33059236da391f0602cdd65f131d4754b3d4fdc8f5eaa0eb3e2",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_airbnb_sample.py",
+      "functional_destination": "tests/test_airbnb_sample.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "871698790d297e2d2e68b7dc302037fdba98134ffe9951951622758fd8df1006",
+      "sha256_after": "871698790d297e2d2e68b7dc302037fdba98134ffe9951951622758fd8df1006",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_context_geography.py",
+      "functional_destination": "tests/test_context_geography.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "8928dcccc56129ecb60c9d38095ecb75ed6da17e6c41b6e69c185a24dde1192a",
+      "sha256_after": "8928dcccc56129ecb60c9d38095ecb75ed6da17e6c41b6e69c185a24dde1192a",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_context_ingestion.py",
+      "functional_destination": "tests/test_context_ingestion.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0160d4ff84ceba5a14eeca8b8e0d9c45a7035d48170fe666fc009aca9ba4edc7",
+      "sha256_after": "0160d4ff84ceba5a14eeca8b8e0d9c45a7035d48170fe666fc009aca9ba4edc7",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_database.py",
+      "functional_destination": "tests/test_database.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "32c51bc48e32ae12ac0b80eb160353342102a568205dba5dadcab9da10c2d7f9",
+      "sha256_after": "32c51bc48e32ae12ac0b80eb160353342102a568205dba5dadcab9da10c2d7f9",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_database_diagnostic.py",
+      "functional_destination": "tests/test_database_diagnostic.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "2780cb815e5736eca13ba12f97566b26c0d7248ef2a099b5dc615cebef80ce28",
+      "sha256_after": "2780cb815e5736eca13ba12f97566b26c0d7248ef2a099b5dc615cebef80ce28",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_euclidean_accessibility.py",
+      "functional_destination": "tests/test_euclidean_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "82f0b6dccf204c7943c878adce45334c8486ed58ee3dc7fe4c36e5e1593a6b4c",
+      "sha256_after": "82f0b6dccf204c7943c878adce45334c8486ed58ee3dc7fe4c36e5e1593a6b4c",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_income_harmonisation.py",
+      "functional_destination": "tests/test_income_harmonisation.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "537a7969328a5af820dd76440ec75fa31e7627c0c36419be2ecf1b8cc39a5d8d",
+      "sha256_after": "537a7969328a5af820dd76440ec75fa31e7627c0c36419be2ecf1b8cc39a5d8d",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_municipal_income_sources.py",
+      "functional_destination": "tests/test_municipal_income_sources.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e7cc0e7a8a68f7889d6b91e4a2bdf6cea1eb231e46f5ca94fb43e387ef8efdfc",
+      "sha256_after": "e7cc0e7a8a68f7889d6b91e4a2bdf6cea1eb231e46f5ca94fb43e387ef8efdfc",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_official_transport_archive.py",
+      "functional_destination": "tests/test_official_transport_archive.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "eeb9a94acb36e1c981ce17d4e1edf210bf8037f2199d23bca3d5231f2973904e",
+      "sha256_after": "eeb9a94acb36e1c981ce17d4e1edf210bf8037f2199d23bca3d5231f2973904e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_official_transport_assessment.py",
+      "functional_destination": "tests/test_official_transport_assessment.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "ba20aff2ac7b48d3b553da2629fcb40120b97d6363976b5f1c83fefa7cfeee1e",
+      "sha256_after": "ba20aff2ac7b48d3b553da2629fcb40120b97d6363976b5f1c83fefa7cfeee1e",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_price_policy.py",
+      "functional_destination": "tests/test_price_policy.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "011d0cd3d6acb2d9c984d9558f4795a0520c2556d00913f1824b59dcf5b865c6",
+      "sha256_after": "011d0cd3d6acb2d9c984d9558f4795a0520c2556d00913f1824b59dcf5b865c6",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_qualified_income.py",
+      "functional_destination": "tests/test_qualified_income.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "f86d6badc3a26dee76e04b2aa35fde813835044ccfb6971b0b7bb1180d92cffb",
+      "sha256_after": "f86d6badc3a26dee76e04b2aa35fde813835044ccfb6971b0b7bb1180d92cffb",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_reporting_figures.py",
+      "functional_destination": "tests/test_reporting_figures.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "e29116ea6083f1725d7b8e85bae9a96e64488a5abed0af7304cf536f6cade3eb",
+      "sha256_after": "e29116ea6083f1725d7b8e85bae9a96e64488a5abed0af7304cf536f6cade3eb",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_runner_recovery.py",
+      "functional_destination": "tests/test_runner_recovery.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c52aea43fed6e19d86bc6192636aec37deb99e7686b314594772f6d993efbae0",
+      "sha256_after": "c52aea43fed6e19d86bc6192636aec37deb99e7686b314594772f6d993efbae0",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_source_outcome_integration.py",
+      "functional_destination": "tests/test_source_outcome_integration.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "1937c35ce3d72b5b703daf5e3fc7ed1973d5cf865d4e1eb8153c9af34b72d3e3",
+      "sha256_after": "1937c35ce3d72b5b703daf5e3fc7ed1973d5cf865d4e1eb8153c9af34b72d3e3",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_spatial_features.py",
+      "functional_destination": "tests/test_spatial_features.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0939cb6ff0627b6d685704fd9be8aa54b011c0c427be6f5a6875786f62e406ff",
+      "sha256_after": "0939cb6ff0627b6d685704fd9be8aa54b011c0c427be6f5a6875786f62e406ff",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_spatial_residual_join.py",
+      "functional_destination": "tests/test_spatial_residual_join.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "272733f2048b7721d2dcc3e3dd37056a3185f69b19b74d48e5aeca64c2611261",
+      "sha256_after": "272733f2048b7721d2dcc3e3dd37056a3185f69b19b74d48e5aeca64c2611261",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_accessibility_only.py",
+      "functional_destination": "tests/test_v4_accessibility_only.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "7dea9806155689c183fc00c92025ecdbd25a428080901131e3d0b97d8d49fb12",
+      "sha256_after": "7dea9806155689c183fc00c92025ecdbd25a428080901131e3d0b97d8d49fb12",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_architecture.py",
+      "functional_destination": "tests/test_v4_architecture.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "76c098463afd997f5bf7c97c9770046e2b1f53574c7b414d1a2da43493c2c8ba",
+      "sha256_after": "76c098463afd997f5bf7c97c9770046e2b1f53574c7b414d1a2da43493c2c8ba",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_context.py",
+      "functional_destination": "tests/test_v4_context.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "318057241a0f12888dd8707d8067f1171d2276c265a4b0f6cb89506ced481669",
+      "sha256_after": "318057241a0f12888dd8707d8067f1171d2276c265a4b0f6cb89506ced481669",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_geography.py",
+      "functional_destination": "tests/test_v4_geography.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "792a7d84fbb4769b83797523c53ec01ba1f6677608a0f0c29828cc94bfda0b00",
+      "sha256_after": "792a7d84fbb4769b83797523c53ec01ba1f6677608a0f0c29828cc94bfda0b00",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_housing.py",
+      "functional_destination": "tests/test_v4_housing.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "4b67e4b68bf40003f97882d8b626a08d58f727c252ea32f139f3e67f2c535fbe",
+      "sha256_after": "4b67e4b68bf40003f97882d8b626a08d58f727c252ea32f139f3e67f2c535fbe",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_listings.py",
+      "functional_destination": "tests/test_v4_listings.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "c03537f3e20d9d9c314d5693a91cf7284895f6a3fd42a82005948a29878fb16b",
+      "sha256_after": "c03537f3e20d9d9c314d5693a91cf7284895f6a3fd42a82005948a29878fb16b",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_persistence.py",
+      "functional_destination": "tests/test_v4_persistence.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "3f91e446e655b601ea68a7aeebd84b67d511ea09f3cda07d2491dcb6ad4122a2",
+      "sha256_after": "3f91e446e655b601ea68a7aeebd84b67d511ea09f3cda07d2491dcb6ad4122a2",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_rinkeby_polygon_check.py",
+      "functional_destination": "tests/test_v4_rinkeby_polygon_check.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "692101b12f9a942e21d24edfab1ed02ded0f5feaec6071f764d5c611476d344f",
+      "sha256_after": "692101b12f9a942e21d24edfab1ed02ded0f5feaec6071f764d5c611476d344f",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_specification.py",
+      "functional_destination": "tests/test_v4_specification.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "0c0dacb2d2261fbe1d1911385a47477ce384c7af53b44f9367bddd4ed9cfc7c5",
+      "sha256_after": "0c0dacb2d2261fbe1d1911385a47477ce384c7af53b44f9367bddd4ed9cfc7c5",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_v4_stockholm_boundary.py",
+      "functional_destination": "tests/test_v4_stockholm_boundary.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "578bad01ae6055e66ac7ecf4847691493ad6288fa68ceeb2af23a4dd816faf62",
+      "sha256_after": "578bad01ae6055e66ac7ecf4847691493ad6288fa68ceeb2af23a4dd816faf62",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_version3_methods.py",
+      "functional_destination": "tests/test_version3_methods.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "4383c6b608f0d3a3f020e965ba2b2937d1ac9eab2d89265a32f88c39fd9a4009",
+      "sha256_after": "4383c6b608f0d3a3f020e965ba2b2937d1ac9eab2d89265a32f88c39fd9a4009",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    },
+    {
+      "old_path": "tests/test_walking_accessibility.py",
+      "functional_destination": "tests/test_walking_accessibility.py",
+      "action": "preserve_reuse_or_history",
+      "sha256_before": "23d51a2d2d40b617c44a0ca1877282471c794b2e7de69068bcb38955c4b449b4",
+      "sha256_after": "23d51a2d2d40b617c44a0ca1877282471c794b2e7de69068bcb38955c4b449b4",
+      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+    }
+  ]
+}

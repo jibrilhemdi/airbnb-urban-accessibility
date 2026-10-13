@@ -1,0 +1,891 @@
+{
+  "design_id": "v4_accessibility_only_20261011",
+  "date": "2026-10-11",
+  "status": "PARTIAL_BLOCKED",
+  "cities": {
+    "copenhagen_frederiksberg": {
+      "city": "copenhagen_frederiksberg",
+      "mask": {
+        "valid": true,
+        "bounds_metric": [
+          716905.4998303998,
+          6168579.280506641,
+          734618.1900348759,
+          6182091.849518598
+        ],
+        "geometry_type": "MultiPolygon",
+        "gross_area_km2": 100.40664276932195,
+        "connected_pieces": 37
+      },
+      "areas": [
+        {
+          "name": "Indre By",
+          "valid": true,
+          "area_id": "cph_01",
+          "native_id": "1",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 10.471831742950545,
+          "listing_support": {
+            "raw": 3092,
+            "dwelling": 2754,
+            "positive": 1840,
+            "near_analysis_boundary_positive": 134
+          },
+          "connected_pieces": 4,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 1840,
+          "proposed_training_positive": 10668
+        },
+        {
+          "name": "Østerbro",
+          "valid": true,
+          "area_id": "cph_02",
+          "native_id": "2",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 9.772907819724496,
+          "listing_support": {
+            "raw": 2454,
+            "dwelling": 2307,
+            "positive": 1421,
+            "near_analysis_boundary_positive": 401
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 1421,
+          "proposed_training_positive": 11087
+        },
+        {
+          "name": "Nørrebro",
+          "valid": true,
+          "area_id": "cph_03",
+          "native_id": "3",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 4.107776581359555,
+          "listing_support": {
+            "raw": 4209,
+            "dwelling": 3971,
+            "positive": 2208,
+            "near_analysis_boundary_positive": 427
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 2208,
+          "proposed_training_positive": 10300
+        },
+        {
+          "name": "Vesterbro-Kongens Enghave",
+          "valid": true,
+          "area_id": "cph_04",
+          "native_id": "4",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 8.26214649991105,
+          "listing_support": {
+            "raw": 3958,
+            "dwelling": 3664,
+            "positive": 2174,
+            "near_analysis_boundary_positive": 615
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 2174,
+          "proposed_training_positive": 10334
+        },
+        {
+          "name": "Valby",
+          "valid": true,
+          "area_id": "cph_05",
+          "native_id": "5",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 9.235112802430747,
+          "listing_support": {
+            "raw": 959,
+            "dwelling": 839,
+            "positive": 481,
+            "near_analysis_boundary_positive": 81
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 481,
+          "proposed_training_positive": 12027
+        },
+        {
+          "name": "Vanløse",
+          "valid": true,
+          "area_id": "cph_06",
+          "native_id": "6",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 6.699013268802093,
+          "listing_support": {
+            "raw": 547,
+            "dwelling": 471,
+            "positive": 274,
+            "near_analysis_boundary_positive": 69
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 274,
+          "proposed_training_positive": 12234
+        },
+        {
+          "name": "Brønshøj-Husum",
+          "valid": true,
+          "area_id": "cph_07",
+          "native_id": "7",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 8.740776580187891,
+          "listing_support": {
+            "raw": 420,
+            "dwelling": 358,
+            "positive": 221,
+            "near_analysis_boundary_positive": 25
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 221,
+          "proposed_training_positive": 12287
+        },
+        {
+          "name": "Bispebjerg",
+          "valid": true,
+          "area_id": "cph_08",
+          "native_id": "8",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 6.8299363757868505,
+          "listing_support": {
+            "raw": 1072,
+            "dwelling": 930,
+            "positive": 534,
+            "near_analysis_boundary_positive": 92
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 534,
+          "proposed_training_positive": 11974
+        },
+        {
+          "name": "Amager Øst",
+          "valid": true,
+          "area_id": "cph_09",
+          "native_id": "9",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 9.345319403905364,
+          "listing_support": {
+            "raw": 1803,
+            "dwelling": 1620,
+            "positive": 983,
+            "near_analysis_boundary_positive": 166
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 983,
+          "proposed_training_positive": 11525
+        },
+        {
+          "name": "Amager Vest",
+          "valid": true,
+          "area_id": "cph_10",
+          "native_id": "10",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0101",
+          "gross_area_km2": 19.36464785113075,
+          "listing_support": {
+            "raw": 2053,
+            "dwelling": 1811,
+            "positive": 1067,
+            "near_analysis_boundary_positive": 345
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 1067,
+          "proposed_training_positive": 11441
+        },
+        {
+          "name": "Frederiksberg",
+          "valid": true,
+          "area_id": "frederiksberg_0147",
+          "native_id": "0147",
+          "components": 1,
+          "source_crs": "EPSG:4326",
+          "municipality": "0147",
+          "gross_area_km2": 8.708695401847804,
+          "listing_support": {
+            "raw": 2499,
+            "dwelling": 2294,
+            "positive": 1305,
+            "near_analysis_boundary_positive": 318
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 1305,
+          "proposed_training_positive": 11203
+        }
+      ],
+      "counts": {
+        "raw": 23144,
+        "inside_raw": 23068,
+        "outside_raw": 76,
+        "positive_price": 12521,
+        "inside_dwelling": 21021,
+        "inside_positive": 12508,
+        "outside_dwelling": 59,
+        "outside_positive": 13,
+        "dwelling_filtered": 21080,
+        "invalid_coordinates": 0,
+        "near_outer_150m_raw": 2121,
+        "near_outer_150m_dwelling": 1880,
+        "near_outer_150m_positive": 1233
+      },
+      "status": "QUALIFIED",
+      "blockers": [],
+      "coverage": {
+        "outside_mask_m2": 1382847.4767151524,
+        "mask_uncovered_m2": 252124.5504956619,
+        "summed_overlap_m2": 798.6324472874403,
+        "union_gross_area_km2": 101.53736569558986,
+        "pairs_with_positive_overlap": [
+          {
+            "areas": [
+              "cph_01",
+              "frederiksberg_0147"
+            ],
+            "overlap_m2": 1.6765800618996802
+          },
+          {
+            "areas": [
+              "cph_03",
+              "frederiksberg_0147"
+            ],
+            "overlap_m2": 22.73575529276717
+          },
+          {
+            "areas": [
+              "cph_04",
+              "frederiksberg_0147"
+            ],
+            "overlap_m2": 29.81857492822501
+          },
+          {
+            "areas": [
+              "cph_05",
+              "frederiksberg_0147"
+            ],
+            "overlap_m2": 110.85829812605344
+          },
+          {
+            "areas": [
+              "cph_06",
+              "frederiksberg_0147"
+            ],
+            "overlap_m2": 628.629150969847
+          },
+          {
+            "areas": [
+              "cph_08",
+              "frederiksberg_0147"
+            ],
+            "overlap_m2": 4.9140875906438675
+          }
+        ]
+      },
+      "snapshot": "2026-06-30",
+      "design_id": "v4_accessibility_only_20261011",
+      "covers_crs": "EPSG:4326",
+      "metric_crs": "EPSG:25832",
+      "tie_policy": "strict_unique_else_unresolved; municipality compatibility required for Copenhagen",
+      "mask_status": "QUALIFIED_INHERITED_OPERATIONAL",
+      "policy_sha256": "ef91040dcb8f8578eef538201ff1739ed04ee57467aab91543342db2aec55326",
+      "analysis_status": "QUALIFIED_INHERITED_OPERATIONAL",
+      "housing_required": false,
+      "adjacent_grouping": "NONE_FROZEN; sparse/unqualified cases remain blocked",
+      "native_area_count": 11,
+      "source_reingested": false,
+      "definition_version": "v4_geography_A03_20261011",
+      "final_sample_frozen": false,
+      "certification_limits": "Retains inherited V3 ten districts plus Frederiksberg and both municipalities; minor registered overlap/gap/shoreline mismatch is audited, not repaired. Strict unique and municipality-compatible covers assignment. All positive eligible inside listings have unique compatible assignments; this is not exact June linework certification or a frozen A06 sample.",
+      "assignment_status_raw": {
+        "unique": 23066,
+        "unmatched": 2,
+        "outside_boundary": 76
+      },
+      "source_listing_run_id": "research_v4_copenhagen_frederiksberg_20261011T143812Z",
+      "proposed_holdout_count": 11,
+      "research_models_fitted": false,
+      "fold_memberships_frozen": false,
+      "listing_manifest_sha256": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13",
+      "geography_manifest_sha256": "352abab9128f086301837ce932ac4b1ec587f40c5accc0d6c6dbb3d7fbc5f79c",
+      "assignment_status_dwelling": {
+        "unique": 21019,
+        "unmatched": 2,
+        "outside_boundary": 59
+      },
+      "proposed_supported_holdout_count": 11,
+      "inside_positive_assignment_status": {
+        "unique": 12508
+      }
+    },
+    "oslo": {
+      "city": "oslo",
+      "mask": {
+        "valid": true,
+        "bounds_metric": [
+          248657.28000000006,
+          6637442.11,
+          273925.92000000016,
+          6674528.679999999
+        ],
+        "geometry_type": "MultiPolygon",
+        "gross_area_km2": 481.04034032884954,
+        "connected_pieces": 1
+      },
+      "areas": [
+        {
+          "name": "Gamle Oslo",
+          "valid": true,
+          "area_id": "oslo_01",
+          "native_id": "01",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 15.812297568690418,
+          "listing_support": {
+            "raw": 2512,
+            "dwelling": 2185,
+            "positive": 1564,
+            "near_analysis_boundary_positive": 421
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 1564,
+          "proposed_training_positive": 6993
+        },
+        {
+          "name": "Grünerløkka",
+          "valid": true,
+          "area_id": "oslo_02",
+          "native_id": "02",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 4.759543423250075,
+          "listing_support": {
+            "raw": 2447,
+            "dwelling": 2182,
+            "positive": 1526,
+            "near_analysis_boundary_positive": 501
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 1526,
+          "proposed_training_positive": 7031
+        },
+        {
+          "name": "Sagene",
+          "valid": true,
+          "area_id": "oslo_03",
+          "native_id": "03",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 3.1123873641652637,
+          "listing_support": {
+            "raw": 1544,
+            "dwelling": 1455,
+            "positive": 993,
+            "near_analysis_boundary_positive": 310
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 993,
+          "proposed_training_positive": 7564
+        },
+        {
+          "name": "St. Hanshaugen",
+          "valid": true,
+          "area_id": "oslo_04",
+          "native_id": "04",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 3.57993119031849,
+          "listing_support": {
+            "raw": 1569,
+            "dwelling": 1390,
+            "positive": 1002,
+            "near_analysis_boundary_positive": 341
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 1002,
+          "proposed_training_positive": 7555
+        },
+        {
+          "name": "Frogner",
+          "valid": true,
+          "area_id": "oslo_05",
+          "native_id": "05",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 13.732626434012294,
+          "listing_support": {
+            "raw": 1823,
+            "dwelling": 1621,
+            "positive": 1222,
+            "near_analysis_boundary_positive": 259
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 1222,
+          "proposed_training_positive": 7335
+        },
+        {
+          "name": "Ullern",
+          "valid": true,
+          "area_id": "oslo_06",
+          "native_id": "06",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 9.778321284024303,
+          "listing_support": {
+            "raw": 356,
+            "dwelling": 311,
+            "positive": 242,
+            "near_analysis_boundary_positive": 46
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 242,
+          "proposed_training_positive": 8315
+        },
+        {
+          "name": "Vestre Aker",
+          "valid": true,
+          "area_id": "oslo_07",
+          "native_id": "07",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 16.58447070553538,
+          "listing_support": {
+            "raw": 430,
+            "dwelling": 369,
+            "positive": 276,
+            "near_analysis_boundary_positive": 46
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 276,
+          "proposed_training_positive": 8281
+        },
+        {
+          "name": "Nordre Aker",
+          "valid": true,
+          "area_id": "oslo_08",
+          "native_id": "08",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 13.70297187450513,
+          "listing_support": {
+            "raw": 553,
+            "dwelling": 509,
+            "positive": 382,
+            "near_analysis_boundary_positive": 92
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 382,
+          "proposed_training_positive": 8175
+        },
+        {
+          "name": "Bjerke",
+          "valid": true,
+          "area_id": "oslo_09",
+          "native_id": "09",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 7.931661757956644,
+          "listing_support": {
+            "raw": 356,
+            "dwelling": 307,
+            "positive": 219,
+            "near_analysis_boundary_positive": 36
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 219,
+          "proposed_training_positive": 8338
+        },
+        {
+          "name": "Grorud",
+          "valid": true,
+          "area_id": "oslo_10",
+          "native_id": "10",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 7.053468840526005,
+          "listing_support": {
+            "raw": 101,
+            "dwelling": 77,
+            "positive": 56,
+            "near_analysis_boundary_positive": 14
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 56,
+          "proposed_training_positive": 8501
+        },
+        {
+          "name": "Stovner",
+          "valid": true,
+          "area_id": "oslo_11",
+          "native_id": "11",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 8.258553396227718,
+          "listing_support": {
+            "raw": 57,
+            "dwelling": 42,
+            "positive": 36,
+            "near_analysis_boundary_positive": 6
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 36,
+          "proposed_training_positive": 8521
+        },
+        {
+          "name": "Alna",
+          "valid": true,
+          "area_id": "oslo_12",
+          "native_id": "12",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 13.708980043163773,
+          "listing_support": {
+            "raw": 285,
+            "dwelling": 189,
+            "positive": 136,
+            "near_analysis_boundary_positive": 35
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 136,
+          "proposed_training_positive": 8421
+        },
+        {
+          "name": "Østensjø",
+          "valid": true,
+          "area_id": "oslo_13",
+          "native_id": "13",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 11.851392311936216,
+          "listing_support": {
+            "raw": 379,
+            "dwelling": 316,
+            "positive": 253,
+            "near_analysis_boundary_positive": 41
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 253,
+          "proposed_training_positive": 8304
+        },
+        {
+          "name": "Nordstrand",
+          "valid": true,
+          "area_id": "oslo_14",
+          "native_id": "14",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 26.658708186161636,
+          "listing_support": {
+            "raw": 616,
+            "dwelling": 547,
+            "positive": 415,
+            "near_analysis_boundary_positive": 43
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 415,
+          "proposed_training_positive": 8142
+        },
+        {
+          "name": "Søndre Nordstrand",
+          "valid": true,
+          "area_id": "oslo_15",
+          "native_id": "15",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 20.481622610622267,
+          "listing_support": {
+            "raw": 151,
+            "dwelling": 107,
+            "positive": 86,
+            "near_analysis_boundary_positive": 21
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 86,
+          "proposed_training_positive": 8471
+        },
+        {
+          "name": "Sentrum",
+          "valid": true,
+          "area_id": "oslo_16",
+          "native_id": "16",
+          "components": 1,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 2.597531318690271,
+          "listing_support": {
+            "raw": 173,
+            "dwelling": 146,
+            "positive": 132,
+            "near_analysis_boundary_positive": 21
+          },
+          "connected_pieces": 1,
+          "count_safeguard_met": true,
+          "proposed_holdout_positive": 132,
+          "proposed_training_positive": 8425
+        },
+        {
+          "name": "Marka",
+          "valid": true,
+          "area_id": "oslo_17",
+          "native_id": "17",
+          "components": 2,
+          "source_crs": "EPSG:25833",
+          "gross_area_km2": 301.4321507941713,
+          "listing_support": {
+            "raw": 39,
+            "dwelling": 23,
+            "positive": 17,
+            "near_analysis_boundary_positive": 9
+          },
+          "connected_pieces": 2,
+          "count_safeguard_met": false,
+          "proposed_holdout_positive": 17,
+          "proposed_training_positive": 8540
+        }
+      ],
+      "counts": {
+        "raw": 13391,
+        "inside_raw": 13391,
+        "outside_raw": 0,
+        "positive_price": 8557,
+        "inside_dwelling": 11776,
+        "inside_positive": 8557,
+        "outside_dwelling": 0,
+        "outside_positive": 0,
+        "dwelling_filtered": 11776,
+        "invalid_coordinates": 0,
+        "near_outer_150m_raw": 45,
+        "near_outer_150m_dwelling": 37,
+        "near_outer_150m_positive": 29
+      },
+      "status": "BLOCKED",
+      "blockers": [
+        "Oslo borough ArcGIS item/layer reuse licence is not stated; public availability alone is insufficient qualification",
+        "Marka native area 17 has 17 positive eligible listings, below proposed 30-test safeguard; no authorized/verified service-area spatial split or adjacent grouping is frozen"
+      ],
+      "coverage": {
+        "outside_mask_m2": 12.481649719903091,
+        "mask_uncovered_m2": 3733.711153558167,
+        "summed_overlap_m2": 0.004612922668457031,
+        "union_gross_area_km2": 481.0366190993443,
+        "pairs_with_positive_overlap": [
+          {
+            "areas": [
+              "oslo_07",
+              "oslo_17"
+            ],
+            "overlap_m2": 0.004611676506698978
+          }
+        ]
+      },
+      "snapshot": "2026-06-30",
+      "design_id": "v4_accessibility_only_20261011",
+      "covers_crs": "EPSG:4326",
+      "metric_crs": "EPSG:25833",
+      "tie_policy": "strict_unique_else_unresolved; municipality compatibility required for Copenhagen",
+      "mask_status": "RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT",
+      "policy_sha256": "2ddf180f16072d1e593f395c0c6921988e8217a77b539621d588dbe4e10cae17",
+      "analysis_status": "BLOCKED",
+      "housing_required": false,
+      "adjacent_grouping": "NONE_FROZEN; sparse/unqualified cases remain blocked",
+      "native_area_count": 17,
+      "source_reingested": false,
+      "definition_version": "v4_geography_A03_20261011",
+      "final_sample_frozen": false,
+      "old_vs_amended_mask": {
+        "hausdorff_m": 0.5130187073177201,
+        "symmetric_difference_m2": 24.98239569960513,
+        "changed_listing_inclusion": 0
+      },
+      "certification_limits": "Operational Kartverket municipality 0301: catalogue reference 2026-01-01, source extraction 2025-12-10, polygon update 2025-11-11. No relevant enacted municipal change found for June 2026; exact June linework is not certified. Old API differs by sub-metre registration; equal area is not proof. Public borough scheme has 15 boroughs plus Sentrum/Marka (17 units/18 components), not future 2028 reform. Statistical land/freshwater area excludes sea; gross geometry includes sea. Borough QA is provisional, not approved context/fold geography.",
+      "assignment_status_raw": {
+        "unique": 13391
+      },
+      "source_listing_run_id": "research_v4_oslo_20261011T143812Z",
+      "proposed_holdout_count": 17,
+      "research_models_fitted": false,
+      "fold_memberships_frozen": false,
+      "listing_manifest_sha256": "c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8",
+      "geography_manifest_sha256": "550733b7e7107d042ce4f80c9abb186a0c8858edb9c0b76af7b5d99dde4456de",
+      "assignment_status_dwelling": {
+        "unique": 11776
+      },
+      "proposed_supported_holdout_count": 16,
+      "inside_positive_assignment_status": {
+        "unique": 8557
+      }
+    },
+    "stockholm": {
+      "city": "stockholm",
+      "mask": {
+        "valid": true,
+        "bounds_metric": [
+          656773.4550106502,
+          6569491.489046299,
+          682485.630181605,
+          6592667.161731042
+        ],
+        "geometry_type": "Polygon",
+        "gross_area_km2": 215.75729933965118,
+        "connected_pieces": 1
+      },
+      "areas": [],
+      "counts": {
+        "raw": 4806,
+        "inside_raw": 4806,
+        "outside_raw": 0,
+        "positive_price": 2510,
+        "inside_dwelling": 3834,
+        "inside_positive": 2510,
+        "outside_dwelling": 0,
+        "outside_positive": 0,
+        "dwelling_filtered": 3834,
+        "invalid_coordinates": 0,
+        "near_outer_150m_raw": 96,
+        "near_outer_150m_dwelling": 69,
+        "near_outer_150m_positive": 49
+      },
+      "status": "BLOCKED",
+      "blockers": [
+        "Current official 11-borough polygons with stable IDs, licence and valid full-city coverage remain unavailable: official metadata redirects to sign-in; public city archive is old, clipped and contains invalid geometry"
+      ],
+      "coverage": null,
+      "snapshot": "2026-06-30",
+      "design_id": "v4_accessibility_only_20261011",
+      "covers_crs": "EPSG:4326",
+      "metric_crs": "EPSG:3006",
+      "tie_policy": "strict_unique_else_unresolved; municipality compatibility required for Copenhagen",
+      "mask_status": "RESOLVED_WITH_DOCUMENTED_SOURCE_AMENDMENT",
+      "policy_sha256": "dd761918378e4dd695890c9660fc9a6e1b514f5039d4b06aa84375e2fa276651",
+      "analysis_status": "BLOCKED",
+      "housing_required": false,
+      "rejected_archive": {
+        "names": [
+          "Bromma",
+          "Enskede-Årsta-Vantör",
+          "Farsta",
+          "Hägersten-Älvsjö",
+          "Hässelby-Vällingby",
+          "Kungsholmen",
+          "Norrmalm",
+          "Rinkeby-Kista",
+          "Skarpnäck",
+          "Skärholmen",
+          "Spånga-Tensta",
+          "Södermalm",
+          "Östermalm"
+        ],
+        "reason": "13 old boroughs, all RAMKLIPP=yes, invalid geometry; not the current 11-area scheme. No repair/merger inferred.",
+        "status": "REJECTED_NOT_CURRENT_QUALIFIED_GEOGRAPHY",
+        "native_ids": [
+          "1",
+          "10",
+          "11",
+          "14",
+          "15",
+          "18",
+          "21",
+          "24",
+          "3",
+          "4",
+          "6",
+          "8",
+          "9"
+        ],
+        "source_crs": "EPSG:3011",
+        "native_count": 13,
+        "clipped_count": 13,
+        "invalid_count": 1,
+        "holdout_support": null,
+        "invalid_reasons": [
+          "Self-intersection[158537.622680334 6572692.00116224]"
+        ],
+        "coverage_qualified": false,
+        "archive_member_date": [
+          2020,
+          12,
+          10,
+          13,
+          38,
+          52
+        ],
+        "current_required_count": 11,
+        "qualified_analysis_area_count": null,
+        "unqualified_archive_area_sum_km2": 215.7507656834069
+      },
+      "adjacent_grouping": "NONE_FROZEN; sparse/unqualified cases remain blocked",
+      "native_area_count": null,
+      "source_reingested": false,
+      "definition_version": "v4_geography_A03_20261011",
+      "final_sample_frozen": false,
+      "certification_limits": "Retain accepted SCB RegSO 2025_v2 mask: municipality 0180, reference 2025-01-01; 127 components are not analysis/validation areas. Public archive 13 old boroughs is rejected, not repaired or merged to fabricate 11. Native/holdout support remains NULL until suitable polygons are acquired. No RegSO analysis alternative authorized/qualified here.",
+      "assignment_status_raw": {
+        "analysis_geometry_unavailable": 4806
+      },
+      "source_listing_run_id": "research_v4_stockholm_20261011T151637Z",
+      "proposed_holdout_count": null,
+      "research_models_fitted": false,
+      "fold_memberships_frozen": false,
+      "listing_manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172",
+      "geography_manifest_sha256": "4109d0dcf59b15240cfdf5db26f89c1e1431c82c09e2f22c180a04c2ef96ae26",
+      "assignment_status_dwelling": {
+        "analysis_geometry_unavailable": 3834
+      },
+      "expected_current_borough_names": [
+        "Bromma",
+        "Enskede-Årsta-Vantör",
+        "Farsta",
+        "Hägersten-Älvsjö",
+        "Hässelby-Vällingby",
+        "Järva",
+        "Kungsholmen",
+        "Norra innerstaden",
+        "Skarpnäck",
+        "Skärholmen",
+        "Södermalm"
+      ],
+      "proposed_supported_holdout_count": null,
+      "inside_positive_assignment_status": {
+        "analysis_geometry_unavailable": 2510
+      }
+    }
+  }
+}
