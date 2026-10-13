@@ -78,6 +78,13 @@ class ThesisReportingTests(unittest.TestCase):
         for row in maps:
             self.assertEqual([p['neighbourhood_boundaries'] for p in row['map_panels']],[11,17,11])
             self.assertTrue(all(p['square'] for p in row['map_panels']))
+            for panel in row['map_panels']:
+                context=panel['cartographic_context']
+                self.assertGreater(context['surrounding_municipalities'],0)
+                self.assertEqual(context['study_boundary_colour'],'white')
+                self.assertEqual(context['context_boundary_colour'],'#A5B4B0')
+                self.assertTrue(context['civic_reference_geometry_sha256'])
+                self.assertIn(context['capital'],{'Copenhagen','Oslo','Stockholm'})
         self.assertTrue(all(not row['data_text_outside_axes'] for row in manifest['layout_checks']))
         self.assertTrue(all(not row['plotted_values_outside_axes'] for row in manifest['layout_checks']))
         chart=next(item for item in manifest['items'] if item['logical_name']=='neighbourhood_performance_variation')

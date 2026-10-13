@@ -1,38 +1,27 @@
 {
   "status": "PASS",
-  "scope": "Simpler output folders, PNG-only figures, square maps with neighbourhood boundaries, complete displayed ranges, horizontal neighbourhood bars and concise README",
+  "scope": "Reference-style neighbourhood maps with surrounding municipalities, capital legend, white study/grey context borders, civic stars and project README rewrite",
   "full_suite": {
     "run": 140,
     "passed": 113,
     "skipped": 27,
     "failed": 0
   },
-  "isolated_PostGIS_tests": {
-    "run": 4,
-    "passed": 4,
-    "failed": 0
-  },
-  "remaining_historical_workflow_skips": 23,
-  "final_reporting_and_export_isolation_tests": {
-    "run": 8,
-    "passed": 8,
-    "failed": 0
-  },
+  "cartographic_SQL_immutability_guard_tests": 2,
   "compilation": "PASS",
   "whitespace": "PASS",
-  "preserved_files": 595,
-  "archived_output_files": 541,
-  "numerical_exports_byte_identical": 44,
-  "current_output_directories": [
-    "figures",
-    "tables",
-    "metrics"
+  "changed_figures": [
+    "study_areas",
+    "accessibility_spatial"
   ],
-  "current_output_files": 64,
+  "other_figures_byte_identical": 16,
+  "numerical_exports_byte_identical": 44,
   "figure_formats": [
     "PNG"
   ],
   "PNG_dpi": 300,
+  "prior_presentation_preserved_files": 104,
+  "prior_archive": "archive/before_neighbourhood_maps/manifest.json",
   "publication": {
     "status": "PASS",
     "artifact_files": 62,
@@ -45,7 +34,7 @@
     "final_run_lineage": "PASS",
     "numeric_claims_trace": "PASS",
     "independent_point_contrast_recalculation": "PASS",
-    "links_checked": 148,
+    "links_checked": 149,
     "visible_version_markers": "NONE",
     "clipped_labels": "NONE",
     "caption_and_header_overlap": "NONE",
@@ -64,12 +53,12 @@
   },
   "release": {
     "status": "PASS",
-    "package_files": 98,
-    "zip_entries": 98,
-    "links_checked": 92,
-    "manifest_sha256": "1e07a4bd8c9f1c3c927df61d65adfc4ca10e9f3635a36a7a6341a39fde2c5ab8",
-    "zip_sha256": "c8ba78d5528e8a3da7ed46aa4bd1eb878fd2f85964db7d6006098eed8fc2df04",
-    "zip_bytes": 7601373,
+    "package_files": 100,
+    "zip_entries": 100,
+    "links_checked": 93,
+    "manifest_sha256": "75d932bd2e362fe94929331da954c6c30ca3bae0069f78a4ed2f6552b8ae70fe",
+    "zip_sha256": "8dac115e3a9845dbbde5929efcbf3421880b5b272c7fdf48b881a2e1a68f9f95",
+    "zip_bytes": 7820645,
     "private_data_check": "PASS",
     "all_release_hashes": "PASS",
     "figure_formats": [
@@ -77,22 +66,84 @@
     ],
     "models_refitted": false
   },
+  "cartographic_context": {
+    "status": "PASS",
+    "scope": "Public cartographic context only",
+    "SQL_schema": "cartography",
+    "schema_migration": "PASS",
+    "immutable_update_guards_verified": 2,
+    "probes_rolled_back": true,
+    "source_and_geometry_hashes": "PASS",
+    "geometry_crs": "EPSG:4326",
+    "display_CRSs": {
+      "copenhagen": "EPSG:25832",
+      "oslo": "EPSG:25833",
+      "stockholm": "EPSG:3006"
+    },
+    "surrounding_municipalities": {
+      "copenhagen": 10,
+      "oslo": 9,
+      "stockholm": 12
+    },
+    "civic_stars": {
+      "copenhagen": "City Hall Square",
+      "oslo": "City Hall",
+      "stockholm": "City Hall"
+    },
+    "source_selector": {
+      "path": "config/reporting/map_context.json",
+      "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+      "artifact": "Public surrounding municipalities and verified civic reference points",
+      "spatial_crs": "EPSG:4326"
+    },
+    "scientific_SQL_mutated": false,
+    "models_refitted": false
+  },
+  "scientific_integrity": {
+    "status": "PASS_COMPLETE",
+    "design_id": "three_city_accessibility_transfer",
+    "source_files_checksum_verified": 87,
+    "source_receipts_checksum_verified": 38,
+    "immutable_sql_packages_verified": 751,
+    "saved_model_files_checksum_verified": 1176,
+    "transfer_predictions_reproduced_from_frozen_source_pipelines": 48,
+    "distinct_shared_source_models": 24,
+    "public_aggregate_artifacts_checksum_verified": 77,
+    "public_row_privacy_and_cell_support": "PASS",
+    "neutral_migration_integrity": "PASS",
+    "main_sha_unchanged": "7de587997157863e0ba1d36c3f39bdd45f2b9d23",
+    "previous_branch_sha_unchanged": "6150e3f3b4e6db01dd5bf5842404212343d1344a",
+    "primary_random_six_grid_frozen_sample_cardinality": "PASS",
+    "full_rerun_complete": true,
+    "primary_prediction_cities_complete": 3,
+    "association_cities_complete": 3,
+    "six_transfer_directions_complete": true,
+    "blocker": null,
+    "old_association_missingness_limit": 0.05,
+    "association_missingness_limit": 0.1,
+    "post_observation_amendment": true,
+    "fitted_packages_preserved": 682,
+    "fitted_code_snapshot_checks": 20460,
+    "saved_prediction_packages_checksum_verified": 682,
+    "predictive_and_transfer_artifacts_unchanged": true,
+    "required_robustness_accounted": true,
+    "historical_numeric_results_reused_as_final": false,
+    "researcher_excluded_discarded_package": "thesis_results_v3.zip; explicitly no longer needed",
+    "old_completed_audit_overwritten": false,
+    "reporting_catalog_sql_packages_unchanged": true,
+    "primary_and_transfer_RMSE_recomputed": "PASS",
+    "models_refitted": false
+  },
   "protected_files": 1695,
   "tracked_baseline_files": 263,
   "original_store_tables": 20,
-  "source_files_verified": 87,
-  "receipts_verified": 38,
-  "immutable_SQL_packages": 751,
-  "saved_model_files": 1176,
-  "prediction_packages": 682,
-  "fitted_code_checks": 20460,
-  "source_only_transfer_applications_reproduced": 48,
   "old_public_artifacts_byte_preserved": 77,
-  "historical_figure_hashes_verified": 49,
-  "scientific_models_refitted": false,
+  "scientific_SQL_mutated": false,
+  "models_refitted": false,
+  "project_README_rewritten": true,
+  "output_README_changed": false,
   "root_environment_files": [
     ".env"
   ],
-  "discarded_historical_ZIP": "Excluded at researcher request",
   "blockers": []
 }

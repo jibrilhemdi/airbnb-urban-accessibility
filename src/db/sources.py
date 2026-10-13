@@ -17,7 +17,7 @@ RAW_ROOT = PROJECT_ROOT / "data" / "raw"
 # These explicit namespaces have independent immutable receipts/selection and
 # analytical-store adapters. Unknown legacy providers continue to fail closed.
 ISOLATED_SOURCE_ROOTS = frozenset({
-    'v4', 'neighbourhoods', 'osm_civic', 'osm_civic_identity',
+    'v4', 'cartographic_context', 'neighbourhoods', 'osm_civic', 'osm_civic_identity',
     'osm_network', 'osm_destinations', 'osm_network_fragment', 'osm_destinations_fragment',
     'osm_network_recovery', 'osm_destinations_recovery', 'osm_destinations_completion',
     'osm_destination_geometry', 'population_discovery', 'population_catalogue', 'population_direct',

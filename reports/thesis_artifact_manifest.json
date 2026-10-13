@@ -2389,8 +2389,8 @@
     },
     {
       "filename": "outputs/figures/study_areas.png",
-      "sha256": "c606e8d664371998f8fcd49f6a1a50ad2e962acb16031275ffe7af10d760f6c9",
-      "bytes": 808019,
+      "sha256": "06deb208bdf60cd037ca81395fc8c223d4e3b881c6ef23f74b0a27a106900759",
+      "bytes": 885458,
       "research_question": "Design",
       "publication_status": "THESIS_READY_PENDING_FINAL_RELEASE_AUDIT",
       "source_run_artifact": [
@@ -2414,11 +2414,17 @@
           "family": "geography",
           "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9",
           "selector": "config/study/geography_selection.json"
+        },
+        {
+          "path": "config/reporting/map_context.json",
+          "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+          "artifact": "Public surrounding municipalities and verified civic reference points",
+          "spatial_crs": "EPSG:4326"
         }
       ],
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "generation_command": ".venv/bin/python -m src.reporting.thesis_refresh --render",
-      "caption": "Dark lines delineate the 11 Copenhagen, 17 Oslo and 11 Stockholm operational neighbourhoods used for validation. Municipal masks define membership. Each square panel retains its native projected CRS and scale; city scales differ. No individual listings. Inside Airbnb, CC BY 4.0; mask sources are in the source registry.",
+      "caption": "White boundaries delineate all 11 Copenhagen–Frederiksberg, 17 Oslo and 11 Stockholm study neighbourhoods. Grey borders show real surrounding municipalities for context only. Stars mark Copenhagen City Hall Square and the verified Oslo/Stockholm City Hall points. Native city CRSs and scales differ. Sources: Inside Airbnb, DAGI/DAWA, Kartverket, Statistics Sweden and pinned civic references.",
       "private_row_export": false,
       "kind": "figure",
       "logical_name": "study_areas",
@@ -2427,8 +2433,8 @@
         "PNG300dpi"
       ],
       "page_inches": [
-        12.6,
-        7.02
+        15.0,
+        8.169999999999998
       ],
       "spatial_crs": {
         "source": "EPSG:4326",
@@ -2438,12 +2444,13 @@
           "stockholm": "EPSG:3006"
         }
       },
-      "page_orientation": "landscape"
+      "page_orientation": "landscape",
+      "cartographic_context_only": true
     },
     {
       "filename": "outputs/figures/accessibility_spatial.png",
-      "sha256": "986470ef640ee578ca6ed9d29f6aa451b08459154620945b71f36b227a09aa81",
-      "bytes": 790498,
+      "sha256": "cb25ab43d56b409110591e12a655013cf14f7628d26e3ffa35b748002222c0b0",
+      "bytes": 923582,
       "research_question": "RQ1",
       "publication_status": "THESIS_READY_PENDING_FINAL_RELEASE_AUDIT",
       "source_run_artifact": [
@@ -2488,11 +2495,17 @@
           "family": "geography",
           "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9",
           "selector": "config/study/geography_selection.json"
+        },
+        {
+          "path": "config/reporting/map_context.json",
+          "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+          "artifact": "Public surrounding municipalities and verified civic reference points",
+          "spatial_crs": "EPSG:4326"
         }
       ],
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "generation_command": ".venv/bin/python -m src.reporting.thesis_refresh --render",
-      "caption": "Mean nearest-rail walking minutes in 500 m cells with at least five observations. Dark lines mark every frozen operational neighbourhood. Square panels retain native CRS and scale. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. © OpenStreetMap contributors, ODbL; Inside Airbnb CC BY 4.0.",
+      "caption": "Mean nearest-rail walking minutes in 500 m cells with at least five observations. White lines show study neighbourhoods; grey borders show surrounding municipalities. Stars are the verified civic references. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. Context has no analytical role. Sources: OpenStreetMap, Inside Airbnb, DAGI/DAWA, Kartverket and Statistics Sweden.",
       "private_row_export": false,
       "kind": "figure",
       "logical_name": "accessibility_spatial",
@@ -2501,8 +2514,8 @@
         "PNG300dpi"
       ],
       "page_inches": [
-        12.6,
-        7.02
+        15.0,
+        8.169999999999998
       ],
       "spatial_crs": {
         "source": "EPSG:4326",
@@ -2514,7 +2527,8 @@
       },
       "minimum_aggregate_n": 5,
       "colour_cap_minutes": 21.970186809761152,
-      "page_orientation": "landscape"
+      "page_orientation": "landscape",
+      "cartographic_context_only": true
     },
     {
       "filename": "outputs/metrics/accessibility_spatial_cells.csv",
@@ -5289,8 +5303,8 @@
     {
       "figure": "study_areas",
       "canvas_pixels": [
-        1260,
-        702
+        1500,
+        816
       ],
       "out_of_canvas_text": [],
       "caption_overlaps_axis_label": false,
@@ -5299,24 +5313,69 @@
       "plotted_values_outside_axes": [],
       "map_panels": [
         {
-          "title": "Copenhagen\n11 neighbourhoods",
-          "width_pixels": 376.8333333333334,
-          "height_pixels": 376.8333333333334,
+          "title": "Copenhagen · Denmark",
+          "width_pixels": 449.5000000000002,
+          "height_pixels": 449.5000000000002,
           "neighbourhood_boundaries": 11,
+          "cartographic_context": {
+            "surrounding_municipalities": 10,
+            "study_boundary_colour": "white",
+            "context_boundary_colour": "#A5B4B0",
+            "civic_reference": {
+              "name": "City Hall Square",
+              "point_kind": "square",
+              "source_crs": "EPSG:4326"
+            },
+            "civic_reference_geometry_sha256": "aeb7888e6b68a4fea4ac00958376b7ec761f0dc6fcff1306f9177969d2446477",
+            "capital": "Copenhagen",
+            "country": "Denmark"
+          },
           "square": true
         },
         {
-          "title": "Oslo\n17 neighbourhoods",
-          "width_pixels": 376.8333333333332,
-          "height_pixels": 376.8333333333332,
+          "title": "Oslo · Norway",
+          "width_pixels": 449.4999999999998,
+          "height_pixels": 449.4999999999999,
           "neighbourhood_boundaries": 17,
+          "cartographic_context": {
+            "surrounding_municipalities": 9,
+            "study_boundary_colour": "white",
+            "context_boundary_colour": "#A5B4B0",
+            "civic_reference": {
+              "name": "City Hall",
+              "osm_id": 24900009,
+              "osm_type": "way",
+              "point_kind": "town_hall",
+              "source_crs": "EPSG:4326",
+              "frozen_context_selector": "config/study/context_selection.json"
+            },
+            "civic_reference_geometry_sha256": "bab55d5a717899b51cfd29daf19a07931565fed7968fd33f83b0adbf700d354d",
+            "capital": "Oslo",
+            "country": "Norway"
+          },
           "square": true
         },
         {
-          "title": "Stockholm\n11 neighbourhoods",
-          "width_pixels": 376.83333333333314,
-          "height_pixels": 376.8333333333332,
+          "title": "Stockholm · Sweden",
+          "width_pixels": 449.4999999999998,
+          "height_pixels": 449.4999999999999,
           "neighbourhood_boundaries": 11,
+          "cartographic_context": {
+            "surrounding_municipalities": 12,
+            "study_boundary_colour": "white",
+            "context_boundary_colour": "#A5B4B0",
+            "civic_reference": {
+              "name": "City Hall",
+              "osm_id": 29368,
+              "osm_type": "relation",
+              "point_kind": "town_hall",
+              "source_crs": "EPSG:4326",
+              "frozen_context_selector": "config/study/context_selection.json"
+            },
+            "civic_reference_geometry_sha256": "e857b59db4c19a781cba3a001c7005f40ba6a23ab0af6f2706ffb3d6f7726c0a",
+            "capital": "Stockholm",
+            "country": "Sweden"
+          },
           "square": true
         }
       ]
@@ -5324,8 +5383,8 @@
     {
       "figure": "accessibility_spatial",
       "canvas_pixels": [
-        1260,
-        702
+        1500,
+        816
       ],
       "out_of_canvas_text": [],
       "caption_overlaps_axis_label": false,
@@ -5334,24 +5393,69 @@
       "plotted_values_outside_axes": [],
       "map_panels": [
         {
-          "title": "Copenhagen",
-          "width_pixels": 376.8333333333334,
-          "height_pixels": 376.8333333333334,
+          "title": "Copenhagen · Denmark",
+          "width_pixels": 449.5000000000002,
+          "height_pixels": 449.5000000000002,
           "neighbourhood_boundaries": 11,
+          "cartographic_context": {
+            "surrounding_municipalities": 10,
+            "study_boundary_colour": "white",
+            "context_boundary_colour": "#A5B4B0",
+            "civic_reference": {
+              "name": "City Hall Square",
+              "point_kind": "square",
+              "source_crs": "EPSG:4326"
+            },
+            "civic_reference_geometry_sha256": "aeb7888e6b68a4fea4ac00958376b7ec761f0dc6fcff1306f9177969d2446477",
+            "capital": "Copenhagen",
+            "country": "Denmark"
+          },
           "square": true
         },
         {
-          "title": "Oslo",
-          "width_pixels": 376.8333333333332,
-          "height_pixels": 376.8333333333332,
+          "title": "Oslo · Norway",
+          "width_pixels": 449.4999999999998,
+          "height_pixels": 449.4999999999999,
           "neighbourhood_boundaries": 17,
+          "cartographic_context": {
+            "surrounding_municipalities": 9,
+            "study_boundary_colour": "white",
+            "context_boundary_colour": "#A5B4B0",
+            "civic_reference": {
+              "name": "City Hall",
+              "osm_id": 24900009,
+              "osm_type": "way",
+              "point_kind": "town_hall",
+              "source_crs": "EPSG:4326",
+              "frozen_context_selector": "config/study/context_selection.json"
+            },
+            "civic_reference_geometry_sha256": "bab55d5a717899b51cfd29daf19a07931565fed7968fd33f83b0adbf700d354d",
+            "capital": "Oslo",
+            "country": "Norway"
+          },
           "square": true
         },
         {
-          "title": "Stockholm",
-          "width_pixels": 376.83333333333314,
-          "height_pixels": 376.8333333333332,
+          "title": "Stockholm · Sweden",
+          "width_pixels": 449.4999999999998,
+          "height_pixels": 449.4999999999999,
           "neighbourhood_boundaries": 11,
+          "cartographic_context": {
+            "surrounding_municipalities": 12,
+            "study_boundary_colour": "white",
+            "context_boundary_colour": "#A5B4B0",
+            "civic_reference": {
+              "name": "City Hall",
+              "osm_id": 29368,
+              "osm_type": "relation",
+              "point_kind": "town_hall",
+              "source_crs": "EPSG:4326",
+              "frozen_context_selector": "config/study/context_selection.json"
+            },
+            "civic_reference_geometry_sha256": "e857b59db4c19a781cba3a001c7005f40ba6a23ab0af6f2706ffb3d6f7726c0a",
+            "capital": "Stockholm",
+            "country": "Sweden"
+          },
           "square": true
         }
       ]
@@ -5614,20 +5718,23 @@
   },
   "generation_dependencies": {
     "src/reporting/thesis_audit.py": "f12b98e8447bfc01dcdcc39a0334d82c0fc4dd85c7da73019bc9880a8c97dfcd",
-    "src/reporting/thesis_sources.py": "a2ccf3b68922e310b1d0995ec33afbc050ab5128c446d7319fe18acae58fa431",
+    "src/reporting/thesis_sources.py": "e67cde5d5cf6af32d8e98017f307ecd5e3fac4a808203e8ecd7e01afaad37b8a",
     "src/reporting/thesis_tables.py": "5b5d55af44b1ee6eb3c9d7b0d32beb214d29fa5705f97b980d8a0c71b1b47261",
-    "src/reporting/thesis_outputs.py": "6bc37ac489e13c1c9aeee5ae272db21c1a239fd982568e8682a97425dadcaa28",
-    "src/reporting/thesis_style.py": "b7d570364677c314fcfd8e592073d44e7de8daa67f0ad3c33901fa53c6e309d2",
-    "src/reporting/thesis_refresh.py": "30f7bc7613111cb5641d86eb8f7498728a16f659319e24d0173c984e3365d30b",
+    "src/reporting/thesis_outputs.py": "c04b99a3914339e51a7bdf129c3c2dbf91051b2a8e86a4e4b51669cae3f3f231",
+    "src/reporting/thesis_style.py": "4aeb8a0e5576558741f87108440fdd0df4d4e6f8085213c86c8b2f8efcf4901e",
+    "src/reporting/thesis_refresh.py": "fb7752e08af20fceb08776318e75f3bc6e47f9fcb9620b76e68d4802dcf5e35d",
+    "src/reporting/thesis_cartography.py": "17356c6a0c333be6b3e1a58e310bf0f53a8195573706460a5fddae9ae9978191",
     "src/pipeline/reporting_figures.py": "5903d17c13991b4c90a5ae6762c12f474888ef14b079f022a842b53a1259c7f6",
     "docs/analysis/data_dictionary.md": "e0793728b5debfccba51ec75be1b4a00b6847ef116f1e77b393dbf699b6b85ec",
-    "requirements.txt": "c745ce919fe23d01ed90e88f6e890f11279d6d72aea0b985f15d00e514b4789e"
+    "requirements.txt": "c745ce919fe23d01ed90e88f6e890f11279d6d72aea0b985f15d00e514b4789e",
+    "config/reporting/map_context.json": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+    "sql/cartography/001_map_context.sql": "8e4f9cee092c3f4b64e03c54670a0ed61d5ad55f7bbfe0650f0bd2279034d6ca"
   },
   "presentation_refresh": {
-    "prior_checkpoint": "dc20c5a9380940da1be55a6ab4629741a8a73035",
-    "prior_manifest": "archive/before_output_cleanup/reports/thesis_artifact_manifest.json",
+    "prior_checkpoint": "f01d794fe6e4b8bb5fa83d8941b65031e1cff5b5",
+    "prior_manifest": "archive/before_neighbourhood_maps/reports/thesis_artifact_manifest.json",
     "numerical_exports_byte_identical": true,
-    "user_requested_style": "Pastel PNG figures, square maps, explicit boundaries, horizontal neighbourhood bars",
-    "preview_directory": "/var/folders/c0/gvf6nyxn7f94v5f6y77krgkw0000gn/T/thesis-layout-ols2vd5y/figures"
+    "user_requested_style": "Archived geography maps: capital fills, white study borders, grey surrounding borders and verified civic stars",
+    "preview_directory": "/var/folders/c0/gvf6nyxn7f94v5f6y77krgkw0000gn/T/thesis-layout-ya4iga5d/figures"
   }
 }

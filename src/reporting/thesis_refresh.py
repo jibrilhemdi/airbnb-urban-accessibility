@@ -10,12 +10,13 @@ from src.study.sources import write_once
 from src.reporting.thesis_sources import ROOT,verify_catalog
 from src.study.archive import preserved_path
 
-BASELINE=ROOT/'archive/before_output_cleanup/manifest.json'
+BASELINE=ROOT/'archive/before_neighbourhood_maps/manifest.json'
 
 
 def cleanup_baseline():
     record=json.loads(BASELINE.read_text())
-    for item in record['files']:
+    prior=json.loads((ROOT/'archive/before_output_cleanup/manifest.json').read_text())
+    for item in [*prior['files'],*record['files']]:
         path=ROOT/item['archived_path']
         if sha256_file(path)!=item['sha256'] or path.stat().st_size!=item['bytes']:raise ValueError('Archived output changed: '+str(path))
     for item in record['numeric_exports_immutable']:
@@ -56,7 +57,11 @@ def activate(preview):
     for item in figures:
         source=preview/Path(item['filename']).name;dest=ROOT/item['filename']
         if sha256_file(source)!=item['sha256']:raise ValueError('Preview figure changed')
-        if dest.exists():raise ValueError('Active figure exists; preserve before replacing')
+        if dest.exists():
+            saved=next(row for row in previous['files'] if row['original_path']==item['filename'])
+            if sha256_file(dest)!=saved['sha256']:raise ValueError('Active figure differs from preservation checkpoint')
+    other={item['original_path']:item['sha256'] for item in previous['unchanged_other_figures']}
+    if any(item['sha256']!=other[item['filename']] for item in figures if item['filename'] in other):raise ValueError('Unrequested non-map figure changed')
     for item in figures:shutil.copyfile(preview/Path(item['filename']).name,ROOT/item['filename'])
     old={item['original_path']:item for item in previous['files']}
     def remove_preserved(name):
@@ -73,10 +78,23 @@ def activate(preview):
 
 
 def package():
-    cleanup_baseline()
+    previous=cleanup_baseline()
     if not (ROOT/'reports/thesis_style_review.json').exists():raise ValueError('Visual/publication review required first')
-    from src.reporting.thesis_release import assemble,delivery
-    result=assemble();delivery(result)
+    from src.reporting import thesis_release
+    old={item['original_path']:item for item in previous['files']}
+    names=['reports/thesis_release_manifest.json','outputs/thesis_results.zip']
+    for name in names:
+        if sha256_file(ROOT/name)!=old[name]['sha256']:raise ValueError('Prior package differs from archive')
+    active_manifest,active_zip=thesis_release.MANIFEST,thesis_release.ZIP
+    with tempfile.TemporaryDirectory(prefix='thesis-map-package-') as directory:
+        thesis_release.MANIFEST=Path(directory)/'thesis_release_manifest.json'
+        thesis_release.ZIP=Path(directory)/'thesis_results.zip'
+        try:
+            thesis_release.assemble();thesis_release.verify()
+            for name in names:(ROOT/name).unlink()
+            shutil.copyfile(thesis_release.MANIFEST,active_manifest);shutil.copyfile(thesis_release.ZIP,active_zip)
+        finally:thesis_release.MANIFEST,thesis_release.ZIP=active_manifest,active_zip
+    result=thesis_release.verify();thesis_release.delivery(result)
     return result
 
 

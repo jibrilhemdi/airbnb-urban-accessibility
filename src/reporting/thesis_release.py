@@ -118,7 +118,8 @@ def assemble(revise=False):
               'reports/frozen_reporting_sources.json','reports/deliverable_gap_audit.json',
               'reports/thesis_publication_validation.json','reports/frozen_science_verification.json',
               'reports/thesis_style_review.json','docs/analysis/release_audit.json',
-              'docs/analysis/software_environment.json','config/study/design.json','config/study/cities.json']
+              'docs/analysis/software_environment.json','config/study/design.json','config/study/cities.json',
+              'config/reporting/map_context.json']
     mapping.update(documents)
     for name in metadata:mapping[name]='manifests/'+Path(name).name
     generators=sorted((ROOT/'src/reporting').glob('thesis_*.py'))

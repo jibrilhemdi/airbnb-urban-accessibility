@@ -46,3 +46,32 @@ new source receipts; original approved listing/mask/context manifest references
 remain in the city/source registries and preservation evidence. A transport
 receipt's pending-validation label is original acquisition evidence, not the
 final scientific qualification status. No raw licence is retroactively invented.
+
+## Map presentation context — 13 October 2026
+
+The researcher requests the archived geography-map design with actual surrounding
+municipalities, white study-neighbourhood borders, grey non-study borders, capital
+legends and civic stars. Supplemental display geometry is registered in a separate
+immutable `cartography` PostGIS schema and pinned by
+[the map-context selector](../../config/reporting/map_context.json). It is not a
+sample mask, validation geography, model feature or replacement analytical source.
+The existing frozen SQL packages, sources, samples, folds and fits are unchanged.
+
+Copenhagen reuses the capital-region DAGI/DAWA download acquired 29 September 2026.
+Stockholm reuses the nationally acquired [SCB RegSO 2025 source](https://www.scb.se/en/services/open-data-api/open-geodata/open-data-for-regso--regional-statistical-areas/),
+unioned by the original municipality code using all polygons of each selected
+municipality; it is context, not an invented neighbourhood crosswalk. Source CRS
+is EPSG:3006 and reference date 1 January 2025. Oslo's surrounding municipalities
+come from Kartverket's official
+[neighbour-list endpoint](https://ws.geonorge.no/kommuneinfo/v1/kommuner/0301/nabokommuner)
+and corresponding area endpoints. New Oslo bytes have immutable acquisition
+receipts and checksums; their current-at-retrieval vintage is disclosed and is
+not represented as the frozen June 2026 analytical geography.
+
+The context selection uses distance within 3.5 km of each accepted study mask,
+in each city's recorded metric CRS. Squares and viewport clipping affect display
+only. Every original operational group remains; boundaries are displayed inside
+the accepted mask. No geometry is repaired or synthesized. Copenhagen's star
+is the preserved public `city_hall_square` point (Rådhuspladsen). Oslo and Stockholm
+use their frozen, source-verified City Hall points; they are labelled City Hall,
+not falsely identified as separately validated square coordinates.

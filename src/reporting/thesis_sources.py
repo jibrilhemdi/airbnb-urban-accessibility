@@ -86,6 +86,9 @@ def load():
             for scheme in SCHEMES:
                 data['validation'][scheme],data['sources'][scheme]=chosen(conn,'results_'+scheme)
             data['transfer'],data['sources']['transfer']=chosen(conn,'results_transfer')
+            from src.reporting.thesis_cartography import load_layers
+            data['cartographic_context'],cartographic_source=load_layers(conn)
+            data['sources']['cartographic_context']=[cartographic_source]
             sample=json.loads((ROOT/'config/study/sample_selection.json').read_text());geo=json.loads((ROOT/'config/study/geography_selection.json').read_text())
             assoc=json.loads((ROOT/'config/study/association_selection.json').read_text());interp=json.loads((ROOT/'config/study/interpretation_selection.json').read_text())
             data['coefficients']=[];data['contributions']=[];data['fold_metrics']=[];data['fold_sources']=[];data['transfer_sources']=[]

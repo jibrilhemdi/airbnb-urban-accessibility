@@ -1264,9 +1264,17 @@
       "functional_destination": "src/db/sources.py",
       "action": "extend_historical_source_isolation_with_exact_archived_code",
       "sha256_before": "a556e5bc1f91c1a11d55be8d2c6df2586c77be86ae59babdd1b0d352fdcf8fc2",
-      "sha256_after": "690c6203490045471dba3f59f744cd7d84371648dd75fa7dd9be8923510c6378",
+      "sha256_after": "ccef372547117e8e02b83556a9a44c4e8397e58e7706f3ae46d6da3d2e400d2d",
       "compatibility": "Explicit new-source roots excluded from old source registration; unknown legacy providers still fail. Original code preserved byte-for-byte; no raw files or historical SQL changed.",
-      "archive_path": "history/compatibility/db_sources.py"
+      "archive_path": "history/compatibility/db_sources.py",
+      "subsequent_compatibility_extensions": [
+        {
+          "reason": "Keep new presentation-only cartographic source receipts out of legacy source ingestion",
+          "prior_sha256_after": "690c6203490045471dba3f59f744cd7d84371648dd75fa7dd9be8923510c6378",
+          "archived_prior_code": "archive/before_neighbourhood_maps/src/db/sources.py",
+          "active_sha256_after": "ccef372547117e8e02b83556a9a44c4e8397e58e7706f3ae46d6da3d2e400d2d"
+        }
+      ]
     },
     {
       "old_path": "src/ingestion/__init__.py",

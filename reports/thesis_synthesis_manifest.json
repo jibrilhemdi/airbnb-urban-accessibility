@@ -32,8 +32,8 @@
     },
     {
       "filename": "reports/thesis_figure_recommendations.md",
-      "sha256": "c80a726cc7a5fbb16871349cbb85768dcb8e0210b9830f9a9487d944e2ec881a",
-      "bytes": 9937,
+      "sha256": "4637e47983bf35ddad76960f976256dbd5a9c62e83267f913480196c3ca358c2",
+      "bytes": 10393,
       "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY_PENDING_RELEASE_AUDIT",
@@ -43,8 +43,8 @@
     },
     {
       "filename": "reports/thesis_recommendations.json",
-      "sha256": "66102d933471855b0b1a3cb540fb267572fbe7be7eb8d86bec1d242a46e5e094",
-      "bytes": 15639,
+      "sha256": "63907988029f297153d694c0a4497d2fd68b215c178c93e793ec9f6829ab4886",
+      "bytes": 16095,
       "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY_PENDING_RELEASE_AUDIT",
@@ -90,5 +90,13 @@
     "archive": "archive/before_output_cleanup/manifest.json",
     "numerical_claims_unchanged": true,
     "format": "PNG only"
+  },
+  "map_presentation_revision": {
+    "archive": "archive/before_neighbourhood_maps/manifest.json",
+    "changed_figures": [
+      "study_areas",
+      "accessibility_spatial"
+    ],
+    "numeric_claims_unchanged": true
   }
 }

@@ -5,7 +5,7 @@
     "file": "outputs/figures/study_areas.png",
     "research_question": "Design",
     "reason": "Show the actual provider validation geography across all cities",
-    "takeaway": "Operational neighbourhoods are the geographic holdouts",
+    "takeaway": "White boundaries delineate all 11 Copenhagen–Frederiksberg, 17 Oslo and 11 Stockholm study neighbourhoods. Grey borders show real surrounding municipalities for context only. Stars mark Copenhagen City Hall Square and the verified Oslo/Stockholm City Hall points. Native city CRSs and scales differ. Sources: Inside Airbnb, DAGI/DAWA, Kartverket, Statistics Sweden and pinned civic references.",
     "suggested_section": "Methods: study design",
     "placement": "MAIN",
     "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9"
@@ -203,7 +203,7 @@
     "file": "outputs/figures/accessibility_spatial.png",
     "research_question": "RQ1",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
-    "takeaway": "Mean nearest-rail walking minutes in500 m cells with at least five observations. Shared colour scale capped at pooled95th percentile for display; uncapped aggregate values remain in the accompanying table. Boundaries are the frozen provider geography. © OpenStreetMap contributors, ODbL; Inside Airbnb CC BY4.0.",
+    "takeaway": "Mean nearest-rail walking minutes in 500 m cells with at least five observations. White lines show study neighbourhoods; grey borders show surrounding municipalities. Stars are the verified civic references. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. Context has no analytical role. Sources: OpenStreetMap, Inside Airbnb, DAGI/DAWA, Kartverket and Statistics Sweden.",
     "suggested_section": "Appendix: RQ1",
     "placement": "APPENDIX",
     "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9"

@@ -1,44 +1,68 @@
 # Airbnb prices and urban accessibility
 
-A completed study of Copenhagen–Frederiksberg, Oslo and Stockholm, using
-Inside Airbnb listings from June 2026. It compares straight-line and walking
-accessibility, prediction in unseen neighbourhoods, and transfer between cities.
+This thesis studies Copenhagen–Frederiksberg, Oslo and Stockholm using June 2026
+Inside Airbnb listings. It asks how walking and straight-line accessibility
+differ, what they add to nightly-price prediction, how results vary across
+neighbourhoods, and how pricing relationships transfer between capital cities.
 
-Start with the [results](reports/research_results.md) and
-[findings by research question](reports/findings_by_research_question.md).
-The [placement guide](reports/thesis_figure_recommendations.md) selects ten main
-figures and eight main tables for the thesis.
+The analysis is complete. Start with the [results](reports/research_results.md),
+[findings by research question](reports/findings_by_research_question.md), and
+[thesis figure/table guide](reports/thesis_figure_recommendations.md).
 
-| Location | What you will find |
+## Data and methods
+
+| City | Prediction sample | Complete-case association sample |
+| --- | ---: | ---: |
+| Copenhagen–Frederiksberg | 12,408 | 12,285 |
+| Oslo | 8,529 | 8,152 |
+| Stockholm | 2,495 | 2,348 |
+
+The study combines observed Airbnb asking prices, Inside Airbnb neighbourhood
+polygons, official population density, and OpenStreetMap pedestrian networks
+and destinations. Housing prices and income are excluded. Missing nightly prices
+are excluded, never imputed.
+
+**M0** contains dwelling, host, amenity, density and centrality controls;
+**ME** adds Euclidean accessibility; **MW** adds walking accessibility;
+**MEW** adds both. OLS and XGBoost use identical city samples and folds.
+Neighbourhood holdouts are primary; random and spatial-block validation are
+comparisons. Preprocessing and tuning use training data only.
+
+All six directional transfers use source-city fitting and tuning, with no target
+refitting. Within-city outcomes are log nightly prices; transfer outcomes are
+city-relative log prices. Results are observational. Accessibility improves
+primary XGBoost point errors in Copenhagen and Stockholm, with small adverse
+changes in Oslo; walking is not universally superior. The
+[10% complete-case eligibility amendment](docs/analysis/association_missingness_amendment_20261013.md)
+was made after observing missingness and is explicitly disclosed.
+
+## Use and reproduce the project
+
+| Location | Purpose |
 | --- | --- |
-| [outputs/](outputs/README.md) | Current thesis outputs: figures, tables and supporting metrics |
-| `outputs/figures/` | 18 figures, PNG only, 300 dpi |
-| `outputs/tables/` | Thesis tables: readable Markdown and full-precision CSV |
-| `outputs/metrics/` | Neighbourhood results, robustness and aggregate diagnostics |
-| `outputs/thesis_results.zip` | One portable copy of the outputs, reports and provenance |
-| `reports/` | Results, writing guidance, claims and verification manifests |
-| `archive/` | Previous outputs and documentation, preserved with checksums |
+| `src/study/` | Scientific workflow, samples, validation and models |
+| `src/reporting/` | Frozen-result figures, tables, reports and map context |
+| `config/study/` | Scientific definitions and immutable run selectors |
+| `outputs/figures/`, `tables/`, `metrics/` | Current 300-dpi PNG figures and CSV/Markdown results |
+| `reports/` | Findings, writing guidance, provenance and verification |
+| `docs/analysis/` | Methods, source registry, decisions and execution log |
+| `archive/` | Checksum-preserved previous outputs and implementation |
 
-Models are **M0** (controls), **ME** (+ Euclidean accessibility), **MW**
-(+ walking accessibility) and **MEW** (+ both). The study uses OLS and XGBoost,
-with neighbourhood holdouts and six directional city transfers. Results are
-observational; within-city errors use log nightly price, while transfer errors
-use city-relative log price. Missing prices are excluded, never imputed.
-The [10% association missingness amendment](docs/analysis/association_missingness_amendment_20261013.md)
-was made after observing the data.
-
-To verify the outputs in the audited environment:
+Install the pinned dependencies in the audited Python 3.13 environment. Connection
+settings use one `.env`; [config/environment.example](config/environment.example)
+is the template. PostgreSQL/PostGIS is the persistent data layer.
 
 ```sh
 python -m pip install -r requirements.txt
+make study-status
 make thesis-check
 make thesis-release
 make test
 ```
 
-PostgreSQL/PostGIS is the analytical authority. Reproduction also requires the
-private source data and saved predictions; connection settings use one `.env`
-with [this template](config/environment.example). See
-[reproduction instructions](docs/analysis/reproducibility.md) for scientific
-checks and commands. Raw data, credentials, fitted models and individual
-predictions are excluded from the public outputs. Work remains on `v4`.
+`outputs/thesis_results.zip` is the portable public package. Scientific
+reproduction also requires private sources and saved predictions; see the
+[reproduction guide](docs/analysis/reproducibility.md) and
+[specification](docs/analysis/preanalysis_specification.md). Completed selectors
+prevent accidental refitting. Raw data, credentials, fitted models and individual
+predictions stay outside the public release. Work remains on `v4`.

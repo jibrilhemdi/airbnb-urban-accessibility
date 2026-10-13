@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "Public cartographic context only",
+  "SQL_schema": "cartography",
+  "schema_migration": "PASS",
+  "immutable_update_guards_verified": 2,
+  "probes_rolled_back": true,
+  "source_and_geometry_hashes": "PASS",
+  "geometry_crs": "EPSG:4326",
+  "display_CRSs": {
+    "copenhagen": "EPSG:25832",
+    "oslo": "EPSG:25833",
+    "stockholm": "EPSG:3006"
+  },
+  "surrounding_municipalities": {
+    "copenhagen": 10,
+    "oslo": 9,
+    "stockholm": 12
+  },
+  "civic_stars": {
+    "copenhagen": "City Hall Square",
+    "oslo": "City Hall",
+    "stockholm": "City Hall"
+  },
+  "source_selector": {
+    "path": "config/reporting/map_context.json",
+    "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+    "artifact": "Public surrounding municipalities and verified civic reference points",
+    "spatial_crs": "EPSG:4326"
+  },
+  "scientific_SQL_mutated": false,
+  "models_refitted": false
+}

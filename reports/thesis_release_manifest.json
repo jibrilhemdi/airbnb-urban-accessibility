@@ -4,7 +4,7 @@
   "models_refitted": false,
   "scientific_choice_changes": false,
   "generation_command": ".venv/bin/python -m src.reporting.thesis_release",
-  "generator_sha256": "c9b26c82cee8dee7d57876ec9cdfd0c602af66443f5089cfaf6d26f00c5e1e36",
+  "generator_sha256": "e8b6bba3f8cf007a57cc6f6e33ea7bb4c864c560fdae2c925369e69bb8dfa738",
   "publication_validation": {
     "status": "PASS",
     "artifact_files": 62,
@@ -17,7 +17,7 @@
     "final_run_lineage": "PASS",
     "numeric_claims_trace": "PASS",
     "independent_point_contrast_recalculation": "PASS",
-    "links_checked": 148,
+    "links_checked": 149,
     "visible_version_markers": "NONE",
     "clipped_labels": "NONE",
     "caption_and_header_overlap": "NONE",
@@ -57,8 +57,8 @@
     },
     {
       "filename": "figures/accessibility_spatial.png",
-      "sha256": "986470ef640ee578ca6ed9d29f6aa451b08459154620945b71f36b227a09aa81",
-      "bytes": 790498,
+      "sha256": "cb25ab43d56b409110591e12a655013cf14f7628d26e3ffa35b748002222c0b0",
+      "bytes": 923582,
       "source_run_artifact": [
         {
           "run_id": "copenhagen_sample_20261013t014237616829z",
@@ -101,6 +101,12 @@
           "family": "geography",
           "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9",
           "selector": "config/study/geography_selection.json"
+        },
+        {
+          "path": "config/reporting/map_context.json",
+          "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+          "artifact": "Public surrounding municipalities and verified civic reference points",
+          "spatial_crs": "EPSG:4326"
         }
       ],
       "research_question": "RQ1",
@@ -109,8 +115,8 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "outputs/figures/accessibility_spatial.png",
-      "source_file_sha256": "986470ef640ee578ca6ed9d29f6aa451b08459154620945b71f36b227a09aa81",
-      "caption": "Mean nearest-rail walking minutes in 500 m cells with at least five observations. Dark lines mark every frozen operational neighbourhood. Square panels retain native CRS and scale. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. © OpenStreetMap contributors, ODbL; Inside Airbnb CC BY 4.0."
+      "source_file_sha256": "cb25ab43d56b409110591e12a655013cf14f7628d26e3ffa35b748002222c0b0",
+      "caption": "Mean nearest-rail walking minutes in 500 m cells with at least five observations. White lines show study neighbourhoods; grey borders show surrounding municipalities. Stars are the verified civic references. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. Context has no analytical role. Sources: OpenStreetMap, Inside Airbnb, DAGI/DAWA, Kartverket and Statistics Sweden."
     },
     {
       "filename": "figures/association_accessibility.png",
@@ -1077,8 +1083,8 @@
     },
     {
       "filename": "figures/study_areas.png",
-      "sha256": "c606e8d664371998f8fcd49f6a1a50ad2e962acb16031275ffe7af10d760f6c9",
-      "bytes": 808019,
+      "sha256": "06deb208bdf60cd037ca81395fc8c223d4e3b881c6ef23f74b0a27a106900759",
+      "bytes": 885458,
       "source_run_artifact": [
         {
           "run_id": "copenhagen_geography_20261013t010820402377z",
@@ -1100,6 +1106,12 @@
           "family": "geography",
           "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9",
           "selector": "config/study/geography_selection.json"
+        },
+        {
+          "path": "config/reporting/map_context.json",
+          "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+          "artifact": "Public surrounding municipalities and verified civic reference points",
+          "spatial_crs": "EPSG:4326"
         }
       ],
       "research_question": "Design",
@@ -1108,8 +1120,8 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "outputs/figures/study_areas.png",
-      "source_file_sha256": "c606e8d664371998f8fcd49f6a1a50ad2e962acb16031275ffe7af10d760f6c9",
-      "caption": "Dark lines delineate the 11 Copenhagen, 17 Oslo and 11 Stockholm operational neighbourhoods used for validation. Municipal masks define membership. Each square panel retains its native projected CRS and scale; city scales differ. No individual listings. Inside Airbnb, CC BY 4.0; mask sources are in the source registry."
+      "source_file_sha256": "06deb208bdf60cd037ca81395fc8c223d4e3b881c6ef23f74b0a27a106900759",
+      "caption": "White boundaries delineate all 11 Copenhagen–Frederiksberg, 17 Oslo and 11 Stockholm study neighbourhoods. Grey borders show real surrounding municipalities for context only. Stars mark Copenhagen City Hall Square and the verified Oslo/Stockholm City Hall points. Native city CRSs and scales differ. Sources: Inside Airbnb, DAGI/DAWA, Kartverket, Statistics Sweden and pinned civic references."
     },
     {
       "filename": "figures/transfer_accessibility_gains.png",
@@ -1903,6 +1915,22 @@
       "source_file_sha256": "42396cb83ecb140fbd97f30b9e7ab5a6c64fc8a05579a34e6ffdecc8193e8fab"
     },
     {
+      "filename": "manifests/map_context.json",
+      "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+      "bytes": 16411,
+      "source_run_artifact": {
+        "artifact": "config/reporting/map_context.json",
+        "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e"
+      },
+      "research_question": "RQ1–RQ4",
+      "publication_status": "THESIS_READY",
+      "generation_command": ".venv/bin/python -m src.reporting.thesis_release",
+      "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+      "private_row_export": false,
+      "source_filename": "config/reporting/map_context.json",
+      "source_file_sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e"
+    },
+    {
       "filename": "manifests/numeric_claims_registry.json",
       "sha256": "775daa421cc1ac26b1b1c8a945cf59e7b9400a81fbf7a814dc88aa0c3a57b4b9",
       "bytes": 13897,
@@ -1951,12 +1979,28 @@
       "source_file_sha256": "f12b98e8447bfc01dcdcc39a0334d82c0fc4dd85c7da73019bc9880a8c97dfcd"
     },
     {
+      "filename": "manifests/reporting_code/thesis_cartography.py",
+      "sha256": "17356c6a0c333be6b3e1a58e310bf0f53a8195573706460a5fddae9ae9978191",
+      "bytes": 12898,
+      "source_run_artifact": {
+        "artifact": "src/reporting/thesis_cartography.py",
+        "sha256": "17356c6a0c333be6b3e1a58e310bf0f53a8195573706460a5fddae9ae9978191"
+      },
+      "research_question": "RQ1–RQ4",
+      "publication_status": "THESIS_READY",
+      "generation_command": ".venv/bin/python -m src.reporting.thesis_release",
+      "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+      "private_row_export": false,
+      "source_filename": "src/reporting/thesis_cartography.py",
+      "source_file_sha256": "17356c6a0c333be6b3e1a58e310bf0f53a8195573706460a5fddae9ae9978191"
+    },
+    {
       "filename": "manifests/reporting_code/thesis_outputs.py",
-      "sha256": "6bc37ac489e13c1c9aeee5ae272db21c1a239fd982568e8682a97425dadcaa28",
-      "bytes": 44947,
+      "sha256": "c04b99a3914339e51a7bdf129c3c2dbf91051b2a8e86a4e4b51669cae3f3f231",
+      "bytes": 47250,
       "source_run_artifact": {
         "artifact": "src/reporting/thesis_outputs.py",
-        "sha256": "6bc37ac489e13c1c9aeee5ae272db21c1a239fd982568e8682a97425dadcaa28"
+        "sha256": "c04b99a3914339e51a7bdf129c3c2dbf91051b2a8e86a4e4b51669cae3f3f231"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -1964,15 +2008,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "src/reporting/thesis_outputs.py",
-      "source_file_sha256": "6bc37ac489e13c1c9aeee5ae272db21c1a239fd982568e8682a97425dadcaa28"
+      "source_file_sha256": "c04b99a3914339e51a7bdf129c3c2dbf91051b2a8e86a4e4b51669cae3f3f231"
     },
     {
       "filename": "manifests/reporting_code/thesis_refresh.py",
-      "sha256": "30f7bc7613111cb5641d86eb8f7498728a16f659319e24d0173c984e3365d30b",
-      "bytes": 4875,
+      "sha256": "fb7752e08af20fceb08776318e75f3bc6e47f9fcb9620b76e68d4802dcf5e35d",
+      "bytes": 6316,
       "source_run_artifact": {
         "artifact": "src/reporting/thesis_refresh.py",
-        "sha256": "30f7bc7613111cb5641d86eb8f7498728a16f659319e24d0173c984e3365d30b"
+        "sha256": "fb7752e08af20fceb08776318e75f3bc6e47f9fcb9620b76e68d4802dcf5e35d"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -1980,15 +2024,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "src/reporting/thesis_refresh.py",
-      "source_file_sha256": "30f7bc7613111cb5641d86eb8f7498728a16f659319e24d0173c984e3365d30b"
+      "source_file_sha256": "fb7752e08af20fceb08776318e75f3bc6e47f9fcb9620b76e68d4802dcf5e35d"
     },
     {
       "filename": "manifests/reporting_code/thesis_release.py",
-      "sha256": "c9b26c82cee8dee7d57876ec9cdfd0c602af66443f5089cfaf6d26f00c5e1e36",
-      "bytes": 14645,
+      "sha256": "e8b6bba3f8cf007a57cc6f6e33ea7bb4c864c560fdae2c925369e69bb8dfa738",
+      "bytes": 14696,
       "source_run_artifact": {
         "artifact": "src/reporting/thesis_release.py",
-        "sha256": "c9b26c82cee8dee7d57876ec9cdfd0c602af66443f5089cfaf6d26f00c5e1e36"
+        "sha256": "e8b6bba3f8cf007a57cc6f6e33ea7bb4c864c560fdae2c925369e69bb8dfa738"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -1996,15 +2040,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "src/reporting/thesis_release.py",
-      "source_file_sha256": "c9b26c82cee8dee7d57876ec9cdfd0c602af66443f5089cfaf6d26f00c5e1e36"
+      "source_file_sha256": "e8b6bba3f8cf007a57cc6f6e33ea7bb4c864c560fdae2c925369e69bb8dfa738"
     },
     {
       "filename": "manifests/reporting_code/thesis_sources.py",
-      "sha256": "a2ccf3b68922e310b1d0995ec33afbc050ab5128c446d7319fe18acae58fa431",
-      "bytes": 10010,
+      "sha256": "e67cde5d5cf6af32d8e98017f307ecd5e3fac4a808203e8ecd7e01afaad37b8a",
+      "bytes": 10232,
       "source_run_artifact": {
         "artifact": "src/reporting/thesis_sources.py",
-        "sha256": "a2ccf3b68922e310b1d0995ec33afbc050ab5128c446d7319fe18acae58fa431"
+        "sha256": "e67cde5d5cf6af32d8e98017f307ecd5e3fac4a808203e8ecd7e01afaad37b8a"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -2012,15 +2056,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "src/reporting/thesis_sources.py",
-      "source_file_sha256": "a2ccf3b68922e310b1d0995ec33afbc050ab5128c446d7319fe18acae58fa431"
+      "source_file_sha256": "e67cde5d5cf6af32d8e98017f307ecd5e3fac4a808203e8ecd7e01afaad37b8a"
     },
     {
       "filename": "manifests/reporting_code/thesis_style.py",
-      "sha256": "b7d570364677c314fcfd8e592073d44e7de8daa67f0ad3c33901fa53c6e309d2",
-      "bytes": 10234,
+      "sha256": "4aeb8a0e5576558741f87108440fdd0df4d4e6f8085213c86c8b2f8efcf4901e",
+      "bytes": 10293,
       "source_run_artifact": {
         "artifact": "src/reporting/thesis_style.py",
-        "sha256": "b7d570364677c314fcfd8e592073d44e7de8daa67f0ad3c33901fa53c6e309d2"
+        "sha256": "4aeb8a0e5576558741f87108440fdd0df4d4e6f8085213c86c8b2f8efcf4901e"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -2028,7 +2072,7 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "src/reporting/thesis_style.py",
-      "source_file_sha256": "b7d570364677c314fcfd8e592073d44e7de8daa67f0ad3c33901fa53c6e309d2"
+      "source_file_sha256": "4aeb8a0e5576558741f87108440fdd0df4d4e6f8085213c86c8b2f8efcf4901e"
     },
     {
       "filename": "manifests/reporting_code/thesis_synthesis.py",
@@ -2064,11 +2108,11 @@
     },
     {
       "filename": "manifests/reporting_code/thesis_validate.py",
-      "sha256": "426f2c77d9782d4c977c66a2c945b95e33cc336ecec922deb513a8047f9e553e",
-      "bytes": 12369,
+      "sha256": "c8f7e96bafd650690db370fec11e179aa69122c1be8b84c26f50414d4541168d",
+      "bytes": 12787,
       "source_run_artifact": {
         "artifact": "src/reporting/thesis_validate.py",
-        "sha256": "426f2c77d9782d4c977c66a2c945b95e33cc336ecec922deb513a8047f9e553e"
+        "sha256": "c8f7e96bafd650690db370fec11e179aa69122c1be8b84c26f50414d4541168d"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -2076,7 +2120,7 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "src/reporting/thesis_validate.py",
-      "source_file_sha256": "426f2c77d9782d4c977c66a2c945b95e33cc336ecec922deb513a8047f9e553e"
+      "source_file_sha256": "c8f7e96bafd650690db370fec11e179aa69122c1be8b84c26f50414d4541168d"
     },
     {
       "filename": "manifests/requirements.txt",
@@ -2112,11 +2156,11 @@
     },
     {
       "filename": "manifests/thesis_artifact_manifest.json",
-      "sha256": "c24073d0f5f49120e3f31f1ee7d603a661e5f2b6d8aae87d8e3c7eaf818161d0",
-      "bytes": 242633,
+      "sha256": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52",
+      "bytes": 247674,
       "source_run_artifact": {
         "artifact": "reports/thesis_artifact_manifest.json",
-        "sha256": "c24073d0f5f49120e3f31f1ee7d603a661e5f2b6d8aae87d8e3c7eaf818161d0"
+        "sha256": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -2124,15 +2168,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "reports/thesis_artifact_manifest.json",
-      "source_file_sha256": "c24073d0f5f49120e3f31f1ee7d603a661e5f2b6d8aae87d8e3c7eaf818161d0"
+      "source_file_sha256": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52"
     },
     {
       "filename": "manifests/thesis_publication_validation.json",
-      "sha256": "52908fdabcad426fa18d3f58ee63db4fc4fadba04ada40f37d04d933d9068375",
+      "sha256": "5a8e10e0227a6a69474d018662474d1c7c9e3a281525ff8f5ef9c092c91f0b5b",
       "bytes": 700,
       "source_run_artifact": {
         "artifact": "reports/thesis_publication_validation.json",
-        "sha256": "52908fdabcad426fa18d3f58ee63db4fc4fadba04ada40f37d04d933d9068375"
+        "sha256": "5a8e10e0227a6a69474d018662474d1c7c9e3a281525ff8f5ef9c092c91f0b5b"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -2140,15 +2184,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "reports/thesis_publication_validation.json",
-      "source_file_sha256": "52908fdabcad426fa18d3f58ee63db4fc4fadba04ada40f37d04d933d9068375"
+      "source_file_sha256": "5a8e10e0227a6a69474d018662474d1c7c9e3a281525ff8f5ef9c092c91f0b5b"
     },
     {
       "filename": "manifests/thesis_recommendations.json",
-      "sha256": "66102d933471855b0b1a3cb540fb267572fbe7be7eb8d86bec1d242a46e5e094",
-      "bytes": 15639,
+      "sha256": "63907988029f297153d694c0a4497d2fd68b215c178c93e793ec9f6829ab4886",
+      "bytes": 16095,
       "source_run_artifact": {
         "artifact": "reports/thesis_recommendations.json",
-        "sha256": "66102d933471855b0b1a3cb540fb267572fbe7be7eb8d86bec1d242a46e5e094"
+        "sha256": "63907988029f297153d694c0a4497d2fd68b215c178c93e793ec9f6829ab4886"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -2156,15 +2200,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "reports/thesis_recommendations.json",
-      "source_file_sha256": "66102d933471855b0b1a3cb540fb267572fbe7be7eb8d86bec1d242a46e5e094"
+      "source_file_sha256": "63907988029f297153d694c0a4497d2fd68b215c178c93e793ec9f6829ab4886"
     },
     {
       "filename": "manifests/thesis_style_review.json",
-      "sha256": "8f5eaccd51e31fb571399b9b7da6bf1a2628af929105916d241ea653eafd32ae",
-      "bytes": 2692,
+      "sha256": "a767813871a061638c988e39ef17aafb6ae65fd0a3e641ad28279def8078fcb9",
+      "bytes": 2707,
       "source_run_artifact": {
         "artifact": "reports/thesis_style_review.json",
-        "sha256": "8f5eaccd51e31fb571399b9b7da6bf1a2628af929105916d241ea653eafd32ae"
+        "sha256": "a767813871a061638c988e39ef17aafb6ae65fd0a3e641ad28279def8078fcb9"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -2172,15 +2216,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "reports/thesis_style_review.json",
-      "source_file_sha256": "8f5eaccd51e31fb571399b9b7da6bf1a2628af929105916d241ea653eafd32ae"
+      "source_file_sha256": "a767813871a061638c988e39ef17aafb6ae65fd0a3e641ad28279def8078fcb9"
     },
     {
       "filename": "manifests/thesis_synthesis_manifest.json",
-      "sha256": "76ae45f0c46633dfcbc7cf6c06224aea03e251db4e09a553cf637a30b3e4c6a3",
-      "bytes": 5484,
+      "sha256": "f23d46ef3e27b7210b20b0a3052b6f46024588f21db32f8361ca94aef0fdad77",
+      "bytes": 5709,
       "source_run_artifact": {
         "artifact": "reports/thesis_synthesis_manifest.json",
-        "sha256": "76ae45f0c46633dfcbc7cf6c06224aea03e251db4e09a553cf637a30b3e4c6a3"
+        "sha256": "f23d46ef3e27b7210b20b0a3052b6f46024588f21db32f8361ca94aef0fdad77"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -2188,7 +2232,7 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "reports/thesis_synthesis_manifest.json",
-      "source_file_sha256": "76ae45f0c46633dfcbc7cf6c06224aea03e251db4e09a553cf637a30b3e4c6a3"
+      "source_file_sha256": "f23d46ef3e27b7210b20b0a3052b6f46024588f21db32f8361ca94aef0fdad77"
     },
     {
       "filename": "metrics/accessibility_spatial_cells.csv",
@@ -4286,11 +4330,11 @@
     },
     {
       "filename": "reports/source_registry.md",
-      "sha256": "18c7e09d1b0cfb39872bf82729ae9d15a3ae7af28dde1c186879056d618ecfae",
-      "bytes": 3775,
+      "sha256": "b4112547ebda618c08ba405f7c6f9f32488905d26f224effaa387425b51bc780",
+      "bytes": 5755,
       "source_run_artifact": {
         "document": "docs/analysis/source_registry.md",
-        "sha256": "804c0a3cd54a9ee6442a9fdcc862a9ef1c8fff4cc218c4e509b22d7d810f5068"
+        "sha256": "cc38e6f5a9090b568b5c81f6064ac6a78053f9e75130036f43d3c81aa943027d"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -4298,15 +4342,15 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "docs/analysis/source_registry.md",
-      "source_file_sha256": "804c0a3cd54a9ee6442a9fdcc862a9ef1c8fff4cc218c4e509b22d7d810f5068"
+      "source_file_sha256": "cc38e6f5a9090b568b5c81f6064ac6a78053f9e75130036f43d3c81aa943027d"
     },
     {
       "filename": "reports/thesis_figure_recommendations.md",
-      "sha256": "29584d9050f0359ceec1636f32ce884be3c82163ee0deb5f722e08471502c1af",
-      "bytes": 9729,
+      "sha256": "aa033145e86b0869e87fe1ee5f6991f9f59d0d4e87cddbd21e26f7cd5b760da9",
+      "bytes": 10185,
       "source_run_artifact": {
         "document": "reports/thesis_figure_recommendations.md",
-        "sha256": "c80a726cc7a5fbb16871349cbb85768dcb8e0210b9830f9a9487d944e2ec881a"
+        "sha256": "4637e47983bf35ddad76960f976256dbd5a9c62e83267f913480196c3ca358c2"
       },
       "research_question": "RQ1–RQ4",
       "publication_status": "THESIS_READY",
@@ -4314,7 +4358,7 @@
       "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
       "private_row_export": false,
       "source_filename": "reports/thesis_figure_recommendations.md",
-      "source_file_sha256": "c80a726cc7a5fbb16871349cbb85768dcb8e0210b9830f9a9487d944e2ec881a"
+      "source_file_sha256": "4637e47983bf35ddad76960f976256dbd5a9c62e83267f913480196c3ca358c2"
     },
     {
       "filename": "tables/accessibility_descriptive_statistics.csv",

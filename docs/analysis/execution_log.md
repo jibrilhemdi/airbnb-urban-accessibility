@@ -851,3 +851,73 @@ safe preserved snapshots and documentation. Local/remote prior heads match;
 main/v3 remain unchanged. Normal incremental commit, explicit push to
 HEAD:refs/heads/v4 and remote equality are verified externally after publication;
 this checkpoint does not contain its own commit SHA.
+
+## 13 October 2026 — Neighbourhood-context maps and project README
+
+Completed the clarified researcher request using the archived geography maps as
+its visual reference. Both current map figures now show the unchanged11/17/11
+study neighbourhoods within real surrounding municipalities, rather than isolated
+city silhouettes. White edges delineate study neighbourhoods and the accepted
+mask; grey edges delineate non-study context. Capital names appear in the study
+map legend and city/country panel headings; district-name legends are omitted.
+Square panels retain native projected distances and documented scale bars.
+Stars mark the preserved public Copenhagen City Hall Square (Rådhuspladsen)
+reference and the source-verified Oslo/Stockholm City Hall points. The latter
+are not falsely described as separately validated squares. The original frozen
+analytical civic anchors and centrality features remain unchanged.
+
+The separate, immutable cartography PostGIS schema contains31 surrounding
+municipality polygons and3 public civic reference points. Copenhagen reuses the
+29 September DAGI/DAWA capital-region bytes (10 surrounding municipalities).
+Stockholm reuses the verified national RegSO2025 source, unioning all source
+polygons by original municipality code (12 surrounding municipalities). Oslo
+uses Kartverket's official nine-neighbour list and polygon endpoints, acquired
+with immutable source files, acquisition times, licence/extent/CRS and SHA256
+receipts. New Oslo geometry is explicitly current-at-retrieval display context,
+not June2026 analytical geography. Selection uses3.5 km distance in each city's
+native metric CRS; viewport/mask clipping is presentation only. No source shape
+is repaired or fabricated. Frozen source/catalog/sample/fold/fit identities and
+scientific SQL packages do not change. The applied context migration has its own
+ledger; it does not modify existing study or historical migrations/tables.
+
+Rewrote the project README with the research questions, actual three-city sample
+counts, data/method definitions, headline interpretation, code/configuration
+layout, setup and verification commands. The output README remains unchanged,
+as clarified. Recommendations/synthesis metadata now describe the white/grey
+map layers and civic stars accurately. Prior code, figures, package, README and
+source/audit metadata are preserved in archive/before_neighbourhood_maps/:
+104 files checked byte-for-byte. All16 other PNGs and all44 CSV/Markdown exports
+remain byte-identical. The simple three-folder PNG-only output layout is retained.
+
+Both revised maps reviewed at full resolution against the archived reference;
+all panels/boundaries/legend entries/stars, source IDs, native CRSs and scales
+checked. Publication validation PASS:62 artifacts,18 PNG figures,22 aggregate
+views,6 square panels,149 current document links and1,709 minimum-five bins.
+Numeric claims, independent contrasts, annotation/endpoint clipping and final
+source lineage PASS. Rebuilt the safe ZIP in temporary staging before replacing
+its exact archived predecessor:100 hash/CRC-verified entries,93 package links,
+no vector or private raw/prediction/model exports. Two real PostGIS immutability
+update probes are rejected by the context triggers and rolled back; geometry
+and source hashes are unchanged afterwards.
+
+Initial full-suite source verification identified the new cartographic raw
+namespace as unknown to the historical scanner. Preserved its exact prior code
+and inventory, then explicitly isolated the new namespace in the existing
+compatibility registry. Unknown providers still fail closed; cartographic bytes
+are verified by their own frozen-source loader. The prior compatibility hash and
+reason remain recorded in the inventory rather than rewriting earlier evidence.
+Final full suite:140 tests,113 PASS/27 historical or opt-in SKIP,0 failures.
+Compilation and scoped whitespace PASS. Fresh read-only science verification
+checks87 original sources,38 receipts,751 immutable scientific packages,1,176
+saved models,682 predictions and20,460 fitted-code dependencies; reproduces48
+source-only target applications and primary/transfer RMSE without refitting.
+Protected1,695 files/263 baseline records and20 original dedicated-store table
+fingerprints PASS. One .env and requirements.txt remain; no scientific blocker
+or unrequested model/feature change exists.
+
+Reviewed/staged only safe code, public map metadata, the two replacement PNGs,
+package/report certificates, project documentation and preserved public
+snapshots. Raw acquisition bytes and all private artifacts remain ignored.
+The prior local/remote branch heads agree and main/v3 remain unchanged. Normal
+incremental commit, explicit HEAD:refs/heads/v4 push and remote SHA equality are
+verified externally; this log does not contain its own commit SHA.

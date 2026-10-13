@@ -1,0 +1,307 @@
+{
+  "purpose": "Presentation context only; no sample/feature/fold/model changes",
+  "feature_sha256": "21c677b4b3b1c0cb6a5383c296e3e607113c29268c93ef17238ebefd75f123d1",
+  "source_sha256": "bedcdd47fcb868fd2aeb1e53beea081220929d5835c06830ee9ed50927360908",
+  "sources": [
+    {
+      "source_id": "1d5d48ea5c71a0224def3b86452d95a1175bc9ef575c1368bc8e007242902955",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3220.json",
+        "role": "presentation_context_only",
+        "sha256": "3f013fb272e31d9c4f673dbbafceb308b9f04a8fdd89f8ecfe0f248bb3b586b9",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3220/omrade?utkoordsys=4326",
+        "size_bytes": 114765,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3220/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:39.520096+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Enebakk municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "2415633eaf5786025ee3ea58521a273c5857b32a5f9f6d322d6ed0f5b7e98428",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3305.json",
+        "role": "presentation_context_only",
+        "sha256": "688089d12f25f57dd9b1f97686fd4d30d7482fecb00c5f2f1a0f603ec56863f9",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3305/omrade?utkoordsys=4326",
+        "size_bytes": 602227,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3305/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:40.045375+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Ringerike municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "43da7a188805984bfc5c8eb0deaca74d385f3e28d8c11813689dc274c7c2bdfa",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3201.json",
+        "role": "presentation_context_only",
+        "sha256": "9a33de1568e447bb564fc22274f22c429e01e71c128550d61a5687254d1e3745",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3201/omrade?utkoordsys=4326",
+        "size_bytes": 192138,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3201/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:39.451682+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Bærum municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "621aec54c9f587fef79c7084c911cbd51fd1552d2ac59fb6ffd17d99d25aaf27",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3205.json",
+        "role": "presentation_context_only",
+        "sha256": "b91b7b6fe7955d97e775fcb7e56c296dadc177b7686e0e73b08f333cb6683b45",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3205/omrade?utkoordsys=4326",
+        "size_bytes": 634887,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3205/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:39.757888+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Lillestrøm municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "7c143acca53b54bf97ca86095329f9612c6a7897810fabd4967cbf6bb340a87a",
+      "metadata": {
+        "city": "stockholm",
+        "path": "data/raw/osm_civic_identity/stockholm/20261013T011214720945Z/response.json",
+        "role": "osm_civic_identity",
+        "sha256": "c490ad232ac8f93145de22cba2447e4573a592fdae2391ee3d67d6ca5304c0c1",
+        "status": "transport_success_pending_validation",
+        "failure": null,
+        "headers": {
+          "ETag": null,
+          "Content-Type": "application/json",
+          "Last-Modified": null
+        },
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "size_bytes": 2366,
+        "source_crs": "EPSG:4326",
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "http_status": 200,
+        "receipt_path": "data/raw/osm_civic_identity/stockholm/20261013T011214720945Z/receipt.json",
+        "receipt_sha256": "e3a65c41879fcefc70abe78de15b1c449b02b8739d84d3f0ec483446a9a96379",
+        "acquired_at_utc": "2026-10-13T01:12:14.720945+00:00",
+        "geographic_extent": "OSM relation29368 discovered as candidate; identity/tags/coordinates require primary OSM verification",
+        "request_body_sha256": "9c84ccb3c769aaebde772568b5daecc8401cd52ba2117ebe82b361df9937fd5b"
+      }
+    },
+    {
+      "source_id": "8b7169e09b05120a3fc65b5d84653a35514978b76950552d7c6afcd4c642936a",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3234.json",
+        "role": "presentation_context_only",
+        "sha256": "c74e7a6fe99dcd0f200be071efe89a7578955c040c0b10ec1b953caf76a3932a",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3234/omrade?utkoordsys=4326",
+        "size_bytes": 178414,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3234/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:40.166072+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Lunner municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "983798c66d90261af55cf3990e312a562424b7f9ed47380b96c8b2538264960d",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3212.json",
+        "role": "presentation_context_only",
+        "sha256": "d86ab1bf3ca8e15bacf26ffa2355e6f07b43b08a24a6b2e3506c2eb250aeb109",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3212/omrade?utkoordsys=4326",
+        "size_bytes": 75372,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3212/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:39.364174+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Nesodden municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "a5ff7fbe00c3a6163440121108f2d3f9776d9f57197e49ef1ed404ed03c406f8",
+      "metadata": {
+        "city": "oslo",
+        "path": "data/raw/osm_civic/oslo/20261013T010441778739Z/response.json",
+        "role": "osm_civic",
+        "sha256": "8ac014cedf762305aa50b03f02de164e96e09a40a2c10c3e059224bd991d739c",
+        "status": "transport_success_pending_validation",
+        "failure": null,
+        "headers": {
+          "ETag": null,
+          "Content-Type": "application/json",
+          "Last-Modified": null
+        },
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "size_bytes": 1516,
+        "source_crs": "EPSG:4326",
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "http_status": 200,
+        "receipt_path": "data/raw/osm_civic/oslo/20261013T010441778739Z/receipt.json",
+        "receipt_sha256": "59c7cc24409206dc47350d63ee72146acb669c5da22ee827a6ac2a8a82303852",
+        "acquired_at_utc": "2026-10-13T01:04:41.778739+00:00",
+        "geographic_extent": "nwr[\"amenity\"=\"townhall\"](59.85,10.65,59.98,10.85);",
+        "request_body_sha256": "7299799a51d67a55bdc25b46045c020ca77e50ce75427df3ca3acc08fb85fc79"
+      }
+    },
+    {
+      "source_id": "bcfb31b63c5b8b9f59ca83f61adef31c878170b7b99c841c7e630e0743fd8bc0",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3222.json",
+        "role": "presentation_context_only",
+        "sha256": "22924f5c6a86462ad389a74586211e7a49bc20d066b6c866f2fe4c3d47f03e77",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3222/omrade?utkoordsys=4326",
+        "size_bytes": 117230,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3222/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:39.418597+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Lørenskog municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "c03961678aa680b09412067872b6e3a050e4c5e0b69e3bb0115b380045ea37f8",
+      "metadata": {
+        "key": "city_hall_square",
+        "role": "cartographic_reference_only",
+        "table": "v3_spatial.reference_points",
+        "database": "thesis_accessibility",
+        "source_crs": "WGS84 longitude/latitude (EPSG:4326)",
+        "source_url": "https://www.visitcopenhagen.nl/kobenhavn/planlaeg-din-tur/city-hall-square-gdk414247",
+        "point_sha256": "aeb7888e6b68a4fea4ac00958376b7ec761f0dc6fcff1306f9177969d2446477",
+        "acquired_at_utc": "2026-09-29",
+        "geographic_extent": "Public Copenhagen City Hall Square point",
+        "frozen_analytical_civic_point_replaced": false
+      }
+    },
+    {
+      "source_id": "c49ee9fb1322550fcaeb560952baa4d824cf399944b16429d752a9697a303e32",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3232.json",
+        "role": "presentation_context_only",
+        "sha256": "005aa2bb0e8a823a1e9f56c3852cffac9c622952fdabb7a7012a8e75609f3915",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3232/omrade?utkoordsys=4326",
+        "size_bytes": 409857,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3232/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:39.802307+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Nittedal municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "c86deb4eb5c5fc8b7a8929da01fc3bbc8a366203b2d482d28b8e3d0814de7104",
+      "metadata": {
+        "path": "data/raw/official_map_context/2026-09-29/capital_region_municipalities.geojson",
+        "role": "presentation_context_only",
+        "sha256": "f7a550aee11d09ea70b87752d09d6f5057958f49ffa8916dc2f5d3523cdfc7df",
+        "licence": "CC BY 4.0, DAGI/DAWA",
+        "purpose": "Cartographic context; not study-area membership or analytical covariates",
+        "size_bytes": 16479245,
+        "source_crs": "EPSG:4326 GeoJSON longitude/latitude",
+        "source_url": "https://api.dataforsyningen.dk/kommuner?regionskode=1084&udenforkommuneinddeling=false&format=geojson",
+        "feature_count": 29,
+        "acquired_at_utc": "2026-09-29T09:38:12.814520+00:00",
+        "reference_period": "Current at 29 September 2026 acquisition",
+        "geographic_extent": "Capital Region of Denmark; actual municipalities only"
+      }
+    },
+    {
+      "source_id": "cda7c59ff541bec4e5f7401109b142844d0aadbe4c8b3eb661aec74802fac2de",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/3207.json",
+        "role": "presentation_context_only",
+        "sha256": "3709c62ab12113a470702ab9fba4fd6e361c087a89bf020ebbfa00de6939b7f0",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3207/omrade?utkoordsys=4326",
+        "size_bytes": 259860,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/3207/omrade?utkoordsys=4326",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:39.650717+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Nordre Follo municipality, Oslo surroundings"
+      }
+    },
+    {
+      "source_id": "d53d863e134a8ac9ee330d590f30e868d7f8df82f24a1b2357cfc89c279579ad",
+      "metadata": {
+        "path": "data/raw/cartographic_context/oslo/20261013T190439169353Z/neighbours.json",
+        "role": "presentation_context_only",
+        "sha256": "f5a217808a1a233ee43812b8e71c352e7438953d998363d4604ce0aee1ca171d",
+        "licence": "CC BY 4.0, Kartverket",
+        "final_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/0301/nabokommuner",
+        "size_bytes": 756,
+        "source_crs": "EPSG:4326 requested explicitly for area geometry",
+        "source_url": "https://ws.geonorge.no/kommuneinfo/v1/kommuner/0301/nabokommuner",
+        "http_status": 200,
+        "acquired_at_utc": "2026-10-13T19:04:39.242971+00:00",
+        "reference_period": "API current at retrieval; display context, not June analytical geography",
+        "geographic_extent": "Official municipality neighbours of Oslo"
+      }
+    },
+    {
+      "source_id": "f1247c46b4a75912529da7e522908b4f206a4a2dd15ef4c273899444a6734cab",
+      "metadata": {
+        "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/scb_regso_2025_20261011_geopackage/regso_2025.gpkg",
+        "role": "presentation_context_only",
+        "sha256": "df9bb507bb360020885b47620a5e7bba6c633322236ddaf32ff2a20935c58a5a",
+        "status": "acquired",
+        "licence": "CC0",
+        "filename": "regso_2025.gpkg",
+        "final_url": "https://geodata.scb.se/geoserver/stat/wfs?REQUEST=GetFeature&TYPENAMES=stat%3ARegSO_2025&outputFormat=geopackage&service=WFS&version=1.1.0",
+        "selection": {
+          "dataset": "RegSO_2025"
+        },
+        "source_id": "scb_regso_2025_20261011_geopackage",
+        "derivation": "Full RegSO union by original kommunkod; surrounding municipalities only",
+        "size_bytes": 33775616,
+        "source_crs": "EPSG:3006, verified GeoPackage declaration",
+        "source_url": "https://geodata.scb.se/geoserver/stat/wfs?REQUEST=GetFeature&TYPENAMES=stat%3ARegSO_2025&outputFormat=geopackage&service=WFS&version=1.1.0",
+        "http_status": 200,
+        "content_type": "application/geopackage+sqlite3",
+        "last_modified": null,
+        "local_location": "data/raw/v4/research_design_v4/stockholm/2026-06-30/scb_regso_2025_20261011_geopackage/regso_2025.gpkg",
+        "acquired_at_utc": "2026-10-11T15:03:48+00:00",
+        "reference_period": "2025-01-01",
+        "documentation_url": "https://www.scb.se/en/services/open-data-api/open-geodata/open-data-for-regso--regional-statistical-areas/",
+        "geographic_extent": "Sweden; RegSO 2025 national source, Stockholm selection pending"
+      }
+    }
+  ],
+  "geometry_crs": "EPSG:4326",
+  "metric_crs": {
+    "copenhagen": "EPSG:25832",
+    "oslo": "EPSG:25833",
+    "stockholm": "EPSG:3006"
+  },
+  "migration_sha256": "8e4f9cee092c3f4b64e03c54670a0ed61d5ad55f7bbfe0650f0bd2279034d6ca",
+  "neighbourhood_geography": "Unchanged frozen study.geometries group polygons",
+  "context_count": {
+    "copenhagen": 10,
+    "oslo": 9,
+    "stockholm": 12
+  },
+  "civic_reference_count": 3,
+  "models_refitted": false,
+  "new_sources": "Oslo surrounding municipalities only, current-at-acquisition map context"
+}

@@ -11,10 +11,15 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize,LogNorm
 from matplotlib.cm import ScalarMappable
-from matplotlib.patches import Rectangle
+from matplotlib.patches import Rectangle,Patch,PathPatch
+from matplotlib.path import Path as MplPath
+from matplotlib.lines import Line2D
 from pyproj import Transformer
 from shapely.ops import transform
+from shapely.geometry import box
+from shapely.geometry.polygon import orient
 from src.ingestion.common import sha256_file
+from src.pipeline.protocol import canonical_hash
 from src.study.sources import write_once
 from src.study.archive import preserved_path
 from src.reporting.thesis_sources import ROOT,CITIES,MODELS,LABELS,SCHEMES,load
@@ -102,7 +107,7 @@ class Registry:
                     if outside.any():clipped_values.append({'panel':ax.get_title(loc='left'),'endpoints':int(outside.sum())})
             if name in {'study_areas','accessibility_spatial'}:
                 map_panels.append({'title':ax.get_title(loc='left'),'width_pixels':panel.width,'height_pixels':panel.height,
-                                   'neighbourhood_boundaries':ax._neighbourhood_boundaries,
+                                   'neighbourhood_boundaries':ax._neighbourhood_boundaries,'cartographic_context':ax._cartographic_context,
                                    'square':bool(abs(panel.width-panel.height)<2)})
         self.layout.append({'figure':name,'canvas_pixels':[width,height],'out_of_canvas_text':clipped,
                             'caption_overlaps_axis_label':bool(caption_collision),'header_overlaps_legend':bool(header_collision),
@@ -142,60 +147,89 @@ def intervals(ax,part,y,colour):
 
 
 def outline(ax,geom,**kwargs):
+    """Draw source polygons with transparent holes and unchanged coordinates."""
     pieces=list(geom.geoms) if geom.geom_type=='MultiPolygon' else [geom]
     for piece in pieces:
-        x,y=piece.exterior.xy;ax.fill(np.asarray(x)/1000,np.asarray(y)/1000,**kwargs)
-        for ring in piece.interiors:
-            x,y=ring.xy;ax.plot(np.asarray(x)/1000,np.asarray(y)/1000,color=kwargs.get('edgecolor','#777777'),
-                              lw=kwargs.get('linewidth',.3),zorder=kwargs.get('zorder',2))
+        piece=orient(piece,sign=1);vertices=[];codes=[]
+        for ring in [piece.exterior,*piece.interiors]:
+            xy=np.asarray(ring.coords)/1000
+            vertices.extend(xy);codes.extend([MplPath.MOVETO]+[MplPath.LINETO]*(len(xy)-2)+[MplPath.CLOSEPOLY])
+        ax.add_patch(PathPatch(MplPath(vertices,codes),**kwargs))
 
 
-def neighbourhood_boundaries(ax,data,city,project):
-    """Draw every frozen validation group above cells; never invent boundaries."""
-    groups=[item for item in data['geometries'][city] if item['key'].startswith('group:')]
-    if len(groups)!=data['cities'][city]['operational_count']:raise ValueError('Frozen neighbourhood boundary count differs')
+CAPITAL_COLOURS=dict(zip(CITIES,[theme.BLUE,theme.SAND,theme.GREEN]))
+COUNTRIES={'copenhagen':'Denmark','oslo':'Norway','stockholm':'Sweden'}
+CONTEXT_FILL='#E4EAE7';CONTEXT_BORDER='#A5B4B0';STAR_COLOUR='#A54B32'
+
+
+def map_geography(ax,data,city,*,cells=None,norm=None):
+    project=Transformer.from_crs('EPSG:4326',data['cities'][city]['metric_crs'],always_xy=True).transform
+    geometry=data['geometries'][city]
+    mask=transform(project,next(item['geometry'] for item in geometry if item['key']=='mask'))
+    xmin,ymin,xmax,ymax=mask.bounds
+    side=max(xmax-xmin,ymax-ymin)*1.25;xc=(xmin+xmax)/2;yc=(ymin+ymax)/2
+    view=box(xc-side/2,yc-side/2,xc+side/2,yc+side/2)
+    layers=data['cartographic_context'][city]
+    context=[item for item in layers if item['role']=='surrounding_municipality']
+    for item in context:
+        outline(ax,transform(project,item['geometry']),facecolor=CONTEXT_FILL,edgecolor=CONTEXT_BORDER,linewidth=.75,zorder=1)
+    outline(ax,mask,facecolor=CAPITAL_COLOURS[city],edgecolor='white',linewidth=1.3,zorder=2)
+    if cells is not None:
+        for cell in cells.loc[cells.city==city].itertuples():
+            ax.add_patch(Rectangle((cell.cell_x/1000,cell.cell_y/1000),.5,.5,
+                         facecolor=theme.SEQUENTIAL(norm(cell.mean_rail_walking_minutes)),edgecolor='none',zorder=3))
+    groups=[item for item in geometry if item['key'].startswith('group:')]
+    if len(groups)!=data['cities'][city]['operational_count']:raise ValueError('Frozen neighbourhood count differs')
     for item in groups:
-        geometry=transform(project,item['geometry'])
-        outline(ax,geometry,facecolor='none',edgecolor='white',linewidth=2.1,zorder=4)
-        outline(ax,geometry,facecolor='none',edgecolor=theme.NAVY,linewidth=.9,zorder=5)
+        outline(ax,transform(project,item['geometry']).intersection(mask),facecolor='none',edgecolor='white',linewidth=1.0,zorder=4)
+    outline(ax,mask,facecolor='none',edgecolor='white',linewidth=1.5,zorder=5)
+    references=[item for item in layers if item['role']=='civic_reference']
+    if len(references)!=1:raise ValueError('Exactly one verified civic point required per capital')
+    reference=references[0];point=transform(project,reference['geometry'])
+    if not mask.covers(point):raise ValueError('Verified civic point outside the study mask')
+    ax.plot(point.x/1000,point.y/1000,marker='*',markersize=12,linestyle='None',
+            color=STAR_COLOUR,markeredgecolor='white',markeredgewidth=.85,zorder=10)
+    ax.set_xlim(view.bounds[0]/1000,view.bounds[2]/1000);ax.set_ylim(view.bounds[1]/1000,view.bounds[3]/1000)
+    ax.set_title(LABELS[city]+' · '+COUNTRIES[city])
+    ax.text(.025,.975,data['cities'][city]['metric_crs'],transform=ax.transAxes,va='top',fontsize=8,
+            bbox={'facecolor':'white','alpha':.85,'edgecolor':'none'})
     ax._neighbourhood_boundaries=len(groups)
+    ax._cartographic_context={'surrounding_municipalities':len(context),'study_boundary_colour':'white',
+                             'context_boundary_colour':CONTEXT_BORDER,'civic_reference':reference['properties'],
+                             'civic_reference_geometry_sha256':canonical_hash(reference['geometry'].__geo_interface__),
+                             'capital':LABELS[city],'country':COUNTRIES[city]}
+    theme.map_frame(ax)
+
+
+def map_legend(fig,*,capital_colours=True):
+    handles=([Patch(facecolor=CAPITAL_COLOURS[c],edgecolor='white',label=LABELS[c]) for c in CITIES] if capital_colours else
+             [Patch(facecolor=theme.BLUE,edgecolor='white',label='Study neighbourhoods')])
+    handles.extend([Patch(facecolor=CONTEXT_FILL,edgecolor=CONTEXT_BORDER,label='Surrounding municipalities'),
+                    Line2D([],[],marker='*',markersize=10,color=STAR_COLOUR,markeredgecolor='white',linestyle='None',label='City Hall / Square')])
+    fig.legend(handles=handles,ncol=len(handles),loc='outside upper center',frameon=False)
 
 
 def maps(data,reg):
     crs={c:data['cities'][c]['metric_crs'] for c in CITIES}
-    fig,axes=grid(size=(10.5,4.8))
-    for ax,city in zip(axes[0],CITIES,strict=True):
-        project=Transformer.from_crs('EPSG:4326',crs[city],always_xy=True).transform
-        for item in sorted(data['geometries'][city],key=lambda item:item['key']!='mask'):
-            geom=transform(project,item['geometry'])
-            outline(ax,geom,facecolor='#F5F6F2' if item['key']=='mask' else theme.BLUE,edgecolor='#668A9A',linewidth=.7,alpha=.7)
-        neighbourhood_boundaries(ax,data,city,project)
-        ax.set_aspect('equal');ax.set_title(f"{LABELS[city]}\n{data['cities'][city]['operational_count']} neighbourhoods")
-        ax.set_xlabel('Easting (km)');ax.set_ylabel('Northing (km)')
-        ax.text(.02,.98,crs[city],transform=ax.transAxes,va='top',fontsize=8,bbox={'facecolor':'white','alpha':.85,'edgecolor':'none'})
-        theme.map_frame(ax)
-    reg.figure('study_areas',fig,'Design',['geography'],
-               'Dark lines delineate the 11 Copenhagen, 17 Oslo and 11 Stockholm operational neighbourhoods used for validation. Municipal masks define membership. Each square panel retains its native projected CRS and scale; city scales differ. No individual listings. Inside Airbnb, CC BY 4.0; mask sources are in the source registry.',spatial_crs={'source':'EPSG:4326','panels':crs},page_orientation='landscape')
+    fig,axes=grid(size=(12.5,5.8))
+    for ax,city in zip(axes[0],CITIES,strict=True):map_geography(ax,data,city)
+    map_legend(fig)
+    reg.figure('study_areas',fig,'Design',['geography','cartographic_context'],
+               'White boundaries delineate all 11 Copenhagen–Frederiksberg, 17 Oslo and 11 Stockholm study neighbourhoods. Grey borders show real surrounding municipalities for context only. Stars mark Copenhagen City Hall Square and the verified Oslo/Stockholm City Hall points. Native city CRSs and scales differ. Sources: Inside Airbnb, DAGI/DAWA, Kartverket, Statistics Sweden and pinned civic references.',
+               spatial_crs={'source':'EPSG:4326','panels':crs},page_orientation='landscape',cartographic_context_only=True)
     cells=[]
     for city in CITIES:
         frame=data['frames'][city]
         part=frame.assign(cell_x=np.floor(frame.metric_x/500)*500,cell_y=np.floor(frame.metric_y/500)*500).groupby(['cell_x','cell_y']).agg(n=('listing_id','size'),mean_rail_walking_minutes=('nearest_station_walking_minutes','mean')).reset_index()
         cells.extend(part.loc[part.n>=5].assign(city=city,metric_crs=crs[city]).to_dict('records'))
     cells=pd.DataFrame(cells);cap=float(cells.mean_rail_walking_minutes.quantile(.95));norm=Normalize(0,cap)
-    fig,axes=grid(size=(10.5,4.8))
-    for ax,city in zip(axes[0],CITIES,strict=True):
-        project=Transformer.from_crs('EPSG:4326',crs[city],always_xy=True).transform
-        for item in sorted(data['geometries'][city],key=lambda item:item['key']!='mask'):
-            outline(ax,transform(project,item['geometry']),facecolor='#F5F6F2' if item['key']=='mask' else 'none',edgecolor='#668A9A',linewidth=.55)
-        for cell in cells.loc[cells.city==city].itertuples():
-            ax.add_patch(Rectangle((cell.cell_x/1000,cell.cell_y/1000),.5,.5,facecolor=theme.SEQUENTIAL(norm(cell.mean_rail_walking_minutes)),edgecolor='none',zorder=2.5))
-        neighbourhood_boundaries(ax,data,city,project)
-        ax.autoscale_view();ax.set_aspect('equal');ax.set_title(LABELS[city]);ax.set_xlabel('Easting (km)');ax.set_ylabel('Northing (km)')
-        ax.text(.02,.98,crs[city],transform=ax.transAxes,va='top',fontsize=8,bbox={'facecolor':'white','alpha':.85,'edgecolor':'none'})
-        theme.map_frame(ax)
+    fig,axes=grid(size=(12.5,5.8))
+    for ax,city in zip(axes[0],CITIES,strict=True):map_geography(ax,data,city,cells=cells,norm=norm)
+    map_legend(fig,capital_colours=False)
     fig.colorbar(ScalarMappable(norm=norm,cmap=theme.SEQUENTIAL),ax=axes.ravel().tolist(),label='Mean rail walking time (minutes)',orientation='horizontal',shrink=.6,fraction=.045,pad=.06,panchor=False)
-    reg.figure('accessibility_spatial',fig,'RQ1',['sample','geography'],
-               'Mean nearest-rail walking minutes in 500 m cells with at least five observations. Dark lines mark every frozen operational neighbourhood. Square panels retain native CRS and scale. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. © OpenStreetMap contributors, ODbL; Inside Airbnb CC BY 4.0.',spatial_crs={'source':'EPSG:4326','panels':crs},minimum_aggregate_n=5,colour_cap_minutes=cap,page_orientation='landscape')
+    reg.figure('accessibility_spatial',fig,'RQ1',['sample','geography','cartographic_context'],
+               'Mean nearest-rail walking minutes in 500 m cells with at least five observations. White lines show study neighbourhoods; grey borders show surrounding municipalities. Stars are the verified civic references. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. Context has no analytical role. Sources: OpenStreetMap, Inside Airbnb, DAGI/DAWA, Kartverket and Statistics Sweden.',
+               spatial_crs={'source':'EPSG:4326','panels':crs},minimum_aggregate_n=5,colour_cap_minutes=cap,page_orientation='landscape',cartographic_context_only=True)
     reg.table('accessibility_spatial_cells',cells,'RQ1',['sample'],
               'Only500 m cells with n≥5; no individual coordinates. Values are uncapped means of frozen walking accessibility.',category='metrics')
 
@@ -410,7 +444,7 @@ def spatial(tables,reg):
 def run(revise=False,preview=None):
     destination=ROOT/'reports/thesis_artifact_manifest.json'
     if preview is not None:
-        baseline=json.loads((ROOT/'archive/before_output_cleanup/manifest.json').read_text())
+        baseline=json.loads((ROOT/'archive/before_neighbourhood_maps/manifest.json').read_text())
         for item in baseline['numeric_exports_immutable']:
             if sha256_file(preserved_path(item['original_path'],item['sha256']))!=item['sha256']:raise ValueError('Published numerical export changed')
         if preview.exists():raise ValueError('Style preview must use a new output directory')
@@ -445,9 +479,9 @@ def run(revise=False,preview=None):
               'items':reg.items,'layout_checks':reg.layout,'scientific_choice_changes':False,
               'style':{**theme.reference(),'city_order':[LABELS[c] for c in CITIES],
                        'model_order':list(MODELS),'delta_sign':'candidate minus reference; negative improves','figure_format':'PNG only'}}
-    manifest['generation_dependencies']={str(p.relative_to(ROOT)):sha256_file(p) for p in [*[ROOT/'src/reporting'/name for name in ['thesis_audit.py','thesis_sources.py','thesis_tables.py','thesis_outputs.py','thesis_style.py','thesis_refresh.py']],ROOT/'src/pipeline/reporting_figures.py',ROOT/'docs/analysis/data_dictionary.md',ROOT/'requirements.txt']}
+    manifest['generation_dependencies']={str(p.relative_to(ROOT)):sha256_file(p) for p in [*[ROOT/'src/reporting'/name for name in ['thesis_audit.py','thesis_sources.py','thesis_tables.py','thesis_outputs.py','thesis_style.py','thesis_refresh.py','thesis_cartography.py']],ROOT/'src/pipeline/reporting_figures.py',ROOT/'docs/analysis/data_dictionary.md',ROOT/'requirements.txt',ROOT/'config/reporting/map_context.json',ROOT/'sql/cartography/001_map_context.sql']}
     if preview is not None:
-        manifest['presentation_refresh']={'prior_checkpoint':baseline['base_checkpoint'],'prior_manifest':'archive/before_output_cleanup/reports/thesis_artifact_manifest.json','numerical_exports_byte_identical':True,'user_requested_style':'Pastel PNG figures, square maps, explicit boundaries, horizontal neighbourhood bars','preview_directory':str(preview)}
+        manifest['presentation_refresh']={'prior_checkpoint':baseline['base_checkpoint'],'prior_manifest':'archive/before_neighbourhood_maps/reports/thesis_artifact_manifest.json','numerical_exports_byte_identical':True,'user_requested_style':'Archived geography maps: capital fills, white study borders, grey surrounding borders and verified civic stars','preview_directory':str(preview)}
         write_once(preview/'thesis_artifact_manifest.json',(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n').encode())
     elif revise:
         manifest['draft_layout_revision']='External legends; shared-axis ordering; compact divergence rows; common count colour scales; numeric/aggregate tables byte-identical'

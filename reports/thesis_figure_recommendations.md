@@ -6,7 +6,7 @@ Ten main figures and eight main tables; eight further figures belong in appendic
 
 | --- | --- | --- | --- | --- | --- | --- |
 
-| MAIN | figure | Design | [study_areas](../outputs/figures/study_areas.png) | Show the actual provider validation geography across all cities | Operational neighbourhoods are the geographic holdouts | Methods: study design |
+| MAIN | figure | Design | [study_areas](../outputs/figures/study_areas.png) | Show the actual provider validation geography across all cities | White boundaries delineate all 11 Copenhagen–Frederiksberg, 17 Oslo and 11 Stockholm study neighbourhoods. Grey borders show real surrounding municipalities for context only. Stars mark Copenhagen City Hall Square and the verified Oslo/Stockholm City Hall points. Native city CRSs and scales differ. Sources: Inside Airbnb, DAGI/DAWA, Kartverket, Statistics Sweden and pinned civic references. | Methods: study design |
 
 | MAIN | figure | RQ1 | [nearest_access_relationship](../outputs/figures/nearest_access_relationship.png) | Reveal paired measurement relationships rather than isolated averages | Nearest network distances exceed straight-line distances; destinations can differ | Results: accessibility measurement |
 
@@ -42,7 +42,7 @@ Ten main figures and eight main tables; eight further figures belong in appendic
 
 | MAIN | table | All | [claims_and_limitations](../outputs/tables/claims_and_limitations.md) | Compact factual basis for the associated RQ; full precision stays in CSV | Generated from explicitly pinned final SQL/results; definitions, selection limits and source identities remain unchanged. | Results: All |
 
-| APPENDIX | figure | RQ1 | [accessibility_spatial](../outputs/figures/accessibility_spatial.png) | Useful diagnostic/complementary evidence; avoids duplicating the main narrative | Mean nearest-rail walking minutes in500 m cells with at least five observations. Shared colour scale capped at pooled95th percentile for display; uncapped aggregate values remain in the accompanying table. Boundaries are the frozen provider geography. © OpenStreetMap contributors, ODbL; Inside Airbnb CC BY4.0. | Appendix: RQ1 |
+| APPENDIX | figure | RQ1 | [accessibility_spatial](../outputs/figures/accessibility_spatial.png) | Useful diagnostic/complementary evidence; avoids duplicating the main narrative | Mean nearest-rail walking minutes in 500 m cells with at least five observations. White lines show study neighbourhoods; grey borders show surrounding municipalities. Stars are the verified civic references. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. Context has no analytical role. Sources: OpenStreetMap, Inside Airbnb, DAGI/DAWA, Kartverket and Statistics Sweden. | Appendix: RQ1 |
 
 | APPENDIX | figure | RQ1 | [nearest_access_divergence](../outputs/figures/nearest_access_divergence.png) | Useful diagnostic/complementary evidence; avoids duplicating the main narrative | Frozen nearest-category distance excess: median dots, interquartile thick bars and5th–95th percentile thin bars. These are distribution summaries, not confidence intervals or same-object route circuity. | Appendix: RQ1 |
 

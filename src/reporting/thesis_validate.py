@@ -40,6 +40,10 @@ def artifacts():
             panels=row['map_panels']
             if len(panels)!=3 or any(not p['square'] for p in panels):raise ValueError('Map panels must be square')
             if [p['neighbourhood_boundaries'] for p in panels]!=[11,17,11]:raise ValueError('Neighbourhood boundaries incomplete')
+            for panel in panels:
+                context=panel['cartographic_context']
+                if context['surrounding_municipalities']<1 or context['study_boundary_colour']!='white' or context['context_boundary_colour']!='#A5B4B0':raise ValueError('Map context/boundary style missing')
+                if not context['civic_reference_geometry_sha256']:raise ValueError('Unverified civic star')
     paths=set();figures=set();tables=set();privacy_bins=0
     for item in manifest['items']:
         name=item['filename'];p=ROOT/name
@@ -142,9 +146,9 @@ def review_style():
     if 'presentation_refresh' not in manifest:raise ValueError('No preserved style refresh to review')
     review={'status':'PASS_VISUAL_REVIEW','style_id':manifest['style']['style_id'],
             'reference_style':manifest['style'],'figure_sets':18,'figure_files':18,
-            'visual_review':'All18 figures reviewed in full-resolution contact sheets plus selected full-size panels before activation',
+            'visual_review':'Both revised maps reviewed at full size; sixteen other figures verified byte-identical to the previous visual review',
             'numerical_exports_verified_byte_identical':44,'source_catalog_sha256':previous['source_catalog_sha256'],
-            'previous_presentation_archive':'archive/before_output_cleanup/manifest.json',
+            'previous_presentation_archive':'archive/before_neighbourhood_maps/manifest.json',
             'models_refitted':False,'scientific_choice_changes':False,'publication_validation':checked}
     for name,record in [('thesis_publication_validation.json',checked),('thesis_style_review.json',review)]:
         path=ROOT/'reports'/name

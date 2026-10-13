@@ -20,11 +20,11 @@ COLOURS={'M0':DARK[0],'ME':DARK[1],'MW':DARK[2],'MEW':DARK[3],
 FILLS=dict(zip(DARK,PALETTE))
 STYLE_ID='pastel_reference'
 HEADINGS={
- 'study_areas':('The study areas and validation neighbourhoods','Copenhagen · Oslo · Stockholm · frozen operational geography'),
+ 'study_areas':('Capital cities and their study neighbourhoods','White study boundaries · grey surrounding municipalities · verified civic references'),
  'nearest_access_relationship':('Straight-line and walking access','Rail stations and bus stops · paired measurements on common samples'),
  'nearest_access_divergence':('Where accessibility measures diverge','Nearest-category distance excess · median and distribution ranges'),
  'opportunity_comparison':('Reachable urban opportunities','Food & social · culture & tourism · matched travel budgets'),
- 'accessibility_spatial':('Walking access to rail stations','Mean within 500 m cells · at least five observations per cell'),
+ 'accessibility_spatial':('Walking access across study neighbourhoods','Neighbourhood context · mean within 500 m cells · at least five observations per cell'),
  'primary_model_performance':('Prediction in geographically unseen neighbourhoods','Pooled held-out error · lower RMSE is better'),
  'paired_accessibility_contrasts':('What accessibility adds to prediction','Paired changes in geographic held-out RMSE · negative values indicate improvement'),
  'association_accessibility':('Conditional accessibility associations','Complete-case OLS · combined model · adjusted observational associations'),

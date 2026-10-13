@@ -52,6 +52,8 @@ documents and statuses remain historical evidence.
 | `reports/thesis_release_manifest.json` | Bundled-file hashes and final source/RQ/publication identities |
 | `reports/thesis_style_review.json` | Requested original pastel design; visual/layout checks and unchanged numerical exports |
 | `archive/before_figure_style/manifest.json` | Exact prior certified presentation, code, documents and safe release |
+| `config/reporting/map_context.json` | Public map context: source checksums, native CRSs and separate immutable PostGIS geometry |
+| `archive/before_neighbourhood_maps/manifest.json` | Exact previous PNGs, package, code and project README before neighbourhood-context revision |
 | `archive/before_output_cleanup/manifest.json` | Original output tree and certified PNG/PDF/SVG presentation before simplification |
 | [Prior entry snapshots](../../archive/previous_scope/README.md) | Preserved original instructions and entry documentation |
 
