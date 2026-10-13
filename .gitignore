@@ -101,7 +101,6 @@ listing_predictions*.json
 *.pgdump
 credentials*.json
 secrets*.json
-!.env.study.example
 /database_dumps/
 /db_dumps/
 *.dump.sql

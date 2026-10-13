@@ -822,6 +822,18 @@
       "archived_path": "archive/before_association_amendment/outputs/tables/research/robustness_registry.csv",
       "sha256": "51cfa6169dccec1b278aa7c2b77e6c8a730a09ea74df4b2ce14bb79d47ca26f8",
       "bytes": 76884
+    },
+    {
+      "original_path": ".env.example",
+      "archived_path": "archive/previous_scope/.env.example",
+      "sha256": "cfc55ea3bf7a728e80ac28db09ba1186100bf072d22e48a6d6b0e669715ed34d",
+      "bytes": 178
+    },
+    {
+      "original_path": ".env.study.example",
+      "archived_path": "archive/previous_scope/.env.study.example",
+      "sha256": "3642517181f484e37e5b05d56a5b6c91732b47cd70f2ef2691b6bd3e81fec2cd",
+      "bytes": 228
     }
   ],
   "researcher_exclusions": {

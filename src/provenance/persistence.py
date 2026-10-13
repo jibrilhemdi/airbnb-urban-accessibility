@@ -30,13 +30,13 @@ def verify_database(conn, *, synthetic: bool = False) -> str:
     return name
 
 
-def get_engine(env_path: Path = PROJECT_ROOT / '.env.study'):
-    # Never load .env, DB_* or mutate process environment (V3 settings stay V3).
+def get_engine(env_path: Path = PROJECT_ROOT / '.env'):
+    # Read only STUDY_DB_*; never inherit DB_* or mutate process environment.
     file_settings = dotenv_values(env_path) if env_path.is_file() else {}
     names = ('HOST', 'PORT', 'NAME', 'USER', 'PASSWORD')
     settings = {k: os.environ.get('STUDY_DB_' + k, file_settings.get('STUDY_DB_' + k)) for k in names}
     if any(not value for value in settings.values()):
-        raise RuntimeError('Missing STUDY_DB_* settings; use .env.study.example and the dedicated analytical database')
+        raise RuntimeError('Missing STUDY_DB_* settings; use .env.example and the dedicated analytical database')
     if settings['NAME'] != 'thesis_accessibility_v4':
         raise RuntimeError('STUDY_DB_NAME must be thesis_accessibility_v4')
     try:

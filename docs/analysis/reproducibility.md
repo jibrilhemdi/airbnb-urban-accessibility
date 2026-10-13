@@ -135,7 +135,8 @@ Completed predictive fits, transfers, features, samples, folds and SHAP are
 preserved. The release audit verifies exact fitted-code snapshots, all saved
 model bytes, prediction-package hashes and source-only transfer reproduction.
 
-Use `.env.study` and STUDY_DB_* for the dedicated source/research connection.
+Use the single `.env`: STUDY_DB_* selects the dedicated source/research connection,
+while DB_* selects the preserved historical connection. Neither inherits the other's settings.
 Python 3.13.5 is recorded in requirements.txt and software_environment.json;
 there is no second active dependency file or separate .python-version file.
 Source-provenance adapters are under src/provenance; previous version-labelled

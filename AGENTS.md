@@ -42,7 +42,7 @@ Income and housing remain excluded. Models are exactly M0=X, ME=X+E, MW=X+W,
 MEW=X+E+W; preserve the common predictive samples and source-only transfers.
 Completed predictive/transfer fits stay unchanged after dependency checks.
 
-Use functional active paths, one requirements.txt and one archive/. Python's
+Use functional active paths, one requirements.txt, one .env and one archive/. Python's
 audited version is recorded in the environment audit and requirements comment.
 Previous source adapters use src/provenance; archived evidence is resolved
 through the checksum-aware archive manifest. Raw bytes, applied migrations,

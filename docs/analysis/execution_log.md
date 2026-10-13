@@ -586,3 +586,25 @@ macOS package-access correction). Final safe staging/commit/push and remote
 V4 equality follow this review and are reported externally. Main/v3 and the
 detached historical worktree remain unchanged; no private ZIP, source file,
 model, credential, coordinate or row-level prediction is staged.
+
+
+## Single environment-file consolidation — 13 October 2026
+
+At the researcher's explicit request, merged the existing private .env.study
+settings into .env, verifying every original value before replacing the file
+and removing the second private file. One public .env.example now documents
+both DB_* (historical) and STUDY_DB_* (dedicated analysis) namespaces. Archived
+both prior public templates with original checksums; no credentials were
+archived, printed or staged. The merged private file has mode0600 and remains
+ignored. Updated the dedicated connection reader's default path and active
+documentation; study connections still refuse DB_* fallback and preserve their
+original dedicated database guard. No model, data or SQL migration changed.
+
+Actual validation:39 active tests all PASS, including four owned PostGIS
+integration tests and three shared-configuration isolation/precedence tests.
+Read-only live connections reach the original historical and study databases.
+Protected1695-file/263-tracked-baseline verification PASS, all77 public research
+artifact hashes unchanged, compilation and whitespace checks PASS. The full
+research status remains COMPLETE. Safe configuration/code/docs/test changes
+are reviewed, committed and pushed only to V4, with remote equality verified
+externally after publication. The private .env is excluded from Git.
