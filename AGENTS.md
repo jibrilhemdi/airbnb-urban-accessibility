@@ -30,7 +30,34 @@
 
 12. Every analysis table and figure must be reproducible from code.
 
-## V4 sequence safeguards
+## Active comprehensive rerun
+
+The researcher request of 13 October 2026 supersedes the former sequential
+scope below. Read [the active contract](docs/analysis/implementation_contract.md),
+[design](config/study/design.json), [plan](docs/analysis/research_plan.md), and
+[execution log](docs/analysis/execution_log.md). The previous instructions are
+preserved byte-for-byte in `history/previous_scope/AGENTS.md`; dated audits and
+the former step log remain historical evidence.
+
+Work only on the existing `v4` branch. Execute the comprehensive task without
+ordinary stage confirmations. Income and residential prices are outside all
+primary and required analyses. Use operational Inside Airbnb neighbourhoods
+(11/17/11); preserve raw labels. Geographic support requires at least 15 test
+and 500 complementary training observations in the frozen common sample.
+Use separate native-currency log-price city models and six directional
+city-relative log-price transfer experiments. No target-city fitting/tuning or
+intercept recalibration. Recompute all derived research results; reuse only
+verified immutable sources and audited infrastructure. New active paths and
+identities use functional names. Historical migrations, schemas, ledgers,
+sources and completed results keep their original identities and bytes.
+
+At each checkpoint test, review safe staged files, update the execution log,
+commit, push `HEAD:refs/heads/v4` to recorded origin, and verify remote equality.
+Never alter main/v3, reset/rebase/force-push, stash unrelated work or overwrite
+completed results. A failed push is LOCAL_ONLY. A scientific blocker stops its
+dependent work; continue independent work. Fixtures are tests, never results.
+
+## Historical sequence safeguards (superseded by the explicit rerun request)
 
 Read [the active accessibility-only V4 contract](docs/v4/IMPLEMENTATION_CONTRACT.md),
 [the step log](docs/v4/step_log.md) and [document index](docs/v4/document_index.md)

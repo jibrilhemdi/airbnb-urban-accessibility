@@ -1,4 +1,11 @@
 # Local/raw research data. Keep source files out of version control.
+/runs/
+/data/derived/
+/data/intermediate/
+/outputs/metrics/
+/outputs/models/
+/outputs/diagnostics/
+/outputs/accessibility/
 data/raw/*
 data/interim/*
 data/processed/*

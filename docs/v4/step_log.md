@@ -1217,3 +1217,15 @@ remain BLOCKED; no A05+ execution. Commit this safe inspection checkpoint, push
 HEAD only to recorded origin refs/heads/v4 and verify actual remote equality
 outside the commit. Requested-work checkpoint message:
 `docs(v4): audit Rinkeby-Tensta polygon correspondence`.
+
+## Comprehensive researcher amendment — 13 October 2026
+
+The explicit complete-rerun request supersedes the single-step execution limit,
+income requirement, official-validation-geography requirement and30-test
+primary safeguard. Historical checkpoints above remain unchanged. Active
+contract/specification/plan/registry/log now use functional paths under
+`docs/analysis/`, `config/study/`, `src/study/`. See the active execution log
+for actual checks, stages and blockers; historical numerical results may not
+serve as final rerun results. Initial design checkpoint:201 safe baseline
+tests (157 PASS,44 opt-in skipped), four new registry tests PASS;1696 protected
+files and historical analytical SQL fingerprints unchanged. No fitting claim.
