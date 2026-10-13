@@ -98,5 +98,14 @@
       "accessibility_spatial"
     ],
     "numeric_claims_unchanged": true
+  },
+  "research_document_revision": {
+    "date": "2026-10-14",
+    "prior_manifest": "archive/before_research_documents/reports/thesis_synthesis_manifest.json",
+    "comparison": "docs/analysis/document_comparison.md",
+    "exports": "reports/research_document_manifest.json",
+    "models_refitted": false,
+    "scientific_outputs_unchanged": true,
+    "portable_package_recertified": false
   }
 }

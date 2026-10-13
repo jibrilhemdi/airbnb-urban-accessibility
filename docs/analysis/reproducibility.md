@@ -191,8 +191,9 @@ and `reports/numeric_claims_registry.json` trace generated prose to those
 outputs. Current figures are 300-dpi PNG only; aggregate cells and
 prediction-display bins suppress counts below five. Release manifests and the
 deterministic ZIP contain only reviewed figures, aggregate tables and documents.
-Markdown is authoritative; the repository has no supported active DOCX/PDF
-document-generation workflow for this four-RQ design.
+Markdown is authoritative. Proposal/plan Word copies are now supplied by
+`scripts/update_research_documents.py`; PDF and results-report Word exports are
+not supplied.
 
 ## Requested figure-style refresh
 
@@ -229,3 +230,24 @@ Previous outputs, including vector figures, are preserved in
 Historical inventory paths resolve through `src.study.archive.preserved_path`
 and must still match their recorded SHA256. Current CSV/Markdown exports retain
 the exact forty-four previously certified file hashes. No model is refitted.
+
+## Current research-document exports
+
+`docs/scientific_proposal.md` and `docs/analysis/research_plan.md` are canonical.
+`scripts/update_research_documents.py` creates the matching Word documents in
+`docs/` from the checksum-preserved attached templates, retaining fonts, styles,
+headers, footers and page-number settings. The generator uses the existing lxml
+XML dependency and refuses to overwrite an existing export. Preserve superseded
+documents before regeneration. Verify the current copies with:
+
+```sh
+.venv/bin/python scripts/update_research_documents.py --check
+```
+
+`reports/research_document_manifest.json` records template, source and export
+hashes; `docs/analysis/document_comparison.md` explains draft-to-execution
+corrections. Validation checks all body text/tables and package/XML integrity.
+No page-rendering engine was available for visual Word layout verification.
+This exporter is limited to the two research documents, not PDF or results-report
+exports. The local output README/ZIP deletions observed before this task are
+preserved; this document revision does not rebuild or recertify the package.

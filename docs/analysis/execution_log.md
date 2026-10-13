@@ -921,3 +921,60 @@ snapshots. Raw acquisition bytes and all private artifacts remain ignored.
 The prior local/remote branch heads agree and main/v3 remain unchanged. Normal
 incremental commit, explicit HEAD:refs/heads/v4 push and remote SHA equality are
 verified externally; this log does not contain its own commit SHA.
+
+## 14 October 2026 — Reconciled research proposal and plan
+
+Compared the two supplied Downloads Word files with the actual implemented
+registry, native context/density code and audits, final samples, predictive
+metrics, transfer design and robustness. The attachments are13 October
+pre-rerun/implementation drafts, not the latest completed-study account.
+Instructions inside them were treated as document content; no historical rerun,
+database reset, source acquisition or fit was activated. Preserved the exact
+attachments, prior Markdown/index/reproducibility/log and provenance manifest
+in archive/before_research_documents/, with original checksums.
+
+Updated canonical docs/scientific_proposal.md and docs/analysis/research_plan.md
+with the four-RQ structure (geographic generalization RQ3; transfer RQ4), actual
+reference/prediction/association samples, native official density denominators,
+Stockholm's actual published population/area pair and source-vintage limits,
+matched category universes without a same-nearest-destination claim, achieved
+historical OSM timestamp, actual project graph implementation, training-only
+predictor preprocessing, six source-only transfers, observed5%→10% association
+amendment and completed diagnostic/registered robustness statuses. Historical
+Copenhagen numbers remain distinguished from final estimates. Draft no-density,
+same-object circuity and median-centred transfer suggestions are explicitly not
+claimed as executed. Literature references are retained from the attachment;
+this is an implementation/result reconciliation, not a new literature review.
+
+Added a detailed comparison in docs/analysis/document_comparison.md and updated
+the document index/reproduction instructions. Added reproducible proposal/plan
+Word exports at docs/scientific_proposal.docx and docs/end_to_end_research_plan.docx.
+The reusable exporter uses the existing lxml dependency and archived templates;
+it preserves fonts, styles, section settings, headers, footers and page fields,
+and checks all body text and seven tables per copy against canonical Markdown.
+It independently regenerates six numeric document tables from pinned final
+exports. An initial technical export-check revision is preserved before the
+final checked exports. No new requirements or PDF/results-report renderer was
+introduced. Word XML/package/CRC and text/table equivalence PASS; no installed
+page-rendering engine was available for visual pagination review, which is
+explicitly recorded rather than asserted as completed.
+
+Actual validation:97 current local document links PASS; six numeric tables
+reproduced; read-only PostGIS checks verify the3 final samples and all24 primary
+OLS/XGBoost metrics against the authoritative selected summaries. All751
+scientific package identities match the frozen catalog. All62 public scientific
+figure/table files remain byte-identical. Protected1,695 historical files and263
+baseline records PASS. Compilation/scoped whitespace PASS. No raw source,
+model, fitted prediction, feature, sample or fold changed. Detailed checks are
+in reports/research_document_manifest.json and research_document_checks.json.
+
+At task start outputs/README.md and outputs/thesis_results.zip were already
+pending deletions. These user changes are preserved, excluded from staging and
+not restored to satisfy old package tests. The local package is not rebuilt or
+recertified by this document revision; previous package certificates remain
+historical evidence. Only the intended document/export code, updated narratives,
+current document provenance and safe preserved copies are staged. The prior
+local/remote head agrees; work remains exclusively on existing v4, with main/v3
+unchanged. Normal incremental commit, explicit HEAD:refs/heads/v4 push and
+remote/local SHA equality are verified externally; no own-commit SHA is written
+into this checkpoint.

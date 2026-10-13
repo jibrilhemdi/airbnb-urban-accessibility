@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "updated_date": "2026-10-14",
+  "canonical_format": "Markdown",
+  "export_scope": "Scientific proposal and research plan DOCX only; no PDF/results-report renderer",
+  "generation_command": ".venv/bin/python scripts/update_research_documents.py",
+  "generator_sha256": "b04e3f73abf6e732cb5c3176b86aa659d658ce429db2a4721fd54599de28a3d5",
+  "documents": [
+    {
+      "markdown": "docs/scientific_proposal.md",
+      "markdown_sha256": "e64f802de116a7df5f8047705cbf69ebaba61b82e6ac95f1cce57d063dbdf667",
+      "docx": "docs/scientific_proposal.docx",
+      "docx_sha256": "0b4e3d14d37598e083a2b2c3e9520d21de1faa70043d32cb0131814e2dbd5efa",
+      "template": "archive/before_research_documents/attachments/scientific_proposal.docx",
+      "template_sha256": "6f9cca75bd40bcb2668e301710111b297d2c1a5df942cab14cd031d116bb87af",
+      "text_and_tables_match": "PASS",
+      "paragraphs": 183,
+      "tables": 7,
+      "package_XML_CRC": "PASS",
+      "template_styles_headers_footers_preserved": true
+    },
+    {
+      "markdown": "docs/analysis/research_plan.md",
+      "markdown_sha256": "25c8244a5a86e1c48cfbad4cb87d1edaf645fcf3fd28ec542c96930300e77c4d",
+      "docx": "docs/end_to_end_research_plan.docx",
+      "docx_sha256": "014df17bb17b831cb9530c8b479cb651a30a5d8dda42381e2317daefbb7331cf",
+      "template": "archive/before_research_documents/attachments/end_to_end_research_plan.docx",
+      "template_sha256": "893223dd7bb0ff33a55d1e39b652a1b94b885bb3007989ac31954de214f2c73d",
+      "text_and_tables_match": "PASS",
+      "paragraphs": 178,
+      "tables": 7,
+      "package_XML_CRC": "PASS",
+      "template_styles_headers_footers_preserved": true
+    }
+  ],
+  "numerical_table_verification": {
+    "tables_independently_reproduced": 6,
+    "sources": {
+      "outputs/tables/city_sample_summary.csv": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
+      "outputs/tables/primary_predictive_performance.csv": "668068de61b0feba1134d0e5acfc142f837ea5f4f9f481139672e6b0e2144605"
+    },
+    "status": "PASS"
+  },
+  "attached_document_instructions_executed": false,
+  "models_refitted": false,
+  "frozen_scientific_outputs_unchanged": 62,
+  "preservation_manifest": "archive/before_research_documents/manifest.json",
+  "pending_user_output_deletions_preserved": [
+    "outputs/README.md",
+    "outputs/thesis_results.zip"
+  ]
+}

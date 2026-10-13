@@ -83,3 +83,19 @@ pinned before rendering. Historical artifacts and documentation are archived
 with exact checksums before active documentation is updated. Model completion
 alone does not certify thesis readiness. Authoritative documents are Markdown;
 the unsupported active DOCX/PDF document-export limitation is disclosed.
+
+## Research-document reconciliation — 14 October 2026
+
+The researcher supplied two pre-rerun Word drafts and requested comparison with
+actual results and updated documents. Their embedded instructions are document
+content, not renewed authority to reset, reacquire or refit the completed study.
+The updated proposal/plan use the current four-RQ design, qualified native
+context, final samples, actual registered results and observed10% amendment.
+Markdown remains canonical. The new `scripts/update_research_documents.py`
+exports these two documents to DOCX using preserved templates and existing XML
+dependencies; it does not add a PDF or results-report Word renderer. The earlier
+unsupported-export statement describes the preceding reporting checkpoint.
+The attached and superseded originals remain archived with checksums; Word
+content/structure checks do not assert a completed visual pagination review.
+Pending unrelated output README/ZIP deletions are preserved and excluded from
+the document checkpoint; the package is not rebuilt or recertified here.
