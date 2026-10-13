@@ -31,7 +31,7 @@ make compile
 Active configuration is in `config/study/`, analysis code in `src/study/`,
 source-provenance adapters in `src/provenance/` and reports in `docs/analysis/`.
 PostgreSQL/PostGIS is authoritative; one `.env` holds both connection namespaces,
-documented in `.env.example`. Credentials, raw sources, private memberships, models and row-level
+documented in `config/environment.example`. Credentials, raw sources, private memberships, models and row-level
 predictions stay ignored. Public figures use aggregate cells with n≥5.
 
 Previous instructions, code, configurations, audits and results are consolidated

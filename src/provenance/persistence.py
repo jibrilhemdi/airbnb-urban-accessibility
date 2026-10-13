@@ -36,7 +36,7 @@ def get_engine(env_path: Path = PROJECT_ROOT / '.env'):
     names = ('HOST', 'PORT', 'NAME', 'USER', 'PASSWORD')
     settings = {k: os.environ.get('STUDY_DB_' + k, file_settings.get('STUDY_DB_' + k)) for k in names}
     if any(not value for value in settings.values()):
-        raise RuntimeError('Missing STUDY_DB_* settings; use .env.example and the dedicated analytical database')
+        raise RuntimeError('Missing STUDY_DB_* settings; use config/environment.example and the dedicated analytical database')
     if settings['NAME'] != 'thesis_accessibility_v4':
         raise RuntimeError('STUDY_DB_NAME must be thesis_accessibility_v4')
     try:

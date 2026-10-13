@@ -137,6 +137,8 @@ model bytes, prediction-package hashes and source-only transfer reproduction.
 
 Use the single `.env`: STUDY_DB_* selects the dedicated source/research connection,
 while DB_* selects the preserved historical connection. Neither inherits the other's settings.
+The public setup template is `config/environment.example`; `.env` is the only
+environment file at the repository root and remains ignored.
 Python 3.13.5 is recorded in requirements.txt and software_environment.json;
 there is no second active dependency file or separate .python-version file.
 Source-provenance adapters are under src/provenance; previous version-labelled

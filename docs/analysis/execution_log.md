@@ -608,3 +608,22 @@ artifact hashes unchanged, compilation and whitespace checks PASS. The full
 research status remains COMPLETE. Safe configuration/code/docs/test changes
 are reviewed, committed and pushed only to V4, with remote equality verified
 externally after publication. The private .env is excluded from Git.
+
+
+## One root environment file — 13 October 2026
+
+The repeated request clarified that the root template was also unwanted.
+Moved its unchanged public contents from .env.example to
+config/environment.example, leaving exactly one root .env* file: the existing
+private .env. Its credentials and database settings were not edited. Updated
+setup/error references and documentation, and removed the obsolete template
+ignore exception. Preserved the original connection helper's exact bytes for
+historical checksum resolution; this code change affects error guidance only.
+
+Actual validation: all three existing shared-environment isolation/precedence
+tests PASS, compilation/whitespace PASS, protected1695 files and263 tracked
+baseline checks PASS, all77 research artifact hashes unchanged. Root file
+enumeration confirms only .env; the public template remains outside the root.
+Safe template/code/docs changes are reviewed, committed and pushed on V4 with
+remote equality verified externally. Main/v3 and research status are unchanged;
+no private environment file is staged.

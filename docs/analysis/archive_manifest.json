@@ -834,6 +834,18 @@
       "archived_path": "archive/previous_scope/.env.study.example",
       "sha256": "3642517181f484e37e5b05d56a5b6c91732b47cd70f2ef2691b6bd3e81fec2cd",
       "bytes": 228
+    },
+    {
+      "original_path": ".env.example",
+      "archived_path": "config/environment.example",
+      "sha256": "6b55e971f4280ffe26dd2fb8592c8ce1cb3bbc1e3fedad5c1eb22a738fe4bd65",
+      "bytes": 391
+    },
+    {
+      "original_path": "src/db/connection.py",
+      "archived_path": "archive/implementation/connection_before_template_move.py",
+      "sha256": "83b0cd7fb21b3f8a8f6d156ad4cff645dec773ba5cfadad8262803de48439891",
+      "bytes": 1609
     }
   ],
   "researcher_exclusions": {

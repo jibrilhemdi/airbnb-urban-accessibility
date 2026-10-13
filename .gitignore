@@ -76,7 +76,6 @@ archive/legacy_v2/notebooks/
 
 # Local credentials and packaged data.
 .env.*
-!.env.example
 *.zip
 *.dump
 *.backup
