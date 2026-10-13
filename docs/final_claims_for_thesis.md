@@ -18,4 +18,4 @@ Copenhagen includes Frederiksberg. Claims refer only to the frozen final rerun a
 | Results represent every Nordic or European city | DO_NOT_CLAIM | All | Three selected capital-city samples do not establish that external validity |
 | The 10% eligibility limit was preregistered or universal | DO_NOT_CLAIM | RQ2 | Explicitly changed after observing Stockholm missingness; complete-case selection remains a limitation |
 
-Evidence: [primary paired contrasts](../outputs/tables/thesis/paired_model_contrasts.md), [validation](../outputs/tables/thesis/validation_comparison.md), [transfer contrasts](../outputs/tables/thesis/transfer_contrasts.md) and [association results](../outputs/tables/thesis/association_results.md).
+Evidence: [primary paired contrasts](../outputs/tables/paired_model_contrasts.md), [validation](../outputs/tables/validation_comparison.md), [transfer contrasts](../outputs/tables/transfer_contrasts.md) and [association results](../outputs/tables/association_results.md).

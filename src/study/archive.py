@@ -9,7 +9,8 @@ from src.ingestion.common import PROJECT_ROOT,sha256_file
 @lru_cache(maxsize=1)
 def manifests():
     result=[]
-    for name in ['docs/analysis/archive_manifest.json','archive/before_association_amendment/manifest.json']:
+    for name in ['docs/analysis/archive_manifest.json','archive/before_association_amendment/manifest.json',
+                 'archive/before_figure_style/manifest.json','archive/before_output_cleanup/manifest.json']:
         path=PROJECT_ROOT/name
         if path.is_file():result.extend(json.loads(path.read_text())['files'])
     return result

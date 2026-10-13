@@ -32,7 +32,7 @@ def run():
     for item in items:
         if sha256_file(ROOT/item['filename'])!=item['sha256']:raise ValueError('Generated artifact differs before synthesis')
     def table(name,category='tables'):
-        path=ROOT/f'outputs/{category}/thesis/{name}.csv';dependencies[str(path.relative_to(ROOT))]=sha256_file(path)
+        path=ROOT/f'outputs/{category}/{name}.csv';dependencies[str(path.relative_to(ROOT))]=sha256_file(path)
         return pd.read_csv(path)
     samples=table('city_sample_summary');desc=table('accessibility_descriptive_statistics');primary=table('primary_predictive_performance')
     paired=table('paired_model_contrasts');validation=table('validation_comparison');transfer=table('transfer_performance');tpaired=table('transfer_contrasts')
@@ -41,20 +41,20 @@ def run():
         claims.append({'id':identifier,'source_file':source,'source_sha256':dependencies[source],'column':column,
                        'filters':filters,'value':float(value),'meaning':meaning})
         return float(value)
-    def fig(name,caption):return f'![{caption}](../outputs/figures/thesis/{name}.png)\n\n'+caption
-    def link(name,category='tables'):return f'[{name.replace("_"," ")}](../outputs/{category}/thesis/{name}.md)'
+    def fig(name,caption):return f'![{caption}](../outputs/figures/{name}.png)\n\n'+caption
+    def link(name,category='tables'):return f'[{name.replace("_"," ")}](../outputs/{category}/{name}.md)'
     nearest=[];opportunities=[]
     for city in [LABELS[c] for c in CITIES]:
         for concept in ['station','bus','food','culture']:
             part=desc.loc[(desc.city==city)&(desc.concept==concept)].set_index('representation')
             e=float(part.loc['Euclidean','median']);w=float(part.loc['Walking','median'])
-            source='outputs/tables/thesis/accessibility_descriptive_statistics.csv'
+            source='outputs/tables/accessibility_descriptive_statistics.csv'
             for measure,value in [('Euclidean',e),('Walking',w)]:numeric(f'RQ1_{city}_{concept}_{measure}',source,'median',{'city':city,'concept':concept,'representation':measure},value,'Frozen median accessibility')
             row={'City':city,'Concept':concept,'Euclidean median':e,'Walking median':w,'Unit':part.loc['Euclidean','unit']}
             (nearest if concept in ['station','bus'] else opportunities).append(row)
     local=[];direct=[]
     for r in paired.loc[(paired.estimator=='XGBoost')&(paired.reference=='M0')].itertuples():
-        pct=100*r.proportional_change;source='outputs/tables/thesis/paired_model_contrasts.csv'
+        pct=100*r.proportional_change;source='outputs/tables/paired_model_contrasts.csv'
         numeric(f'RQ2_{r.city}_{r.added}',source,'delta_rmse',{'city':r.city,'estimator':r.estimator,'added':r.added,'reference':'M0'},r.delta_rmse,'XGBoost primary ΔRMSE')
         local.append({'City':r.city,'Model':r.added,'ΔRMSE':r.delta_rmse,'% RMSE change':pct,'Stability low':r.stability_low,'Stability high':r.stability_high})
     direct=paired.loc[paired.reference=='ME',['city','estimator','added','reference','delta_rmse','stability_low','stability_high']]
@@ -88,10 +88,10 @@ def run():
      ('Results represent every Nordic or European city','DO_NOT_CLAIM','All','Three selected capital-city samples do not establish that external validity'),
      ('The 10% eligibility limit was preregistered or universal','DO_NOT_CLAIM','RQ2','Explicitly changed after observing Stockholm missingness; complete-case selection remains a limitation')]
     claim_rows=[{'Candidate claim':a,'Status':b,'RQ':c,'Evidence and qualification':d} for a,b,c,d in supported]
-    write_once(ROOT/'docs/final_claims_for_thesis.md',('# Final scientific claims for the thesis\n\nCopenhagen includes Frederiksberg. Claims refer only to the frozen final rerun and the disclosed post-observation10% association eligibility amendment.\n\n'+markdown(claim_rows)+'\n\nEvidence: [primary paired contrasts](../outputs/tables/thesis/paired_model_contrasts.md), [validation](../outputs/tables/thesis/validation_comparison.md), [transfer contrasts](../outputs/tables/thesis/transfer_contrasts.md) and [association results](../outputs/tables/thesis/association_results.md).\n').encode())
+    write_once(ROOT/'docs/final_claims_for_thesis.md',('# Final scientific claims for the thesis\n\nCopenhagen includes Frederiksberg. Claims refer only to the frozen final rerun and the disclosed post-observation10% association eligibility amendment.\n\n'+markdown(claim_rows)+'\n\nEvidence: [primary paired contrasts](../outputs/tables/paired_model_contrasts.md), [validation](../outputs/tables/validation_comparison.md), [transfer contrasts](../outputs/tables/transfer_contrasts.md) and [association results](../outputs/tables/association_results.md).\n').encode())
     recommendations=[]
     for name in MAIN_FIGURES:
-        rq,reason,takeaway,section=REASONS[name];record=next(i for i in items if i['logical_name']==name and i['filename'].endswith('.pdf'))
+        rq,reason,takeaway,section=REASONS[name];record=next(i for i in items if i['logical_name']==name and i['filename'].endswith('.png'))
         recommendations.append({'kind':'figure','name':name,'file':record['filename'],'research_question':rq,'reason':reason,'takeaway':takeaway,'suggested_section':section,'placement':'MAIN','source_catalog_sha256':record['source_catalog_sha256']})
     for name in MAIN_TABLES:
         record=next(i for i in items if i['logical_name']==name and i['filename'].endswith('.md'))
@@ -100,12 +100,12 @@ def run():
                                 'suggested_section':'Methods: samples' if name=='city_sample_summary' else 'Results: '+record['research_question'],
                                 'placement':'MAIN','source_catalog_sha256':record['source_catalog_sha256']})
     for item in items:
-        if item['kind']=='figure' and item['filename'].endswith('.pdf') and item['logical_name'] not in MAIN_FIGURES:
+        if item['kind']=='figure' and item['filename'].endswith('.png') and item['logical_name'] not in MAIN_FIGURES:
             recommendations.append({'kind':'figure','name':item['logical_name'],'file':item['filename'],'research_question':item['research_question'],
                                     'reason':'Useful diagnostic/complementary evidence; avoids duplicating the main narrative','takeaway':item['caption'],
                                     'suggested_section':'Appendix: '+item['research_question'],'placement':'APPENDIX','source_catalog_sha256':item['source_catalog_sha256']})
     write_once(ROOT/'reports/thesis_recommendations.json',(json.dumps(recommendations,indent=2,ensure_ascii=False)+'\n').encode())
-    lines=['# Thesis figure and table recommendations','Ten main figures and eight main tables; eight further figures belong in appendices. Full feature definitions, all-model association coefficients, robustness registry, source support and aggregate diagnostics remain appendix/supplement tables. Landscape figures are explicitly marked in the artifact manifest. Use PDF/SVG in the thesis and PNG for review.','| Placement | Kind | RQ | Artifact | Reason | Takeaway | Thesis section |','| --- | --- | --- | --- | --- | --- | --- |']
+    lines=['# Thesis figure and table recommendations','Ten main figures and eight main tables; eight further figures belong in appendices. Full feature definitions, all-model association coefficients, robustness registry, source support and aggregate diagnostics remain appendix/supplement tables. Landscape figures are explicitly marked in the artifact manifest. Use the 300-dpi PNG figures in the thesis.','| Placement | Kind | RQ | Artifact | Reason | Takeaway | Thesis section |','| --- | --- | --- | --- | --- | --- | --- |']
     lines.extend('| '+' | '.join([r['placement'],r['kind'],r['research_question'],f"[{r['name']}](../{r['file']})",r['reason'],r['takeaway'],r['suggested_section']])+' |' for r in recommendations)
     write_once(ROOT/'reports/thesis_figure_recommendations.md',('\n\n'.join(lines)+'\n').encode())
     q1=['## RQ1','### 1. Evidence used',link('accessibility_descriptive_statistics')+'; '+link('nearest_access_divergence','metrics')+'; nearest relationships, opportunities and suppressed spatial maps.',
@@ -145,7 +145,7 @@ def run():
             '## 1. Final samples',markdown(samples.drop(columns=['reference_mean_log_price','association_missing_limit_percent','geography_assigned','common_accessibility_support'])),link('sample_flow'),
             'Inside Airbnb operational groups define primary holdouts; accepted municipal masks define membership, not official validation-area certification. Minimum15 outer-test and500 complementary training observations are retained. The researcher changed association eligibility from5% to10% after observing Stockholm missingness; complete cases remain unchanged and no bedrooms/outcomes are filled.',fig('study_areas','Frozen public operational geography and accepted study masks; no individual listings.'),
             '## 2. RQ1 — measurement',markdown(nearest),markdown(opportunities),fig('nearest_access_relationship','Paired nearest-category distances; matched universes, not same-destination circuity.'),fig('opportunity_comparison','Median and interquartile opportunity counts under the frozen nominal10-minute budgets.'),
-            'Walking distances and reachability differ from straight-line measurements. Display transformations, suppressed bins and map colour caps do not alter model features. '+link('accessibility_descriptive_statistics')+' and '+link('nearest_access_divergence','metrics')+' retain precise summaries. [Spatial map](../outputs/figures/thesis/accessibility_spatial.pdf) is appendix evidence.',
+            'Walking distances and reachability differ from straight-line measurements. Display transformations, suppressed bins and map colour caps do not alter model features. '+link('accessibility_descriptive_statistics')+' and '+link('nearest_access_divergence','metrics')+' retain precise summaries. [Spatial map](../outputs/figures/accessibility_spatial.png) is appendix evidence.',
             '## 3. RQ2 — within-city prediction',markdown(primary.pivot(index=['city','estimator'],columns='model',values='rmse').reindex(columns=MODELS).reset_index(),precision=6),markdown(local,precision=6),fig('primary_model_performance','Pooled primary errors and descriptive fold variation.'),fig('paired_accessibility_contrasts','All five paired contrasts, including network replacement and add-on.'),
             'Accessibility point gains occur in Copenhagen/Stockholm with adverse Oslo changes. The intervals are neighbourhood-composition stability ranges, not independent-sample confidence intervals. '+link('paired_model_contrasts')+' provides every estimator/model comparison; heldout contributions are appendix interpretation, not causality.',
             '## 4. RQ2 complementary OLS associations',link('association_results'),fig('association_accessibility','MEW complete-case adjusted associations with95% HC3 intervals; predictor-specific units.'),
@@ -154,12 +154,12 @@ def run():
             '## 6. RQ3 — cross-city consistency',fig('neighbourhood_performance_variation','Paired MW−M0 errors for every primary neighbourhood.'),
             'The geographic sign counts and local scores qualify citywide averages. Different samples/dispersion, uneven folds, overlapping training sets and residual dependence prevent claims of independent cross-design replication. '+link('neighbourhood_performance','metrics')+' preserves all four model/estimator scores and '+link('neighbourhood_support','diagnostics')+' records support.',
             '## 7. RQ4 — cross-city transferability',markdown(transfer.pivot(index=['source_city','target_city','estimator'],columns='model',values='rmse').reindex(columns=MODELS).reset_index(),precision=6),markdown(counts),fig('transfer_performance','All six relative-price source→target directions and four models.'),fig('transfer_network_comparison','Direct network replacement/add-on with existing target-composition ranges.'),fig('directional_transfer_asymmetry','Descriptive reversal differences; source and target tasks change.'),
-            'The observed target reference is used only for centring/evaluation. Twenty-four shared source pipelines produce48 estimator/model-direction prediction sets; no target fit/tuning/recalibration occurs. '+link('transfer_contrasts')+' includes all five comparisons. [Binned prediction diagnostics](../outputs/figures/thesis/transfer_prediction_diagnostics.pdf) and [baseline transfer gains](../outputs/figures/thesis/transfer_accessibility_gains.pdf) are appendix evidence, not new fitted models.',
+            'The observed target reference is used only for centring/evaluation. Twenty-four shared source pipelines produce48 estimator/model-direction prediction sets; no target fit/tuning/recalibration occurs. '+link('transfer_contrasts')+' includes all five comparisons. [Binned prediction diagnostics](../outputs/figures/transfer_prediction_diagnostics.png) and [baseline transfer gains](../outputs/figures/transfer_accessibility_gains.png) are appendix evidence, not new fitted models.',
             '## 8. Robustness',link('robustness_registry'),fig('robustness_contrasts','Within-variant paired MW−M0 changes, stability and genuine native-source N/A entries.'),
-            'The exhaustive registry accounts for every requested variant. Training-tail restriction, imputation and tuning remain source-training-only. All triggered spatial-error and four-model area fixed-effect checks are complete; density is correctly absorbed. Variant samples/definitions can differ, so the plot is not an absolute-score ranking. [Residual spatial diagnostics](../outputs/figures/thesis/residual_spatial_diagnostics.pdf) remain appendix evidence.',
+            'The exhaustive registry accounts for every requested variant. Training-tail restriction, imputation and tuning remain source-training-only. All triggered spatial-error and four-model area fixed-effect checks are complete; density is correctly absorbed. Variant samples/definitions can differ, so the plot is not an absolute-score ranking. [Residual spatial diagnostics](../outputs/figures/residual_spatial_diagnostics.png) remain appendix evidence.',
             '## 9. Main limitations','Original asking prices are not transactions/bookings/revenue. Strong missing-price attrition and complete-case selection constrain representativeness. Operational provider boundaries differ from municipal/native context footprints; population/area vintages, rounded Stockholm denominators and incomplete OSM coverage remain limitations. Displaced coordinates, connectors, components and finite extraction can affect accessibility. Few groups and spatial dependence qualify stability. Three capitals do not represent all Nordic cities. The10% eligibility rule was changed after inspecting missingness. Transfer uses observed target means and cannot certify absolute deployment.',
             '## 10. Claims supported',markdown(claim_rows),
-            '[Figure/table recommendations](thesis_figure_recommendations.md), [RQ-by-RQ synthesis](findings_by_research_question.md), [final claims audit](../docs/final_claims_for_thesis.md), [initial gap audit](deliverable_gap_audit.md) and [artifact provenance](thesis_artifact_manifest.json) provide the complete writing/release trail. Markdown is authoritative: no supported active proposal/plan/results DOCX/PDF export pipeline exists. Scientific figures have deterministic PDF/SVG and300-dpi PNG exports.']
+            '[Figure/table recommendations](thesis_figure_recommendations.md), [RQ-by-RQ synthesis](findings_by_research_question.md), [final claims audit](../docs/final_claims_for_thesis.md), [initial gap audit](deliverable_gap_audit.md) and [artifact provenance](thesis_artifact_manifest.json) provide the complete writing/release trail. Markdown is authoritative: no supported active proposal/plan/results DOCX/PDF export pipeline exists. Scientific figures are supplied as 300-dpi PNG files.']
     write_once(ROOT/'reports/research_results.md',('\n\n'.join(report)+'\n').encode())
     write_once(ROOT/'reports/numeric_claims_registry.json',(json.dumps(claims,indent=2,ensure_ascii=False)+'\n').encode())
     docs=['docs/final_claims_for_thesis.md','reports/thesis_figure_recommendations.md','reports/thesis_recommendations.json',

@@ -1,7 +1,7 @@
 [
   {
     "id": "RQ1_Copenhagen_station_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -14,7 +14,7 @@
   },
   {
     "id": "RQ1_Copenhagen_station_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -27,7 +27,7 @@
   },
   {
     "id": "RQ1_Copenhagen_bus_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -40,7 +40,7 @@
   },
   {
     "id": "RQ1_Copenhagen_bus_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -53,7 +53,7 @@
   },
   {
     "id": "RQ1_Copenhagen_food_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -66,7 +66,7 @@
   },
   {
     "id": "RQ1_Copenhagen_food_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -79,7 +79,7 @@
   },
   {
     "id": "RQ1_Copenhagen_culture_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -92,7 +92,7 @@
   },
   {
     "id": "RQ1_Copenhagen_culture_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -105,7 +105,7 @@
   },
   {
     "id": "RQ1_Oslo_station_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -118,7 +118,7 @@
   },
   {
     "id": "RQ1_Oslo_station_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -131,7 +131,7 @@
   },
   {
     "id": "RQ1_Oslo_bus_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -144,7 +144,7 @@
   },
   {
     "id": "RQ1_Oslo_bus_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -157,7 +157,7 @@
   },
   {
     "id": "RQ1_Oslo_food_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -170,7 +170,7 @@
   },
   {
     "id": "RQ1_Oslo_food_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -183,7 +183,7 @@
   },
   {
     "id": "RQ1_Oslo_culture_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -196,7 +196,7 @@
   },
   {
     "id": "RQ1_Oslo_culture_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -209,7 +209,7 @@
   },
   {
     "id": "RQ1_Stockholm_station_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -222,7 +222,7 @@
   },
   {
     "id": "RQ1_Stockholm_station_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -235,7 +235,7 @@
   },
   {
     "id": "RQ1_Stockholm_bus_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -248,7 +248,7 @@
   },
   {
     "id": "RQ1_Stockholm_bus_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -261,7 +261,7 @@
   },
   {
     "id": "RQ1_Stockholm_food_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -274,7 +274,7 @@
   },
   {
     "id": "RQ1_Stockholm_food_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -287,7 +287,7 @@
   },
   {
     "id": "RQ1_Stockholm_culture_Euclidean",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -300,7 +300,7 @@
   },
   {
     "id": "RQ1_Stockholm_culture_Walking",
-    "source_file": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+    "source_file": "outputs/tables/accessibility_descriptive_statistics.csv",
     "source_sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
     "column": "median",
     "filters": {
@@ -313,7 +313,7 @@
   },
   {
     "id": "RQ2_Copenhagen_ME",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {
@@ -327,7 +327,7 @@
   },
   {
     "id": "RQ2_Copenhagen_MW",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {
@@ -341,7 +341,7 @@
   },
   {
     "id": "RQ2_Copenhagen_MEW",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {
@@ -355,7 +355,7 @@
   },
   {
     "id": "RQ2_Oslo_ME",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {
@@ -369,7 +369,7 @@
   },
   {
     "id": "RQ2_Oslo_MW",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {
@@ -383,7 +383,7 @@
   },
   {
     "id": "RQ2_Oslo_MEW",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {
@@ -397,7 +397,7 @@
   },
   {
     "id": "RQ2_Stockholm_ME",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {
@@ -411,7 +411,7 @@
   },
   {
     "id": "RQ2_Stockholm_MW",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {
@@ -425,7 +425,7 @@
   },
   {
     "id": "RQ2_Stockholm_MEW",
-    "source_file": "outputs/tables/thesis/paired_model_contrasts.csv",
+    "source_file": "outputs/tables/paired_model_contrasts.csv",
     "source_sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
     "column": "delta_rmse",
     "filters": {

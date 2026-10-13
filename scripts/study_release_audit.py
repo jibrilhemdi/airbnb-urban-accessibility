@@ -115,7 +115,7 @@ def run():
             if len(registry)!=75 or any(r['status'] not in {'COMPLETE','NOT_APPLICABLE','NOT_APPLICABLE_TRIGGER_NOT_MET'} for r in registry):raise ValueError('Registered robustness incomplete')
         inventory=json.loads((ROOT/'docs/analysis/final_artifact_inventory.json').read_text())
         for row in inventory:
-            path=ROOT/row['path']
+            path=preserved_path(row['path'],row['sha256'])
             if sha256_file(path)!=row['sha256'] or path.stat().st_size!=row['bytes']:raise ValueError('Public generated output changed')
             if any(token in row['path'] for token in ['predictions','models/','data/raw','runs/']):raise ValueError('Private artifact in public inventory')
             if path.suffix=='.csv':

@@ -48,15 +48,16 @@ documents and statuses remain historical evidence.
 | [Thesis artifact manifest](../../reports/thesis_artifact_manifest.json) | Final SQL source lineage and public output hashes |
 | [Synthesis manifest](../../reports/thesis_synthesis_manifest.json) | Generated document hashes and source table provenance |
 | [Exact reporting request](../../archive/research_request/reporting_completion.txt) | User-authorized reporting-only completion scope |
-| `outputs/release/README.md` | Safe figures, tables, metrics, reports, manifests and deterministic ZIP |
-| `outputs/release/manifests/release_manifest.json` | Bundled-file hashes and final source/RQ/publication identities |
+| `outputs/README.md` | Safe figures, tables, metrics, reports, manifests and deterministic ZIP |
+| `reports/thesis_release_manifest.json` | Bundled-file hashes and final source/RQ/publication identities |
 | `reports/thesis_style_review.json` | Requested original pastel design; visual/layout checks and unchanged numerical exports |
 | `archive/before_figure_style/manifest.json` | Exact prior certified presentation, code, documents and safe release |
+| `archive/before_output_cleanup/manifest.json` | Original output tree and certified PNG/PDF/SVG presentation before simplification |
 | [Prior entry snapshots](../../archive/previous_scope/README.md) | Preserved original instructions and entry documentation |
 
 `config/study/` holds canonical city/model registries and immutable selectors.
-`outputs/tables/research/`, `outputs/figures/research/` and functional
-`outputs/metrics/<scheme>/` contain generated aggregates. Private raw files,
+`outputs/figures/`, `outputs/tables/` and `outputs/metrics/` contain current thesis
+exports. Earlier research and historical outputs are in the checksum-aware archive. Private raw files,
 model bytes, row predictions and memberships stay under ignored source/run
 locations and authoritative PostGIS packages. A listed expected final file is
 not a completion claim; the release audit and execution log establish status.
@@ -65,7 +66,7 @@ Historical documents retain their original bytes and applied identifiers in the 
 They do not reactivate retired source/model prerequisites or provide final
 numerical results for the amended rerun.
 
-Thesis figure sets are in `outputs/figures/thesis/`; tables, metrics and
-diagnostics use the corresponding functional `thesis/` directories. Earlier
-research artifacts remain byte-identical. Reporting completion is separately
+Thesis figure sets are in `outputs/figures/`; tables and supporting metrics use flat
+`outputs/tables/` and `outputs/metrics/` directories. Figures are PNG only. Earlier
+research artifacts remain byte-identical in the archive. Reporting completion is separately
 certified from scientific model completion, with no new estimation.

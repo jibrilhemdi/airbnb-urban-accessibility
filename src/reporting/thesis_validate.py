@@ -13,6 +13,7 @@ from PIL import Image
 from src.ingestion.common import sha256_file
 from src.study.sources import write_once
 from src.reporting.thesis_sources import ROOT,verify_catalog,load
+from src.study.archive import preserved_path
 
 FORBIDDEN={'listing_id','host_id','latitude','longitude','metric_x','metric_y','record_key','prediction','price_nightly','log_price','relative_log_price'}
 STALE=re.compile(r'(?:^|[/_ .-])(?:v\d+|a0[1-9]|a1[0-2]|version[_ -]?\d+)(?:$|[/_ .-])',re.I)
@@ -33,7 +34,12 @@ def artifacts():
     catalog=verify_catalog();manifest=json.loads((ROOT/'reports/thesis_artifact_manifest.json').read_text());packages={p['run_id']:p for p in catalog['sql_packages']}
     for name,expected in manifest['generation_dependencies'].items():
         if sha256_file(ROOT/name)!=expected:raise ValueError('Reporting generator dependency changed: '+name)
-    if any(p['out_of_canvas_text'] or p.get('caption_overlaps_axis_label') or p.get('header_overlaps_legend') for p in manifest['layout_checks']):raise ValueError('Figure labels clipped or overlapping')
+    if any(p['out_of_canvas_text'] or p.get('caption_overlaps_axis_label') or p.get('header_overlaps_legend') or p.get('data_text_outside_axes') or p.get('plotted_values_outside_axes') for p in manifest['layout_checks']):raise ValueError('Figure values or labels clipped/overlapping')
+    for row in manifest['layout_checks']:
+        if row['figure'] in {'study_areas','accessibility_spatial'}:
+            panels=row['map_panels']
+            if len(panels)!=3 or any(not p['square'] for p in panels):raise ValueError('Map panels must be square')
+            if [p['neighbourhood_boundaries'] for p in panels]!=[11,17,11]:raise ValueError('Neighbourhood boundaries incomplete')
     paths=set();figures=set();tables=set();privacy_bins=0
     for item in manifest['items']:
         name=item['filename'];p=ROOT/name
@@ -57,6 +63,7 @@ def artifacts():
             with Image.open(p) as im:
                 if min(im.info.get('dpi',(0,0)))<299 or im.width<2000:raise ValueError('Insufficient PNG publication quality')
             figures.add(item['logical_name'])
+        if item['kind']=='figure' and p.suffix!='.png':raise ValueError('Only PNG figures requested')
         if p.suffix=='.pdf' and not p.read_bytes().startswith(b'%PDF-'):raise ValueError('Invalid PDF export')
         if p.suffix=='.svg':
             document=ET.fromstring(p.read_text())
@@ -74,7 +81,7 @@ def artifacts():
         style=manifest['style']
         if sha256_file(ROOT/style['reference_source'])!=style['reference_source_sha256']:raise ValueError('Original style reference changed')
         for name,digest in style['reference_figures'].items():
-            if sha256_file(ROOT/'outputs/figures/reporting'/name)!=digest:raise ValueError('Original style example changed')
+            if sha256_file(preserved_path('outputs/figures/reporting/'+name,digest))!=digest:raise ValueError('Original style example changed')
         if any(item.get('style_id')!=style['style_id'] for item in manifest['items'] if item['kind']=='figure'):raise ValueError('Mixed figure themes')
     synth=json.loads((ROOT/'reports/thesis_synthesis_manifest.json').read_text())
     for item in synth['items']:
@@ -85,16 +92,16 @@ def artifacts():
         for key,value in claim['filters'].items():frame=frame.loc[frame[key]==value]
         if len(frame)!=1 or not np.isclose(frame[claim['column']].iloc[0],claim['value'],rtol=1e-12,atol=1e-12):raise ValueError('Untraceable numeric claim')
     # Point contrasts independently follow the already exported final performance.
-    performance=pd.read_csv(ROOT/'outputs/tables/thesis/primary_predictive_performance.csv')
-    for row in pd.read_csv(ROOT/'outputs/tables/thesis/paired_model_contrasts.csv').itertuples():
+    performance=pd.read_csv(ROOT/'outputs/tables/primary_predictive_performance.csv')
+    for row in pd.read_csv(ROOT/'outputs/tables/paired_model_contrasts.csv').itertuples():
         scores=performance.loc[(performance.city==row.city)&(performance.estimator==row.estimator)].set_index('model')
         np.testing.assert_allclose(row.delta_rmse,scores.loc[row.added,'rmse']-scores.loc[row.reference,'rmse'],rtol=1e-10,atol=1e-12)
-    transfer=pd.read_csv(ROOT/'outputs/tables/thesis/transfer_performance.csv')
-    for row in pd.read_csv(ROOT/'outputs/tables/thesis/transfer_contrasts.csv').itertuples():
+    transfer=pd.read_csv(ROOT/'outputs/tables/transfer_performance.csv')
+    for row in pd.read_csv(ROOT/'outputs/tables/transfer_contrasts.csv').itertuples():
         scores=transfer.loc[(transfer.source_city==row.source_city)&(transfer.target_city==row.target_city)&(transfer.estimator==row.estimator)].set_index('model')
         np.testing.assert_allclose(row.delta_rmse,scores.loc[row.added,'rmse']-scores.loc[row.reference,'rmse'],rtol=1e-10,atol=1e-12)
-    checked_files=[*sorted((ROOT/'outputs/tables/thesis').glob('*.md')),*sorted((ROOT/'outputs/metrics/thesis').glob('*.md')),
-                   *sorted((ROOT/'outputs/diagnostics/thesis').glob('*.md')),ROOT/'reports/research_results.md',ROOT/'reports/findings_by_research_question.md',
+    checked_files=[*sorted((ROOT/'outputs/tables').glob('*.md')),*sorted((ROOT/'outputs/metrics').glob('*.md')),
+                   ROOT/'outputs/README.md',ROOT/'README.md',ROOT/'reports/research_results.md',ROOT/'reports/findings_by_research_question.md',
                    ROOT/'reports/thesis_figure_recommendations.md',ROOT/'docs/final_claims_for_thesis.md',ROOT/'docs/scientific_proposal.md',
                    ROOT/'docs/analysis/research_plan.md',ROOT/'docs/analysis/reproducibility.md',ROOT/'docs/analysis/source_registry.md',ROOT/'docs/analysis/document_index.md']
     links=check_links(checked_files)
@@ -105,7 +112,9 @@ def artifacts():
             'main_figures':10,'main_tables':8,'appendix_figures':8,'privacy_bins_verified':privacy_bins,
             'final_run_lineage':'PASS','numeric_claims_trace':'PASS','independent_point_contrast_recalculation':'PASS',
             'links_checked':links,'visible_version_markers':'NONE','clipped_labels':'NONE',
-            'caption_and_header_overlap':'NONE','models_refitted':False}
+            'caption_and_header_overlap':'NONE','data_annotations_outside_panels':'NONE','plotted_value_clipping':'NONE',
+            'square_map_panels_verified':6,'neighbourhood_boundaries_per_map':[11,17,11],
+            'figure_formats':['PNG'],'models_refitted':False}
 
 
 def science():
@@ -132,10 +141,10 @@ def review_style():
     manifest=json.loads((ROOT/'reports/thesis_artifact_manifest.json').read_text())
     if 'presentation_refresh' not in manifest:raise ValueError('No preserved style refresh to review')
     review={'status':'PASS_VISUAL_REVIEW','style_id':manifest['style']['style_id'],
-            'reference_style':manifest['style'],'figure_sets':18,'figure_files':54,
+            'reference_style':manifest['style'],'figure_sets':18,'figure_files':18,
             'visual_review':'All18 figures reviewed in full-resolution contact sheets plus selected full-size panels before activation',
             'numerical_exports_verified_byte_identical':44,'source_catalog_sha256':previous['source_catalog_sha256'],
-            'previous_presentation_archive':'archive/before_figure_style/manifest.json',
+            'previous_presentation_archive':'archive/before_output_cleanup/manifest.json',
             'models_refitted':False,'scientific_choice_changes':False,'publication_validation':checked}
     for name,record in [('thesis_publication_validation.json',checked),('thesis_style_review.json',review)]:
         path=ROOT/'reports'/name

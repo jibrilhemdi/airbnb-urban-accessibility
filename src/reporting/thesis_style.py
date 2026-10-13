@@ -8,6 +8,7 @@ from matplotlib.colors import LinearSegmentedColormap,to_rgb
 from matplotlib.ticker import MaxNLocator
 from src.ingestion.common import sha256_file
 from src.reporting.thesis_sources import ROOT
+from src.study.archive import preserved_path
 
 NAVY='#183449';INK='#486174';BLUE='#A9C8D7';SAND='#E9BF86';GREEN='#B7D4C4';LILAC='#CEC2DE'
 PALETTE=[BLUE,SAND,GREEN,LILAC];DARK=['#527F96','#AF7F42','#608A77','#88759E']
@@ -47,10 +48,10 @@ SHARED_CATEGORIES={'nearest_access_divergence','association_accessibility','held
 def reference():
     path=ROOT/'src/pipeline/reporting_figures.py'
     return {'style_id':STYLE_ID,'reference_source':str(path.relative_to(ROOT)),'reference_source_sha256':sha256_file(path),
-            'reference_figures':{name:sha256_file(ROOT/'outputs/figures/reporting'/name) for name in
+            'reference_figures':{name:sha256_file(preserved_path('outputs/figures/reporting/'+name)) for name in
                 ['predictive_performance.png','incremental_performance.png','measure_comparison.png','nearest_station_walking_minutes_map.png']},
             'font':'DejaVu Sans','navy':NAVY,'ink':INK,'pastel_palette':PALETTE,'stroke_palette':DARK,
-            'heading':'bold navy','grid':'light #E7EEF1','PNG_dpi':300,'vector':['PDF','SVG'],
+            'heading':'bold navy','grid':'light #E7EEF1','PNG_dpi':300,'formats':['PNG'],
             'scientific_values_reused_from_reference':False}
 
 
@@ -115,8 +116,12 @@ def decorate(fig,name,caption):
 def map_frame(ax):
     """Scale bars use existing metric-km coordinates; arrow denotes grid north."""
     ax.set_xlabel('');ax.set_ylabel('');ax.set_xticks([]);ax.set_yticks([]);ax.set_facecolor('#EEF4F7')
-    ax.set_anchor('N')
-    for spine in ax.spines.values():spine.set_visible(False)
+    # Equal projected distances and equal x/y spans make every panel square.
+    xmin,xmax=ax.get_xlim();ymin,ymax=ax.get_ylim()
+    side=max(xmax-xmin,ymax-ymin);xc=(xmin+xmax)/2;yc=(ymin+ymax)/2
+    ax.set_xlim(xc-side/2,xc+side/2);ax.set_ylim(yc-side/2,yc+side/2)
+    ax.set_aspect('equal',adjustable='box');ax.set_box_aspect(1);ax.set_anchor('N')
+    for spine in ax.spines.values():spine.set_visible(True);spine.set_color('#D4DFE4');spine.set_linewidth(.8)
     ax.annotate('N\n(grid)',xy=(.92,.92),xytext=(.92,.76),xycoords='axes fraction',ha='center',
                 fontsize=8,weight='bold',color=NAVY,arrowprops={'arrowstyle':'-|>','color':NAVY},zorder=20)
     xmin,xmax=ax.get_xlim();ymin,ymax=ax.get_ylim();span=(xmax-xmin)*.18

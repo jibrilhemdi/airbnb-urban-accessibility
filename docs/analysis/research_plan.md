@@ -66,9 +66,9 @@ The generated [results report](../../reports/research_results.md),
 Ten main figures and eight main tables are recommended; eight additional
 figures and full diagnostic/robustness tables belong in appendices. Sample
 flow is table-only to avoid an uninformative duplicate graphic. All figures
-have high-resolution PNG and vector PDF/SVG versions.
+have high-resolution PNG versions.
 
 Markdown proposal, plan and results are authoritative. No supported active
 DOCX/PDF document export pipeline exists; the archived income-addendum updater
 does not support this design. Document exports are explicitly outside this
-release, while scientific figure vector exports are included.
+release. Scientific figures are supplied as PNG only.

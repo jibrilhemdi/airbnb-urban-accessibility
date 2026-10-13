@@ -6,7 +6,7 @@ Copenhagen includes Frederiksberg. All values below come from the final-run regi
 
 ### 1. Evidence used
 
-[accessibility descriptive statistics](../outputs/tables/thesis/accessibility_descriptive_statistics.md); [nearest access divergence](../outputs/metrics/thesis/nearest_access_divergence.md); nearest relationships, opportunities and suppressed spatial maps.
+[accessibility descriptive statistics](../outputs/tables/accessibility_descriptive_statistics.md); [nearest access divergence](../outputs/metrics/nearest_access_divergence.md); nearest relationships, opportunities and suppressed spatial maps.
 
 ### 2. Headline result
 
@@ -56,7 +56,7 @@ Main: nearest-access relationships and opportunity comparison; T3. Appendix: nea
 
 ### 1. Evidence used
 
-[primary predictive performance](../outputs/tables/thesis/primary_predictive_performance.md); [paired model contrasts](../outputs/tables/thesis/paired_model_contrasts.md); [association results](../outputs/tables/thesis/association_results.md); existing heldout contributions.
+[primary predictive performance](../outputs/tables/primary_predictive_performance.md); [paired model contrasts](../outputs/tables/paired_model_contrasts.md); [association results](../outputs/tables/association_results.md); existing heldout contributions.
 
 ### 2. Headline result
 
@@ -115,7 +115,7 @@ Main: model performance and all five paired contrasts; T4/T5. Appendix: complete
 
 ### 1. Evidence used
 
-[validation comparison](../outputs/tables/thesis/validation_comparison.md); [neighbourhood performance](../outputs/metrics/thesis/neighbourhood_performance.md); [robustness registry](../outputs/tables/thesis/robustness_registry.md).
+[validation comparison](../outputs/tables/validation_comparison.md); [neighbourhood performance](../outputs/metrics/neighbourhood_performance.md); [robustness registry](../outputs/tables/robustness_registry.md).
 
 ### 2. Headline result
 
@@ -156,7 +156,7 @@ Main: strategy comparison and heldout-neighbourhood variation; T7. Appendix: rob
 
 ### 1. Evidence used
 
-[transfer performance](../outputs/tables/thesis/transfer_performance.md); [transfer contrasts](../outputs/tables/thesis/transfer_contrasts.md); [directional transfer asymmetry](../outputs/metrics/thesis/directional_transfer_asymmetry.md); suppressed frozen-prediction diagnostics.
+[transfer performance](../outputs/tables/transfer_performance.md); [transfer contrasts](../outputs/tables/transfer_contrasts.md); [directional transfer asymmetry](../outputs/metrics/directional_transfer_asymmetry.md); suppressed frozen-prediction diagnostics.
 
 ### 2. Headline result
 

@@ -794,3 +794,60 @@ No scientific model was refitted. Normal incremental publication remains only
 on the existing branch; main/v3 and historical worktree remain unchanged.
 Explicit HEAD:refs/heads/v4 push and remote/local SHA equality are verified
 externally; the log does not contain its own commit SHA.
+
+## 13 October 2026 — Simplified outputs and corrected figure layouts
+
+Completed the researcher-requested presentation cleanup on the existing branch.
+The active output tree has exactly three flat folders: figures (18 PNGs at
+300 dpi), tables (12 CSV/Markdown pairs) and metrics (10 CSV/Markdown pairs),
+plus a concise README and one portable thesis_results.zip. Removed the duplicate
+release tree, nested thesis/scheme directories and active PDF/SVG companions
+only after preserving the original bytes in archive/before_output_cleanup/.
+The snapshot contains595 files, including541 preceding output files and the
+original code/documents. Only previously public/tracked snapshots enter Git;
+private historical exports remain local. Recorded paths resolve to their exact
+archived hashes; no raw source, applied migration or analytical SQL changed.
+
+Both map figures now have three square, equal-aspect projected panels and a
+visible navy/white boundary layer for all11 Copenhagen,17 Oslo and11 Stockholm
+operational validation neighbourhoods. Native CRSs and scales are retained,
+including the500 m/minimum-five cell rule. The neighbourhood performance figure
+uses grouped horizontal OLS/XGBoost bars with all original neighbourhood names.
+Visual review found the opportunity chart's shared y limits locked to the first
+city, clipping Stockholm's larger ranges. The limits now include every city's
+full interquartile range. Added checks for plotted data/interval endpoints and
+in-panel annotations, alongside existing whole-canvas/header/caption checks.
+Every figure was reviewed in contact sheets; maps, bars and corrected ranges
+were also inspected at full size. Six map panels are square; no values/labels
+are clipped, and all44 numeric/Markdown exports remain byte-identical.
+
+Rebased active reports, numeric-claim paths, recommendations and synthesis
+metadata to the flat PNG layout. Root/output READMEs explain the study, model
+labels, where to start, folder contents, units and verification without a long
+workflow history. Provenance stays under reports/; the single ZIP bundles98
+verified entries, with92 valid document links and no vector/private-data files.
+Publication checks verify62 artifacts,18 figures,22 table/aggregate views,
+148 current local links and1,709 minimum-five aggregate bins. Numeric claims,
+independent paired contrasts, original style colours and source lineage PASS.
+The prior package is preserved; all77 earlier public scientific artifacts and
+all49 preceding research/historical PNGs retain their original bytes.
+
+Actual tests: full suite140 tests,113 PASS/27 SKIP; four skipped opt-in store
+checks separately PASS in owned disposable PostGIS databases, leaving23
+historical workflow skips. Eight final reporting/export-isolation checks PASS.
+A legacy candidate smoke test recreated an unwanted validation-output folder;
+its original code is archived and its exporter is now mocked during the test,
+so synthetic checks cannot repopulate the public output tree. Compilation and
+scoped whitespace PASS. Fresh read-only scientific verification checks87 sources,
+38 receipts,751 packages,1,176 saved models,682 prediction packages and20,460
+fitted-code dependencies; reproduces48 target applications and primary/transfer
+RMSE without refitting. Protected1,695-file/263-baseline verification and all20
+original dedicated-store table fingerprints PASS. There is still exactly one
+root .env and one requirements.txt. No scientific choices or fitted results
+changed; no blockers remain.
+
+Reviewed/staged only intended code, current public aggregates/figures, reports,
+safe preserved snapshots and documentation. Local/remote prior heads match;
+main/v3 remain unchanged. Normal incremental commit, explicit push to
+HEAD:refs/heads/v4 and remote equality are verified externally after publication;
+this checkpoint does not contain its own commit SHA.

@@ -188,7 +188,7 @@ saved predictions and verifies all saved fitted pipeline bytes.
 `reports/thesis_artifact_manifest.json` registers every public output with its
 final run, RQ, generator and SHA256. `reports/thesis_synthesis_manifest.json`
 and `reports/numeric_claims_registry.json` trace generated prose to those
-outputs. New PNGs are300dpi, with PDF/SVG companions; aggregate cells and
+outputs. Current figures are 300-dpi PNG only; aggregate cells and
 prediction-display bins suppress counts below five. Release manifests and the
 deterministic ZIP contain only reviewed figures, aggregate tables and documents.
 Markdown is authoritative; the repository has no supported active DOCX/PDF
@@ -217,3 +217,15 @@ Clipping, caption/axis-label overlap, heading/legend overlap, old style-referenc
 hashes and mixed figure themes are checked. Release verification additionally
 requires every bundled source hash to match the current registered artifact,
 preventing an earlier theme from remaining silently in the active ZIP.
+
+## Current output layout
+
+Use `outputs/figures/`, `outputs/tables/` and `outputs/metrics/` for the final
+thesis exports. There are no nested version, validation-scheme or duplicate
+release directories. `outputs/thesis_results.zip` is the portable package;
+`reports/thesis_release_manifest.json` records its entries and source hashes.
+Previous outputs, including vector figures, are preserved in
+[`archive/before_output_cleanup/manifest.json`](../../archive/before_output_cleanup/manifest.json).
+Historical inventory paths resolve through `src.study.archive.preserved_path`
+and must still match their recorded SHA256. Current CSV/Markdown exports retain
+the exact forty-four previously certified file hashes. No model is refitted.

@@ -2,7 +2,7 @@
   {
     "kind": "figure",
     "name": "study_areas",
-    "file": "outputs/figures/thesis/study_areas.pdf",
+    "file": "outputs/figures/study_areas.png",
     "research_question": "Design",
     "reason": "Show the actual provider validation geography across all cities",
     "takeaway": "Operational neighbourhoods are the geographic holdouts",
@@ -13,7 +13,7 @@
   {
     "kind": "figure",
     "name": "nearest_access_relationship",
-    "file": "outputs/figures/thesis/nearest_access_relationship.pdf",
+    "file": "outputs/figures/nearest_access_relationship.png",
     "research_question": "RQ1",
     "reason": "Reveal paired measurement relationships rather than isolated averages",
     "takeaway": "Nearest network distances exceed straight-line distances; destinations can differ",
@@ -24,7 +24,7 @@
   {
     "kind": "figure",
     "name": "opportunity_comparison",
-    "file": "outputs/figures/thesis/opportunity_comparison.pdf",
+    "file": "outputs/figures/opportunity_comparison.png",
     "research_question": "RQ1",
     "reason": "Show both food/social and culture/tourism reachability",
     "takeaway": "Matched walking opportunities are lower than straight-line opportunities",
@@ -35,7 +35,7 @@
   {
     "kind": "figure",
     "name": "primary_model_performance",
-    "file": "outputs/figures/thesis/primary_model_performance.pdf",
+    "file": "outputs/figures/primary_model_performance.png",
     "research_question": "RQ2",
     "reason": "Establish all four pooled model results with fold variation",
     "takeaway": "Accessibility gains depend on city and estimator",
@@ -46,7 +46,7 @@
   {
     "kind": "figure",
     "name": "paired_accessibility_contrasts",
-    "file": "outputs/figures/thesis/paired_accessibility_contrasts.pdf",
+    "file": "outputs/figures/paired_accessibility_contrasts.png",
     "research_question": "RQ2",
     "reason": "Put baseline gain, replacement and add-on on one clear scale",
     "takeaway": "MW−ME and MEW−ME answer different comparisons",
@@ -57,7 +57,7 @@
   {
     "kind": "figure",
     "name": "validation_strategy_comparison",
-    "file": "outputs/figures/thesis/validation_strategy_comparison.pdf",
+    "file": "outputs/figures/validation_strategy_comparison.png",
     "research_question": "RQ3",
     "reason": "Compare geographically unseen evaluation with random CV",
     "takeaway": "Changing holdout geometry changes error and model ordering",
@@ -68,7 +68,7 @@
   {
     "kind": "figure",
     "name": "neighbourhood_performance_variation",
-    "file": "outputs/figures/thesis/neighbourhood_performance_variation.pdf",
+    "file": "outputs/figures/neighbourhood_performance_variation.png",
     "research_question": "RQ3",
     "reason": "Prevent citywide means from hiding local heterogeneity",
     "takeaway": "Every heldout neighbourhood contributes an observed paired score",
@@ -79,7 +79,7 @@
   {
     "kind": "figure",
     "name": "transfer_performance",
-    "file": "outputs/figures/thesis/transfer_performance.pdf",
+    "file": "outputs/figures/transfer_performance.png",
     "research_question": "RQ4",
     "reason": "Cover six directions and all model ladders in one landscape figure",
     "takeaway": "Source/target combinations have heterogeneous relative-price errors",
@@ -90,7 +90,7 @@
   {
     "kind": "figure",
     "name": "transfer_network_comparison",
-    "file": "outputs/figures/thesis/transfer_network_comparison.pdf",
+    "file": "outputs/figures/transfer_network_comparison.png",
     "research_question": "RQ4",
     "reason": "Expose network replacement and add-on directly",
     "takeaway": "Walking is not universally better than Euclidean transfer",
@@ -101,7 +101,7 @@
   {
     "kind": "figure",
     "name": "directional_transfer_asymmetry",
-    "file": "outputs/figures/thesis/directional_transfer_asymmetry.pdf",
+    "file": "outputs/figures/directional_transfer_asymmetry.png",
     "research_question": "RQ4",
     "reason": "Make direction reversal explicit",
     "takeaway": "Different source/target tasks are not interchangeable",
@@ -112,7 +112,7 @@
   {
     "kind": "table",
     "name": "city_sample_summary",
-    "file": "outputs/tables/thesis/city_sample_summary.md",
+    "file": "outputs/tables/city_sample_summary.md",
     "research_question": "Design",
     "reason": "Compact factual basis for the associated RQ; full precision stays in CSV",
     "takeaway": "Generated from explicitly pinned final SQL/results; definitions, selection limits and source identities remain unchanged.",
@@ -123,7 +123,7 @@
   {
     "kind": "table",
     "name": "accessibility_descriptive_statistics",
-    "file": "outputs/tables/thesis/accessibility_descriptive_statistics.md",
+    "file": "outputs/tables/accessibility_descriptive_statistics.md",
     "research_question": "RQ1",
     "reason": "Compact factual basis for the associated RQ; full precision stays in CSV",
     "takeaway": "Generated from explicitly pinned final SQL/results; definitions, selection limits and source identities remain unchanged.",
@@ -134,7 +134,7 @@
   {
     "kind": "table",
     "name": "primary_predictive_performance",
-    "file": "outputs/tables/thesis/primary_predictive_performance.md",
+    "file": "outputs/tables/primary_predictive_performance.md",
     "research_question": "RQ2",
     "reason": "Compact factual basis for the associated RQ; full precision stays in CSV",
     "takeaway": "Primary neighbourhood OOF RMSE by city/estimator/model; full CSV also retains MAE, R² and correlation. Four models share rows/folds.",
@@ -145,7 +145,7 @@
   {
     "kind": "table",
     "name": "paired_model_contrasts",
-    "file": "outputs/tables/thesis/paired_model_contrasts.md",
+    "file": "outputs/tables/paired_model_contrasts.md",
     "research_question": "RQ2",
     "reason": "Compact factual basis for the associated RQ; full precision stays in CSV",
     "takeaway": "Candidate minus reference; negative improves. Existing95% geographic-composition stability ranges, not independent-sample confidence intervals; crossing zero is not equivalence.",
@@ -156,7 +156,7 @@
   {
     "kind": "table",
     "name": "validation_comparison",
-    "file": "outputs/tables/thesis/validation_comparison.md",
+    "file": "outputs/tables/validation_comparison.md",
     "research_question": "RQ3",
     "reason": "Compact factual basis for the associated RQ; full precision stays in CSV",
     "takeaway": "Spatial-block cells show the range over all six fixed configurations, not a pooled score. Full CSV retains every configuration and model.",
@@ -167,7 +167,7 @@
   {
     "kind": "table",
     "name": "transfer_performance",
-    "file": "outputs/tables/thesis/transfer_performance.md",
+    "file": "outputs/tables/transfer_performance.md",
     "research_question": "RQ4",
     "reason": "Compact factual basis for the associated RQ; full precision stays in CSV",
     "takeaway": "Relative-price RMSE on all six source-only directions; no target fitting/recalibration; diagonal not tested. Full CSV retains MAE, R², Pearson and Spearman.",
@@ -178,7 +178,7 @@
   {
     "kind": "table",
     "name": "transfer_contrasts",
-    "file": "outputs/tables/thesis/transfer_contrasts.md",
+    "file": "outputs/tables/transfer_contrasts.md",
     "research_question": "RQ4",
     "reason": "Compact factual basis for the associated RQ; full precision stays in CSV",
     "takeaway": "All five paired contrasts for six directions/two estimators; negative improves. Frozen95% target-neighbourhood composition stability ranges.",
@@ -189,7 +189,7 @@
   {
     "kind": "table",
     "name": "claims_and_limitations",
-    "file": "outputs/tables/thesis/claims_and_limitations.md",
+    "file": "outputs/tables/claims_and_limitations.md",
     "research_question": "All",
     "reason": "Compact factual basis for the associated RQ; full precision stays in CSV",
     "takeaway": "Generated from explicitly pinned final SQL/results; definitions, selection limits and source identities remain unchanged.",
@@ -200,7 +200,7 @@
   {
     "kind": "figure",
     "name": "accessibility_spatial",
-    "file": "outputs/figures/thesis/accessibility_spatial.pdf",
+    "file": "outputs/figures/accessibility_spatial.png",
     "research_question": "RQ1",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
     "takeaway": "Mean nearest-rail walking minutes in500 m cells with at least five observations. Shared colour scale capped at pooled95th percentile for display; uncapped aggregate values remain in the accompanying table. Boundaries are the frozen provider geography. © OpenStreetMap contributors, ODbL; Inside Airbnb CC BY4.0.",
@@ -211,7 +211,7 @@
   {
     "kind": "figure",
     "name": "nearest_access_divergence",
-    "file": "outputs/figures/thesis/nearest_access_divergence.pdf",
+    "file": "outputs/figures/nearest_access_divergence.png",
     "research_question": "RQ1",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
     "takeaway": "Frozen nearest-category distance excess: median dots, interquartile thick bars and5th–95th percentile thin bars. These are distribution summaries, not confidence intervals or same-object route circuity.",
@@ -222,7 +222,7 @@
   {
     "kind": "figure",
     "name": "association_accessibility",
-    "file": "outputs/figures/thesis/association_accessibility.pdf",
+    "file": "outputs/figures/association_accessibility.png",
     "research_question": "RQ2",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
     "takeaway": "Complete-case MEW adjusted observational associations, not causal effects or predictive importance. Rail/bus Euclidean predictors use km, walking uses minutes and opportunities use log(1+count); coefficient magnitudes across different units are not rankings. HC3 intervals shown;9,999-replication restricted Webb results are in the table. Uniform10% eligibility is a disclosed post-observation amendment.",
@@ -233,7 +233,7 @@
   {
     "kind": "figure",
     "name": "heldout_feature_contributions",
-    "file": "outputs/figures/thesis/heldout_feature_contributions.pdf",
+    "file": "outputs/figures/heldout_feature_contributions.png",
     "research_question": "RQ2",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
     "takeaway": "Existing heldout XGBoost MEW contributions only; no new SHAP calculation or model fit. Ten encoded terms selected for display by across-city mean magnitude; this does not change the model. Unavailable encodings remain missing rather than zero. Each term’s actual support is in the table. Correlated E/W attribution is descriptive, not causal.",
@@ -244,7 +244,7 @@
   {
     "kind": "figure",
     "name": "robustness_contrasts",
-    "file": "outputs/figures/thesis/robustness_contrasts.pdf",
+    "file": "outputs/figures/robustness_contrasts.png",
     "research_question": "RQ3",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
     "takeaway": "Every registered predictive family: paired MW−M0 point changes and frozen95% geographic-composition stability ranges. N/A denotes native density checks inapplicable to Copenhagen/Oslo; no value is filled. Samples and measurement definitions differ across rows, so this is not an absolute-score ranking or pass/fail test.",
@@ -255,7 +255,7 @@
   {
     "kind": "figure",
     "name": "transfer_accessibility_gains",
-    "file": "outputs/figures/thesis/transfer_accessibility_gains.pdf",
+    "file": "outputs/figures/transfer_accessibility_gains.png",
     "research_question": "RQ4",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
     "takeaway": "All six directional accessibility-versus-baseline point contrasts. Same target observations within every comparison; negative values favour accessibility. These correlated directional results are not pooled into an independent significance test.",
@@ -266,7 +266,7 @@
   {
     "kind": "figure",
     "name": "transfer_prediction_diagnostics",
-    "file": "outputs/figures/thesis/transfer_prediction_diagnostics.pdf",
+    "file": "outputs/figures/transfer_prediction_diagnostics.png",
     "research_question": "RQ4",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
     "takeaway": "Saved XGBoost MEW predictions versus actual relative log price in all six directions. Only aggregate rectangular bins with n≥5 are displayed; every target row remains in full metrics. Shared axes; diagonal is perfect relative prediction. No row export, target fitting, smoothing or recalibration.",
@@ -277,7 +277,7 @@
   {
     "kind": "figure",
     "name": "residual_spatial_diagnostics",
-    "file": "outputs/figures/thesis/residual_spatial_diagnostics.pdf",
+    "file": "outputs/figures/residual_spatial_diagnostics.png",
     "research_question": "Appendix",
     "reason": "Useful diagnostic/complementary evidence; avoids duplicating the main narrative",
     "takeaway": "Frozen8-nearest-neighbour/499-permutation diagnostics for observed outcomes and primary OOF residuals. City metric CRSs retained. Material OLS MW residual dependence triggered the registered spatial-error association sensitivity in each city; prediction gains are not a claim of independent residuals.",

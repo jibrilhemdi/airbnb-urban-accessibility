@@ -10,11 +10,11 @@ Copenhagen includes Frederiksberg. This reporting-only synthesis uses the frozen
 | Oslo | 13391 | 11776 | 8557 | 8557 | 8529 | 8152 | 17 | 4.4202 | 8557 | 2048.0531 | NOK |
 | Stockholm | 4806 | 3834 | 2510 | 2510 | 2495 | 2348 | 11 | 5.8918 | 2510 | 2233.2352 | SEK |
 
-[sample flow](../outputs/tables/thesis/sample_flow.md)
+[sample flow](../outputs/tables/sample_flow.md)
 
 Inside Airbnb operational groups define primary holdouts; accepted municipal masks define membership, not official validation-area certification. Minimum15 outer-test and500 complementary training observations are retained. The researcher changed association eligibility from5% to10% after observing Stockholm missingness; complete cases remain unchanged and no bedrooms/outcomes are filled.
 
-![Frozen public operational geography and accepted study masks; no individual listings.](../outputs/figures/thesis/study_areas.png)
+![Frozen public operational geography and accepted study masks; no individual listings.](../outputs/figures/study_areas.png)
 
 Frozen public operational geography and accepted study masks; no individual listings.
 
@@ -38,15 +38,15 @@ Frozen public operational geography and accepted study masks; no individual list
 | Stockholm | food | 51.0000 | 28.0000 | destinations |
 | Stockholm | culture | 4.0000 | 2.0000 | destinations |
 
-![Paired nearest-category distances; matched universes, not same-destination circuity.](../outputs/figures/thesis/nearest_access_relationship.png)
+![Paired nearest-category distances; matched universes, not same-destination circuity.](../outputs/figures/nearest_access_relationship.png)
 
 Paired nearest-category distances; matched universes, not same-destination circuity.
 
-![Median and interquartile opportunity counts under the frozen nominal10-minute budgets.](../outputs/figures/thesis/opportunity_comparison.png)
+![Median and interquartile opportunity counts under the frozen nominal10-minute budgets.](../outputs/figures/opportunity_comparison.png)
 
 Median and interquartile opportunity counts under the frozen nominal10-minute budgets.
 
-Walking distances and reachability differ from straight-line measurements. Display transformations, suppressed bins and map colour caps do not alter model features. [accessibility descriptive statistics](../outputs/tables/thesis/accessibility_descriptive_statistics.md) and [nearest access divergence](../outputs/metrics/thesis/nearest_access_divergence.md) retain precise summaries. [Spatial map](../outputs/figures/thesis/accessibility_spatial.pdf) is appendix evidence.
+Walking distances and reachability differ from straight-line measurements. Display transformations, suppressed bins and map colour caps do not alter model features. [accessibility descriptive statistics](../outputs/tables/accessibility_descriptive_statistics.md) and [nearest access divergence](../outputs/metrics/nearest_access_divergence.md) retain precise summaries. [Spatial map](../outputs/figures/accessibility_spatial.png) is appendix evidence.
 
 ## 3. RQ2 — within-city prediction
 
@@ -71,21 +71,21 @@ Walking distances and reachability differ from straight-line measurements. Displ
 | Stockholm | MW | -0.019894 | -4.895905 | -0.032410 | -0.000879 |
 | Stockholm | MEW | -0.018586 | -4.573968 | -0.031086 | 0.001189 |
 
-![Pooled primary errors and descriptive fold variation.](../outputs/figures/thesis/primary_model_performance.png)
+![Pooled primary errors and descriptive fold variation.](../outputs/figures/primary_model_performance.png)
 
 Pooled primary errors and descriptive fold variation.
 
-![All five paired contrasts, including network replacement and add-on.](../outputs/figures/thesis/paired_accessibility_contrasts.png)
+![All five paired contrasts, including network replacement and add-on.](../outputs/figures/paired_accessibility_contrasts.png)
 
 All five paired contrasts, including network replacement and add-on.
 
-Accessibility point gains occur in Copenhagen/Stockholm with adverse Oslo changes. The intervals are neighbourhood-composition stability ranges, not independent-sample confidence intervals. [paired model contrasts](../outputs/tables/thesis/paired_model_contrasts.md) provides every estimator/model comparison; heldout contributions are appendix interpretation, not causality.
+Accessibility point gains occur in Copenhagen/Stockholm with adverse Oslo changes. The intervals are neighbourhood-composition stability ranges, not independent-sample confidence intervals. [paired model contrasts](../outputs/tables/paired_model_contrasts.md) provides every estimator/model comparison; heldout contributions are appendix interpretation, not causality.
 
 ## 4. RQ2 complementary OLS associations
 
-[association results](../outputs/tables/thesis/association_results.md)
+[association results](../outputs/tables/association_results.md)
 
-![MEW complete-case adjusted associations with95% HC3 intervals; predictor-specific units.](../outputs/figures/thesis/association_accessibility.png)
+![MEW complete-case adjusted associations with95% HC3 intervals; predictor-specific units.](../outputs/figures/association_accessibility.png)
 
 MEW complete-case adjusted associations with95% HC3 intervals; predictor-specific units.
 
@@ -102,19 +102,19 @@ All three cities have four prescribed association models,9,999 restricted Webb d
 | Stockholm | OLS | 0.438915 | 0.415671 | 6 | 6 |
 | Stockholm | XGBoost | 0.406336 | 0.366871 | 2 | 6 |
 
-![Random, neighbourhood and all six fixed spatial-block configurations.](../outputs/figures/thesis/validation_strategy_comparison.png)
+![Random, neighbourhood and all six fixed spatial-block configurations.](../outputs/figures/validation_strategy_comparison.png)
 
 Random, neighbourhood and all six fixed spatial-block configurations.
 
-[validation comparison](../outputs/tables/thesis/validation_comparison.md)
+[validation comparison](../outputs/tables/validation_comparison.md)
 
 ## 6. RQ3 — cross-city consistency
 
-![Paired MW−M0 errors for every primary neighbourhood.](../outputs/figures/thesis/neighbourhood_performance_variation.png)
+![Paired MW−M0 errors for every primary neighbourhood.](../outputs/figures/neighbourhood_performance_variation.png)
 
 Paired MW−M0 errors for every primary neighbourhood.
 
-The geographic sign counts and local scores qualify citywide averages. Different samples/dispersion, uneven folds, overlapping training sets and residual dependence prevent claims of independent cross-design replication. [neighbourhood performance](../outputs/metrics/thesis/neighbourhood_performance.md) preserves all four model/estimator scores and [neighbourhood support](../outputs/diagnostics/thesis/neighbourhood_support.md) records support.
+The geographic sign counts and local scores qualify citywide averages. Different samples/dispersion, uneven folds, overlapping training sets and residual dependence prevent claims of independent cross-design replication. [neighbourhood performance](../outputs/metrics/neighbourhood_performance.md) preserves all four model/estimator scores and [neighbourhood support](../outputs/metrics/neighbourhood_support.md) records support.
 
 ## 7. RQ4 — cross-city transferability
 
@@ -142,29 +142,29 @@ The geographic sign counts and local scores qualify citywide averages. Different
 | XGBoost | MW | 3 | 6 |
 | XGBoost | MEW | 4 | 6 |
 
-![All six relative-price source→target directions and four models.](../outputs/figures/thesis/transfer_performance.png)
+![All six relative-price source→target directions and four models.](../outputs/figures/transfer_performance.png)
 
 All six relative-price source→target directions and four models.
 
-![Direct network replacement/add-on with existing target-composition ranges.](../outputs/figures/thesis/transfer_network_comparison.png)
+![Direct network replacement/add-on with existing target-composition ranges.](../outputs/figures/transfer_network_comparison.png)
 
 Direct network replacement/add-on with existing target-composition ranges.
 
-![Descriptive reversal differences; source and target tasks change.](../outputs/figures/thesis/directional_transfer_asymmetry.png)
+![Descriptive reversal differences; source and target tasks change.](../outputs/figures/directional_transfer_asymmetry.png)
 
 Descriptive reversal differences; source and target tasks change.
 
-The observed target reference is used only for centring/evaluation. Twenty-four shared source pipelines produce48 estimator/model-direction prediction sets; no target fit/tuning/recalibration occurs. [transfer contrasts](../outputs/tables/thesis/transfer_contrasts.md) includes all five comparisons. [Binned prediction diagnostics](../outputs/figures/thesis/transfer_prediction_diagnostics.pdf) and [baseline transfer gains](../outputs/figures/thesis/transfer_accessibility_gains.pdf) are appendix evidence, not new fitted models.
+The observed target reference is used only for centring/evaluation. Twenty-four shared source pipelines produce48 estimator/model-direction prediction sets; no target fit/tuning/recalibration occurs. [transfer contrasts](../outputs/tables/transfer_contrasts.md) includes all five comparisons. [Binned prediction diagnostics](../outputs/figures/transfer_prediction_diagnostics.png) and [baseline transfer gains](../outputs/figures/transfer_accessibility_gains.png) are appendix evidence, not new fitted models.
 
 ## 8. Robustness
 
-[robustness registry](../outputs/tables/thesis/robustness_registry.md)
+[robustness registry](../outputs/tables/robustness_registry.md)
 
-![Within-variant paired MW−M0 changes, stability and genuine native-source N/A entries.](../outputs/figures/thesis/robustness_contrasts.png)
+![Within-variant paired MW−M0 changes, stability and genuine native-source N/A entries.](../outputs/figures/robustness_contrasts.png)
 
 Within-variant paired MW−M0 changes, stability and genuine native-source N/A entries.
 
-The exhaustive registry accounts for every requested variant. Training-tail restriction, imputation and tuning remain source-training-only. All triggered spatial-error and four-model area fixed-effect checks are complete; density is correctly absorbed. Variant samples/definitions can differ, so the plot is not an absolute-score ranking. [Residual spatial diagnostics](../outputs/figures/thesis/residual_spatial_diagnostics.pdf) remain appendix evidence.
+The exhaustive registry accounts for every requested variant. Training-tail restriction, imputation and tuning remain source-training-only. All triggered spatial-error and four-model area fixed-effect checks are complete; density is correctly absorbed. Variant samples/definitions can differ, so the plot is not an absolute-score ranking. [Residual spatial diagnostics](../outputs/figures/residual_spatial_diagnostics.png) remain appendix evidence.
 
 ## 9. Main limitations
 
@@ -188,4 +188,4 @@ Original asking prices are not transactions/bookings/revenue. Strong missing-pri
 | Results represent every Nordic or European city | DO_NOT_CLAIM | All | Three selected capital-city samples do not establish that external validity |
 | The 10% eligibility limit was preregistered or universal | DO_NOT_CLAIM | RQ2 | Explicitly changed after observing Stockholm missingness; complete-case selection remains a limitation |
 
-[Figure/table recommendations](thesis_figure_recommendations.md), [RQ-by-RQ synthesis](findings_by_research_question.md), [final claims audit](../docs/final_claims_for_thesis.md), [initial gap audit](deliverable_gap_audit.md) and [artifact provenance](thesis_artifact_manifest.json) provide the complete writing/release trail. Markdown is authoritative: no supported active proposal/plan/results DOCX/PDF export pipeline exists. Scientific figures have deterministic PDF/SVG and300-dpi PNG exports.
+[Figure/table recommendations](thesis_figure_recommendations.md), [RQ-by-RQ synthesis](findings_by_research_question.md), [final claims audit](../docs/final_claims_for_thesis.md), [initial gap audit](deliverable_gap_audit.md) and [artifact provenance](thesis_artifact_manifest.json) provide the complete writing/release trail. Markdown is authoritative: no supported active proposal/plan/results DOCX/PDF export pipeline exists. Scientific figures are supplied as 300-dpi PNG files.

@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "scope": "User-requested original pastel figure style; scientific results unchanged",
+  "full_suite": {
+    "run": 138,
+    "passed": 115,
+    "skipped_historical_workflows": 23,
+    "failed": 0,
+    "PostGIS_owned_database_tests": 4
+  },
+  "reporting_release_tests": 5,
+  "compilation": "PASS",
+  "whitespace": "PASS",
+  "historical_figure_hashes_verified": 49,
+  "previous_presentation_files_preserved": 247,
+  "numerical_exports_byte_identical": 44,
+  "protected_files": 1695,
+  "tracked_baseline_files": 263,
+  "original_store_tables": 20,
+  "old_public_artifacts_unchanged": 77,
+  "publication": {
+    "status": "PASS",
+    "artifact_files": 98,
+    "figure_sets": 18,
+    "table_and_aggregate_views": 22,
+    "main_figures": 10,
+    "main_tables": 8,
+    "appendix_figures": 8,
+    "privacy_bins_verified": 1709,
+    "final_run_lineage": "PASS",
+    "numeric_claims_trace": "PASS",
+    "independent_point_contrast_recalculation": "PASS",
+    "links_checked": 136,
+    "visible_version_markers": "NONE",
+    "clipped_labels": "NONE",
+    "caption_and_header_overlap": "NONE",
+    "models_refitted": false
+  },
+  "release": {
+    "status": "PASS",
+    "package_files": 134,
+    "zip_entries": 134,
+    "links_checked": 93,
+    "manifest_sha256": "cb9e3a1a144b176a5c3d44a3f00f298a7e4c6d2f8db35ddba753e8e7a1cfd506",
+    "zip_sha256": "d5334306588249faf6b1e798462f7ae21cbb96b8e162cf6ce150c12ba1cdd012",
+    "zip_bytes": 10048531,
+    "private_data_check": "PASS",
+    "all_release_hashes": "PASS",
+    "models_refitted": false
+  },
+  "additional_handover_links_verified": 19,
+  "scientific_models_refitted": false,
+  "root_environment_files": [
+    ".env"
+  ],
+  "remaining_required_deliverables": []
+}

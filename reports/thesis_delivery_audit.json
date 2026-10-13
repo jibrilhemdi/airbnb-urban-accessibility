@@ -6,7 +6,7 @@
   "initial_gap_audit_sha256": "116a20b17f5b527b7604eece8d6c4ada8e420c2addea7ca588eae2f95a6b100c",
   "publication_validation": {
     "status": "PASS",
-    "artifact_files": 98,
+    "artifact_files": 62,
     "figure_sets": 18,
     "table_and_aggregate_views": 22,
     "main_figures": 10,
@@ -16,22 +16,36 @@
     "final_run_lineage": "PASS",
     "numeric_claims_trace": "PASS",
     "independent_point_contrast_recalculation": "PASS",
-    "links_checked": 136,
+    "links_checked": 148,
     "visible_version_markers": "NONE",
     "clipped_labels": "NONE",
     "caption_and_header_overlap": "NONE",
+    "data_annotations_outside_panels": "NONE",
+    "plotted_value_clipping": "NONE",
+    "square_map_panels_verified": 6,
+    "neighbourhood_boundaries_per_map": [
+      11,
+      17,
+      11
+    ],
+    "figure_formats": [
+      "PNG"
+    ],
     "models_refitted": false
   },
   "release_verification": {
     "status": "PASS",
-    "package_files": 134,
-    "zip_entries": 134,
-    "links_checked": 93,
-    "manifest_sha256": "cb9e3a1a144b176a5c3d44a3f00f298a7e4c6d2f8db35ddba753e8e7a1cfd506",
-    "zip_sha256": "d5334306588249faf6b1e798462f7ae21cbb96b8e162cf6ce150c12ba1cdd012",
-    "zip_bytes": 10048531,
+    "package_files": 98,
+    "zip_entries": 98,
+    "links_checked": 92,
+    "manifest_sha256": "1e07a4bd8c9f1c3c927df61d65adfc4ca10e9f3635a36a7a6341a39fde2c5ab8",
+    "zip_sha256": "c8ba78d5528e8a3da7ed46aa4bd1eb878fd2f85964db7d6006098eed8fc2df04",
+    "zip_bytes": 7601373,
     "private_data_check": "PASS",
     "all_release_hashes": "PASS",
+    "figure_formats": [
+      "PNG"
+    ],
     "models_refitted": false
   },
   "required_deliverables": [
@@ -50,7 +64,7 @@
       "missing_output": "outputs/figures/thesis/study_areas.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/study_areas.pdf"
+      "final_output": "outputs/figures/study_areas.png"
     },
     {
       "id": "B1",
@@ -67,7 +81,7 @@
       "missing_output": "outputs/figures/thesis/nearest_access_relationship.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/nearest_access_relationship.pdf"
+      "final_output": "outputs/figures/nearest_access_relationship.png"
     },
     {
       "id": "B2",
@@ -84,7 +98,7 @@
       "missing_output": "outputs/figures/thesis/nearest_access_divergence.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/nearest_access_divergence.pdf"
+      "final_output": "outputs/figures/nearest_access_divergence.png"
     },
     {
       "id": "B3",
@@ -103,7 +117,7 @@
       "missing_output": "outputs/figures/thesis/opportunity_comparison.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/opportunity_comparison.pdf"
+      "final_output": "outputs/figures/opportunity_comparison.png"
     },
     {
       "id": "B4",
@@ -122,7 +136,7 @@
       "missing_output": "outputs/figures/thesis/accessibility_spatial.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/accessibility_spatial.pdf"
+      "final_output": "outputs/figures/accessibility_spatial.png"
     },
     {
       "id": "C1",
@@ -141,7 +155,7 @@
       "missing_output": "outputs/figures/thesis/primary_model_performance.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/primary_model_performance.pdf"
+      "final_output": "outputs/figures/primary_model_performance.png"
     },
     {
       "id": "C2/C3",
@@ -160,7 +174,7 @@
       "missing_output": "outputs/figures/thesis/paired_accessibility_contrasts.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/paired_accessibility_contrasts.pdf"
+      "final_output": "outputs/figures/paired_accessibility_contrasts.png"
     },
     {
       "id": "C4",
@@ -179,7 +193,7 @@
       "missing_output": "outputs/figures/thesis/association_accessibility.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/association_accessibility.pdf"
+      "final_output": "outputs/figures/association_accessibility.png"
     },
     {
       "id": "C5",
@@ -198,7 +212,7 @@
       "missing_output": "outputs/figures/thesis/heldout_feature_contributions.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/heldout_feature_contributions.pdf"
+      "final_output": "outputs/figures/heldout_feature_contributions.png"
     },
     {
       "id": "D1",
@@ -217,7 +231,7 @@
       "missing_output": "outputs/figures/thesis/validation_strategy_comparison.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/validation_strategy_comparison.pdf"
+      "final_output": "outputs/figures/validation_strategy_comparison.png"
     },
     {
       "id": "D2",
@@ -234,7 +248,7 @@
       "missing_output": "outputs/figures/thesis/neighbourhood_performance_variation.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/neighbourhood_performance_variation.pdf"
+      "final_output": "outputs/figures/neighbourhood_performance_variation.png"
     },
     {
       "id": "D3",
@@ -251,7 +265,7 @@
       "missing_output": "outputs/figures/thesis/robustness_contrasts.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/robustness_contrasts.pdf"
+      "final_output": "outputs/figures/robustness_contrasts.png"
     },
     {
       "id": "E1",
@@ -270,7 +284,7 @@
       "missing_output": "outputs/figures/thesis/transfer_performance.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/transfer_performance.pdf"
+      "final_output": "outputs/figures/transfer_performance.png"
     },
     {
       "id": "E2",
@@ -289,7 +303,7 @@
       "missing_output": "outputs/figures/thesis/transfer_accessibility_gains.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/transfer_accessibility_gains.pdf"
+      "final_output": "outputs/figures/transfer_accessibility_gains.png"
     },
     {
       "id": "E3",
@@ -308,7 +322,7 @@
       "missing_output": "outputs/figures/thesis/transfer_network_comparison.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/transfer_network_comparison.pdf"
+      "final_output": "outputs/figures/transfer_network_comparison.png"
     },
     {
       "id": "E4",
@@ -325,7 +339,7 @@
       "missing_output": "outputs/figures/thesis/transfer_prediction_diagnostics.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/transfer_prediction_diagnostics.pdf"
+      "final_output": "outputs/figures/transfer_prediction_diagnostics.png"
     },
     {
       "id": "E5",
@@ -342,7 +356,7 @@
       "missing_output": "outputs/figures/thesis/directional_transfer_asymmetry.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/directional_transfer_asymmetry.pdf"
+      "final_output": "outputs/figures/directional_transfer_asymmetry.png"
     },
     {
       "id": "F",
@@ -359,7 +373,7 @@
       "missing_output": "outputs/figures/thesis/residual_spatial_diagnostics.pdf",
       "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs",
       "completion_status": "READY",
-      "final_output": "outputs/figures/thesis/residual_spatial_diagnostics.pdf"
+      "final_output": "outputs/figures/residual_spatial_diagnostics.png"
     },
     {
       "id": "A2",
@@ -378,7 +392,7 @@
       "missing_output": null,
       "action_required": "Table-only treatment; preserve all stages without a separate sample-flow figure",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/sample_flow.md"
+      "final_output": "outputs/tables/sample_flow.md"
     },
     {
       "id": "T1",
@@ -397,7 +411,7 @@
       "missing_output": "outputs/tables/thesis/city_sample_summary.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/city_sample_summary.md"
+      "final_output": "outputs/tables/city_sample_summary.md"
     },
     {
       "id": "T2",
@@ -417,7 +431,7 @@
       "missing_output": "outputs/tables/thesis/feature_definitions.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/feature_definitions.md"
+      "final_output": "outputs/tables/feature_definitions.md"
     },
     {
       "id": "T3",
@@ -436,7 +450,7 @@
       "missing_output": "outputs/tables/thesis/accessibility_descriptive_statistics.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/accessibility_descriptive_statistics.md"
+      "final_output": "outputs/tables/accessibility_descriptive_statistics.md"
     },
     {
       "id": "T4",
@@ -455,7 +469,7 @@
       "missing_output": "outputs/tables/thesis/primary_predictive_performance.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/primary_predictive_performance.md"
+      "final_output": "outputs/tables/primary_predictive_performance.md"
     },
     {
       "id": "T5",
@@ -474,7 +488,7 @@
       "missing_output": "outputs/tables/thesis/paired_model_contrasts.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/paired_model_contrasts.md"
+      "final_output": "outputs/tables/paired_model_contrasts.md"
     },
     {
       "id": "T6",
@@ -493,7 +507,7 @@
       "missing_output": "outputs/tables/thesis/association_results.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/association_results.md"
+      "final_output": "outputs/tables/association_results.md"
     },
     {
       "id": "T7",
@@ -512,7 +526,7 @@
       "missing_output": "outputs/tables/thesis/validation_comparison.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/validation_comparison.md"
+      "final_output": "outputs/tables/validation_comparison.md"
     },
     {
       "id": "T8",
@@ -531,7 +545,7 @@
       "missing_output": "outputs/tables/thesis/transfer_performance.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/transfer_performance.md"
+      "final_output": "outputs/tables/transfer_performance.md"
     },
     {
       "id": "T9",
@@ -550,7 +564,7 @@
       "missing_output": "outputs/tables/thesis/transfer_contrasts.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/transfer_contrasts.md"
+      "final_output": "outputs/tables/transfer_contrasts.md"
     },
     {
       "id": "T10",
@@ -569,7 +583,7 @@
       "missing_output": "outputs/tables/thesis/robustness_registry.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/robustness_registry.md"
+      "final_output": "outputs/tables/robustness_registry.md"
     },
     {
       "id": "T11",
@@ -586,7 +600,7 @@
       "missing_output": "outputs/tables/thesis/claims_and_limitations.md",
       "action_required": "Generate full CSV plus readable Markdown summary from the pinned results",
       "completion_status": "READY",
-      "final_output": "outputs/tables/thesis/claims_and_limitations.md"
+      "final_output": "outputs/tables/claims_and_limitations.md"
     },
     {
       "id": "Same-destination route circuity",

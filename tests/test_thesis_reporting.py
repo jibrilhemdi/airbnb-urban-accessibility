@@ -59,3 +59,26 @@ class ThesisReportingTests(unittest.TestCase):
         manifest=json.loads((ROOT/'reports/thesis_artifact_manifest.json').read_text())
         self.assertEqual(manifest['style']['style_id'],thesis_style.STYLE_ID)
         self.assertTrue(all(not row['caption_overlaps_axis_label'] and not row['header_overlaps_legend'] for row in manifest['layout_checks']))
+
+    def test_current_outputs_have_one_location_and_png_figures_only(self):
+        outputs=ROOT/'outputs'
+        self.assertEqual({p.name for p in outputs.iterdir() if p.is_dir()},{'figures','tables','metrics'})
+        figures=list((outputs/'figures').iterdir())
+        self.assertEqual(len(figures),18)
+        self.assertTrue(all(p.suffix=='.png' for p in figures))
+        manifest=json.loads((ROOT/'reports/thesis_artifact_manifest.json').read_text())
+        expected={item['filename'] for item in manifest['items']}|{'outputs/README.md','outputs/thesis_results.zip'}
+        actual={str(p.relative_to(ROOT)) for p in outputs.rglob('*') if p.is_file() and p.name!='.DS_Store'}
+        self.assertEqual(actual,expected)
+
+    def test_square_maps_include_all_frozen_neighbourhood_boundaries_and_labels_fit(self):
+        manifest=json.loads((ROOT/'reports/thesis_artifact_manifest.json').read_text())
+        maps=[row for row in manifest['layout_checks'] if row['map_panels']]
+        self.assertEqual({row['figure'] for row in maps},{'study_areas','accessibility_spatial'})
+        for row in maps:
+            self.assertEqual([p['neighbourhood_boundaries'] for p in row['map_panels']],[11,17,11])
+            self.assertTrue(all(p['square'] for p in row['map_panels']))
+        self.assertTrue(all(not row['data_text_outside_axes'] for row in manifest['layout_checks']))
+        self.assertTrue(all(not row['plotted_values_outside_axes'] for row in manifest['layout_checks']))
+        chart=next(item for item in manifest['items'] if item['logical_name']=='neighbourhood_performance_variation')
+        self.assertEqual(chart['plot_orientation'],'horizontal')

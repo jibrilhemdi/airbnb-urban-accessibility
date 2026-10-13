@@ -14,6 +14,7 @@ from src.study.specification import load_design,CITIES,MODELS
 from src.study.store import read_package
 from src.study.sample_freeze import records
 from src.reporting.study_results import predictions
+from src.study.archive import preserved_path
 
 ROOT=PROJECT_ROOT
 CATALOG=ROOT/'reports/frozen_reporting_sources.json'
@@ -50,7 +51,7 @@ def verify_catalog():
     for path,expected in catalog['files'].items():
         if sha256_file(ROOT/path)!=expected:raise ValueError('Frozen reporting selector/design changed: '+path)
     for item in catalog['previous_public_artifacts']:
-        if sha256_file(ROOT/item['path'])!=item['sha256']:raise ValueError('Pre-existing completed public artifact changed')
+        if sha256_file(preserved_path(item['path'],item['sha256']))!=item['sha256']:raise ValueError('Pre-existing completed public artifact changed')
     return catalog
 
 

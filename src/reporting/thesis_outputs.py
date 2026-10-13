@@ -16,6 +16,7 @@ from pyproj import Transformer
 from shapely.ops import transform
 from src.ingestion.common import sha256_file
 from src.study.sources import write_once
+from src.study.archive import preserved_path
 from src.reporting.thesis_sources import ROOT,CITIES,MODELS,LABELS,SCHEMES,load
 from src.reporting.thesis_tables import build,display,presentation,markdown,FEATURE_LABELS,VALIDATION_LABELS,ROBUSTNESS_LABELS
 from src.reporting.thesis_audit import FIGURES,TABLES
@@ -49,7 +50,7 @@ class Registry:
                            'generation_command':COMMAND,'caption':caption,'private_row_export':False,**details})
 
     def table(self,name,frame,rq,roles,caption,compact=None,category='tables'):
-        out=ROOT/'outputs'/category/'thesis';out.mkdir(parents=True,exist_ok=True)
+        out=ROOT/'outputs'/('metrics' if category=='diagnostics' else category);out.mkdir(parents=True,exist_ok=True)
         for suffix,content in [('csv',display(frame).to_csv(index=False).encode()),('md',('# '+name.replace('_',' ').title()+'\n\n'+caption+'\n\n'+markdown(compact if compact is not None else display(frame))+'\n').encode())]:
             path=out/(name+'.'+suffix)
             if path.exists():
@@ -74,10 +75,40 @@ class Registry:
         caption_collision=fig._supxlabel is not None and caption_box.overlaps(fig._supxlabel.get_window_extent(renderer))
         header_boxes=[fig._thesis_heading.get_window_extent(renderer),fig._thesis_subtitle.get_window_extent(renderer)]
         header_collision=any(box.overlaps(legend.get_window_extent(renderer)) for box in header_boxes for legend in fig.legends)
+        outside_axes=[];map_panels=[];clipped_values=[]
+        for ax in fig.axes:
+            if hasattr(ax,'_colorbar'):continue
+            panel=ax.get_window_extent(renderer)
+            for item in ax.texts:
+                if not item.get_visible() or not item.get_text():continue
+                box=item.get_window_extent(renderer)
+                if box.x0<panel.x0-2 or box.y0<panel.y0-2 or box.x1>panel.x1+2 or box.y1>panel.y1+2:
+                    outside_axes.append(item.get_text())
+            # Data endpoints also matter: text can fit while an interval is cut off.
+            if name not in {'study_areas','accessibility_spatial','nearest_access_relationship',
+                            'transfer_performance','transfer_accessibility_gains','transfer_prediction_diagnostics'}:
+                values=[]
+                for line in ax.lines:
+                    if line.get_transform()==ax.transData:values.extend(line.get_xydata())
+                for collection in ax.collections:
+                    if hasattr(collection,'get_segments') and collection.get_transform()==ax.transData:
+                        for segment in collection.get_segments():values.extend(segment)
+                for container in ax.containers:
+                    if isinstance(container,matplotlib.container.BarContainer):
+                        for bar in container:values.extend(bar.get_bbox().get_points())
+                if values:
+                    points=ax.transData.transform(np.asarray(values,dtype=float))
+                    outside=(points[:,0]<panel.x0-2)|(points[:,0]>panel.x1+2)|(points[:,1]<panel.y0-2)|(points[:,1]>panel.y1+2)
+                    if outside.any():clipped_values.append({'panel':ax.get_title(loc='left'),'endpoints':int(outside.sum())})
+            if name in {'study_areas','accessibility_spatial'}:
+                map_panels.append({'title':ax.get_title(loc='left'),'width_pixels':panel.width,'height_pixels':panel.height,
+                                   'neighbourhood_boundaries':ax._neighbourhood_boundaries,
+                                   'square':bool(abs(panel.width-panel.height)<2)})
         self.layout.append({'figure':name,'canvas_pixels':[width,height],'out_of_canvas_text':clipped,
-                            'caption_overlaps_axis_label':bool(caption_collision),'header_overlaps_legend':bool(header_collision)})
-        out=self.figure_stage or ROOT/'outputs/figures/thesis';out.mkdir(parents=True,exist_ok=True)
-        for suffix in ['png','pdf','svg']:
+                            'caption_overlaps_axis_label':bool(caption_collision),'header_overlaps_legend':bool(header_collision),
+                            'data_text_outside_axes':outside_axes,'plotted_values_outside_axes':clipped_values,'map_panels':map_panels})
+        out=self.figure_stage or ROOT/'outputs/figures';out.mkdir(parents=True,exist_ok=True)
+        for suffix in ['png']:
             blob=io.BytesIO();metadata={'Software':'Frozen thesis reporting'} if suffix=='png' else {'CreationDate':None,'ModDate':None,'Creator':'Frozen thesis reporting'} if suffix=='pdf' else {'Date':None,'Creator':'Frozen thesis reporting'}
             fig.savefig(blob,format=suffix,dpi=300,metadata=metadata)
             path=out/(name+'.'+suffix)
@@ -86,8 +117,8 @@ class Registry:
                 path.write_bytes(blob.getvalue())
             else:write_once(path,blob.getvalue())
             self.register(path,rq,roles,caption,kind='figure',logical_name=name,
-                          registered_filename='outputs/figures/thesis/'+path.name,
-                          style_id=theme.STYLE_ID,formats=['PNG300dpi','PDF vector','SVG vector'],page_inches=list(fig.get_size_inches()),**details)
+                          registered_filename='outputs/figures/'+path.name,
+                          style_id=theme.STYLE_ID,formats=['PNG300dpi'],page_inches=list(fig.get_size_inches()),**details)
         plt.close(fig)
 
 
@@ -115,7 +146,19 @@ def outline(ax,geom,**kwargs):
     for piece in pieces:
         x,y=piece.exterior.xy;ax.fill(np.asarray(x)/1000,np.asarray(y)/1000,**kwargs)
         for ring in piece.interiors:
-            x,y=ring.xy;ax.plot(np.asarray(x)/1000,np.asarray(y)/1000,color='#777777',lw=.3)
+            x,y=ring.xy;ax.plot(np.asarray(x)/1000,np.asarray(y)/1000,color=kwargs.get('edgecolor','#777777'),
+                              lw=kwargs.get('linewidth',.3),zorder=kwargs.get('zorder',2))
+
+
+def neighbourhood_boundaries(ax,data,city,project):
+    """Draw every frozen validation group above cells; never invent boundaries."""
+    groups=[item for item in data['geometries'][city] if item['key'].startswith('group:')]
+    if len(groups)!=data['cities'][city]['operational_count']:raise ValueError('Frozen neighbourhood boundary count differs')
+    for item in groups:
+        geometry=transform(project,item['geometry'])
+        outline(ax,geometry,facecolor='none',edgecolor='white',linewidth=2.1,zorder=4)
+        outline(ax,geometry,facecolor='none',edgecolor=theme.NAVY,linewidth=.9,zorder=5)
+    ax._neighbourhood_boundaries=len(groups)
 
 
 def maps(data,reg):
@@ -126,12 +169,13 @@ def maps(data,reg):
         for item in sorted(data['geometries'][city],key=lambda item:item['key']!='mask'):
             geom=transform(project,item['geometry'])
             outline(ax,geom,facecolor='#F5F6F2' if item['key']=='mask' else theme.BLUE,edgecolor='#668A9A',linewidth=.7,alpha=.7)
+        neighbourhood_boundaries(ax,data,city,project)
         ax.set_aspect('equal');ax.set_title(f"{LABELS[city]}\n{data['cities'][city]['operational_count']} neighbourhoods")
         ax.set_xlabel('Easting (km)');ax.set_ylabel('Northing (km)')
         ax.text(.02,.98,crs[city],transform=ax.transAxes,va='top',fontsize=8,bbox={'facecolor':'white','alpha':.85,'edgecolor':'none'})
         theme.map_frame(ax)
     reg.figure('study_areas',fig,'Design',['geography'],
-               'Public frozen study masks and provider operational neighbourhood polygons used for primary validation. Municipal masks are membership geometry, not validation units. No individual listings. Inside Airbnb, CC BY4.0; accepted mask sources/vintages are in the source registry. Panel extents differ.',spatial_crs={'source':'EPSG:4326','panels':crs},page_orientation='landscape')
+               'Dark lines delineate the 11 Copenhagen, 17 Oslo and 11 Stockholm operational neighbourhoods used for validation. Municipal masks define membership. Each square panel retains its native projected CRS and scale; city scales differ. No individual listings. Inside Airbnb, CC BY 4.0; mask sources are in the source registry.',spatial_crs={'source':'EPSG:4326','panels':crs},page_orientation='landscape')
     cells=[]
     for city in CITIES:
         frame=data['frames'][city]
@@ -145,13 +189,13 @@ def maps(data,reg):
             outline(ax,transform(project,item['geometry']),facecolor='#F5F6F2' if item['key']=='mask' else 'none',edgecolor='#668A9A',linewidth=.55)
         for cell in cells.loc[cells.city==city].itertuples():
             ax.add_patch(Rectangle((cell.cell_x/1000,cell.cell_y/1000),.5,.5,facecolor=theme.SEQUENTIAL(norm(cell.mean_rail_walking_minutes)),edgecolor='none',zorder=2.5))
-        for item in data['geometries'][city]:outline(ax,transform(project,item['geometry']),facecolor='none',edgecolor='#668A9A',linewidth=.55,zorder=3)
+        neighbourhood_boundaries(ax,data,city,project)
         ax.autoscale_view();ax.set_aspect('equal');ax.set_title(LABELS[city]);ax.set_xlabel('Easting (km)');ax.set_ylabel('Northing (km)')
         ax.text(.02,.98,crs[city],transform=ax.transAxes,va='top',fontsize=8,bbox={'facecolor':'white','alpha':.85,'edgecolor':'none'})
         theme.map_frame(ax)
     fig.colorbar(ScalarMappable(norm=norm,cmap=theme.SEQUENTIAL),ax=axes.ravel().tolist(),label='Mean rail walking time (minutes)',orientation='horizontal',shrink=.6,fraction=.045,pad=.06,panchor=False)
     reg.figure('accessibility_spatial',fig,'RQ1',['sample','geography'],
-               'Mean nearest-rail walking minutes in500 m cells with at least five observations. Shared colour scale capped at pooled95th percentile for display; uncapped aggregate values remain in the accompanying table. Boundaries are the frozen provider geography. © OpenStreetMap contributors, ODbL; Inside Airbnb CC BY4.0.',spatial_crs={'source':'EPSG:4326','panels':crs},minimum_aggregate_n=5,colour_cap_minutes=cap,page_orientation='landscape')
+               'Mean nearest-rail walking minutes in 500 m cells with at least five observations. Dark lines mark every frozen operational neighbourhood. Square panels retain native CRS and scale. Shared colours are capped at the pooled 95th percentile for display; the table retains uncapped values. © OpenStreetMap contributors, ODbL; Inside Airbnb CC BY 4.0.',spatial_crs={'source':'EPSG:4326','panels':crs},minimum_aggregate_n=5,colour_cap_minutes=cap,page_orientation='landscape')
     reg.table('accessibility_spatial_cells',cells,'RQ1',['sample'],
               'Only500 m cells with n≥5; no individual coordinates. Values are uncapped means of frozen walking accessibility.',category='metrics')
 
@@ -186,7 +230,7 @@ def measurement(data,tables,reg):
     for ax,city in zip(axes[0],CITIES,strict=True):
         part=tables['nearest_access_divergence'].loc[lambda p:p.city==city].set_index('concept').loc[['station','bus']]
         y=np.arange(2);ax.hlines(y,part.p05,part.p95,color=theme.INK,lw=1);ax.hlines(y,part.p25,part.p75,color=theme.SAND,lw=5)
-        ax.plot(part['median'],y,'o',color=COLOURS['Walking'],markerfacecolor=theme.SAND,ms=6);ax.set_yticks(y,['Rail','Bus']);ax.set_ylim(1.5,-.5);ax.set_title(LABELS[city]);ax.set_xlim(0,maximum*1.05);ax.axvline(0,color=theme.INK,lw=.8,ls='--')
+        ax.plot(part['median'],y,'o',color=COLOURS['Walking'],markerfacecolor=theme.SAND,ms=6);ax.set_yticks(y,['Rail','Bus']);ax.set_ylim(1.5,-.5);ax.set_title(LABELS[city]);ax.set_xlim(min(0,float(tables['nearest_access_divergence'].p05.min()))-maximum*.03,maximum*1.08);ax.axvline(0,color=theme.INK,lw=.8,ls='--')
     fig.supxlabel('Walking-equivalent minus straight-line nearest distance (km)')
     reg.figure('nearest_access_divergence',fig,'RQ1',['interpretation'],
                'Frozen nearest-category distance excess: median dots, interquartile thick bars and5th–95th percentile thin bars. These are distribution summaries, not confidence intervals or same-object route circuity.')
@@ -197,6 +241,8 @@ def measurement(data,tables,reg):
             for i,representation in enumerate(['Euclidean','Walking']):
                 r=part.loc[representation];colour=COLOURS[representation];ax.vlines(i,r.p25,r.p75,color=colour,lw=1.8);ax.hlines([r.p25,r.p75],i-.06,i+.06,color=colour,lw=1.2);ax.plot(i,r['median'],'o',color=colour,markerfacecolor=theme.FILLS[colour],ms=7)
             ax.set_xticks([0,1],['Euclidean','Walking']);ax.set_xlim(-.5,1.5);ax.set_ylim(bottom=0);ax.set_title(LABELS[city]+('\nFood/social' if concept=='food' else '\nCulture/tourism'));ax.set_ylabel('Destinations')
+        maximum=float(tables['accessibility_descriptive_statistics'].loc[lambda p:p.concept==concept,'p75'].max())
+        axes[row,0].set_ylim(0,maximum*1.1)
     reg.figure('opportunity_comparison',fig,'RQ1',['interpretation'],
                'Median reachable destinations (dots) and interquartile ranges (bars) for frozen nominal10-minute walking and matched833 m Euclidean budgets. Same deduplicated category universe within each city. Zero counts are observed zeros; no route failures are filled.')
 
@@ -260,13 +306,14 @@ def generalization(data,tables,reg):
     folds=tables['neighbourhood_performance'];fig,axes=grid(size=(10.5,7.3),sharex=True)
     for ax,city in zip(axes[0],CITIES,strict=True):
         names=sorted(folds.loc[folds.city==city,'fold'].unique());y=np.arange(len(names))
-        for estimator,offset,marker in [('OLS',-.12,'o'),('XGBoost',.12,'s')]:
+        for estimator,offset in [('OLS',-.18),('XGBoost',.18)]:
             part=folds.loc[(folds.city==city)&(folds.estimator==estimator)].pivot(index='fold',columns='model',values='rmse').loc[names]
-            ax.plot(part.MW-part.M0,y+offset,marker,color=COLOURS[estimator],markerfacecolor=theme.FILLS[COLOURS[estimator]],label=estimator,ms=6)
-        ax.set_yticks(y,[textwrap.fill(str(n),19) for n in names]);ax.invert_yaxis();ax.axvline(0,color='grey',lw=.8);ax.set_title(LABELS[city]);ax.grid(axis='x',alpha=.2)
+            ax.barh(y+offset,part.MW-part.M0,height=.32,color=theme.FILLS[COLOURS[estimator]],
+                    edgecolor=COLOURS[estimator],linewidth=.7,label=estimator)
+        ax.set_yticks(y,[textwrap.fill(str(n),22) for n in names]);ax.invert_yaxis();ax.axvline(0,color=theme.INK,lw=1);ax.set_title(LABELS[city]);ax.margins(x=.12);ax.grid(axis='x',alpha=.2)
     fig.legend(*axes[0,0].get_legend_handles_labels(),loc='outside upper center',ncol=2);fig.supxlabel('ΔRMSE · walking model minus baseline')
     reg.figure('neighbourhood_performance_variation',fig,'RQ3',['within_city'],
-               'Every primary heldout operational neighbourhood: paired walking-versus-baseline error for OLS and XGBoost. Dots are full-fold scores, not independent confidence intervals. Minimum15 test/500 complementary training support is unchanged; full names, counts and all four model scores are exported.',page_orientation='landscape')
+               'Horizontal bars show paired walking-versus-baseline error for OLS and XGBoost in every held-out neighbourhood. Negative bars favour walking. These are full-fold scores, not confidence intervals. Minimum 15 test/500 training support is unchanged; full names, counts and all model scores are exported.',page_orientation='landscape',plot_orientation='horizontal')
     contrast=tables['robustness_contrasts'];scenarios=['primary',*ROBUSTNESS_LABELS.keys()];scenarios=list(dict.fromkeys(scenarios))
     fig,axes=grid(2,size=(10.5,9),sharex=True)
     for row,estimator in enumerate(['OLS','XGBoost']):
@@ -363,9 +410,9 @@ def spatial(tables,reg):
 def run(revise=False,preview=None):
     destination=ROOT/'reports/thesis_artifact_manifest.json'
     if preview is not None:
-        baseline=json.loads((ROOT/'archive/before_figure_style/manifest.json').read_text())
+        baseline=json.loads((ROOT/'archive/before_output_cleanup/manifest.json').read_text())
         for item in baseline['numeric_exports_immutable']:
-            if sha256_file(ROOT/item['original_path'])!=item['sha256']:raise ValueError('Published numerical export changed')
+            if sha256_file(preserved_path(item['original_path'],item['sha256']))!=item['sha256']:raise ValueError('Published numerical export changed')
         if preview.exists():raise ValueError('Style preview must use a new output directory')
         preview.mkdir(parents=True);revise=True
     if destination.exists() and not revise:raise ValueError('Thesis artifacts exist; use verification or explicit pending-layout revision')
@@ -397,10 +444,10 @@ def run(revise=False,preview=None):
               'source_catalog_sha256':data['catalog']['source_catalog_sha256'],'models_refitted':False,'scientific_reconstruction':False,
               'items':reg.items,'layout_checks':reg.layout,'scientific_choice_changes':False,
               'style':{**theme.reference(),'city_order':[LABELS[c] for c in CITIES],
-                       'model_order':list(MODELS),'delta_sign':'candidate minus reference; negative improves','deterministic_SVG_hashsalt':'frozen_thesis_pastel'}}
+                       'model_order':list(MODELS),'delta_sign':'candidate minus reference; negative improves','figure_format':'PNG only'}}
     manifest['generation_dependencies']={str(p.relative_to(ROOT)):sha256_file(p) for p in [*[ROOT/'src/reporting'/name for name in ['thesis_audit.py','thesis_sources.py','thesis_tables.py','thesis_outputs.py','thesis_style.py','thesis_refresh.py']],ROOT/'src/pipeline/reporting_figures.py',ROOT/'docs/analysis/data_dictionary.md',ROOT/'requirements.txt']}
     if preview is not None:
-        manifest['presentation_refresh']={'prior_checkpoint':baseline['base_checkpoint'],'prior_manifest':'archive/before_figure_style/reports/thesis_artifact_manifest.json','numerical_exports_byte_identical':True,'user_requested_style':'Existing V3 pastel figures','preview_directory':str(preview)}
+        manifest['presentation_refresh']={'prior_checkpoint':baseline['base_checkpoint'],'prior_manifest':'archive/before_output_cleanup/reports/thesis_artifact_manifest.json','numerical_exports_byte_identical':True,'user_requested_style':'Pastel PNG figures, square maps, explicit boundaries, horizontal neighbourhood bars','preview_directory':str(preview)}
         write_once(preview/'thesis_artifact_manifest.json',(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n').encode())
     elif revise:
         manifest['draft_layout_revision']='External legends; shared-axis ordering; compact divergence rows; common count colour scales; numeric/aggregate tables byte-identical'

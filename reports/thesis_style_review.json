@@ -29,9 +29,8 @@
     "heading": "bold navy",
     "grid": "light #E7EEF1",
     "PNG_dpi": 300,
-    "vector": [
-      "PDF",
-      "SVG"
+    "formats": [
+      "PNG"
     ],
     "scientific_values_reused_from_reference": false,
     "city_order": [
@@ -46,19 +45,19 @@
       "MEW"
     ],
     "delta_sign": "candidate minus reference; negative improves",
-    "deterministic_SVG_hashsalt": "frozen_thesis_pastel"
+    "figure_format": "PNG only"
   },
   "figure_sets": 18,
-  "figure_files": 54,
+  "figure_files": 18,
   "visual_review": "All18 figures reviewed in full-resolution contact sheets plus selected full-size panels before activation",
   "numerical_exports_verified_byte_identical": 44,
   "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
-  "previous_presentation_archive": "archive/before_figure_style/manifest.json",
+  "previous_presentation_archive": "archive/before_output_cleanup/manifest.json",
   "models_refitted": false,
   "scientific_choice_changes": false,
   "publication_validation": {
     "status": "PASS",
-    "artifact_files": 98,
+    "artifact_files": 62,
     "figure_sets": 18,
     "table_and_aggregate_views": 22,
     "main_figures": 10,
@@ -68,10 +67,21 @@
     "final_run_lineage": "PASS",
     "numeric_claims_trace": "PASS",
     "independent_point_contrast_recalculation": "PASS",
-    "links_checked": 136,
+    "links_checked": 148,
     "visible_version_markers": "NONE",
     "clipped_labels": "NONE",
     "caption_and_header_overlap": "NONE",
+    "data_annotations_outside_panels": "NONE",
+    "plotted_value_clipping": "NONE",
+    "square_map_panels_verified": 6,
+    "neighbourhood_boundaries_per_map": [
+      11,
+      17,
+      11
+    ],
+    "figure_formats": [
+      "PNG"
+    ],
     "models_refitted": false
   }
 }
