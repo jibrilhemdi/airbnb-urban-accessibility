@@ -6,11 +6,11 @@ documents and statuses remain historical evidence.
 
 | Document or location | Purpose |
 | --- | --- |
-| [Scientific proposal](../scientific_proposal.md) · [Word copy](../scientific_proposal.docx) | Updated 14 October: four questions, actual design, samples, findings and limitations |
+| [Scientific proposal](../design/scientific_proposal.md) · [Word copy](../design/scientific_proposal.docx) | Updated 14 October: four questions, actual design, samples, findings and limitations |
 | [Implementation contract](implementation_contract.md) | Scientific/data/Git scope and immutable checkpoint rules |
 | [Association amendment](association_missingness_amendment_20261013.md) | Explicit post-observation change from 5% to 10%, uniformly across cities |
 | [Specification](preanalysis_specification.md) | Frozen outcomes, features, validation, tuning, inference and sensitivities |
-| [Research plan](research_plan.md) · [Word copy](../end_to_end_research_plan.docx) | Updated 14 October: executed stages, actual registry and remaining writing work |
+| [Research plan](../design/end_to_end_research_plan.md) · [Word copy](../design/end_to_end_research_plan.docx) | Updated 14 October: executed stages, actual registry and remaining writing work |
 | [Document comparison](document_comparison.md) | Attached pre-rerun drafts versus actual completed methods/results |
 | [Document generation manifest](../../reports/research_document_manifest.json) | Canonical Markdown/DOCX checksums, Word structure and template preservation |
 | [Dictionary](data_dictionary.md) | Source-parsed controls, density, civic distance and matched E/W definitions |
@@ -81,3 +81,8 @@ active documents are preserved in `archive/before_research_documents/`.
 The output README and portable ZIP had pending local deletions when this document
 revision began. Earlier package certificates remain historical evidence; this
 documentation checkpoint does not restore or recertify those package files.
+
+Current proposal/plan Markdown and Word copies live together in `docs/design/`.
+Older design-folder Word versions, including the income-review baseline, are in
+`archive/before_design_document_move/older_versions/`; their exact original bytes
+and previous active paths are recorded in the [relocation manifest](../../archive/before_design_document_move/manifest.json).

@@ -233,7 +233,7 @@ the exact forty-four previously certified file hashes. No model is refitted.
 
 ## Current research-document exports
 
-`docs/scientific_proposal.md` and `docs/analysis/research_plan.md` are canonical.
+`docs/design/scientific_proposal.md` and `docs/design/end_to_end_research_plan.md` are canonical.
 `scripts/update_research_documents.py` creates the matching Word documents in
 `docs/` from the checksum-preserved attached templates, retaining fonts, styles,
 headers, footers and page-number settings. The generator uses the existing lxml

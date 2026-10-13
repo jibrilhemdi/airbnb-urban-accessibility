@@ -1,0 +1,111 @@
+# Local/raw research data. Keep source files out of version control.
+/runs/
+/data/derived/
+/data/intermediate/
+/outputs/metrics/
+/outputs/models/
+/outputs/diagnostics/
+/outputs/accessibility/
+data/raw/*
+data/interim/*
+data/processed/*
+outputs/figures/*
+outputs/tables/*
+outputs/releases/*
+
+# Keep directory placeholders and small metadata under version control.
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/tables/.gitkeep
+!data/metadata/*.json
+!data/metadata/*.csv
+
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+__MACOSX/
+._*
+.env
+.venv/
+venv/
+
+# Generated LaTeX auxiliaries and local packaging archives.
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+before_freeze.zip
+thesis_results_v3.zip
+
+# Local databases and editor files
+*.sqlite
+*.sqlite3
+.vscode/
+.idea/
+
+# Misc
+notebooks/test.ipynb
+plan/
+
+# Private legacy/generated data; archived source and narratives can be tracked.
+archive/legacy_v2/database.dump
+archive/legacy_v2/outputs/
+archive/legacy_v2/data/processed/
+archive/legacy_v2/retired_artifacts/outputs/figures/
+archive/legacy_v2/retired_artifacts/outputs/tables/
+archive/legacy_v2/notebooks/
+
+# Public V3 branch: code, configuration and methodological documentation only.
+# Keep local evidence, data-derived outputs and archived snapshots off GitHub.
+/archive/
+/data/metadata/
+/outputs/latex/
+/reports/
+/docs/design/
+/config/qualified_income_decision.json
+
+# Local credentials and packaged data.
+.env.*
+*.zip
+*.dump
+*.backup
+*.parquet
+*.gpkg
+*.pkl
+*.joblib
+*.pem
+*.key
+*.p12
+
+# V4 private research identities; aggregate sharing requires a later review.
+/outputs/v4/
+/data/metadata/v4/
+/data/restricted/
+/data/housing/
+route_cache/
+private_predictions/
+listing_predictions*.csv
+listing_predictions*.json
+*.sql.dump
+*.pgdump
+credentials*.json
+secrets*.json
+/database_dumps/
+/db_dumps/
+*.dump.sql
+/credentials/
+/secrets/
+credentials*.yaml
+credentials*.yml
+*listing*predictions*.csv
+*listing*predictions*.json

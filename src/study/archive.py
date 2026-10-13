@@ -11,7 +11,8 @@ def manifests():
     result=[]
     for name in ['docs/analysis/archive_manifest.json','archive/before_association_amendment/manifest.json',
                  'archive/before_figure_style/manifest.json','archive/before_output_cleanup/manifest.json',
-                 'archive/before_neighbourhood_maps/manifest.json']:
+                 'archive/before_neighbourhood_maps/manifest.json',
+                 'archive/before_research_documents/manifest.json','archive/before_design_document_move/manifest.json']:
         path=PROJECT_ROOT/name
         if path.is_file():result.extend(json.loads(path.read_text())['files'])
     return result

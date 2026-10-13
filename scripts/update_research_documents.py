@@ -18,8 +18,8 @@ ARCHIVE=ROOT/'archive/before_research_documents'
 MANIFEST=ROOT/'reports/research_document_manifest.json'
 W='http://schemas.openxmlformats.org/wordprocessingml/2006/main'
 NS={'w':W}
-DOCS=[('docs/scientific_proposal.md','docs/scientific_proposal.docx','scientific_proposal.docx'),
-      ('docs/analysis/research_plan.md','docs/end_to_end_research_plan.docx','end_to_end_research_plan.docx')]
+DOCS=[('docs/design/scientific_proposal.md','docs/design/scientific_proposal.docx','scientific_proposal.docx'),
+      ('docs/design/end_to_end_research_plan.md','docs/design/end_to_end_research_plan.docx','end_to_end_research_plan.docx')]
 
 
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -119,7 +119,7 @@ def verify_numerical_tables():
     scores=performance.loc[performance.estimator.eq('XGBoost')].pivot(index='city',columns='model',values='rmse').reindex(['Copenhagen','Oslo','Stockholm'])[['M0','ME','MW','MEW']].reset_index()
     scores.columns=['City','M0','ME','MW','MEW']
     generated=[blocks(markdown(frame,precision=precision))[0][1] for frame,precision in [(counts,0),(references,6),(scores,6)]]
-    for source,indices in [('docs/scientific_proposal.md',[1,5,6]),('docs/analysis/research_plan.md',[2,4,5])]:
+    for source,indices in [('docs/design/scientific_proposal.md',[1,5,6]),('docs/design/end_to_end_research_plan.md',[2,4,5])]:
         tables=[value for kind,value in blocks((ROOT/source).read_text()) if kind=='table']
         for index,expected in zip(indices,generated,strict=True):
             if tables[index]!=expected:raise ValueError('Document numerical table differs from final results: '+source)

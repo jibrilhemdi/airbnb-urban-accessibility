@@ -33,7 +33,7 @@
 ## Active research workflow
 
 Read [the contract](docs/analysis/implementation_contract.md),
-[design](config/study/design.json), [plan](docs/analysis/research_plan.md),
+[design](config/study/design.json), [plan](docs/design/end_to_end_research_plan.md),
 [association amendment](docs/analysis/association_missingness_amendment_20261013.md)
 and [execution log](docs/analysis/execution_log.md).
 The explicit post-observation association eligibility limit is 10% for all

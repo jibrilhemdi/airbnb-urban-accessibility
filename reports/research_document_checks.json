@@ -5,12 +5,12 @@
   "attached_plan_is_latest": false,
   "reason": "Pre-rerun drafts differ from implemented four-RQ design, native context, final samples, observed association amendment and actual executed analyses",
   "canonical_documents": [
-    "docs/scientific_proposal.md",
-    "docs/analysis/research_plan.md"
+    "docs/design/scientific_proposal.md",
+    "docs/design/end_to_end_research_plan.md"
   ],
   "Word_exports": [
-    "docs/scientific_proposal.docx",
-    "docs/end_to_end_research_plan.docx"
+    "docs/design/scientific_proposal.docx",
+    "docs/design/end_to_end_research_plan.docx"
   ],
   "document_text_and_tables": "PASS",
   "DOCX_XML_and_CRC": "PASS",
@@ -21,7 +21,7 @@
   "scientific_SQL_catalog_packages": 751,
   "scientific_SQL_catalog_unchanged": true,
   "frozen_scientific_outputs_byte_identical": 62,
-  "document_links_verified": 97,
+  "document_links_verified": 112,
   "historical_protected_files": 1695,
   "historical_baseline_records": 263,
   "compilation": "PASS",
@@ -35,6 +35,17 @@
     "outputs/README.md",
     "outputs/thesis_results.zip"
   ],
-  "document_manifest_sha256": "a26f729f81fa4df95a1235e9d41507b3b45b5bace09bddf2fd647eba68c938d5",
-  "comparison_document": "docs/analysis/document_comparison.md"
+  "document_manifest_sha256": "1d7524d1690affdeed88febd1841c22c42685a8750425a7c1d778c65b09a2cfd",
+  "comparison_document": "docs/analysis/document_comparison.md",
+  "document_location_revision": {
+    "date": "2026-10-14",
+    "manifest": "archive/before_design_document_move/manifest.json",
+    "older_design_versions_archived": 4,
+    "Word_exports_byte_identical": true,
+    "SQL_rechecked_for_location_revision": false,
+    "local_links_verified": 112,
+    "relocation_archive_files_verified": 21,
+    "previous_document_paths_removed": true,
+    "design_folder_contains_only_current_documents": true
+  }
 }

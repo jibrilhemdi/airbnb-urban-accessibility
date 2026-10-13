@@ -4,12 +4,12 @@
   "canonical_format": "Markdown",
   "export_scope": "Scientific proposal and research plan DOCX only; no PDF/results-report renderer",
   "generation_command": ".venv/bin/python scripts/update_research_documents.py",
-  "generator_sha256": "b04e3f73abf6e732cb5c3176b86aa659d658ce429db2a4721fd54599de28a3d5",
+  "generator_sha256": "bf3940bb386d4acaceca0a7fb14c8cc8547523cb833abedefccd55b49f7f7573",
   "documents": [
     {
-      "markdown": "docs/scientific_proposal.md",
-      "markdown_sha256": "e64f802de116a7df5f8047705cbf69ebaba61b82e6ac95f1cce57d063dbdf667",
-      "docx": "docs/scientific_proposal.docx",
+      "markdown": "docs/design/scientific_proposal.md",
+      "markdown_sha256": "52bcd095a0299b86a20f63da6ae7381338dcf3bf24ffad1517f243034d530e7b",
+      "docx": "docs/design/scientific_proposal.docx",
       "docx_sha256": "0b4e3d14d37598e083a2b2c3e9520d21de1faa70043d32cb0131814e2dbd5efa",
       "template": "archive/before_research_documents/attachments/scientific_proposal.docx",
       "template_sha256": "6f9cca75bd40bcb2668e301710111b297d2c1a5df942cab14cd031d116bb87af",
@@ -20,9 +20,9 @@
       "template_styles_headers_footers_preserved": true
     },
     {
-      "markdown": "docs/analysis/research_plan.md",
-      "markdown_sha256": "25c8244a5a86e1c48cfbad4cb87d1edaf645fcf3fd28ec542c96930300e77c4d",
-      "docx": "docs/end_to_end_research_plan.docx",
+      "markdown": "docs/design/end_to_end_research_plan.md",
+      "markdown_sha256": "4b5ac63db126e32f12dacc644c1bb104ec9caaaa2a44d315a57dfcb41d0d65e6",
+      "docx": "docs/design/end_to_end_research_plan.docx",
       "docx_sha256": "014df17bb17b831cb9530c8b479cb651a30a5d8dda42381e2317daefbb7331cf",
       "template": "archive/before_research_documents/attachments/end_to_end_research_plan.docx",
       "template_sha256": "893223dd7bb0ff33a55d1e39b652a1b94b885bb3007989ac31954de214f2c73d",

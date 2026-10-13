@@ -978,3 +978,34 @@ local/remote head agrees; work remains exclusively on existing v4, with main/v3
 unchanged. Normal incremental commit, explicit HEAD:refs/heads/v4 push and
 remote/local SHA equality are verified externally; no own-commit SHA is written
 into this checkpoint.
+
+## 14 October 2026 — research documents consolidated in design folder
+
+COMPLETE: the researcher requested current documents in the design folder and
+older versions in archive. Moved the updated proposal and end-to-end plan,
+including their canonical Markdown sources and Word exports, into docs/design/.
+The four superseded V3/income-review Word files formerly in that folder now
+live in archive/before_design_document_move/older_versions/, with original
+checksums, sizes and paths recorded. Preserved previous active documents,
+interfaces and current provenance before rebasing links. Historical audit
+narratives retain their original dated paths and bytes.
+
+Updated current document index, comparison, reproduction instructions, project
+README, AGENTS plan link, exporter and release/validation source paths. Removed
+the obsolete ignore rule for current design documents. The checksum-aware
+archive resolver includes both document-preservation manifests, so moved
+protected Word originals remain verifiable without duplicate active copies.
+
+Actual checks: Word/XML/CRC and Markdown text/table equivalence PASS; both Word
+files byte-identical to before the move; six numeric tables reproduced from
+pinned final exports; all62 scientific figures/tables byte-identical;112 local
+links PASS;21 relocation archive files verified; protected1,695 historical files
+and263 baseline records PASS; changed Python compilation and scoped whitespace
+PASS. No model, sample, prediction, raw source or database change; no SQL rerun
+required for file relocation. Visual Word pagination was not re-reviewed.
+
+The pre-existing deletions of outputs/README.md and outputs/thesis_results.zip
+remain untouched and excluded from staging. No package rebuild or recertification.
+Only the intended documentation relocation, archived safe documents and interface
+paths are staged. Normal incremental commit and explicit HEAD:refs/heads/v4 push
+are verified externally; the log does not record its own commit SHA.

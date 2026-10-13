@@ -45,6 +45,7 @@ was made after observing missingness and is explicitly disclosed.
 | `config/study/` | Scientific definitions and immutable run selectors |
 | `outputs/figures/`, `tables/`, `metrics/` | Current 300-dpi PNG figures and CSV/Markdown results |
 | `reports/` | Findings, writing guidance, provenance and verification |
+| `docs/design/` | Current [proposal](docs/design/scientific_proposal.docx) and [research plan](docs/design/end_to_end_research_plan.docx), plus Markdown sources |
 | `docs/analysis/` | Methods, source registry, decisions and execution log |
 | `archive/` | Checksum-preserved previous outputs and implementation |
 

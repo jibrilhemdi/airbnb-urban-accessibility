@@ -106,8 +106,8 @@ def artifacts():
         np.testing.assert_allclose(row.delta_rmse,scores.loc[row.added,'rmse']-scores.loc[row.reference,'rmse'],rtol=1e-10,atol=1e-12)
     checked_files=[*sorted((ROOT/'outputs/tables').glob('*.md')),*sorted((ROOT/'outputs/metrics').glob('*.md')),
                    ROOT/'outputs/README.md',ROOT/'README.md',ROOT/'reports/research_results.md',ROOT/'reports/findings_by_research_question.md',
-                   ROOT/'reports/thesis_figure_recommendations.md',ROOT/'docs/final_claims_for_thesis.md',ROOT/'docs/scientific_proposal.md',
-                   ROOT/'docs/analysis/research_plan.md',ROOT/'docs/analysis/reproducibility.md',ROOT/'docs/analysis/source_registry.md',ROOT/'docs/analysis/document_index.md']
+                   ROOT/'reports/thesis_figure_recommendations.md',ROOT/'docs/final_claims_for_thesis.md',ROOT/'docs/design/scientific_proposal.md',
+                   ROOT/'docs/design/end_to_end_research_plan.md',ROOT/'docs/analysis/reproducibility.md',ROOT/'docs/analysis/source_registry.md',ROOT/'docs/analysis/document_index.md']
     links=check_links(checked_files)
     for path in (ROOT/'src/reporting').glob('thesis_*.py'):
         for node in ast.walk(ast.parse(path.read_text())):
