@@ -1,0 +1,24 @@
+{
+  "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/statistisk-arsbok-for-stockholm-2025.pdf",
+  "city": "stockholm",
+  "role": "population_discovery",
+  "acquired_at_utc": "2026-10-13T01:10:01.462544+00:00",
+  "geographic_extent": "Stockholm official statistical yearbook; borough-level area definitions",
+  "source_crs": "not_spatial",
+  "licence": "Public official aggregate statistics; explicit redistribution licence not stated",
+  "snapshot": "publication2025",
+  "status": "transport_success_pending_validation",
+  "http_status": 200,
+  "failure": null,
+  "headers": {
+    "Last-Modified": "Fri, 20 Dec 2024 10:35:26 GMT",
+    "ETag": "\"1db52cae088349b\"",
+    "Content-Type": "application/pdf"
+  },
+  "sha256": "760e149d9b7910b6d58d4e87ac323a36664699f0f1c84ad8de00e97fe697f099",
+  "size_bytes": 19603355,
+  "request_body_sha256": null,
+  "path": "data/raw/population_discovery/stockholm/20261013T011001462544Z/response.json",
+  "receipt_path": "data/raw/population_discovery/stockholm/20261013T011001462544Z/receipt.json",
+  "receipt_sha256": "7d7212999cde3db3e49591e1db16d1e97fc92631992c3ac060b56004ad0d52a3"
+}

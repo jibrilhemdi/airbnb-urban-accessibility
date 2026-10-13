@@ -15,6 +15,11 @@ study-geography-freeze:
 	$(PYTHON) -m src.study.cli geography-freeze
 study-geography-audit:
 	$(PYTHON) -m src.study.cli geography-audit
+.PHONY: study-context-freeze study-context-audit
+study-context-freeze:
+	$(PYTHON) -m src.study.cli context-freeze
+study-context-audit:
+	$(PYTHON) -m src.study.cli context-audit
 
 # Remaining interfaces below reproduce preserved historical workflows.
 .PHONY: db-up db-down db-connect db-psql db-diagnose db-migrate db-check db-register compile test integration-test preflight smoke pipeline reproduce audit candidates migration-audit income-evidence income-deciles income-audit income-docs municipal-income-evidence

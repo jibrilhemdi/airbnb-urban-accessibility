@@ -1,0 +1,1457 @@
+{
+  "copenhagen": {
+    "city": "copenhagen",
+    "status": "QUALIFIED_SOURCE_NATIVE_CONTEXT_WITH_RECORDED_LIMITS",
+    "eligible_context_missing_n": 0,
+    "density_units": [
+      {
+        "group": "Amager Vest",
+        "native_id": "1010",
+        "population": 91397,
+        "area_km2": 19.36464785113075,
+        "population_density": 4719.786318998984,
+        "log_population_density": 8.4595188061563,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Brønshøj-Husum",
+        "native_id": "1007",
+        "population": 44989,
+        "area_km2": 8.740776580187891,
+        "population_density": 5147.025505945711,
+        "log_population_density": 8.546174255137991,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Vanløse",
+        "native_id": "1006",
+        "population": 40883,
+        "area_km2": 6.699013268802093,
+        "population_density": 6102.83908383878,
+        "log_population_density": 8.716509365465571,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Indre By",
+        "native_id": "1001",
+        "population": 57346,
+        "area_km2": 10.471831742950545,
+        "population_density": 5476.214802496644,
+        "log_population_density": 8.608169411807136,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Nørrebro",
+        "native_id": "1003",
+        "population": 79594,
+        "area_km2": 4.107776581359555,
+        "population_density": 19376.418951601478,
+        "log_population_density": 9.871812087751596,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Bispebjerg",
+        "native_id": "1008",
+        "population": 55903,
+        "area_km2": 6.8299363757868505,
+        "population_density": 8184.99571946007,
+        "log_population_density": 9.010057966831374,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Vesterbro-Kongens Enghave",
+        "native_id": "1004",
+        "population": 85061,
+        "area_km2": 8.26214649991105,
+        "population_density": 10295.266490483527,
+        "log_population_density": 9.239439504555088,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Valby",
+        "native_id": "1005",
+        "population": 65969,
+        "area_km2": 9.235112802430747,
+        "population_density": 7143.2803703963955,
+        "log_population_density": 8.873927385455143,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Amager Øst",
+        "native_id": "1009",
+        "population": 63987,
+        "area_km2": 9.345319403905364,
+        "population_density": 6846.956988250197,
+        "log_population_density": 8.831559597262599,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Østerbro",
+        "native_id": "1002",
+        "population": 81732,
+        "area_km2": 9.772907819724496,
+        "population_density": 8363.119913506363,
+        "log_population_density": 9.031586831854165,
+        "reference_period": "2026Q3 (2026-07-01; one day after listing batch)",
+        "area_definition": "Gross native official district polygon; water/statistical-vintage caveats retained",
+        "sources": {
+          "districts": {
+            "path": "data/raw/official_boundaries/2026-09-29/copenhagen_districts.geojson",
+            "sha256": "3addcdf76cba38971be1ca4ff951d5cb2d12c7ffb87e53b07d71d8b7160d75c3"
+          },
+          "population": {
+            "path": "data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv",
+            "sha256": "953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009"
+          }
+        }
+      },
+      {
+        "group": "Frederiksberg",
+        "native_id": "147",
+        "population": 105947,
+        "area_km2": 8.708695401847804,
+        "population_density": 12165.656864921497,
+        "log_population_density": 9.406372250054286,
+        "reference_period": "2026Q3",
+        "area_definition": "Gross accepted source municipal polygon; source-compatible transport at15 decimal places",
+        "sources": {
+          "population": {
+            "path": "data/raw/municipality_statbank/2026-09-29/tables/FOLK1A.csv",
+            "sha256": "62af775af77d0cdfd82a50f497c3ffd8c1ec18e57ca7c7821b2a51c815b5caa8"
+          },
+          "geometry_manifest": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13"
+        }
+      }
+    ],
+    "civic_anchor": {
+      "osm_type": "relation",
+      "osm_id": 52142,
+      "name": "Københavns Rådhus",
+      "coordinates": {
+        "lat": 55.6752701,
+        "lon": 12.5703166
+      },
+      "tags": {
+        "amenity": "townhall",
+        "architect": "Martin Nyrop",
+        "architect:wikidata": "Q4572758",
+        "building": "yes",
+        "email": "rundvisning@okf.kk.dk",
+        "historic": "building",
+        "layer": "1",
+        "name": "Københavns Rådhus",
+        "name:be": "Капенгагенская ратуша",
+        "name:ca": "Ajuntament de Copenhague",
+        "name:da": "Københavns Rådhus",
+        "name:en": "Copenhagen City Hall",
+        "name:fi": "Kööpenhaminan raatihuone",
+        "name:fo": "Ráðhúsið í Keypmannahavn",
+        "name:fr": "Hôtel de ville de Copenhague",
+        "name:is": "Ráðhús Kaupmannahafnar",
+        "name:it": "Municipio di Copenaghen",
+        "name:kl": "Københavnimi illoqarfiup allaffia",
+        "name:ko": "코펜하겐 시청",
+        "name:nl": "Stadhuis van Kopenhagen",
+        "name:ru": "Копенгагенская ратуша",
+        "name:sv": "Köpenhamns rådhus",
+        "name:tr": "Kopenhag Belediye Binası",
+        "name:zh": "哥本哈根市政厅",
+        "phone": "+45 3366 2586",
+        "start_date": "1905",
+        "tourism": "attraction",
+        "type": "multipolygon",
+        "wheelchair": "yes",
+        "wikidata": "Q2010247",
+        "wikipedia": "da:Københavns Rådhus"
+      },
+      "crs": "EPSG:4326",
+      "position_method": "OSM Overpass object bounding-box centre; common method, not entrance survey",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "source": {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "copenhagen",
+        "role": "osm_civic",
+        "acquired_at_utc": "2026-10-13T01:04:20.924561+00:00",
+        "geographic_extent": "nwr[\"amenity\"=\"townhall\"](55.60,12.45,55.75,12.65);",
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": null,
+          "ETag": null,
+          "Content-Type": "application/json"
+        },
+        "sha256": "b8eae86542c1ef79c8f4bc6da9b475f8945fcca9856b089eb38c58d3556f57a0",
+        "size_bytes": 3894,
+        "request_body_sha256": "51ba272970c539bdbb0aba6506985474ecb08e26d9abf7da739697fbfcf60fcd",
+        "path": "data/raw/osm_civic/copenhagen/20261013T010420924561Z/response.json",
+        "receipt_path": "data/raw/osm_civic/copenhagen/20261013T010420924561Z/receipt.json",
+        "receipt_sha256": "c597437b60902cf3a19cf560c934875a7240a5466afd429bdd6267c27518d119"
+      }
+    },
+    "metric_crs": "EPSG:25832",
+    "density_assignment": "Explicit published native unit/name crosswalk to operational grouping; native matching denominator, not provider polygon denominator; polygon footprints differ as geography QA records",
+    "income_required": false,
+    "historical_density_reused": false,
+    "blockers": []
+  },
+  "oslo": {
+    "city": "oslo",
+    "status": "QUALIFIED_SOURCE_NATIVE_CONTEXT_WITH_RECORDED_LIMITS",
+    "eligible_context_missing_n": 0,
+    "density_units": [
+      {
+        "group": "Gamle Oslo",
+        "native_id": "30101",
+        "population": 64920,
+        "area_km2": 15.812297568690418,
+        "population_density": 4105.66520886545,
+        "log_population_density": 8.320123057202787,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Grünerløkka",
+        "native_id": "30102",
+        "population": 67039,
+        "area_km2": 4.759543423250075,
+        "population_density": 14085.174572106778,
+        "log_population_density": 9.55287807441945,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Sagene",
+        "native_id": "30103",
+        "population": 48325,
+        "area_km2": 3.1123873641652637,
+        "population_density": 15526.666300086548,
+        "log_population_density": 9.650314231160511,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "St. Hanshaugen",
+        "native_id": "30104",
+        "population": 39893,
+        "area_km2": 3.57993119031849,
+        "population_density": 11143.510274132086,
+        "log_population_density": 9.318612569243848,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Frogner",
+        "native_id": "30105",
+        "population": 60321,
+        "area_km2": 13.732626434012294,
+        "population_density": 4392.53192314326,
+        "log_population_density": 8.38766108768271,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Ullern",
+        "native_id": "30106",
+        "population": 35805,
+        "area_km2": 9.778321284024303,
+        "population_density": 3661.6714628202853,
+        "log_population_density": 8.205675005977769,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Vestre Aker",
+        "native_id": "30107",
+        "population": 52589,
+        "area_km2": 16.58447070553538,
+        "population_density": 3170.9784975198168,
+        "log_population_density": 8.061795493537689,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Nordre Aker",
+        "native_id": "30108",
+        "population": 56137,
+        "area_km2": 13.70297187450513,
+        "population_density": 4096.702563072825,
+        "log_population_density": 8.317937676198454,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Bjerke",
+        "native_id": "30109",
+        "population": 37538,
+        "area_km2": 7.931661757956644,
+        "population_density": 4732.677860644242,
+        "log_population_density": 8.4622464651864,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Grorud",
+        "native_id": "30110",
+        "population": 28366,
+        "area_km2": 7.053468840526005,
+        "population_density": 4021.567350949641,
+        "log_population_density": 8.299426993922307,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Stovner",
+        "native_id": "30111",
+        "population": 34709,
+        "area_km2": 8.258553396227718,
+        "population_density": 4202.794161972013,
+        "log_population_density": 8.343504859733045,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Alna",
+        "native_id": "30112",
+        "population": 50786,
+        "area_km2": 13.708980043163773,
+        "population_density": 3704.579030686192,
+        "log_population_density": 8.217324909327678,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Østensjø",
+        "native_id": "30113",
+        "population": 52349,
+        "area_km2": 11.851392311936216,
+        "population_density": 4417.118142927083,
+        "log_population_density": 8.393242758562138,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Nordstrand",
+        "native_id": "30114",
+        "population": 55286,
+        "area_km2": 26.658708186161636,
+        "population_density": 2073.8439242415584,
+        "log_population_density": 7.637159132458055,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Søndre Nordstrand",
+        "native_id": "30115",
+        "population": 39312,
+        "area_km2": 20.481622610622267,
+        "population_density": 1919.379179441176,
+        "log_population_density": 7.559757068693817,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Sentrum",
+        "native_id": "30116",
+        "population": 1486,
+        "area_km2": 2.597531318690271,
+        "population_density": 572.0816489516945,
+        "log_population_density": 6.3492817241155395,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      },
+      {
+        "group": "Marka",
+        "native_id": "30117",
+        "population": 1683,
+        "area_km2": 301.4321507941713,
+        "population_density": 5.583346021868825,
+        "log_population_density": 1.7197882421739044,
+        "reference_period": "2026-01-01",
+        "area_definition": "Gross native official17-unit polygons; distinct from provider fold polygons; no total/unlocated redistribution",
+        "sources": {
+          "population_sha256": "0b54d5970433635f611fff7273f4346bfb395a4614ceb76cb6d5837fe62cebe2",
+          "metadata_sha256": "b9751664f0fb59639015321452514e9210b32332a679117cec414c208eb3ab9e",
+          "geometry": {
+            "path": "data/raw/v4/research_design_v4/oslo/2026-06-30/a03_20261011_borough_polygons/areas.geojson",
+            "sha256": "5f4b25ca78388c2f613227d11061f3dc5043689a5089e065ccb485ae9b6593c9"
+          },
+          "reuse_terms": "City-service explicit reuse licence not stated; raw statistics/geometries kept private"
+        }
+      }
+    ],
+    "civic_anchor": {
+      "osm_type": "way",
+      "osm_id": 24900009,
+      "name": "Oslo rådhus",
+      "coordinates": {
+        "lat": 59.9120494,
+        "lon": 10.7336915
+      },
+      "tags": {
+        "addr:city": "Oslo",
+        "addr:housenumber": "1",
+        "addr:postcode": "0037",
+        "addr:street": "Rådhuspassasjen",
+        "alt_name": "Rådhuset",
+        "amenity": "townhall",
+        "building": "public",
+        "building:colour": "#841F27",
+        "building:material": "brick",
+        "height": "66",
+        "image": "https://photos.app.goo.gl/EQ7ZJYLg1zNj8Y466",
+        "mapillary": "3458252394310574",
+        "name": "Oslo rådhus",
+        "opening_hours": "Mo-Su 09:00-16:00",
+        "ref": "0301",
+        "ref:bygningsnr": "80653808",
+        "start_date": "1950-05-15",
+        "toilets:wheelchair": "yes",
+        "tourism": "attraction",
+        "townhall:type": "city",
+        "website": "https://www.oslo.kommune.no/politikk-og-administrasjon/radhuset/",
+        "wheelchair": "yes",
+        "wikidata": "Q373850",
+        "wikimedia_commons": "Category:Oslo City Hall",
+        "wikipedia": "no:Oslo rådhus"
+      },
+      "crs": "EPSG:4326",
+      "position_method": "OSM Overpass object bounding-box centre; common method, not entrance survey",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "source": {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "oslo",
+        "role": "osm_civic",
+        "acquired_at_utc": "2026-10-13T01:04:41.778739+00:00",
+        "geographic_extent": "nwr[\"amenity\"=\"townhall\"](59.85,10.65,59.98,10.85);",
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": null,
+          "ETag": null,
+          "Content-Type": "application/json"
+        },
+        "sha256": "8ac014cedf762305aa50b03f02de164e96e09a40a2c10c3e059224bd991d739c",
+        "size_bytes": 1516,
+        "request_body_sha256": "7299799a51d67a55bdc25b46045c020ca77e50ce75427df3ca3acc08fb85fc79",
+        "path": "data/raw/osm_civic/oslo/20261013T010441778739Z/response.json",
+        "receipt_path": "data/raw/osm_civic/oslo/20261013T010441778739Z/receipt.json",
+        "receipt_sha256": "59c7cc24409206dc47350d63ee72146acb669c5da22ee827a6ac2a8a82303852"
+      }
+    },
+    "metric_crs": "EPSG:25833",
+    "density_assignment": "Explicit published native unit/name crosswalk to operational grouping; native matching denominator, not provider polygon denominator; polygon footprints differ as geography QA records",
+    "income_required": false,
+    "historical_density_reused": false,
+    "blockers": []
+  },
+  "stockholm": {
+    "city": "stockholm",
+    "status": "QUALIFIED_SOURCE_NATIVE_CONTEXT_WITH_RECORDED_LIMITS",
+    "eligible_context_missing_n": 0,
+    "density_units": [
+      {
+        "group": "Järva",
+        "native_id": "1",
+        "population": 96974,
+        "area_km2": 24.65,
+        "population_density": 3934.036511156187,
+        "log_population_density": 8.277421279830234,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Hässelby-Vällingby",
+        "native_id": "4",
+        "population": 76401,
+        "area_km2": 24.69,
+        "population_density": 3094.4106925880924,
+        "log_population_density": 8.037352760717098,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Bromma",
+        "native_id": "6",
+        "population": 82863,
+        "area_km2": 27.7,
+        "population_density": 2991.4440433213,
+        "log_population_density": 8.003511507430773,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Kungsholmen",
+        "native_id": "8",
+        "population": 71235,
+        "area_km2": 7.03,
+        "population_density": 10133.001422475107,
+        "log_population_density": 9.223552843828758,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Norra innerstaden",
+        "native_id": "9",
+        "population": 155616,
+        "area_km2": 30.06,
+        "population_density": 5176.84630738523,
+        "log_population_density": 8.551951328878683,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Södermalm",
+        "native_id": "12",
+        "population": 129966,
+        "area_km2": 10.67,
+        "population_density": 12180.506091846299,
+        "log_population_density": 9.40759209145537,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Enskede-Årsta-Vantör",
+        "native_id": "14",
+        "population": 105899,
+        "area_km2": 21.56,
+        "population_density": 4911.82745825603,
+        "log_population_density": 8.499401342633485,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Skarpnäck",
+        "native_id": "15",
+        "population": 46520,
+        "area_km2": 17.49,
+        "population_density": 2659.80560320183,
+        "log_population_density": 7.88600831760209,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Farsta",
+        "native_id": "18",
+        "population": 62335,
+        "area_km2": 17.29,
+        "population_density": 3605.263157894737,
+        "log_population_density": 8.190150045083877,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Hägersten-Älvsjö",
+        "native_id": "22",
+        "population": 129094,
+        "area_km2": 24.49,
+        "population_density": 5271.294405879951,
+        "log_population_density": 8.570031229190324,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      },
+      {
+        "group": "Skärholmen",
+        "native_id": "24",
+        "population": 38683,
+        "area_km2": 10.29,
+        "population_density": 3759.280855199223,
+        "log_population_density": 8.231982956175948,
+        "reference_period": "2025-12-31 population /2024-12-31 area table",
+        "area_definition": "Gross official borough land+water hectares /100; rounded published source areas, historical2003/1997 derivation; source-labelled11-unit correspondence, no exact provider/current boundary identity",
+        "sources": {
+          "population": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+              "ETag": "\"1dd3aadb3208d0c\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+            "size_bytes": 15628,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+            "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+          },
+          "area": {
+            "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+            "city": "stockholm",
+            "role": "population_direct",
+            "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+            "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "source_crs": "not_spatial",
+            "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+            "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+            "status": "transport_success_pending_validation",
+            "http_status": 200,
+            "failure": null,
+            "headers": {
+              "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+              "ETag": "\"1dc7036879ce6b5\"",
+              "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+            "size_bytes": 28597,
+            "request_body_sha256": null,
+            "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+            "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+            "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+          }
+        }
+      }
+    ],
+    "civic_anchor": {
+      "osm_type": "relation",
+      "osm_id": 29368,
+      "name": "Stockholms stadshus",
+      "coordinates": {
+        "lat": 59.3274933,
+        "lon": 18.0548845
+      },
+      "tags": {
+        "addr:city": "Stockholm",
+        "addr:country": "SE",
+        "addr:housenumber": "1",
+        "addr:postcode": "11152",
+        "addr:street": "Hantverkargatan",
+        "amenity": "townhall",
+        "architect": "Ragnar Östberg",
+        "architect:wikidata": "Q944344",
+        "building": "townhall",
+        "building:colour": "#B98674",
+        "building:levels": "5",
+        "building:material": "brick",
+        "description:en": "Built by 1911-1923. Architect Ragnar Östberg.",
+        "historic": "townhall",
+        "name": "Stockholms stadshus",
+        "name:be": "Стакгольмская ратуша",
+        "name:ca": "Ajuntament d'Estocolm",
+        "name:cs": "Stockholmská radnice",
+        "name:el": "Δημαρχείο της Στοκχόλμης",
+        "name:en": "Stockholm City Hall",
+        "name:es": "Ayuntamiento de Estocolmo",
+        "name:fa": "ساختمان شهرداری استکهلم",
+        "name:fi": "Tukholman kaupungintalo",
+        "name:fr": "Hôtel de ville de Stockholm",
+        "name:hr": "Gradska vijećnica u Stockholmu",
+        "name:hu": "Stockholmi városháza",
+        "name:it": "Municipio di Stoccolma",
+        "name:ja": "ストックホルム市庁舎",
+        "name:ko": "스톡홀름 시청사",
+        "name:lt": "Stokholmo rotušė",
+        "name:lv": "Stokholmas rātsnams",
+        "name:nl": "Stadhuis van Stockholm",
+        "name:pl": "Ratusz w Sztokholmie",
+        "name:ru": "Стокгольмская ратуша",
+        "name:sk": "Radnica v Štokholme",
+        "name:sl": "Stockholmska mestna hiša",
+        "name:sr": "Gradska vijećnica Stockholm",
+        "name:sv": "Stockholms stadshus",
+        "name:vi": "Tòa thị chính Stockholm",
+        "name:zh-Hans": "斯德哥尔摩市政厅",
+        "name:zh-Hant": "斯德哥爾摩市政廳",
+        "roof:material": "copper",
+        "start_date": "1923",
+        "townhall:type": "municipality",
+        "type": "multipolygon",
+        "website": "https://stadshuset.stockholm/",
+        "wheelchair": "yes",
+        "wikidata": "Q648483",
+        "wikipedia": "sv:Stockholms stadshus"
+      },
+      "crs": "EPSG:4326",
+      "position_method": "OSM Overpass object bounding-box centre; common method, not entrance survey",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "source": {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "stockholm",
+        "role": "osm_civic_identity",
+        "acquired_at_utc": "2026-10-13T01:12:14.720945+00:00",
+        "geographic_extent": "OSM relation29368 discovered as candidate; identity/tags/coordinates require primary OSM verification",
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": null,
+          "ETag": null,
+          "Content-Type": "application/json"
+        },
+        "sha256": "c490ad232ac8f93145de22cba2447e4573a592fdae2391ee3d67d6ca5304c0c1",
+        "size_bytes": 2366,
+        "request_body_sha256": "9c84ccb3c769aaebde772568b5daecc8401cd52ba2117ebe82b361df9937fd5b",
+        "path": "data/raw/osm_civic_identity/stockholm/20261013T011214720945Z/response.json",
+        "receipt_path": "data/raw/osm_civic_identity/stockholm/20261013T011214720945Z/receipt.json",
+        "receipt_sha256": "e3a65c41879fcefc70abe78de15b1c449b02b8739d84d3f0ec483446a9a96379"
+      }
+    },
+    "metric_crs": "EPSG:3006",
+    "density_assignment": "Explicit published native unit/name crosswalk to operational grouping; native matching denominator, not provider polygon denominator; polygon footprints differ as geography QA records",
+    "income_required": false,
+    "historical_density_reused": false,
+    "blockers": []
+  }
+}

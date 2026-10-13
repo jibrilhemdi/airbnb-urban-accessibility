@@ -9,9 +9,15 @@ from src.study.specification import load_design
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['status', 'design', 'setup', 'geography-freeze', 'geography-audit'])
+    parser.add_argument('command', choices=['status', 'design', 'setup', 'geography-freeze', 'geography-audit','context-freeze','context-audit'])
     args = parser.parse_args(argv)
     design, cities = load_design()
+    if args.command in {'context-freeze','context-audit'}:
+        from src.study.workflows import freeze_context,audit_context
+        result=freeze_context() if args.command=='context-freeze' else audit_context()
+        print(json.dumps({c:{'status':s['status'],'eligible_context_missing_n':s['eligible_context_missing_n'],
+                             'density_units':len(s['density_units']),'civic_osm_id':s['civic_anchor']['osm_id']} for c,s in result.items()},indent=2))
+        return 2 if any(s['blockers'] for s in result.values()) else 0
     if args.command == 'setup':
         from src.study.store import setup, get_engine
         engine = get_engine()

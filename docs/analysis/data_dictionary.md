@@ -18,8 +18,8 @@ All four models share the final common prediction rows. Context/accessibility qu
 | `amenity_free_parking` | Same definition | Same definition | Same definition | Prespecified exact source amenity indicator | 0/1 | missing JSON retained NULL | INHERITED_PARSER; CITY_SCHEMA_AUDIT_PENDING |
 | `amenity_private_balcony` | Same definition | Same definition | Same definition | Prespecified exact source amenity indicator | 0/1 | missing JSON retained NULL | INHERITED_PARSER; CITY_SCHEMA_AUDIT_PENDING |
 | `amenity_self_checkin` | Same definition | Same definition | Same definition | Prespecified exact source amenity indicator | 0/1 | missing JSON retained NULL | INHERITED_PARSER; CITY_SCHEMA_AUDIT_PENDING |
-| `log_population_density` | Same definition | Same definition | Same definition | Official population / compatible matching area | persons/km² | natural log | SOURCE_QUALIFICATION_PENDING |
-| `distance_centre_euclidean_km` | Same definition | Same definition | Same definition | Metric Euclidean distance to frozen OSM civic anchor | km | none | SOURCE_QUALIFICATION_PENDING |
+| `log_population_density` | Same definition | Same definition | Same definition | Official population / compatible matching area | persons/km² | natural log | QUALIFIED_SOURCE_NATIVE_WITH_RECORDED_LIMITS; see context_audit.json |
+| `distance_centre_euclidean_km` | Same definition | Same definition | Same definition | Metric Euclidean distance to frozen OSM civic anchor | km | none | QUALIFIED_SOURCE_NATIVE_WITH_RECORDED_LIMITS; see context_audit.json |
 | `property_type` | Same definition | Same definition | Same definition | One of six conventional dwelling types | category | source-only one-hot; unknown levels ignored | INHERITED_PARSER; CITY_SCHEMA_AUDIT_PENDING |
 | `nearest_station_euclidean_km` | Same definition | Same definition | Same definition | Nearest matched rail or bus destination | km | none | SOURCE_QUALIFICATION_PENDING |
 | `nearest_bus_euclidean_km` | Same definition | Same definition | Same definition | Nearest matched rail or bus destination | km | none | SOURCE_QUALIFICATION_PENDING |

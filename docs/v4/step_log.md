@@ -1235,3 +1235,9 @@ generated geography audit for fresh provider assignments11/17/11, immutable
 neutral SQL packages/reference benchmarks, actual unit/integration/spatial
 checks and preserved historical stores. This supersedes no dated evidence
 above; final sample/fold/model readiness remains unclaimed.
+
+Comprehensive context checkpoint: fresh source-native densities and same-date
+OSM civic anchors11/17/11 units qualify with explicit source/vintage/denominator
+limits. See neutral execution log/generated context audit. Earlier A04 income
+mode, official-geometry and NULL-anchor evidence above remains immutable
+history; no final fitting/transfer completion is claimed.

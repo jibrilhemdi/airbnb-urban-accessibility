@@ -1,0 +1,74 @@
+{
+  "catalogue": {
+    "source_url": "https://start.stockholm/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/statistisk-arsbok/",
+    "city": "stockholm",
+    "role": "population_catalogue",
+    "acquired_at_utc": "2026-10-13T01:13:01.275227+00:00",
+    "geographic_extent": "Stockholm official borough statistics catalogue",
+    "source_crs": "not_spatial",
+    "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+    "snapshot": "catalogue at acquisition",
+    "status": "transport_success_pending_validation",
+    "http_status": 200,
+    "failure": null,
+    "headers": {
+      "Last-Modified": null,
+      "ETag": null,
+      "Content-Type": "text/html; charset=utf-8"
+    },
+    "sha256": "69413a6e9e4f3c752e25e4cccd65210f574612f51c2c65316f0d512a26ea6f47",
+    "size_bytes": 163287,
+    "request_body_sha256": null,
+    "path": "data/raw/population_catalogue/stockholm/20261013T011301275227Z/response.json",
+    "receipt_path": "data/raw/population_catalogue/stockholm/20261013T011301275227Z/receipt.json",
+    "receipt_sha256": "b4cca97beb5c599e7e06e401acc828c59b72e1ad494db5fc97649b4eb81a8939"
+  },
+  "population": {
+    "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/1.4-folkmangd-efter-alder-2025-12-31.xlsx",
+    "city": "stockholm",
+    "role": "population_direct",
+    "acquired_at_utc": "2026-10-13T01:13:01.979057+00:00",
+    "geographic_extent": "Stockholm official borough statistics; 1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+    "source_crs": "not_spatial",
+    "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+    "snapshot": "1.4 Folkmängd efter ålder 2025-12-31 (xlsx)",
+    "status": "transport_success_pending_validation",
+    "http_status": 200,
+    "failure": null,
+    "headers": {
+      "Last-Modified": "Wed, 02 Sep 2026 07:36:00 GMT",
+      "ETag": "\"1dd3aadb3208d0c\"",
+      "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    "sha256": "ecca6423fb9c9826b3ca656c59c9569652342880004fa4d65559c805941c552b",
+    "size_bytes": 15628,
+    "request_body_sha256": null,
+    "path": "data/raw/population_direct/stockholm/20261013T011301979057Z/response.json",
+    "receipt_path": "data/raw/population_direct/stockholm/20261013T011301979057Z/receipt.json",
+    "receipt_sha256": "4b2dbdaa4a65ce5bac3692a8e07921e8eb36df4d58759f37b0d493963ee8c4a7"
+  },
+  "area": {
+    "source_url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/arsbok/stockholms-stadsdelsomrade/2026/2.4-areal-och-befolkningstathet-i-stadsdelsomraden-sdn-delar-och-stadsdelar-2024-12-31.xlsx",
+    "city": "stockholm",
+    "role": "population_direct",
+    "acquired_at_utc": "2026-10-13T01:13:02.114969+00:00",
+    "geographic_extent": "Stockholm official borough statistics; 2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+    "source_crs": "not_spatial",
+    "licence": "Official public aggregate statistics; explicit redistribution licence not stated",
+    "snapshot": "2.4 Areal och befolkningstäthet i stadsdelsområden, SDN-delar och stadsdelar 2024-12-31 (xlsx)",
+    "status": "transport_success_pending_validation",
+    "http_status": 200,
+    "failure": null,
+    "headers": {
+      "Last-Modified": "Thu, 18 Dec 2025 15:54:02 GMT",
+      "ETag": "\"1dc7036879ce6b5\"",
+      "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    "sha256": "88366c115c3897f340683f5bf950574b5bb1da6f8819283f21342a40a60dd647",
+    "size_bytes": 28597,
+    "request_body_sha256": null,
+    "path": "data/raw/population_direct/stockholm/20261013T011302114969Z/response.json",
+    "receipt_path": "data/raw/population_direct/stockholm/20261013T011302114969Z/receipt.json",
+    "receipt_sha256": "31d9ffc8788d3291acdcb521796970e2e3ed6296cbc0f5961160af857a901216"
+  }
+}

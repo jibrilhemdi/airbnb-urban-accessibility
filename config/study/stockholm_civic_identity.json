@@ -1,0 +1,24 @@
+{
+  "source_url": "https://overpass-api.de/api/interpreter",
+  "city": "stockholm",
+  "role": "osm_civic_identity",
+  "acquired_at_utc": "2026-10-13T01:12:14.720945+00:00",
+  "geographic_extent": "OSM relation29368 discovered as candidate; identity/tags/coordinates require primary OSM verification",
+  "source_crs": "EPSG:4326",
+  "licence": "ODbL; © OpenStreetMap contributors",
+  "snapshot": "2026-06-30T23:59:59Z",
+  "status": "transport_success_pending_validation",
+  "http_status": 200,
+  "failure": null,
+  "headers": {
+    "Last-Modified": null,
+    "ETag": null,
+    "Content-Type": "application/json"
+  },
+  "sha256": "c490ad232ac8f93145de22cba2447e4573a592fdae2391ee3d67d6ca5304c0c1",
+  "size_bytes": 2366,
+  "request_body_sha256": "9c84ccb3c769aaebde772568b5daecc8401cd52ba2117ebe82b361df9937fd5b",
+  "path": "data/raw/osm_civic_identity/stockholm/20261013T011214720945Z/response.json",
+  "receipt_path": "data/raw/osm_civic_identity/stockholm/20261013T011214720945Z/receipt.json",
+  "receipt_sha256": "e3a65c41879fcefc70abe78de15b1c449b02b8739d84d3f0ec483446a9a96379"
+}

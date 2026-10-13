@@ -1,0 +1,96 @@
+{
+  "copenhagen": [
+    {
+      "source_url": "https://overpass-api.de/api/interpreter",
+      "city": "copenhagen",
+      "role": "osm_civic",
+      "acquired_at_utc": "2026-10-13T01:04:20.924561+00:00",
+      "geographic_extent": "nwr[\"amenity\"=\"townhall\"](55.60,12.45,55.75,12.65);",
+      "source_crs": "EPSG:4326",
+      "licence": "ODbL; © OpenStreetMap contributors",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "status": "transport_success_pending_validation",
+      "http_status": 200,
+      "failure": null,
+      "headers": {
+        "Last-Modified": null,
+        "ETag": null,
+        "Content-Type": "application/json"
+      },
+      "sha256": "b8eae86542c1ef79c8f4bc6da9b475f8945fcca9856b089eb38c58d3556f57a0",
+      "size_bytes": 3894,
+      "request_body_sha256": "51ba272970c539bdbb0aba6506985474ecb08e26d9abf7da739697fbfcf60fcd",
+      "path": "data/raw/osm_civic/copenhagen/20261013T010420924561Z/response.json",
+      "receipt_path": "data/raw/osm_civic/copenhagen/20261013T010420924561Z/receipt.json",
+      "receipt_sha256": "c597437b60902cf3a19cf560c934875a7240a5466afd429bdd6267c27518d119"
+    }
+  ],
+  "oslo": [
+    {
+      "source_url": "https://overpass-api.de/api/interpreter",
+      "city": "oslo",
+      "role": "osm_civic",
+      "acquired_at_utc": "2026-10-13T01:04:41.778739+00:00",
+      "geographic_extent": "nwr[\"amenity\"=\"townhall\"](59.85,10.65,59.98,10.85);",
+      "source_crs": "EPSG:4326",
+      "licence": "ODbL; © OpenStreetMap contributors",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "status": "transport_success_pending_validation",
+      "http_status": 200,
+      "failure": null,
+      "headers": {
+        "Last-Modified": null,
+        "ETag": null,
+        "Content-Type": "application/json"
+      },
+      "sha256": "8ac014cedf762305aa50b03f02de164e96e09a40a2c10c3e059224bd991d739c",
+      "size_bytes": 1516,
+      "request_body_sha256": "7299799a51d67a55bdc25b46045c020ca77e50ce75427df3ca3acc08fb85fc79",
+      "path": "data/raw/osm_civic/oslo/20261013T010441778739Z/response.json",
+      "receipt_path": "data/raw/osm_civic/oslo/20261013T010441778739Z/receipt.json",
+      "receipt_sha256": "59c7cc24409206dc47350d63ee72146acb669c5da22ee827a6ac2a8a82303852"
+    }
+  ],
+  "stockholm": [
+    {
+      "source_url": "https://overpass-api.de/api/interpreter",
+      "city": "stockholm",
+      "role": "osm_civic",
+      "acquired_at_utc": "2026-10-13T01:04:51.318000+00:00",
+      "geographic_extent": "nwr[\"amenity\"=\"townhall\"](59.28,17.95,59.38,18.15);",
+      "source_crs": "EPSG:4326",
+      "licence": "ODbL; © OpenStreetMap contributors",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "status": "failed",
+      "http_status": 504,
+      "failure": "HTTP Error 504: Gateway Timeout",
+      "headers": {},
+      "sha256": "9e8d149c02b9ab7719f9e6cfdf696730c39abead6f27e39eb13793b7d2adbb82",
+      "size_bytes": 695,
+      "request_body_sha256": "4db6eb573391364066381be4d0d186a612a781a3d7236bd5cb6c77822531c145",
+      "path": "data/raw/osm_civic/stockholm/20261013T010451318000Z/response.json",
+      "receipt_path": "data/raw/osm_civic/stockholm/20261013T010451318000Z/receipt.json",
+      "receipt_sha256": "e0a4c7faa0fcae2dbb7566ad49397e4290c3bb22865ec63d763674779e7664f6"
+    },
+    {
+      "source_url": "https://overpass.kumi.systems/api/interpreter",
+      "city": "stockholm",
+      "role": "osm_civic",
+      "acquired_at_utc": "2026-10-13T01:04:59.529889+00:00",
+      "geographic_extent": "nwr[\"amenity\"=\"townhall\"](59.28,17.95,59.38,18.15);",
+      "source_crs": "EPSG:4326",
+      "licence": "ODbL; © OpenStreetMap contributors",
+      "snapshot": "2026-06-30T23:59:59Z",
+      "status": "failed",
+      "http_status": null,
+      "failure": "The read operation timed out",
+      "headers": {},
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "request_body_sha256": "4db6eb573391364066381be4d0d186a612a781a3d7236bd5cb6c77822531c145",
+      "path": "data/raw/osm_civic/stockholm/20261013T010459529889Z/response.json",
+      "receipt_path": "data/raw/osm_civic/stockholm/20261013T010459529889Z/receipt.json",
+      "receipt_sha256": "d596395a31ada87bcdf57c20a157689ff72637f5b7ae8cea8bfe2346366b7bd3"
+    }
+  ]
+}

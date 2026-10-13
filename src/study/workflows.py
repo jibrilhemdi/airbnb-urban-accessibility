@@ -13,6 +13,7 @@ from src.study.store import commit_package, dependencies, read_package, setup
 
 GEOGRAPHY_SELECTION = PROJECT_ROOT/'config/study/geography_selection.json'
 REFERENCE_SELECTION = PROJECT_ROOT/'config/study/reference_selection.json'
+CONTEXT_SELECTION = PROJECT_ROOT/'config/study/context_selection.json'
 
 
 def freeze_geography():
@@ -86,4 +87,49 @@ def audit_geography(export=False):
         engine.dispose()
     if export:
         write_once(PROJECT_ROOT/'docs/analysis/geography_audit.json',(json.dumps(result,indent=2,ensure_ascii=False)+'\n').encode())
+    return result
+
+
+def freeze_context():
+    from src.study.context import build_context
+    if CONTEXT_SELECTION.exists():raise ValueError('Context selection already frozen; audit rather than overwrite')
+    audit_geography()
+    sources=json.loads((PROJECT_ROOT/'config/study/neighbourhood_sources.json').read_text())
+    engine=get_engine();selected={}
+    try:
+        for city in CITIES:
+            with engine.begin() as conn:
+                rows,mask,listing=historical_inputs(conn,city)
+                _,assignments,_,_=prepare(rows,mask,city,sources[city])
+                summary,context=build_context(conn,city,rows,assignments,mask)
+                identity=commit_package(conn,city=city,family='context',summary=summary,records={'context':context},
+                                        deps=dependencies({'listing_source':listing,'geography':json.loads(GEOGRAPHY_SELECTION.read_text())[city],
+                                                           'source_native_density':summary['density_units'],'civic_anchor':summary['civic_anchor']}))
+                selected[city]={'run_id':identity,'summary_sha256':canonical_hash(summary)}
+            print(city,summary['status'],summary['eligible_context_missing_n'],flush=True)
+        write_once(CONTEXT_SELECTION,(json.dumps(selected,indent=2)+'\n').encode())
+    finally:engine.dispose()
+    return audit_context(export=True)
+
+
+def audit_context(export=False):
+    from src.study.context import build_context
+    sources=json.loads((PROJECT_ROOT/'config/study/neighbourhood_sources.json').read_text())
+    selected=json.loads(CONTEXT_SELECTION.read_text());engine=get_engine();result={}
+    try:
+        with engine.connect() as conn:
+            conn.exec_driver_sql('SET TRANSACTION READ ONLY')
+            for city in CITIES:
+                rows,mask,_=historical_inputs(conn,city)
+                _,assignments,_,_=prepare(rows,mask,city,sources[city])
+                summary,records=build_context(conn,city,rows,assignments,mask)
+                prior,_=read_package(conn,selected[city]['run_id'],city,'context')
+                stored=conn.execute(text("SELECT record FROM study.records WHERE run_id=:run AND city=:city "
+                                         "AND family='context' AND artifact='context' ORDER BY record_key::integer"),
+                                    {'run':selected[city]['run_id'],'city':city}).scalars().all()
+                if summary!=prior or canonical_hash(summary)!=selected[city]['summary_sha256'] or records!=stored:
+                    raise ValueError('Context source/private-child roundtrip differs: '+city)
+                result[city]=summary
+    finally:engine.dispose()
+    if export:write_once(PROJECT_ROOT/'docs/analysis/context_audit.json',(json.dumps(result,indent=2,ensure_ascii=False)+'\n').encode())
     return result

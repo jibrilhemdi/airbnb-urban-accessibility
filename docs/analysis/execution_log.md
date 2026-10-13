@@ -79,3 +79,54 @@ PASS for all three cities. Independent PostGIS recomputation checks all
 23144/13391/4806 audit rows, zero group-hit or mask mismatches. All1696
 protected files/263 non-entry tracked files and20 historical SQL table hashes
 PASS. Compilation/whitespace PASS. No synthetic result is research evidence.
+
+## Source-native density and common civic anchors — 13 October 2026
+
+Geography checkpointa8bffb6de2e7f3a0d457ab2a36ac78e9956c169f pushed only
+to recorded origin refs/heads/v4; remote equality verified.
+
+Recomputed density using official population divided by its matching native
+gross area, then explicit native-unit/name crosswalks to operational groups.
+Provider polygons define folds; they are not substituted as official population
+denominators. Copenhagen reuses exact KKBEF1/FOLK1A source counts and native
+official source geometry; Oslo independently decodes all106 age cells within
+each BEF001 native unit30101–30117 and uses matching native gross polygons.
+City totals/unlocated residents are never allocated to groups.
+
+Stockholm source discovery found direct official eleven-unit spreadsheets,
+linked from the actual city yearbook catalogue:1.4 population2025-12-31 and
+2.4 gross land+water area2024-12-31. Exact native NYKO2 codes/names and unit
+conversions are checked; population age sums and land+water totals validated.
+Thus no127-RegSO split/area-weighting or invented official polygon is used.
+Stockholm area values are rounded published hectares, with the source's
+historical2003/1997 derivation; population/area periods differ. Older PDF
+yearbook discovery evidence remains separately preserved and does not replace
+the selected spreadsheets. Exact provider/current official boundary identity
+is not claimed. Explicit city-service/Stockholm redistribution licences are
+not stated; public aggregate numerical statistics are used as context with
+source attribution, while raw sources/geometries remain private. No source
+prohibition was found or licence acceptance/authentication bypass performed.
+
+Frozen OSM civic elements use common object-centre representation in EPSG:4326
+from the same2026-06-30T23:59:59Z snapshot: Copenhagen relation52142, Oslo
+way24900009, Stockholm relation29368. Tags/name/ID/point/raw hashes/retrieval
+dates are stored. Stockholm broad-query504/timeouts remain failures; direct
+element query verifies the candidate against primary OSM data. No remembered
+coordinate, old tourism/SSR point or artwork marker is used. Distances are
+recomputed in EPSG:25832/25833/3006; all anchors lie within accepted masks.
+
+All three context packages source/native/private-child roundtrips PASS,
+eligible-positive context missingness0, units11/17/11. Context is qualified
+with recorded source/area/vintage/footprint limitations, not exact boundary
+certification. Neither income nor housing source content is read/required.
+Stored native densities and listing-level distance/density assignments are
+fresh immutable analytical records, not reused historical features.
+
+Checks:24 active tests discovered,20 PASS,4 opt-in DB skipped (includes
+new density aggregation/units/years/native-total refusal, spatial topology,
+14/15/500 support and target-price/category isolation fixtures). Separate
+persistent context audit and20 historical-table hashes PASS;1696 protected
+files/263 non-entry tracked bytes unchanged. Compilation/whitespace PASS.
+`requirements-study.txt` pins the already installed openpyxl3.1.5 needed for
+reproducible spreadsheet decoding, preserving original requirements bytes.
+No final samples/folds/model fitting or transferred prediction is claimed.
