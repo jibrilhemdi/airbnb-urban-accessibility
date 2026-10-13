@@ -3,7 +3,7 @@
 Adopted 13 October 2026 after historical analyses and geographic-support
 inspection, before any final-design fitting. This is an explicit researcher
 amendment, not retrospective preregistration. The exact request and previous
-instructions are preserved in `history/`.
+instructions are preserved in `archive/`.
 
 Study three separate cities using verified June 2026 detailed listings. Retain
 Entire home/apt and exactly Entire rental unit, Entire condo, Entire home,

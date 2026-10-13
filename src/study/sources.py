@@ -13,11 +13,11 @@ from sqlalchemy import text
 
 from src.ingestion.common import PROJECT_ROOT, USER_AGENT, sha256_file
 from src.pipeline.protocol import canonical_hash
-from src.v4.identity import Scope
-from src.v4.listings import audit_listings
-from src.v4.persistence import get_engine
-from src.v4.source_reuse import reuse_listing_source
-from src.v4.specification import DEFINITION_VERSION
+from src.provenance.identity import Scope
+from src.provenance.listings import audit_listings
+from src.provenance.persistence import get_engine
+from src.provenance.source_reuse import reuse_listing_source
+from src.provenance.specification import DEFINITION_VERSION
 from src.study.specification import load_design, neutral_token
 
 
@@ -113,7 +113,7 @@ def acquire_neighbourhoods():
     output = {}
     for city, config in cities.items():
         if city == 'stockholm':
-            prior = json.loads((PROJECT_ROOT / 'docs/v4/rinkeby_polygon_check_20261012.json').read_text())
+            prior = json.loads((PROJECT_ROOT / 'archive/previous_analysis/docs/rinkeby_polygon_check_20261012.json').read_text())
             src = prior['sources']['airbnb']
             receipt = prior['airbnb_receipt_record']
             record = {'path': src['path'], 'sha256': src['sha256'],

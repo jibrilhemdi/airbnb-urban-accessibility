@@ -14,8 +14,8 @@ from sqlalchemy import text
 from src.ingestion.common import PROJECT_ROOT,sha256_file
 from src.ingestion.download_copenhagen_statbank import decode_csv
 from src.pipeline.protocol import canonical_hash
-from src.v4.context import jsonstat_cells
-from src.v4.geography import oslo_areas
+from src.provenance.context import jsonstat_cells
+from src.provenance.geography import oslo_areas
 from src.study.geography import metric_transform
 from src.study.sources import verify_source
 from src.study.specification import load_design
@@ -42,7 +42,7 @@ def density_record(group,native_id,population,area,period,area_definition,source
 
 
 def copenhagen_density(conn,config):
-    policy=json.loads((PROJECT_ROOT/'config/v4/geography_A03_20261011.json').read_text())['cities']['copenhagen_frederiksberg']
+    policy=json.loads((PROJECT_ROOT/'archive/previous_analysis/config/geography_A03_20261011.json').read_text())['cities']['copenhagen_frederiksberg']
     pin=policy['districts'];document=json.loads(verify_source(pin).read_text())
     population_path=PROJECT_ROOT/'data/raw/copenhagen_statbank/2026-09-29/tables/KKBEF1.csv'
     if sha256_file(population_path)!='953f29d57f9d62fecc747a68830f97cc6acb54ff8e364c0b180c48503bb26009':
@@ -77,7 +77,7 @@ def copenhagen_density(conn,config):
 
 
 def oslo_density(config):
-    context=json.loads((PROJECT_ROOT/'config/v4/context_A04_20261011.json').read_text())['cities']['oslo']
+    context=json.loads((PROJECT_ROOT/'archive/previous_analysis/config/context_A04_20261011.json').read_text())['cities']['oslo']
     entries={s['record']['source_id']:s for s in context['sources']}
     data=entries['a04_20261011_population_data'];schema=entries['a04_20261011_population_schema']
     for entry in (data,schema):
@@ -92,7 +92,7 @@ def oslo_density(config):
         if c['unit']!='Antall personer':raise ValueError('Wrong population units')
         values[c['keys']['bosted']].append(c['value'])
     if len(values)!=19 or any(len(v)!=106 or None in v for v in values.values()):raise ValueError('Incomplete native age/population support')
-    geography=json.loads((PROJECT_ROOT/'config/v4/geography_A03_20261011.json').read_text())['cities']['oslo']
+    geography=json.loads((PROJECT_ROOT/'archive/previous_analysis/config/geography_A03_20261011.json').read_text())['cities']['oslo']
     areas=oslo_areas(json.loads(verify_source(geography['boroughs']).read_text()),geography['native_codes'])
     project=metric_transform(config['metric_crs']);result=[]
     for a in areas:

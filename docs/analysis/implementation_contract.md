@@ -1,6 +1,6 @@
 # Comprehensive research implementation contract
 
-Adopted 13 October 2026 from the exact [researcher request](../../history/research_request/request.txt).
+Adopted 13 October 2026 from the exact [researcher request](../../archive/research_request/request.txt).
 Copenhagen refers to the combined Copenhagen–Frederiksberg study area.
 The existing branch `v4` is the only active version marker. This request
 authorizes the complete workflow and explicitly resolves the earlier income,
@@ -64,3 +64,9 @@ remain. Rerun all three association stages and their dependencies; preserve
 completed predictive/transfer artifacts after dependency verification.
 The same request authorizes consolidation into one requirements file and one
 archive, with neutral active paths and exact historical bytes retained.
+
+Current execution is certified by the generated release/publication audits:
+three predictive cities, three freshly rerun association cities, six preserved
+transfers and all required robustness checks completed. The discarded historical
+ZIP is explicitly excluded at the researcher's request; this exclusion is logged
+without deleting or rewriting its original manifest evidence.

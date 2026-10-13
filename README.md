@@ -1,42 +1,46 @@
 # Three-city urban accessibility research
 
-The active study compares accessibility measurement, within-city price prediction,
-geographic generalization and directional relative-price transfer across Copenhagen,
-Oslo and Stockholm. [Scientific proposal](docs/scientific_proposal.md),
-[specification](docs/analysis/preanalysis_specification.md),
-[research plan](docs/analysis/research_plan.md) and
-[execution log](docs/analysis/execution_log.md) define the actual design and status.
+The study compares accessibility measurement, within-city nightly asking-price
+prediction, geographic generalization and directional relative-price transfer
+across Copenhagen–Frederiksberg, Oslo and Stockholm.
 
-[Publication research handover](docs/analysis/research_report_publication.md),
-[generated findings](docs/analysis/findings.md) and
-[release audit](docs/analysis/release_audit.json) report the completed work.
-All three predictive city ladders, all six relative-price transfers and registered
-independent robustness checks completed. The full study is **PARTIAL / BLOCKED**:
-Stockholm association inference and its dependent checks exceed the frozen
-predictor-missingness guard. No inferential-imputation substitute was used.
+All three predictive ladders, three complete-case association ladders, six
+transfer directions and required robustness checks are complete. The researcher
+raised the uniform association missingness eligibility limit from 5% to 10%
+after observing Stockholm's 5.89% missingness. This
+[post-observation amendment](docs/analysis/association_missingness_amendment_20261013.md)
+is disclosed; the 147 bedroom blanks remain unfilled. Predictive models and
+transfers were preserved after dependency verification.
 
-Active configuration is in `config/study/`; the single active entry point is
-`src/study/cli.py`. Use functional private run/output paths. PostgreSQL/PostGIS
-is authoritative; raw source data and completed historical objects are immutable.
-The existing `v4` branch is the only active version identifier.
+Read the [publication report](docs/analysis/research_report_publication.md),
+[generated findings](docs/analysis/findings.md),
+[release audit](docs/analysis/release_audit.json),
+[specification](docs/analysis/preanalysis_specification.md) and
+[execution log](docs/analysis/execution_log.md).
+
+Use one pinned dependency file and the audited Python environment:
 
 ```sh
-make study-design
+python -m pip install -r requirements.txt
 make study-status
 make study-test
+make integration-test
 make compile
 ```
 
-Status returns a nonzero exit when the empirical workflow is incomplete. A design
-freeze or passing synthetic test is not an empirical result. Listing-level data,
-credentials, coordinates, folds and predictions are private and ignored.
-Completed fit selectors refuse refitting at the CLI; use audits or provision
-explicit new identities for a separate rerun. Public aggregate artifact hashes
-are recorded in the publication inventory; initial completed artifacts are retained.
+Active configuration is in `config/study/`, analysis code in `src/study/`,
+source-provenance adapters in `src/provenance/` and reports in `docs/analysis/`.
+PostgreSQL/PostGIS is authoritative; `.env.study.example` describes the dedicated
+connection. Credentials, raw sources, private memberships, models and row-level
+predictions stay ignored. Public figures use aggregate cells with n≥5.
 
-The [path inventory](docs/analysis/path_inventory.json) records pre-change hashes
-and compatibility decisions. Previous project instructions and entry documentation
-remain unchanged in [history](history/previous_scope/README.md). Existing source,
-pipeline and migration paths provide historical reproduction and audited reusable
-helpers; their frozen configurations/results do not govern or certify the final
-rerun. No old derived numerical result is accepted as a final-design result.
+Previous instructions, code, configurations, audits and results are consolidated
+in [archive/](docs/analysis/archive_manifest.json), with original bytes resolved
+by checksums. Applied migration filenames and persisted source/database identities
+remain unchanged. The discarded historical ZIP is explicitly excluded at the
+researcher's request. Historical workflows can be reproduced from their recorded
+Git checkpoints; they do not govern the active scientific design.
+
+Work continues on the required existing `v4` branch; `main` and `v3` stay unchanged.
+Completed fit selectors refuse accidental refitting. Reproduction commands and
+verification evidence are in [reproducibility](docs/analysis/reproducibility.md).

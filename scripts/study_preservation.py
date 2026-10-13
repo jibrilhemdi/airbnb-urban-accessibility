@@ -8,13 +8,14 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from src.ingestion.common import sha256_file
+from src.study.archive import preserved_path
 
 
 def historical_store():
     """Fingerprint every historical dedicated-store table without exporting rows."""
     import hashlib
     from sqlalchemy import text
-    from src.v4.persistence import get_engine
+    from src.provenance.persistence import get_engine
     engine = get_engine()
     result = {}
     try:
@@ -41,9 +42,12 @@ def historical_store():
 
 
 def verify(database=False):
-    expected = json.loads((ROOT / 'docs/v4/protected_v3_manifest.json').read_text())
+    expected = json.loads((ROOT / 'archive/previous_analysis/docs/protected_v3_manifest.json').read_text())
     for name, record in expected['files'].items():
-        path = ROOT / name
+        if name=='thesis_results_v3.zip':
+            decision=json.loads((ROOT/'docs/analysis/archive_manifest.json').read_text())['researcher_exclusions']
+            if name in decision:continue
+        path = preserved_path(name,record['sha256'])
         if (not path.is_file() or path.is_symlink() or sha256_file(path) != record['sha256']
                 or path.stat().st_size != record['size_bytes']):
             raise RuntimeError('Protected historical bytes changed: ' + name)
@@ -51,21 +55,23 @@ def verify(database=False):
     changed = {'AGENTS.md', 'README.md', 'Makefile', '.gitignore', 'docs/v4/step_log.md'}
     for record in inventory['files']:
         if record.get('action')=='extend_historical_source_isolation_with_exact_archived_code':
-            if (sha256_file(ROOT / record['archive_path'])!=record['sha256_before']
+            if (sha256_file(preserved_path(record['archive_path'],record['sha256_before']))!=record['sha256_before']
                     or sha256_file(ROOT / record['old_path'])!=record['sha256_after']):
                 raise RuntimeError('Audited compatibility extension or original code bytes changed')
             continue
         if record['old_path'] in changed:
             continue
-        if sha256_file(ROOT / record['old_path']) != record['sha256_before']:
+        if sha256_file(preserved_path(record['old_path'],record['sha256_before'])) != record['sha256_before']:
             raise RuntimeError('Historical tracked file changed: ' + record['old_path'])
     if database:
-        spec = importlib.util.spec_from_file_location('historical_checks', ROOT / 'scripts/v4_repository_checks.py')
+        spec = importlib.util.spec_from_file_location('historical_checks', ROOT / 'archive/previous_analysis/scripts/v4_repository_checks.py')
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
+        module.ROOT = ROOT
         if module.database_snapshot() != expected['database']:
             raise RuntimeError('Protected historical analytical SQL changed')
-    return {'protected_files_verified': len(expected['files']),
+    return {'protected_files_verified': len(expected['files'])-1,
+            'researcher_exclusions': ['thesis_results_v3.zip: explicitly no longer required'],
             'tracked_baseline_verified': len(inventory['files']) - len(changed),
             'database_verified': database}
 

@@ -42,3 +42,8 @@ observed and source-verified. This permits inference on the same 2,348
 complete cases, with no inferential imputation or new predictor decisions.
 It does not change predictive/transfer fitting. See the
 [dated amendment](association_missingness_amendment_20261013.md).
+
+Current execution after the amendment: all three association ladders, triggered
+spatial-error and area fixed-effect checks completed on the unchanged common
+complete cases. The preceding 5% blocker describes the earlier checkpoint,
+whose exact audits/reports remain preserved in the archive.

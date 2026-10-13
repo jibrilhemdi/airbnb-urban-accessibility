@@ -199,3 +199,103 @@ oslo,1.0368670469821222,property_type_Entire loft,MEW
 oslo,1.4609659865646145,property_type_Entire rental unit,MEW
 oslo,1.0958074775723903,property_type_Entire townhouse,MEW
 oslo,1.1163145698492727,property_type_Entire villa,MEW
+stockholm,3.321881778014024,accommodates,M0
+stockholm,4.765120389616333,bedrooms,M0
+stockholm,2.2115502799200346,bathrooms_effective,M0
+stockholm,1.0865992702450256,log1p_minimum_nights,M0
+stockholm,1.1969493248335046,superhost,M0
+stockholm,1.3846240375849397,log1p_host_listings_count,M0
+stockholm,1.0601318540345364,amenity_wifi,M0
+stockholm,1.3213468701805295,amenity_dishwasher,M0
+stockholm,1.3082448716851705,amenity_washer,M0
+stockholm,1.2203995189029782,amenity_dryer,M0
+stockholm,1.1468696460169525,amenity_workspace,M0
+stockholm,2.1864358974541402,amenity_free_parking,M0
+stockholm,1.3540071351160992,amenity_private_balcony,M0
+stockholm,1.2561658410405143,amenity_self_checkin,M0
+stockholm,2.1366591398840544,log_population_density,M0
+stockholm,2.5768024570394923,distance_centre_euclidean_km,M0
+stockholm,4.686813369087975,property_type_Entire home,M0
+stockholm,1.1455559940782,property_type_Entire loft,M0
+stockholm,3.6426885096264177,property_type_Entire rental unit,M0
+stockholm,1.4598483484962383,property_type_Entire townhouse,M0
+stockholm,2.0963623770121416,property_type_Entire villa,M0
+stockholm,3.337901307959547,accommodates,ME
+stockholm,4.771070770789742,bedrooms,ME
+stockholm,2.223590535887353,bathrooms_effective,ME
+stockholm,1.089014048501289,log1p_minimum_nights,ME
+stockholm,1.2137856858547815,superhost,ME
+stockholm,1.399666611418687,log1p_host_listings_count,ME
+stockholm,1.0645587112566213,amenity_wifi,ME
+stockholm,1.3278555095098419,amenity_dishwasher,ME
+stockholm,1.3166179156304016,amenity_washer,ME
+stockholm,1.2226223537366414,amenity_dryer,ME
+stockholm,1.1489543102081605,amenity_workspace,ME
+stockholm,2.2950552010089575,amenity_free_parking,ME
+stockholm,1.3705154010232992,amenity_private_balcony,ME
+stockholm,1.2611869431708842,amenity_self_checkin,ME
+stockholm,2.3889031696340397,log_population_density,ME
+stockholm,4.287518163648273,distance_centre_euclidean_km,ME
+stockholm,1.7299057911800697,nearest_station_euclidean_km,ME
+stockholm,1.2128268611296167,nearest_bus_euclidean_km,ME
+stockholm,7.518172897328833,log1p_food_e,ME
+stockholm,4.909342454622992,log1p_culture_e,ME
+stockholm,4.8048685140714165,property_type_Entire home,ME
+stockholm,1.1469338752617086,property_type_Entire loft,ME
+stockholm,3.652347701894827,property_type_Entire rental unit,ME
+stockholm,1.4621613364564536,property_type_Entire townhouse,ME
+stockholm,2.145602063514181,property_type_Entire villa,ME
+stockholm,3.34220975437678,accommodates,MW
+stockholm,4.769007812659148,bedrooms,MW
+stockholm,2.2276603565790887,bathrooms_effective,MW
+stockholm,1.088995373460001,log1p_minimum_nights,MW
+stockholm,1.21320241701323,superhost,MW
+stockholm,1.407396277201163,log1p_host_listings_count,MW
+stockholm,1.0622408399077778,amenity_wifi,MW
+stockholm,1.3247277474859145,amenity_dishwasher,MW
+stockholm,1.313565776730629,amenity_washer,MW
+stockholm,1.2233865293590824,amenity_dryer,MW
+stockholm,1.1517440802247634,amenity_workspace,MW
+stockholm,2.3036103240433086,amenity_free_parking,MW
+stockholm,1.3722029608506598,amenity_private_balcony,MW
+stockholm,1.2623381882206544,amenity_self_checkin,MW
+stockholm,2.3633199273535417,log_population_density,MW
+stockholm,4.4540819757185215,distance_centre_euclidean_km,MW
+stockholm,1.8652618148818414,nearest_station_walking_minutes,MW
+stockholm,1.233117636349836,nearest_bus_walking_minutes,MW
+stockholm,7.599145175654701,log1p_food_w,MW
+stockholm,3.853642210527564,log1p_culture_w,MW
+stockholm,4.819104737813202,property_type_Entire home,MW
+stockholm,1.1466924297477863,property_type_Entire loft,MW
+stockholm,3.6486198461078985,property_type_Entire rental unit,MW
+stockholm,1.4653208529296278,property_type_Entire townhouse,MW
+stockholm,2.1492185166091256,property_type_Entire villa,MW
+stockholm,3.349261346180103,accommodates,MEW
+stockholm,4.772389512562024,bedrooms,MEW
+stockholm,2.229306356529785,bathrooms_effective,MEW
+stockholm,1.091716998778966,log1p_minimum_nights,MEW
+stockholm,1.2165235970637749,superhost,MEW
+stockholm,1.411619371227211,log1p_host_listings_count,MEW
+stockholm,1.0669955981886494,amenity_wifi,MEW
+stockholm,1.330416704862648,amenity_dishwasher,MEW
+stockholm,1.3180502642054917,amenity_washer,MEW
+stockholm,1.2238135052208627,amenity_dryer,MEW
+stockholm,1.1527518277799158,amenity_workspace,MEW
+stockholm,2.3154451109027363,amenity_free_parking,MEW
+stockholm,1.3751176164791885,amenity_private_balcony,MEW
+stockholm,1.264977182281107,amenity_self_checkin,MEW
+stockholm,2.4072501193376836,log_population_density,MEW
+stockholm,4.680108284551367,distance_centre_euclidean_km,MEW
+stockholm,6.0490330081643835,nearest_station_euclidean_km,MEW
+stockholm,5.6674988188496584,nearest_bus_euclidean_km,MEW
+stockholm,20.889933445980105,log1p_food_e,MEW
+stockholm,15.231034204911909,log1p_culture_e,MEW
+stockholm,6.7772745990322765,nearest_station_walking_minutes,MEW
+stockholm,5.875130124543828,nearest_bus_walking_minutes,MEW
+stockholm,22.215061063250637,log1p_food_w,MEW
+stockholm,11.426603107250033,log1p_culture_w,MEW
+stockholm,4.834701450997726,property_type_Entire home,MEW
+stockholm,1.1522766465463914,property_type_Entire loft,MEW
+stockholm,3.6605484940893906,property_type_Entire rental unit,MEW
+stockholm,1.4670189488250827,property_type_Entire townhouse,MEW
+stockholm,2.1640404809831026,property_type_Entire villa,MEW

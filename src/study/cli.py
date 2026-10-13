@@ -18,6 +18,7 @@ def completion_status(root=PROJECT_ROOT):
             'final_samples_frozen':audit['primary_prediction_cities_complete']==3,
             'models_fitted':audit['primary_prediction_cities_complete']>0,
             'completed_transfer_directions':6 if audit['six_transfer_directions_complete'] else None,
+            'association_cities_complete':audit.get('association_cities_complete',0),
             'full_rerun_complete':audit['full_rerun_complete'],'blocker':audit.get('blocker'),
             'release_audit':'docs/analysis/release_audit.json'}
 

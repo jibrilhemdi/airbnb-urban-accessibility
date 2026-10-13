@@ -1,0 +1,4 @@
+city,spatial_error_status,fixed_effect_status,metric_crs,absorbed_predictor,trigger
+copenhagen,COMPLETE,COMPLETE,EPSG:25832,log_population_density,OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation
+oslo,COMPLETE,COMPLETE,EPSG:25833,log_population_density,OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation
+stockholm,COMPLETE,COMPLETE,EPSG:3006,log_population_density,OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation

@@ -5,7 +5,7 @@ import pandas as pd
 from src.ingestion.common import PROJECT_ROOT,sha256_file
 from src.study.sources import get_engine,write_once
 from src.study.specification import CITIES,MODELS
-from src.reporting.study_report import selected,markdown
+from src.reporting.study_report import selected,markdown,preserve_or_write
 
 
 def run():
@@ -14,6 +14,7 @@ def run():
         with engine.connect() as conn:
             conn.exec_driver_sql('SET TRANSACTION READ ONLY')
             primary=selected(conn,'results_neighbourhood');transfer=selected(conn,'results_transfer');measure=selected(conn,'interpretation_selection')
+            association=selected(conn,'association_selection')
             schemes=['random']+[f'blocks_{size}m_origin_{origin}' for size in [1000,1500,2000] for origin in ['0_0','0p5_0p5']]
             alternatives={scheme:selected(conn,'results_'+scheme) for scheme in schemes}
         measurements=[];local=[];geographic=[];direction=[]
@@ -62,11 +63,13 @@ def run():
                 rows=[r for r in direction if r['estimator']==estimator and r['model']==model]
                 output.append(f"{estimator} {model} lowers relative-price RMSE versus M0 in {sum(r['delta_rmse']<0 for r in rows)} of {len(rows)} directions. This count summarizes heterogeneous patterns and is not an independent-direction significance test.")
         output+=['## Inferential limitation',
-                 'Copenhagen and Oslo association coefficients and registered dependent checks are complete. Stockholm exceeds the frozen 5% union predictor-missingness guard, so its association and dependent inference remain blocked. Predictive median/indicator preprocessing was training-only and was not substituted for inferential imputation. All outcomes remain observed original asking prices. The full study is partial despite complete independent predictive and transfer work.']
+                 'Fresh complete-case association coefficients and registered spatial-error/area fixed-effect checks completed in all three cities. The researcher raised the uniform eligibility limit from 5% to 10% after observing Stockholm’s missingness; this is a disclosed post-observation amendment, not preregistration or a universal standard. Stockholm uses the same 2,348 genuinely complete cases; no inferential imputation was used. Predictions and all six transfers were preserved after dependency checks. All outcomes remain original observed asking prices.']
+        output+=['## Complete-case association execution',markdown([{'city':city,**{k:association[city][k] for k in ['status','prediction_n','association_n','missing_fraction','association_missing_limit']}} for city in CITIES]),
+                 'Complete-case selection can still bias adjusted observational associations. HC3 and wild-cluster inference do not correct that selection. See the [dated amendment](association_missingness_amendment_20261013.md) and generated coefficient tables.']
         path=PROJECT_ROOT/'docs/analysis/findings.md';write_once(path,('\n\n'.join(output)+'\n').encode())
         tables=PROJECT_ROOT/'outputs/tables/research'
         for name,rows in [('interpretation_measurements',measurements),('interpretation_local_gains',local),('interpretation_geographic_consistency',geographic),('interpretation_transfer_gains',direction)]:
-            write_once(tables/(name+'.csv'),pd.DataFrame(rows).to_csv(index=False).encode())
+            preserve_or_write(tables/(name+'.csv'),pd.DataFrame(rows).to_csv(index=False).encode())
         return {'status':'GENERATED_FROM_VERIFIED_SQL','finding_file_sha256':sha256_file(path),'geographic_rows':len(geographic),'directional_rows':len(direction)}
     finally:engine.dispose()
 

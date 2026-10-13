@@ -50,8 +50,8 @@ def dependencies(extra=None):
                      'src/pipeline/build_analysis_dataset.py','src/pipeline/build_airbnb_sample.py',
                      'src/pipeline/model_specification.py','src/pipeline/osm_taxonomy.py',
                      'src/pipeline/build_bus_euclidean_accessibility.py','src/spatial/walking_network.py',
-                     'src/spatial/walking_routing.py','src/v4/source_reuse.py','src/v4/identity.py',
-                     'src/v4/listings.py','src/v4/persistence.py','src/v4/specification.py']
+                     'src/spatial/walking_routing.py','src/provenance/source_reuse.py','src/provenance/identity.py',
+                     'src/provenance/listings.py','src/provenance/persistence.py','src/provenance/specification.py']
     paths = sorted([*(PROJECT_ROOT / 'src/study').glob('*.py'),*(PROJECT_ROOT / p for p in compatibility)])
     return {'design': design, 'cities': cities, 'code': {p.relative_to(PROJECT_ROOT).as_posix(): sha256_file(p) for p in paths},
             'requirements_sha256': sha256_file(PROJECT_ROOT/'requirements.txt'), **(extra or {})}

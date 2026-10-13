@@ -512,3 +512,77 @@ but its bytes/checksum are not yet verified. The other 1,695 protected files
 verify. Requested that the researcher move the package into the private
 archive or provide an accessible location. This is a pending historical-
 package verification issue, separate from completed scientific inference.
+
+
+## Consolidated layout and complete research publication checkpoint
+
+The researcher explicitly declined recovery of the discarded historical ZIP:
+"no, skip it. i no longer need that zip file". Recorded this narrow exclusion
+in archive_manifest.json; the original protected manifest remains unchanged.
+No Trash access or package recovery is claimed. All other protected bytes and
+historical SQL fingerprints verify.
+
+Consolidated history/ into archive/, relocated previous version-labelled
+source/config/docs/migration/test/script interfaces there with exact original
+bytes, and retained the needed source adapters under src/provenance. One active
+requirements.txt incorporates the existing openpyxl3.1.5 pin; requirements-study
+and the separate .python-version are archival only. The audited Python3.13.5
+and all installed study dependency versions are unchanged. Dedicated connection
+configuration uses private .env.study/STUDY_DB_* and a safe example template;
+persisted database/schema/source identities and applied migration filenames
+remain unchanged. Immutable raw source trees were not moved or edited.
+The checksum-aware archive resolver validates recorded historical paths against
+original hashes, not guessed substitutions. Legacy interfaces reproduce their
+original Git checkpoints; no superseded income/housing stage is reactivated.
+
+Regenerated association-dependent coefficient, VIF, rank/condition, residual
+Moran, execution and spatial/fixed-effect tables from the new authoritative SQL
+packages. Published the new MEW association coefficient figure (visually
+inspected), regenerated both research reports/findings and primary-results
+association fields, and preserved all prediction/transfer figures and their
+numeric outputs. Earlier partial reports and every preceding72 public artifact
+remain at their original or verified archived locations. The 10% threshold is
+explicitly disclosed as post-observation; no inferential imputation, bedroom
+proxy, variable selection or causal claim is introduced.
+
+Actual final verification: independent OLS/HC3/VIF recalculation and exact9999
+restricted Webb p-values PASS for312 association coefficients; association
+residual Moran reproduction PASS. All three registered spatial-error and all
+four-model area fixed-effect checks per city completed; area-constant density
+is recorded as absorbed. Robustness has71 COMPLETE/four NOT_APPLICABLE entries,
+with unchanged304 predictive metrics/380 contrasts. Full repository suite:
+129 discovered,106 PASS,23 historical opt-in skips (77.028s). After the completed-
+association CLI status update, final active36 tests all PASS, including four
+owned PostGIS integration tests (0.976s). Compile and whitespace checks PASS.
+
+Preservation PASS for1695 retained protected files,263 baseline tracked files,
+20 historical dedicated-store tables, original22 baseline migrations and five
+historical analytical fingerprints. Original source-missingness audit again
+reproduces exactly through the neutral adapters. Release audit PASS_COMPLETE:
+87 source files/38 receipts,751 immutable SQL packages,1176 saved model hashes,
+all682 saved prediction-package hashes and20460 fitted-code snapshot checks.
+All48 transfer prediction sets reproduce from24 shared unchanged source
+pipelines. Fitted scientific designs differ only in the incidental association
+eligibility key; primary estimation/preprocessing/validation/measurement code
+bytes remain unchanged. No predictive or transfer model was refitted.
+
+Publication check PASS_COMPLETE:77 public artifacts, privacy/cell support and
+74 active report links. All preceding72 public artifacts are byte-preserved.
+CLI status is COMPLETE, with3 predictive cities,3 association cities,6 transfers,
+full_rerun_complete=true and no scientific blocker. Every consolidated study
+dependency pin matches installed software. Ambient pip check reports unrelated
+unused s3fs/fsspec and streamlit/protobuf conflicts; no dependency was upgraded
+or hidden to manufacture a clean result.
+
+Automatic approval review rejected an attempted Git restoration of the current
+execution log because it could discard uncommitted entries. That reset was not
+executed. Kept the log intact, preserved exact prior snapshots, and appended
+these checkpoint notes. Active historical path references now resolve to the
+consolidated archive; prior5% decisions remain historical evidence.
+
+Prior published amendment/inference checkpoints are facd7e4734579bb9a8ac670b6be774e9c73be46e,
+d1f8c11 (fresh inference), and66744258bc5ede440f6acf9687998c60812ead16 (accurate
+macOS package-access correction). Final safe staging/commit/push and remote
+V4 equality follow this review and are reported externally. Main/v3 and the
+detached historical worktree remain unchanged; no private ZIP, source file,
+model, credential, coordinate or row-level prediction is staged.

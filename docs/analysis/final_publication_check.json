@@ -1,18 +1,18 @@
 {
-  "status": "PASS_WITH_DOCUMENTED_SCIENTIFIC_BLOCKER",
-  "public_artifacts_verified": 72,
-  "original59_artifacts_unchanged": true,
+  "status": "PASS_COMPLETE",
+  "public_artifacts_verified": 77,
+  "previous72_artifacts_preserved": true,
   "fitted_code_dependency_checks": 20460,
   "fitted_packages_code_verified": 682,
   "estimation_and_preprocessing_modules_unchanged": true,
   "all_recorded_fitted_code_snapshots_preserved": true,
-  "evaluation_artifact_serialization_snapshot": "history/implementation/evaluation_before_transfer_artifacts.py",
-  "prior_cli_archive": "history/implementation/cli_before_release.py",
-  "prior_cli_archive_sha256": "9f0d8a74bd6575140e9359ab0cab07905b4120ad21a5002e3504b845b33c4e01",
-  "current_cli_change": "Status and completed-selector guards only, after all fits",
   "public_csv_privacy_and_map_support": "PASS",
-  "publication_report_links": "PASS",
-  "full_rerun_complete": false,
+  "publication_report_links_checked": 74,
+  "full_rerun_complete": true,
   "primary_prediction_cities_complete": 3,
-  "six_transfer_directions_complete": true
+  "association_cities_complete": 3,
+  "six_transfer_directions_complete": true,
+  "post_observation_amendment_disclosed": true,
+  "active_dependency_file": "requirements.txt",
+  "historical_evidence_directory": "archive/"
 }

@@ -17,6 +17,7 @@ from src.study.specification import load_design,CITIES,neutral_token
 from src.study.store import read_package,MIGRATION
 from src.study.sample_freeze import records
 from src.reporting.study_results import predictions
+from src.study.archive import preserved_path
 
 
 def run():
@@ -34,7 +35,7 @@ def run():
         elif isinstance(value,list):
             for child in value:walk(child)
     for path in (ROOT/'config/study').glob('*.json'):walk(json.loads(path.read_text()))
-    engine=get_engine();models={};package_count=0;transfer_checks=0;historical_model_hashes=set()
+    engine=get_engine();models={};package_count=0;transfer_checks=0;fitted_packages=0;code_checks=0;prediction_checks=0;digest_cache={}
     try:
         with engine.connect() as conn:
             conn.exec_driver_sql('SET TRANSACTION READ ONLY')
@@ -45,6 +46,20 @@ def run():
                 neutral_token(row['run_id']);package_count+=1
                 if canonical_hash(row['summary'])!=row['summary_sha256'] or canonical_hash(row['dependencies'])!=row['dependencies_sha256']:raise ValueError('SQL package metadata hash differs')
                 summary=row['summary']
+                if row['family'] in {'within_city','transfer','robustness'}:
+                    fitted_packages+=1
+                    old=dict(row['dependencies']['design']);new=dict(design)
+                    old.pop('association_missing_limit');new.pop('association_missing_limit')
+                    if canonical_hash(old)!=canonical_hash(new):raise ValueError('Predictive scientific dependency changed beyond association gate')
+                    for name,expected in row['dependencies']['code'].items():
+                        key=(name,expected)
+                        if key not in digest_cache:digest_cache[key]=sha256_file(preserved_path(name,expected))
+                        if digest_cache[key]!=expected:raise ValueError('Fitted code bytes unavailable')
+                        code_checks+=1
+                    if summary.get('prediction_hash'):
+                        saved=conn.execute(text("SELECT record FROM study.records WHERE run_id=:run AND city=:city AND artifact='predictions' ORDER BY record_key::integer"),{'run':row['run_id'],'city':row['city']}).scalars().all()
+                        if canonical_hash(saved)!=summary['prediction_hash']:raise ValueError('Completed fitted prediction rows changed')
+                        prediction_checks+=1
                 for model in summary.get('fitted_models',[]):
                     if sha256_file(ROOT/model['path'])!=model['sha256']:raise ValueError('Saved fold model changed')
                     models[model['path']]=model['sha256']
@@ -56,7 +71,7 @@ def run():
             frames={city:pd.DataFrame(records(conn,chosen,city,'sample','prediction_sample')) for city in CITIES}
             _,cities=load_design()
             context_select=json.loads((ROOT/'config/study/context_selection.json').read_text())
-            native_policy=json.loads((ROOT/'config/v4/context_A04_20261011.json').read_text())['cities']
+            native_policy=json.loads((ROOT/'archive/previous_analysis/config/context_A04_20261011.json').read_text())['cities']
             for city in CITIES:
                 context,_=read_package(conn,context_select[city]['run_id'],city,'context')
                 walk([unit['sources'] for unit in context['density_units']])
@@ -92,7 +107,13 @@ def run():
                 if not np.allclose(actual,frame.prediction,rtol=1e-12,atol=1e-12):raise ValueError('Saved target prediction not reproducible from source pipeline')
                 key=(selection['city'],selection['estimator'],selection['model']);outgoing.setdefault(key,set()).add(model['sha256']);transfer_checks+=1
             if transfer_checks!=48 or len(outgoing)!=24 or any(len(v)!=1 for v in outgoing.values()):raise ValueError('Directional/source pipeline cardinality differs')
-        inventory=json.loads((ROOT/'docs/analysis/public_output_inventory.json').read_text())
+            associations=json.loads((ROOT/'docs/analysis/association_audit.json').read_text())
+            spatial=json.loads((ROOT/'docs/analysis/spatial_audit.json').read_text())
+            registry=json.loads((ROOT/'docs/analysis/robustness_audit.json').read_text())
+            if any(associations[c]['status']!='COMPLETE_ASSOCIATION' or associations[c]['association_missing_limit']!=.10 for c in CITIES):raise ValueError('Fresh uniform association execution incomplete')
+            if any(spatial[c]['fixed_effect_status']!='COMPLETE' or spatial[c]['spatial_error_status'] not in {'COMPLETE','NOT_APPLICABLE_TRIGGER_NOT_MET'} for c in CITIES):raise ValueError('Required spatial inference incomplete')
+            if len(registry)!=75 or any(r['status'] not in {'COMPLETE','NOT_APPLICABLE','NOT_APPLICABLE_TRIGGER_NOT_MET'} for r in registry):raise ValueError('Registered robustness incomplete')
+        inventory=json.loads((ROOT/'docs/analysis/final_artifact_inventory.json').read_text())
         for row in inventory:
             path=ROOT/row['path']
             if sha256_file(path)!=row['sha256'] or path.stat().st_size!=row['bytes']:raise ValueError('Public generated output changed')
@@ -107,15 +128,22 @@ def run():
         if git('branch','--show-current')!='v4':raise ValueError('Wrong work branch')
         main=git('rev-parse','refs/heads/main');prior=git('rev-parse','refs/heads/v3')
         if main!='7de587997157863e0ba1d36c3f39bdd45f2b9d23' or prior!='6150e3f3b4e6db01dd5bf5842404212343d1344a':raise ValueError('Historical branch moved')
-        report={'status':'PASS_WITH_DOCUMENTED_SCIENTIFIC_BLOCKERS','design_id':design['design_id'],'source_files_checksum_verified':len(sources),
+        if fitted_packages!=682 or len(models)!=1176:raise ValueError('Completed fitted artifact cardinalities changed')
+        for name in ['modeling','evaluation','validation','samples','accessibility','osm','geography']:
+            if sha256_file(ROOT/f'src/study/{name}.py')!=sha256_file(ROOT/f'archive/before_association_amendment/src/study/{name}.py'):
+                raise ValueError('Predictive estimation/measurement code changed')
+        report={'status':'PASS_COMPLETE','design_id':design['design_id'],'source_files_checksum_verified':len(sources),
                 'source_receipts_checksum_verified':len(receipts),'immutable_sql_packages_verified':package_count,'saved_model_files_checksum_verified':len(models),
                 'transfer_predictions_reproduced_from_frozen_source_pipelines':transfer_checks,'distinct_shared_source_models':len(outgoing),
                 'public_aggregate_artifacts_checksum_verified':len(inventory),'public_row_privacy_and_cell_support':'PASS',
                 'neutral_migration_integrity':'PASS','main_sha_unchanged':main,'previous_branch_sha_unchanged':prior,
                 'primary_random_six_grid_frozen_sample_cardinality':'PASS',
-                'full_rerun_complete':False,'primary_prediction_cities_complete':3,'six_transfer_directions_complete':True,
-                'blocker':'Stockholm association union predictor missingness exceeds frozen5% guard; dependent inference blocked',
-                'historical_numeric_results_reused_as_final':False}
+                'full_rerun_complete':True,'primary_prediction_cities_complete':3,'association_cities_complete':3,'six_transfer_directions_complete':True,
+                'blocker':None,'old_association_missingness_limit':.05,'association_missingness_limit':.10,'post_observation_amendment':True,
+                'fitted_packages_preserved':fitted_packages,'fitted_code_snapshot_checks':code_checks,'saved_prediction_packages_checksum_verified':prediction_checks,
+                'predictive_and_transfer_artifacts_unchanged':True,'required_robustness_accounted':True,
+                'historical_numeric_results_reused_as_final':False,
+                'researcher_excluded_discarded_package':'thesis_results_v3.zip; explicitly no longer needed'}
         write_once(ROOT/'docs/analysis/release_audit.json',(json.dumps(report,indent=2)+'\n').encode())
         return report
     finally:engine.dispose()

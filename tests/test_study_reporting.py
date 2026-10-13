@@ -17,6 +17,16 @@ import io
 
 
 class ReportingGuards(unittest.TestCase):
+    def test_complete_release_exposes_all_three_association_cities(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);path=root/'docs/analysis/release_audit.json';path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({'full_rerun_complete':True,'primary_prediction_cities_complete':3,
+                                        'association_cities_complete':3,'six_transfer_directions_complete':True,'blocker':None}))
+            result=completion_status(root)
+            self.assertEqual(result['status'],'COMPLETE')
+            self.assertEqual(result['association_cities_complete'],3)
+            self.assertEqual(result['completed_transfer_directions'],6)
+
     def test_scientific_blocker_cannot_be_reported_as_full_completion(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);path=root/'docs/analysis/release_audit.json';path.parent.mkdir(parents=True)

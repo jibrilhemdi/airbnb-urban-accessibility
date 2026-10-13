@@ -3,7 +3,7 @@
 The canonical design is `config/study/design.json`; scientific decisions,
 source/time/CRS/receipt hashes and immutable SQL selectors are under
 `config/study/` and `docs/analysis/`. Use `.venv/bin/python` and the pinned
-original `requirements.txt` plus `requirements-study.txt`. The generated
+single `requirements.txt` (including the existing openpyxl pin). The generated
 software inventory records the actual environment, rather than implying that
 unbounded dependency ranges uniquely reproduce it.
 
@@ -101,7 +101,7 @@ the frozen sample's earlier readiness label.
 After all fits and release audits completed, only the CLI status/entry guards
 were updated to expose the actual blocked release and refuse accidental refits.
 Exact pre-release CLI bytes are archived at
-`history/implementation/cli_before_release.py`; their checksum matches the
+`archive/implementation/cli_before_release.py`; their checksum matches the
 fitted packages' source-code dependency. Analytical source/model modules remain
 unchanged. Status intentionally returns2 while the scientific inference gate is
 blocked; it still reports three fitted predictive cities and six completed transfers.
@@ -111,7 +111,7 @@ digest recorded while primary fits were running, before transfer model-file
 serialization was added. Exact bytes are recovered by combining the committed
 primary driver with the preceding committed transfer function; the recovered
 SHA256 exactly equals the immutable recorded digest, not an inferred equivalent.
-They are preserved at `history/implementation/evaluation_before_transfer_artifacts.py`.
+They are preserved at `archive/implementation/evaluation_before_transfer_artifacts.py`.
 The primary fitting/contribution code and every estimation/preprocessing module
 are identical; the later difference only saves transfer pipeline bytes and
 directional artifact identities. `study_publication_check.py` verifies every
@@ -122,3 +122,36 @@ checkpoint uses normal incremental commits and `git push origin HEAD:refs/heads/
 followed by remote/local SHA equality. The final commit's own SHA is supplied in
 the external handover, not written into that commit. `main`, `v3`, tags and the
 existing detached worktree are preserved.
+
+
+## Association amendment and consolidated layout
+
+The uniform eligibility limit changed from 5% to 10% only after Stockholm's
+missingness was observed; this is an explicit post-observation amendment.
+Complete cases, outcomes, X/E/W, HC3, 9,999 Webb draws, Moran k8/499 and frozen
+spatial triggers are retained. All three association ladders and dependent
+checks were freshly computed, independently recalculated and published from SQL.
+Completed predictive fits, transfers, features, samples, folds and SHAP are
+preserved. The release audit verifies exact fitted-code snapshots, all saved
+model bytes, prediction-package hashes and source-only transfer reproduction.
+
+Use `.env.study` and STUDY_DB_* for the dedicated source/research connection.
+Python 3.13.5 is recorded in requirements.txt and software_environment.json;
+there is no second active dependency file or separate .python-version file.
+Source-provenance adapters are under src/provenance; previous version-labelled
+code/config/docs/migrations/test interfaces and previous history/ contents are
+consolidated under archive/. Applied SQL filenames, source IDs and database
+names remain recorded identities. The archive manifest resolves old paths to
+exact original bytes; no scientific value is fabricated during relocation.
+The researcher explicitly excludes the discarded thesis_results_v3.zip from
+current preservation verification; its original manifest entry is retained.
+
+Completed selectors cannot be overwritten; a reproduction needs explicit new
+reporting identities. Public inference outputs are association_execution_status,
+association_coefficients, association_vif, association_diagnostics,
+association_residual_moran, association_spatial_execution and
+spatial_association_coefficients CSVs under outputs/tables/research/, plus the
+association coefficient figure. The immutable sample audit still records the
+historical 5% gate status; current execution comes from fresh selectors/audit.
+Older partial reports and all 72 preceding public artifacts remain byte-
+preserved at current or archived paths.

@@ -134,4 +134,14 @@ XGBoost MEW lowers relative-price RMSE versus M0 in 4 of 6 directions. This coun
 
 ## Inferential limitation
 
-Copenhagen and Oslo association coefficients and registered dependent checks are complete. Stockholm exceeds the frozen 5% union predictor-missingness guard, so its association and dependent inference remain blocked. Predictive median/indicator preprocessing was training-only and was not substituted for inferential imputation. All outcomes remain observed original asking prices. The full study is partial despite complete independent predictive and transfer work.
+Fresh complete-case association coefficients and registered spatial-error/area fixed-effect checks completed in all three cities. The researcher raised the uniform eligibility limit from 5% to 10% after observing Stockholm’s missingness; this is a disclosed post-observation amendment, not preregistration or a universal standard. Stockholm uses the same 2,348 genuinely complete cases; no inferential imputation was used. Predictions and all six transfers were preserved after dependency checks. All outcomes remain original observed asking prices.
+
+## Complete-case association execution
+
+| city | status | prediction_n | association_n | missing_fraction | association_missing_limit |
+| --- | --- | --- | --- | --- | --- |
+| copenhagen | COMPLETE_ASSOCIATION | 12408 | 12285 | 0.009913 | 0.100000 |
+| oslo | COMPLETE_ASSOCIATION | 8529 | 8152 | 0.044202 | 0.100000 |
+| stockholm | COMPLETE_ASSOCIATION | 2495 | 2348 | 0.058918 | 0.100000 |
+
+Complete-case selection can still bias adjusted observational associations. HC3 and wild-cluster inference do not correct that selection. See the [dated amendment](association_missingness_amendment_20261013.md) and generated coefficient tables.

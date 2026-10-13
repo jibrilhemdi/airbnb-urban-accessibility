@@ -34,3 +34,7 @@ all three cities' complete-case association stages and dependent spatial/fixed-
 effect checks are rerun. Final status follows generated execution and release
 audits, not merely passage of the amended gate. The previous 5% blocker remains
 in the archived report and historical execution log.
+
+Current generated execution: all three association ladders and all triggered
+spatial-error/area fixed-effect checks completed. The final release audit
+verifies the complete required registry and unchanged predictive/transfer fits.

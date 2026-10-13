@@ -3,7 +3,7 @@
 The complete researcher request was adopted before final-design empirical fits,
 after historical analyses and support evidence had already been observed. This
 is a transparent amendment, not retrospective preregistration. Exact request
-bytes and previous entry instructions are preserved in `history/`.
+bytes and previous entry instructions are preserved in `archive/`.
 
 | Decision or correction | Evidence and timing | Consequence |
 | --- | --- | --- |
@@ -39,3 +39,11 @@ source missingness. This is disclosed as a methodological amendment, not
 preregistration or a universal standard. Complete-case rows and all inference
 procedures remain unchanged; no values are filled. Earlier 5% blocker records
 above describe the prior checkpoint. See the [dated amendment](association_missingness_amendment_20261013.md).
+
+The freshly rerun association and dependent checks completed for every city.
+Repository cleanup consolidated archive paths and requirements without changing
+pinned package versions or persisted scientific identities. The researcher
+explicitly waived recovery/checksum verification of the discarded historical ZIP.
+Ambient pip check reports unused s3fs/fsspec and streamlit/protobuf conflicts;
+every actual study dependency pin matches the fitted environment. No package
+upgrade or predictor/model change was made to improve reported results.
