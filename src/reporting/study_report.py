@@ -55,15 +55,41 @@ def source_rows():
     return list(seen.values())
 
 
+def reused_sources(conn,cities):
+    output=[]
+    def source(record,city,role):
+        keys=['source_url','acquired_at_utc','verified_at_utc','reference_period','geographic_extent','source_crs','licence','sha256','size_bytes','status']
+        return {'city':city,'role':role,'disposition':'verified immutable source reuse',**{k:record.get(k) for k in keys}}
+    for city,config in cities.items():
+        selected=config['historical_listing_selection']
+        manifest=conn.scalar(text('SELECT manifest FROM v4_raw.source_manifests WHERE version=:version AND city=:city AND snapshot=:snapshot AND manifest_sha256=:digest'),
+                             {'version':selected['source_version'],'city':selected['city'],'snapshot':selected['snapshot'],'digest':selected['manifest_sha256']})
+        if canonical_hash(manifest)!=selected['manifest_sha256']:raise ValueError('Original selected source manifest differs')
+        for record in manifest['records']:
+            if record['filename']=='listings.csv.gz' or record['filename'].endswith('.geojson'):
+                output.append(source(record,city,'detailed_listings' if record['filename']=='listings.csv.gz' else 'preserved_geometry'))
+    policy=json.loads((PROJECT_ROOT/'config/v4/context_A04_20261011.json').read_text())['cities']
+    for city,old_city in [('copenhagen','copenhagen_frederiksberg'),('oslo','oslo')]:
+        for entry in policy[old_city]['sources']:
+            r=entry['record']
+            if r['filename'] in {'KKBEF1.csv','FOLK1A.csv'} or r['source_id'] in {'a04_20261011_population_data','a04_20261011_population_schema'}:
+                output.append(source(r,city,'native_population'))
+    return output
+
+
 def run():
-    design,cities=load_design();engine=get_engine();within=[];transfer=[];contrasts=[];geometric=[];association=[];vif=[];spatial_coefficients=[];flow=[];comparison=[];references=[];robust=[];robust_metrics=[]
+    design,cities=load_design();engine=get_engine();within=[];transfer=[];contrasts=[];geometric=[];association=[];vif=[];spatial_coefficients=[];flow=[];comparison=[];references=[];robust=[];robust_metrics=[];contributions=[]
     try:
         with engine.connect() as conn:
             conn.exec_driver_sql('SET TRANSACTION READ ONLY')
             geo=selected(conn,'geography_selection','geography');ref=selected(conn,'reference_selection','reference')
             context=selected(conn,'context_selection','context');access=selected(conn,'accessibility_selection','accessibility');samples=selected(conn,'sample_selection','sample')
+            reused=reused_sources(conn,cities)
             primary=selected(conn,'results_neighbourhood');directions=selected(conn,'results_transfer');sensitivity=selected(conn,'robustness_results_selection');interpretation=selected(conn,'interpretation_selection')
+            interp_select=json.loads((PROJECT_ROOT/'config/study/interpretation_selection.json').read_text())
             for city in CITIES:
+                contributions.extend(conn.execute(text("SELECT record FROM study.records WHERE run_id=:run AND city=:city AND artifact='contribution_summary' ORDER BY record_key::integer"),
+                                                  {'run':interp_select[city]['run_id'],'city':city}).scalars())
                 within.extend(primary[city]['performance']);transfer.extend(directions[city]['performance']);contrasts.extend(directions[city]['contrasts'])
                 robust.extend(sensitivity[city]['registry']);robust_metrics.extend(sensitivity[city]['performance'])
                 flow.extend({'city':city,**row} for row in samples[city]['sample_flow'])
@@ -86,10 +112,12 @@ def run():
         tables={'sample_flow':flow,'city_comparability':comparison,'price_references':references,'within_city_performance':within,
                 'transfer_performance':transfer,'transfer_accessibility_contrasts':contrasts,'validation_comparison':geometric,
                 'association_coefficients':association,'association_vif':vif,'spatial_association_coefficients':spatial_coefficients,
-                'robustness_registry':robust,'robustness_performance':robust_metrics,'new_source_receipts':source_rows()}
+                'robustness_registry':robust,'robustness_performance':robust_metrics,'new_source_receipts':source_rows(),'reused_source_receipts':reused,
+                'native_density_units':[{'city':city,**{k:v for k,v in unit.items() if k!='sources'}} for city in CITIES for unit in context[city]['density_units']],
+                'geography_groups':[{'city':city,**group,'prediction_n':samples[city]['group_counts'][group['name']]} for city in CITIES for group in geo[city]['groups']]}
         out=PROJECT_ROOT/'outputs/tables/research';out.mkdir(parents=True,exist_ok=True)
         for name,rows in tables.items():write_once(out/(name+'.csv'),pd.DataFrame(rows).to_csv(index=False).encode())
-        figures(transfer,contrasts,within,geometric,robust_metrics)
+        figures(transfer,contrasts,within,geometric,robust_metrics,contributions)
         proposal=(PROJECT_ROOT/'docs/scientific_proposal.md').read_text();questions=proposal.split('The questions are:\n\n',1)[1].split('\n\nMatched destinations',1)[0]
         w=pd.DataFrame(within);t=pd.DataFrame(transfer);c=pd.DataFrame(contrasts)
         blocks=pd.DataFrame(geometric);registry=pd.DataFrame(robust)
@@ -124,7 +152,7 @@ def run():
                 'Maps use 500 m cells with at least five analytical observations. CRSs are recorded per city; map coordinates and aggregation do not assert exact listing locations.',
                 '## RQ2 — within-city predictive information and associations',
                 markdown(within,['city','estimator','model','n','rmse','mae','r2']),
-                'Fresh OLS and XGBoost fits use the exact inherited 30 candidates and four source-training-only 1 km inner spatial folds. Median/indicator preprocessing and category encoding are fitted within each inner and outer training partition. No outer fold determines thresholds, categories, variables or tuning. Held-out TreeSHAP summaries are descriptive predictive contributions, with contribution sums verified against frozen predictions; they do not identify causal effects.',
+                'Fresh XGBoost fits use the exact inherited 30 candidates and four source-training-only 1 km inner spatial folds. Predictive OLS uses unpenalized ordinary least squares with the same training-only preprocessing. Median/indicator preprocessing and category encoding are fitted within each inner and outer training partition. No outer fold determines thresholds, categories, variables or tuning. Held-out TreeSHAP summaries are descriptive predictive contributions, with contribution sums verified against frozen predictions; they do not identify causal effects.',
                 '![Primary performance](../../outputs/figures/research/within_city_performance.png)',
                 '![Held-out contributions](../../outputs/figures/research/heldout_contributions_publication.png)',
                 'Association coefficients use the common union complete-case sample, HC3 and 9,999 restricted Webb wild-cluster replications over actual operational groups. Complete Copenhagen/Oslo coefficient, VIF and condition diagnostics are exported. Stockholm coefficients are absent because its missing fraction exceeds 5%; no inferential median-imputation substitute was produced. Spatial residual diagnostics use 8 nearest neighbours and 499 permutations. Triggered spatial-error and area fixed-effect association checks are documented separately; area-constant density is absorbed in fixed effects.',
@@ -175,7 +203,7 @@ def run():
     finally:engine.dispose()
 
 
-def figures(transfer,contrasts,within,geometric,robust_metrics):
+def figures(transfer,contrasts,within,geometric,robust_metrics,contributions):
     out=PROJECT_ROOT/'outputs/figures/research';part=pd.DataFrame(contrasts)
     for estimator in ('OLS','XGBoost'):
         selected=part.loc[part.estimator==estimator];bound=float(np.abs(selected.delta_rmse).max())
@@ -200,7 +228,7 @@ def figures(transfer,contrasts,within,geometric,robust_metrics):
             ax.plot(range(len(schemes)),rows.rmse,'o-',label=model,ms=3)
         ax.set_xticks(range(len(schemes)),labels,rotation=60,ha='right');ax.set_title(city.title());ax.set_ylabel('OOF RMSE (native log price)')
     axes[0].legend(ncol=2);fig.tight_layout();save_figure(fig,out/'validation_comparison.png');plt.close(fig)
-    contributions=pd.read_csv(PROJECT_ROOT/'outputs/tables/research/contribution_summary.csv')
+    contributions=pd.DataFrame(contributions)
     fig,axes=plt.subplots(1,3,figsize=(14,5))
     for ax,city in zip(axes,CITIES,strict=True):
         part=contributions.loc[(contributions.city==city)&(contributions.scope=='neighbourhood_heldout')&(contributions.model=='MEW')].nlargest(10,'mean_abs').sort_values('mean_abs')

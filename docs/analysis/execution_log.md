@@ -308,3 +308,38 @@ three immutable measurement packages are selected, verifies completed grid and
 sensitivity outputs, then generates/audits aggregate reporting. Its private logs
 and models remain ignored. No full-release claim is made while those dependencies
 are running; Stockholm's inference gate remains blocked.
+
+## Common grids and measurement variants — 13 October 2026
+
+Reproducibility checkpoint80e1acd70c869b9d9552437ec61120c896a1c6e1 pushed
+only to recorded origin refs/heads/v4; remote/local equality verified.
+
+All three cities completed every additional1/2km zero/half-origin grid with
+five outer folds each. Four scheme-specific independent audits PASS, each24
+performance rows/30 paired contrasts and every fitted-model file hash checked.
+Together with primary, random and both1.5km origins, all eight validation
+schemes now have independently verified results. Original frozen memberships,
+sample rows, source-only preprocessing and full candidate budget are retained.
+Actual parent processes exit0; shutdown resource-tracker warnings remain logged.
+
+Speed4/5.4km/h and all-reachable10-minute-half-life decay packages freshly
+recomputed for all three cities from frozen original OSM sources. Independent
+checks pass for12408/8529/2495 rows: record hashes, finite/nonnegative values,
+and matched walking-versus-direct kernel/opportunity bounds. No arbitrary
+decay cutoff or missing-route replacement. The finite extracted graph and
+destination universe still limit the physical scope of this sensitivity.
+
+Training-only price-tail and reputation experiments are now complete for all
+three cities. Additional measurement predictive fits and buffered/boundary/
+native-density checks remain in progress; exhaustive final auditing waits for
+their immutable selectors. Reporting now extracts native39-unit density,
+geography-group and reused-source metadata tables directly from authoritative
+SQL/source manifests, and reads contribution summaries from SQL for figures.
+Source/reference values and scientific definitions remain unchanged.
+
+Checks for this checkpoint: all four newly completed grid metric/pair/model
+audits PASS; all three measurement variant audits PASS; source report metadata
+reader returns nine selected reused records and geography groups11/17/11;
+compileall and whitespace PASS. The full227-test/183-PASS/44-skip suite and
+four owned PostGIS checks remain the latest relevant baseline. Public aggregate
+sharing/final report completion is not claimed before final review.

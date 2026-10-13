@@ -23,6 +23,8 @@ def run():
     design,_=load_design();sources={};receipts={}
     def walk(value):
         if isinstance(value,dict):
+            if isinstance(value.get('local_location'),str) and isinstance(value.get('sha256'),str):
+                walk({'path':value['local_location'],'sha256':value['sha256']})
             if isinstance(value.get('path'),str) and isinstance(value.get('sha256'),str) and len(value['sha256'])==64:
                 path=verify_source(value)
                 if str(path) in sources and sources[str(path)]!=value['sha256']:raise ValueError('Conflicting source checksum')
@@ -52,6 +54,21 @@ def run():
                     models[model['path']]=model['sha256']
             chosen=json.loads((ROOT/'config/study/sample_selection.json').read_text())
             frames={city:pd.DataFrame(records(conn,chosen,city,'sample','prediction_sample')) for city in CITIES}
+            _,cities=load_design()
+            context_select=json.loads((ROOT/'config/study/context_selection.json').read_text())
+            native_policy=json.loads((ROOT/'config/v4/context_A04_20261011.json').read_text())['cities']
+            for city in CITIES:
+                context,_=read_package(conn,context_select[city]['run_id'],city,'context')
+                walk([unit['sources'] for unit in context['density_units']])
+                source=cities[city]['historical_listing_selection']
+                manifest=conn.scalar(text('SELECT manifest FROM v4_raw.source_manifests WHERE version=:version AND city=:city AND snapshot=:snapshot AND manifest_sha256=:digest'),
+                                     {'version':source['source_version'],'city':source['city'],'snapshot':source['snapshot'],'digest':source['manifest_sha256']})
+                if canonical_hash(manifest)!=source['manifest_sha256']:raise ValueError('Approved reused source manifest hash differs')
+                walk(manifest)
+            for old_city in ['copenhagen_frederiksberg','oslo']:
+                for entry in native_policy[old_city]['sources']:
+                    r=entry['record']
+                    if r['filename'] in {'KKBEF1.csv','FOLK1A.csv'} or r['source_id'] in {'a04_20261011_population_data','a04_20261011_population_schema'}:walk(entry)
             schemes=['neighbourhood','random']+[f'blocks_{size}m_origin_{origin}' for size in [1000,1500,2000] for origin in ['0_0','0p5_0p5']]
             for scheme in schemes:
                 result=json.loads((ROOT/'config/study'/('results_'+scheme+'.json')).read_text())

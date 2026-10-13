@@ -1262,3 +1262,10 @@ training-only tails/reputation, metric training buffers, native Stockholm densit
 checks, speed/decay and exhaustive independent auditing implemented. Actual
 active tests30 discovered,26 PASS,4 opt-in skipped; computation ongoing. See
 neutral execution log for statuses. No full research-release completion claimed.
+
+Comprehensive common-grid/measurement checkpoint: all three cities complete and
+independently verify all six geometric variants, random and primary validation.
+All three new speed/decay measurement packages pass hash/finite/physical-bound
+checks; predictive sensitivities still running. Training-tail/reputation complete
+for all cities. Historical statuses above remain preserved; Stockholm inferential
+missingness gate stays blocked. See neutral execution log and actual selectors.
