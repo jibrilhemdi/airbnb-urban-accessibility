@@ -57,3 +57,15 @@ test:
 	$(PYTHON) -m unittest discover -s tests -v
 integration-test:
 	THESIS_STUDY_DB_TEST=1 $(PYTHON) -m unittest discover -s tests -p 'test_study*.py' -v
+
+.PHONY: thesis-outputs thesis-synthesis thesis-check thesis-science-check thesis-release
+thesis-outputs:
+	$(PYTHON) -m src.reporting.thesis_outputs
+thesis-synthesis:
+	$(PYTHON) -m src.reporting.thesis_synthesis
+thesis-check:
+	$(PYTHON) -m src.reporting.thesis_validate
+thesis-science-check:
+	$(PYTHON) -m src.reporting.thesis_validate --science
+thesis-release:
+	$(PYTHON) -m src.reporting.thesis_release

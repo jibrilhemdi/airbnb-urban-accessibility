@@ -1,0 +1,116 @@
+{
+  "copenhagen": {
+    "display_name": "Copenhagen",
+    "metric_crs": "EPSG:25832",
+    "source_crs": "EPSG:4326",
+    "currency": "DKK",
+    "operational_mapping": {
+      "Amager Vest": "Amager Vest",
+      "Amager st": "Amager Øst",
+      "Bispebjerg": "Bispebjerg",
+      "Brnshj-Husum": "Brønshøj-Husum",
+      "Frederiksberg": "Frederiksberg",
+      "Indre By": "Indre By",
+      "Nrrebro": "Nørrebro",
+      "Valby": "Valby",
+      "Vanlse": "Vanløse",
+      "Vesterbro-Kongens Enghave": "Vesterbro-Kongens Enghave",
+      "sterbro": "Østerbro"
+    },
+    "operational_count": 11,
+    "neighbourhood_url": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/visualisations/neighbourhoods.geojson",
+    "historical_listing_selection": {
+      "city": "copenhagen_frederiksberg",
+      "source_version": "research_design_v4",
+      "run_id": "research_v4_copenhagen_frederiksberg_20261011T143812Z",
+      "manifest_sha256": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13",
+      "snapshot": "2026-06-30",
+      "boundary_temporal_status": "RETAIN_DOCUMENTED_QUALIFICATION"
+    },
+    "historical_geography_selection": {
+      "run_id": "research_v4_copenhagen_frederiksberg_20261011T210000Z",
+      "snapshot": "2026-06-30",
+      "geography_manifest_sha256": "352abab9128f086301837ce932ac4b1ec587f40c5accc0d6c6dbb3d7fbc5f79c",
+      "summary_sha256": "014894ce8030c9a1cd12251bef3ac0427faae19808ea8f6507326a603d6de299"
+    }
+  },
+  "oslo": {
+    "display_name": "Oslo",
+    "metric_crs": "EPSG:25833",
+    "source_crs": "EPSG:4326",
+    "currency": "NOK",
+    "operational_mapping": {
+      "Alna": "Alna",
+      "Bjerke": "Bjerke",
+      "Frogner": "Frogner",
+      "Gamle Oslo": "Gamle Oslo",
+      "Grorud": "Grorud",
+      "Grünerløkka": "Grünerløkka",
+      "Marka": "Marka",
+      "Nordre Aker": "Nordre Aker",
+      "Nordstrand": "Nordstrand",
+      "Sagene": "Sagene",
+      "Sentrum": "Sentrum",
+      "St. Hanshaugen": "St. Hanshaugen",
+      "Stovner": "Stovner",
+      "Søndre Nordstrand": "Søndre Nordstrand",
+      "Ullern": "Ullern",
+      "Vestre Aker": "Vestre Aker",
+      "Østensjø": "Østensjø"
+    },
+    "operational_count": 17,
+    "neighbourhood_url": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/visualisations/neighbourhoods.geojson",
+    "historical_listing_selection": {
+      "city": "oslo",
+      "source_version": "research_design_v4",
+      "run_id": "research_v4_oslo_20261011T143812Z",
+      "manifest_sha256": "c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8",
+      "snapshot": "2026-06-30",
+      "boundary_temporal_status": "BLOCKED_PENDING_A03"
+    },
+    "historical_geography_selection": {
+      "run_id": "research_v4_oslo_20261011T210000Z",
+      "snapshot": "2026-06-30",
+      "geography_manifest_sha256": "550733b7e7107d042ce4f80c9abb186a0c8858edb9c0b76af7b5d99dde4456de",
+      "summary_sha256": "2f9fc9a6a5ef570e2d62a16a3f9421da4bded1b6db2c573c7041e7450cfdfb5c"
+    }
+  },
+  "stockholm": {
+    "display_name": "Stockholm",
+    "metric_crs": "EPSG:3006",
+    "source_crs": "EPSG:4326",
+    "currency": "SEK",
+    "operational_mapping": {
+      "Bromma": "Bromma",
+      "Enskede-Årsta-Vantörs": "Enskede-Årsta-Vantör",
+      "Farsta": "Farsta",
+      "Hägersten-Liljeholmens": "Hägersten-Älvsjö",
+      "Älvsjö": "Hägersten-Älvsjö",
+      "Hässelby-Vällingby": "Hässelby-Vällingby",
+      "Kungsholmens": "Kungsholmen",
+      "Norrmalms": "Norra innerstaden",
+      "Östermalms": "Norra innerstaden",
+      "Skarpnäcks": "Skarpnäck",
+      "Skärholmens": "Skärholmen",
+      "Södermalms": "Södermalm",
+      "Spånga-Tensta": "Järva",
+      "Rinkeby-Tensta": "Järva"
+    },
+    "operational_count": 11,
+    "neighbourhood_url": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/visualisations/neighbourhoods.geojson",
+    "historical_listing_selection": {
+      "city": "stockholm",
+      "source_version": "research_design_v4",
+      "run_id": "research_v4_stockholm_20261011T151637Z",
+      "manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172",
+      "snapshot": "2026-06-30",
+      "boundary_temporal_status": "RETAIN_DOCUMENTED_QUALIFICATION"
+    },
+    "historical_geography_selection": {
+      "run_id": "research_v4_stockholm_20261011T210000Z",
+      "snapshot": "2026-06-30",
+      "geography_manifest_sha256": "4109d0dcf59b15240cfdf5db26f89c1e1431c82c09e2f22c180a04c2ef96ae26",
+      "summary_sha256": "7b16d5e30ebb5134a902251e13f99fc968b2b666b7df20e71338de5433f89356"
+    }
+  }
+}

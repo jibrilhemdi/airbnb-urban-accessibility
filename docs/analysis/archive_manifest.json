@@ -846,6 +846,62 @@
       "archived_path": "archive/implementation/connection_before_template_move.py",
       "sha256": "83b0cd7fb21b3f8a8f6d156ad4cff645dec773ba5cfadad8262803de48439891",
       "bytes": 1609
+    },
+    {
+      "original_path": "docs/scientific_proposal.md",
+      "archived_path": "archive/before_thesis_reporting/docs/scientific_proposal.md",
+      "sha256": "a1d367ab1c6568441296e66b6fc83c6a7d39c861308d816f272e40c0a1cec469",
+      "bytes": 3680,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/research_plan.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/research_plan.md",
+      "sha256": "b6674c965f2f7aae14ec9d73ecdeb2acbb70d401e51a1031469a1e18f48ea795",
+      "bytes": 2955,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/reproducibility.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/reproducibility.md",
+      "sha256": "e8e988950a2629ad78d2ae6a4d51f1bb0480c0badc18a8f14c850c6c08582046",
+      "bytes": 9677,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/source_registry.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/source_registry.md",
+      "sha256": "ac8408784f442a40d2eb0b30a06675cc8378c58a7d907461a0779a42e9f83509",
+      "bytes": 3690,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/document_index.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/document_index.md",
+      "sha256": "25b5fd224c6d058a9adf85fedcad31839e5ebc49c2e905cd661cecfbba1af051",
+      "bytes": 5138,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "docs/analysis/implementation_contract.md",
+      "archived_path": "archive/before_thesis_reporting/docs/analysis/implementation_contract.md",
+      "sha256": "bb7dfc4617e0a361884d3c6d004489ceb5362fe0cdb1e91b55998e18056a2dc3",
+      "bytes": 4757,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "README.md",
+      "archived_path": "archive/before_thesis_reporting/README.md",
+      "sha256": "ca1868ade28a03dc7ace79ec2033157555c3b1cd1f170af34e4a2fa699e27413",
+      "bytes": 2383,
+      "reason": "Preserve active documentation before thesis reporting completion"
+    },
+    {
+      "original_path": "Makefile",
+      "archived_path": "archive/before_thesis_reporting/Makefile",
+      "sha256": "8b4c40b76aa313fee1707869de5ee1aa44e19e739d6043a35f3c19e5a4a7ed59",
+      "bytes": 2291,
+      "reason": "Preserve active documentation before thesis reporting completion"
     }
   ],
   "researcher_exclusions": {

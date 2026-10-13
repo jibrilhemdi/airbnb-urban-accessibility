@@ -659,3 +659,73 @@ credentials, model bytes or source files are included. This is an initial
 reporting-gap checkpoint, not a completion declaration; publication generation,
 visual review, expanded release audit and safe packaging follow. Commit/push
 and remote equality are verified after review and reported externally.
+
+
+## Thesis-ready reporting, synthesis and safe release completion
+
+Completed the expanded reporting-only request from the pinned final SQL catalog
+without scientific fitting, tuning, source acquisition, feature reconstruction
+or changes to samples, neighbourhoods, benchmarks, density or inference rules.
+The initial audit checkpoint5af5512fbc54d38381aa91aded8e6ad02b70889f remains
+unchanged. All49 existing PNGs remain byte-identical:13 were classified REDESIGN
+and36 excluded from the active thesis selection. Eighteen final publication
+figure sets represent ten redesigned required figure concepts and eight missing
+concepts; PNG300dpi/PDF/SVG provide54 figure files. Eleven required tables and
+eleven supporting aggregate views provide44 CSV/Markdown files. Ten required
+table concepts already had numerical evidence; the claims/limitations table was
+missing. Sample flow is deliberately table-only. Final selection is ten main
+figures, eight main tables and eight appendix figures.
+
+Visually inspected every original and new figure. Corrected external legends,
+shared scales/axis ordering, common count colour scales and clipped headings
+in unpublished drafts, while preserving the initial manifests/code and keeping
+all numerical exports byte-identical. No certified historical artifact was
+overwritten. Registered98 generated artifacts with explicit final source-run
+and summary hashes, RQ, generator, caption and checksum. Generated the exact
+four-RQ/eight-element synthesis, ten-section Results report, recommendations,
+33 directly traced numeric claims and13 classified scientific claims. Updated
+active proposal, plan, reproduction guidance, document index and entry commands;
+archived eight prior documents with exact original checksums. Fixed the active
+source registry's broken geography-evidence link. Income/property-price
+exclusion, provider neighbourhood holdouts,15/500 support, post-observation10%
+amendment and source-only relative-price transfer remain explicit.
+
+Populated outputs/release with figures, tables, metrics, diagnostics, current
+Markdown documents, metadata and exact reporting code. The release contains
+131 registered/manifest files and a deterministic safe ZIP of5,987,624 bytes.
+Every release hash,93 package document links and131 ZIP members verified.
+Only public aggregates and documentation are present; no raw sources, private
+coordinates/IDs, credentials, fitted pipelines or individual predictions are
+exported. A first unpublished package draft was preserved in archive metadata
+before correcting its sample-flow audit mapping. Final delivery audit is
+COMPLETE_THESIS_REPORTING with no remaining required deliverable. Proposal,
+plan and results are authoritative Markdown: no supported active DOCX/PDF
+document renderer exists; scientific figure vector exports are included.
+
+Actual final checks:137 full-suite tests run,114 PASS and23 historical
+workflow tests SKIP; all four owned PostGIS integration tests and four new
+reporting/release tests PASS. Compilation and whitespace PASS. Independent
+scientific verifier checks87 source files,38 receipts,751 immutable analytical
+packages,1,176 fitted model files,682 prediction packages and20,460 exact
+fitted-code dependencies; reproduces48 target applications from24 source-only
+pipelines and primary/transfer RMSE from saved predictions. All77 preceding
+public artifacts unchanged. Protected1,695-file/263-tracked-baseline checks and
+all20 original dedicated-store table fingerprints PASS. The discarded original
+ZIP remains excluded at the researcher's explicit request. Publication checks
+verify18 figure sets,22 table/aggregate views,135 current source-document links,
+1,709 suppressed aggregate bins, numeric claims and independently recomputed
+point contrasts. Nineteen additional entry/handover links PASS. Root still
+contains exactly one .env; no environment or dependency changes were needed.
+
+Reviewed/staged only intended safe reporting code, public artifacts, current
+documents and preserved documentation metadata. Work remains exclusively on
+the existing branch; pre-publication local/remote heads match the audit
+checkpoint, main/v3 and detached historical worktree are unchanged. Normal
+incremental commit, explicit push HEAD:refs/heads/v4 and remote equality are
+verified externally after publication; this log does not contain its own
+commit SHA. Detailed actual checks are in reports/thesis_completion_checks.json.
+
+Staged review preserves Matplotlib SVG path serialization byte-exactly. Scoped
+.gitattributes disables whitespace warnings only for the generated thesis SVGs;
+source/document whitespace checks remain enabled. No figure or manifest hash
+is changed by this repository formatting rule.

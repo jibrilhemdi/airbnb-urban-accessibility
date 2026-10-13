@@ -22,7 +22,7 @@ locations through the inventory. Their old blocked statuses are not rewritten.
 The new provider-geography and no-income amendments retire their corresponding
 old prerequisites; they do not certify population compatibility, licences,
 network quality or final fold support. The Rinkeby comparison is preserved in
-[its dated report](../v4/rinkeby_polygon_check_20261012.md).
+[its dated report](../../archive/previous_analysis/docs/rinkeby_polygon_check_20261012.md).
 
 New externally acquired files require immutable receipts containing source URL,
 acquisition UTC time, extent, reference/snapshot time, explicit CRS, checksum and

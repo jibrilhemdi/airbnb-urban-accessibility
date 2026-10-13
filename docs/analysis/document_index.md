@@ -40,6 +40,16 @@ documents and statuses remain historical evidence.
 | [Initial path inventory](path_inventory.json) | Pre-change bytes, compatibility extension and archived entries |
 | [Historical store inventory](historical_store.json) | Exact20 preserved dedicated-store table fingerprints |
 | [Exact researcher request](../../archive/research_request/request.txt) | User-authorized comprehensive scientific amendment |
+| [Thesis results](../../reports/research_results.md) | Primary factual basis for writing Results; all four RQs |
+| [RQ synthesis](../../reports/findings_by_research_question.md) | Eight required evidence/interpretation elements for each RQ |
+| [Thesis recommendations](../../reports/thesis_figure_recommendations.md) | Ten main figures, eight main tables and appendix placement |
+| [Final claims](../final_claims_for_thesis.md) | Supported, qualified, unsupported and prohibited interpretations |
+| [Initial thesis gap audit](../../reports/deliverable_gap_audit.md) | Immutable pre-generation inventory and required actions |
+| [Thesis artifact manifest](../../reports/thesis_artifact_manifest.json) | Final SQL source lineage and public output hashes |
+| [Synthesis manifest](../../reports/thesis_synthesis_manifest.json) | Generated document hashes and source table provenance |
+| [Exact reporting request](../../archive/research_request/reporting_completion.txt) | User-authorized reporting-only completion scope |
+| `outputs/release/README.md` | Safe figures, tables, metrics, reports, manifests and deterministic ZIP |
+| `outputs/release/manifests/release_manifest.json` | Bundled-file hashes and final source/RQ/publication identities |
 | [Prior entry snapshots](../../archive/previous_scope/README.md) | Preserved original instructions and entry documentation |
 
 `config/study/` holds canonical city/model registries and immutable selectors.
@@ -52,3 +62,8 @@ not a completion claim; the release audit and execution log establish status.
 Historical documents retain their original bytes and applied identifiers in the consolidated archive.
 They do not reactivate retired source/model prerequisites or provide final
 numerical results for the amended rerun.
+
+Thesis figure sets are in `outputs/figures/thesis/`; tables, metrics and
+diagnostics use the corresponding functional `thesis/` directories. Earlier
+research artifacts remain byte-identical. Reporting completion is separately
+certified from scientific model completion, with no new estimation.

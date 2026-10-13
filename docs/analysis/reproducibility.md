@@ -82,7 +82,7 @@ THESIS_STUDY_DB_TEST=1 .venv/bin/python -m unittest discover -s tests -v
 git diff --check
 ```
 
-The preservation inventory checks1,696 protected original files,263 archived/
+The current preservation inventory checks1,695 protected original files,263 archived/
 unchanged tracked baseline files,20 original dedicated-store tables, five
 protected analytical fingerprints and22 original migration hashes. These counts
 describe the preservation audit; public output hashes are recorded separately.
@@ -98,13 +98,13 @@ feature or threshold changes. The initial and publication inventories retain
 separate checksums. Actual association-execution status is distinguished from
 the frozen sample's earlier readiness label.
 
-After all fits and release audits completed, only the CLI status/entry guards
-were updated to expose the actual blocked release and refuse accidental refits.
+Before the association amendment, the CLI status/entry guards were updated to
+expose the then-blocked release and refuse accidental refits.
 Exact pre-release CLI bytes are archived at
 `archive/implementation/cli_before_release.py`; their checksum matches the
 fitted packages' source-code dependency. Analytical source/model modules remain
-unchanged. Status intentionally returns2 while the scientific inference gate is
-blocked; it still reports three fitted predictive cities and six completed transfers.
+unchanged. That historical status returned2 while inference was blocked; current
+status reports the completed amended scientific execution.
 
 The final code-snapshot audit also found an intermediate evaluation-driver
 digest recorded while primary fits were running, before transfer model-file
@@ -158,3 +158,38 @@ association coefficient figure. The immutable sample audit still records the
 historical 5% gate status; current execution comes from fresh selectors/audit.
 Older partial reports and all 72 preceding public artifacts remain byte-
 preserved at current or archived paths.
+
+## Reproducing the thesis reporting layer
+
+One root `.env`, one `requirements.txt` and the audited environment are used.
+The final source catalog pins all751 analytical packages, selected summaries,
+private prediction hashes and77 preceding public artifact hashes. Reporting
+reads SQL without fitting or modifying research packages. CSVs are documented
+aggregate exports, not replacement analytical stores.
+
+```sh
+make thesis-outputs
+make thesis-synthesis
+make thesis-check
+make thesis-science-check
+make thesis-release
+```
+
+Outputs are write-once; generation commands refuse to overwrite completed
+exports. Use the separate check commands to verify existing bytes. The explicit
+layout revision option applies only to an unpublished presentation draft,
+requires byte-identical numerical exports and archives its initial manifest.
+It cannot overwrite a certified thesis delivery. Reporting modules contain no
+scientific fit calls. The scientific checker reuses the existing read-only
+release verifier while capturing its report separately; it never overwrites
+the completed scientific audit. It reproduces primary and transfer RMSE from
+saved predictions and verifies all saved fitted pipeline bytes.
+
+`reports/thesis_artifact_manifest.json` registers every public output with its
+final run, RQ, generator and SHA256. `reports/thesis_synthesis_manifest.json`
+and `reports/numeric_claims_registry.json` trace generated prose to those
+outputs. New PNGs are300dpi, with PDF/SVG companions; aggregate cells and
+prediction-display bins suppress counts below five. Release manifests and the
+deterministic ZIP contain only reviewed figures, aggregate tables and documents.
+Markdown is authoritative; the repository has no supported active DOCX/PDF
+document-generation workflow for this four-RQ design.

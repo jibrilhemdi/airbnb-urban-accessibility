@@ -70,3 +70,16 @@ three predictive cities, three freshly rerun association cities, six preserved
 transfers and all required robustness checks completed. The discarded historical
 ZIP is explicitly excluded at the researcher's request; this exclusion is logged
 without deleting or rewriting its original manifest evidence.
+
+## Thesis reporting completion scope
+
+The [exact reporting request](../../archive/research_request/reporting_completion.txt)
+requires an expanded RQ-by-RQ deliverable audit, publication figures/tables,
+findings, claims, current proposal/plan and populated safe release. It authorizes
+read-only reconstruction from existing frozen predictions and summaries, not
+source acquisition, feature reconstruction, fitting, tuning or scientific
+amendments. Final SQL package identities and prior public output hashes are
+pinned before rendering. Historical artifacts and documentation are archived
+with exact checksums before active documentation is updated. Model completion
+alone does not certify thesis readiness. Authoritative documents are Markdown;
+the unsupported active DOCX/PDF document-export limitation is disclosed.
