@@ -130,3 +130,58 @@ files/263 non-entry tracked bytes unchanged. Compilation/whitespace PASS.
 `requirements-study.txt` pins the already installed openpyxl3.1.5 needed for
 reproducible spreadsheet decoding, preserving original requirements bytes.
 No final samples/folds/model fitting or transferred prediction is claimed.
+
+## Matched accessibility, samples and validation — 13 October 2026
+
+Context checkpoint8cdeb674357b09ef2d87ed98165691c783247e87 pushed only to
+recorded origin refs/heads/v4; remote/local equality verified.
+
+Rebuilt all three OSM destination universes and directed walking graphs from
+common historical2026-06-30T23:59:59Z queries. Sources/queries/receipts/checksums
+and failures preserved. Server dispatcher overload504s were resolved through
+smaller sequential tiles and bounded resource reservations. HTTP200 responses
+with timeout remarks remain UNQUALIFIED, never empty-destination evidence;
+Stockholm missing tiles were then completed. An output-mode implementation
+omission kept object centres but omitted geometry. Before fitting, acquired
+full geometry for the exact frozen destination IDs and verified matching
+versions/timestamps/tags. No taxonomy change, geometry repair or arbitrary
+coordinate fallback. One Copenhagen nonpolygon relation uses its source-
+provided object centre with separately recorded method; polygon/way points
+retain inherited projected on-surface/midpoint construction consistently.
+
+Retained inherited taxonomy/name/Wikidata/bus consolidation, directed foot
+permissions,5km/h, both connectors,10/15/20-minute budgets and matched rounded
+833/1250/1667m radii. Fresh source/graph/destination/feature QA is generated
+in accessibility audit; no historical derived feature/result is copied.
+
+Fresh common prediction samples: Copenhagen12408, Oslo8529, Stockholm2495.
+Every model uses the same rows/outcomes/folds. Price-reference samples remain
+separate before feature filtering. Common union complete-case association
+samples12285/8152/2348. Missing union predictors0.9913%/4.4202%/5.8918%.
+Stockholm inferential OLS is BLOCKED_MATERIAL_MISSINGNESS under the inherited
+5% guard; no median-imputed inferential substitute is authorized. Predictive
+OLS/XGBoost and transfer remain eligible with training-only preprocessing.
+
+All operational primary holdouts pass15-test/500-complementary-train after
+final common support, including Oslo Marka32 and Stockholm minimum38.
+Frozen primary neighbourhood, random5 and1/1.5/2km grids at zero/half-block
+origins; four source-training-only1km inner folds. Saved private memberships
+and samples are independently recomputed and hashed by prefit verifier.
+Final pre-fit report explicitly distinguishes predictive readiness from the
+Stockholm association gate. First read-only review report is preserved in
+history before this pre-fit annotation; no empirical fit had occurred.
+
+Historical baseline discovery caught new functional raw roots crossing into
+old source registration. Narrow explicit namespace exclusions added to that
+compatibility scanner; unknown legacy providers still fail. Original source
+code bytes are archived and both before/after hashes recorded in the inventory.
+No test assertion weakened, raw source moved/edited, historical row altered or
+applied migration changed. Rerun221 discovered,173 PASS,48 opt-in skipped;
+initial failed source-registration check is retained as a corrected failure.
+Current active26 discovered,22 PASS,4 opt-in DB skipped. Additional tests
+cover historical/new source isolation and HTTP200/timeout refusal.
+Protected1696 files, all archived/unchanged tracked baseline bytes,20 historical
+dedicated-store tables and five analytical SQL fingerprints PASS. Compilation
+and whitespace checks PASS. Four disposable PostGIS tests previously4/4 PASS;
+no schema change since. New source/model utilities are tests/implementation
+until empirical evaluation is executed; no completed model/transfer claim here.

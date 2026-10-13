@@ -1262,10 +1262,11 @@
     {
       "old_path": "src/db/sources.py",
       "functional_destination": "src/db/sources.py",
-      "action": "preserve_reuse_or_history",
+      "action": "extend_historical_source_isolation_with_exact_archived_code",
       "sha256_before": "a556e5bc1f91c1a11d55be8d2c6df2586c77be86ae59babdd1b0d352fdcf8fc2",
-      "sha256_after": "a556e5bc1f91c1a11d55be8d2c6df2586c77be86ae59babdd1b0d352fdcf8fc2",
-      "compatibility": "Historical object remains at original path; applied migrations/raw/receipts never renamed. New runner calls audited pure helpers only."
+      "sha256_after": "690c6203490045471dba3f59f744cd7d84371648dd75fa7dd9be8923510c6378",
+      "compatibility": "Explicit new-source roots excluded from old source registration; unknown legacy providers still fail. Original code preserved byte-for-byte; no raw files or historical SQL changed.",
+      "archive_path": "history/compatibility/db_sources.py"
     },
     {
       "old_path": "src/ingestion/__init__.py",

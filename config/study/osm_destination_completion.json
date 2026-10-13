@@ -1,0 +1,78 @@
+[
+  {
+    "source_url": "https://overpass-api.de/api/interpreter",
+    "city": "stockholm",
+    "role": "osm_destinations_completion",
+    "acquired_at_utc": "2026-10-13T01:29:36.949438+00:00",
+    "geographic_extent": {
+      "tile": 0,
+      "bbox_south_west_north_east": [
+        59.20930141418569,
+        17.725529622961805,
+        59.333767829572054,
+        17.980315212183605
+      ],
+      "full_extent": [
+        59.20930141418569,
+        17.725529622961805,
+        59.458234244958426,
+        18.23510080140541
+      ]
+    },
+    "source_crs": "EPSG:4326",
+    "licence": "ODbL; © OpenStreetMap contributors",
+    "snapshot": "2026-06-30T23:59:59Z",
+    "status": "transport_success_pending_validation",
+    "http_status": 200,
+    "failure": null,
+    "headers": {
+      "Last-Modified": null,
+      "ETag": null,
+      "Content-Type": "application/json"
+    },
+    "sha256": "7fd34796570476e6e2d1c711cfa7b01e123edaff70126bcc19582e4d14181541",
+    "size_bytes": 423601,
+    "request_body_sha256": "59dce4e50b0a2fee5cc247df7ac1049c6691436c97c2c906b36d1b06b9efb7b1",
+    "path": "data/raw/osm_destinations_completion/stockholm/20261013T012936949438Z/response.json",
+    "receipt_path": "data/raw/osm_destinations_completion/stockholm/20261013T012936949438Z/receipt.json",
+    "receipt_sha256": "ad467d0e0c0c0579e741882b0e472c20e42cb4b702dc09b97f756cf65ada9681"
+  },
+  {
+    "source_url": "https://overpass-api.de/api/interpreter",
+    "city": "stockholm",
+    "role": "osm_destinations_completion",
+    "acquired_at_utc": "2026-10-13T01:30:35.568453+00:00",
+    "geographic_extent": {
+      "tile": 2,
+      "bbox_south_west_north_east": [
+        59.333767829572054,
+        17.725529622961805,
+        59.458234244958426,
+        17.980315212183605
+      ],
+      "full_extent": [
+        59.20930141418569,
+        17.725529622961805,
+        59.458234244958426,
+        18.23510080140541
+      ]
+    },
+    "source_crs": "EPSG:4326",
+    "licence": "ODbL; © OpenStreetMap contributors",
+    "snapshot": "2026-06-30T23:59:59Z",
+    "status": "transport_success_pending_validation",
+    "http_status": 200,
+    "failure": null,
+    "headers": {
+      "Last-Modified": null,
+      "ETag": null,
+      "Content-Type": "application/json"
+    },
+    "sha256": "adce2ec317537e9ba007a0f31763b30b03a113b8e192515d0182808ce79c66fa",
+    "size_bytes": 746077,
+    "request_body_sha256": "9342b6943774ccfe529942b2706655bf9cd617bff0b52f4d4f44628e8eb4665e",
+    "path": "data/raw/osm_destinations_completion/stockholm/20261013T013035568453Z/response.json",
+    "receipt_path": "data/raw/osm_destinations_completion/stockholm/20261013T013035568453Z/receipt.json",
+    "receipt_sha256": "96e16193e85d27f4a6bfe09bfbc299c77750d5b62dcd928d428b7c9751ab31a6"
+  }
+]

@@ -9,9 +9,28 @@ from src.study.specification import load_design
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['status', 'design', 'setup', 'geography-freeze', 'geography-audit','context-freeze','context-audit'])
+    parser.add_argument('command', choices=['status', 'design', 'setup', 'geography-freeze', 'geography-audit','context-freeze','context-audit','accessibility-freeze','sample-freeze','prefit-freeze','within-city','transfer'])
+    parser.add_argument('--city',choices=['copenhagen','oslo','stockholm'])
+    parser.add_argument('--scheme',action='append')
     args = parser.parse_args(argv)
     design, cities = load_design()
+    if args.command=='sample-freeze':
+        from src.study.sample_freeze import freeze
+        freeze();return 0
+    if args.command=='prefit-freeze':
+        from src.study.evaluation import freeze_prefit
+        freeze_prefit();return 0
+    if args.command=='within-city':
+        if args.city is None:parser.error('--city is required')
+        from src.study.evaluation import run_within_city
+        run_within_city(args.city,args.scheme);return 0
+    if args.command=='transfer':
+        from src.study.evaluation import run_transfer
+        run_transfer();return 0
+    if args.command=='accessibility-freeze':
+        from src.study.workflows import freeze_accessibility
+        freeze_accessibility()
+        return 0
     if args.command in {'context-freeze','context-audit'}:
         from src.study.workflows import freeze_context,audit_context
         result=freeze_context() if args.command=='context-freeze' else audit_context()

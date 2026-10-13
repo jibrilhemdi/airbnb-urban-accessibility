@@ -1241,3 +1241,11 @@ OSM civic anchors11/17/11 units qualify with explicit source/vintage/denominator
 limits. See neutral execution log/generated context audit. Earlier A04 income
 mode, official-geometry and NULL-anchor evidence above remains immutable
 history; no final fitting/transfer completion is claimed.
+
+Comprehensive matched feature/sample/fold checkpoint: see neutral execution
+log and generated audits. Prediction samples12408/8529/2495, reference samples
+separate, all11/17/11 neighbourhood folds pass15/500. Stockholm association
+inference blocked at5.8918% union missingness, without an imputed substitute.
+Historical source scanner receives a documented scoped-root compatibility
+extension with archived original bytes. No historical scientific record is
+overwritten; predictive fitting/transfer completion still not claimed.

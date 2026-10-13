@@ -50,6 +50,11 @@ def verify(database=False):
     inventory = json.loads((ROOT / 'docs/analysis/path_inventory.json').read_text())
     changed = {'AGENTS.md', 'README.md', 'Makefile', '.gitignore', 'docs/v4/step_log.md'}
     for record in inventory['files']:
+        if record.get('action')=='extend_historical_source_isolation_with_exact_archived_code':
+            if (sha256_file(ROOT / record['archive_path'])!=record['sha256_before']
+                    or sha256_file(ROOT / record['old_path'])!=record['sha256_after']):
+                raise RuntimeError('Audited compatibility extension or original code bytes changed')
+            continue
         if record['old_path'] in changed:
             continue
         if sha256_file(ROOT / record['old_path']) != record['sha256_before']:

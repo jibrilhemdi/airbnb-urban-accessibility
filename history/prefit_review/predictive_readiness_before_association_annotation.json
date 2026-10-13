@@ -1,0 +1,90 @@
+{
+  "status": "READY",
+  "design_id": "three_city_accessibility_transfer",
+  "cities": {
+    "copenhagen": {
+      "geography": {
+        "run_id": "copenhagen_geography_20261013t010820402377z",
+        "summary_sha256": "133acd0e0c94f583a2d2bd1b2ccb931b52ebc1a398d51264bb53425d46b5cc0b"
+      },
+      "context": {
+        "run_id": "copenhagen_context_20261013t012354142379z",
+        "summary_sha256": "89919faccdd295158fb59a91a52aad51b2f4b52a0b2be178d1be16c27587772d"
+      },
+      "accessibility": {
+        "run_id": "copenhagen_accessibility_20261013t013729389414z",
+        "summary_sha256": "d70bbb1676d74ea763098e740ec10cfdd22d9058b9724802a20a5bdfcf3f8223"
+      },
+      "reference": {
+        "run_id": "copenhagen_reference_20261013t010826397169z",
+        "summary_sha256": "431dbb8989d4f6a19e5542acefaf7677ae2e86917f211f7ed1d4ebfea5d5033c"
+      },
+      "sample": {
+        "run_id": "copenhagen_sample_20261013t014237616829z",
+        "summary_sha256": "f9e7dc8b643e25942a207ebfde11caa4bdc3a870570658d18398ea69aed96f3e"
+      },
+      "validation": {
+        "run_id": "copenhagen_validation_20261013t014255808061z",
+        "summary_sha256": "50def7a107d7e089d03795b666b69674cdd2322fd6486811673a18f6b02167c3"
+      }
+    },
+    "oslo": {
+      "geography": {
+        "run_id": "oslo_geography_20261013t010830555916z",
+        "summary_sha256": "7e584dd425732d8df57421b3683f8ba3c60d730fd62b3617f8bdef6fcf8fbdc8"
+      },
+      "context": {
+        "run_id": "oslo_context_20261013t012401501027z",
+        "summary_sha256": "6620297ef5680002d1a310407b8560ed503b5ff5ed58beb97e12233175e30138"
+      },
+      "accessibility": {
+        "run_id": "oslo_accessibility_20261013t014007587110z",
+        "summary_sha256": "085ee8e37d1adfa6ea52aaaea0e3e3f4bc68c78aecb2f9e064d5920f6a1f1c4e"
+      },
+      "reference": {
+        "run_id": "oslo_reference_20261013t010833786311z",
+        "summary_sha256": "5e5b533b8542b86b6aab504711561b75ac9e698529820f31406d0a123b705410"
+      },
+      "sample": {
+        "run_id": "oslo_sample_20261013t014519442961z",
+        "summary_sha256": "3c55e819cf21bd1200edd815286458af7505e312854b5cf3f6b939a859264c42"
+      },
+      "validation": {
+        "run_id": "oslo_validation_20261013t014532783538z",
+        "summary_sha256": "604af9cabf58bc47f81378bf5866c50f7295fab31c462fba3756db9301cd8f4f"
+      }
+    },
+    "stockholm": {
+      "geography": {
+        "run_id": "stockholm_geography_20261013t010836230517z",
+        "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9"
+      },
+      "context": {
+        "run_id": "stockholm_context_20261013t012405484724z",
+        "summary_sha256": "f2a07c8bb008bb87d68feaf3aab4fe475cff7975172f105f6300884e13da95f0"
+      },
+      "accessibility": {
+        "run_id": "stockholm_accessibility_20261013t014037618568z",
+        "summary_sha256": "878552309d5a4fc6bc639e188b180285d04fe863a9e8f003d9fa6b93343399ec"
+      },
+      "reference": {
+        "run_id": "stockholm_reference_20261013t010837541611z",
+        "summary_sha256": "e904be076da3820ba40d49b71e176ca09c265a903c968021153222a2001ff4fa"
+      },
+      "sample": {
+        "run_id": "stockholm_sample_20261013t014730598505z",
+        "summary_sha256": "fb85fe4652493b9e2aec412193a2b67ca961e1d63f7ff61e4c578370e4f281c7"
+      },
+      "validation": {
+        "run_id": "stockholm_validation_20261013t014735145956z",
+        "summary_sha256": "b73c444eb532bcabb34b1303072db76786415128ece55cb56c99a0dc294db756"
+      }
+    }
+  },
+  "candidate_file_sha256": "35cd1586fc5386777f2aea044226130f000be7742e1ddb4585365d08f8d2a0ac",
+  "source_snapshot": "2026-06-30T23:59:59Z",
+  "income_required": false,
+  "housing_required": false,
+  "models_fitted_at_freeze": false,
+  "sample_and_fold_membership_verified": true
+}

@@ -1,0 +1,252 @@
+{
+  "copenhagen": {
+    "osm_network": [
+      {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "copenhagen",
+        "role": "osm_network",
+        "acquired_at_utc": "2026-10-13T01:09:13.477668+00:00",
+        "geographic_extent": {
+          "bbox_south_west_north_east": [
+            55.59489436933369,
+            12.421194977739088,
+            55.750660359932894,
+            12.766054747082915
+          ]
+        },
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "failed",
+        "http_status": 504,
+        "failure": "HTTP Error 504: Gateway Timeout",
+        "headers": {},
+        "sha256": "9e8d149c02b9ab7719f9e6cfdf696730c39abead6f27e39eb13793b7d2adbb82",
+        "size_bytes": 695,
+        "request_body_sha256": "f018a6be2ad79b63a4a7ccf12a1944253dc5bfffb39fbb6a0deaa9d5ff8ec3ac",
+        "path": "data/raw/osm_network/copenhagen/20261013T010913477668Z/response.json",
+        "receipt_path": "data/raw/osm_network/copenhagen/20261013T010913477668Z/receipt.json",
+        "receipt_sha256": "91fc15be71f9662760ad035af5d93e4a9e78bc3c13b454b183bf4bd4ee1d2f46"
+      },
+      {
+        "source_url": "https://overpass.kumi.systems/api/interpreter",
+        "city": "copenhagen",
+        "role": "osm_network",
+        "acquired_at_utc": "2026-10-13T01:09:22.590702+00:00",
+        "geographic_extent": {
+          "bbox_south_west_north_east": [
+            55.59489436933369,
+            12.421194977739088,
+            55.750660359932894,
+            12.766054747082915
+          ]
+        },
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "failed",
+        "http_status": 504,
+        "failure": "HTTP Error 504: Gateway Timeout",
+        "headers": {},
+        "sha256": "9e8d149c02b9ab7719f9e6cfdf696730c39abead6f27e39eb13793b7d2adbb82",
+        "size_bytes": 695,
+        "request_body_sha256": "f018a6be2ad79b63a4a7ccf12a1944253dc5bfffb39fbb6a0deaa9d5ff8ec3ac",
+        "path": "data/raw/osm_network/copenhagen/20261013T010922590702Z/response.json",
+        "receipt_path": "data/raw/osm_network/copenhagen/20261013T010922590702Z/receipt.json",
+        "receipt_sha256": "cbcedf6af24696509ea0abae438a4aebbc903105233b2c85065f62408045fee0"
+      }
+    ],
+    "osm_destinations": [
+      {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "copenhagen",
+        "role": "osm_destinations",
+        "acquired_at_utc": "2026-10-13T01:12:41.176024+00:00",
+        "geographic_extent": {
+          "bbox_south_west_north_east": [
+            55.59489436933369,
+            12.421194977739088,
+            55.750660359932894,
+            12.766054747082915
+          ]
+        },
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": null,
+          "ETag": null,
+          "Content-Type": "application/json"
+        },
+        "sha256": "cbd300693a09f8fac3535a359110ca1ebef28410d3d4de5f16c6433ad8ab5338",
+        "size_bytes": 3315891,
+        "request_body_sha256": "1431e8c8a0b9f1aa70e423e91b0db23a549bd21d4a8f142778ceba7a7ddb55f5",
+        "path": "data/raw/osm_destinations/copenhagen/20261013T011241176024Z/response.json",
+        "receipt_path": "data/raw/osm_destinations/copenhagen/20261013T011241176024Z/receipt.json",
+        "receipt_sha256": "0523f4a434b429c9035c4fc8f12d2fd41e428c0ab36ebff6ed36123e242bbdad"
+      }
+    ]
+  },
+  "oslo": {
+    "osm_network": [
+      {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "oslo",
+        "role": "osm_network",
+        "acquired_at_utc": "2026-10-13T01:09:13.477912+00:00",
+        "geographic_extent": {
+          "bbox_south_west_north_east": [
+            59.791364204225204,
+            10.453325837286672,
+            60.15304292349523,
+            10.98716540130197
+          ]
+        },
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": null,
+          "ETag": null,
+          "Content-Type": "application/json"
+        },
+        "sha256": "09a4b77cce98c1a13cc9ce9a041cee43ea31fb85c9c25e48c084e5176b58c847",
+        "size_bytes": 143550687,
+        "request_body_sha256": "2f116d1978a9c3d4a70d2ce2fcb96fb5fd4fd6ebd62cc04b28c2c85a2cb16ef0",
+        "path": "data/raw/osm_network/oslo/20261013T010913477912Z/response.json",
+        "receipt_path": "data/raw/osm_network/oslo/20261013T010913477912Z/receipt.json",
+        "receipt_sha256": "6125335e02bccb807383e93a91debb8c132a54c73a60d0a072e27e1fce30f48e"
+      }
+    ],
+    "osm_destinations": [
+      {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "oslo",
+        "role": "osm_destinations",
+        "acquired_at_utc": "2026-10-13T01:09:54.778915+00:00",
+        "geographic_extent": {
+          "bbox_south_west_north_east": [
+            59.791364204225204,
+            10.453325837286672,
+            60.15304292349523,
+            10.98716540130197
+          ]
+        },
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": null,
+          "ETag": null,
+          "Content-Type": "application/json"
+        },
+        "sha256": "d5b5a90d3e934294a5322266c5c08b0579f93c5fe8e9f0030a79f47303e8c7dd",
+        "size_bytes": 4813437,
+        "request_body_sha256": "f367a5da6cb2bd27bcdf912f75167e82b2087acf71a5960ac6d40f373016d6da",
+        "path": "data/raw/osm_destinations/oslo/20261013T010954778915Z/response.json",
+        "receipt_path": "data/raw/osm_destinations/oslo/20261013T010954778915Z/receipt.json",
+        "receipt_sha256": "e4f3e903c0286a84377fcc3f25a1396c7a3f7a34176940b0b764ba2829861dc4"
+      }
+    ]
+  },
+  "stockholm": {
+    "osm_network": [
+      {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "stockholm",
+        "role": "osm_network",
+        "acquired_at_utc": "2026-10-13T01:09:13.478046+00:00",
+        "geographic_extent": {
+          "bbox_south_west_north_east": [
+            59.20930141418569,
+            17.725529622961805,
+            59.458234244958426,
+            18.23510080140541
+          ]
+        },
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": null,
+          "ETag": null,
+          "Content-Type": "application/json"
+        },
+        "sha256": "4484fa46907bfb65eaa186e492aa96fc8c2a8f7c083f74c7436dc7dd40046268",
+        "size_bytes": 122773464,
+        "request_body_sha256": "38ad03c855278bfa8d51b6b93fce93c3e41384c5bd3458bdfd08c07915abb9bb",
+        "path": "data/raw/osm_network/stockholm/20261013T010913478046Z/response.json",
+        "receipt_path": "data/raw/osm_network/stockholm/20261013T010913478046Z/receipt.json",
+        "receipt_sha256": "967cc2d88f32128373fecf7166cf71569521d2b3b92814a8af5007c1daee2803"
+      }
+    ],
+    "osm_destinations": [
+      {
+        "source_url": "https://overpass-api.de/api/interpreter",
+        "city": "stockholm",
+        "role": "osm_destinations",
+        "acquired_at_utc": "2026-10-13T01:09:56.290425+00:00",
+        "geographic_extent": {
+          "bbox_south_west_north_east": [
+            59.20930141418569,
+            17.725529622961805,
+            59.458234244958426,
+            18.23510080140541
+          ]
+        },
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "failed",
+        "http_status": 504,
+        "failure": "HTTP Error 504: Gateway Timeout",
+        "headers": {},
+        "sha256": "9e8d149c02b9ab7719f9e6cfdf696730c39abead6f27e39eb13793b7d2adbb82",
+        "size_bytes": 695,
+        "request_body_sha256": "25bdc8aef89fe99dbb55674980017457bf93ee7c869f0996dc56511105348b1e",
+        "path": "data/raw/osm_destinations/stockholm/20261013T010956290425Z/response.json",
+        "receipt_path": "data/raw/osm_destinations/stockholm/20261013T010956290425Z/receipt.json",
+        "receipt_sha256": "92dfb21986af6ad8478f0c0f5d578a43490394a2aa3a97709abd6616c39dd03c"
+      },
+      {
+        "source_url": "https://overpass.kumi.systems/api/interpreter",
+        "city": "stockholm",
+        "role": "osm_destinations",
+        "acquired_at_utc": "2026-10-13T01:10:05.099557+00:00",
+        "geographic_extent": {
+          "bbox_south_west_north_east": [
+            59.20930141418569,
+            17.725529622961805,
+            59.458234244958426,
+            18.23510080140541
+          ]
+        },
+        "source_crs": "EPSG:4326",
+        "licence": "ODbL; © OpenStreetMap contributors",
+        "snapshot": "2026-06-30T23:59:59Z",
+        "status": "failed",
+        "http_status": 504,
+        "failure": "HTTP Error 504: Gateway Timeout",
+        "headers": {},
+        "sha256": "9e8d149c02b9ab7719f9e6cfdf696730c39abead6f27e39eb13793b7d2adbb82",
+        "size_bytes": 695,
+        "request_body_sha256": "25bdc8aef89fe99dbb55674980017457bf93ee7c869f0996dc56511105348b1e",
+        "path": "data/raw/osm_destinations/stockholm/20261013T011005099557Z/response.json",
+        "receipt_path": "data/raw/osm_destinations/stockholm/20261013T011005099557Z/receipt.json",
+        "receipt_sha256": "3f894f3db7cc322f8422fb5470a7bc03fca9aa1e9ae93fb7d678215f46444f73"
+      }
+    ]
+  }
+}

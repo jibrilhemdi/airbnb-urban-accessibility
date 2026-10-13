@@ -30,7 +30,8 @@ def load_design(root=PROJECT_ROOT):
     expected = {'M0': x, 'ME': x + e, 'MW': x + w, 'MEW': x + e + w}
     if design['models'] != expected:
         raise ValueError('Four exact common X/E/W models required')
-    if any(re.search(r'income|housing|residential_price|rent_price', f, re.I) for f in x+e+w):
+    forbidden_outcomes={'price_nightly','log_price','relative_log_price','mean_log_price','mu_c','y_actual','y_relative','H'}
+    if any(f in forbidden_outcomes or re.search(r'income|housing|residential_price|rent_price', f, re.I) for f in x+e+w):
         raise ValueError('Excluded scientific dependency in feature registry')
     if any(len(v) != len(set(v)) for v in expected.values()):
         raise ValueError('Duplicate feature membership')

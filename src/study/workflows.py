@@ -133,3 +133,46 @@ def audit_context(export=False):
     finally:engine.dispose()
     if export:write_once(PROJECT_ROOT/'docs/analysis/context_audit.json',(json.dumps(result,indent=2,ensure_ascii=False)+'\n').encode())
     return result
+
+
+def freeze_accessibility():
+    from src.study.accessibility import elements,complete_geometry,pedestrian_graph,destinations,measurements
+    from src.study.specification import load_design
+    import gc
+    target=PROJECT_ROOT/'config/study/accessibility_selection.json'
+    if target.exists():raise ValueError('Accessibility already frozen; refuse replacement')
+    sources=json.loads((PROJECT_ROOT/'config/study/osm_sources.json').read_text())
+    design,cities=load_design();engine=get_engine();selected={};public={}
+    try:
+        for city in CITIES:
+            with engine.connect() as conn:
+                conn.exec_driver_sql('SET TRANSACTION READ ONLY')
+                rows,_,listing=historical_inputs(conn,city)
+            eligible=[r for r in rows if r['dwelling_eligible'] and r['positive_price'] and r['inside_boundary']]
+            del rows
+            dst,dst_qa=destinations(complete_geometry(city,elements(sources[city]['osm_destinations'])),cities[city]['metric_crs'])
+            print(city,'destinations qualified',dst_qa['canonical_counts'],flush=True)
+            document=elements(sources[city]['osm_network'])
+            graph,metric,graph_qa=pedestrian_graph(document,cities[city]['metric_crs'])
+            del document;gc.collect()
+            print(city,'graph qualified',graph_qa['nodes'],graph_qa['arcs'],flush=True)
+            extent=sources[city]['osm_network'][0]['geographic_extent']
+            bbox=extent.get('full_extent',extent.get('bbox_south_west_north_east'))
+            features,measurement_qa=measurements(graph,metric,dst,eligible,bbox,cities[city]['metric_crs'])
+            del graph,metric;gc.collect()
+            summary={'city':city,'status':'FEATURES_RECOMPUTED_PENDING_SAMPLE_FOLD_QA','source_snapshot':design['accessibility']['preferred_osm_timestamp'],
+                     'listing_source':listing,'graph':graph_qa,'destinations':dst_qa,'measurements':measurement_qa,
+                     'destination_universe_sha256':canonical_hash(dst),'records_sha256':canonical_hash(features),
+                     'feature_n':len(features),'historical_features_reused':False,'empirical_models_fitted':False}
+            with engine.begin() as conn:
+                identity=commit_package(conn,city=city,family='accessibility',summary=summary,
+                                        records={'features':features,'destinations':dst},deps=dependencies({'osm_sources':sources[city],
+                                          'destination_geometry':json.loads((PROJECT_ROOT/'config/study/destination_geometry_sources.json').read_text())[city],
+                                          'listing_source':listing}))
+            selected[city]={'run_id':identity,'summary_sha256':canonical_hash(summary)};public[city]=summary
+            print(city,'fresh matched features stored',len(features),measurement_qa['counts'],flush=True)
+            del features,dst,eligible;gc.collect()
+        write_once(target,(json.dumps(selected,indent=2)+'\n').encode())
+        write_once(PROJECT_ROOT/'docs/analysis/accessibility_audit.json',(json.dumps(public,indent=2,ensure_ascii=False)+'\n').encode())
+    finally:engine.dispose()
+    return public
