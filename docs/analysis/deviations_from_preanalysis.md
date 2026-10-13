@@ -31,3 +31,11 @@ sensitivities, never replacements for the primary predictive ladder.
 Scientific blockers remain blockers. The final report and exhaustive robustness
 registry distinguish COMPLETE, INFEASIBLE, NOT_APPLICABLE and BLOCKED. A safe
 documentation checkpoint does not waive Stockholm's inference gate.
+
+## Post-observation amendment of the association gate
+
+The researcher changed 5% to 10% globally after seeing Stockholm's 5.891783567%
+source missingness. This is disclosed as a methodological amendment, not
+preregistration or a universal standard. Complete-case rows and all inference
+procedures remain unchanged; no values are filled. Earlier 5% blocker records
+above describe the prior checkpoint. See the [dated amendment](association_missingness_amendment_20261013.md).

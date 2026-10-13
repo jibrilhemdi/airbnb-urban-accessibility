@@ -1,0 +1,184 @@
+PYTHON ?= .venv/bin/python
+.DEFAULT_GOAL := study-status
+.PHONY: study-status study-design study-test study-setup study-geography-freeze study-geography-audit study-test-db
+study-status:
+	$(PYTHON) -m src.study.cli status
+study-design:
+	$(PYTHON) -m src.study.cli design
+study-test:
+	$(PYTHON) -m unittest discover -s tests -p 'test_study*.py' -v
+study-test-db:
+	THESIS_STUDY_DB_TEST=1 $(PYTHON) -m unittest discover -s tests -p 'test_study_store.py' -v
+study-setup:
+	$(PYTHON) -m src.study.cli setup
+study-geography-freeze:
+	$(PYTHON) -m src.study.cli geography-freeze
+study-geography-audit:
+	$(PYTHON) -m src.study.cli geography-audit
+.PHONY: study-context-freeze study-context-audit
+study-context-freeze:
+	$(PYTHON) -m src.study.cli context-freeze
+study-context-audit:
+	$(PYTHON) -m src.study.cli context-audit
+
+STUDY_CITY ?= copenhagen
+STUDY_SCHEME ?= neighbourhood
+.PHONY: study-sample-freeze study-prefit-freeze study-within-city study-transfer study-association study-spatial study-robustness study-training-sensitivity study-measurements study-finish study-report study-preservation
+study-sample-freeze:
+	$(PYTHON) -m src.study.cli sample-freeze
+study-prefit-freeze:
+	$(PYTHON) -m src.study.cli prefit-freeze
+study-within-city:
+	$(PYTHON) -m src.study.cli within-city --city "$(STUDY_CITY)" --scheme "$(STUDY_SCHEME)"
+study-transfer:
+	$(PYTHON) -m src.study.cli transfer
+study-association:
+	$(PYTHON) -m src.reporting.study_diagnostics
+study-spatial:
+	$(PYTHON) -m src.reporting.study_spatial
+study-robustness:
+	$(PYTHON) -m src.reporting.study_robustness --city "$(STUDY_CITY)"
+study-training-sensitivity:
+	$(PYTHON) -m src.reporting.study_training_sensitivity --city "$(STUDY_CITY)"
+study-measurements:
+	$(PYTHON) -m src.reporting.study_measurement_sensitivity
+study-finish:
+	$(PYTHON) scripts/study_finish_queue.py
+study-report:
+	$(PYTHON) -m src.reporting.study_report
+study-preservation:
+	$(PYTHON) scripts/study_preservation.py --verify-store --database
+
+# Remaining interfaces below reproduce preserved historical workflows.
+.PHONY: db-up db-down db-connect db-psql db-diagnose db-migrate db-check db-register compile test integration-test preflight smoke pipeline reproduce audit candidates migration-audit income-evidence income-deciles income-audit income-docs municipal-income-evidence
+
+db-up:
+	docker compose --env-file .env up -d --wait --wait-timeout 120 db
+
+db-down:
+	docker compose --env-file .env down
+
+db-connect:
+	$(PYTHON) -m src.db.cli connect
+
+db-psql:
+	docker compose --env-file .env exec db sh -c 'exec psql -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"'
+
+db-diagnose:
+	$(PYTHON) -m src.db.diagnose
+
+db-migrate:
+	$(PYTHON) -m src.db.cli migrate
+
+db-check:
+	$(PYTHON) -m src.db.cli check
+
+db-register:
+	$(PYTHON) -m src.db.cli register-sources
+
+compile:
+	$(PYTHON) -m compileall src
+
+test:
+	$(PYTHON) -m unittest discover -s tests -v
+
+integration-test:
+	THESIS_DB_TEST=1 THESIS_V3_INTEGRATION=1 $(PYTHON) -m unittest discover -s tests -v
+
+preflight:
+	$(PYTHON) -m src.pipeline.run_pipeline --preflight
+
+smoke:
+	$(PYTHON) -m src.pipeline.run_pipeline --smoke
+
+candidates:
+	$(PYTHON) -m src.pipeline.build_tuning_candidates
+
+pipeline reproduce:
+	$(PYTHON) -m src.pipeline.run_pipeline --run
+
+audit:
+	$(PYTHON) -m src.pipeline.audit_reproducibility --repository-only
+
+migration-audit:
+	$(PYTHON) -m src.pipeline.build_migration_audit
+
+income-evidence:
+	$(PYTHON) -m src.ingestion.acquire_income_evidence
+
+income-deciles:
+	$(PYTHON) -m src.ingestion.acquire_income_evidence --deciles
+
+income-audit:
+	$(PYTHON) -m src.pipeline.qualified_income
+
+municipal-income-evidence:
+	$(PYTHON) -m src.ingestion.acquire_municipal_income_evidence
+
+income-docs:
+	$(PYTHON) -m src.pipeline.update_income_documentation
+
+.PHONY: reporting
+reporting:
+	$(PYTHON) -m src.pipeline.render_reporting_figures
+
+# V4 commands require explicit identity; setup never creates/drops databases.
+DESIGN_ID ?= v4_accessibility_only_20261011
+V4_SCIENCE_ARGS = $(V4_ARGS) --design-id "$(DESIGN_ID)"
+V4_ARGS = --version "$(VERSION)" --city "$(CITY)" --snapshot "$(SNAPSHOT)" --run-id "$(RUN_ID)"
+.PHONY: v4-setup v4-test v4-test-db v4-preflight v4-run v4-report
+v4-setup:
+	$(PYTHON) -m src.v4.cli setup $(V4_SCIENCE_ARGS)
+
+v4-test:
+	THESIS_V4_DB_TEST=0 $(PYTHON) -m unittest discover -s tests -p 'test_v4*.py' -v
+
+v4-test-db:
+	THESIS_V4_DB_TEST=1 $(PYTHON) -m unittest discover -s tests -p 'test_v4_persistence.py' -v
+
+v4-preflight:
+	$(PYTHON) -m src.v4.cli preflight $(V4_SCIENCE_ARGS) $(V4_PREFLIGHT_FLAGS)
+
+v4-run:
+	$(PYTHON) -m src.v4.cli run $(V4_SCIENCE_ARGS) $(V4_PREFLIGHT_FLAGS)
+
+v4-report:
+	$(PYTHON) -m src.v4.cli report $(V4_SCIENCE_ARGS)
+
+.PHONY: v4-acquire v4-ingest v4-listing-audit
+v4-acquire:
+	$(PYTHON) -m src.v4.listings acquire $(V4_ARGS)
+
+v4-ingest:
+	$(PYTHON) -m src.v4.listings ingest $(V4_ARGS)
+
+v4-listing-audit:
+	$(PYTHON) -m src.v4.listings audit $(V4_ARGS)
+
+.PHONY: v4-stockholm-boundary
+v4-stockholm-boundary:
+	$(PYTHON) -m src.v4.stockholm_boundary ingest $(V4_ARGS) --previous-run-id $(PREVIOUS_RUN_ID)
+
+.PHONY: v4-housing-acquire v4-housing-ingest v4-housing-audit
+v4-housing-acquire:
+	$(PYTHON) -m src.v4.housing acquire $(V4_ARGS)
+v4-housing-ingest:
+	$(PYTHON) -m src.v4.housing ingest $(V4_ARGS)
+v4-housing-audit:
+	$(PYTHON) -m src.v4.housing audit $(V4_ARGS)
+
+.PHONY: v4-geography-freeze v4-geography-audit
+# A03 only; reuse approved listing scopes, never execute models/routes/final folds.
+v4-geography-freeze:
+	$(PYTHON) -m src.v4.geography freeze $(V4_SCIENCE_ARGS)
+v4-geography-audit:
+	$(PYTHON) -m src.v4.geography audit $(V4_SCIENCE_ARGS)
+
+.PHONY: v4-context-acquire v4-context-freeze v4-context-audit
+# A04 native source qualification; no new-city listing joins, routes or fits.
+v4-context-acquire:
+	$(PYTHON) -m src.v4.context acquire $(V4_SCIENCE_ARGS)
+v4-context-freeze:
+	$(PYTHON) -m src.v4.context freeze $(V4_SCIENCE_ARGS)
+v4-context-audit:
+	$(PYTHON) -m src.v4.context audit $(V4_SCIENCE_ARGS)

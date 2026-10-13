@@ -1,0 +1,297 @@
+[
+  {
+    "path": "outputs/tables/research/association_coefficients.csv",
+    "bytes": 46603,
+    "sha256": "d869a0e969a747b59860fc25b5196746a14b85fdec08ec1a87e032bf1427338b"
+  },
+  {
+    "path": "outputs/tables/research/association_vif.csv",
+    "bytes": 10215,
+    "sha256": "fda0da7fa33a0efdb1363f0cf5b15f5d2caf602fa5f5bf3c4b18aa102ae5dccc"
+  },
+  {
+    "path": "outputs/tables/research/city_comparability.csv",
+    "bytes": 378,
+    "sha256": "5f93aeafb60aa9494d6f526af52aeff01f3d962edd39cb1a2089a0a1c0ca8326"
+  },
+  {
+    "path": "outputs/tables/research/contribution_summary.csv",
+    "bytes": 110159,
+    "sha256": "3308f3bc163bf6eea8d7f754905760fae65a5159fca000012dbd33663441d746"
+  },
+  {
+    "path": "outputs/tables/research/contribution_summary.json",
+    "bytes": 253559,
+    "sha256": "1e178f6a8bd7885664b0af0f01adfe56ba90f165140f2c823770fcd972e3f4f2"
+  },
+  {
+    "path": "outputs/tables/research/directional_asymmetry.csv",
+    "bytes": 2751,
+    "sha256": "adf633b55bf1d592cd05441c30b7bfe2f9c057045e03295f5dbc3cb523d84df4"
+  },
+  {
+    "path": "outputs/tables/research/geography_groups.csv",
+    "bytes": 2950,
+    "sha256": "2b08a0f8ac3c870a5a4ccfec90c801d0b0b1c5c1719fc82387232d2508edf7d4"
+  },
+  {
+    "path": "outputs/tables/research/measurement_comparison.csv",
+    "bytes": 1733,
+    "sha256": "ada530ca5123a5cdd86c9fc1437f3655e04928d9491d30aa9dc931a0dd8f16ab"
+  },
+  {
+    "path": "outputs/tables/research/measurement_distributions.json",
+    "bytes": 20428,
+    "sha256": "62d4e66e01551a6801f480165ce32c4a5a58fc6a143649f436f00300159e6a06"
+  },
+  {
+    "path": "outputs/tables/research/measurement_histograms.json",
+    "bytes": 18296,
+    "sha256": "23c8c5a1bad996114ed2935809788635f987e1c095ff65759affc2b7f7a3fa12"
+  },
+  {
+    "path": "outputs/tables/research/native_density_units.csv",
+    "bytes": 9446,
+    "sha256": "88e816c3aa980a7d3c8689fa8c312a2fa48db64ef276c956609e653e0d8a9704"
+  },
+  {
+    "path": "outputs/tables/research/new_source_receipts.csv",
+    "bytes": 11565,
+    "sha256": "5f07c80be45bedc8c13564b4a95845f81c6488787f89da9a64dd8d9de99227da"
+  },
+  {
+    "path": "outputs/tables/research/price_references.csv",
+    "bytes": 225,
+    "sha256": "8c597e4820d0f6081d80f0aa279d109a2be02fef0a3573ea0f65f102d2a9e601"
+  },
+  {
+    "path": "outputs/tables/research/reused_source_receipts.csv",
+    "bytes": 3564,
+    "sha256": "fa8c7ebfae706d54c00f0e6ede1672345c0ba0f2be0f3666d1f970f9a109fa7e"
+  },
+  {
+    "path": "outputs/tables/research/robustness_performance.csv",
+    "bytes": 40281,
+    "sha256": "978ed25e2dcd489d8673c329097d191a908cfbe54d178d0974b3e3ac2601b82f"
+  },
+  {
+    "path": "outputs/tables/research/robustness_registry.csv",
+    "bytes": 76884,
+    "sha256": "51cfa6169dccec1b278aa7c2b77e6c8a730a09ea74df4b2ce14bb79d47ca26f8"
+  },
+  {
+    "path": "outputs/tables/research/safe_accessibility_cells.csv",
+    "bytes": 42511,
+    "sha256": "cb343e25df4eb59ba5cd54462deff57404627e7b0b0b39836eccce0f5f3c748d"
+  },
+  {
+    "path": "outputs/tables/research/sample_flow.csv",
+    "bytes": 939,
+    "sha256": "16126f75a617ce3e949f3b036ccccaa134bee93359c98b5cdff8a885a15d756f"
+  },
+  {
+    "path": "outputs/tables/research/spatial_association_coefficients.csv",
+    "bytes": 73594,
+    "sha256": "f604fe26026edc739c860a52c5b89ddf8af382afdc11a53653505b90c691a854"
+  },
+  {
+    "path": "outputs/tables/research/transfer_accessibility_contrasts.csv",
+    "bytes": 13363,
+    "sha256": "c17b007e19692bd8db46e869d19e7c4ebde058c86f94699a6d68f979ba01db16"
+  },
+  {
+    "path": "outputs/tables/research/transfer_calibration.csv",
+    "bytes": 11716,
+    "sha256": "5f0f882882ad84b407797ad3e202c728cf9e7789e8fba86c80d71bf0850b249c"
+  },
+  {
+    "path": "outputs/tables/research/transfer_calibration.json",
+    "bytes": 24938,
+    "sha256": "346897d80e0baced7e6d0fb49057adb7534117f6e300ac57fb96aedf4eab1dc1"
+  },
+  {
+    "path": "outputs/tables/research/transfer_model_hash_audit.json",
+    "bytes": 8959,
+    "sha256": "0939372d907f40e9fb1f0359c0b1bf76847bad80779f2d0d7305c64980c6adfa"
+  },
+  {
+    "path": "outputs/tables/research/transfer_performance.csv",
+    "bytes": 6191,
+    "sha256": "085e7544bf817ab32a348f144e6cbceee36f3d4fc8e252619dd9dec2c90723d4"
+  },
+  {
+    "path": "outputs/tables/research/validation_comparison.csv",
+    "bytes": 23968,
+    "sha256": "08af92363c572f0f92554aca3cb63e7149d67b207f3124570a2fb3f8ce751966"
+  },
+  {
+    "path": "outputs/tables/research/within_city_performance.csv",
+    "bytes": 3250,
+    "sha256": "dc6bcf148bcd2b8cf640f3af30ebc09916bf410a6f7f1e70d252aeb6601ce402"
+  },
+  {
+    "path": "outputs/figures/research/accessibility_cells.png",
+    "bytes": 125586,
+    "sha256": "a594dca041db58d9caf2e650cc84a949585af685043cf68c1a1a81aca91368ac"
+  },
+  {
+    "path": "outputs/figures/research/accessibility_gains.png",
+    "bytes": 50540,
+    "sha256": "ec0997076706ef885ce52d3ceff5a154ce857854b7aa40667cf71b3fc6358c59"
+  },
+  {
+    "path": "outputs/figures/research/heldout_contributions.png",
+    "bytes": 73456,
+    "sha256": "4a3525da70067eb5fa27f9cbe41a5958895f7b2302def54ebd81e4d159588380"
+  },
+  {
+    "path": "outputs/figures/research/heldout_contributions_publication.png",
+    "bytes": 74101,
+    "sha256": "5462129a7a697c6b3b5ec3bb759562b666919472f98ce18664f2b8ba7c1f68af"
+  },
+  {
+    "path": "outputs/figures/research/nearest_distance_distributions.png",
+    "bytes": 60101,
+    "sha256": "649a0e8a5d21bb873741b3009a82eda2263b39237f701f2ba12ed7a39b410fdf"
+  },
+  {
+    "path": "outputs/figures/research/ols_transfer_gains.png",
+    "bytes": 59631,
+    "sha256": "c8de5f79ad277f102dc95d4d8915e83cb83d9dad5e8ff6b29c0d8274a20d8e4c"
+  },
+  {
+    "path": "outputs/figures/research/ols_transfer_matrix.png",
+    "bytes": 54991,
+    "sha256": "f3a070362cfe8ac1ecb615731af72119f1856401aff5c0ff0075770f21b25049"
+  },
+  {
+    "path": "outputs/figures/research/opportunity_comparison.png",
+    "bytes": 28002,
+    "sha256": "b355d2d517aef0ed6376efb6d36799257187a8c4a5b2740bdf04aaeb96b3b99a"
+  },
+  {
+    "path": "outputs/figures/research/transfer_bias.png",
+    "bytes": 38719,
+    "sha256": "55d315f44022578e21a21fd4d85cbdce48bc3da564bcda1fc3a73dca49a7d9ea"
+  },
+  {
+    "path": "outputs/figures/research/validation_comparison.png",
+    "bytes": 133117,
+    "sha256": "99188c10999bd4a07e5e59688d3d94c48c7f01d365830d1614df61bcbc2b2fcc"
+  },
+  {
+    "path": "outputs/figures/research/within_city_performance.png",
+    "bytes": 88191,
+    "sha256": "a50cf79c8cda59a4c96bd125cc79b0d5bfcb0151798a223983c2a3b371dbb962"
+  },
+  {
+    "path": "outputs/figures/research/xgboost_transfer_gains.png",
+    "bytes": 63061,
+    "sha256": "b1537ec5806e40c8207c17f8a797870e3416ca86f1abd7828ec26b60e98f87ba"
+  },
+  {
+    "path": "outputs/figures/research/xgboost_transfer_matrix.png",
+    "bytes": 55178,
+    "sha256": "95d6980922a41089755c4556d8f5f1d20e22a2779cf4622ae90c5b86627458a7"
+  },
+  {
+    "path": "outputs/metrics/neighbourhood/paired_contrasts.csv",
+    "bytes": 6917,
+    "sha256": "377b089c5f3557066c28d2f49a7f11414612034b16af082fde1e171536946d48"
+  },
+  {
+    "path": "outputs/metrics/neighbourhood/performance.csv",
+    "bytes": 3250,
+    "sha256": "56cd5a43322bd3bd2ecf6190388e1d283495309423e15c4a24adbc89b3fab816"
+  },
+  {
+    "path": "outputs/metrics/random/paired_contrasts.csv",
+    "bytes": 6759,
+    "sha256": "6476fb5156070d80a438188645448f4bbe0507dd6a660d5c891a311f3ea2092c"
+  },
+  {
+    "path": "outputs/metrics/random/performance.csv",
+    "bytes": 3087,
+    "sha256": "fa71f9e15d0a72b234861b2be406e2793a2810d5756263514c348e3064118ebf"
+  },
+  {
+    "path": "outputs/metrics/transfer/paired_contrasts.csv",
+    "bytes": 13363,
+    "sha256": "5d5e2941fd220aa9a0050f03f6965d5eb4e5891b9e93ff436493c1440dc64320"
+  },
+  {
+    "path": "outputs/metrics/transfer/performance.csv",
+    "bytes": 6191,
+    "sha256": "dd128e99bb569408d2e9fa72486ce7f611ac9083ef1b0c8d7576952fcaae73a8"
+  },
+  {
+    "path": "outputs/metrics/robustness/paired_contrasts.csv",
+    "bytes": 85709,
+    "sha256": "ef43118a9ee63587a72adc12e0822d8413d0e9be87366cca7ed10b91f63ab0c2"
+  },
+  {
+    "path": "outputs/metrics/robustness/performance.csv",
+    "bytes": 40281,
+    "sha256": "90ac1b548ecd82d795f290258a778979c7fa611bae3c41b76922d36d37561cc8"
+  },
+  {
+    "path": "outputs/metrics/blocks_1000m_origin_0_0/paired_contrasts.csv",
+    "bytes": 7227,
+    "sha256": "d5313a44e1265da2953a9b88f92e13f2ffba6063c25d477fb4215ba349fb8eaa"
+  },
+  {
+    "path": "outputs/metrics/blocks_1000m_origin_0_0/performance.csv",
+    "bytes": 3492,
+    "sha256": "673836f708237e2ab4a8167d1d90b949b50b3480efcc295dc820de01a27b3695"
+  },
+  {
+    "path": "outputs/metrics/blocks_1000m_origin_0p5_0p5/paired_contrasts.csv",
+    "bytes": 7365,
+    "sha256": "7238272f909d26d5e2e4af20d245f89f416f212d197e7da173c531df0c9dd6b6"
+  },
+  {
+    "path": "outputs/metrics/blocks_1000m_origin_0p5_0p5/performance.csv",
+    "bytes": 3593,
+    "sha256": "22beb3ca05afa101919aa8cfb6143d6a7089914a64ab5ae88146af4fbaed60b4"
+  },
+  {
+    "path": "outputs/metrics/blocks_1500m_origin_0_0/paired_contrasts.csv",
+    "bytes": 7239,
+    "sha256": "9e96fd53bffe90c0a6be6ae656939466ad450a72c98aac8370a7b452a393c148"
+  },
+  {
+    "path": "outputs/metrics/blocks_1500m_origin_0_0/performance.csv",
+    "bytes": 3492,
+    "sha256": "6b8a91790946d6b631e2603edfa9e2adaa1bd2f0bdad0b1ba7798c77f40a244a"
+  },
+  {
+    "path": "outputs/metrics/blocks_1500m_origin_0p5_0p5/paired_contrasts.csv",
+    "bytes": 7341,
+    "sha256": "afed5ae10020ef1a50e1060f8c426d1959e35d1fc773df10798f7a8ddd77fed7"
+  },
+  {
+    "path": "outputs/metrics/blocks_1500m_origin_0p5_0p5/performance.csv",
+    "bytes": 3592,
+    "sha256": "89627f009586c4522e3fe767c520c4a363ebf1aab53ca1e0fa7edb36f37c8916"
+  },
+  {
+    "path": "outputs/metrics/blocks_2000m_origin_0_0/paired_contrasts.csv",
+    "bytes": 7224,
+    "sha256": "b0beb21da16a0e2dd05c183a253bcdbc6cd6c42f6ca51f0f762464eb90f80ab0"
+  },
+  {
+    "path": "outputs/metrics/blocks_2000m_origin_0_0/performance.csv",
+    "bytes": 3487,
+    "sha256": "39d5ee7421bfd57d8570e39a98e3b37087963640186fb9b716458d28ac35a818"
+  },
+  {
+    "path": "outputs/metrics/blocks_2000m_origin_0p5_0p5/paired_contrasts.csv",
+    "bytes": 7354,
+    "sha256": "e43ff40ae9c5fa1f6997ff6e6992f172e5feddbb7f2a61871a3aa6176e5ac5d1"
+  },
+  {
+    "path": "outputs/metrics/blocks_2000m_origin_0p5_0p5/performance.csv",
+    "bytes": 3579,
+    "sha256": "faa4619b9571d5b8c77e870ef408beb265bd14f65cbfb33b4cb540ddc27ef017"
+  }
+]

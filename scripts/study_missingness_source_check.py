@@ -30,7 +30,7 @@ def audit():
             conn.exec_driver_sql('SET TRANSACTION READ ONLY')
             rows, _, source = historical_inputs(conn, city)
             frozen = records(conn, selected, city, 'sample', 'prediction_sample')
-            summary, _ = read_package(conn, selected[city]['run_id'], city, 'sample')
+            summary, frozen_dependencies = read_package(conn, selected[city]['run_id'], city, 'sample')
             if canonical_hash(summary) != selected[city]['summary_sha256']:
                 raise ValueError('Frozen sample summary differs')
             if canonical_hash(json_records(pd.DataFrame(frozen))) != summary['record_sha256']:
@@ -54,7 +54,7 @@ def audit():
     union_n = int(frame[design['models']['MEW']].isna().any(axis=1).sum())
     if union_n != missing_n or union_n != len(frozen) - summary['association_n']:
         raise ValueError('Missingness is not exclusively source bedroom blanks')
-    limit = design['association_missing_limit']
+    limit = frozen_dependencies['design']['association_missing_limit']
     fraction = union_n / len(frozen)
     if fraction != summary['association_missing_fraction'] or fraction <= limit:
         raise ValueError('Frozen missingness gate differs')
@@ -69,9 +69,9 @@ def audit():
         'minimum_observed_values_needed_to_meet_unchanged_gate': union_n - math.floor(limit * len(frozen)),
         'listing_source_sha256': source['listing_sha256'],
         'sample_selection': selected[city], 'sample_records_sha256': summary['record_sha256'],
-        'design_file_sha256': sha256_file(ROOT / 'config/study/design.json'),
+        'design_file_sha256': sha256_file(ROOT / 'archive/before_association_amendment/config/study/design.json'),
         'source_parser_sha256': sha256_file(ROOT / 'src/study/samples.py'),
-        'audit_script_sha256': sha256_file(Path(__file__)),
+        'audit_script_sha256': sha256_file(ROOT / 'archive/before_association_amendment/scripts/study_missingness_source_check.py'),
         'database_transaction': 'READ ONLY', 'raw_or_sql_rows_changed': False,
         'models_refitted': False, 'outcome_imputed': False,
         'decision_required': 'Explicit validated missing-data amendment before dependent inference',

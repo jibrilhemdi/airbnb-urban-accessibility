@@ -1,0 +1,18 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_SCIENTIFIC_BLOCKER",
+  "public_artifacts_verified": 72,
+  "original59_artifacts_unchanged": true,
+  "fitted_code_dependency_checks": 20460,
+  "fitted_packages_code_verified": 682,
+  "estimation_and_preprocessing_modules_unchanged": true,
+  "all_recorded_fitted_code_snapshots_preserved": true,
+  "evaluation_artifact_serialization_snapshot": "history/implementation/evaluation_before_transfer_artifacts.py",
+  "prior_cli_archive": "history/implementation/cli_before_release.py",
+  "prior_cli_archive_sha256": "9f0d8a74bd6575140e9359ab0cab07905b4120ad21a5002e3504b845b33c4e01",
+  "current_cli_change": "Status and completed-selector guards only, after all fits",
+  "public_csv_privacy_and_map_support": "PASS",
+  "publication_report_links": "PASS",
+  "full_rerun_complete": false,
+  "primary_prediction_cities_complete": 3,
+  "six_transfer_directions_complete": true
+}

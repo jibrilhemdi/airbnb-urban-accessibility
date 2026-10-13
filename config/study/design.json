@@ -266,7 +266,7 @@
       "oslo"
     ]
   ],
-  "association_missing_limit": 0.05,
+  "association_missing_limit": 0.10,
   "group_bootstrap_replications": 2000,
   "wild_cluster_replications": 9999,
   "robustness": [

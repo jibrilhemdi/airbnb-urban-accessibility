@@ -53,3 +53,14 @@ The [execution log](execution_log.md) records actual work, checks and blockers.
 No checkpoint's own SHA is written into itself. A specification freeze is not a
 sample/feature/model freeze. Do not claim a fully rerun study until every required
 city, direction, robustness output and independent recalculation is complete.
+
+## Current association eligibility amendment
+
+The researcher explicitly raises the complete-case association eligibility limit
+from 5% to 10% uniformly across the three cities, after observing Stockholm's
+5.891783567% missingness. See the [dated amendment](association_missingness_amendment_20261013.md).
+Only association eligibility changes; all complete-case and inference rules
+remain. Rerun all three association stages and their dependencies; preserve
+completed predictive/transfer artifacts after dependency verification.
+The same request authorizes consolidation into one requirements file and one
+archive, with neutral active paths and exact historical bytes retained.

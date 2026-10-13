@@ -44,7 +44,11 @@ qualified context and all required matched accessibility support. Predictive
 listing-control missingness remains explicit; median/indicator imputation and
 category encoding are fitted within each training split. An all-missing required
 training predictor blocks fitting. Common association complete cases use the union
-X+E+W; more than 5% missing any required predictor pauses association inference.
+X+E+W; more than 10% missing any required predictor pauses association inference.
+The previous 5% eligibility limit was changed uniformly after observing
+Stockholm's 5.891783567% missingness; see the dated
+[post-observation amendment](association_missingness_amendment_20261013.md).
+This 10% limit is a researcher-design threshold, not a universal standard.
 No inferential median-imputation substitute is authorized.
 
 Primary outer folds leave out one operational neighbourhood: test N>=15,

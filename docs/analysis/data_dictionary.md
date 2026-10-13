@@ -1,6 +1,6 @@
 # Common feature dictionary and harmonization
 
-All four models share the frozen common prediction rows. Source, native context and matched accessibility qualifications are implemented; missing listing controls remain explicit and learned preprocessing uses training data only. Income and residential prices are absent. Stockholm association inference remains blocked by the union missingness guard; this does not block predictive preprocessing.
+All four models share the frozen common prediction rows. Source, native context and matched accessibility qualifications are implemented; missing listing controls remain explicit and learned preprocessing uses training data only. Income and residential prices are absent. Association eligibility now uses the uniform post-observation 10% union missingness limit; complete-case filtering and predictive preprocessing remain unchanged.
 
 | Feature | Copenhagen | Oslo | Stockholm | Common definition | Units | Transformation | Qualification |
 | --- | --- | --- | --- | --- | --- | --- | --- |

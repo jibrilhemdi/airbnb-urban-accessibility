@@ -8,6 +8,7 @@ documents and statuses remain historical evidence.
 | --- | --- |
 | [Scientific proposal](../scientific_proposal.md) | Four research questions, implemented model structure and claim discipline |
 | [Implementation contract](implementation_contract.md) | Scientific/data/Git scope and immutable checkpoint rules |
+| [Association amendment](association_missingness_amendment_20261013.md) | Explicit post-observation change from 5% to 10%, uniformly across cities |
 | [Specification](preanalysis_specification.md) | Frozen outcomes, features, validation, tuning, inference and sensitivities |
 | [Research plan](research_plan.md) | Dependency order and implemented versus blocked work |
 | [Dictionary](data_dictionary.md) | Source-parsed controls, density, civic distance and matched E/W definitions |

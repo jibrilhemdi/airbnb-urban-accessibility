@@ -14,6 +14,8 @@ from src.study.sources import get_engine,write_once
 from src.study.specification import load_design,CITIES,MODELS
 from src.study.store import commit_package,dependencies,read_package
 from src.study.sample_freeze import records
+from src.study.association import qualify
+from src.spatial.spatial_diagnostics import moran_knn
 
 
 def association():
@@ -24,11 +26,13 @@ def association():
             with engine.connect() as conn:
                 conn.exec_driver_sql('SET TRANSACTION READ ONLY')
                 summary,_=read_package(conn,selected[city]['run_id'],city,'sample')
-                frame=pd.DataFrame(records(conn,selected,city,'sample','association_sample'))
+                prediction=pd.DataFrame(records(conn,selected,city,'sample','prediction_sample'))
+                saved=pd.DataFrame(records(conn,selected,city,'sample','association_sample'))
+                frame,eligibility=qualify(prediction,saved,design)
             output={};rows=[];fits=[];vif=[];private=[]
-            if summary['association_inference_status'].startswith('BLOCKED'):
-                output={'city':city,'status':summary['association_inference_status'],'missing_fraction':summary['association_missing_fraction'],
-                        'reason':'Union required-predictor missingness exceeds frozen5% guard; no inferential median imputation',
+            if eligibility['eligibility']!='PASS':
+                output={'city':city,'status':'BLOCKED_MATERIAL_MISSINGNESS',**eligibility,
+                        'reason':'Union required-predictor missingness exceeds active eligibility limit; no inferential imputation',
                         'association_n':len(frame),'coefficients_produced':False}
             else:
                 for model in MODELS:
@@ -45,10 +49,11 @@ def association():
                                  'hc3_ci_low':float(ci[i,0]),'hc3_ci_high':float(ci[i,1]),'hc3_p':float(fit.pvalues[i]),
                                  **wild.iloc[i].drop('term_index').to_dict()} for i,name in enumerate(names))
                     fits.append({'model':model,'n':len(frame),'adjusted_r2':float(fit.rsquared_adj),'condition_number':float(fit.condition_number),
-                                 'aic':float(fit.aic),'bic':float(fit.bic),'rank':X.shape[1]})
+                                 'aic':float(fit.aic),'bic':float(fit.bic),'rank':X.shape[1],
+                                 'residual_moran':moran_knn(fit.resid,frame[['metric_x','metric_y']].to_numpy(float),seed=design['validation']['random_seed'])})
                     vif.extend({'model':model,'term':name,'vif':float(variance_inflation_factor(X,i))} for i,name in enumerate(names) if i>0)
                     private.extend({'listing_id':str(key),'model':model,'residual':float(value)} for key,value in zip(frame.listing_id,fit.resid,strict=True))
-                output={'city':city,'status':'COMPLETE_ASSOCIATION','association_n':len(frame),'missing_fraction':summary['association_missing_fraction'],
+                output={'city':city,'status':'COMPLETE_ASSOCIATION',**eligibility,
                         'models':fits,'coefficients_produced':True,'covariance':'HC3; restricted Webb WCR11/CRV1 sensitivity; actual operational groups',
                         'income_required':False,'outcome_imputed':False,'interpretation':'Adjusted associations; no causal effect'}
             with engine.begin() as conn:

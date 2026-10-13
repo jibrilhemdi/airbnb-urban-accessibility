@@ -440,3 +440,31 @@ V4 matched the preceding published checkpoint before this change, with
 protected main/v3 and the detached historical worktree unchanged. This is a
 blocker-evidence checkpoint, not a scientific gate waiver or full completion.
 Commit/push and remote equality are verified after review and reported externally.
+
+
+## Post-observation association amendment: specification checkpoint
+
+The researcher explicitly changed the association eligibility limit from 5%
+to 10% uniformly, after observing Stockholm's source-verified 5.891783567%.
+The dated amendment and exact request record this timing and its limited scope.
+Original configuration, code, selectors, audits and reports are preserved with
+checksums under archive/before_association_amendment. No old execution-log
+entry or 5% audit was rewritten to imply a different historical rule.
+
+Added explicit association eligibility/reconstruction functions, tests of
+0.099/0.10/greater-than-0.10 and Stockholm's fraction, immutable complete-case
+matching, excluded variables and unchanged predictive preprocessing. Inference
+uses reconstructed union X+E+W complete cases, never fills source bedrooms,
+and retains HC3, 9,999 Webb draws and the existing spatial rules. Residual
+Moran diagnostics are recorded for each association ladder model as requested.
+
+Actual checks: 35 active tests, 31 PASS and four opt-in PostGIS skips; original
+missingness-source audit reproduction PASS using its frozen 5% design; all
+three common complete-case hashes reproduce exactly. Copenhagen N12,285,
+Oslo N8,152 and Stockholm N2,348 are eligible at the uniform 10% limit.
+All 682 fitted-package designs match the amended design after excluding only
+the incidental association eligibility key. No predictive/transfer fitting
+was invoked. Branch/remote equal at e55e91d5b5d39fb8bb7c9e77f2d742452aa835c7;
+main/v3 and detached worktree unchanged. Whitespace PASS. Fresh association
+and spatial selectors will certify execution; eligibility alone is not release
+completion. Reviewed specification checkpoint is committed/pushed next.

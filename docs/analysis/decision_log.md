@@ -33,3 +33,12 @@ vintage/land-denominator checks address Stockholm's documented construction
 limits; incompatible provider polygon denominators are not invented for any
 city. Reported gains, SHAP rankings or transfer diagnostic coefficients never
 alter the scientific registry or fitted source pipeline.
+
+## 13 October 2026: post-observation association amendment
+
+Explicit researcher decision: 5% becomes 10% for all three cities, strictly
+more than 10% blocks. Stockholm's 147/2,495 missing bedrooms were already
+observed and source-verified. This permits inference on the same 2,348
+complete cases, with no inferential imputation or new predictor decisions.
+It does not change predictive/transfer fitting. See the
+[dated amendment](association_missingness_amendment_20261013.md).

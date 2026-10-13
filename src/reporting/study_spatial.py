@@ -15,6 +15,7 @@ from src.study.specification import load_design,CITIES,MODELS
 from src.study.store import commit_package,dependencies,read_package
 from src.study.sample_freeze import records
 from src.reporting.study_results import predictions
+from src.study.association import qualify
 
 
 def run():
@@ -26,6 +27,7 @@ def run():
                 conn.exec_driver_sql('SET TRANSACTION READ ONLY')
                 frame=pd.DataFrame(records(conn,chosen,city,'sample','prediction_sample'))
                 association=pd.DataFrame(records(conn,chosen,city,'sample','association_sample'))
+                association,eligibility=qualify(frame,association,design)
                 sample,_=read_package(conn,chosen[city]['run_id'],city,'sample')
                 selected=json.loads((PROJECT_ROOT/'runs'/city/'within_city_neighbourhood_selection.json').read_text())
                 parts=[predictions(conn,s['run_id'],city,'within_city')[1] for s in selected]
@@ -42,7 +44,7 @@ def run():
             ols_mw=[d for d in diagnostics if d['estimator']=='OLS' and d['model']=='MW'][0]
             triggered=abs(ols_mw['moran_i'])>.05 and ols_mw['permutation_p_two_sided']<.05
             coefficients=[];fixed=[]
-            blocked=sample['association_inference_status'].startswith('BLOCKED')
+            blocked=eligibility['eligibility']!='PASS'
             spatial_status='BLOCKED_ASSOCIATION_MISSINGNESS' if triggered and blocked else 'NOT_APPLICABLE_TRIGGER_NOT_MET' if not triggered else 'COMPLETE'
             if triggered and not blocked:
                 features=design['models']['MW'];numeric=[f for f in features if f!='property_type']
@@ -63,7 +65,8 @@ def run():
                                   'hc3_ci_low':float(ci[i,0]),'hc3_ci_high':float(ci[i,1]),'n':len(association),
                                   'scope':'Within-operational-area adjusted association; area-constant density absorbed'}
                                  for i,name in enumerate(['Intercept',*numeric,*cats.columns]))
-            summary={'city':city,'status':'SPATIAL_DIAGNOSTICS_COMPLETE','metric_crs':cities[city]['metric_crs'],'moran':diagnostics,
+            summary={'city':city,'status':'SPATIAL_DIAGNOSTICS_COMPLETE','metric_crs':cities[city]['metric_crs'],'moran':diagnostics,**eligibility,
+                     'absorbed_area_constant_predictors':['log_population_density'],
                      'spatial_error_status':spatial_status,'fixed_effect_status':'BLOCKED_ASSOCIATION_MISSINGNESS' if blocked else 'COMPLETE',
                      'trigger':'OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation'}
             with engine.begin() as conn:
