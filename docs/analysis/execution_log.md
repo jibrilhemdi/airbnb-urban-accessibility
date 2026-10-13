@@ -185,3 +185,53 @@ dedicated-store tables and five analytical SQL fingerprints PASS. Compilation
 and whitespace checks PASS. Four disposable PostGIS tests previously4/4 PASS;
 no schema change since. New source/model utilities are tests/implementation
 until empirical evaluation is executed; no completed model/transfer claim here.
+
+## Primary predictive and directional-transfer execution — 13 October 2026
+
+Feature/sample/fold checkpoint685c37f26f8620152d1347831e2c0f200b637939
+pushed only as HEAD:refs/heads/v4, verified remote equality.
+
+Completed fresh neighbourhood OOF prediction for all three cities and exactly
+M0/ME/MW/MEW under OLS/XGBoost, with all30 candidates and four source-only
+spatial inner folds. Every fold stores private fitted pipeline bytes/hashes,
+training/tuning records, paired predictions/losses and held-out TreeSHAP
+contributions; contribution sums checked against predictions. Full original
+observed native log-price outcomes retained. No historical fit/prediction reused.
+
+Completed all six ordered relative-price transfers,48 direction/estimator/model
+results. Each source estimator/model tunes and refits freshly on that source
+only; its two target applications share the identical source pipeline/model
+bytes. No two-city pooling, target preprocessing/fit/tuning or intercept
+recalibration. Target prices enter frozen benchmark/evaluation only.
+
+Independent saved-prediction audits PASS:24 primary performance rows/30 paired
+contrasts;48 transfer performance rows/60 paired contrasts;2000 actual target/
+holdout neighbourhood resamples. Every saved loss/outcome/key and primary
+fitted-model hash verified; four-model target rows match. Generated safe SQL
+summary export is `primary_results.json`; private models/predictions stay
+excluded from Git. Transfer fitted-source pipeline hashes are stored with
+each directional summary; final independent fitted-source check is required.
+
+Fresh common-complete-case association HC3 plus9999-replication restricted
+Webb WCR11/CRV1 completed for Copenhagen12285 and Oslo8152. Stockholm2348
+remains BLOCKED_MATERIAL_MISSINGNESS under unchanged5% guard. Moran8-NN/499
+permutations completed for all cities; registered OLS-MW residual trigger
+activated bounded heteroskedastic spatial-error checks. Copenhagen/Oslo spatial
+error and area-fixed-effect association sensitivities complete; Stockholm
+dependent inference stays blocked. KNN disconnected-component warnings remain
+visible rather than repaired. No causal effect or statistical equivalence claim.
+
+Actual parent processes for all primary and transfer runs exit0. Joblib's
+resource-tracker destructor emitted ChildProcessError at process cleanup after
+completion; saved experiment cardinality/prediction/model audits pass. This is
+recorded as an operational warning, not silently labelled a failed fit or used
+to suppress records.
+
+Figures rendered from verified SQL summaries/fresh500m cells with n>=5; no
+private row-level scatter/maps. Five primary/transfer PNGs and measurement
+comparison table generated; public figure writes now refuse overwrites.
+Random and both1.5km shifted-grid benchmarks are complete for all cities and
+independent metric/paired audits pass24 rows/30 contrasts per scheme. Remaining
+registered robustness computation is ongoing; primary completion is not full
+research-release completion. Stockholm's inference gate remains an exact
+scientific blocker, never an invented treatment.

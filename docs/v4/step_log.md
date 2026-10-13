@@ -1249,3 +1249,10 @@ inference blocked at5.8918% union missingness, without an imputed substitute.
 Historical source scanner receives a documented scoped-root compatibility
 extension with archived original bytes. No historical scientific record is
 overwritten; predictive fitting/transfer completion still not claimed.
+
+Comprehensive primary/transfer checkpoint: all three predictive city ladders
+and six directional relative-price transfers freshly completed. Independent
+SQL prediction/loss/model audits and all paired contrasts pass. Copenhagen/
+Oslo association/spatial sensitivities complete; Stockholm remains blocked
+by5.8918% union missingness under the frozen5% guard. See neutral execution
+log and generated safe result summaries; broader robustness still ongoing.

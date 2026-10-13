@@ -5,13 +5,15 @@ import os
 from pathlib import Path
 import numpy as np
 import pandas as pd
+import io
+import joblib
 from sqlalchemy import text
 from src.ingestion.common import PROJECT_ROOT
 from src.pipeline.protocol import canonical_hash
 from src.pipeline.storage import json_records
 from src.study.sources import get_engine,write_once
 from src.study.specification import load_design,CITIES,MODELS
-from src.study.store import commit_package,dependencies,read_package
+from src.study.store import commit_package,dependencies,read_package,run_id
 from src.study.modeling import fit_source,predict_source,metrics,transfer
 from src.study.validation import outer_splits,inner_splits
 from src.study.sample_freeze import records
@@ -77,9 +79,16 @@ def run_within_city(city,schemes=None):
             if schemes is not None and scheme not in schemes:continue
             for fold,tr,te in parts:
                 train,test=frame.iloc[tr],frame.iloc[te];private=[];tuning=[];fold_metrics=[]
+                identity=run_id(city,'within_city')
+                models=[];shap=[]
                 for estimator in ('OLS','XGBoost'):
                     for model in MODELS:
                         fit,choice=fit_source(train,model,estimator,train.log_price.to_numpy(float))
+                        blob=io.BytesIO();joblib.dump(fit,blob)
+                        model_path=PROJECT_ROOT/'runs'/city/'models'/identity/(estimator.lower()+'_'+model.lower()+'.joblib')
+                        write_once(model_path,blob.getvalue())
+                        from src.ingestion.common import sha256_file
+                        models.append({'estimator':estimator,'model':model,'path':model_path.relative_to(PROJECT_ROOT).as_posix(),'sha256':sha256_file(model_path)})
                         p=np.asarray(predict_source(fit,test,model),float);y=test.log_price.to_numpy(float)
                         record={'scheme':scheme,'fold':str(fold),'estimator':estimator,'model':model,'train_n':len(tr),**metrics(y,p)}
                         fold_metrics.append(record);tuning.append({**record,'training':choice})
@@ -87,15 +96,25 @@ def run_within_city(city,schemes=None):
                                         'scheme':scheme,'fold':str(fold),'estimator':estimator,'model':model,
                                         'log_price':float(observed),'prediction':float(predicted),'squared_error':float((observed-predicted)**2),
                                         'absolute_error':float(abs(observed-predicted))} for row,observed,predicted in zip(test.itertuples(),y,p,strict=True))
+                        if estimator=='XGBoost':
+                            from xgboost import DMatrix
+                            prep=fit.named_steps['prep'];matrix=prep.transform(test)
+                            contributions=fit.named_steps['model'].get_booster().predict(DMatrix(matrix),pred_contribs=True)
+                            if not np.allclose(contributions.sum(axis=1),p,atol=1e-4):raise ValueError('Held-out contribution sum differs from prediction')
+                            names=list(prep.get_feature_names_out())
+                            shap.extend({'listing_id':str(key),'model':model,'contributions':dict(zip(names,[float(v) for v in values[:-1]],strict=True)),
+                                         'bias':float(values[-1])} for key,values in zip(test.listing_id,contributions,strict=True))
                         print(city,scheme,fold,estimator,model,record['rmse'],flush=True)
                 summary={'city':city,'status':'COMPLETE_FOLD','scheme':scheme,'fold':str(fold),'metrics':fold_metrics,
-                         'prediction_hash':canonical_hash(private),'prediction_n':len(private),'train_n':len(tr),'test_n':len(te),'historical_fit_reused':False}
+                         'prediction_hash':canonical_hash(private),'prediction_n':len(private),'train_n':len(tr),'test_n':len(te),'historical_fit_reused':False,'fitted_models':models}
                 with engine.begin() as conn:
                     identity=commit_package(conn,city=city,family='within_city',summary=summary,
-                                            records={'predictions':private,'tuning':tuning},deps=dependencies({'prefit':certificate,'sample':selections['sample'][city],'validation':selections['validation'][city]}))
+                                            records={'predictions':private,'tuning':tuning,'heldout_contributions':shap},identity=identity,
+                                            deps=dependencies({'prefit':certificate,'sample':selections['sample'][city],'validation':selections['validation'][city]}))
                 selected.append({'run_id':identity,'summary_sha256':canonical_hash(summary),'scheme':scheme,'fold':str(fold)})
         directory=PROJECT_ROOT/'runs'/city
-        write_once(directory/'within_city_selection.json',(json.dumps(selected,indent=2)+'\n').encode())
+        label='all' if schemes is None else '_'.join(schemes)
+        write_once(directory/('within_city_'+label+'_selection.json'),(json.dumps(selected,indent=2)+'\n').encode())
     finally:engine.dispose()
     return selected
 
@@ -112,6 +131,12 @@ def run_transfer():
                 for model in MODELS:
                     train=frames[source]
                     fit,choice=fit_source(train,model,estimator,train.log_price.to_numpy(float)-reference[source])
+                    model_identity=run_id(source,'transfer_model')
+                    blob=io.BytesIO();joblib.dump(fit,blob)
+                    model_path=PROJECT_ROOT/'runs/transfer/models'/model_identity/(estimator.lower()+'_'+model.lower()+'.joblib')
+                    write_once(model_path,blob.getvalue())
+                    from src.ingestion.common import sha256_file
+                    model_record={'path':model_path.relative_to(PROJECT_ROOT).as_posix(),'sha256':sha256_file(model_path)}
                     # Both directions out of this source use the same fresh source
                     # fit and tuning, with separate target evaluation identities.
                     for target in CITIES:
@@ -124,9 +149,9 @@ def run_transfer():
                         summary={'city':source,'status':'COMPLETE_DIRECTION_MODEL','source_city':source,'target_city':target,'estimator':estimator,'model':model,
                                  'source_n':len(train),'source_mean_log_price':reference[source],'target_mean_log_price':reference[target],
                                  'metrics':metrics(y,p),'prediction_hash':canonical_hash(private),'tuning':choice,'target_fit':False,'target_tuning':False,
-                                 'target_intercept_recalibration':False,'historical_fit_reused':False}
+                                 'target_intercept_recalibration':False,'historical_fit_reused':False,'fitted_source_model':model_record}
                         with engine.begin() as conn:
-                            identity=commit_package(conn,city=source,family='transfer',summary=summary,records={'predictions':private},
+                            identity=commit_package(conn,city=source,family='transfer',summary=summary,records={'predictions':private},identity=run_id(source+'_to_'+target,'transfer'),
                                                     deps=dependencies({'prefit':certificate,'source_sample':selections['sample'][source],
                                                        'target_sample':selections['sample'][target],'references':selections['reference']}))
                         selected.append({'run_id':identity,'city':source,'target_city':target,'estimator':estimator,'model':model,'summary_sha256':canonical_hash(summary)})
