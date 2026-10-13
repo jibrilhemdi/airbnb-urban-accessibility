@@ -193,3 +193,27 @@ prediction-display bins suppress counts below five. Release manifests and the
 deterministic ZIP contain only reviewed figures, aggregate tables and documents.
 Markdown is authoritative; the repository has no supported active DOCX/PDF
 document-generation workflow for this four-RQ design.
+
+## Requested figure-style refresh
+
+The researcher requested the established original pastel figure style.
+`src/reporting/thesis_style.py` reproduces its navy/ink typography, blue/sand/
+green/lilac palette, muted grids, interval markers and integrated captions.
+The original plotting code and figure examples are hash-pinned style references;
+their historical numerical results are never reused. Current models remain
+M0/ME/MW/MEW, using the same frozen three-city samples, predictions and SQL.
+
+The previous certified figures, code, documents, audits and full safe release
+were preserved in [the presentation archive](../../archive/before_figure_style/manifest.json).
+The reusable `python -m src.reporting.thesis_refresh --render` command creates
+a temporary preview. Explicit activation verifies unchanged rendering code,
+all54 preview exports, every prior figure hash, all44 byte-identical numerical
+exports and the frozen source catalog. Reviewed files replace only their
+preserved presentation counterparts. Packaging stages and verifies the new
+release before replacing the already archived release. Certified refreshes
+cannot be activated again against an earlier figure baseline.
+
+Clipping, caption/axis-label overlap, heading/legend overlap, old style-reference
+hashes and mixed figure themes are checked. Release verification additionally
+requires every bundled source hash to match the current registered artifact,
+preventing an earlier theme from remaining silently in the active ZIP.

@@ -42,3 +42,20 @@ class ThesisReportingTests(unittest.TestCase):
         self.assertEqual(audit['status'],'COMPLETE_THESIS_REPORTING')
         self.assertEqual(audit['remaining_required_deliverables'],[])
         self.assertTrue(all(item['completion_status'] in {'READY','NOT_NEEDED'} for item in audit['required_deliverables']))
+
+    def test_style_refresh_preserves_all_numerical_exports_and_original_reference(self):
+        import ast
+        from src.reporting.thesis_refresh import baseline
+        from src.reporting import thesis_style
+        previous=baseline()
+        self.assertEqual(len(previous['numeric_exports_immutable']),44)
+        # Match the actual original source's literal colour definitions.
+        reference=ast.parse((ROOT/'src/pipeline/reporting_figures.py').read_text())
+        tokens={}
+        for node in reference.body:
+            if isinstance(node,ast.Assign) and isinstance(node.targets[0],ast.Name) and node.targets[0].id in {'NAVY','INK','BLUE','SAND','GREEN','LILAC','DARK'}:
+                tokens[node.targets[0].id]=ast.literal_eval(node.value)
+        for name,value in tokens.items():self.assertEqual(getattr(thesis_style,name),value)
+        manifest=json.loads((ROOT/'reports/thesis_artifact_manifest.json').read_text())
+        self.assertEqual(manifest['style']['style_id'],thesis_style.STYLE_ID)
+        self.assertTrue(all(not row['caption_overlaps_axis_label'] and not row['header_overlaps_legend'] for row in manifest['layout_checks']))

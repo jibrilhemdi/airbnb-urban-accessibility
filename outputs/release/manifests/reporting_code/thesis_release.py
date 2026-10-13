@@ -57,6 +57,7 @@ def verify():
         path=DESTINATION/item['filename']
         if not path.resolve().is_relative_to(DESTINATION) or path.is_symlink():raise ValueError('Release path escapes package')
         if sha256_file(path)!=item['sha256'] or path.stat().st_size!=item['bytes']:raise ValueError('Release file hash/size mismatch')
+        if item.get('source_filename') and sha256_file(ROOT/item['source_filename'])!=item['source_file_sha256']:raise ValueError('Release contains a stale source artifact')
         if item['publication_status']!='THESIS_READY' or not item['source_run_artifact'] or not item['research_question'] or not item['generation_command']:raise ValueError('Release provenance absent')
         if path.suffix=='.csv':
             frame=pd.read_csv(path)
@@ -114,6 +115,7 @@ def assemble(revise=False):
               'reports/thesis_publication_validation.json','reports/frozen_science_verification.json',
               'docs/analysis/release_audit.json','docs/analysis/software_environment.json',
               'config/study/design.json','config/study/cities.json']
+    if (ROOT/'reports/thesis_style_review.json').exists():metadata.append('reports/thesis_style_review.json')
     mapping.update(documents)
     for name in metadata:mapping[name]='manifests/'+Path(name).name
     generators=sorted((ROOT/'src/reporting').glob('thesis_*.py'))

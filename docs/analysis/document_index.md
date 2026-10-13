@@ -50,6 +50,8 @@ documents and statuses remain historical evidence.
 | [Exact reporting request](../../archive/research_request/reporting_completion.txt) | User-authorized reporting-only completion scope |
 | `outputs/release/README.md` | Safe figures, tables, metrics, reports, manifests and deterministic ZIP |
 | `outputs/release/manifests/release_manifest.json` | Bundled-file hashes and final source/RQ/publication identities |
+| `reports/thesis_style_review.json` | Requested original pastel design; visual/layout checks and unchanged numerical exports |
+| `archive/before_figure_style/manifest.json` | Exact prior certified presentation, code, documents and safe release |
 | [Prior entry snapshots](../../archive/previous_scope/README.md) | Preserved original instructions and entry documentation |
 
 `config/study/` holds canonical city/model registries and immutable selectors.

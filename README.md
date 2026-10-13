@@ -57,3 +57,9 @@ Use `make thesis-check` and `make thesis-science-check` for validation;
 Its [manifest](outputs/release/manifests/release_manifest.json) registers every
 bundled file. Proposal, plan and results
 are authoritative Markdown; figures include PDF/SVG vector exports.
+
+The thesis figures follow the original pastel figure design: navy headings,
+muted blue/sand strokes, pastel fills, light grids and integrated captions.
+Only the visual style is reused; all numerical evidence remains the final
+three-city rerun. The prior published presentation and release are preserved
+byte-exactly in `archive/before_figure_style/`.

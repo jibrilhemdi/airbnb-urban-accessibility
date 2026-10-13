@@ -1,0 +1,1785 @@
+{
+  "purpose": "User-authorized adoption of the V3 figure style; prior published thesis presentation preserved byte-exactly",
+  "base_checkpoint": "dc5f1a4f481a3b7d885852ea0651dcccee55d609",
+  "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+  "publication": {
+    "status": "PASS",
+    "artifact_files": 98,
+    "figure_sets": 18,
+    "table_and_aggregate_views": 22,
+    "main_figures": 10,
+    "main_tables": 8,
+    "appendix_figures": 8,
+    "privacy_bins_verified": 1709,
+    "final_run_lineage": "PASS",
+    "numeric_claims_trace": "PASS",
+    "independent_point_contrast_recalculation": "PASS",
+    "links_checked": 135,
+    "visible_version_markers": "NONE",
+    "clipped_labels": "NONE",
+    "models_refitted": false
+  },
+  "release": {
+    "status": "PASS",
+    "package_files": 131,
+    "zip_entries": 131,
+    "links_checked": 93,
+    "manifest_sha256": "b25ed36de2240fbf3c66481cc3dd01c0261f77e98f5ca30bf0a446dbb790d4a8",
+    "zip_sha256": "9031a328cdf3d7e91ffb4db8ed1bd20e4d1f79a2052cb7654815f19ee68bd6e6",
+    "zip_bytes": 5987624,
+    "private_data_check": "PASS",
+    "all_release_hashes": "PASS",
+    "models_refitted": false
+  },
+  "files": [
+    {
+      "original_path": "README.md",
+      "archived_path": "archive/before_figure_style/README.md",
+      "sha256": "0e24c1872f8e1afec561aa05cc38b142d3ed39ab0ca23eb00309e43f6630173e",
+      "bytes": 3251
+    },
+    {
+      "original_path": "docs/analysis/document_index.md",
+      "archived_path": "archive/before_figure_style/docs/analysis/document_index.md",
+      "sha256": "4ca4d7d707b0396b0f047381ce958a414d89665e8c0b455e3082875b95570eff",
+      "bytes": 6677
+    },
+    {
+      "original_path": "docs/analysis/reproducibility.md",
+      "archived_path": "archive/before_figure_style/docs/analysis/reproducibility.md",
+      "sha256": "797c83ab610c90d46a11abf6fbce11d60c7e36d1dced05794096697baa8b79c4",
+      "bytes": 11436
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/neighbourhood_support.csv",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/neighbourhood_support.csv",
+      "sha256": "9e52ea3063f648c2cf7b1a65769af13e433060ceb677618423c5a3e9da7cf435",
+      "bytes": 1609
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/neighbourhood_support.md",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/neighbourhood_support.md",
+      "sha256": "bd6a09ec6bcadaf61372f867934f7e60056743c844915ff7eeb6cc86778b3c72",
+      "bytes": 2228
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/residual_spatial_diagnostics.csv",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/residual_spatial_diagnostics.csv",
+      "sha256": "45611a0d2860e298c50ac644510e8b961e8d92f52e22b510051e3e9c39f805d7",
+      "bytes": 2329
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/residual_spatial_diagnostics.md",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/residual_spatial_diagnostics.md",
+      "sha256": "3f123f61a86d580f22ea994a01be1673f04bef36732ecc49acaedea647269126",
+      "bytes": 2407
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/transfer_prediction_bins.csv",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/transfer_prediction_bins.csv",
+      "sha256": "c598b56c71e594be6c081b2afa0d256666695c40993dc8df2fddd697ffca68a6",
+      "bytes": 57178
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/transfer_prediction_bins.md",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/transfer_prediction_bins.md",
+      "sha256": "0961ba0efc796e3271553b66babacdfe1dc4274efe5e9b8431f7574187f45f92",
+      "bytes": 42541
+    },
+    {
+      "original_path": "outputs/figures/thesis/accessibility_spatial.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/accessibility_spatial.pdf",
+      "sha256": "0ef2753ae3fde0e2b81aa85e0afa4298421367662427bfc037c74f6ecff43a40",
+      "bytes": 353806
+    },
+    {
+      "original_path": "outputs/figures/thesis/accessibility_spatial.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/accessibility_spatial.png",
+      "sha256": "1d0043a99beafd80afd684756e5455f6ddb986a6da2e768b3b5c3f82811fd35a",
+      "bytes": 364487
+    },
+    {
+      "original_path": "outputs/figures/thesis/accessibility_spatial.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/accessibility_spatial.svg",
+      "sha256": "eb86a6bb8128f4024462bf7c5b9f9ecd8052ec927adae4661e7e9d7974c50ab9",
+      "bytes": 1097998
+    },
+    {
+      "original_path": "outputs/figures/thesis/association_accessibility.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/association_accessibility.pdf",
+      "sha256": "7a866ab8e033f1e40e4b263c6dbacd1f4848fbf4276c31898dabf17666cc8652",
+      "bytes": 16043
+    },
+    {
+      "original_path": "outputs/figures/thesis/association_accessibility.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/association_accessibility.png",
+      "sha256": "8a3e0419d1be4eb84fe954777eb34e9b854a4e943d56c036cd39b0a962054b85",
+      "bytes": 151365
+    },
+    {
+      "original_path": "outputs/figures/thesis/association_accessibility.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/association_accessibility.svg",
+      "sha256": "c24079f38364683fd768def47802222fb65b8fbf1fc3630d58c3d05018323248",
+      "bytes": 27590
+    },
+    {
+      "original_path": "outputs/figures/thesis/directional_transfer_asymmetry.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/directional_transfer_asymmetry.pdf",
+      "sha256": "1a4b128bb11639ad5b92a0d28186952ada91b7b867cee13e4f97cfc6e251a68c",
+      "bytes": 16330
+    },
+    {
+      "original_path": "outputs/figures/thesis/directional_transfer_asymmetry.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/directional_transfer_asymmetry.png",
+      "sha256": "c937a5582f65aea6da03573944decb77749d5de184645310a1e1e78e0b4e8f3d",
+      "bytes": 84069
+    },
+    {
+      "original_path": "outputs/figures/thesis/directional_transfer_asymmetry.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/directional_transfer_asymmetry.svg",
+      "sha256": "8b748bff7f86a7c398db4b1319603927713ed84e75d87527d601564e744c6320",
+      "bytes": 16271
+    },
+    {
+      "original_path": "outputs/figures/thesis/heldout_feature_contributions.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/heldout_feature_contributions.pdf",
+      "sha256": "c13cde29c77b54537720083191fc87eb93d06f8098e211783e0114778fda0896",
+      "bytes": 14178
+    },
+    {
+      "original_path": "outputs/figures/thesis/heldout_feature_contributions.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/heldout_feature_contributions.png",
+      "sha256": "17d4aa07bee008c8e23a239c59212db329132ba0b3692738d5e951352455331e",
+      "bytes": 140945
+    },
+    {
+      "original_path": "outputs/figures/thesis/heldout_feature_contributions.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/heldout_feature_contributions.svg",
+      "sha256": "143572cb0511f2c32001a74463327813fafa7d3f0d7fc7a6c0438a19632f071d",
+      "bytes": 27905
+    },
+    {
+      "original_path": "outputs/figures/thesis/nearest_access_divergence.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/nearest_access_divergence.pdf",
+      "sha256": "1df9dda56c96783d44d8bba4cdb8fcf79e6c2ec3dfe79ebf2eee700bfd7e8e82",
+      "bytes": 12930
+    },
+    {
+      "original_path": "outputs/figures/thesis/nearest_access_divergence.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/nearest_access_divergence.png",
+      "sha256": "6bbc51cb73b20a981e1cb3cc07fbbb745c1c4f90d8112f1647e3b60889e6f2cc",
+      "bytes": 57171
+    },
+    {
+      "original_path": "outputs/figures/thesis/nearest_access_divergence.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/nearest_access_divergence.svg",
+      "sha256": "c9e460b2cfd270672085c19c66d0295603c7ed51ba02d0b0bb8ca624b54b6c42",
+      "bytes": 16565
+    },
+    {
+      "original_path": "outputs/figures/thesis/nearest_access_relationship.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/nearest_access_relationship.pdf",
+      "sha256": "1f7a67362bf239800a1013503c4c0f46ce8a5b969f876516766a1f0c40794f23",
+      "bytes": 24466
+    },
+    {
+      "original_path": "outputs/figures/thesis/nearest_access_relationship.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/nearest_access_relationship.png",
+      "sha256": "8bf7472e4aa9225aaeb013505a426841ee8d776afd0b00516628ca4d6cef1674",
+      "bytes": 446039
+    },
+    {
+      "original_path": "outputs/figures/thesis/nearest_access_relationship.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/nearest_access_relationship.svg",
+      "sha256": "2927f44189c7f1a713a075bb88b041fabdfdbc48456320f15055e9682094d8d6",
+      "bytes": 121271
+    },
+    {
+      "original_path": "outputs/figures/thesis/neighbourhood_performance_variation.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/neighbourhood_performance_variation.pdf",
+      "sha256": "d5c81f14dd0b269cfeec152c0628cdb23404c1f8b104af3f268a2488ba360e85",
+      "bytes": 19318
+    },
+    {
+      "original_path": "outputs/figures/thesis/neighbourhood_performance_variation.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/neighbourhood_performance_variation.png",
+      "sha256": "43ee2f3a6d2ba1a2fb4018324d37fab7de0d5cac0806fd1767f59cf7791966d0",
+      "bytes": 285461
+    },
+    {
+      "original_path": "outputs/figures/thesis/neighbourhood_performance_variation.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/neighbourhood_performance_variation.svg",
+      "sha256": "205af053d412fcdb8f8a8b87c03ea381ed0a82680ec0dbbebbc8adacb70f580b",
+      "bytes": 39817
+    },
+    {
+      "original_path": "outputs/figures/thesis/opportunity_comparison.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/opportunity_comparison.pdf",
+      "sha256": "fd6546fab0a84dfe7b188064d5caa435d7a31f44e5356cd214c074d615b94950",
+      "bytes": 13655
+    },
+    {
+      "original_path": "outputs/figures/thesis/opportunity_comparison.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/opportunity_comparison.png",
+      "sha256": "6dcd02fe2a20af9fdf2f6222d77401c001e551a9b2396e42790e1970c71d8253",
+      "bytes": 120518
+    },
+    {
+      "original_path": "outputs/figures/thesis/opportunity_comparison.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/opportunity_comparison.svg",
+      "sha256": "73b206bd5a201eea30f393bab52722596b14343a5bfe0a1159b8a3fa1ac841a6",
+      "bytes": 32397
+    },
+    {
+      "original_path": "outputs/figures/thesis/paired_accessibility_contrasts.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/paired_accessibility_contrasts.pdf",
+      "sha256": "0fc25cda94a60296d30823b08270c86d53803138a9e90ecd143a0143d970235a",
+      "bytes": 15609
+    },
+    {
+      "original_path": "outputs/figures/thesis/paired_accessibility_contrasts.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/paired_accessibility_contrasts.png",
+      "sha256": "06c107f278d12f59919fd0a9d817f448708c3aa1162d9125ffe0a7ca94d3559a",
+      "bytes": 130704
+    },
+    {
+      "original_path": "outputs/figures/thesis/paired_accessibility_contrasts.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/paired_accessibility_contrasts.svg",
+      "sha256": "60bcf45fde319366f9cd6c6cdf55d524c7dda4d75446ff869dc6779454d414d0",
+      "bytes": 33550
+    },
+    {
+      "original_path": "outputs/figures/thesis/primary_model_performance.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/primary_model_performance.pdf",
+      "sha256": "bf8889a44f698f3228690c7d547cd3a4ca13a2faf3a237d6ee7fda46f9ac6c7a",
+      "bytes": 16187
+    },
+    {
+      "original_path": "outputs/figures/thesis/primary_model_performance.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/primary_model_performance.png",
+      "sha256": "89e1533fe0ac4b41668f230c14cb01460f1f411b4346aa37ec92b5b5993bdd64",
+      "bytes": 118497
+    },
+    {
+      "original_path": "outputs/figures/thesis/primary_model_performance.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/primary_model_performance.svg",
+      "sha256": "de1f1de63627c33ad56612c4e06e6c4a47051f4781f62b5e129169f489777948",
+      "bytes": 33158
+    },
+    {
+      "original_path": "outputs/figures/thesis/residual_spatial_diagnostics.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/residual_spatial_diagnostics.pdf",
+      "sha256": "adf90989ed89cd90bdc3b8ba73b54634d4f595375c04733f9ad71af7271ce799",
+      "bytes": 11719
+    },
+    {
+      "original_path": "outputs/figures/thesis/residual_spatial_diagnostics.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/residual_spatial_diagnostics.png",
+      "sha256": "ed9a506582e08a93f8154793458f50514ea96f02ade5c6b86ecda441c2f2bb0b",
+      "bytes": 72781
+    },
+    {
+      "original_path": "outputs/figures/thesis/residual_spatial_diagnostics.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/residual_spatial_diagnostics.svg",
+      "sha256": "29b0a17879394b2d226ae6d334faa8588d2c155515d9e3e170654188d1a6adec",
+      "bytes": 19067
+    },
+    {
+      "original_path": "outputs/figures/thesis/robustness_contrasts.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/robustness_contrasts.pdf",
+      "sha256": "701826fe350a375e4e58b28fa2f977d63a3982bc9139fd82f29b878aa6a21e55",
+      "bytes": 32615
+    },
+    {
+      "original_path": "outputs/figures/thesis/robustness_contrasts.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/robustness_contrasts.png",
+      "sha256": "67ac9c995e5fe8745afd3fa319bfd75a313a39fb13353b23bf564008f12bbb41",
+      "bytes": 567516
+    },
+    {
+      "original_path": "outputs/figures/thesis/robustness_contrasts.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/robustness_contrasts.svg",
+      "sha256": "df83936d1d9809fe08873a00c2091d15ecc95f4d7239e8c62a4ca849d2dcab7e",
+      "bytes": 84995
+    },
+    {
+      "original_path": "outputs/figures/thesis/study_areas.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/study_areas.pdf",
+      "sha256": "6e164c70d8803dc6289b2974ec8092e2735d421b623e19194786a2f1c23bad8f",
+      "bytes": 335260
+    },
+    {
+      "original_path": "outputs/figures/thesis/study_areas.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/study_areas.png",
+      "sha256": "a1cc98159e6cbd20d35eb104acd04af6e23334b01799c2d2f732a49df3aa8d7f",
+      "bytes": 486385
+    },
+    {
+      "original_path": "outputs/figures/thesis/study_areas.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/study_areas.svg",
+      "sha256": "a043035fb2a61c63eb55684e1d4ba3ed0fe97f8517ce1dec1de14b0e235c398f",
+      "bytes": 956499
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_accessibility_gains.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_accessibility_gains.pdf",
+      "sha256": "873f04d41e9453924e6ae04c7137f5642a30f730bc3e96bcb371fb7ad615d080",
+      "bytes": 36609
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_accessibility_gains.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_accessibility_gains.png",
+      "sha256": "003228b4223d5f1b32f2a4b97159af300462b85ee35538583e74ceab1d557376",
+      "bytes": 283183
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_accessibility_gains.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_accessibility_gains.svg",
+      "sha256": "8d30e0d4e410f53eb55b31520ea5099009bd5620ed390f37d032bb8e399e2219",
+      "bytes": 61606
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_network_comparison.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_network_comparison.pdf",
+      "sha256": "c9e60cb9bd6abcb95355d7963f65928d66697a00fa35e8569150be2fca41efb0",
+      "bytes": 14040
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_network_comparison.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_network_comparison.png",
+      "sha256": "1d807b0a0de0d6e7d495366c05d0967cad297f61ffab71a7f46e4f0d5d816d03",
+      "bytes": 185227
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_network_comparison.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_network_comparison.svg",
+      "sha256": "2558686287b8828eec1671a9c74596464e30dcb5c71f9cde97680484b5d3bb0f",
+      "bytes": 25925
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_performance.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_performance.pdf",
+      "sha256": "f6d7ac06f70e2a65571c9fb92134c659842a7a30df3db401b5191db0387f19e9",
+      "bytes": 33132
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_performance.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_performance.png",
+      "sha256": "fc513de35fe060b622169701647cb6ff0f56eb2d7390d55d013258d1562ce96f",
+      "bytes": 268255
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_performance.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_performance.svg",
+      "sha256": "43d8208b4af384b2d581d07e3136618dea242ecd4468890a8e22a75568081702",
+      "bytes": 65250
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_prediction_diagnostics.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_prediction_diagnostics.pdf",
+      "sha256": "8cfe5d29adcecfe2454055345817f684d372fd34553d96a133a92cbc09e33f42",
+      "bytes": 138552
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_prediction_diagnostics.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_prediction_diagnostics.png",
+      "sha256": "e69e0df1bb01ceaa1d8fe0ed747fe640fe518b96c2f04db9dfea00d7dada02d7",
+      "bytes": 268794
+    },
+    {
+      "original_path": "outputs/figures/thesis/transfer_prediction_diagnostics.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/transfer_prediction_diagnostics.svg",
+      "sha256": "a30b8475a0c6157c89343b11a0341c011bda603114ee7f5ec1fcb1ab55e6fcd2",
+      "bytes": 1862846
+    },
+    {
+      "original_path": "outputs/figures/thesis/validation_strategy_comparison.pdf",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/validation_strategy_comparison.pdf",
+      "sha256": "eb97d60408cea676b8b57f7bb9b1526b9a637d0ce182103aa186086d5a81eafe",
+      "bytes": 27154
+    },
+    {
+      "original_path": "outputs/figures/thesis/validation_strategy_comparison.png",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/validation_strategy_comparison.png",
+      "sha256": "b79fc3f93f5fe31795e06e31fab9e37654864266e97a6a42c6c37c46c1d1c114",
+      "bytes": 441706
+    },
+    {
+      "original_path": "outputs/figures/thesis/validation_strategy_comparison.svg",
+      "archived_path": "archive/before_figure_style/outputs/figures/thesis/validation_strategy_comparison.svg",
+      "sha256": "134369f4f150f9b0de685633dcaf601c0e22019e3cf23a504f4fe3f63132c5c5",
+      "bytes": 78236
+    },
+    {
+      "original_path": "outputs/metrics/thesis/accessibility_spatial_cells.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/accessibility_spatial_cells.csv",
+      "sha256": "aa551c6d27415051661f9b2e65825c430a144f1d3ce70ef7babc3d1f56010386",
+      "bytes": 41038
+    },
+    {
+      "original_path": "outputs/metrics/thesis/accessibility_spatial_cells.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/accessibility_spatial_cells.md",
+      "sha256": "a30ba79fdab20d5599a5c05af8146be8bcc4436e6cd6a030871d4667b1d7f78a",
+      "bytes": 47556
+    },
+    {
+      "original_path": "outputs/metrics/thesis/directional_transfer_asymmetry.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/directional_transfer_asymmetry.csv",
+      "sha256": "8f570a1d35005b1b9190f0e5ddbc37d1fbf38604b49fde9e192a705e9f24d077",
+      "bytes": 2431
+    },
+    {
+      "original_path": "outputs/metrics/thesis/directional_transfer_asymmetry.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/directional_transfer_asymmetry.md",
+      "sha256": "f0fa7900a63764f6e3bf5836bf12e45f648b56a2eb4d70f99b9deb3ac67b0214",
+      "bytes": 2196
+    },
+    {
+      "original_path": "outputs/metrics/thesis/heldout_feature_contributions.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/heldout_feature_contributions.csv",
+      "sha256": "478eec62d8572d80f05b86a99061a9eea88fbee0ec49f32db3602e445ad3d7f2",
+      "bytes": 35478
+    },
+    {
+      "original_path": "outputs/metrics/thesis/heldout_feature_contributions.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/heldout_feature_contributions.md",
+      "sha256": "94c461b57e3421d99b212426e56c48ee790782dc4ba2c7ef11470588fa3dfdef",
+      "bytes": 34103
+    },
+    {
+      "original_path": "outputs/metrics/thesis/nearest_access_divergence.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/nearest_access_divergence.csv",
+      "sha256": "7455d90657f5ca616ef3b72d1ea97c054f3a1b25d549299e6c9c672bb089b89b",
+      "bytes": 1839
+    },
+    {
+      "original_path": "outputs/metrics/thesis/nearest_access_divergence.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/nearest_access_divergence.md",
+      "sha256": "c21e2506b33373eb961beebd3e611935d27430f6145195f81538562f50caa596",
+      "bytes": 1606
+    },
+    {
+      "original_path": "outputs/metrics/thesis/nearest_access_relationship_bins.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/nearest_access_relationship_bins.csv",
+      "sha256": "7f51a71857fcf6efe50b95a0bdb7461ef15b5515f739b3678eadc900e83bd259",
+      "bytes": 28476
+    },
+    {
+      "original_path": "outputs/metrics/thesis/nearest_access_relationship_bins.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/nearest_access_relationship_bins.md",
+      "sha256": "a6a127f0369f053d94542a4874c6a11d118ca300d4fe0149957c8f73adf9aefa",
+      "bytes": 22478
+    },
+    {
+      "original_path": "outputs/metrics/thesis/neighbourhood_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/neighbourhood_performance.csv",
+      "sha256": "45a736767149253db89a195d3ab5a9c73a9fb7bff33a9afd1432e3ffd61eb8ca",
+      "bytes": 46275
+    },
+    {
+      "original_path": "outputs/metrics/thesis/neighbourhood_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/neighbourhood_performance.md",
+      "sha256": "725e38f93062fdb6a0ab11816a3a8b3db8b17831729d4f0755c59049d777a4ed",
+      "bytes": 35629
+    },
+    {
+      "original_path": "outputs/metrics/thesis/robustness_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/robustness_contrasts.csv",
+      "sha256": "ed86cce24b22ec30d52cf1681442da15421e2b76f41cd80e94e93ff034fefc7e",
+      "bytes": 85709
+    },
+    {
+      "original_path": "outputs/metrics/thesis/robustness_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/robustness_contrasts.md",
+      "sha256": "9eddc4a3656802d3403c2c131c9e5590d1b8c8a10fd26f71a94fcf7ae9404ece",
+      "bytes": 74868
+    },
+    {
+      "original_path": "outputs/release/README.md",
+      "archived_path": "archive/before_figure_style/outputs/release/README.md",
+      "sha256": "a4c77119eaf24cba4d896bf67349baced9deb9681b4b71cf7bfabff02b43e337",
+      "bytes": 2471
+    },
+    {
+      "original_path": "outputs/release/figures/accessibility_spatial.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/accessibility_spatial.pdf",
+      "sha256": "0ef2753ae3fde0e2b81aa85e0afa4298421367662427bfc037c74f6ecff43a40",
+      "bytes": 353806
+    },
+    {
+      "original_path": "outputs/release/figures/accessibility_spatial.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/accessibility_spatial.png",
+      "sha256": "1d0043a99beafd80afd684756e5455f6ddb986a6da2e768b3b5c3f82811fd35a",
+      "bytes": 364487
+    },
+    {
+      "original_path": "outputs/release/figures/accessibility_spatial.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/accessibility_spatial.svg",
+      "sha256": "eb86a6bb8128f4024462bf7c5b9f9ecd8052ec927adae4661e7e9d7974c50ab9",
+      "bytes": 1097998
+    },
+    {
+      "original_path": "outputs/release/figures/association_accessibility.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/association_accessibility.pdf",
+      "sha256": "7a866ab8e033f1e40e4b263c6dbacd1f4848fbf4276c31898dabf17666cc8652",
+      "bytes": 16043
+    },
+    {
+      "original_path": "outputs/release/figures/association_accessibility.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/association_accessibility.png",
+      "sha256": "8a3e0419d1be4eb84fe954777eb34e9b854a4e943d56c036cd39b0a962054b85",
+      "bytes": 151365
+    },
+    {
+      "original_path": "outputs/release/figures/association_accessibility.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/association_accessibility.svg",
+      "sha256": "c24079f38364683fd768def47802222fb65b8fbf1fc3630d58c3d05018323248",
+      "bytes": 27590
+    },
+    {
+      "original_path": "outputs/release/figures/directional_transfer_asymmetry.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/directional_transfer_asymmetry.pdf",
+      "sha256": "1a4b128bb11639ad5b92a0d28186952ada91b7b867cee13e4f97cfc6e251a68c",
+      "bytes": 16330
+    },
+    {
+      "original_path": "outputs/release/figures/directional_transfer_asymmetry.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/directional_transfer_asymmetry.png",
+      "sha256": "c937a5582f65aea6da03573944decb77749d5de184645310a1e1e78e0b4e8f3d",
+      "bytes": 84069
+    },
+    {
+      "original_path": "outputs/release/figures/directional_transfer_asymmetry.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/directional_transfer_asymmetry.svg",
+      "sha256": "8b748bff7f86a7c398db4b1319603927713ed84e75d87527d601564e744c6320",
+      "bytes": 16271
+    },
+    {
+      "original_path": "outputs/release/figures/heldout_feature_contributions.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/heldout_feature_contributions.pdf",
+      "sha256": "c13cde29c77b54537720083191fc87eb93d06f8098e211783e0114778fda0896",
+      "bytes": 14178
+    },
+    {
+      "original_path": "outputs/release/figures/heldout_feature_contributions.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/heldout_feature_contributions.png",
+      "sha256": "17d4aa07bee008c8e23a239c59212db329132ba0b3692738d5e951352455331e",
+      "bytes": 140945
+    },
+    {
+      "original_path": "outputs/release/figures/heldout_feature_contributions.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/heldout_feature_contributions.svg",
+      "sha256": "143572cb0511f2c32001a74463327813fafa7d3f0d7fc7a6c0438a19632f071d",
+      "bytes": 27905
+    },
+    {
+      "original_path": "outputs/release/figures/nearest_access_divergence.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/nearest_access_divergence.pdf",
+      "sha256": "1df9dda56c96783d44d8bba4cdb8fcf79e6c2ec3dfe79ebf2eee700bfd7e8e82",
+      "bytes": 12930
+    },
+    {
+      "original_path": "outputs/release/figures/nearest_access_divergence.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/nearest_access_divergence.png",
+      "sha256": "6bbc51cb73b20a981e1cb3cc07fbbb745c1c4f90d8112f1647e3b60889e6f2cc",
+      "bytes": 57171
+    },
+    {
+      "original_path": "outputs/release/figures/nearest_access_divergence.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/nearest_access_divergence.svg",
+      "sha256": "c9e460b2cfd270672085c19c66d0295603c7ed51ba02d0b0bb8ca624b54b6c42",
+      "bytes": 16565
+    },
+    {
+      "original_path": "outputs/release/figures/nearest_access_relationship.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/nearest_access_relationship.pdf",
+      "sha256": "1f7a67362bf239800a1013503c4c0f46ce8a5b969f876516766a1f0c40794f23",
+      "bytes": 24466
+    },
+    {
+      "original_path": "outputs/release/figures/nearest_access_relationship.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/nearest_access_relationship.png",
+      "sha256": "8bf7472e4aa9225aaeb013505a426841ee8d776afd0b00516628ca4d6cef1674",
+      "bytes": 446039
+    },
+    {
+      "original_path": "outputs/release/figures/nearest_access_relationship.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/nearest_access_relationship.svg",
+      "sha256": "2927f44189c7f1a713a075bb88b041fabdfdbc48456320f15055e9682094d8d6",
+      "bytes": 121271
+    },
+    {
+      "original_path": "outputs/release/figures/neighbourhood_performance_variation.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/neighbourhood_performance_variation.pdf",
+      "sha256": "d5c81f14dd0b269cfeec152c0628cdb23404c1f8b104af3f268a2488ba360e85",
+      "bytes": 19318
+    },
+    {
+      "original_path": "outputs/release/figures/neighbourhood_performance_variation.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/neighbourhood_performance_variation.png",
+      "sha256": "43ee2f3a6d2ba1a2fb4018324d37fab7de0d5cac0806fd1767f59cf7791966d0",
+      "bytes": 285461
+    },
+    {
+      "original_path": "outputs/release/figures/neighbourhood_performance_variation.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/neighbourhood_performance_variation.svg",
+      "sha256": "205af053d412fcdb8f8a8b87c03ea381ed0a82680ec0dbbebbc8adacb70f580b",
+      "bytes": 39817
+    },
+    {
+      "original_path": "outputs/release/figures/opportunity_comparison.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/opportunity_comparison.pdf",
+      "sha256": "fd6546fab0a84dfe7b188064d5caa435d7a31f44e5356cd214c074d615b94950",
+      "bytes": 13655
+    },
+    {
+      "original_path": "outputs/release/figures/opportunity_comparison.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/opportunity_comparison.png",
+      "sha256": "6dcd02fe2a20af9fdf2f6222d77401c001e551a9b2396e42790e1970c71d8253",
+      "bytes": 120518
+    },
+    {
+      "original_path": "outputs/release/figures/opportunity_comparison.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/opportunity_comparison.svg",
+      "sha256": "73b206bd5a201eea30f393bab52722596b14343a5bfe0a1159b8a3fa1ac841a6",
+      "bytes": 32397
+    },
+    {
+      "original_path": "outputs/release/figures/paired_accessibility_contrasts.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/paired_accessibility_contrasts.pdf",
+      "sha256": "0fc25cda94a60296d30823b08270c86d53803138a9e90ecd143a0143d970235a",
+      "bytes": 15609
+    },
+    {
+      "original_path": "outputs/release/figures/paired_accessibility_contrasts.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/paired_accessibility_contrasts.png",
+      "sha256": "06c107f278d12f59919fd0a9d817f448708c3aa1162d9125ffe0a7ca94d3559a",
+      "bytes": 130704
+    },
+    {
+      "original_path": "outputs/release/figures/paired_accessibility_contrasts.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/paired_accessibility_contrasts.svg",
+      "sha256": "60bcf45fde319366f9cd6c6cdf55d524c7dda4d75446ff869dc6779454d414d0",
+      "bytes": 33550
+    },
+    {
+      "original_path": "outputs/release/figures/primary_model_performance.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/primary_model_performance.pdf",
+      "sha256": "bf8889a44f698f3228690c7d547cd3a4ca13a2faf3a237d6ee7fda46f9ac6c7a",
+      "bytes": 16187
+    },
+    {
+      "original_path": "outputs/release/figures/primary_model_performance.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/primary_model_performance.png",
+      "sha256": "89e1533fe0ac4b41668f230c14cb01460f1f411b4346aa37ec92b5b5993bdd64",
+      "bytes": 118497
+    },
+    {
+      "original_path": "outputs/release/figures/primary_model_performance.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/primary_model_performance.svg",
+      "sha256": "de1f1de63627c33ad56612c4e06e6c4a47051f4781f62b5e129169f489777948",
+      "bytes": 33158
+    },
+    {
+      "original_path": "outputs/release/figures/residual_spatial_diagnostics.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/residual_spatial_diagnostics.pdf",
+      "sha256": "adf90989ed89cd90bdc3b8ba73b54634d4f595375c04733f9ad71af7271ce799",
+      "bytes": 11719
+    },
+    {
+      "original_path": "outputs/release/figures/residual_spatial_diagnostics.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/residual_spatial_diagnostics.png",
+      "sha256": "ed9a506582e08a93f8154793458f50514ea96f02ade5c6b86ecda441c2f2bb0b",
+      "bytes": 72781
+    },
+    {
+      "original_path": "outputs/release/figures/residual_spatial_diagnostics.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/residual_spatial_diagnostics.svg",
+      "sha256": "29b0a17879394b2d226ae6d334faa8588d2c155515d9e3e170654188d1a6adec",
+      "bytes": 19067
+    },
+    {
+      "original_path": "outputs/release/figures/robustness_contrasts.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/robustness_contrasts.pdf",
+      "sha256": "701826fe350a375e4e58b28fa2f977d63a3982bc9139fd82f29b878aa6a21e55",
+      "bytes": 32615
+    },
+    {
+      "original_path": "outputs/release/figures/robustness_contrasts.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/robustness_contrasts.png",
+      "sha256": "67ac9c995e5fe8745afd3fa319bfd75a313a39fb13353b23bf564008f12bbb41",
+      "bytes": 567516
+    },
+    {
+      "original_path": "outputs/release/figures/robustness_contrasts.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/robustness_contrasts.svg",
+      "sha256": "df83936d1d9809fe08873a00c2091d15ecc95f4d7239e8c62a4ca849d2dcab7e",
+      "bytes": 84995
+    },
+    {
+      "original_path": "outputs/release/figures/study_areas.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/study_areas.pdf",
+      "sha256": "6e164c70d8803dc6289b2974ec8092e2735d421b623e19194786a2f1c23bad8f",
+      "bytes": 335260
+    },
+    {
+      "original_path": "outputs/release/figures/study_areas.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/study_areas.png",
+      "sha256": "a1cc98159e6cbd20d35eb104acd04af6e23334b01799c2d2f732a49df3aa8d7f",
+      "bytes": 486385
+    },
+    {
+      "original_path": "outputs/release/figures/study_areas.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/study_areas.svg",
+      "sha256": "a043035fb2a61c63eb55684e1d4ba3ed0fe97f8517ce1dec1de14b0e235c398f",
+      "bytes": 956499
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_accessibility_gains.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_accessibility_gains.pdf",
+      "sha256": "873f04d41e9453924e6ae04c7137f5642a30f730bc3e96bcb371fb7ad615d080",
+      "bytes": 36609
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_accessibility_gains.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_accessibility_gains.png",
+      "sha256": "003228b4223d5f1b32f2a4b97159af300462b85ee35538583e74ceab1d557376",
+      "bytes": 283183
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_accessibility_gains.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_accessibility_gains.svg",
+      "sha256": "8d30e0d4e410f53eb55b31520ea5099009bd5620ed390f37d032bb8e399e2219",
+      "bytes": 61606
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_network_comparison.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_network_comparison.pdf",
+      "sha256": "c9e60cb9bd6abcb95355d7963f65928d66697a00fa35e8569150be2fca41efb0",
+      "bytes": 14040
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_network_comparison.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_network_comparison.png",
+      "sha256": "1d807b0a0de0d6e7d495366c05d0967cad297f61ffab71a7f46e4f0d5d816d03",
+      "bytes": 185227
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_network_comparison.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_network_comparison.svg",
+      "sha256": "2558686287b8828eec1671a9c74596464e30dcb5c71f9cde97680484b5d3bb0f",
+      "bytes": 25925
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_performance.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_performance.pdf",
+      "sha256": "f6d7ac06f70e2a65571c9fb92134c659842a7a30df3db401b5191db0387f19e9",
+      "bytes": 33132
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_performance.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_performance.png",
+      "sha256": "fc513de35fe060b622169701647cb6ff0f56eb2d7390d55d013258d1562ce96f",
+      "bytes": 268255
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_performance.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_performance.svg",
+      "sha256": "43d8208b4af384b2d581d07e3136618dea242ecd4468890a8e22a75568081702",
+      "bytes": 65250
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_prediction_diagnostics.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_prediction_diagnostics.pdf",
+      "sha256": "8cfe5d29adcecfe2454055345817f684d372fd34553d96a133a92cbc09e33f42",
+      "bytes": 138552
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_prediction_diagnostics.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_prediction_diagnostics.png",
+      "sha256": "e69e0df1bb01ceaa1d8fe0ed747fe640fe518b96c2f04db9dfea00d7dada02d7",
+      "bytes": 268794
+    },
+    {
+      "original_path": "outputs/release/figures/transfer_prediction_diagnostics.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/transfer_prediction_diagnostics.svg",
+      "sha256": "a30b8475a0c6157c89343b11a0341c011bda603114ee7f5ec1fcb1ab55e6fcd2",
+      "bytes": 1862846
+    },
+    {
+      "original_path": "outputs/release/figures/validation_strategy_comparison.pdf",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/validation_strategy_comparison.pdf",
+      "sha256": "eb97d60408cea676b8b57f7bb9b1526b9a637d0ce182103aa186086d5a81eafe",
+      "bytes": 27154
+    },
+    {
+      "original_path": "outputs/release/figures/validation_strategy_comparison.png",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/validation_strategy_comparison.png",
+      "sha256": "b79fc3f93f5fe31795e06e31fab9e37654864266e97a6a42c6c37c46c1d1c114",
+      "bytes": 441706
+    },
+    {
+      "original_path": "outputs/release/figures/validation_strategy_comparison.svg",
+      "archived_path": "archive/before_figure_style/outputs/release/figures/validation_strategy_comparison.svg",
+      "sha256": "134369f4f150f9b0de685633dcaf601c0e22019e3cf23a504f4fe3f63132c5c5",
+      "bytes": 78236
+    },
+    {
+      "original_path": "outputs/release/manifests/cities.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/cities.json",
+      "sha256": "c9e6a920796d2a06c741f6734cde63cb72c224364fe971dfca85c327686e6487",
+      "bytes": 4614
+    },
+    {
+      "original_path": "outputs/release/manifests/deliverable_gap_audit.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/deliverable_gap_audit.json",
+      "sha256": "116a20b17f5b527b7604eece8d6c4ada8e420c2addea7ca588eae2f95a6b100c",
+      "bytes": 68508
+    },
+    {
+      "original_path": "outputs/release/manifests/design.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/design.json",
+      "sha256": "d8df5d0e50f4b0bb63ad8697d19c3d76a1a3becae45e37e0473c69645b52c6ef",
+      "bytes": 6200
+    },
+    {
+      "original_path": "outputs/release/manifests/frozen_reporting_sources.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/frozen_reporting_sources.json",
+      "sha256": "6116de6d93594d3ad028825785973c630aeee8825e6d3c7eb59cec09b16b5f72",
+      "bytes": 262761
+    },
+    {
+      "original_path": "outputs/release/manifests/frozen_science_verification.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/frozen_science_verification.json",
+      "sha256": "42396cb83ecb140fbd97f30b9e7ab5a6c64fc8a05579a34e6ffdecc8193e8fab",
+      "bytes": 1567
+    },
+    {
+      "original_path": "outputs/release/manifests/numeric_claims_registry.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/numeric_claims_registry.json",
+      "sha256": "18c2c4c581f87523ce35c19d613321c5ab66391491ae210eca7136676e3b5e51",
+      "bytes": 14128
+    },
+    {
+      "original_path": "outputs/release/manifests/release_audit.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/release_audit.json",
+      "sha256": "72ddade56df59d81d7c3681db91c0ff9f78f0cf9525fceea5a75a23e141f6507",
+      "bytes": 1393
+    },
+    {
+      "original_path": "outputs/release/manifests/release_manifest.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/release_manifest.json",
+      "sha256": "b25ed36de2240fbf3c66481cc3dd01c0261f77e98f5ca30bf0a446dbb790d4a8",
+      "bytes": 422693
+    },
+    {
+      "original_path": "outputs/release/manifests/reporting_code/thesis_audit.py",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/reporting_code/thesis_audit.py",
+      "sha256": "f12b98e8447bfc01dcdcc39a0334d82c0fc4dd85c7da73019bc9880a8c97dfcd",
+      "bytes": 12643
+    },
+    {
+      "original_path": "outputs/release/manifests/reporting_code/thesis_outputs.py",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/reporting_code/thesis_outputs.py",
+      "sha256": "15c7ba8014bf2e772f6280e7524ab2a65b39db7d91ddef64fa5d04d32016927b",
+      "bytes": 38622
+    },
+    {
+      "original_path": "outputs/release/manifests/reporting_code/thesis_release.py",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/reporting_code/thesis_release.py",
+      "sha256": "ed22a76d6e8b4fe81f53a48dfb91d2388f84517d0b2705d9e69d6026aa43d013",
+      "bytes": 17140
+    },
+    {
+      "original_path": "outputs/release/manifests/reporting_code/thesis_sources.py",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/reporting_code/thesis_sources.py",
+      "sha256": "2c23ce2132a48b44cad01fcdd5e3dff4b27b7e3626af8fc28c9b3c5a119d8a64",
+      "bytes": 9939
+    },
+    {
+      "original_path": "outputs/release/manifests/reporting_code/thesis_synthesis.py",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/reporting_code/thesis_synthesis.py",
+      "sha256": "afef49bd1c5aaacd962f92d7d3cabf69e99157519308042da687c8c74f49b414",
+      "bytes": 28307
+    },
+    {
+      "original_path": "outputs/release/manifests/reporting_code/thesis_tables.py",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/reporting_code/thesis_tables.py",
+      "sha256": "5b5d55af44b1ee6eb3c9d7b0d32beb214d29fa5705f97b980d8a0c71b1b47261",
+      "bytes": 14894
+    },
+    {
+      "original_path": "outputs/release/manifests/reporting_code/thesis_validate.py",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/reporting_code/thesis_validate.py",
+      "sha256": "4a1a1c1340b652ce4515cb083020849832f2996b7a51d61ee41f1b2ca5beb545",
+      "bytes": 8993
+    },
+    {
+      "original_path": "outputs/release/manifests/requirements.txt",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/requirements.txt",
+      "sha256": "c745ce919fe23d01ed90e88f6e890f11279d6d72aea0b985f15d00e514b4789e",
+      "bytes": 848
+    },
+    {
+      "original_path": "outputs/release/manifests/software_environment.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/software_environment.json",
+      "sha256": "693820f6b243bbd57fb174fb8c2bf60d5343c7f1cfd2020f6390894d60f574d3",
+      "bytes": 505
+    },
+    {
+      "original_path": "outputs/release/manifests/thesis_artifact_manifest.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/thesis_artifact_manifest.json",
+      "sha256": "36e285739f4ad862f3022f52d1e525d12830d17719609face54549d4dddc6f17",
+      "bytes": 405881
+    },
+    {
+      "original_path": "outputs/release/manifests/thesis_publication_validation.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/thesis_publication_validation.json",
+      "sha256": "ad21882dba7d62e747262adc70a9513a59bc3cbd0200045a7b1921d207d15626",
+      "bytes": 439
+    },
+    {
+      "original_path": "outputs/release/manifests/thesis_recommendations.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/thesis_recommendations.json",
+      "sha256": "7dcd1791db55902060625c149414d95218d994220bd9987e0c77b136d00764ac",
+      "bytes": 15821
+    },
+    {
+      "original_path": "outputs/release/manifests/thesis_synthesis_manifest.json",
+      "archived_path": "archive/before_figure_style/outputs/release/manifests/thesis_synthesis_manifest.json",
+      "sha256": "269dc4d6d0188a8b648dfab316a9e50a0fcb5facc0f2f75be3b1f3f0394caf8c",
+      "bytes": 5399
+    },
+    {
+      "original_path": "outputs/release/metrics/accessibility_spatial_cells.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/accessibility_spatial_cells.csv",
+      "sha256": "aa551c6d27415051661f9b2e65825c430a144f1d3ce70ef7babc3d1f56010386",
+      "bytes": 41038
+    },
+    {
+      "original_path": "outputs/release/metrics/accessibility_spatial_cells.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/accessibility_spatial_cells.md",
+      "sha256": "a30ba79fdab20d5599a5c05af8146be8bcc4436e6cd6a030871d4667b1d7f78a",
+      "bytes": 47556
+    },
+    {
+      "original_path": "outputs/release/metrics/diagnostics/neighbourhood_support.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/diagnostics/neighbourhood_support.csv",
+      "sha256": "9e52ea3063f648c2cf7b1a65769af13e433060ceb677618423c5a3e9da7cf435",
+      "bytes": 1609
+    },
+    {
+      "original_path": "outputs/release/metrics/diagnostics/neighbourhood_support.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/diagnostics/neighbourhood_support.md",
+      "sha256": "bd6a09ec6bcadaf61372f867934f7e60056743c844915ff7eeb6cc86778b3c72",
+      "bytes": 2228
+    },
+    {
+      "original_path": "outputs/release/metrics/diagnostics/residual_spatial_diagnostics.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/diagnostics/residual_spatial_diagnostics.csv",
+      "sha256": "45611a0d2860e298c50ac644510e8b961e8d92f52e22b510051e3e9c39f805d7",
+      "bytes": 2329
+    },
+    {
+      "original_path": "outputs/release/metrics/diagnostics/residual_spatial_diagnostics.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/diagnostics/residual_spatial_diagnostics.md",
+      "sha256": "3f123f61a86d580f22ea994a01be1673f04bef36732ecc49acaedea647269126",
+      "bytes": 2407
+    },
+    {
+      "original_path": "outputs/release/metrics/diagnostics/transfer_prediction_bins.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/diagnostics/transfer_prediction_bins.csv",
+      "sha256": "c598b56c71e594be6c081b2afa0d256666695c40993dc8df2fddd697ffca68a6",
+      "bytes": 57178
+    },
+    {
+      "original_path": "outputs/release/metrics/diagnostics/transfer_prediction_bins.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/diagnostics/transfer_prediction_bins.md",
+      "sha256": "0961ba0efc796e3271553b66babacdfe1dc4274efe5e9b8431f7574187f45f92",
+      "bytes": 42541
+    },
+    {
+      "original_path": "outputs/release/metrics/directional_transfer_asymmetry.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/directional_transfer_asymmetry.csv",
+      "sha256": "8f570a1d35005b1b9190f0e5ddbc37d1fbf38604b49fde9e192a705e9f24d077",
+      "bytes": 2431
+    },
+    {
+      "original_path": "outputs/release/metrics/directional_transfer_asymmetry.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/directional_transfer_asymmetry.md",
+      "sha256": "f0fa7900a63764f6e3bf5836bf12e45f648b56a2eb4d70f99b9deb3ac67b0214",
+      "bytes": 2196
+    },
+    {
+      "original_path": "outputs/release/metrics/heldout_feature_contributions.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/heldout_feature_contributions.csv",
+      "sha256": "478eec62d8572d80f05b86a99061a9eea88fbee0ec49f32db3602e445ad3d7f2",
+      "bytes": 35478
+    },
+    {
+      "original_path": "outputs/release/metrics/heldout_feature_contributions.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/heldout_feature_contributions.md",
+      "sha256": "94c461b57e3421d99b212426e56c48ee790782dc4ba2c7ef11470588fa3dfdef",
+      "bytes": 34103
+    },
+    {
+      "original_path": "outputs/release/metrics/nearest_access_divergence.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/nearest_access_divergence.csv",
+      "sha256": "7455d90657f5ca616ef3b72d1ea97c054f3a1b25d549299e6c9c672bb089b89b",
+      "bytes": 1839
+    },
+    {
+      "original_path": "outputs/release/metrics/nearest_access_divergence.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/nearest_access_divergence.md",
+      "sha256": "c21e2506b33373eb961beebd3e611935d27430f6145195f81538562f50caa596",
+      "bytes": 1606
+    },
+    {
+      "original_path": "outputs/release/metrics/nearest_access_relationship_bins.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/nearest_access_relationship_bins.csv",
+      "sha256": "7f51a71857fcf6efe50b95a0bdb7461ef15b5515f739b3678eadc900e83bd259",
+      "bytes": 28476
+    },
+    {
+      "original_path": "outputs/release/metrics/nearest_access_relationship_bins.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/nearest_access_relationship_bins.md",
+      "sha256": "a6a127f0369f053d94542a4874c6a11d118ca300d4fe0149957c8f73adf9aefa",
+      "bytes": 22478
+    },
+    {
+      "original_path": "outputs/release/metrics/neighbourhood_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/neighbourhood_performance.csv",
+      "sha256": "45a736767149253db89a195d3ab5a9c73a9fb7bff33a9afd1432e3ffd61eb8ca",
+      "bytes": 46275
+    },
+    {
+      "original_path": "outputs/release/metrics/neighbourhood_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/neighbourhood_performance.md",
+      "sha256": "725e38f93062fdb6a0ab11816a3a8b3db8b17831729d4f0755c59049d777a4ed",
+      "bytes": 35629
+    },
+    {
+      "original_path": "outputs/release/metrics/robustness_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/robustness_contrasts.csv",
+      "sha256": "ed86cce24b22ec30d52cf1681442da15421e2b76f41cd80e94e93ff034fefc7e",
+      "bytes": 85709
+    },
+    {
+      "original_path": "outputs/release/metrics/robustness_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/release/metrics/robustness_contrasts.md",
+      "sha256": "9eddc4a3656802d3403c2c131c9e5590d1b8c8a10fd26f71a94fcf7ae9404ece",
+      "bytes": 74868
+    },
+    {
+      "original_path": "outputs/release/reports/data_dictionary.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/data_dictionary.md",
+      "sha256": "e0793728b5debfccba51ec75be1b4a00b6847ef116f1e77b393dbf699b6b85ec",
+      "bytes": 7665
+    },
+    {
+      "original_path": "outputs/release/reports/final_claims_for_thesis.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/final_claims_for_thesis.md",
+      "sha256": "24dbfd7cca1d633c9ba58e9d375546f37474722586af37ae02c2b8ab794d9260",
+      "bytes": 2784
+    },
+    {
+      "original_path": "outputs/release/reports/findings_by_research_question.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/findings_by_research_question.md",
+      "sha256": "963df0e1289a156abcf74ee304c6ac3d29e44c1c9756fd5466bc76edf3be411b",
+      "bytes": 11149
+    },
+    {
+      "original_path": "outputs/release/reports/initial_deliverable_gap_audit.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/initial_deliverable_gap_audit.md",
+      "sha256": "ccddfe1b2ed442115b3384705623830ec1ffb42e8290b131b1658c1d78ef8640",
+      "bytes": 8940
+    },
+    {
+      "original_path": "outputs/release/reports/preanalysis_specification.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/preanalysis_specification.md",
+      "sha256": "8837c444046eb9c2452e3d9db2a874a93942be398ab08059ac77b118eb96d5a7",
+      "bytes": 6109
+    },
+    {
+      "original_path": "outputs/release/reports/reproducibility.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/reproducibility.md",
+      "sha256": "797c83ab610c90d46a11abf6fbce11d60c7e36d1dced05794096697baa8b79c4",
+      "bytes": 11436
+    },
+    {
+      "original_path": "outputs/release/reports/research_plan.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/research_plan.md",
+      "sha256": "0b66f06eb3e0599e913fc721c3ed806fa7d18cf4df1b4c140a2a1a8db19b08f9",
+      "bytes": 5028
+    },
+    {
+      "original_path": "outputs/release/reports/research_results.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/research_results.md",
+      "sha256": "5bc819a7b52a66a42c339e59fea3c3dde61726aee1107ff6a585e03318c16496",
+      "bytes": 14002
+    },
+    {
+      "original_path": "outputs/release/reports/scientific_proposal.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/scientific_proposal.md",
+      "sha256": "6bebf42490760711aab75cd9a8490ea62d8bd4defb92bb2030022a43c786d612",
+      "bytes": 4844
+    },
+    {
+      "original_path": "outputs/release/reports/source_registry.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/source_registry.md",
+      "sha256": "18c7e09d1b0cfb39872bf82729ae9d15a3ae7af28dde1c186879056d618ecfae",
+      "bytes": 3775
+    },
+    {
+      "original_path": "outputs/release/reports/thesis_figure_recommendations.md",
+      "archived_path": "archive/before_figure_style/outputs/release/reports/thesis_figure_recommendations.md",
+      "sha256": "a31a780a9b363fa339a7f6576735b680f2782f4577a4e04dec9759342c6228fe",
+      "bytes": 9732
+    },
+    {
+      "original_path": "outputs/release/tables/accessibility_descriptive_statistics.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/accessibility_descriptive_statistics.csv",
+      "sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+      "bytes": 3809
+    },
+    {
+      "original_path": "outputs/release/tables/accessibility_descriptive_statistics.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/accessibility_descriptive_statistics.md",
+      "sha256": "1adde94cae3a6f9f4d22937bfac113a1fbfa17c4be6bab9fc824e91ee17df7e8",
+      "bytes": 3981
+    },
+    {
+      "original_path": "outputs/release/tables/association_results.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/association_results.csv",
+      "sha256": "d2a9adb886c50103f48292218454040ad48296ccc32d853e7c5e1c427bb35b09",
+      "bytes": 70042
+    },
+    {
+      "original_path": "outputs/release/tables/association_results.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/association_results.md",
+      "sha256": "03829d04ed82252311af4b69f47ae56d8ea9d399457342f93b826dd520aae059",
+      "bytes": 1627
+    },
+    {
+      "original_path": "outputs/release/tables/city_sample_summary.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/city_sample_summary.csv",
+      "sha256": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
+      "bytes": 712
+    },
+    {
+      "original_path": "outputs/release/tables/city_sample_summary.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/city_sample_summary.md",
+      "sha256": "31bc975be45718b167ff9cb0cb01fe4e1f0e22193ce8d6b0a12f280b723233b8",
+      "bytes": 679
+    },
+    {
+      "original_path": "outputs/release/tables/claims_and_limitations.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/claims_and_limitations.csv",
+      "sha256": "ce51bb1c4d3696eb5c28780fb115cc7396414d244762d045bd3d6af09f464677",
+      "bytes": 670
+    },
+    {
+      "original_path": "outputs/release/tables/claims_and_limitations.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/claims_and_limitations.md",
+      "sha256": "3e3b72fa219863e1c34dba1c00093102e8f6976bfe8dd36d5c6661227974f2ad",
+      "bytes": 873
+    },
+    {
+      "original_path": "outputs/release/tables/feature_definitions.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/feature_definitions.csv",
+      "sha256": "f21ad180c235a8e7e1e80866daeab9642401b362a6a85e37e4e5a6ce298ad4f5",
+      "bytes": 5643
+    },
+    {
+      "original_path": "outputs/release/tables/feature_definitions.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/feature_definitions.md",
+      "sha256": "44f38f75c2514db68eab66246101d3ed55149b365d1cf7f92c88e25e1db53d4b",
+      "bytes": 6305
+    },
+    {
+      "original_path": "outputs/release/tables/paired_model_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/paired_model_contrasts.csv",
+      "sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+      "bytes": 6917
+    },
+    {
+      "original_path": "outputs/release/tables/paired_model_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/paired_model_contrasts.md",
+      "sha256": "8b724d42013b0e702f2ea0050c578ac4978bda678939fc68fbaccdc96701fd77",
+      "bytes": 2443
+    },
+    {
+      "original_path": "outputs/release/tables/primary_predictive_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/primary_predictive_performance.csv",
+      "sha256": "668068de61b0feba1134d0e5acfc142f837ea5f4f9f481139672e6b0e2144605",
+      "bytes": 3250
+    },
+    {
+      "original_path": "outputs/release/tables/primary_predictive_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/primary_predictive_performance.md",
+      "sha256": "96a726e571612542bc6ee920f587e06f1de57c9fd8c0d6d3a4546902a362dcb1",
+      "bytes": 589
+    },
+    {
+      "original_path": "outputs/release/tables/robustness_registry.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/robustness_registry.csv",
+      "sha256": "5ab268dd9a3d151e64fecf4e82ce86efdb68d713604247513af928346aa75162",
+      "bytes": 16708
+    },
+    {
+      "original_path": "outputs/release/tables/robustness_registry.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/robustness_registry.md",
+      "sha256": "b17b036198f75721afb458e005cfbdf8517ef43b5c801edb61d6ccc3733581c5",
+      "bytes": 17880
+    },
+    {
+      "original_path": "outputs/release/tables/sample_flow.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/sample_flow.csv",
+      "sha256": "441a58c52de158d747d5a5df9189393a34ab89f867a18017cdc4875f98d8a82c",
+      "bytes": 939
+    },
+    {
+      "original_path": "outputs/release/tables/sample_flow.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/sample_flow.md",
+      "sha256": "127daa7149c750a189c52aa36780716707a362c1d08e0a520819ce60bea67b2e",
+      "bytes": 1280
+    },
+    {
+      "original_path": "outputs/release/tables/transfer_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/transfer_contrasts.csv",
+      "sha256": "72edab7fd9fa412bfb927de23e6a9e39388ceeb15b1669f2a66286c6e367d12d",
+      "bytes": 13363
+    },
+    {
+      "original_path": "outputs/release/tables/transfer_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/transfer_contrasts.md",
+      "sha256": "d7b32aaccb331fca0e3941de66980d13d3b3befc946a56206cabf2de9b528042",
+      "bytes": 4543
+    },
+    {
+      "original_path": "outputs/release/tables/transfer_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/transfer_performance.csv",
+      "sha256": "810c468e8370f3963634c9dc88dbe14d2e2c694d5ca26298447db7c94945018d",
+      "bytes": 6191
+    },
+    {
+      "original_path": "outputs/release/tables/transfer_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/transfer_performance.md",
+      "sha256": "28d7ed6bdef63aab807d2ecd219de6135d8ca155449e141c3c7d2bb666920999",
+      "bytes": 1098
+    },
+    {
+      "original_path": "outputs/release/tables/validation_comparison.csv",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/validation_comparison.csv",
+      "sha256": "040a1e3edb3ff1252a0059d028fbff084104a02c3a75435176d42c6b8b264435",
+      "bytes": 26247
+    },
+    {
+      "original_path": "outputs/release/tables/validation_comparison.md",
+      "archived_path": "archive/before_figure_style/outputs/release/tables/validation_comparison.md",
+      "sha256": "65641e8d3d2bdfae9fe19c3fbc093ffb95d6236798b7ab81d62a74ed3cb40848",
+      "bytes": 1859
+    },
+    {
+      "original_path": "outputs/release/thesis_release.zip",
+      "archived_path": "archive/before_figure_style/outputs/release/thesis_release.zip",
+      "sha256": "9031a328cdf3d7e91ffb4db8ed1bd20e4d1f79a2052cb7654815f19ee68bd6e6",
+      "bytes": 5987624
+    },
+    {
+      "original_path": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+      "sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+      "bytes": 3809
+    },
+    {
+      "original_path": "outputs/tables/thesis/accessibility_descriptive_statistics.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/accessibility_descriptive_statistics.md",
+      "sha256": "1adde94cae3a6f9f4d22937bfac113a1fbfa17c4be6bab9fc824e91ee17df7e8",
+      "bytes": 3981
+    },
+    {
+      "original_path": "outputs/tables/thesis/association_results.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/association_results.csv",
+      "sha256": "d2a9adb886c50103f48292218454040ad48296ccc32d853e7c5e1c427bb35b09",
+      "bytes": 70042
+    },
+    {
+      "original_path": "outputs/tables/thesis/association_results.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/association_results.md",
+      "sha256": "03829d04ed82252311af4b69f47ae56d8ea9d399457342f93b826dd520aae059",
+      "bytes": 1627
+    },
+    {
+      "original_path": "outputs/tables/thesis/city_sample_summary.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/city_sample_summary.csv",
+      "sha256": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
+      "bytes": 712
+    },
+    {
+      "original_path": "outputs/tables/thesis/city_sample_summary.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/city_sample_summary.md",
+      "sha256": "31bc975be45718b167ff9cb0cb01fe4e1f0e22193ce8d6b0a12f280b723233b8",
+      "bytes": 679
+    },
+    {
+      "original_path": "outputs/tables/thesis/claims_and_limitations.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/claims_and_limitations.csv",
+      "sha256": "ce51bb1c4d3696eb5c28780fb115cc7396414d244762d045bd3d6af09f464677",
+      "bytes": 670
+    },
+    {
+      "original_path": "outputs/tables/thesis/claims_and_limitations.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/claims_and_limitations.md",
+      "sha256": "3e3b72fa219863e1c34dba1c00093102e8f6976bfe8dd36d5c6661227974f2ad",
+      "bytes": 873
+    },
+    {
+      "original_path": "outputs/tables/thesis/feature_definitions.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/feature_definitions.csv",
+      "sha256": "f21ad180c235a8e7e1e80866daeab9642401b362a6a85e37e4e5a6ce298ad4f5",
+      "bytes": 5643
+    },
+    {
+      "original_path": "outputs/tables/thesis/feature_definitions.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/feature_definitions.md",
+      "sha256": "44f38f75c2514db68eab66246101d3ed55149b365d1cf7f92c88e25e1db53d4b",
+      "bytes": 6305
+    },
+    {
+      "original_path": "outputs/tables/thesis/paired_model_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/paired_model_contrasts.csv",
+      "sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+      "bytes": 6917
+    },
+    {
+      "original_path": "outputs/tables/thesis/paired_model_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/paired_model_contrasts.md",
+      "sha256": "8b724d42013b0e702f2ea0050c578ac4978bda678939fc68fbaccdc96701fd77",
+      "bytes": 2443
+    },
+    {
+      "original_path": "outputs/tables/thesis/primary_predictive_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/primary_predictive_performance.csv",
+      "sha256": "668068de61b0feba1134d0e5acfc142f837ea5f4f9f481139672e6b0e2144605",
+      "bytes": 3250
+    },
+    {
+      "original_path": "outputs/tables/thesis/primary_predictive_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/primary_predictive_performance.md",
+      "sha256": "96a726e571612542bc6ee920f587e06f1de57c9fd8c0d6d3a4546902a362dcb1",
+      "bytes": 589
+    },
+    {
+      "original_path": "outputs/tables/thesis/robustness_registry.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/robustness_registry.csv",
+      "sha256": "5ab268dd9a3d151e64fecf4e82ce86efdb68d713604247513af928346aa75162",
+      "bytes": 16708
+    },
+    {
+      "original_path": "outputs/tables/thesis/robustness_registry.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/robustness_registry.md",
+      "sha256": "b17b036198f75721afb458e005cfbdf8517ef43b5c801edb61d6ccc3733581c5",
+      "bytes": 17880
+    },
+    {
+      "original_path": "outputs/tables/thesis/sample_flow.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/sample_flow.csv",
+      "sha256": "441a58c52de158d747d5a5df9189393a34ab89f867a18017cdc4875f98d8a82c",
+      "bytes": 939
+    },
+    {
+      "original_path": "outputs/tables/thesis/sample_flow.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/sample_flow.md",
+      "sha256": "127daa7149c750a189c52aa36780716707a362c1d08e0a520819ce60bea67b2e",
+      "bytes": 1280
+    },
+    {
+      "original_path": "outputs/tables/thesis/transfer_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/transfer_contrasts.csv",
+      "sha256": "72edab7fd9fa412bfb927de23e6a9e39388ceeb15b1669f2a66286c6e367d12d",
+      "bytes": 13363
+    },
+    {
+      "original_path": "outputs/tables/thesis/transfer_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/transfer_contrasts.md",
+      "sha256": "d7b32aaccb331fca0e3941de66980d13d3b3befc946a56206cabf2de9b528042",
+      "bytes": 4543
+    },
+    {
+      "original_path": "outputs/tables/thesis/transfer_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/transfer_performance.csv",
+      "sha256": "810c468e8370f3963634c9dc88dbe14d2e2c694d5ca26298447db7c94945018d",
+      "bytes": 6191
+    },
+    {
+      "original_path": "outputs/tables/thesis/transfer_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/transfer_performance.md",
+      "sha256": "28d7ed6bdef63aab807d2ecd219de6135d8ca155449e141c3c7d2bb666920999",
+      "bytes": 1098
+    },
+    {
+      "original_path": "outputs/tables/thesis/validation_comparison.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/validation_comparison.csv",
+      "sha256": "040a1e3edb3ff1252a0059d028fbff084104a02c3a75435176d42c6b8b264435",
+      "bytes": 26247
+    },
+    {
+      "original_path": "outputs/tables/thesis/validation_comparison.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/validation_comparison.md",
+      "sha256": "65641e8d3d2bdfae9fe19c3fbc093ffb95d6236798b7ab81d62a74ed3cb40848",
+      "bytes": 1859
+    },
+    {
+      "original_path": "reports/thesis_artifact_manifest.json",
+      "archived_path": "archive/before_figure_style/reports/thesis_artifact_manifest.json",
+      "sha256": "36e285739f4ad862f3022f52d1e525d12830d17719609face54549d4dddc6f17",
+      "bytes": 405881
+    },
+    {
+      "original_path": "reports/thesis_completion_checks.json",
+      "archived_path": "archive/before_figure_style/reports/thesis_completion_checks.json",
+      "sha256": "5f3ec47a4bc58d8cc0aa57d9be382d32643344bccb10b91f9f146362699181a8",
+      "bytes": 1612
+    },
+    {
+      "original_path": "reports/thesis_delivery_audit.json",
+      "archived_path": "archive/before_figure_style/reports/thesis_delivery_audit.json",
+      "sha256": "2860950233d008e159ca5bc7eefa4da5b0841d1bae15ec26e6b677eb02742a85",
+      "bytes": 31599
+    },
+    {
+      "original_path": "reports/thesis_delivery_audit.md",
+      "archived_path": "archive/before_figure_style/reports/thesis_delivery_audit.md",
+      "sha256": "2d1723c8666f2e362e721356ea4a882d08d794b43dcaf52a4a65cf4881a59a1c",
+      "bytes": 1192
+    },
+    {
+      "original_path": "reports/thesis_publication_validation.json",
+      "archived_path": "archive/before_figure_style/reports/thesis_publication_validation.json",
+      "sha256": "ad21882dba7d62e747262adc70a9513a59bc3cbd0200045a7b1921d207d15626",
+      "bytes": 439
+    },
+    {
+      "original_path": "reports/thesis_synthesis_manifest.json",
+      "archived_path": "archive/before_figure_style/reports/thesis_synthesis_manifest.json",
+      "sha256": "269dc4d6d0188a8b648dfab316a9e50a0fcb5facc0f2f75be3b1f3f0394caf8c",
+      "bytes": 5399
+    },
+    {
+      "original_path": "src/reporting/thesis_audit.py",
+      "archived_path": "archive/before_figure_style/src/reporting/thesis_audit.py",
+      "sha256": "f12b98e8447bfc01dcdcc39a0334d82c0fc4dd85c7da73019bc9880a8c97dfcd",
+      "bytes": 12643
+    },
+    {
+      "original_path": "src/reporting/thesis_outputs.py",
+      "archived_path": "archive/before_figure_style/src/reporting/thesis_outputs.py",
+      "sha256": "15c7ba8014bf2e772f6280e7524ab2a65b39db7d91ddef64fa5d04d32016927b",
+      "bytes": 38622
+    },
+    {
+      "original_path": "src/reporting/thesis_release.py",
+      "archived_path": "archive/before_figure_style/src/reporting/thesis_release.py",
+      "sha256": "ed22a76d6e8b4fe81f53a48dfb91d2388f84517d0b2705d9e69d6026aa43d013",
+      "bytes": 17140
+    },
+    {
+      "original_path": "src/reporting/thesis_sources.py",
+      "archived_path": "archive/before_figure_style/src/reporting/thesis_sources.py",
+      "sha256": "2c23ce2132a48b44cad01fcdd5e3dff4b27b7e3626af8fc28c9b3c5a119d8a64",
+      "bytes": 9939
+    },
+    {
+      "original_path": "src/reporting/thesis_synthesis.py",
+      "archived_path": "archive/before_figure_style/src/reporting/thesis_synthesis.py",
+      "sha256": "afef49bd1c5aaacd962f92d7d3cabf69e99157519308042da687c8c74f49b414",
+      "bytes": 28307
+    },
+    {
+      "original_path": "src/reporting/thesis_tables.py",
+      "archived_path": "archive/before_figure_style/src/reporting/thesis_tables.py",
+      "sha256": "5b5d55af44b1ee6eb3c9d7b0d32beb214d29fa5705f97b980d8a0c71b1b47261",
+      "bytes": 14894
+    },
+    {
+      "original_path": "src/reporting/thesis_validate.py",
+      "archived_path": "archive/before_figure_style/src/reporting/thesis_validate.py",
+      "sha256": "4a1a1c1340b652ce4515cb083020849832f2996b7a51d61ee41f1b2ca5beb545",
+      "bytes": 8993
+    },
+    {
+      "original_path": "tests/test_thesis_reporting.py",
+      "archived_path": "archive/before_figure_style/tests/test_thesis_reporting.py",
+      "sha256": "ab23c8f714d61196a818682035b0eec552f8811865117395179b6f6e960bb12c",
+      "bytes": 2520
+    }
+  ],
+  "scientific_models_refitted": false,
+  "numeric_exports_immutable": [
+    {
+      "original_path": "outputs/diagnostics/thesis/neighbourhood_support.csv",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/neighbourhood_support.csv",
+      "sha256": "9e52ea3063f648c2cf7b1a65769af13e433060ceb677618423c5a3e9da7cf435",
+      "bytes": 1609
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/neighbourhood_support.md",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/neighbourhood_support.md",
+      "sha256": "bd6a09ec6bcadaf61372f867934f7e60056743c844915ff7eeb6cc86778b3c72",
+      "bytes": 2228
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/residual_spatial_diagnostics.csv",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/residual_spatial_diagnostics.csv",
+      "sha256": "45611a0d2860e298c50ac644510e8b961e8d92f52e22b510051e3e9c39f805d7",
+      "bytes": 2329
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/residual_spatial_diagnostics.md",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/residual_spatial_diagnostics.md",
+      "sha256": "3f123f61a86d580f22ea994a01be1673f04bef36732ecc49acaedea647269126",
+      "bytes": 2407
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/transfer_prediction_bins.csv",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/transfer_prediction_bins.csv",
+      "sha256": "c598b56c71e594be6c081b2afa0d256666695c40993dc8df2fddd697ffca68a6",
+      "bytes": 57178
+    },
+    {
+      "original_path": "outputs/diagnostics/thesis/transfer_prediction_bins.md",
+      "archived_path": "archive/before_figure_style/outputs/diagnostics/thesis/transfer_prediction_bins.md",
+      "sha256": "0961ba0efc796e3271553b66babacdfe1dc4274efe5e9b8431f7574187f45f92",
+      "bytes": 42541
+    },
+    {
+      "original_path": "outputs/metrics/thesis/accessibility_spatial_cells.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/accessibility_spatial_cells.csv",
+      "sha256": "aa551c6d27415051661f9b2e65825c430a144f1d3ce70ef7babc3d1f56010386",
+      "bytes": 41038
+    },
+    {
+      "original_path": "outputs/metrics/thesis/accessibility_spatial_cells.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/accessibility_spatial_cells.md",
+      "sha256": "a30ba79fdab20d5599a5c05af8146be8bcc4436e6cd6a030871d4667b1d7f78a",
+      "bytes": 47556
+    },
+    {
+      "original_path": "outputs/metrics/thesis/directional_transfer_asymmetry.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/directional_transfer_asymmetry.csv",
+      "sha256": "8f570a1d35005b1b9190f0e5ddbc37d1fbf38604b49fde9e192a705e9f24d077",
+      "bytes": 2431
+    },
+    {
+      "original_path": "outputs/metrics/thesis/directional_transfer_asymmetry.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/directional_transfer_asymmetry.md",
+      "sha256": "f0fa7900a63764f6e3bf5836bf12e45f648b56a2eb4d70f99b9deb3ac67b0214",
+      "bytes": 2196
+    },
+    {
+      "original_path": "outputs/metrics/thesis/heldout_feature_contributions.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/heldout_feature_contributions.csv",
+      "sha256": "478eec62d8572d80f05b86a99061a9eea88fbee0ec49f32db3602e445ad3d7f2",
+      "bytes": 35478
+    },
+    {
+      "original_path": "outputs/metrics/thesis/heldout_feature_contributions.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/heldout_feature_contributions.md",
+      "sha256": "94c461b57e3421d99b212426e56c48ee790782dc4ba2c7ef11470588fa3dfdef",
+      "bytes": 34103
+    },
+    {
+      "original_path": "outputs/metrics/thesis/nearest_access_divergence.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/nearest_access_divergence.csv",
+      "sha256": "7455d90657f5ca616ef3b72d1ea97c054f3a1b25d549299e6c9c672bb089b89b",
+      "bytes": 1839
+    },
+    {
+      "original_path": "outputs/metrics/thesis/nearest_access_divergence.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/nearest_access_divergence.md",
+      "sha256": "c21e2506b33373eb961beebd3e611935d27430f6145195f81538562f50caa596",
+      "bytes": 1606
+    },
+    {
+      "original_path": "outputs/metrics/thesis/nearest_access_relationship_bins.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/nearest_access_relationship_bins.csv",
+      "sha256": "7f51a71857fcf6efe50b95a0bdb7461ef15b5515f739b3678eadc900e83bd259",
+      "bytes": 28476
+    },
+    {
+      "original_path": "outputs/metrics/thesis/nearest_access_relationship_bins.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/nearest_access_relationship_bins.md",
+      "sha256": "a6a127f0369f053d94542a4874c6a11d118ca300d4fe0149957c8f73adf9aefa",
+      "bytes": 22478
+    },
+    {
+      "original_path": "outputs/metrics/thesis/neighbourhood_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/neighbourhood_performance.csv",
+      "sha256": "45a736767149253db89a195d3ab5a9c73a9fb7bff33a9afd1432e3ffd61eb8ca",
+      "bytes": 46275
+    },
+    {
+      "original_path": "outputs/metrics/thesis/neighbourhood_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/neighbourhood_performance.md",
+      "sha256": "725e38f93062fdb6a0ab11816a3a8b3db8b17831729d4f0755c59049d777a4ed",
+      "bytes": 35629
+    },
+    {
+      "original_path": "outputs/metrics/thesis/robustness_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/robustness_contrasts.csv",
+      "sha256": "ed86cce24b22ec30d52cf1681442da15421e2b76f41cd80e94e93ff034fefc7e",
+      "bytes": 85709
+    },
+    {
+      "original_path": "outputs/metrics/thesis/robustness_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/metrics/thesis/robustness_contrasts.md",
+      "sha256": "9eddc4a3656802d3403c2c131c9e5590d1b8c8a10fd26f71a94fcf7ae9404ece",
+      "bytes": 74868
+    },
+    {
+      "original_path": "outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/accessibility_descriptive_statistics.csv",
+      "sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+      "bytes": 3809
+    },
+    {
+      "original_path": "outputs/tables/thesis/accessibility_descriptive_statistics.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/accessibility_descriptive_statistics.md",
+      "sha256": "1adde94cae3a6f9f4d22937bfac113a1fbfa17c4be6bab9fc824e91ee17df7e8",
+      "bytes": 3981
+    },
+    {
+      "original_path": "outputs/tables/thesis/association_results.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/association_results.csv",
+      "sha256": "d2a9adb886c50103f48292218454040ad48296ccc32d853e7c5e1c427bb35b09",
+      "bytes": 70042
+    },
+    {
+      "original_path": "outputs/tables/thesis/association_results.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/association_results.md",
+      "sha256": "03829d04ed82252311af4b69f47ae56d8ea9d399457342f93b826dd520aae059",
+      "bytes": 1627
+    },
+    {
+      "original_path": "outputs/tables/thesis/city_sample_summary.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/city_sample_summary.csv",
+      "sha256": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
+      "bytes": 712
+    },
+    {
+      "original_path": "outputs/tables/thesis/city_sample_summary.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/city_sample_summary.md",
+      "sha256": "31bc975be45718b167ff9cb0cb01fe4e1f0e22193ce8d6b0a12f280b723233b8",
+      "bytes": 679
+    },
+    {
+      "original_path": "outputs/tables/thesis/claims_and_limitations.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/claims_and_limitations.csv",
+      "sha256": "ce51bb1c4d3696eb5c28780fb115cc7396414d244762d045bd3d6af09f464677",
+      "bytes": 670
+    },
+    {
+      "original_path": "outputs/tables/thesis/claims_and_limitations.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/claims_and_limitations.md",
+      "sha256": "3e3b72fa219863e1c34dba1c00093102e8f6976bfe8dd36d5c6661227974f2ad",
+      "bytes": 873
+    },
+    {
+      "original_path": "outputs/tables/thesis/feature_definitions.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/feature_definitions.csv",
+      "sha256": "f21ad180c235a8e7e1e80866daeab9642401b362a6a85e37e4e5a6ce298ad4f5",
+      "bytes": 5643
+    },
+    {
+      "original_path": "outputs/tables/thesis/feature_definitions.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/feature_definitions.md",
+      "sha256": "44f38f75c2514db68eab66246101d3ed55149b365d1cf7f92c88e25e1db53d4b",
+      "bytes": 6305
+    },
+    {
+      "original_path": "outputs/tables/thesis/paired_model_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/paired_model_contrasts.csv",
+      "sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+      "bytes": 6917
+    },
+    {
+      "original_path": "outputs/tables/thesis/paired_model_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/paired_model_contrasts.md",
+      "sha256": "8b724d42013b0e702f2ea0050c578ac4978bda678939fc68fbaccdc96701fd77",
+      "bytes": 2443
+    },
+    {
+      "original_path": "outputs/tables/thesis/primary_predictive_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/primary_predictive_performance.csv",
+      "sha256": "668068de61b0feba1134d0e5acfc142f837ea5f4f9f481139672e6b0e2144605",
+      "bytes": 3250
+    },
+    {
+      "original_path": "outputs/tables/thesis/primary_predictive_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/primary_predictive_performance.md",
+      "sha256": "96a726e571612542bc6ee920f587e06f1de57c9fd8c0d6d3a4546902a362dcb1",
+      "bytes": 589
+    },
+    {
+      "original_path": "outputs/tables/thesis/robustness_registry.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/robustness_registry.csv",
+      "sha256": "5ab268dd9a3d151e64fecf4e82ce86efdb68d713604247513af928346aa75162",
+      "bytes": 16708
+    },
+    {
+      "original_path": "outputs/tables/thesis/robustness_registry.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/robustness_registry.md",
+      "sha256": "b17b036198f75721afb458e005cfbdf8517ef43b5c801edb61d6ccc3733581c5",
+      "bytes": 17880
+    },
+    {
+      "original_path": "outputs/tables/thesis/sample_flow.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/sample_flow.csv",
+      "sha256": "441a58c52de158d747d5a5df9189393a34ab89f867a18017cdc4875f98d8a82c",
+      "bytes": 939
+    },
+    {
+      "original_path": "outputs/tables/thesis/sample_flow.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/sample_flow.md",
+      "sha256": "127daa7149c750a189c52aa36780716707a362c1d08e0a520819ce60bea67b2e",
+      "bytes": 1280
+    },
+    {
+      "original_path": "outputs/tables/thesis/transfer_contrasts.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/transfer_contrasts.csv",
+      "sha256": "72edab7fd9fa412bfb927de23e6a9e39388ceeb15b1669f2a66286c6e367d12d",
+      "bytes": 13363
+    },
+    {
+      "original_path": "outputs/tables/thesis/transfer_contrasts.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/transfer_contrasts.md",
+      "sha256": "d7b32aaccb331fca0e3941de66980d13d3b3befc946a56206cabf2de9b528042",
+      "bytes": 4543
+    },
+    {
+      "original_path": "outputs/tables/thesis/transfer_performance.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/transfer_performance.csv",
+      "sha256": "810c468e8370f3963634c9dc88dbe14d2e2c694d5ca26298447db7c94945018d",
+      "bytes": 6191
+    },
+    {
+      "original_path": "outputs/tables/thesis/transfer_performance.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/transfer_performance.md",
+      "sha256": "28d7ed6bdef63aab807d2ecd219de6135d8ca155449e141c3c7d2bb666920999",
+      "bytes": 1098
+    },
+    {
+      "original_path": "outputs/tables/thesis/validation_comparison.csv",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/validation_comparison.csv",
+      "sha256": "040a1e3edb3ff1252a0059d028fbff084104a02c3a75435176d42c6b8b264435",
+      "bytes": 26247
+    },
+    {
+      "original_path": "outputs/tables/thesis/validation_comparison.md",
+      "archived_path": "archive/before_figure_style/outputs/tables/thesis/validation_comparison.md",
+      "sha256": "65641e8d3d2bdfae9fe19c3fbc093ffb95d6236798b7ab81d62a74ed3cb40848",
+      "bytes": 1859
+    }
+  ]
+}

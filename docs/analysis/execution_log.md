@@ -729,3 +729,68 @@ Staged review preserves Matplotlib SVG path serialization byte-exactly. Scoped
 .gitattributes disables whitespace warnings only for the generated thesis SVGs;
 source/document whitespace checks remain enabled. No figure or manifest hash
 is changed by this repository formatting rule.
+
+
+## Requested original figure design — 13 October 2026
+
+The researcher dislikes the new figure design and explicitly requests the V3
+style. Inspected original performance, interval, measurement and cartographic
+figures and their plotting code. The reference code is byte-identical to the
+protected V3 branch: navy headings, muted ink, blue/sand/green/lilac pastel
+fills, darker strokes, light grids, capped interval markers and integrated
+captions. Only this visual language is reused; no historical numerical result,
+geography, model or scientific decision is reused or reactivated.
+
+Before any replacement, verified and preserved247 files from the published
+dc5f1a4f481a3b7d885852ea0651dcccee55d609 checkpoint, including all prior
+figures/tables, reporting code, current documents/audits and complete safe
+release. The snapshot is archive/before_figure_style/manifest.json. The archive
+verifies every original checksum. All44 numerical CSV/Markdown exports remain
+byte-identical throughout. No raw file, model, prediction package, source
+selector, threshold, sample, fold, benchmark or SQL research record changes.
+
+Created reusable thesis_style and staged thesis_refresh functions. Applied the
+requested theme to all18 current figure sets (54 PNG/PDF/SVG exports), with
+larger navy headings, readable facets, pastel interval/SHAP/spatial bars, muted
+blue density and sequential maps, pastel signed transfer colours, aligned map
+headings, native-CRS scale bars/grid-north arrows and integrated captions. The
+main paired-contrast chart uses the original upright interval design while
+retaining all five current model comparisons and their frozen stability ranges.
+Facets retain actual city/neighbourhood names and current M0/ME/MW/MEW labels.
+
+Reviewed every figure in three full-resolution contact sheets plus selected
+full-size views; corrected caption/axis-label spacing, header/legend positioning
+and map alignment before publication. Clipping and header/caption overlap
+checks all PASS. Fixed the stale-label verifier to inspect actual SVG text
+rather than coincidental strings in embedded raster-image base64; no visible
+version/stage marker exists. Resumed publication certification after that false
+positive without changing the installed figures or weakening their hash checks.
+All prior audits remain byte-preserved in the archive.
+
+Staged and verified the replacement safe release before replacing its exact
+already-archived predecessor. The package contains134 registered/manifest
+files and134 verified ZIP entries; ZIP size10,048,531 bytes. All release hashes,
+93 package document links and privacy checks PASS. Verification now checks
+bundled source hashes against current artifacts, preventing stale figures from
+remaining in a nominally refreshed ZIP. All scientific reports/claims and
+recommendations remain unchanged. Markdown document-export status is unchanged.
+
+Actual final checks:138 full-suite tests,115 PASS and23 historical workflow
+SKIP; four owned PostGIS tests and five reporting/release tests PASS. The added
+style test verifies all44 immutable numerical exports and literal palette
+identity against the original plotting code. Publication checks verify98
+artifacts,18 figure sets,22 table/aggregate views,136 source-document links and
+1,709 suppressed aggregate bins; numeric-claim and independent contrast checks
+PASS. Fresh read-only scientific verification checks751 packages,1,176 saved
+models,682 prediction packages,20,460 fitted-code checks and48 source-pipeline
+transfer applications; primary/transfer RMSE reproduction PASS. All77 earlier
+public outputs and49 initial PNGs unchanged. Protected1,695-file/263-baseline
+and20 original PostGIS table checks PASS; discarded historical ZIP stays
+excluded as requested. Compilation and scoped whitespace checks PASS.
+
+Only safe presentation code, figures, release artifacts, documentation, audits
+and preserved publication files are staged. Root still has exactly one .env.
+No scientific model was refitted. Normal incremental publication remains only
+on the existing branch; main/v3 and historical worktree remain unchanged.
+Explicit HEAD:refs/heads/v4 push and remote/local SHA equality are verified
+externally; the log does not contain its own commit SHA.

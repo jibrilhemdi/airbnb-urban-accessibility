@@ -10,8 +10,9 @@
   "final_run_lineage": "PASS",
   "numeric_claims_trace": "PASS",
   "independent_point_contrast_recalculation": "PASS",
-  "links_checked": 127,
+  "links_checked": 136,
   "visible_version_markers": "NONE",
   "clipped_labels": "NONE",
+  "caption_and_header_overlap": "NONE",
   "models_refitted": false
 }

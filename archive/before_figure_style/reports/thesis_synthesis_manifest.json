@@ -1,0 +1,89 @@
+{
+  "status": "SYNTHESIS_GENERATED_PENDING_RELEASE_AUDIT",
+  "models_refitted": false,
+  "scientific_reconstruction": false,
+  "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+  "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
+  "input_table_hashes": {
+    "outputs/tables/thesis/city_sample_summary.csv": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
+    "outputs/tables/thesis/accessibility_descriptive_statistics.csv": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+    "outputs/tables/thesis/primary_predictive_performance.csv": "668068de61b0feba1134d0e5acfc142f837ea5f4f9f481139672e6b0e2144605",
+    "outputs/tables/thesis/paired_model_contrasts.csv": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+    "outputs/tables/thesis/validation_comparison.csv": "040a1e3edb3ff1252a0059d028fbff084104a02c3a75435176d42c6b8b264435",
+    "outputs/tables/thesis/transfer_performance.csv": "810c468e8370f3963634c9dc88dbe14d2e2c694d5ca26298447db7c94945018d",
+    "outputs/tables/thesis/transfer_contrasts.csv": "72edab7fd9fa412bfb927de23e6a9e39388ceeb15b1669f2a66286c6e367d12d",
+    "outputs/tables/thesis/association_results.csv": "d2a9adb886c50103f48292218454040ad48296ccc32d853e7c5e1c427bb35b09",
+    "outputs/tables/thesis/robustness_registry.csv": "5ab268dd9a3d151e64fecf4e82ce86efdb68d713604247513af928346aa75162",
+    "outputs/metrics/thesis/neighbourhood_performance.csv": "45a736767149253db89a195d3ab5a9c73a9fb7bff33a9afd1432e3ffd61eb8ca",
+    "outputs/metrics/thesis/directional_transfer_asymmetry.csv": "8f570a1d35005b1b9190f0e5ddbc37d1fbf38604b49fde9e192a705e9f24d077"
+  },
+  "generator_sha256": "afef49bd1c5aaacd962f92d7d3cabf69e99157519308042da687c8c74f49b414",
+  "items": [
+    {
+      "filename": "docs/final_claims_for_thesis.md",
+      "sha256": "39168bb47f146de9f469a36ffe6938fc7a97007bd9d1c8af9f6326f879689743",
+      "bytes": 2844,
+      "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
+      "research_question": "RQ1–RQ4",
+      "publication_status": "THESIS_READY_PENDING_RELEASE_AUDIT",
+      "source_run_artifact": "reports/thesis_artifact_manifest.json; numeric_claims_registry.json",
+      "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+      "private_row_export": false
+    },
+    {
+      "filename": "reports/thesis_figure_recommendations.md",
+      "sha256": "1de0deff6c2483448a16e8bd621dbe5eaf49b83401a9af8973f0a777aac66f56",
+      "bytes": 10122,
+      "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
+      "research_question": "RQ1–RQ4",
+      "publication_status": "THESIS_READY_PENDING_RELEASE_AUDIT",
+      "source_run_artifact": "reports/thesis_artifact_manifest.json; numeric_claims_registry.json",
+      "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+      "private_row_export": false
+    },
+    {
+      "filename": "reports/thesis_recommendations.json",
+      "sha256": "7dcd1791db55902060625c149414d95218d994220bd9987e0c77b136d00764ac",
+      "bytes": 15821,
+      "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
+      "research_question": "RQ1–RQ4",
+      "publication_status": "THESIS_READY_PENDING_RELEASE_AUDIT",
+      "source_run_artifact": "reports/thesis_artifact_manifest.json; numeric_claims_registry.json",
+      "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+      "private_row_export": false
+    },
+    {
+      "filename": "reports/findings_by_research_question.md",
+      "sha256": "eee41d1ba121b33a580b65e2309b4695497d888dae87d6eee3aa5dbc61f1f5eb",
+      "bytes": 11314,
+      "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
+      "research_question": "RQ1–RQ4",
+      "publication_status": "THESIS_READY_PENDING_RELEASE_AUDIT",
+      "source_run_artifact": "reports/thesis_artifact_manifest.json; numeric_claims_registry.json",
+      "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+      "private_row_export": false
+    },
+    {
+      "filename": "reports/research_results.md",
+      "sha256": "bc38e669a3c50482ca58da939d3e6db19aa2dded66c95f1c8696d490e99580c5",
+      "bytes": 14371,
+      "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
+      "research_question": "RQ1–RQ4",
+      "publication_status": "THESIS_READY_PENDING_RELEASE_AUDIT",
+      "source_run_artifact": "reports/thesis_artifact_manifest.json; numeric_claims_registry.json",
+      "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+      "private_row_export": false
+    },
+    {
+      "filename": "reports/numeric_claims_registry.json",
+      "sha256": "18c2c4c581f87523ce35c19d613321c5ab66391491ae210eca7136676e3b5e51",
+      "bytes": 14128,
+      "generation_command": ".venv/bin/python -m src.reporting.thesis_synthesis",
+      "research_question": "RQ1–RQ4",
+      "publication_status": "THESIS_READY_PENDING_RELEASE_AUDIT",
+      "source_run_artifact": "reports/thesis_artifact_manifest.json; numeric_claims_registry.json",
+      "source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+      "private_row_export": false
+    }
+  ]
+}

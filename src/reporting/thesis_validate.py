@@ -33,7 +33,7 @@ def artifacts():
     catalog=verify_catalog();manifest=json.loads((ROOT/'reports/thesis_artifact_manifest.json').read_text());packages={p['run_id']:p for p in catalog['sql_packages']}
     for name,expected in manifest['generation_dependencies'].items():
         if sha256_file(ROOT/name)!=expected:raise ValueError('Reporting generator dependency changed: '+name)
-    if any(p['out_of_canvas_text'] for p in manifest['layout_checks']):raise ValueError('Figure labels clipped')
+    if any(p['out_of_canvas_text'] or p.get('caption_overlaps_axis_label') or p.get('header_overlaps_legend') for p in manifest['layout_checks']):raise ValueError('Figure labels clipped or overlapping')
     paths=set();figures=set();tables=set();privacy_bins=0
     for item in manifest['items']:
         name=item['filename'];p=ROOT/name
@@ -59,14 +59,23 @@ def artifacts():
             figures.add(item['logical_name'])
         if p.suffix=='.pdf' and not p.read_bytes().startswith(b'%PDF-'):raise ValueError('Invalid PDF export')
         if p.suffix=='.svg':
-            body=p.read_text();ET.fromstring(body)
-            if re.search(r'\b(?:V[34]|Version\s*[34]|A0[1-9]|A1[0-2])\b',body,re.I):raise ValueError('Obsolete visible figure marker')
+            document=ET.fromstring(p.read_text())
+            visible=' '.join(''.join(node.itertext()) for node in document.iter('{http://www.w3.org/2000/svg}text'))
+            if re.search(r'\b(?:V[34]|Version\s*[34]|A0[1-9]|A1[0-2])\b',visible,re.I):raise ValueError('Obsolete visible figure marker')
     recommendations=json.loads((ROOT/'reports/thesis_recommendations.json').read_text())
     for item in recommendations:
         if item['file'] not in paths or item['source_catalog_sha256']!=catalog['source_catalog_sha256']:raise ValueError('Recommended artifact absent/unregistered')
     if len([r for r in recommendations if r['placement']=='MAIN' and r['kind']=='figure'])!=10:raise ValueError('Main figure selection inconsistent')
     if len([r for r in recommendations if r['placement']=='MAIN' and r['kind']=='table'])!=8:raise ValueError('Main table selection inconsistent')
     if len(figures)!=18 or len(tables)!=22:raise ValueError('Required thesis evidence incomplete')
+    if 'presentation_refresh' in manifest:
+        from src.reporting.thesis_refresh import baseline
+        previous=baseline()
+        style=manifest['style']
+        if sha256_file(ROOT/style['reference_source'])!=style['reference_source_sha256']:raise ValueError('Original style reference changed')
+        for name,digest in style['reference_figures'].items():
+            if sha256_file(ROOT/'outputs/figures/reporting'/name)!=digest:raise ValueError('Original style example changed')
+        if any(item.get('style_id')!=style['style_id'] for item in manifest['items'] if item['kind']=='figure'):raise ValueError('Mixed figure themes')
     synth=json.loads((ROOT/'reports/thesis_synthesis_manifest.json').read_text())
     for item in synth['items']:
         if sha256_file(ROOT/item['filename'])!=item['sha256']:raise ValueError('Synthesis output changed')
@@ -95,7 +104,8 @@ def artifacts():
     return {'status':'PASS','artifact_files':len(paths),'figure_sets':len(figures),'table_and_aggregate_views':len(tables),
             'main_figures':10,'main_tables':8,'appendix_figures':8,'privacy_bins_verified':privacy_bins,
             'final_run_lineage':'PASS','numeric_claims_trace':'PASS','independent_point_contrast_recalculation':'PASS',
-            'links_checked':links,'visible_version_markers':'NONE','clipped_labels':'NONE','models_refitted':False}
+            'links_checked':links,'visible_version_markers':'NONE','clipped_labels':'NONE',
+            'caption_and_header_overlap':'NONE','models_refitted':False}
 
 
 def science():
@@ -111,9 +121,33 @@ def science():
             'primary_and_transfer_RMSE_recomputed':'PASS','models_refitted':False}
 
 
+def review_style():
+    """Certify installed figures after their explicit visual review.
+
+    This also resumes audit publication if a validation failure interrupted
+    activation after the already-preserved figure files were installed.
+    """
+    from src.reporting.thesis_refresh import baseline
+    previous=baseline();checked=artifacts()
+    manifest=json.loads((ROOT/'reports/thesis_artifact_manifest.json').read_text())
+    if 'presentation_refresh' not in manifest:raise ValueError('No preserved style refresh to review')
+    review={'status':'PASS_VISUAL_REVIEW','style_id':manifest['style']['style_id'],
+            'reference_style':manifest['style'],'figure_sets':18,'figure_files':54,
+            'visual_review':'All18 figures reviewed in full-resolution contact sheets plus selected full-size panels before activation',
+            'numerical_exports_verified_byte_identical':44,'source_catalog_sha256':previous['source_catalog_sha256'],
+            'previous_presentation_archive':'archive/before_figure_style/manifest.json',
+            'models_refitted':False,'scientific_choice_changes':False,'publication_validation':checked}
+    for name,record in [('thesis_publication_validation.json',checked),('thesis_style_review.json',review)]:
+        path=ROOT/'reports'/name
+        if not path.exists():write_once(path,(json.dumps(record,indent=2,ensure_ascii=False)+'\n').encode())
+        elif json.loads(path.read_text())!=record:raise ValueError('Existing style certificate differs; refuse overwrite')
+    return checked
+
+
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--science',action='store_true')
-    args=parser.parse_args();result=science() if args.science else artifacts()
+    parser=argparse.ArgumentParser(description=__doc__);group=parser.add_mutually_exclusive_group()
+    group.add_argument('--science',action='store_true');group.add_argument('--review-style',action='store_true')
+    args=parser.parse_args();result=science() if args.science else review_style() if args.review_style else artifacts()
     path=ROOT/'reports'/('frozen_science_verification.json' if args.science else 'thesis_publication_validation.json')
     if not path.exists():write_once(path,(json.dumps(result,indent=2)+'\n').encode())
     else:

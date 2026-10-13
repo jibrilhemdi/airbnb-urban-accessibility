@@ -1,0 +1,1704 @@
+{
+  "status": "INITIAL_DELIVERABLE_GAPS_IDENTIFIED",
+  "base_checkpoint": "f782bef3aad7c11359cc9af2b4e03c6414bf772b",
+  "scientific_model_execution": "COMPLETE",
+  "thesis_reporting_layer": "INCOMPLETE_PENDING_GENERATION_AND_RELEASE_AUDIT",
+  "frozen_source_catalog_sha256": "a633138c407c7f29bf6847045c7fada3769d44e3175852e103d4519397eb80c9",
+  "deliverables": [
+    {
+      "id": "A1",
+      "research_question": "Design",
+      "required_evidence": "Study area and operational neighbourhoods",
+      "kind": "figure",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "geography",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "Study area and operational neighbourhoods",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/study_areas.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "B1",
+      "research_question": "RQ1",
+      "required_evidence": "Nearest straight-line versus network relationship",
+      "kind": "figure",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "sample",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "Nearest straight-line versus network relationship",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/nearest_access_relationship.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "B2",
+      "research_question": "RQ1",
+      "required_evidence": "Nearest-category distance divergence",
+      "kind": "figure",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "interpretation",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "Nearest-category distance divergence",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/nearest_access_divergence.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "B3",
+      "research_question": "RQ1",
+      "required_evidence": "Food/social and culture/tourism opportunities",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/opportunity_comparison.png"
+      ],
+      "existing_filename": "opportunity_comparison.png",
+      "source_artifact_or_run": "sample",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Food/social and culture/tourism opportunities",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/opportunity_comparison.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "B4",
+      "research_question": "RQ1",
+      "required_evidence": "Compact accessibility spatial panels",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/accessibility_cells_publication.png"
+      ],
+      "existing_filename": "accessibility_cells_publication.png",
+      "source_artifact_or_run": "sample",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Compact accessibility spatial panels",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/accessibility_spatial.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "C1",
+      "research_question": "RQ2",
+      "required_evidence": "Main pooled RMSE and heldout fold variation",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/within_city_performance.png"
+      ],
+      "existing_filename": "within_city_performance.png",
+      "source_artifact_or_run": "neighbourhood",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Main pooled RMSE and heldout fold variation",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/primary_model_performance.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "C2/C3",
+      "research_question": "RQ2",
+      "required_evidence": "All five paired accessibility contrasts",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/accessibility_gains.png"
+      ],
+      "existing_filename": "accessibility_gains.png",
+      "source_artifact_or_run": "neighbourhood",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "All five paired accessibility contrasts",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/paired_accessibility_contrasts.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "C4",
+      "research_question": "RQ2",
+      "required_evidence": "Adjusted OLS accessibility associations with HC3 intervals",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/association_accessibility_coefficients.png"
+      ],
+      "existing_filename": "association_accessibility_coefficients.png",
+      "source_artifact_or_run": "association",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Adjusted OLS accessibility associations with HC3 intervals",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/association_accessibility.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "C5",
+      "research_question": "RQ2",
+      "required_evidence": "Existing heldout predictive contributions",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/heldout_contributions_publication.png"
+      ],
+      "existing_filename": "heldout_contributions_publication.png",
+      "source_artifact_or_run": "interpretation",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Existing heldout predictive contributions",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/heldout_feature_contributions.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "D1",
+      "research_question": "RQ3",
+      "required_evidence": "Random/neighbourhood/geometric validation comparison",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/validation_comparison.png"
+      ],
+      "existing_filename": "validation_comparison.png",
+      "source_artifact_or_run": "validation",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Random/neighbourhood/geometric validation comparison",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/validation_strategy_comparison.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "D2",
+      "research_question": "RQ3",
+      "required_evidence": "Heldout neighbourhood heterogeneity",
+      "kind": "figure",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "within_city",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "Heldout neighbourhood heterogeneity",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/neighbourhood_performance_variation.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "D3",
+      "research_question": "RQ3",
+      "required_evidence": "Registered robustness effect and stability summaries",
+      "kind": "figure",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "robustness",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "Registered robustness effect and stability summaries",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/robustness_contrasts.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "E1",
+      "research_question": "RQ4",
+      "required_evidence": "Six-direction transfer performance matrices",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/xgboost_transfer_matrix_publication.png"
+      ],
+      "existing_filename": "xgboost_transfer_matrix_publication.png",
+      "source_artifact_or_run": "transfer",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Six-direction transfer performance matrices",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/transfer_performance.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "E2",
+      "research_question": "RQ4",
+      "required_evidence": "Transfer accessibility gains relative to baseline",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/xgboost_transfer_gains_publication.png"
+      ],
+      "existing_filename": "xgboost_transfer_gains_publication.png",
+      "source_artifact_or_run": "transfer",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Transfer accessibility gains relative to baseline",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/transfer_accessibility_gains.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "E3",
+      "research_question": "RQ4",
+      "required_evidence": "Direct network-versus-Euclidean transfer contrasts",
+      "kind": "figure",
+      "existing_output": [
+        "outputs/figures/research/ols_transfer_gains_publication.png"
+      ],
+      "existing_filename": "ols_transfer_gains_publication.png",
+      "source_artifact_or_run": "transfer",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Direct network-versus-Euclidean transfer contrasts",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/transfer_network_comparison.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "E4",
+      "research_question": "RQ4",
+      "required_evidence": "Observed versus predicted relative-price diagnostics",
+      "kind": "figure",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "transfer",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "Observed versus predicted relative-price diagnostics",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/transfer_prediction_diagnostics.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "E5",
+      "research_question": "RQ4",
+      "required_evidence": "Direction reversal asymmetry",
+      "kind": "figure",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "transfer",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "Direction reversal asymmetry",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/directional_transfer_asymmetry.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "F",
+      "research_question": "Appendix",
+      "required_evidence": "Prescribed residual spatial diagnostics",
+      "kind": "figure",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "spatial",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "Prescribed residual spatial diagnostics",
+      "publication_readiness": "Pending common style, vector/300-dpi output and provenance validation",
+      "missing_output": "outputs/figures/thesis/residual_spatial_diagnostics.pdf",
+      "action_required": "Generate one compact figure from verified frozen SQL; PNG/PDF/SVG; retain all original outputs"
+    },
+    {
+      "id": "A2",
+      "research_question": "Design",
+      "required_evidence": "Every sample-flow stage by city",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/sample_flow.csv"
+      ],
+      "existing_filename": "sample_flow.csv",
+      "source_artifact_or_run": "sample",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "READY_EXISTING",
+      "thesis_usefulness": "A compact sample-flow table is clearer than a redundant flow graphic",
+      "publication_readiness": "Numeric evidence ready; format into T1 plus appendix flow table",
+      "missing_output": null,
+      "action_required": "Table-only treatment; preserve all stages without a separate sample-flow figure"
+    },
+    {
+      "id": "T1",
+      "research_question": "Design",
+      "required_evidence": "City/sample summary",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/sample_flow.csv"
+      ],
+      "existing_filename": "sample_flow.csv",
+      "source_artifact_or_run": "sample",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "City/sample summary",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/city_sample_summary.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T2",
+      "research_question": "Design",
+      "required_evidence": "Complete X/E/W feature definitions",
+      "kind": "table",
+      "existing_output": [
+        "docs/analysis/data_dictionary.md",
+        "config/study/design.json"
+      ],
+      "existing_filename": null,
+      "source_artifact_or_run": "design",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Complete X/E/W feature definitions",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/feature_definitions.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T3",
+      "research_question": "RQ1",
+      "required_evidence": "Accessibility descriptive statistics",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/measurement_comparison.json"
+      ],
+      "existing_filename": null,
+      "source_artifact_or_run": "interpretation",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Accessibility descriptive statistics",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/accessibility_descriptive_statistics.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T4",
+      "research_question": "RQ2",
+      "required_evidence": "Primary predictive performance",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/within_city_performance.csv"
+      ],
+      "existing_filename": "within_city_performance.csv",
+      "source_artifact_or_run": "neighbourhood",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Primary predictive performance",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/primary_predictive_performance.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T5",
+      "research_question": "RQ2",
+      "required_evidence": "All five paired model contrasts and stability",
+      "kind": "table",
+      "existing_output": [
+        "outputs/metrics/neighbourhood/paired_contrasts.csv"
+      ],
+      "existing_filename": null,
+      "source_artifact_or_run": "neighbourhood",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "All five paired model contrasts and stability",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/paired_model_contrasts.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T6",
+      "research_question": "RQ2",
+      "required_evidence": "Final three-city OLS association results",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/association_coefficients.csv"
+      ],
+      "existing_filename": "association_coefficients.csv",
+      "source_artifact_or_run": "association",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Final three-city OLS association results",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/association_results.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T7",
+      "research_question": "RQ3",
+      "required_evidence": "Validation-strategy comparisons",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/validation_comparison.csv"
+      ],
+      "existing_filename": "validation_comparison.csv",
+      "source_artifact_or_run": "validation",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Validation-strategy comparisons",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/validation_comparison.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T8",
+      "research_question": "RQ4",
+      "required_evidence": "All six transfer directions and four models",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/transfer_performance.csv"
+      ],
+      "existing_filename": "transfer_performance.csv",
+      "source_artifact_or_run": "transfer",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "All six transfer directions and four models",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/transfer_performance.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T9",
+      "research_question": "RQ4",
+      "required_evidence": "All transfer model contrasts and stability",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/transfer_accessibility_contrasts.csv"
+      ],
+      "existing_filename": "transfer_accessibility_contrasts.csv",
+      "source_artifact_or_run": "transfer",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "All transfer model contrasts and stability",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/transfer_contrasts.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T10",
+      "research_question": "RQ3",
+      "required_evidence": "Every registered robustness status, estimand and result",
+      "kind": "table",
+      "existing_output": [
+        "outputs/tables/research/robustness_registry.csv"
+      ],
+      "existing_filename": "robustness_registry.csv",
+      "source_artifact_or_run": "robustness",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "EXISTS_NEEDS_REDESIGN",
+      "thesis_usefulness": "Every registered robustness status, estimand and result",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/robustness_registry.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "T11",
+      "research_question": "All",
+      "required_evidence": "RQ claims and limitations",
+      "kind": "table",
+      "existing_output": [],
+      "existing_filename": null,
+      "source_artifact_or_run": "synthesis",
+      "source_registry": "reports/frozen_reporting_sources.json",
+      "status": "MISSING_CAN_GENERATE_FROM_FROZEN_RESULTS",
+      "thesis_usefulness": "RQ claims and limitations",
+      "publication_readiness": "Need publication formatting and exact final-source references",
+      "missing_output": "outputs/tables/thesis/claims_and_limitations.md",
+      "action_required": "Generate full CSV plus readable Markdown summary from the pinned results"
+    },
+    {
+      "id": "Same-destination route circuity",
+      "research_question": "All",
+      "kind": "scope",
+      "required_evidence": "Nearest Euclidean and nearest walking destinations can differ; no frozen same-object route-pair output exists",
+      "existing_output": [],
+      "source_artifact_or_run": null,
+      "status": "NOT_NEEDED",
+      "thesis_usefulness": "Nearest Euclidean and nearest walking destinations can differ; no frozen same-object route-pair output exists",
+      "publication_readiness": "Markdown authoritative; scientific figure PDF/SVG exports are supported",
+      "missing_output": null,
+      "action_required": "Document limitation; do not invent unsupported science or a document renderer"
+    },
+    {
+      "id": "New fitted SHAP models",
+      "research_question": "All",
+      "kind": "scope",
+      "required_evidence": "Existing heldout SHAP summaries are available; no new model fitting is needed",
+      "existing_output": [],
+      "source_artifact_or_run": null,
+      "status": "NOT_NEEDED",
+      "thesis_usefulness": "Existing heldout SHAP summaries are available; no new model fitting is needed",
+      "publication_readiness": "Markdown authoritative; scientific figure PDF/SVG exports are supported",
+      "missing_output": null,
+      "action_required": "Document limitation; do not invent unsupported science or a document renderer"
+    },
+    {
+      "id": "Active DOCX/PDF document exports",
+      "research_question": "All",
+      "kind": "scope",
+      "required_evidence": "Only a historical income-addendum DOCX updater exists; no supported active Markdown document-export pipeline",
+      "existing_output": [],
+      "source_artifact_or_run": null,
+      "status": "NOT_NEEDED",
+      "thesis_usefulness": "Only a historical income-addendum DOCX updater exists; no supported active Markdown document-export pipeline",
+      "publication_readiness": "Markdown authoritative; scientific figure PDF/SVG exports are supported",
+      "missing_output": null,
+      "action_required": "Document limitation; do not invent unsupported science or a document renderer"
+    }
+  ],
+  "figure_reviews": [
+    {
+      "path": "outputs/figures/geography/analysis_areas.png",
+      "sha256": "6bf9da1cd7308d80c70a289d9f5e6c9e43d4113c0313ecbf614cacd038da9e78",
+      "pixels": [
+        1980,
+        1350
+      ],
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/geography/municipalities.png",
+      "sha256": "933b7c9a081dc1b9d7b4ff69f8b5f9cb6a8d32c09bd66bcaa96a5bfdad778190",
+      "pixels": [
+        1980,
+        1350
+      ],
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/geography/osm_coverage.png",
+      "sha256": "788869f0eed05670b0788c5b4bb8190180ef53cb1da6f4eefd24439f3adc7540",
+      "pixels": [
+        1980,
+        1350
+      ],
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/geography/study_area.png",
+      "sha256": "59c68ace4fdf625294a9d5cf88bddb74d6b91d0c0d0da70c2f79349dcadf8c0e",
+      "pixels": [
+        1980,
+        1350
+      ],
+      "dpi": [
+        180.00979999999998,
+        180.00979999999998
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/accessibility_coefficients.png",
+      "sha256": "648b1b157b418e79dd0b07a9e785013945815df5db5feb92e9e91b2c68a8b2c8",
+      "pixels": [
+        2603,
+        1435
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/area_incremental_performance.png",
+      "sha256": "55445bf5495fc686ac1c089d4ab36785709c85c3f747821d0ed7b33f2e53950c",
+      "pixels": [
+        2855,
+        1496
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/catchment_comparison.png",
+      "sha256": "d2c1952766a0b3e702c7a3ceae590fb5446975fac8d1b951152d9984b9a3ba48",
+      "pixels": [
+        2648,
+        1777
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/geographic_error_map.png",
+      "sha256": "adccf39d14b8363dd318c57ee2e49414e73444cbc7e307f925ff10e54ae5a3eb",
+      "pixels": [
+        2542,
+        1662
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/heldout_shap.png",
+      "sha256": "132cc841df3e4537232d4b8324c4f3441d724e5e72e6b014ff5aac3a31702eb2",
+      "pixels": [
+        2300,
+        1693
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/heldout_shap_dependence.png",
+      "sha256": "d9e6d64c7ed93fc4242130f367af9fbe9597ea8a8203a3f8465f6f6c32b46abc",
+      "pixels": [
+        2434,
+        1797
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/income_sensitivity.png",
+      "sha256": "74c6e5f5406ef8e3bbb6db1cd34bc3917e7b19ccbfe081b369ebfdf87f1d5c0f",
+      "pixels": [
+        2481,
+        1611
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/incremental_performance.png",
+      "sha256": "921ff28e216788d448b71215d90a4d21f11286c22ca57e5a963d833a571671a8",
+      "pixels": [
+        2500,
+        1347
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/log1p_culture_w_map.png",
+      "sha256": "cf299e7d63bf3d2aa2a264fac1da07779b4fd0275364d5eaface019640ee1d22",
+      "pixels": [
+        2548,
+        1662
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/log1p_food_w_map.png",
+      "sha256": "4e5c616ec738ba966a198ef3cb108682ac40f23c397b14f39d8bf5205f5f6794",
+      "pixels": [
+        2545,
+        1662
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/log_price_map.png",
+      "sha256": "d2901a9c183378f3686c8a00ee57e8bad11b5f6cb96d563f5c684925a71f80b1",
+      "pixels": [
+        2542,
+        1662
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/measure_comparison.png",
+      "sha256": "cde59d5c31133be9ea9d6caa0081489a1dc2773b1e1e0279c4821bcd85fbcd27",
+      "pixels": [
+        2397,
+        1839
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/nearest_bus_walking_minutes_map.png",
+      "sha256": "8c91b5a0dc5dc91d6f725cda4b3f42d132aa6c01abbc85fc24d8537c49097290",
+      "pixels": [
+        2542,
+        1662
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/nearest_station_walking_minutes_map.png",
+      "sha256": "ced6c4693aff4559cc56e98a3b897bb95112f3abe80b860fed45cf63d4d9ac4c",
+      "pixels": [
+        2542,
+        1662
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/predictive_performance.png",
+      "sha256": "1dc5f39da637716609a1b4925c0db1f29021e06cc8d8dc88bb0161e15b05df84",
+      "pixels": [
+        2485,
+        1321
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/price_distributions.png",
+      "sha256": "1d323a2609a2b20790edd3f361721c84949e48b2c46b136d2fb9201777c29ef0",
+      "pixels": [
+        2235,
+        1466
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/random_vs_loao_validation_schematic.png",
+      "sha256": "76a380d834fe0f05ea827f0b2d5f1cdc0fa6a7a2ea8461eced7ab7de01da5953",
+      "pixels": [
+        3630,
+        2014
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/research_workflow.png",
+      "sha256": "c7f26b5d835e8bd38ddfcd77b4de7d7eb29548b6cfa39fcec5d072096bb20641",
+      "pixels": [
+        2397,
+        1389
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/residual_m0_map.png",
+      "sha256": "0de0024b752389acf98b7d5036883d24ae06780bf31515e3a25b9cb819192977",
+      "pixels": [
+        2542,
+        1690
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/residual_mw_map.png",
+      "sha256": "66c6e91943b52db17605ec4b15841657dd9591d883b774501f420c7ca3d4fff3",
+      "pixels": [
+        2542,
+        1690
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/robustness_summary.png",
+      "sha256": "270cba29dfbfe6e6b20db3ca28d42172de9a49e532ea202009decedd91177113",
+      "pixels": [
+        2810,
+        1458
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/spatial_grid_sensitivities.png",
+      "sha256": "7b26c5db20964a3d82043d048e216d905fce6f4827af6c1a6baa24a7103d460c",
+      "pixels": [
+        2787,
+        2034
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/spatial_moran_diagnostics.png",
+      "sha256": "9fd3ef2a9b612781277e4881607c374063d5b28520dc83645a99224f0cbbbe2e",
+      "pixels": [
+        2203,
+        1437
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/spatial_validation_performance.png",
+      "sha256": "ed82aec08199b2163cdf94637d66667884d86675f20ee8b1cd141781084a0dc7",
+      "pixels": [
+        2829,
+        1458
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/study_area_listings.png",
+      "sha256": "01750fbab8f7e6ddaf9297f289c1586797929a50e0f36bf494770256f36d5720",
+      "pixels": [
+        2592,
+        1417
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/reporting/validation_geography.png",
+      "sha256": "7f52514ba144f73e8f32891b3d293c1d8b9b7fdf3bfa008372740e127c20871e",
+      "pixels": [
+        2787,
+        1067
+      ],
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "decision": "DROP",
+      "reason": "Historical single-city geography/results; not the final three-city no-income design",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "HISTORICAL_NOT_FOR_FINAL_RESULTS",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Historical single-city geography/results; not the final three-city no-income design"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/accessibility_cells.png",
+      "sha256": "a594dca041db58d9caf2e650cc84a949585af685043cf68c1a1a81aca91368ac",
+      "pixels": [
+        1680,
+        658
+      ],
+      "dpi": [
+        140.0048,
+        140.0048
+      ],
+      "decision": "DROP",
+      "reason": "Superseded initial layout; original remains immutable",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Superseded initial layout; original remains immutable"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/accessibility_cells_publication.png",
+      "sha256": "546193e412c640b77c6a4dbb9c4ace8fd1758c7e23d64d9fadb661104647f041",
+      "pixels": [
+        1300,
+        500
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/accessibility_gains.png",
+      "sha256": "ec0997076706ef885ce52d3ceff5a154ce857854b7aa40667cf71b3fc6358c59",
+      "pixels": [
+        1680,
+        616
+      ],
+      "dpi": [
+        140.0048,
+        140.0048
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/association_accessibility_coefficients.png",
+      "sha256": "62bf310fa1ff88fec47cb42eb1fa288f0835ead2dc187916fc677974b78c3c7a",
+      "pixels": [
+        1400,
+        600
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/heldout_contributions.png",
+      "sha256": "4a3525da70067eb5fa27f9cbe41a5958895f7b2302def54ebd81e4d159588380",
+      "pixels": [
+        1300,
+        500
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "DROP",
+      "reason": "Superseded initial layout; original remains immutable",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Superseded initial layout; original remains immutable"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/heldout_contributions_publication.png",
+      "sha256": "5462129a7a697c6b3b5ec3bb759562b666919472f98ce18664f2b8ba7c1f68af",
+      "pixels": [
+        1400,
+        500
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/nearest_distance_distributions.png",
+      "sha256": "649a0e8a5d21bb873741b3009a82eda2263b39237f701f2ba12ed7a39b410fdf",
+      "pixels": [
+        1200,
+        600
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/ols_transfer_gains.png",
+      "sha256": "c8de5f79ad277f102dc95d4d8915e83cb83d9dad5e8ff6b29c0d8274a20d8e4c",
+      "pixels": [
+        1500,
+        400
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "DROP",
+      "reason": "Superseded initial layout; original remains immutable",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Superseded initial layout; original remains immutable"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/ols_transfer_gains_publication.png",
+      "sha256": "76961f19d61b9049860d79962cd69ea56d9deff1f977aa0d1070d92e365d405d",
+      "pixels": [
+        1700,
+        440
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/ols_transfer_matrix.png",
+      "sha256": "f3a070362cfe8ac1ecb615731af72119f1856401aff5c0ff0075770f21b25049",
+      "pixels": [
+        1300,
+        380
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "DROP",
+      "reason": "Superseded initial layout; original remains immutable",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Superseded initial layout; original remains immutable"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/ols_transfer_matrix_publication.png",
+      "sha256": "eef846784f300914296d6627bea93ae8ad7056c8f214ee94bd65de741253a047",
+      "pixels": [
+        1400,
+        440
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/opportunity_comparison.png",
+      "sha256": "b355d2d517aef0ed6376efb6d36799257187a8c4a5b2740bdf04aaeb96b3b99a",
+      "pixels": [
+        1200,
+        400
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/transfer_bias.png",
+      "sha256": "55d315f44022578e21a21fd4d85cbdce48bc3da564bcda1fc3a73dca49a7d9ea",
+      "pixels": [
+        1000,
+        500
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/validation_comparison.png",
+      "sha256": "99188c10999bd4a07e5e59688d3d94c48c7f01d365830d1614df61bcbc2b2fcc",
+      "pixels": [
+        1400,
+        500
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/within_city_performance.png",
+      "sha256": "a50cf79c8cda59a4c96bd125cc79b0d5bfcb0151798a223983c2a3b371dbb962",
+      "pixels": [
+        1540,
+        518
+      ],
+      "dpi": [
+        140.0048,
+        140.0048
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/xgboost_transfer_gains.png",
+      "sha256": "b1537ec5806e40c8207c17f8a797870e3416ca86f1abd7828ec26b60e98f87ba",
+      "pixels": [
+        1500,
+        400
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "DROP",
+      "reason": "Superseded initial layout; original remains immutable",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Superseded initial layout; original remains immutable"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/xgboost_transfer_gains_publication.png",
+      "sha256": "fff8af678d18dee77195e9177d30241b7d15ad5b6803a95524b11756c5b04282",
+      "pixels": [
+        1700,
+        440
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/xgboost_transfer_matrix.png",
+      "sha256": "95d6980922a41089755c4556d8f5f1d20e22a2779cf4622ae90c5b86627458a7",
+      "pixels": [
+        1300,
+        380
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "DROP",
+      "reason": "Superseded initial layout; original remains immutable",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "Superseded initial layout; original remains immutable"
+      ]
+    },
+    {
+      "path": "outputs/figures/research/xgboost_transfer_matrix_publication.png",
+      "sha256": "6c16522fd0beb533fcec17efa7ecdf9061db6ae3a60f86a7bcd89c0dbdde36e8",
+      "pixels": [
+        1400,
+        440
+      ],
+      "dpi": [
+        99.9998,
+        99.9998
+      ],
+      "decision": "REDESIGN",
+      "reason": "Final numeric lineage, but 100/140-dpi PNG only; native labels/long panels need readable page-width vector redesign",
+      "visually_inspected": true,
+      "visual_review_method": "Nine original-resolution six-panel contact sheets; every one of49 source figures reviewed",
+      "scientific_lineage": "FINAL_RERUN",
+      "historical_source_preserved": true,
+      "publication_ready": false,
+      "issues": [
+        "insufficient raster publication resolution",
+        "no vector export",
+        "page-width typography"
+      ]
+    }
+  ],
+  "figure_review_counts": {
+    "DROP": 36,
+    "REDESIGN": 13
+  },
+  "existing_directory_inventory": {
+    "outputs/figures": {
+      "files": 49,
+      "formats": {
+        ".png": 49
+      }
+    },
+    "outputs/tables": {
+      "files": 195,
+      "formats": {
+        ".csv": 129,
+        ".json": 33,
+        ".txt": 33
+      }
+    },
+    "outputs/metrics": {
+      "files": 20,
+      "formats": {
+        ".csv": 20
+      }
+    },
+    "outputs/diagnostics": {
+      "files": 0,
+      "formats": {}
+    },
+    "outputs/models": {
+      "files": 0,
+      "formats": {}
+    },
+    "reports": {
+      "files": 35,
+      "formats": {
+        ".json": 27,
+        ".md": 6,
+        ".html": 2
+      }
+    },
+    "runs": {
+      "files": 1219,
+      "formats": {
+        ".json": 43,
+        ".joblib": 1176
+      }
+    },
+    "outputs/release": {
+      "files": 0,
+      "formats": {}
+    }
+  },
+  "scientific_reconstruction_required": false,
+  "models_refitted": false,
+  "source_acquisition_required": false,
+  "recommendation": "Approximately10 main figures and8 main tables; remaining useful outputs in appendices"
+}
