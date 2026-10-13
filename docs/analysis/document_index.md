@@ -31,6 +31,7 @@ documents and statuses remain historical evidence.
 | [Sample audit](sample_audit.json) | Source attrition, common samples, missingness and fold support |
 | [Pre-fit freeze](prefit_freeze.json) | Frozen source/feature/sample/fold/candidate evidence before fitting |
 | [Association audit](association_audit.json) | Completed Copenhagen/Oslo inference and Stockholm gate |
+| [Missingness source audit](missingness_source_audit.json) | Read-only confirmation that Stockholm's missing bedrooms are original source blanks |
 | [Spatial audit](spatial_audit.json) | Moran diagnostics, registered trigger and dependent checks |
 | [Robustness audit](robustness_audit.json) | Exhaustive COMPLETE/BLOCKED/INFEASIBLE/NOT_APPLICABLE registry |
 | [Initial path inventory](path_inventory.json) | Pre-change bytes, compatibility extension and archived entries |

@@ -1282,3 +1282,15 @@ public-artifact/metric/migration audits PASS. Publication review retains initial
 outputs and corrects layouts in new artifacts. See neutral execution log,
 publication report, generated findings and final publication audit; final Git
 SHA is provided externally after commit/push rather than in its own commit.
+
+### Comprehensive continuation: Stockholm source-missingness verification
+
+Read-only source/SQL verification confirms all 147 missing bedrooms are empty
+in the original source; all observed values equal the frozen sample. No parser
+repair is available from that column. The unchanged 5% gate still blocks
+Stockholm inference. Added an aggregate audit and reusable verifier under the
+active functional layout; no source, sample, model or completed output changed.
+Source verification, historical-file and 72-public-artifact preservation,
+compilation and whitespace checks PASS. See the active execution log for the
+researcher decision pending before dependent inference. This checkpoint records
+blocker evidence only; actual commit/push verification is reported externally.

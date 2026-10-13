@@ -410,3 +410,33 @@ Prior checkpoint commits are generated in `checkpoint_history.json`; final
 checkpoint SHA/push equality is reported externally after actual completion,
 not written into its own commit. Public staging, final commit/push and remote
 equality verification follow review; main/v3/detached worktree remain preserved.
+
+## Continuation: source verification of the remaining inference blocker
+
+Following the request to continue, checked the clean published checkpoint and
+remaining dependent work. A read-only PostGIS transaction and fresh audit of
+the checksum-pinned original Stockholm listing file confirm that all 147
+missing bedroom values in the 2,495-row prediction sample are empty strings
+in the original source. Every observed bedroom value also matches the frozen
+SQL sample. Bedrooms are the sole missing required predictor; no parsing loss
+or additional structured bedroom column was found. The union remains
+5.891783567%, with 2,348 complete cases. Under the unchanged 5% guard, at least
+23 additional genuinely observed bedroom values would be needed on these same
+rows. No alternative values have been qualified; this arithmetic does not
+authorize reconstruction, replacement, sample changes or imputation.
+
+Added `scripts/study_missingness_source_check.py` and the reproducible aggregate
+`missingness_source_audit.json`, indexed alongside the association audit.
+The verifier checks source, sample, design and parser hashes and supports
+`--verify` without overwriting its completed audit. Sources, SQL rows, fitted
+models and all 72 released artifacts remain unchanged. No dependent inference
+was executed. The researcher has been asked whether to retain the blocker or
+define an explicit validated missing-data amendment; no amendment is assumed.
+
+Continuation checks: source audit generation and independent `--verify` PASS;
+historical file-preservation verification PASS; all 72 final public artifact
+hashes and sizes PASS; script compilation and whitespace review PASS. Remote
+V4 matched the preceding published checkpoint before this change, with
+protected main/v3 and the detached historical worktree unchanged. This is a
+blocker-evidence checkpoint, not a scientific gate waiver or full completion.
+Commit/push and remote equality are verified after review and reported externally.
