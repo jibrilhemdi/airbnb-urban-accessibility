@@ -627,3 +627,35 @@ enumeration confirms only .env; the public template remains outside the root.
 Safe template/code/docs changes are reviewed, committed and pushed on V4 with
 remote equality verified externally. Main/v3 and research status are unchanged;
 no private environment file is staged.
+
+
+## Thesis reporting scope and initial deliverable-gap checkpoint
+
+The researcher requests a comprehensive reporting/synthesis/release audit,
+not another scientific rerun. Fetched origin/v4 without tags; local/remote
+f782bef3aad7c11359cc9af2b4e03c6414bf772b match, worktree/staging clean, main/v3
+and detached historical worktree unchanged. Read the active four-RQ scientific
+contract/design/plan, dictionaries, decisions/deviations, audits and current
+reports, and inventoried every output/report/run directory. Existing effective
+release area is empty; model completion alone does not certify thesis reporting.
+
+Visually inspected all49 PNG figures using nine original-resolution contact
+sheets, with programmatic dimensions/DPI/lineage checks. Thirty historical
+figures and six superseded layouts are DROP from the active thesis selection,
+never deleted;13 final-rerun figures require readable page-width typography,
+300-dpi and vector redesign. Pinned all final selectors and751 immutable SQL
+package identities before generation. Initial gap audit maps every required
+figure/table/RQ, source role and action; sample flow is deliberately table-only.
+No required scientific reconstruction, acquisition, fitting or tuning identified.
+Frozen public geometries/samples/predictions/contrasts/coefficients/robustness/
+SHAP already provide every planned evidence source. The existing DOCX income
+addendum updater does not support active four-RQ document exports; Markdown
+remains authoritative, with this limitation explicitly recorded.
+
+Initial audit coverage/metadata/lineage checks, compilation and whitespace
+PASS. Exact request, reusable reporting-source/audit modules, immutable gap
+reports and source catalog are staged as safe metadata only. No private rows,
+credentials, model bytes or source files are included. This is an initial
+reporting-gap checkpoint, not a completion declaration; publication generation,
+visual review, expanded release audit and safe packaging follow. Commit/push
+and remote equality are verified after review and reported externally.
