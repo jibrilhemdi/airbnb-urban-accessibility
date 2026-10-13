@@ -502,3 +502,13 @@ Current selectors and audits identify freshly recomputed association/spatial
 SQL packages. This checkpoint does not yet claim final publication completion;
 association-dependent tables, prose, inventories and release verification follow.
 Main/v3 remain unchanged; safe inference evidence is reviewed and pushed next.
+
+
+Correction before publishing the inference checkpoint: the ZIP-recovery
+paragraph above was written before the copy command returned. Recovery did
+not succeed: macOS returned Operation not permitted for reading the Trash
+file, including elevated execution. Its name and recorded size were found,
+but its bytes/checksum are not yet verified. The other 1,695 protected files
+verify. Requested that the researcher move the package into the private
+archive or provide an accessible location. This is a pending historical-
+package verification issue, separate from completed scientific inference.
