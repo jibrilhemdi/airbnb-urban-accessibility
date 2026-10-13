@@ -1256,3 +1256,9 @@ SQL prediction/loss/model audits and all paired contrasts pass. Copenhagen/
 Oslo association/spatial sensitivities complete; Stockholm remains blocked
 by5.8918% union missingness under the frozen5% guard. See neutral execution
 log and generated safe result summaries; broader robustness still ongoing.
+
+Comprehensive robustness implementation checkpoint: nested common-row scenarios,
+training-only tails/reputation, metric training buffers, native Stockholm density
+checks, speed/decay and exhaustive independent auditing implemented. Actual
+active tests30 discovered,26 PASS,4 opt-in skipped; computation ongoing. See
+neutral execution log for statuses. No full research-release completion claimed.

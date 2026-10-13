@@ -235,3 +235,51 @@ independent metric/paired audits pass24 rows/30 contrasts per scheme. Remaining
 registered robustness computation is ongoing; primary completion is not full
 research-release completion. Stockholm's inference gate remains an exact
 scientific blocker, never an invented treatment.
+
+## Registered robustness implementation and execution — 13 October 2026
+
+Primary/transfer checkpoint2fcb689a9ede82ef5b658d29f541b197f14402ee
+pushed exclusively as HEAD:refs/heads/v4; remote/local equality verified.
+
+Implemented independent common-row apartment/condo, reviewed-only,15/20-minute
+opportunity and150m-boundary sensitivities; nested1st/99th-percentile source-
+training price-tail and inherited reputation checks;500/1000m training buffers;
+4/5.4km/h matched opportunities; all-reachable continuous decay with10-minute
+half-life and no arbitrary distance truncation. All predictive sensitivity
+fits preserve the four-model ladder and original30-candidate/four-spatial-
+inner-fold search. Buffer distance is minimum training-to-any-test distance
+in the frozen metric CRS, with held-out rows retained. Native Stockholm density
+checks use the already acquired published2024 population/gross area and the
+published native land-only area; provider polygon denominators are not invented.
+These source-vintage/land-denominator checks are not applicable to the other
+qualified native constructions. Support failures produce explicit immutable
+INFEASIBLE records without relaxing15/500 or pooling a partial score.
+
+Extended1/2km grids at both frozen origins are running alongside registered
+neighbourhood sensitivities. No complete-robustness claim is made at this
+implementation checkpoint. Prediction/metric/paired audit code accounts for
+each required scenario and refuses missing selections, inconsistent outcomes,
+changed hashes, duplicate held-out observations or incomplete model ladders.
+Separate descriptive measurement/SHAP/transfer-calibration reporting verifies
+saved source pipeline hashes and identical outgoing pipelines. It does not
+retune or recalibrate any target model. Nearest-category E/W discrepancy is
+explicitly distinguished from same-destination circuity.
+
+Actual active tests:30 discovered,26 PASS,4 opt-in PostGIS skipped; includes
+training-only tail/full-target evaluation, minimum-distance training-buffer
+exclusion, paired outcome/key agreement and write-once refusal. Compilation
+and whitespace checks PASS. Historical preservation check and Git checkpoint
+completion are recorded only after actual verification. Running numerical
+results/private model files and listing-level outputs remain excluded from Git.
+
+Checkpoint verification completed:20 historical dedicated-store tables,
+1696 protected files,263 historical tracked/archived baseline bytes and five
+historical analytical database fingerprints PASS. Descriptive execution now
+complete:24 measurement summaries,948 aggregate contribution rows,48 transfer
+calibration rows and48 independent source-model hash checks PASS. Reloaded
+XGBoost source pipelines reproduce saved target predictions and contribution
+sums. Two outgoing targets share exactly the same source model bytes. New
+aggregate figures visually reviewed; final publication contribution figure
+will shorten its clipped axis label while preserving the initial output.
+Reporting generator implemented but not executed until all robustness selectors
+and independent geometric summaries exist. Git completion is recorded afterward.
