@@ -92,15 +92,20 @@ def run():
                     if summary['independent_metric_recalculation']!='PASS':raise ValueError('Geometric/random metrics lack independent verification')
                 registry.append({'city':city,'scenario':scheme,'status':'COMPLETE','results':selected[city]})
         for city in CITIES:
-            summary={'city':city,'status':'ROBUSTNESS_ACCOUNTED_WITH_DOCUMENTED_SCIENTIFIC_BLOCKERS','registry':[r for r in registry if r['city']==city],
+            city_registry=[r for r in registry if r['city']==city]
+            complete=all(r['status'] in {'COMPLETE','NOT_APPLICABLE','NOT_APPLICABLE_TRIGGER_NOT_MET'} for r in city_registry)
+            summary={'city':city,'status':'ROBUSTNESS_COMPLETE' if complete else 'ROBUSTNESS_ACCOUNTED_WITH_DOCUMENTED_SCIENTIFIC_BLOCKERS','registry':city_registry,
                      'performance':[r for r in performance if r['city']==city],'contrasts':[r for r in contrasts if r['city']==city]}
             with engine.begin() as conn:
                 identity=commit_package(conn,city=city,family='reporting',summary=summary,
                                         deps=dependencies({'reporter_sha256':sha256_file(PROJECT_ROOT/'src/reporting/study_robustness_results.py')}))
             pointers[city]={'run_id':identity,'summary_sha256':canonical_hash(summary)}
         out=PROJECT_ROOT/'outputs/metrics/robustness';out.mkdir(parents=True,exist_ok=True)
-        write_once(out/'performance.csv',pd.DataFrame(performance).to_csv(index=False).encode())
-        write_once(out/'paired_contrasts.csv',pd.DataFrame(contrasts).to_csv(index=False).encode())
+        for name,data in [('performance.csv',performance),('paired_contrasts.csv',contrasts)]:
+            content=pd.DataFrame(data).to_csv(index=False).encode();path=out/name
+            if path.exists():
+                if path.read_bytes()!=content:raise ValueError('Completed predictive robustness metrics changed')
+            else:write_once(path,content)
         write_once(PROJECT_ROOT/'config/study/robustness_results_selection.json',(json.dumps(pointers,indent=2)+'\n').encode())
         write_once(PROJECT_ROOT/'docs/analysis/robustness_audit.json',(json.dumps(registry,indent=2,ensure_ascii=False)+'\n').encode())
         return {'registry_rows':len(registry),'performance_rows':len(performance),'contrast_rows':len(contrasts)}

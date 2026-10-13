@@ -1,0 +1,311 @@
+{
+  "copenhagen": {
+    "city": "copenhagen",
+    "status": "COMPLETE_ASSOCIATION",
+    "prediction_n": 12408,
+    "association_n": 12285,
+    "missing_n": 123,
+    "missing_fraction": 0.009912959381044487,
+    "association_missing_limit": 0.1,
+    "eligibility": "PASS",
+    "complete_case_records_sha256": "65c20b5b22f12cb0e4374199950e87783baceb9a6f824e862acfd16a8609d4a5",
+    "inferential_imputation": false,
+    "outcome_imputed": false,
+    "models": [
+      {
+        "model": "M0",
+        "n": 12285,
+        "adjusted_r2": 0.46112247153974806,
+        "condition_number": 240.279044961597,
+        "aic": 7229.480414287766,
+        "bic": 7392.635368556782,
+        "rank": 22,
+        "residual_moran": {
+          "n": 12285,
+          "moran_i": 0.09186807968832886,
+          "expected_i": -8.140670791273201e-05,
+          "permutation_mean": -6.240921248777876e-05,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 98280,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "ME",
+        "n": 12285,
+        "adjusted_r2": 0.4791401466313273,
+        "condition_number": 290.6685922019737,
+        "aic": 6815.692719142804,
+        "bic": 7008.512210551641,
+        "rank": 26,
+        "residual_moran": {
+          "n": 12285,
+          "moran_i": 0.0636678855754197,
+          "expected_i": -8.140670791273201e-05,
+          "permutation_mean": -3.114635979297265e-05,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 98280,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "MW",
+        "n": 12285,
+        "adjusted_r2": 0.4750145392178938,
+        "condition_number": 357.3692488445482,
+        "aic": 6912.6159434207,
+        "bic": 7105.435434829537,
+        "rank": 26,
+        "residual_moran": {
+          "n": 12285,
+          "moran_i": 0.0700895656351461,
+          "expected_i": -8.140670791273201e-05,
+          "permutation_mean": -4.694452153371288e-05,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 98280,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "MEW",
+        "n": 12285,
+        "adjusted_r2": 0.47914923642710505,
+        "condition_number": 407.19805411114027,
+        "aic": 6819.4691876863835,
+        "bic": 7041.9532162350415,
+        "rank": 30,
+        "residual_moran": {
+          "n": 12285,
+          "moran_i": 0.0633935583012744,
+          "expected_i": -8.140670791273201e-05,
+          "permutation_mean": -3.4586589336898066e-05,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 98280,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      }
+    ],
+    "coefficients_produced": true,
+    "covariance": "HC3; restricted Webb WCR11/CRV1 sensitivity; actual operational groups",
+    "income_required": false,
+    "interpretation": "Adjusted associations; no causal effect"
+  },
+  "oslo": {
+    "city": "oslo",
+    "status": "COMPLETE_ASSOCIATION",
+    "prediction_n": 8529,
+    "association_n": 8152,
+    "missing_n": 377,
+    "missing_fraction": 0.04420213389611912,
+    "association_missing_limit": 0.1,
+    "eligibility": "PASS",
+    "complete_case_records_sha256": "6866ada9f01fb697ce8ae81bf97184437e7bd991ba84ccd60453d2561a21a6f3",
+    "inferential_imputation": false,
+    "outcome_imputed": false,
+    "models": [
+      {
+        "model": "M0",
+        "n": 8152,
+        "adjusted_r2": 0.49004895785244107,
+        "condition_number": 159.21326440590684,
+        "aic": 6212.1912084630385,
+        "bic": 6366.323617110895,
+        "rank": 22,
+        "residual_moran": {
+          "n": 8152,
+          "moran_i": 0.09321132841734309,
+          "expected_i": -0.000122684333210649,
+          "permutation_mean": -5.424421566045263e-05,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 65216,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "ME",
+        "n": 8152,
+        "adjusted_r2": 0.49347259460455806,
+        "condition_number": 178.3822056447785,
+        "aic": 6161.265114798658,
+        "bic": 6343.4215977461245,
+        "rank": 26,
+        "residual_moran": {
+          "n": 8152,
+          "moran_i": 0.08580228494247723,
+          "expected_i": -0.000122684333210649,
+          "permutation_mean": -3.148349138711349e-05,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 65216,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "MW",
+        "n": 8152,
+        "adjusted_r2": 0.49228829808664276,
+        "condition_number": 257.5788999636286,
+        "aic": 6180.302814158196,
+        "bic": 6362.459297105663,
+        "rank": 26,
+        "residual_moran": {
+          "n": 8152,
+          "moran_i": 0.08776838696544065,
+          "expected_i": -0.000122684333210649,
+          "permutation_mean": -6.0615852341324996e-05,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 65216,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "MEW",
+        "n": 8152,
+        "adjusted_r2": 0.4940210245946266,
+        "condition_number": 380.02302256981835,
+        "aic": 6156.420170792884,
+        "bic": 6366.600728039961,
+        "rank": 30,
+        "residual_moran": {
+          "n": 8152,
+          "moran_i": 0.08369242382418374,
+          "expected_i": -0.000122684333210649,
+          "permutation_mean": -5.1581911823271727e-05,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 65216,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      }
+    ],
+    "coefficients_produced": true,
+    "covariance": "HC3; restricted Webb WCR11/CRV1 sensitivity; actual operational groups",
+    "income_required": false,
+    "interpretation": "Adjusted associations; no causal effect"
+  },
+  "stockholm": {
+    "city": "stockholm",
+    "status": "COMPLETE_ASSOCIATION",
+    "prediction_n": 2495,
+    "association_n": 2348,
+    "missing_n": 147,
+    "missing_fraction": 0.058917835671342685,
+    "association_missing_limit": 0.1,
+    "eligibility": "PASS",
+    "complete_case_records_sha256": "be4273651fc68f365388512f4cb23ff04fce8a09b5deb52c895aac88f19255ce",
+    "inferential_imputation": false,
+    "outcome_imputed": false,
+    "models": [
+      {
+        "model": "M0",
+        "n": 2348,
+        "adjusted_r2": 0.5798068766691516,
+        "condition_number": 307.5576658925692,
+        "aic": 2553.2680387351093,
+        "bic": 2680.017060715965,
+        "rank": 22,
+        "residual_moran": {
+          "n": 2348,
+          "moran_i": 0.12007842117969568,
+          "expected_i": -0.00042607584149978694,
+          "permutation_mean": -0.0001597612346732584,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 18784,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "ME",
+        "n": 2348,
+        "adjusted_r2": 0.6006208370091736,
+        "condition_number": 341.1784012584643,
+        "aic": 2437.9408766110837,
+        "bic": 2587.7351753157313,
+        "rank": 26,
+        "residual_moran": {
+          "n": 2348,
+          "moran_i": 0.0757858250629897,
+          "expected_i": -0.00042607584149978694,
+          "permutation_mean": -0.00017997031994953906,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 18784,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "MW",
+        "n": 2348,
+        "adjusted_r2": 0.6008886899278374,
+        "condition_number": 449.97477563937133,
+        "aic": 2436.3656075306644,
+        "bic": 2586.159906235312,
+        "rank": 26,
+        "residual_moran": {
+          "n": 2348,
+          "moran_i": 0.07477832000255094,
+          "expected_i": -0.00042607584149978694,
+          "permutation_mean": -0.0002600712574597953,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 18784,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      },
+      {
+        "model": "MEW",
+        "n": 2348,
+        "adjusted_r2": 0.6021239123947112,
+        "condition_number": 467.4415736180283,
+        "aic": 2433.0391611917366,
+        "bic": 2605.8787366201764,
+        "rank": 30,
+        "residual_moran": {
+          "n": 2348,
+          "moran_i": 0.07189399462101592,
+          "expected_i": -0.00042607584149978694,
+          "permutation_mean": -0.00021037190465312695,
+          "permutation_p_two_sided": 0.002,
+          "k": 8,
+          "directed_edges": 18784,
+          "permutations": 499,
+          "seed": 20261004,
+          "crs_epsg": 25832
+        }
+      }
+    ],
+    "coefficients_produced": true,
+    "covariance": "HC3; restricted Webb WCR11/CRV1 sensitivity; actual operational groups",
+    "income_required": false,
+    "interpretation": "Adjusted associations; no causal effect"
+  }
+}

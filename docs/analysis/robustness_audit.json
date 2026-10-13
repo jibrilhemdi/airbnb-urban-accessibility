@@ -1,0 +1,5162 @@
+[
+  {
+    "city": "copenhagen",
+    "scenario": "apartment_condo",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 10368,
+        "test_n": 838,
+        "original_train_n": null
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 10416,
+        "test_n": 790,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 10727,
+        "test_n": 479,
+        "original_train_n": null
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 11130,
+        "test_n": 76,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 9971,
+        "test_n": 1235,
+        "original_train_n": null
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 9493,
+        "test_n": 1713,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 9052,
+        "test_n": 2154,
+        "original_train_n": null
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 10878,
+        "test_n": 328,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 11044,
+        "test_n": 162,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 9101,
+        "test_n": 2105,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11206,
+        "train_n": 9880,
+        "test_n": 1326,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "reviewed_only",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 9620,
+        "test_n": 898,
+        "original_train_n": null
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 9702,
+        "test_n": 816,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 10082,
+        "test_n": 436,
+        "original_train_n": null
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 10338,
+        "test_n": 180,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 9446,
+        "test_n": 1072,
+        "original_train_n": null
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 8889,
+        "test_n": 1629,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 8611,
+        "test_n": 1907,
+        "original_train_n": null
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 10150,
+        "test_n": 368,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 10299,
+        "test_n": 219,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 8674,
+        "test_n": 1844,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 10518,
+        "train_n": 9369,
+        "test_n": 1149,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "walking_15",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11357,
+        "test_n": 1051,
+        "original_train_n": null
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11426,
+        "test_n": 982,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11876,
+        "test_n": 532,
+        "original_train_n": null
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12187,
+        "test_n": 221,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11104,
+        "test_n": 1304,
+        "original_train_n": null
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10575,
+        "test_n": 1833,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10227,
+        "test_n": 2181,
+        "original_train_n": null
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11945,
+        "test_n": 463,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12135,
+        "test_n": 273,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10247,
+        "test_n": 2161,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11001,
+        "test_n": 1407,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "walking_20",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11357,
+        "test_n": 1051,
+        "original_train_n": null
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11426,
+        "test_n": 982,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11876,
+        "test_n": 532,
+        "original_train_n": null
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12187,
+        "test_n": 221,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11104,
+        "test_n": 1304,
+        "original_train_n": null
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10575,
+        "test_n": 1833,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10227,
+        "test_n": 2181,
+        "original_train_n": null
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11945,
+        "test_n": 463,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12135,
+        "test_n": 273,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10247,
+        "test_n": 2161,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11001,
+        "test_n": 1407,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "boundary_far",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 10333,
+        "test_n": 869,
+        "original_train_n": null
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 10249,
+        "test_n": 953,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 10687,
+        "test_n": 515,
+        "original_train_n": null
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 10988,
+        "test_n": 214,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 9898,
+        "test_n": 1304,
+        "original_train_n": null
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 9870,
+        "test_n": 1332,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 9021,
+        "test_n": 2181,
+        "original_train_n": null
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 10758,
+        "test_n": 444,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 10931,
+        "test_n": 271,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 9334,
+        "test_n": 1868,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 11202,
+        "train_n": 9951,
+        "test_n": 1251,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "training_price_tail",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11357,
+        "test_n": 1051,
+        "original_train_n": null
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11426,
+        "test_n": 982,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11876,
+        "test_n": 532,
+        "original_train_n": null
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12187,
+        "test_n": 221,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11104,
+        "test_n": 1304,
+        "original_train_n": null
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10575,
+        "test_n": 1833,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10227,
+        "test_n": 2181,
+        "original_train_n": null
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11945,
+        "test_n": 463,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12135,
+        "test_n": 273,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10247,
+        "test_n": 2161,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11001,
+        "test_n": 1407,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "reputation",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11357,
+        "test_n": 1051,
+        "original_train_n": null
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11426,
+        "test_n": 982,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11876,
+        "test_n": 532,
+        "original_train_n": null
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12187,
+        "test_n": 221,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11104,
+        "test_n": 1304,
+        "original_train_n": null
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10575,
+        "test_n": 1833,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10227,
+        "test_n": 2181,
+        "original_train_n": null
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11945,
+        "test_n": 463,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12135,
+        "test_n": 273,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10247,
+        "test_n": 2161,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11001,
+        "test_n": 1407,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "buffer_500",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10724,
+        "test_n": 1051,
+        "original_train_n": 11357
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11072,
+        "test_n": 982,
+        "original_train_n": 11426
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11289,
+        "test_n": 532,
+        "original_train_n": 11876
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12111,
+        "test_n": 221,
+        "original_train_n": 12187
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 8925,
+        "test_n": 1304,
+        "original_train_n": 11104
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 9137,
+        "test_n": 1833,
+        "original_train_n": 10575
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 9006,
+        "test_n": 2181,
+        "original_train_n": 10227
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11757,
+        "test_n": 463,
+        "original_train_n": 11945
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11925,
+        "test_n": 273,
+        "original_train_n": 12135
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 9824,
+        "test_n": 2161,
+        "original_train_n": 10247
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10476,
+        "test_n": 1407,
+        "original_train_n": 11001
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "buffer_1000",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 9760,
+        "test_n": 1051,
+        "original_train_n": 11357
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10723,
+        "test_n": 982,
+        "original_train_n": 11426
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10135,
+        "test_n": 532,
+        "original_train_n": 11876
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11925,
+        "test_n": 221,
+        "original_train_n": 12187
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 6255,
+        "test_n": 1304,
+        "original_train_n": 11104
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 7052,
+        "test_n": 1833,
+        "original_train_n": 10575
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 7814,
+        "test_n": 2181,
+        "original_train_n": 10227
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11258,
+        "test_n": 463,
+        "original_train_n": 11945
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11185,
+        "test_n": 273,
+        "original_train_n": 12135
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 8906,
+        "test_n": 2161,
+        "original_train_n": 10247
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 9376,
+        "test_n": 1407,
+        "original_train_n": 11001
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "speed_4p0",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11357,
+        "test_n": 1051,
+        "original_train_n": 11357
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11426,
+        "test_n": 982,
+        "original_train_n": 11426
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11876,
+        "test_n": 532,
+        "original_train_n": 11876
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12187,
+        "test_n": 221,
+        "original_train_n": 12187
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11104,
+        "test_n": 1304,
+        "original_train_n": 11104
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10575,
+        "test_n": 1833,
+        "original_train_n": 10575
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10227,
+        "test_n": 2181,
+        "original_train_n": 10227
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11945,
+        "test_n": 463,
+        "original_train_n": 11945
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12135,
+        "test_n": 273,
+        "original_train_n": 12135
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10247,
+        "test_n": 2161,
+        "original_train_n": 10247
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11001,
+        "test_n": 1407,
+        "original_train_n": 11001
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "speed_5p4",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11357,
+        "test_n": 1051,
+        "original_train_n": 11357
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11426,
+        "test_n": 982,
+        "original_train_n": 11426
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11876,
+        "test_n": 532,
+        "original_train_n": 11876
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12187,
+        "test_n": 221,
+        "original_train_n": 12187
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11104,
+        "test_n": 1304,
+        "original_train_n": 11104
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10575,
+        "test_n": 1833,
+        "original_train_n": 10575
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10227,
+        "test_n": 2181,
+        "original_train_n": 10227
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11945,
+        "test_n": 463,
+        "original_train_n": 11945
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12135,
+        "test_n": 273,
+        "original_train_n": 12135
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10247,
+        "test_n": 2161,
+        "original_train_n": 10247
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11001,
+        "test_n": 1407,
+        "original_train_n": 11001
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "continuous_decay",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Amager Vest",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11357,
+        "test_n": 1051,
+        "original_train_n": 11357
+      },
+      {
+        "fold": "Amager Øst",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11426,
+        "test_n": 982,
+        "original_train_n": 11426
+      },
+      {
+        "fold": "Bispebjerg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11876,
+        "test_n": 532,
+        "original_train_n": 11876
+      },
+      {
+        "fold": "Brønshøj-Husum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12187,
+        "test_n": 221,
+        "original_train_n": 12187
+      },
+      {
+        "fold": "Frederiksberg",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11104,
+        "test_n": 1304,
+        "original_train_n": 11104
+      },
+      {
+        "fold": "Indre By",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10575,
+        "test_n": 1833,
+        "original_train_n": 10575
+      },
+      {
+        "fold": "Nørrebro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10227,
+        "test_n": 2181,
+        "original_train_n": 10227
+      },
+      {
+        "fold": "Valby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11945,
+        "test_n": 463,
+        "original_train_n": 11945
+      },
+      {
+        "fold": "Vanløse",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 12135,
+        "test_n": 273,
+        "original_train_n": 12135
+      },
+      {
+        "fold": "Vesterbro-Kongens Enghave",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 10247,
+        "test_n": 2161,
+        "original_train_n": 10247
+      },
+      {
+        "fold": "Østerbro",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 12408,
+        "train_n": 11001,
+        "test_n": 1407,
+        "original_train_n": 11001
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "density_same_year",
+    "status": "NOT_APPLICABLE",
+    "reason": "Native matching gross-area density is qualified without Stockholm published-vintage/land-denominator discrepancy; no fabricated alternate denominator"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "density_land_only",
+    "status": "NOT_APPLICABLE",
+    "reason": "Native matching gross-area density is qualified without Stockholm published-vintage/land-denominator discrepancy; no fabricated alternate denominator"
+  },
+  {
+    "city": "oslo",
+    "scenario": "apartment_condo",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7543,
+        "test_n": 117,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7488,
+        "test_n": 172,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 6438,
+        "test_n": 1222,
+        "original_train_n": null
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 6176,
+        "test_n": 1484,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7619,
+        "test_n": 41,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 6113,
+        "test_n": 1547,
+        "original_train_n": null
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7642,
+        "test_n": 18,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7408,
+        "test_n": 252,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7432,
+        "test_n": 228,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 6738,
+        "test_n": 922,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7519,
+        "test_n": 141,
+        "original_train_n": null
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 6701,
+        "test_n": 959,
+        "original_train_n": null
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7640,
+        "test_n": 20,
+        "original_train_n": null
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7613,
+        "test_n": 47,
+        "original_train_n": null
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7479,
+        "test_n": 181,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7513,
+        "test_n": 147,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 7660,
+        "train_n": 7498,
+        "test_n": 162,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "reviewed_only",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6654,
+        "test_n": 91,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6580,
+        "test_n": 165,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 5789,
+        "test_n": 956,
+        "original_train_n": null
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 5473,
+        "test_n": 1272,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6707,
+        "test_n": 38,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 5420,
+        "test_n": 1325,
+        "original_train_n": null
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6724,
+        "test_n": 21,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6483,
+        "test_n": 262,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6448,
+        "test_n": 297,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6009,
+        "test_n": 736,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6605,
+        "test_n": 140,
+        "original_train_n": null
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 5940,
+        "test_n": 805,
+        "original_train_n": null
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6719,
+        "test_n": 26,
+        "original_train_n": null
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6687,
+        "test_n": 58,
+        "original_train_n": null
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6567,
+        "test_n": 178,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6557,
+        "test_n": 188,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 6745,
+        "train_n": 6558,
+        "test_n": 187,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "walking_15",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8394,
+        "test_n": 135,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8321,
+        "test_n": 208,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7272,
+        "test_n": 1257,
+        "original_train_n": null
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6987,
+        "test_n": 1542,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8478,
+        "test_n": 51,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6940,
+        "test_n": 1589,
+        "original_train_n": null
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8497,
+        "test_n": 32,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8170,
+        "test_n": 359,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8098,
+        "test_n": 431,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7597,
+        "test_n": 932,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8382,
+        "test_n": 147,
+        "original_train_n": null
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7544,
+        "test_n": 985,
+        "original_train_n": null
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8496,
+        "test_n": 33,
+        "original_train_n": null
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8447,
+        "test_n": 82,
+        "original_train_n": null
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8281,
+        "test_n": 248,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8266,
+        "test_n": 263,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8294,
+        "test_n": 235,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "walking_20",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8394,
+        "test_n": 135,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8321,
+        "test_n": 208,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7272,
+        "test_n": 1257,
+        "original_train_n": null
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6987,
+        "test_n": 1542,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8478,
+        "test_n": 51,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6940,
+        "test_n": 1589,
+        "original_train_n": null
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8497,
+        "test_n": 32,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8170,
+        "test_n": 359,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8098,
+        "test_n": 431,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7597,
+        "test_n": 932,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8382,
+        "test_n": 147,
+        "original_train_n": null
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7544,
+        "test_n": 985,
+        "original_train_n": null
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8496,
+        "test_n": 33,
+        "original_train_n": null
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8447,
+        "test_n": 82,
+        "original_train_n": null
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8281,
+        "test_n": 248,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8266,
+        "test_n": 263,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8294,
+        "test_n": 235,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "boundary_far",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8367,
+        "test_n": 135,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8294,
+        "test_n": 208,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 7245,
+        "test_n": 1257,
+        "original_train_n": null
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 6960,
+        "test_n": 1542,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8451,
+        "test_n": 51,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 6913,
+        "test_n": 1589,
+        "original_train_n": null
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8471,
+        "test_n": 31,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8143,
+        "test_n": 359,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8071,
+        "test_n": 431,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 7570,
+        "test_n": 932,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8355,
+        "test_n": 147,
+        "original_train_n": null
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 7517,
+        "test_n": 985,
+        "original_train_n": null
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8471,
+        "test_n": 31,
+        "original_train_n": null
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8422,
+        "test_n": 80,
+        "original_train_n": null
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8268,
+        "test_n": 234,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8247,
+        "test_n": 255,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8502,
+        "train_n": 8267,
+        "test_n": 235,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "training_price_tail",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8394,
+        "test_n": 135,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8321,
+        "test_n": 208,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7272,
+        "test_n": 1257,
+        "original_train_n": null
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6987,
+        "test_n": 1542,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8478,
+        "test_n": 51,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6940,
+        "test_n": 1589,
+        "original_train_n": null
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8497,
+        "test_n": 32,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8170,
+        "test_n": 359,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8098,
+        "test_n": 431,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7597,
+        "test_n": 932,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8382,
+        "test_n": 147,
+        "original_train_n": null
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7544,
+        "test_n": 985,
+        "original_train_n": null
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8496,
+        "test_n": 33,
+        "original_train_n": null
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8447,
+        "test_n": 82,
+        "original_train_n": null
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8281,
+        "test_n": 248,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8266,
+        "test_n": 263,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8294,
+        "test_n": 235,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "reputation",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8394,
+        "test_n": 135,
+        "original_train_n": null
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8321,
+        "test_n": 208,
+        "original_train_n": null
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7272,
+        "test_n": 1257,
+        "original_train_n": null
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6987,
+        "test_n": 1542,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8478,
+        "test_n": 51,
+        "original_train_n": null
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6940,
+        "test_n": 1589,
+        "original_train_n": null
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8497,
+        "test_n": 32,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8170,
+        "test_n": 359,
+        "original_train_n": null
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8098,
+        "test_n": 431,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7597,
+        "test_n": 932,
+        "original_train_n": null
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8382,
+        "test_n": 147,
+        "original_train_n": null
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7544,
+        "test_n": 985,
+        "original_train_n": null
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8496,
+        "test_n": 33,
+        "original_train_n": null
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8447,
+        "test_n": 82,
+        "original_train_n": null
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8281,
+        "test_n": 248,
+        "original_train_n": null
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8266,
+        "test_n": 263,
+        "original_train_n": null
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8294,
+        "test_n": 235,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "buffer_500",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8323,
+        "test_n": 135,
+        "original_train_n": 8394
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8206,
+        "test_n": 208,
+        "original_train_n": 8321
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6759,
+        "test_n": 1257,
+        "original_train_n": 7272
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6346,
+        "test_n": 1542,
+        "original_train_n": 6987
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8461,
+        "test_n": 51,
+        "original_train_n": 8478
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 5445,
+        "test_n": 1589,
+        "original_train_n": 6940
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8405,
+        "test_n": 32,
+        "original_train_n": 8497
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7836,
+        "test_n": 359,
+        "original_train_n": 8170
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7819,
+        "test_n": 431,
+        "original_train_n": 8098
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6773,
+        "test_n": 932,
+        "original_train_n": 7597
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7515,
+        "test_n": 147,
+        "original_train_n": 8382
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6423,
+        "test_n": 985,
+        "original_train_n": 7544
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8489,
+        "test_n": 33,
+        "original_train_n": 8496
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8421,
+        "test_n": 82,
+        "original_train_n": 8447
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8192,
+        "test_n": 248,
+        "original_train_n": 8281
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8216,
+        "test_n": 263,
+        "original_train_n": 8266
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8193,
+        "test_n": 235,
+        "original_train_n": 8294
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "buffer_1000",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8145,
+        "test_n": 135,
+        "original_train_n": 8394
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7955,
+        "test_n": 208,
+        "original_train_n": 8321
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6232,
+        "test_n": 1257,
+        "original_train_n": 7272
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 5441,
+        "test_n": 1542,
+        "original_train_n": 6987
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8434,
+        "test_n": 51,
+        "original_train_n": 8478
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 3997,
+        "test_n": 1589,
+        "original_train_n": 6940
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8238,
+        "test_n": 32,
+        "original_train_n": 8497
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7163,
+        "test_n": 359,
+        "original_train_n": 8170
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7237,
+        "test_n": 431,
+        "original_train_n": 8098
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 5771,
+        "test_n": 932,
+        "original_train_n": 7597
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6142,
+        "test_n": 147,
+        "original_train_n": 8382
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 4673,
+        "test_n": 985,
+        "original_train_n": 7544
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8468,
+        "test_n": 33,
+        "original_train_n": 8496
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8381,
+        "test_n": 82,
+        "original_train_n": 8447
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7773,
+        "test_n": 248,
+        "original_train_n": 8281
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7894,
+        "test_n": 263,
+        "original_train_n": 8266
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7883,
+        "test_n": 235,
+        "original_train_n": 8294
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "speed_4p0",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8394,
+        "test_n": 135,
+        "original_train_n": 8394
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8321,
+        "test_n": 208,
+        "original_train_n": 8321
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7272,
+        "test_n": 1257,
+        "original_train_n": 7272
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6987,
+        "test_n": 1542,
+        "original_train_n": 6987
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8478,
+        "test_n": 51,
+        "original_train_n": 8478
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6940,
+        "test_n": 1589,
+        "original_train_n": 6940
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8497,
+        "test_n": 32,
+        "original_train_n": 8497
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8170,
+        "test_n": 359,
+        "original_train_n": 8170
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8098,
+        "test_n": 431,
+        "original_train_n": 8098
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7597,
+        "test_n": 932,
+        "original_train_n": 7597
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8382,
+        "test_n": 147,
+        "original_train_n": 8382
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7544,
+        "test_n": 985,
+        "original_train_n": 7544
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8496,
+        "test_n": 33,
+        "original_train_n": 8496
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8447,
+        "test_n": 82,
+        "original_train_n": 8447
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8281,
+        "test_n": 248,
+        "original_train_n": 8281
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8266,
+        "test_n": 263,
+        "original_train_n": 8266
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8294,
+        "test_n": 235,
+        "original_train_n": 8294
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "speed_5p4",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8394,
+        "test_n": 135,
+        "original_train_n": 8394
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8321,
+        "test_n": 208,
+        "original_train_n": 8321
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7272,
+        "test_n": 1257,
+        "original_train_n": 7272
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6987,
+        "test_n": 1542,
+        "original_train_n": 6987
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8478,
+        "test_n": 51,
+        "original_train_n": 8478
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6940,
+        "test_n": 1589,
+        "original_train_n": 6940
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8497,
+        "test_n": 32,
+        "original_train_n": 8497
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8170,
+        "test_n": 359,
+        "original_train_n": 8170
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8098,
+        "test_n": 431,
+        "original_train_n": 8098
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7597,
+        "test_n": 932,
+        "original_train_n": 7597
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8382,
+        "test_n": 147,
+        "original_train_n": 8382
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7544,
+        "test_n": 985,
+        "original_train_n": 7544
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8496,
+        "test_n": 33,
+        "original_train_n": 8496
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8447,
+        "test_n": 82,
+        "original_train_n": 8447
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8281,
+        "test_n": 248,
+        "original_train_n": 8281
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8266,
+        "test_n": 263,
+        "original_train_n": 8266
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8294,
+        "test_n": 235,
+        "original_train_n": 8294
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "continuous_decay",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Alna",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8394,
+        "test_n": 135,
+        "original_train_n": 8394
+      },
+      {
+        "fold": "Bjerke",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8321,
+        "test_n": 208,
+        "original_train_n": 8321
+      },
+      {
+        "fold": "Frogner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7272,
+        "test_n": 1257,
+        "original_train_n": 7272
+      },
+      {
+        "fold": "Gamle Oslo",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6987,
+        "test_n": 1542,
+        "original_train_n": 6987
+      },
+      {
+        "fold": "Grorud",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8478,
+        "test_n": 51,
+        "original_train_n": 8478
+      },
+      {
+        "fold": "Grünerløkka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 6940,
+        "test_n": 1589,
+        "original_train_n": 6940
+      },
+      {
+        "fold": "Marka",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8497,
+        "test_n": 32,
+        "original_train_n": 8497
+      },
+      {
+        "fold": "Nordre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8170,
+        "test_n": 359,
+        "original_train_n": 8170
+      },
+      {
+        "fold": "Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8098,
+        "test_n": 431,
+        "original_train_n": 8098
+      },
+      {
+        "fold": "Sagene",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7597,
+        "test_n": 932,
+        "original_train_n": 7597
+      },
+      {
+        "fold": "Sentrum",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8382,
+        "test_n": 147,
+        "original_train_n": 8382
+      },
+      {
+        "fold": "St. Hanshaugen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 7544,
+        "test_n": 985,
+        "original_train_n": 7544
+      },
+      {
+        "fold": "Stovner",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8496,
+        "test_n": 33,
+        "original_train_n": 8496
+      },
+      {
+        "fold": "Søndre Nordstrand",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8447,
+        "test_n": 82,
+        "original_train_n": 8447
+      },
+      {
+        "fold": "Ullern",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8281,
+        "test_n": 248,
+        "original_train_n": 8281
+      },
+      {
+        "fold": "Vestre Aker",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8266,
+        "test_n": 263,
+        "original_train_n": 8266
+      },
+      {
+        "fold": "Østensjø",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 8529,
+        "train_n": 8294,
+        "test_n": 235,
+        "original_train_n": 8294
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "oslo",
+    "scenario": "density_same_year",
+    "status": "NOT_APPLICABLE",
+    "reason": "Native matching gross-area density is qualified without Stockholm published-vintage/land-denominator discrepancy; no fabricated alternate denominator"
+  },
+  {
+    "city": "oslo",
+    "scenario": "density_land_only",
+    "status": "NOT_APPLICABLE",
+    "reason": "Native matching gross-area density is qualified without Stockholm published-vintage/land-denominator discrepancy; no fabricated alternate denominator"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "apartment_condo",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1823,
+        "test_n": 71,
+        "original_train_n": null
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1778,
+        "test_n": 116,
+        "original_train_n": null
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1862,
+        "test_n": 32,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1696,
+        "test_n": 198,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1866,
+        "test_n": 28,
+        "original_train_n": null
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1851,
+        "test_n": 43,
+        "original_train_n": null
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1669,
+        "test_n": 225,
+        "original_train_n": null
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1478,
+        "test_n": 416,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1838,
+        "test_n": 56,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1868,
+        "test_n": 26,
+        "original_train_n": null
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 1894,
+        "train_n": 1211,
+        "test_n": 683,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "reviewed_only",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1893,
+        "test_n": 126,
+        "original_train_n": null
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1858,
+        "test_n": 161,
+        "original_train_n": null
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1947,
+        "test_n": 72,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1748,
+        "test_n": 271,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1961,
+        "test_n": 58,
+        "original_train_n": null
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1956,
+        "test_n": 63,
+        "original_train_n": null
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1811,
+        "test_n": 208,
+        "original_train_n": null
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1677,
+        "test_n": 342,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1940,
+        "test_n": 79,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1999,
+        "test_n": 20,
+        "original_train_n": null
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2019,
+        "train_n": 1400,
+        "test_n": 619,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "walking_15",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": null
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": null
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": null
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": null
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": null
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": null
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "walking_20",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": null
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": null
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": null
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": null
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": null
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": null
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "boundary_far",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2279,
+        "test_n": 167,
+        "original_train_n": null
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2227,
+        "test_n": 219,
+        "original_train_n": null
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2351,
+        "test_n": 95,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2113,
+        "test_n": 333,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2368,
+        "test_n": 78,
+        "original_train_n": null
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2359,
+        "test_n": 87,
+        "original_train_n": null
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2216,
+        "test_n": 230,
+        "original_train_n": null
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2037,
+        "test_n": 409,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2349,
+        "test_n": 97,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 2409,
+        "test_n": 37,
+        "original_train_n": null
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2446,
+        "train_n": 1752,
+        "test_n": 694,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "training_price_tail",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": null
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": null
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": null
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": null
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": null
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": null
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "reputation",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": null
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": null
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": null
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": null
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": null
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": null
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": null
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": null
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": null
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "buffer_500",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2317,
+        "test_n": 170,
+        "original_train_n": 2325
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2225,
+        "test_n": 220,
+        "original_train_n": 2275
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2383,
+        "test_n": 100,
+        "original_train_n": 2395
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2132,
+        "test_n": 343,
+        "original_train_n": 2152
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2397,
+        "test_n": 81,
+        "original_train_n": 2414
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2391,
+        "test_n": 91,
+        "original_train_n": 2404
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2218,
+        "test_n": 235,
+        "original_train_n": 2260
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2016,
+        "test_n": 423,
+        "original_train_n": 2072
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2351,
+        "test_n": 99,
+        "original_train_n": 2396
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2435,
+        "test_n": 38,
+        "original_train_n": 2457
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1794,
+        "test_n": 695,
+        "original_train_n": 1800
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "buffer_1000",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2272,
+        "test_n": 170,
+        "original_train_n": 2325
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2124,
+        "test_n": 220,
+        "original_train_n": 2275
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2302,
+        "test_n": 100,
+        "original_train_n": 2395
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2018,
+        "test_n": 343,
+        "original_train_n": 2152
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2370,
+        "test_n": 81,
+        "original_train_n": 2414
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2371,
+        "test_n": 91,
+        "original_train_n": 2404
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2100,
+        "test_n": 235,
+        "original_train_n": 2260
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1834,
+        "test_n": 423,
+        "original_train_n": 2072
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2287,
+        "test_n": 99,
+        "original_train_n": 2396
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2420,
+        "test_n": 38,
+        "original_train_n": 2457
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1709,
+        "test_n": 695,
+        "original_train_n": 1800
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "speed_4p0",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": 2325
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": 2275
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": 2395
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": 2152
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": 2414
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": 2404
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": 2260
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": 2072
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": 2396
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": 2457
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": 1800
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "speed_5p4",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": 2325
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": 2275
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": 2395
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": 2152
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": 2414
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": 2404
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": 2260
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": 2072
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": 2396
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": 2457
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": 1800
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "continuous_decay",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": 2325
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": 2275
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": 2395
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": 2152
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": 2414
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": 2404
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": 2260
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": 2072
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": 2396
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": 2457
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": 1800
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "density_same_year",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": 2325
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": 2275
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": 2395
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": 2152
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": 2414
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": 2404
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": 2260
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": 2072
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": 2396
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": 2457
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": 1800
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "density_land_only",
+    "status": "COMPLETE",
+    "folds": [
+      {
+        "fold": "Bromma",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2325,
+        "test_n": 170,
+        "original_train_n": 2325
+      },
+      {
+        "fold": "Enskede-Årsta-Vantör",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2275,
+        "test_n": 220,
+        "original_train_n": 2275
+      },
+      {
+        "fold": "Farsta",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2395,
+        "test_n": 100,
+        "original_train_n": 2395
+      },
+      {
+        "fold": "Hägersten-Älvsjö",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2152,
+        "test_n": 343,
+        "original_train_n": 2152
+      },
+      {
+        "fold": "Hässelby-Vällingby",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2414,
+        "test_n": 81,
+        "original_train_n": 2414
+      },
+      {
+        "fold": "Järva",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2404,
+        "test_n": 91,
+        "original_train_n": 2404
+      },
+      {
+        "fold": "Kungsholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2260,
+        "test_n": 235,
+        "original_train_n": 2260
+      },
+      {
+        "fold": "Norra innerstaden",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2072,
+        "test_n": 423,
+        "original_train_n": 2072
+      },
+      {
+        "fold": "Skarpnäck",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2396,
+        "test_n": 99,
+        "original_train_n": 2396
+      },
+      {
+        "fold": "Skärholmen",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 2457,
+        "test_n": 38,
+        "original_train_n": 2457
+      },
+      {
+        "fold": "Södermalm",
+        "status": "COMPLETE_FOLD",
+        "reason": null,
+        "n": 2495,
+        "train_n": 1800,
+        "test_n": 695,
+        "original_train_n": 1800
+      }
+    ],
+    "independent_saved_prediction_metric_recalculation": "PASS",
+    "four_models_identical_heldout_rows": "PASS"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "former_support_threshold",
+    "status": "COMPLETE",
+    "minimum_group_n": 221,
+    "all_groups_meet_former_30": true,
+    "primary_threshold_unchanged": 15
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "missing_price_audit",
+    "status": "COMPLETE",
+    "sample_flow": [
+      {
+        "stage": "raw",
+        "n": 23144
+      },
+      {
+        "stage": "eligible_dwelling",
+        "n": 21080
+      },
+      {
+        "stage": "positive_observed_price",
+        "n": 12521
+      },
+      {
+        "stage": "inside_study_area",
+        "n": 12508
+      },
+      {
+        "stage": "unique_operational_geography",
+        "n": 12508
+      },
+      {
+        "stage": "qualified_context",
+        "n": 12508
+      },
+      {
+        "stage": "matched_accessibility_support",
+        "n": 12408
+      },
+      {
+        "stage": "common_prediction",
+        "n": 12408
+      },
+      {
+        "stage": "common_ols_association",
+        "n": 12285
+      }
+    ],
+    "outcome_imputed": false,
+    "reference_sample_before_feature_filtering": true
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "area_fixed_effects",
+    "status": "COMPLETE",
+    "reason": "Area-constant density absorbed; adjusted associations only"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "spatial_error",
+    "status": "COMPLETE",
+    "trigger": "OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation"
+  },
+  {
+    "city": "oslo",
+    "scenario": "former_support_threshold",
+    "status": "COMPLETE",
+    "minimum_group_n": 32,
+    "all_groups_meet_former_30": true,
+    "primary_threshold_unchanged": 15
+  },
+  {
+    "city": "oslo",
+    "scenario": "missing_price_audit",
+    "status": "COMPLETE",
+    "sample_flow": [
+      {
+        "stage": "raw",
+        "n": 13391
+      },
+      {
+        "stage": "eligible_dwelling",
+        "n": 11776
+      },
+      {
+        "stage": "positive_observed_price",
+        "n": 8557
+      },
+      {
+        "stage": "inside_study_area",
+        "n": 8557
+      },
+      {
+        "stage": "unique_operational_geography",
+        "n": 8557
+      },
+      {
+        "stage": "qualified_context",
+        "n": 8557
+      },
+      {
+        "stage": "matched_accessibility_support",
+        "n": 8529
+      },
+      {
+        "stage": "common_prediction",
+        "n": 8529
+      },
+      {
+        "stage": "common_ols_association",
+        "n": 8152
+      }
+    ],
+    "outcome_imputed": false,
+    "reference_sample_before_feature_filtering": true
+  },
+  {
+    "city": "oslo",
+    "scenario": "area_fixed_effects",
+    "status": "COMPLETE",
+    "reason": "Area-constant density absorbed; adjusted associations only"
+  },
+  {
+    "city": "oslo",
+    "scenario": "spatial_error",
+    "status": "COMPLETE",
+    "trigger": "OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "former_support_threshold",
+    "status": "COMPLETE",
+    "minimum_group_n": 38,
+    "all_groups_meet_former_30": true,
+    "primary_threshold_unchanged": 15
+  },
+  {
+    "city": "stockholm",
+    "scenario": "missing_price_audit",
+    "status": "COMPLETE",
+    "sample_flow": [
+      {
+        "stage": "raw",
+        "n": 4806
+      },
+      {
+        "stage": "eligible_dwelling",
+        "n": 3834
+      },
+      {
+        "stage": "positive_observed_price",
+        "n": 2510
+      },
+      {
+        "stage": "inside_study_area",
+        "n": 2510
+      },
+      {
+        "stage": "unique_operational_geography",
+        "n": 2510
+      },
+      {
+        "stage": "qualified_context",
+        "n": 2510
+      },
+      {
+        "stage": "matched_accessibility_support",
+        "n": 2495
+      },
+      {
+        "stage": "common_prediction",
+        "n": 2495
+      },
+      {
+        "stage": "common_ols_association",
+        "n": 2348
+      }
+    ],
+    "outcome_imputed": false,
+    "reference_sample_before_feature_filtering": true
+  },
+  {
+    "city": "stockholm",
+    "scenario": "area_fixed_effects",
+    "status": "COMPLETE",
+    "reason": "Area-constant density absorbed; adjusted associations only"
+  },
+  {
+    "city": "stockholm",
+    "scenario": "spatial_error",
+    "status": "COMPLETE",
+    "trigger": "OLS MW neighbourhood OOF residual |I|>.05 and two-sided permutation p<.05; no causal interpretation"
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "random",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "copenhagen_reporting_20261013t030922616241z",
+      "summary_sha256": "1d9fc11dce780b2036fee7841d522a168549008cf8235ec28000a85b1cdadb6d"
+    }
+  },
+  {
+    "city": "oslo",
+    "scenario": "random",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "oslo_reporting_20261013t030922659710z",
+      "summary_sha256": "0c2236bbb19e56d2da0bda1a2b3aff4d7b329abc3866006823aa4aa50500cea9"
+    }
+  },
+  {
+    "city": "stockholm",
+    "scenario": "random",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "stockholm_reporting_20261013t030922669800z",
+      "summary_sha256": "749f04a4d8ecdbbc6639d87bea071a8c27fd271929e75653020131900501b118"
+    }
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "blocks_1000m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "copenhagen_reporting_20261013t050058636770z",
+      "summary_sha256": "5f729e94d5bb0a2037e0ee3dec1435e935a011932daf6a92c8b4b72f2249f1e4"
+    }
+  },
+  {
+    "city": "oslo",
+    "scenario": "blocks_1000m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "oslo_reporting_20261013t050058701063z",
+      "summary_sha256": "50bcf0389c103f46f77e4393cc8238f46c4f4931688eceb85c919dc915477b64"
+    }
+  },
+  {
+    "city": "stockholm",
+    "scenario": "blocks_1000m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "stockholm_reporting_20261013t050058714770z",
+      "summary_sha256": "7f2df40e378f1067a5b162e52b5543d648b762b979679d57713979ecb3d6cdbd"
+    }
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "blocks_1000m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "copenhagen_reporting_20261013t050113103057z",
+      "summary_sha256": "1ea409922e74a40875683abcab36b98465845bd13fcca0137d3d68ce4dc22ce2"
+    }
+  },
+  {
+    "city": "oslo",
+    "scenario": "blocks_1000m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "oslo_reporting_20261013t050113152093z",
+      "summary_sha256": "ba2bdbc1f69a0f5d8e0084e82e0ff7eace4431ea5427cf6b0d83d91ef9b4febf"
+    }
+  },
+  {
+    "city": "stockholm",
+    "scenario": "blocks_1000m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "stockholm_reporting_20261013t050113162953z",
+      "summary_sha256": "89b170111168e03295d2a622b800ec40f59d5f920b5193fa47684c213a22dc99"
+    }
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "blocks_1500m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "copenhagen_reporting_20261013t030931420186z",
+      "summary_sha256": "f26f782ab79b3d13576bd93c134ae4d34ef1f679b2c0a92bc5e1071373503670"
+    }
+  },
+  {
+    "city": "oslo",
+    "scenario": "blocks_1500m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "oslo_reporting_20261013t030931469058z",
+      "summary_sha256": "94201523d41b1c6fd46867eb0b6dfc28b6e365164f0bdaae169df3b0644f2e76"
+    }
+  },
+  {
+    "city": "stockholm",
+    "scenario": "blocks_1500m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "stockholm_reporting_20261013t030931480824z",
+      "summary_sha256": "0fc1bb36e99256ee413fbf46305ede81728b549ca6788a56ce2daf0c9a2500e9"
+    }
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "blocks_1500m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "copenhagen_reporting_20261013t030938956160z",
+      "summary_sha256": "72249413305e66b9f1df2e3df741ce274df5d56d4ec7a2c8218359d713001f7c"
+    }
+  },
+  {
+    "city": "oslo",
+    "scenario": "blocks_1500m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "oslo_reporting_20261013t030939011509z",
+      "summary_sha256": "e3e61f8a2ddd5965308fd00b17afc1f0b8011461a8d8f92106d1fc00949bdfb2"
+    }
+  },
+  {
+    "city": "stockholm",
+    "scenario": "blocks_1500m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "stockholm_reporting_20261013t030939027270z",
+      "summary_sha256": "1576ab9cd024ef4868b36e3bf9f6895e9bcf09f90760984e68f57d6ac3dd12a0"
+    }
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "blocks_2000m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "copenhagen_reporting_20261013t050129438010z",
+      "summary_sha256": "56cc14e907ebd286a4ab628d0f83c52ba1fb34e6d0873cc8fa67be47ed398c9a"
+    }
+  },
+  {
+    "city": "oslo",
+    "scenario": "blocks_2000m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "oslo_reporting_20261013t050129500727z",
+      "summary_sha256": "d702184c923ac50da90f96bb89fb4bc54a7d94a69b9a187b3df9b9c20a9f8556"
+    }
+  },
+  {
+    "city": "stockholm",
+    "scenario": "blocks_2000m_origin_0_0",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "stockholm_reporting_20261013t050129520321z",
+      "summary_sha256": "bfdf720d76d45e2d9ad2514f9807579a52e273ab28bfea5c33e2762c374e8465"
+    }
+  },
+  {
+    "city": "copenhagen",
+    "scenario": "blocks_2000m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "copenhagen_reporting_20261013t050143200636z",
+      "summary_sha256": "0bdcd4d5501ae719dd10d17a47880d635bf0b2e49070b6a8ac8ee704d1944824"
+    }
+  },
+  {
+    "city": "oslo",
+    "scenario": "blocks_2000m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "oslo_reporting_20261013t050143254016z",
+      "summary_sha256": "3eb21829eb6a800cc0d24439ea64b3f2019610b1924a8d9eb2bc2845d54e95d4"
+    }
+  },
+  {
+    "city": "stockholm",
+    "scenario": "blocks_2000m_origin_0p5_0p5",
+    "status": "COMPLETE",
+    "results": {
+      "run_id": "stockholm_reporting_20261013t050143268754z",
+      "summary_sha256": "4d7dd85374ca4459ba6cee2b9f6031c4a63a9cfd8b327a0361112eb4dd11ee0b"
+    }
+  }
+]

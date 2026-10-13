@@ -468,3 +468,37 @@ was invoked. Branch/remote equal at e55e91d5b5d39fb8bb7c9e77f2d742452aa835c7;
 main/v3 and detached worktree unchanged. Whitespace PASS. Fresh association
 and spatial selectors will certify execution; eligibility alone is not release
 completion. Reviewed specification checkpoint is committed/pushed next.
+
+
+## Three-city association and dependent inference checkpoint
+
+Fresh association fits completed on the unchanged common union complete cases:
+Copenhagen 12,285/12,408 (0.991295938%), Oslo 8,152/8,529 (4.420213390%),
+Stockholm 2,348/2,495 (5.891783567%). All pass the uniform amended 10% limit.
+Every city has all four models, HC3 intervals, 9,999 restricted Webb WCR11/CRV1
+draws using actual 11/17/11 groups, VIF/rank/condition and 8-neighbour/499-
+permutation association residual Moran diagnostics. No source blanks were filled.
+
+Registered OLS MW OOF triggers fire in every city. Stockholm I=0.09387590277396052,
+two-sided permutation p=0.002; its prescribed GM_Error_Het and all four area
+fixed-effect sensitivities completed. Area-constant log population density is
+explicitly absorbed. Disconnected KNN components remain documented warnings;
+weights were not repaired or chosen from outcomes. All 75 robustness entries
+are now accounted for: 71 COMPLETE and four source-inapplicable density variants.
+Existing 304 predictive robustness metrics and 380 contrasts reproduced byte
+for byte, with no predictive refit.
+
+Independent NumPy least-squares and HC3 sandwich/normal-interval recalculation,
+VIF regressions, residual checks and exact 9,999-draw wild p-value reproduction
+PASS for all three cities. All 35 active tests PASS, including four owned
+PostGIS integration tests. The historical preservation command exposed an
+already absent root package thesis_results_v3.zip. Located the original in
+Trash, verified its exact recorded SHA256/12,530,387 bytes and copied it into
+private archive/packages without changing Trash. All 1,696 protected original
+files now verify, resolving the missing-package issue; the next cleanup adds
+explicit path resolution for this authorized relocation. No private ZIP staged.
+
+Current selectors and audits identify freshly recomputed association/spatial
+SQL packages. This checkpoint does not yet claim final publication completion;
+association-dependent tables, prose, inventories and release verification follow.
+Main/v3 remain unchanged; safe inference evidence is reviewed and pushed next.
