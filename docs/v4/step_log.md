@@ -1229,3 +1229,9 @@ for actual checks, stages and blockers; historical numerical results may not
 serve as final rerun results. Initial design checkpoint:201 safe baseline
 tests (157 PASS,44 opt-in skipped), four new registry tests PASS;1696 protected
 files and historical analytical SQL fingerprints unchanged. No fitting claim.
+
+Comprehensive geography checkpoint: see `docs/analysis/execution_log.md` and
+generated geography audit for fresh provider assignments11/17/11, immutable
+neutral SQL packages/reference benchmarks, actual unit/integration/spatial
+checks and preserved historical stores. This supersedes no dated evidence
+above; final sample/fold/model readiness remains unclaimed.

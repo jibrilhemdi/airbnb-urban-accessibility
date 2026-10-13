@@ -10,6 +10,36 @@ sys.path.insert(0, str(ROOT))
 from src.ingestion.common import sha256_file
 
 
+def historical_store():
+    """Fingerprint every historical dedicated-store table without exporting rows."""
+    import hashlib
+    from sqlalchemy import text
+    from src.v4.persistence import get_engine
+    engine = get_engine()
+    result = {}
+    try:
+        with engine.connect().execution_options(isolation_level='REPEATABLE READ') as conn:
+            conn.exec_driver_sql('SET TRANSACTION READ ONLY')
+            tables = conn.execute(text("SELECT table_schema,table_name FROM information_schema.tables "
+                                       "WHERE table_schema LIKE 'v4_%' AND table_type='BASE TABLE' ORDER BY 1,2")).all()
+            for schema, table in tables:
+                columns = conn.execute(text("SELECT a.attname FROM pg_index i JOIN pg_attribute a "
+                                            "ON a.attrelid=i.indrelid AND a.attnum=ANY(i.indkey) "
+                                            "WHERE i.indrelid=to_regclass(:table) AND i.indisprimary ORDER BY a.attnum"),
+                                       {'table': schema+'.'+table}).scalars().all()
+                # Child partition tables can lack a local PK. Canonical full-row
+                # text provides deterministic ordering with duplicate multiplicity.
+                order = ','.join('"'+c+'"' for c in columns) if columns else 'row_to_json(t)::text'
+                digest, n = hashlib.sha256(), 0
+                for record in conn.execution_options(stream_results=True).execute(
+                        text('SELECT row_to_json(t)::text FROM "'+schema+'"."'+table+'" t ORDER BY '+order)).scalars():
+                    digest.update((record+'\n').encode()); n += 1
+                result[schema+'.'+table] = {'rows': n, 'sha256': digest.hexdigest()}
+    finally:
+        engine.dispose()
+    return result
+
+
 def verify(database=False):
     expected = json.loads((ROOT / 'docs/v4/protected_v3_manifest.json').read_text())
     for name, record in expected['files'].items():
@@ -38,5 +68,16 @@ def verify(database=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--database', action='store_true')
+    parser.add_argument('--capture-store', action='store_true')
+    parser.add_argument('--verify-store', action='store_true')
     args = parser.parse_args()
+    if args.capture_store or args.verify_store:
+        path = ROOT / 'docs/analysis/historical_store.json'
+        actual = historical_store()
+        if args.capture_store:
+            with path.open('x') as handle:
+                handle.write(json.dumps(actual, indent=2)+'\n')
+        elif json.loads(path.read_text()) != actual:
+            raise RuntimeError('Historical dedicated store changed')
+        print('Historical dedicated store tables verified:', len(actual))
     print(json.dumps(verify(args.database), indent=2))

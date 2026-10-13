@@ -1,0 +1,82 @@
+{
+  "v4_analysis.aggregate_metrics": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "v4_analysis.artifacts": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "v4_analysis.runs": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "v4_analysis.schema_migrations": {
+    "rows": 6,
+    "sha256": "c71444c0afac3c22793880b907d1cab2027869e4336de198217b273d87bccf6f"
+  },
+  "v4_features.area_context": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "v4_features.context_qualifications": {
+    "rows": 3,
+    "sha256": "090467722df4cf5a2d5036e6044b1eba39e8712eb554292669a2fff3d0e7532c"
+  },
+  "v4_features.listing_context_audit": {
+    "rows": 23144,
+    "sha256": "3ea4e448dbbbe8a6fbcc41fbc9a651cd1fa4a6dab20badb58aa8f4973e5fddca"
+  },
+  "v4_features.native_context_cells": {
+    "rows": 577,
+    "sha256": "f1ad0576101ad03669d5b9fde4499403730c0d9572073f25f569e7785abf3ea9"
+  },
+  "v4_raw.housing_area_period_audit": {
+    "rows": 2872,
+    "sha256": "c20552a2287f652b299032537d531b7d93ff529d77292fc64084459785108d90"
+  },
+  "v4_raw.housing_ingestions": {
+    "rows": 3,
+    "sha256": "62f3c1fe3a47c762b8eafb052669688ced3d04d29eb8f06e83fd166a3054c63f"
+  },
+  "v4_raw.listing_audit": {
+    "rows": 170170,
+    "sha256": "06bd33cbf107f3183a9bf906ee46fa649f09fbe14434eb8277fe3e5313307db2"
+  },
+  "v4_raw.listing_ingestions": {
+    "rows": 13,
+    "sha256": "f1bf9f7e94d0066ed52d96650defeef2f4e2f5739b11056b6a56a3463ffc5b74"
+  },
+  "v4_raw.observations": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "v4_raw.source_manifests": {
+    "rows": 14,
+    "sha256": "f0e7891a0872faf6d156395eebd0aa4ffba0a2bfabc503397a6e98690c456a26"
+  },
+  "v4_spatial.analysis_geography": {
+    "rows": 28,
+    "sha256": "505cfaad208f3441940f0408467e8b7d929a7719f14c1031a9b9e61a0a14a041"
+  },
+  "v4_spatial.geography_listing_audit": {
+    "rows": 41341,
+    "sha256": "97557ba71d7c1afa5791fce5d5b7087fd9cc01b8d5173423be723dea5eb3859d"
+  },
+  "v4_spatial.geography_masks": {
+    "rows": 3,
+    "sha256": "48c9ecb506a996e4c1ee792bbbff3f44eb954e4ae07efb2e8e2d61dd0749bcda"
+  },
+  "v4_spatial.geography_qualifications": {
+    "rows": 3,
+    "sha256": "100a98d78ce4bd50b9b691dadfe6ca6f4aae1e8a0637ed3ca7f29c924332f6d4"
+  },
+  "v4_spatial.source_areas": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "v4_spatial.study_boundaries": {
+    "rows": 13,
+    "sha256": "a32026541ae7d147c4ef8a357cf82288d5709ceaa4e8872dc5ee039439b70879"
+  }
+}

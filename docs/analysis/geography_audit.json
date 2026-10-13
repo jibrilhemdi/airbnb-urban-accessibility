@@ -1,0 +1,780 @@
+{
+  "copenhagen": {
+    "geography": {
+      "metric_crs": "EPSG:25832",
+      "source_crs": "OGC:CRS84 (RFC7946 default unless explicitly declared)",
+      "covers_crs": "EPSG:4326",
+      "raw_polygon_count": 11,
+      "operational_count": 11,
+      "eligible_positive_status": {
+        "unique": 12508
+      },
+      "source_vs_polygon": {
+        "raw_label_not_polygon_hit": 0,
+        "operational_label_mismatch": 0,
+        "unknown_listing_label": 0
+      },
+      "overlaps": [],
+      "uncovered_mask_m2": 264605.89505701984,
+      "provider_outside_mask_m2": 2110064.8316392866,
+      "groups": [
+        {
+          "name": "Amager Vest",
+          "raw_components": [
+            "Amager Vest"
+          ],
+          "area_km2": 19.392900474047384,
+          "eligible_positive_n": 1067,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Amager Øst",
+          "raw_components": [
+            "Amager st"
+          ],
+          "area_km2": 9.835845670510793,
+          "eligible_positive_n": 983,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Bispebjerg",
+          "raw_components": [
+            "Bispebjerg"
+          ],
+          "area_km2": 6.834665409038624,
+          "eligible_positive_n": 535,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Brønshøj-Husum",
+          "raw_components": [
+            "Brnshj-Husum"
+          ],
+          "area_km2": 8.736514421537388,
+          "eligible_positive_n": 221,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Frederiksberg",
+          "raw_components": [
+            "Frederiksberg"
+          ],
+          "area_km2": 8.71068981998995,
+          "eligible_positive_n": 1305,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Indre By",
+          "raw_components": [
+            "Indre By"
+          ],
+          "area_km2": 10.387318915267347,
+          "eligible_positive_n": 1840,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Nørrebro",
+          "raw_components": [
+            "Nrrebro"
+          ],
+          "area_km2": 4.104594646281956,
+          "eligible_positive_n": 2209,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Valby",
+          "raw_components": [
+            "Valby"
+          ],
+          "area_km2": 9.231329572243634,
+          "eligible_positive_n": 480,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Vanløse",
+          "raw_components": [
+            "Vanlse"
+          ],
+          "area_km2": 6.697480196423295,
+          "eligible_positive_n": 273,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Vesterbro-Kongens Enghave",
+          "raw_components": [
+            "Vesterbro-Kongens Enghave"
+          ],
+          "area_km2": 8.484780532386544,
+          "eligible_positive_n": 2175,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Østerbro",
+          "raw_components": [
+            "sterbro"
+          ],
+          "area_km2": 9.835982048177007,
+          "eligible_positive_n": 1420,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        }
+      ],
+      "final_sample_frozen": false,
+      "folds_frozen": false,
+      "status": "QUALIFIED_OPERATIONAL_WITH_RECORDED_GEOMETRY_LIMITS",
+      "blockers": [],
+      "city": "copenhagen",
+      "source": {
+        "source_url": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/visualisations/neighbourhoods.geojson",
+        "city": "copenhagen",
+        "role": "neighbourhoods",
+        "acquired_at_utc": "2026-10-13T01:01:18.500969+00:00",
+        "geographic_extent": "copenhagen provider neighbourhoods",
+        "source_crs": "OGC:CRS84",
+        "licence": "CC BY 4.0, Inside Airbnb catalogue; original cartographic provenance unknown",
+        "snapshot": "2026-06-30",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": "Sat, 04 Jul 2026 04:16:29 GMT",
+          "ETag": "\"828e2ff1be16629c05337d7ca43f4807\"",
+          "Content-Type": "application/octet-stream"
+        },
+        "sha256": "1647902935d2e22dfd006984c1e623cec484403681731f8e1f1dba0d24a9a874",
+        "size_bytes": 146637,
+        "request_body_sha256": null,
+        "path": "data/raw/neighbourhoods/copenhagen/20261013T010118500969Z/response.json",
+        "receipt_path": "data/raw/neighbourhoods/copenhagen/20261013T010118500969Z/receipt.json",
+        "receipt_sha256": "1f077bca65beb04642c3c5870071c129fa78c01606fd2a031ab8bde3c6c300b2"
+      },
+      "listing_source": {
+        "city": "copenhagen",
+        "snapshot": "2026-06-30",
+        "currency": "DKK",
+        "listing_manifest_sha256": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13",
+        "listing_sha256": "d0c81b5c30c0fa48ca2e77005d6e8418c6f491ee4af8dbac881ff7f5fd01ff71",
+        "source_reingested": false,
+        "counts": {
+          "quote_rows": 14095,
+          "quote_date_mismatch": 0,
+          "quote_date_match_unresolved": 14095,
+          "quote_returned_dates_missing": 14095,
+          "positive_price_currency_unresolved": 0,
+          "price_quote_difference": 0,
+          "raw": 23144,
+          "dwelling_filtered": 21080,
+          "positive_price": 12521,
+          "eligible_missing_price": 8559,
+          "eligible_nonpositive_price": 0,
+          "inside_boundary_raw": 23068,
+          "inside_boundary_dwelling": 21021,
+          "inside_boundary_positive_price": 12508,
+          "boundary_unclassified": 0,
+          "duplicate_records": 0,
+          "invalid_records": 0,
+          "invalid_or_duplicate_records": 0,
+          "quote_flattened_rounding_difference": 3556,
+          "quote_without_dates": 0,
+          "positive_price_without_quote": 0
+        },
+        "mask_summary_sha256": "014894ce8030c9a1cd12251bef3ac0427faae19808ea8f6507326a603d6de299",
+        "covers_crs": "EPSG:4326",
+        "metric_crs": "EPSG:25832"
+      }
+    },
+    "reference": {
+      "reference_n": 12508,
+      "mean_log_price": 7.50557821177844,
+      "geometric_mean_price": 1818.1562402538832,
+      "before_accessibility_exclusions": true,
+      "outcome_imputed": false,
+      "city": "copenhagen",
+      "currency": "DKK",
+      "listing_source": {
+        "city": "copenhagen",
+        "snapshot": "2026-06-30",
+        "currency": "DKK",
+        "listing_manifest_sha256": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13",
+        "listing_sha256": "d0c81b5c30c0fa48ca2e77005d6e8418c6f491ee4af8dbac881ff7f5fd01ff71",
+        "source_reingested": false,
+        "counts": {
+          "quote_rows": 14095,
+          "quote_date_mismatch": 0,
+          "quote_date_match_unresolved": 14095,
+          "quote_returned_dates_missing": 14095,
+          "positive_price_currency_unresolved": 0,
+          "price_quote_difference": 0,
+          "raw": 23144,
+          "dwelling_filtered": 21080,
+          "positive_price": 12521,
+          "eligible_missing_price": 8559,
+          "eligible_nonpositive_price": 0,
+          "inside_boundary_raw": 23068,
+          "inside_boundary_dwelling": 21021,
+          "inside_boundary_positive_price": 12508,
+          "boundary_unclassified": 0,
+          "duplicate_records": 0,
+          "invalid_records": 0,
+          "invalid_or_duplicate_records": 0,
+          "quote_flattened_rounding_difference": 3556,
+          "quote_without_dates": 0,
+          "positive_price_without_quote": 0
+        },
+        "mask_summary_sha256": "014894ce8030c9a1cd12251bef3ac0427faae19808ea8f6507326a603d6de299",
+        "covers_crs": "EPSG:4326",
+        "metric_crs": "EPSG:25832"
+      }
+    },
+    "private_assignment_roundtrip": "PASS",
+    "reference_roundtrip": "PASS",
+    "geography_run_id": "copenhagen_geography_20261013t010820402377z",
+    "reference_run_id": "copenhagen_reference_20261013t010826397169z"
+  },
+  "oslo": {
+    "geography": {
+      "metric_crs": "EPSG:25833",
+      "source_crs": "OGC:CRS84 (RFC7946 default unless explicitly declared)",
+      "covers_crs": "EPSG:4326",
+      "raw_polygon_count": 17,
+      "operational_count": 17,
+      "eligible_positive_status": {
+        "unique": 8557
+      },
+      "source_vs_polygon": {
+        "raw_label_not_polygon_hit": 0,
+        "operational_label_mismatch": 0,
+        "unknown_listing_label": 0
+      },
+      "overlaps": [],
+      "uncovered_mask_m2": 1228056.0527678751,
+      "provider_outside_mask_m2": 1288720.6129638127,
+      "groups": [
+        {
+          "name": "Alna",
+          "raw_components": [
+            "Alna"
+          ],
+          "area_km2": 13.748321221697642,
+          "eligible_positive_n": 135,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Bjerke",
+          "raw_components": [
+            "Bjerke"
+          ],
+          "area_km2": 8.07598344016244,
+          "eligible_positive_n": 208,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Frogner",
+          "raw_components": [
+            "Frogner"
+          ],
+          "area_km2": 14.979367698729451,
+          "eligible_positive_n": 1258,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Gamle Oslo",
+          "raw_components": [
+            "Gamle Oslo"
+          ],
+          "area_km2": 15.236940886365863,
+          "eligible_positive_n": 1550,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Grorud",
+          "raw_components": [
+            "Grorud"
+          ],
+          "area_km2": 7.08486164845325,
+          "eligible_positive_n": 51,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Grünerløkka",
+          "raw_components": [
+            "Grünerløkka"
+          ],
+          "area_km2": 5.246830652818517,
+          "eligible_positive_n": 1590,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Marka",
+          "raw_components": [
+            "Marka"
+          ],
+          "area_km2": 301.7762273422304,
+          "eligible_positive_n": 32,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Nordre Aker",
+          "raw_components": [
+            "Nordre Aker"
+          ],
+          "area_km2": 13.871344995875713,
+          "eligible_positive_n": 360,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Nordstrand",
+          "raw_components": [
+            "Nordstrand"
+          ],
+          "area_km2": 28.123037979419653,
+          "eligible_positive_n": 433,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Sagene",
+          "raw_components": [
+            "Sagene"
+          ],
+          "area_km2": 3.148290613761835,
+          "eligible_positive_n": 937,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Sentrum",
+          "raw_components": [
+            "Sentrum"
+          ],
+          "area_km2": 2.53951826492404,
+          "eligible_positive_n": 147,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "St. Hanshaugen",
+          "raw_components": [
+            "St. Hanshaugen"
+          ],
+          "area_km2": 3.683336916388947,
+          "eligible_positive_n": 991,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Stovner",
+          "raw_components": [
+            "Stovner"
+          ],
+          "area_km2": 7.114124487774665,
+          "eligible_positive_n": 33,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Søndre Nordstrand",
+          "raw_components": [
+            "Søndre Nordstrand"
+          ],
+          "area_km2": 18.30798376703108,
+          "eligible_positive_n": 84,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Ullern",
+          "raw_components": [
+            "Ullern"
+          ],
+          "area_km2": 10.02497325292214,
+          "eligible_positive_n": 249,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Vestre Aker",
+          "raw_components": [
+            "Vestre Aker"
+          ],
+          "area_km2": 16.891665105604176,
+          "eligible_positive_n": 264,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Østensjø",
+          "raw_components": [
+            "Østensjø"
+          ],
+          "area_km2": 11.24819661488641,
+          "eligible_positive_n": 235,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        }
+      ],
+      "final_sample_frozen": false,
+      "folds_frozen": false,
+      "status": "QUALIFIED_OPERATIONAL_WITH_RECORDED_GEOMETRY_LIMITS",
+      "blockers": [],
+      "city": "oslo",
+      "source": {
+        "source_url": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/visualisations/neighbourhoods.geojson",
+        "city": "oslo",
+        "role": "neighbourhoods",
+        "acquired_at_utc": "2026-10-13T01:01:19.310749+00:00",
+        "geographic_extent": "oslo provider neighbourhoods",
+        "source_crs": "OGC:CRS84",
+        "licence": "CC BY 4.0, Inside Airbnb catalogue; original cartographic provenance unknown",
+        "snapshot": "2026-06-30",
+        "status": "transport_success_pending_validation",
+        "http_status": 200,
+        "failure": null,
+        "headers": {
+          "Last-Modified": "Fri, 03 Jul 2026 00:44:52 GMT",
+          "ETag": "\"f836d72e65da1cb313834731ce4296a9\"",
+          "Content-Type": "application/octet-stream"
+        },
+        "sha256": "ef0194ba05d1a9ee045df610fbebc439405d8cfec0fdb7144171d909cb670536",
+        "size_bytes": 55679,
+        "request_body_sha256": null,
+        "path": "data/raw/neighbourhoods/oslo/20261013T010119310749Z/response.json",
+        "receipt_path": "data/raw/neighbourhoods/oslo/20261013T010119310749Z/receipt.json",
+        "receipt_sha256": "c5436ac25ba2806c09a58453e2078e340678066ed9c1f3f45133e6879780ac21"
+      },
+      "listing_source": {
+        "city": "oslo",
+        "snapshot": "2026-06-30",
+        "currency": "NOK",
+        "listing_manifest_sha256": "c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8",
+        "listing_sha256": "2a3c604bb3113e04e65ff4573cfe7ee23b0015a0d04bc824b761c2a1b85add2c",
+        "source_reingested": false,
+        "counts": {
+          "raw": 13391,
+          "dwelling_filtered": 11776,
+          "positive_price": 8557,
+          "eligible_missing_price": 3219,
+          "eligible_nonpositive_price": 0,
+          "inside_boundary_raw": 13391,
+          "inside_boundary_dwelling": 11776,
+          "inside_boundary_positive_price": 8557,
+          "boundary_unclassified": 0,
+          "duplicate_records": 0,
+          "invalid_records": 0,
+          "invalid_or_duplicate_records": 0,
+          "quote_rows": 10060,
+          "quote_date_mismatch": 0,
+          "quote_date_match_unresolved": 10060,
+          "quote_returned_dates_missing": 10060,
+          "positive_price_currency_unresolved": 0,
+          "quote_flattened_rounding_difference": 2369,
+          "price_quote_difference": 0,
+          "quote_without_dates": 0,
+          "positive_price_without_quote": 0
+        },
+        "mask_summary_sha256": "2f9fc9a6a5ef570e2d62a16a3f9421da4bded1b6db2c573c7041e7450cfdfb5c",
+        "covers_crs": "EPSG:4326",
+        "metric_crs": "EPSG:25833"
+      }
+    },
+    "reference": {
+      "reference_n": 8557,
+      "mean_log_price": 7.62464489617017,
+      "geometric_mean_price": 2048.0530643895067,
+      "before_accessibility_exclusions": true,
+      "outcome_imputed": false,
+      "city": "oslo",
+      "currency": "NOK",
+      "listing_source": {
+        "city": "oslo",
+        "snapshot": "2026-06-30",
+        "currency": "NOK",
+        "listing_manifest_sha256": "c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8",
+        "listing_sha256": "2a3c604bb3113e04e65ff4573cfe7ee23b0015a0d04bc824b761c2a1b85add2c",
+        "source_reingested": false,
+        "counts": {
+          "raw": 13391,
+          "dwelling_filtered": 11776,
+          "positive_price": 8557,
+          "eligible_missing_price": 3219,
+          "eligible_nonpositive_price": 0,
+          "inside_boundary_raw": 13391,
+          "inside_boundary_dwelling": 11776,
+          "inside_boundary_positive_price": 8557,
+          "boundary_unclassified": 0,
+          "duplicate_records": 0,
+          "invalid_records": 0,
+          "invalid_or_duplicate_records": 0,
+          "quote_rows": 10060,
+          "quote_date_mismatch": 0,
+          "quote_date_match_unresolved": 10060,
+          "quote_returned_dates_missing": 10060,
+          "positive_price_currency_unresolved": 0,
+          "quote_flattened_rounding_difference": 2369,
+          "price_quote_difference": 0,
+          "quote_without_dates": 0,
+          "positive_price_without_quote": 0
+        },
+        "mask_summary_sha256": "2f9fc9a6a5ef570e2d62a16a3f9421da4bded1b6db2c573c7041e7450cfdfb5c",
+        "covers_crs": "EPSG:4326",
+        "metric_crs": "EPSG:25833"
+      }
+    },
+    "private_assignment_roundtrip": "PASS",
+    "reference_roundtrip": "PASS",
+    "geography_run_id": "oslo_geography_20261013t010830555916z",
+    "reference_run_id": "oslo_reference_20261013t010833786311z"
+  },
+  "stockholm": {
+    "geography": {
+      "metric_crs": "EPSG:3006",
+      "source_crs": "OGC:CRS84 (RFC7946 default unless explicitly declared)",
+      "covers_crs": "EPSG:4326",
+      "raw_polygon_count": 14,
+      "operational_count": 11,
+      "eligible_positive_status": {
+        "unique": 2510
+      },
+      "source_vs_polygon": {
+        "raw_label_not_polygon_hit": 0,
+        "operational_label_mismatch": 0,
+        "unknown_listing_label": 0
+      },
+      "overlaps": [],
+      "uncovered_mask_m2": 1166957.7781448422,
+      "provider_outside_mask_m2": 1087310.9971262577,
+      "groups": [
+        {
+          "name": "Bromma",
+          "raw_components": [
+            "Bromma"
+          ],
+          "area_km2": 27.46246426176599,
+          "eligible_positive_n": 170,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Enskede-Årsta-Vantör",
+          "raw_components": [
+            "Enskede-Årsta-Vantörs"
+          ],
+          "area_km2": 21.683140112291223,
+          "eligible_positive_n": 220,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Farsta",
+          "raw_components": [
+            "Farsta"
+          ],
+          "area_km2": 17.10134481005181,
+          "eligible_positive_n": 101,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Hägersten-Älvsjö",
+          "raw_components": [
+            "Hägersten-Liljeholmens",
+            "Älvsjö"
+          ],
+          "area_km2": 24.338909883049777,
+          "eligible_positive_n": 345,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Hässelby-Vällingby",
+          "raw_components": [
+            "Hässelby-Vällingby"
+          ],
+          "area_km2": 24.730628074710545,
+          "eligible_positive_n": 81,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Järva",
+          "raw_components": [
+            "Rinkeby-Tensta",
+            "Spånga-Tensta"
+          ],
+          "area_km2": 24.833238842605624,
+          "eligible_positive_n": 92,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Kungsholmen",
+          "raw_components": [
+            "Kungsholmens"
+          ],
+          "area_km2": 7.092209932390969,
+          "eligible_positive_n": 235,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Norra innerstaden",
+          "raw_components": [
+            "Norrmalms",
+            "Östermalms"
+          ],
+          "area_km2": 29.94672085836143,
+          "eligible_positive_n": 426,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Skarpnäck",
+          "raw_components": [
+            "Skarpnäcks"
+          ],
+          "area_km2": 17.544079171022688,
+          "eligible_positive_n": 100,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Skärholmen",
+          "raw_components": [
+            "Skärholmens"
+          ],
+          "area_km2": 10.31028129295032,
+          "eligible_positive_n": 39,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        },
+        {
+          "name": "Södermalm",
+          "raw_components": [
+            "Södermalms"
+          ],
+          "area_km2": 10.63463531943252,
+          "eligible_positive_n": 701,
+          "pre_feature_support_15": true,
+          "former_support_30": true
+        }
+      ],
+      "final_sample_frozen": false,
+      "folds_frozen": false,
+      "status": "QUALIFIED_OPERATIONAL_WITH_RECORDED_GEOMETRY_LIMITS",
+      "blockers": [],
+      "city": "stockholm",
+      "source": {
+        "path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/rinkeby_polygon_check_20261012/neighbourhoods.geojson",
+        "sha256": "9be3b672288e508e155f7e830b076ae9640fdf97063dad6cb7117ee116649274",
+        "receipt_path": "data/raw/v4/research_design_v4/stockholm/2026-06-30/rinkeby_polygon_check_20261012/neighbourhoods.geojson.receipt.json",
+        "receipt_sha256": "7b56c2d891881ec85226e17600c7ab6069e6c5a630d4c00de46b8636e095a0c2",
+        "source_url": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/visualisations/neighbourhoods.geojson",
+        "acquired_at_utc": "2026-10-12T14:09:33+00:00",
+        "source_crs": "OGC:CRS84",
+        "licence": "CC BY 4.0, Inside Airbnb catalogue; original cartographic provenance unknown",
+        "snapshot": "2026-06-30",
+        "geographic_extent": "Stockholm provider neighbourhoods",
+        "status": "verified_preserved_source"
+      },
+      "listing_source": {
+        "city": "stockholm",
+        "snapshot": "2026-06-30",
+        "currency": "SEK",
+        "listing_manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172",
+        "listing_sha256": "6d0ff60954da6e05b73ed741fe7ebbff5b57fe3b18acf4696acf5b824e4e6d6f",
+        "source_reingested": false,
+        "counts": {
+          "quote_rows": 3344,
+          "quote_date_mismatch": 0,
+          "quote_date_match_unresolved": 3344,
+          "quote_returned_dates_missing": 3344,
+          "positive_price_currency_unresolved": 0,
+          "price_quote_difference": 0,
+          "raw": 4806,
+          "dwelling_filtered": 3834,
+          "positive_price": 2510,
+          "eligible_missing_price": 1324,
+          "eligible_nonpositive_price": 0,
+          "inside_boundary_raw": 4806,
+          "inside_boundary_dwelling": 3834,
+          "inside_boundary_positive_price": 2510,
+          "boundary_unclassified": 0,
+          "duplicate_records": 0,
+          "invalid_records": 0,
+          "invalid_or_duplicate_records": 0,
+          "quote_flattened_rounding_difference": 793,
+          "quote_without_dates": 0,
+          "positive_price_without_quote": 0
+        },
+        "mask_summary_sha256": "7b16d5e30ebb5134a902251e13f99fc968b2b666b7df20e71338de5433f89356",
+        "covers_crs": "EPSG:4326",
+        "metric_crs": "EPSG:3006"
+      }
+    },
+    "reference": {
+      "reference_n": 2510,
+      "mean_log_price": 7.7112065845990125,
+      "geometric_mean_price": 2233.235220438514,
+      "before_accessibility_exclusions": true,
+      "outcome_imputed": false,
+      "city": "stockholm",
+      "currency": "SEK",
+      "listing_source": {
+        "city": "stockholm",
+        "snapshot": "2026-06-30",
+        "currency": "SEK",
+        "listing_manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172",
+        "listing_sha256": "6d0ff60954da6e05b73ed741fe7ebbff5b57fe3b18acf4696acf5b824e4e6d6f",
+        "source_reingested": false,
+        "counts": {
+          "quote_rows": 3344,
+          "quote_date_mismatch": 0,
+          "quote_date_match_unresolved": 3344,
+          "quote_returned_dates_missing": 3344,
+          "positive_price_currency_unresolved": 0,
+          "price_quote_difference": 0,
+          "raw": 4806,
+          "dwelling_filtered": 3834,
+          "positive_price": 2510,
+          "eligible_missing_price": 1324,
+          "eligible_nonpositive_price": 0,
+          "inside_boundary_raw": 4806,
+          "inside_boundary_dwelling": 3834,
+          "inside_boundary_positive_price": 2510,
+          "boundary_unclassified": 0,
+          "duplicate_records": 0,
+          "invalid_records": 0,
+          "invalid_or_duplicate_records": 0,
+          "quote_flattened_rounding_difference": 793,
+          "quote_without_dates": 0,
+          "positive_price_without_quote": 0
+        },
+        "mask_summary_sha256": "7b16d5e30ebb5134a902251e13f99fc968b2b666b7df20e71338de5433f89356",
+        "covers_crs": "EPSG:4326",
+        "metric_crs": "EPSG:3006"
+      }
+    },
+    "private_assignment_roundtrip": "PASS",
+    "reference_roundtrip": "PASS",
+    "geography_run_id": "stockholm_geography_20261013t010836230517z",
+    "reference_run_id": "stockholm_reference_20261013t010837541611z"
+  }
+}

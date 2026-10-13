@@ -1,12 +1,20 @@
 PYTHON ?= .venv/bin/python
 .DEFAULT_GOAL := study-status
-.PHONY: study-status study-design study-test
+.PHONY: study-status study-design study-test study-setup study-geography-freeze study-geography-audit study-test-db
 study-status:
 	$(PYTHON) -m src.study.cli status
 study-design:
 	$(PYTHON) -m src.study.cli design
 study-test:
 	$(PYTHON) -m unittest discover -s tests -p 'test_study*.py' -v
+study-test-db:
+	THESIS_STUDY_DB_TEST=1 $(PYTHON) -m unittest discover -s tests -p 'test_study_store.py' -v
+study-setup:
+	$(PYTHON) -m src.study.cli setup
+study-geography-freeze:
+	$(PYTHON) -m src.study.cli geography-freeze
+study-geography-audit:
+	$(PYTHON) -m src.study.cli geography-audit
 
 # Remaining interfaces below reproduce preserved historical workflows.
 .PHONY: db-up db-down db-connect db-psql db-diagnose db-migrate db-check db-register compile test integration-test preflight smoke pipeline reproduce audit candidates migration-audit income-evidence income-deciles income-audit income-docs municipal-income-evidence

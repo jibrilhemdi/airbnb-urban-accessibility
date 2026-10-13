@@ -1,0 +1,14 @@
+{
+  "copenhagen": {
+    "run_id": "copenhagen_geography_20261013t010820402377z",
+    "summary_sha256": "133acd0e0c94f583a2d2bd1b2ccb931b52ebc1a398d51264bb53425d46b5cc0b"
+  },
+  "oslo": {
+    "run_id": "oslo_geography_20261013t010830555916z",
+    "summary_sha256": "7e584dd425732d8df57421b3683f8ba3c60d730fd62b3617f8bdef6fcf8fbdc8"
+  },
+  "stockholm": {
+    "run_id": "stockholm_geography_20261013t010836230517z",
+    "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9"
+  }
+}

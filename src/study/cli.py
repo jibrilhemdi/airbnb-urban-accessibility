@@ -9,9 +9,24 @@ from src.study.specification import load_design
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['status', 'design'])
+    parser.add_argument('command', choices=['status', 'design', 'setup', 'geography-freeze', 'geography-audit'])
     args = parser.parse_args(argv)
     design, cities = load_design()
+    if args.command == 'setup':
+        from src.study.store import setup, get_engine
+        engine = get_engine()
+        try:
+            print(json.dumps({'applied':setup(engine)}))
+        finally:
+            engine.dispose()
+        return 0
+    if args.command in {'geography-freeze','geography-audit'}:
+        from src.study.workflows import freeze_geography, audit_geography
+        result = freeze_geography() if args.command == 'geography-freeze' else audit_geography()
+        print(json.dumps({c:{'status':v['geography']['status'],'operational_count':v['geography']['operational_count'],
+                             'reference':{k:v['reference'][k] for k in ('reference_n','mean_log_price','geometric_mean_price')}}
+                          for c,v in result.items()},indent=2,ensure_ascii=False))
+        return 2 if any(v['geography']['blockers'] for v in result.values()) else 0
     if args.command == 'design':
         print(json.dumps(design, indent=2, ensure_ascii=False))
         return 0
