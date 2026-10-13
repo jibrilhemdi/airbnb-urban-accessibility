@@ -1269,3 +1269,16 @@ All three new speed/decay measurement packages pass hash/finite/physical-bound
 checks; predictive sensitivities still running. Training-tail/reputation complete
 for all cities. Historical statuses above remain preserved; Stockholm inferential
 missingness gate stays blocked. See neutral execution log and actual selectors.
+
+Comprehensive final handover: all independent source/feature/sample/fold/model/
+validation/transfer/robustness/diagnostic/reporting work completed freshly.
+All three predictive city ladders and six directions complete;75 robustness
+entries accounted for,304 metrics/380 contrasts independently verified.
+Stockholm association and dependent inference remain genuinely blocked by the
+frozen5% union-missingness rule. No old numerical result or imputed outcome/
+inferential substitute used. Actual final229 tests:185 PASS,44 historical
+opt-in skips; four owned PostGIS checks PASS. Preservation, source/model/code/
+public-artifact/metric/migration audits PASS. Publication review retains initial
+outputs and corrects layouts in new artifacts. See neutral execution log,
+publication report, generated findings and final publication audit; final Git
+SHA is provided externally after commit/push rather than in its own commit.

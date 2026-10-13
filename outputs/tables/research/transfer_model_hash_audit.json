@@ -1,0 +1,338 @@
+[
+  {
+    "source": "copenhagen",
+    "target": "oslo",
+    "estimator": "OLS",
+    "model": "M0",
+    "sha256": "b786f5ad9d99da8c5b532caacd9196f3b3852f077e70f00d990c78a942e78a56"
+  },
+  {
+    "source": "copenhagen",
+    "target": "stockholm",
+    "estimator": "OLS",
+    "model": "M0",
+    "sha256": "b786f5ad9d99da8c5b532caacd9196f3b3852f077e70f00d990c78a942e78a56"
+  },
+  {
+    "source": "copenhagen",
+    "target": "oslo",
+    "estimator": "OLS",
+    "model": "ME",
+    "sha256": "6bb9d8a83eec981a199288292fe8096ef5f963724fb5e87acc97f3669fa96bab"
+  },
+  {
+    "source": "copenhagen",
+    "target": "stockholm",
+    "estimator": "OLS",
+    "model": "ME",
+    "sha256": "6bb9d8a83eec981a199288292fe8096ef5f963724fb5e87acc97f3669fa96bab"
+  },
+  {
+    "source": "copenhagen",
+    "target": "oslo",
+    "estimator": "OLS",
+    "model": "MW",
+    "sha256": "981f9765d9a034030cab229ab6c4bd518d48fd5376d98a24fbb750ff048cc031"
+  },
+  {
+    "source": "copenhagen",
+    "target": "stockholm",
+    "estimator": "OLS",
+    "model": "MW",
+    "sha256": "981f9765d9a034030cab229ab6c4bd518d48fd5376d98a24fbb750ff048cc031"
+  },
+  {
+    "source": "copenhagen",
+    "target": "oslo",
+    "estimator": "OLS",
+    "model": "MEW",
+    "sha256": "a6c96df51f776e0e1b7674460b891f2f57ebd6866b7da8dbf940c2f29a821d34"
+  },
+  {
+    "source": "copenhagen",
+    "target": "stockholm",
+    "estimator": "OLS",
+    "model": "MEW",
+    "sha256": "a6c96df51f776e0e1b7674460b891f2f57ebd6866b7da8dbf940c2f29a821d34"
+  },
+  {
+    "source": "copenhagen",
+    "target": "oslo",
+    "estimator": "XGBoost",
+    "model": "M0",
+    "sha256": "e75d37ccbc63bf506da32c57c689927e8d132af6c6a0898a8a4e739b15b5ed8c"
+  },
+  {
+    "source": "copenhagen",
+    "target": "stockholm",
+    "estimator": "XGBoost",
+    "model": "M0",
+    "sha256": "e75d37ccbc63bf506da32c57c689927e8d132af6c6a0898a8a4e739b15b5ed8c"
+  },
+  {
+    "source": "copenhagen",
+    "target": "oslo",
+    "estimator": "XGBoost",
+    "model": "ME",
+    "sha256": "3f2960c6f32b02f767edfb2870dba6221ebb5492599c2e59be664fa1159847c0"
+  },
+  {
+    "source": "copenhagen",
+    "target": "stockholm",
+    "estimator": "XGBoost",
+    "model": "ME",
+    "sha256": "3f2960c6f32b02f767edfb2870dba6221ebb5492599c2e59be664fa1159847c0"
+  },
+  {
+    "source": "copenhagen",
+    "target": "oslo",
+    "estimator": "XGBoost",
+    "model": "MW",
+    "sha256": "cd015fb4e7c9af489bfd6d883a90456c36e4953acb9dd7b05c6c6c9d512f1829"
+  },
+  {
+    "source": "copenhagen",
+    "target": "stockholm",
+    "estimator": "XGBoost",
+    "model": "MW",
+    "sha256": "cd015fb4e7c9af489bfd6d883a90456c36e4953acb9dd7b05c6c6c9d512f1829"
+  },
+  {
+    "source": "copenhagen",
+    "target": "oslo",
+    "estimator": "XGBoost",
+    "model": "MEW",
+    "sha256": "fb0d3a04e9cb0c819212f1e16c494b4d2a8c83a35cf389701277cf5f21a8fc5d"
+  },
+  {
+    "source": "copenhagen",
+    "target": "stockholm",
+    "estimator": "XGBoost",
+    "model": "MEW",
+    "sha256": "fb0d3a04e9cb0c819212f1e16c494b4d2a8c83a35cf389701277cf5f21a8fc5d"
+  },
+  {
+    "source": "oslo",
+    "target": "copenhagen",
+    "estimator": "OLS",
+    "model": "M0",
+    "sha256": "572670fb96b41403bff871e7490c5808b26f79c30dd622be263bb4c026bdc076"
+  },
+  {
+    "source": "oslo",
+    "target": "stockholm",
+    "estimator": "OLS",
+    "model": "M0",
+    "sha256": "572670fb96b41403bff871e7490c5808b26f79c30dd622be263bb4c026bdc076"
+  },
+  {
+    "source": "oslo",
+    "target": "copenhagen",
+    "estimator": "OLS",
+    "model": "ME",
+    "sha256": "20ccfa117b9d3e1ea38d5003f245c8706f7dd0cf53f20db624db35538f5d5f84"
+  },
+  {
+    "source": "oslo",
+    "target": "stockholm",
+    "estimator": "OLS",
+    "model": "ME",
+    "sha256": "20ccfa117b9d3e1ea38d5003f245c8706f7dd0cf53f20db624db35538f5d5f84"
+  },
+  {
+    "source": "oslo",
+    "target": "copenhagen",
+    "estimator": "OLS",
+    "model": "MW",
+    "sha256": "cf6f599962520d8128741b4a05e55590a722a44d0ff33f6e6bde1b707d910f5d"
+  },
+  {
+    "source": "oslo",
+    "target": "stockholm",
+    "estimator": "OLS",
+    "model": "MW",
+    "sha256": "cf6f599962520d8128741b4a05e55590a722a44d0ff33f6e6bde1b707d910f5d"
+  },
+  {
+    "source": "oslo",
+    "target": "copenhagen",
+    "estimator": "OLS",
+    "model": "MEW",
+    "sha256": "97053960391f873ab70a412fabf4643c9ce9cad8bc0dde9e0bfa6f3ef99b097e"
+  },
+  {
+    "source": "oslo",
+    "target": "stockholm",
+    "estimator": "OLS",
+    "model": "MEW",
+    "sha256": "97053960391f873ab70a412fabf4643c9ce9cad8bc0dde9e0bfa6f3ef99b097e"
+  },
+  {
+    "source": "oslo",
+    "target": "copenhagen",
+    "estimator": "XGBoost",
+    "model": "M0",
+    "sha256": "1dd5edbe9f1a045b080eba7279ab276539a41e4b9aa4324532be93ec269ffcc2"
+  },
+  {
+    "source": "oslo",
+    "target": "stockholm",
+    "estimator": "XGBoost",
+    "model": "M0",
+    "sha256": "1dd5edbe9f1a045b080eba7279ab276539a41e4b9aa4324532be93ec269ffcc2"
+  },
+  {
+    "source": "oslo",
+    "target": "copenhagen",
+    "estimator": "XGBoost",
+    "model": "ME",
+    "sha256": "bb60105c8970c99bb4ccb3da24eb8117caa5aa642003a291fa9953e800900dab"
+  },
+  {
+    "source": "oslo",
+    "target": "stockholm",
+    "estimator": "XGBoost",
+    "model": "ME",
+    "sha256": "bb60105c8970c99bb4ccb3da24eb8117caa5aa642003a291fa9953e800900dab"
+  },
+  {
+    "source": "oslo",
+    "target": "copenhagen",
+    "estimator": "XGBoost",
+    "model": "MW",
+    "sha256": "ec62dbe478c1a159724e691145ae488d921832d704e4da2f7f0f3c6eb1788cdc"
+  },
+  {
+    "source": "oslo",
+    "target": "stockholm",
+    "estimator": "XGBoost",
+    "model": "MW",
+    "sha256": "ec62dbe478c1a159724e691145ae488d921832d704e4da2f7f0f3c6eb1788cdc"
+  },
+  {
+    "source": "oslo",
+    "target": "copenhagen",
+    "estimator": "XGBoost",
+    "model": "MEW",
+    "sha256": "d0a0f2aa117c61ee637db7480a81dd7d60d4a4c69691ff6f44b5cb9ed0835a10"
+  },
+  {
+    "source": "oslo",
+    "target": "stockholm",
+    "estimator": "XGBoost",
+    "model": "MEW",
+    "sha256": "d0a0f2aa117c61ee637db7480a81dd7d60d4a4c69691ff6f44b5cb9ed0835a10"
+  },
+  {
+    "source": "stockholm",
+    "target": "copenhagen",
+    "estimator": "OLS",
+    "model": "M0",
+    "sha256": "45b7a24d1ead9f304ee5179f3c7ed9fc4e927148cd48bdae25875c27d922d373"
+  },
+  {
+    "source": "stockholm",
+    "target": "oslo",
+    "estimator": "OLS",
+    "model": "M0",
+    "sha256": "45b7a24d1ead9f304ee5179f3c7ed9fc4e927148cd48bdae25875c27d922d373"
+  },
+  {
+    "source": "stockholm",
+    "target": "copenhagen",
+    "estimator": "OLS",
+    "model": "ME",
+    "sha256": "038cd68b7939af7f139596ea8984a94835d7d802c73ee4b6f4c1b51d44bd24dd"
+  },
+  {
+    "source": "stockholm",
+    "target": "oslo",
+    "estimator": "OLS",
+    "model": "ME",
+    "sha256": "038cd68b7939af7f139596ea8984a94835d7d802c73ee4b6f4c1b51d44bd24dd"
+  },
+  {
+    "source": "stockholm",
+    "target": "copenhagen",
+    "estimator": "OLS",
+    "model": "MW",
+    "sha256": "e4cb16f7ae74a093674e2f28a85465e1d50c4ccbe202642230be35a86906d2a5"
+  },
+  {
+    "source": "stockholm",
+    "target": "oslo",
+    "estimator": "OLS",
+    "model": "MW",
+    "sha256": "e4cb16f7ae74a093674e2f28a85465e1d50c4ccbe202642230be35a86906d2a5"
+  },
+  {
+    "source": "stockholm",
+    "target": "copenhagen",
+    "estimator": "OLS",
+    "model": "MEW",
+    "sha256": "b568e7c9a15a51f2d4191b55ac74753ac1899c3dabeb93df61fb46b98ccdcee9"
+  },
+  {
+    "source": "stockholm",
+    "target": "oslo",
+    "estimator": "OLS",
+    "model": "MEW",
+    "sha256": "b568e7c9a15a51f2d4191b55ac74753ac1899c3dabeb93df61fb46b98ccdcee9"
+  },
+  {
+    "source": "stockholm",
+    "target": "copenhagen",
+    "estimator": "XGBoost",
+    "model": "M0",
+    "sha256": "e6aaf1fcad53b95341facb5a55191c032a99cc66f2fc958ef0cfecca1f3cb3a3"
+  },
+  {
+    "source": "stockholm",
+    "target": "oslo",
+    "estimator": "XGBoost",
+    "model": "M0",
+    "sha256": "e6aaf1fcad53b95341facb5a55191c032a99cc66f2fc958ef0cfecca1f3cb3a3"
+  },
+  {
+    "source": "stockholm",
+    "target": "copenhagen",
+    "estimator": "XGBoost",
+    "model": "ME",
+    "sha256": "60e638c753e235f86d799c42b6e10a8357076936d65be512ffbf99faf2774065"
+  },
+  {
+    "source": "stockholm",
+    "target": "oslo",
+    "estimator": "XGBoost",
+    "model": "ME",
+    "sha256": "60e638c753e235f86d799c42b6e10a8357076936d65be512ffbf99faf2774065"
+  },
+  {
+    "source": "stockholm",
+    "target": "copenhagen",
+    "estimator": "XGBoost",
+    "model": "MW",
+    "sha256": "630b240103bae09d3b1c74974c1b135695e834cfc6e6695bcce69cbf9f0c7bd2"
+  },
+  {
+    "source": "stockholm",
+    "target": "oslo",
+    "estimator": "XGBoost",
+    "model": "MW",
+    "sha256": "630b240103bae09d3b1c74974c1b135695e834cfc6e6695bcce69cbf9f0c7bd2"
+  },
+  {
+    "source": "stockholm",
+    "target": "copenhagen",
+    "estimator": "XGBoost",
+    "model": "MEW",
+    "sha256": "d552f9a9395b0ac1115d788035da331223e02e1b5eab52b7765b34bf601e2660"
+  },
+  {
+    "source": "stockholm",
+    "target": "oslo",
+    "estimator": "XGBoost",
+    "model": "MEW",
+    "sha256": "d552f9a9395b0ac1115d788035da331223e02e1b5eab52b7765b34bf601e2660"
+  }
+]

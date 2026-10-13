@@ -21,6 +21,34 @@ study-context-freeze:
 study-context-audit:
 	$(PYTHON) -m src.study.cli context-audit
 
+STUDY_CITY ?= copenhagen
+STUDY_SCHEME ?= neighbourhood
+.PHONY: study-sample-freeze study-prefit-freeze study-within-city study-transfer study-association study-spatial study-robustness study-training-sensitivity study-measurements study-finish study-report study-preservation
+study-sample-freeze:
+	$(PYTHON) -m src.study.cli sample-freeze
+study-prefit-freeze:
+	$(PYTHON) -m src.study.cli prefit-freeze
+study-within-city:
+	$(PYTHON) -m src.study.cli within-city --city "$(STUDY_CITY)" --scheme "$(STUDY_SCHEME)"
+study-transfer:
+	$(PYTHON) -m src.study.cli transfer
+study-association:
+	$(PYTHON) -m src.reporting.study_diagnostics
+study-spatial:
+	$(PYTHON) -m src.reporting.study_spatial
+study-robustness:
+	$(PYTHON) -m src.reporting.study_robustness --city "$(STUDY_CITY)"
+study-training-sensitivity:
+	$(PYTHON) -m src.reporting.study_training_sensitivity --city "$(STUDY_CITY)"
+study-measurements:
+	$(PYTHON) -m src.reporting.study_measurement_sensitivity
+study-finish:
+	$(PYTHON) scripts/study_finish_queue.py
+study-report:
+	$(PYTHON) -m src.reporting.study_report
+study-preservation:
+	$(PYTHON) scripts/study_preservation.py --verify-store --database
+
 # Remaining interfaces below reproduce preserved historical workflows.
 .PHONY: db-up db-down db-connect db-psql db-diagnose db-migrate db-check db-register compile test integration-test preflight smoke pipeline reproduce audit candidates migration-audit income-evidence income-deciles income-audit income-docs municipal-income-evidence
 

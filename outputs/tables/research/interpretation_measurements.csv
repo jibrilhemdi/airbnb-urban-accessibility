@@ -1,0 +1,13 @@
+city,concept,unit,euclidean_median,walking_median
+copenhagen,station,km,0.404388456143006,0.637526574681781
+copenhagen,bus,km,0.12957288066004952,0.21861666112307665
+copenhagen,food,10-minute opportunities,84.0,47.0
+copenhagen,culture,10-minute opportunities,6.0,3.0
+oslo,station,km,0.668308503189484,0.896560773634723
+oslo,bus,km,0.137143560996615,0.21872850236730523
+oslo,food,10-minute opportunities,63.0,35.0
+oslo,culture,10-minute opportunities,8.0,4.0
+stockholm,station,km,0.388101255606976,0.6403614879683803
+stockholm,bus,km,0.123360300328742,0.21672895353581847
+stockholm,food,10-minute opportunities,51.0,28.0
+stockholm,culture,10-minute opportunities,4.0,2.0

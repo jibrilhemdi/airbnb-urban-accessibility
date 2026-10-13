@@ -90,6 +90,33 @@ Only reviewed aggregate tables/figures and documentation may be published;
 raw/restricted data, individual coordinates, folds, models, credentials and
 listing-level predictions remain ignored and private.
 
+Publication review uses `python -m src.reporting.study_publication` and
+`python -m src.reporting.study_findings`. These consume verified SQL summaries,
+preserve the original generated report/figures, and create corrected presentation
+artifacts plus code-generated interpretation. No model, sample, statistic,
+feature or threshold changes. The initial and publication inventories retain
+separate checksums. Actual association-execution status is distinguished from
+the frozen sample's earlier readiness label.
+
+After all fits and release audits completed, only the CLI status/entry guards
+were updated to expose the actual blocked release and refuse accidental refits.
+Exact pre-release CLI bytes are archived at
+`history/implementation/cli_before_release.py`; their checksum matches the
+fitted packages' source-code dependency. Analytical source/model modules remain
+unchanged. Status intentionally returns2 while the scientific inference gate is
+blocked; it still reports three fitted predictive cities and six completed transfers.
+
+The final code-snapshot audit also found an intermediate evaluation-driver
+digest recorded while primary fits were running, before transfer model-file
+serialization was added. Exact bytes are recovered by combining the committed
+primary driver with the preceding committed transfer function; the recovered
+SHA256 exactly equals the immutable recorded digest, not an inferred equivalent.
+They are preserved at `history/implementation/evaluation_before_transfer_artifacts.py`.
+The primary fitting/contribution code and every estimation/preprocessing module
+are identical; the later difference only saves transfer pipeline bytes and
+directional artifact identities. `study_publication_check.py` verifies every
+fitted package's recorded source snapshot against current or exact archived bytes.
+
 Git work is exclusively on `v4` with the recorded origin and main base. Every
 checkpoint uses normal incremental commits and `git push origin HEAD:refs/heads/v4`,
 followed by remote/local SHA equality. The final commit's own SHA is supplied in

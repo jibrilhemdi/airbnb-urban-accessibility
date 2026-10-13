@@ -16,9 +16,14 @@ documents and statuses remain historical evidence.
 | [Deviations](deviations_from_preanalysis.md) | Corrections, operational warnings, scientific gates and interpretation |
 | [Execution log](execution_log.md) | Actual computations, tests, checkpoints and blockers |
 | [Reproducibility](reproducibility.md) | Commands, SQL authority, private artifacts, immutability and preservation |
-| [Research handover](research_report.md) | Generated scientific tables/figures and full release status |
+| [Publication research handover](research_report_publication.md) | Reviewed scientific tables/figures and full release status |
+| [Generated findings](findings.md) | SQL-derived RQ interpretation, geographic consistency and transfer patterns |
+| [Initial generated handover](research_report.md) | Preserved initial report before publication layout/status annotations |
+| [Publication review](publication_audit.json) | Corrected figure layouts, retained initial artifacts and current association execution |
+| [Checkpoint history](checkpoint_history.json) | Actual incremental commits before final publication; final SHA supplied externally |
 | [Release audit](release_audit.json) | Independent source/model/output/migration/branch verification |
 | [Output inventory](public_output_inventory.json) | Generated aggregate artifact hashes and sizes |
+| [Publication output inventory](publication_output_inventory.json) | Initial and reviewed presentation artifacts with checksums |
 | [Software environment](software_environment.json) | Actual Python/platform/library versions |
 | [Geography audit](geography_audit.json) | Raw/polygon/group assignment, topology, support and reference samples |
 | [Context audit](context_audit.json) | Native densities, exact sources, anchors, CRS and limitations |

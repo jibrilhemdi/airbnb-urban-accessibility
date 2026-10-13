@@ -29,11 +29,19 @@ synthetic tests do not establish empirical readiness or completed research.
 
 Implemented: all three provider geographies, native densities, same-time civic
 anchors/OSM networks/destinations, matched features, reference/common samples,
-frozen folds, primary OLS/XGBoost prediction, random/both1.5km benchmarks and all
+frozen folds, primary OLS/XGBoost prediction, random/all six geometric benchmarks and all
 six relative-price transfers. Copenhagen/Oslo association and triggered spatial/
 fixed-effect inference are complete. Stockholm association and dependent
 inference are blocked by the frozen5% union missingness guard. Independent
-registered robustness and final reporting are being completed; their actual
+registered robustness and final reporting are complete; their actual
 statuses are certified by generated selectors/audits, never inferred from a
 configuration or this plan. The exhaustive registry and release audit distinguish
 scientific completion from accounted-for blocked/infeasible work.
+
+All independently executable registered sensitivity families completed and
+saved-prediction recalculation passed. Publication review corrected figure
+colour-bar layout in new artifacts while preserving original results, and
+adds association-execution labels separately from pre-fit sample qualifications.
+The generated findings distinguish neighbourhood gains, geometric reversals
+and directional transfer asymmetry. Full release remains blocked solely by
+Stockholm's specified inferential gate, without a silent relaxation or substitute.

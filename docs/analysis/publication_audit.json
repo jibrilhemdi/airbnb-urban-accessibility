@@ -1,0 +1,38 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_SCIENTIFIC_BLOCKERS",
+  "initial_release_audit_sha256": "da54b41d84bbd737a788bdbc41136810b6f88df656cec391946f86151b6eade6",
+  "initial_research_report_sha256": "66d4a9282731cb9c6e874d80587bbcc8248d4025c0fe4c7b570a95bbb0fd2e4b",
+  "initial59_public_artifacts_unchanged": true,
+  "publication_artifacts": 8,
+  "all_public_artifacts": 67,
+  "public_map_cell_support_minimum": 5,
+  "map_cells": 693,
+  "association_execution": [
+    {
+      "city": "copenhagen",
+      "association_execution_status": "COMPLETE_ASSOCIATION",
+      "association_status_at_sample_freeze": "READY_FOR_RANK_DIAGNOSTIC",
+      "association_n": 12285,
+      "missing_fraction": 0.009912959381044487
+    },
+    {
+      "city": "oslo",
+      "association_execution_status": "COMPLETE_ASSOCIATION",
+      "association_status_at_sample_freeze": "READY_FOR_RANK_DIAGNOSTIC",
+      "association_n": 8152,
+      "missing_fraction": 0.04420213389611912
+    },
+    {
+      "city": "stockholm",
+      "association_execution_status": "BLOCKED_MATERIAL_MISSINGNESS",
+      "association_status_at_sample_freeze": "BLOCKED_MATERIAL_MISSINGNESS",
+      "association_n": 2348,
+      "missing_fraction": 0.058917835671342685
+    }
+  ],
+  "models_or_statistics_changed": false,
+  "full_rerun_complete": false,
+  "primary_prediction_cities_complete": 3,
+  "six_transfer_directions_complete": true,
+  "code_sha256": "b9a961dfc2684a4dcd25cf8f69aebf0c9323b1e965fa9514b968d0fb1cfaa0e0"
+}

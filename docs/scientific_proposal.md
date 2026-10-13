@@ -45,3 +45,13 @@ timing mismatch remain limitations to measure and report.
 The [research plan](analysis/research_plan.md) distinguishes implemented work
 from blocked empirical stages. Historical evidence remains accessible through
 the [preservation inventory](analysis/path_inventory.json).
+
+Implementation is now documented in the generated
+[publication handover](analysis/research_report_publication.md) and
+[findings](analysis/findings.md). All three cities' primary predictive ladders,
+the six single-source directional transfers and independent registered
+robustness checks were freshly executed under this final design. Copenhagen
+and Oslo association inference completed; Stockholm's preserved union-missingness
+guard blocks its association and dependent inference. The full requested study
+therefore remains partial. Reported numerical findings come from the new
+authoritative SQL results, not earlier analyses or synthetic fixtures.

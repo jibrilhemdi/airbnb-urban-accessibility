@@ -1,0 +1,854 @@
+[
+  {
+    "city": "copenhagen",
+    "concept": "station",
+    "n": 12408,
+    "euclidean_km": {
+      "minimum": 0.008260965535758,
+      "p05": 0.1308608990418379,
+      "p25": 0.2761936784182105,
+      "median": 0.404388456143006,
+      "p75": 0.5584809776983193,
+      "p95": 0.9072452197916525,
+      "maximum": 2.328188734676031
+    },
+    "walking_km": {
+      "minimum": 0.015962170719248835,
+      "p05": 0.23437434811639346,
+      "p25": 0.4438868132914953,
+      "median": 0.637526574681781,
+      "p75": 0.8686956806051525,
+      "p95": 1.3437951776730368,
+      "maximum": 3.887306470171472
+    },
+    "nearest_measure_difference_km": {
+      "minimum": 0.0006117561128755854,
+      "p05": 0.05503225553393738,
+      "p25": 0.11491457639269209,
+      "median": 0.18351757975779062,
+      "p75": 0.30770299685777447,
+      "p95": 0.7156030071710753,
+      "maximum": 2.2927233384606094
+    },
+    "spearman": 0.7861583288106704,
+    "meaning": "Nearest category measures may choose different destinations; this is not same-destination route circuity"
+  },
+  {
+    "city": "copenhagen",
+    "concept": "bus",
+    "n": 12408,
+    "euclidean_km": {
+      "minimum": 0.000695620895337,
+      "p05": 0.03032809355906575,
+      "p25": 0.08142866189079825,
+      "median": 0.12957288066004952,
+      "p75": 0.187231901010877,
+      "p95": 0.3063602343203383,
+      "maximum": 0.729467638923051
+    },
+    "walking_km": {
+      "minimum": 0.00292400579488175,
+      "p05": 0.0552977672738654,
+      "p25": 0.14639307951152208,
+      "median": 0.21861666112307665,
+      "p75": 0.30654343909992365,
+      "p95": 0.46970734533551867,
+      "maximum": 1.1081234225953347
+    },
+    "nearest_measure_difference_km": {
+      "minimum": -4.198030811863873e-16,
+      "p05": 0.012734437676298858,
+      "p25": 0.04428018399468657,
+      "median": 0.07836289534250263,
+      "p75": 0.12238070200336501,
+      "p95": 0.22012500734650275,
+      "maximum": 0.6693591943008674
+    },
+    "spearman": 0.8588648277631487,
+    "meaning": "Nearest category measures may choose different destinations; this is not same-destination route circuity"
+  },
+  {
+    "city": "copenhagen",
+    "concept": "food",
+    "minutes": 10,
+    "n": 12408,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 10.0,
+      "p25": 36.0,
+      "median": 84.0,
+      "p75": 163.0,
+      "p95": 388.0,
+      "maximum": 587.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 4.0,
+      "p25": 19.0,
+      "median": 47.0,
+      "p75": 88.0,
+      "p95": 247.0,
+      "maximum": 463.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -290.0,
+      "p05": -147.0,
+      "p25": -70.0,
+      "median": -34.0,
+      "p75": -16.0,
+      "p95": -4.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.00024177949709864604,
+    "zero_walking_fraction": 0.007011605415860735,
+    "spearman": 0.965198064712495
+  },
+  {
+    "city": "copenhagen",
+    "concept": "food",
+    "minutes": 15,
+    "n": 12408,
+    "euclidean_opportunities": {
+      "minimum": 3.0,
+      "p05": 24.0,
+      "p25": 83.0,
+      "median": 161.0,
+      "p75": 352.0,
+      "p95": 763.0,
+      "maximum": 870.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 12.0,
+      "p25": 46.0,
+      "median": 105.0,
+      "p75": 213.0,
+      "p95": 521.6499999999996,
+      "maximum": 725.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -468.0,
+      "p05": -258.0,
+      "p25": -123.0,
+      "median": -67.0,
+      "p75": -32.0,
+      "p95": -10.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.0,
+    "zero_walking_fraction": 0.00016118633139909736,
+    "spearman": 0.9668953410006048
+  },
+  {
+    "city": "copenhagen",
+    "concept": "food",
+    "minutes": 20,
+    "n": 12408,
+    "euclidean_opportunities": {
+      "minimum": 13.0,
+      "p05": 48.0,
+      "p25": 148.0,
+      "median": 315.0,
+      "p75": 625.0,
+      "p95": 1047.0,
+      "maximum": 1205.0
+    },
+    "walking_opportunities": {
+      "minimum": 2.0,
+      "p05": 24.0,
+      "p25": 88.0,
+      "median": 174.0,
+      "p75": 387.0,
+      "p95": 819.0,
+      "maximum": 975.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -606.0,
+      "p05": -379.0,
+      "p25": -202.0,
+      "median": -112.0,
+      "p75": -50.0,
+      "p95": -18.0,
+      "maximum": -1.0
+    },
+    "zero_euclidean_fraction": 0.0,
+    "zero_walking_fraction": 0.0,
+    "spearman": 0.964140937452575
+  },
+  {
+    "city": "copenhagen",
+    "concept": "culture",
+    "minutes": 10,
+    "n": 12408,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 2.0,
+      "median": 6.0,
+      "p75": 15.0,
+      "p95": 56.0,
+      "maximum": 86.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 1.0,
+      "median": 3.0,
+      "p75": 8.0,
+      "p95": 31.0,
+      "maximum": 64.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -50.0,
+      "p05": -25.0,
+      "p25": -7.0,
+      "median": -3.0,
+      "p75": -1.0,
+      "p95": 0.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.07068020631850419,
+    "zero_walking_fraction": 0.18915215989684075,
+    "spearman": 0.9265499670936282
+  },
+  {
+    "city": "copenhagen",
+    "concept": "culture",
+    "minutes": 15,
+    "n": 12408,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 1.0,
+      "p25": 6.0,
+      "median": 15.0,
+      "p75": 35.0,
+      "p95": 105.0,
+      "maximum": 133.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 2.0,
+      "median": 7.0,
+      "p75": 20.0,
+      "p95": 69.0,
+      "maximum": 106.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -58.0,
+      "p05": -37.0,
+      "p25": -17.0,
+      "median": -7.0,
+      "p75": -3.0,
+      "p95": 0.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.01636041263700838,
+    "zero_walking_fraction": 0.05625402965828498,
+    "spearman": 0.9283795046922313
+  },
+  {
+    "city": "copenhagen",
+    "concept": "culture",
+    "minutes": 20,
+    "n": 12408,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 3.0,
+      "p25": 12.0,
+      "median": 30.0,
+      "p75": 69.25,
+      "p95": 144.0,
+      "maximum": 158.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 1.0,
+      "p25": 6.0,
+      "median": 16.0,
+      "p75": 38.0,
+      "p95": 107.0,
+      "maximum": 133.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -79.0,
+      "p05": -51.0,
+      "p25": -30.0,
+      "median": -12.0,
+      "p75": -5.0,
+      "p95": -1.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.0025789813023855577,
+    "zero_walking_fraction": 0.016118633139909737,
+    "spearman": 0.9593473690243701
+  },
+  {
+    "city": "oslo",
+    "concept": "station",
+    "n": 8529,
+    "euclidean_km": {
+      "minimum": 0.009579367373661,
+      "p05": 0.1846828177392594,
+      "p25": 0.406078681471232,
+      "median": 0.668308503189484,
+      "p75": 0.99735426742382,
+      "p95": 1.4902606295516103,
+      "maximum": 2.755516613031799
+    },
+    "walking_km": {
+      "minimum": 0.016229840705016332,
+      "p05": 0.3278121674376961,
+      "p25": 0.596330958848643,
+      "median": 0.896560773634723,
+      "p75": 1.2777089959967511,
+      "p95": 1.8324520352249236,
+      "maximum": 4.845434954171206
+    },
+    "nearest_measure_difference_km": {
+      "minimum": 0.00026379788283433306,
+      "p05": 0.0791812204091514,
+      "p25": 0.14894705008410786,
+      "median": 0.21023137285186344,
+      "p75": 0.28898687938060563,
+      "p95": 0.4706904177097573,
+      "maximum": 3.059318178507926
+    },
+    "spearman": 0.9697691708416096,
+    "meaning": "Nearest category measures may choose different destinations; this is not same-destination route circuity"
+  },
+  {
+    "city": "oslo",
+    "concept": "bus",
+    "n": 8529,
+    "euclidean_km": {
+      "minimum": 0.001126873797208,
+      "p05": 0.0319479344703434,
+      "p25": 0.085000307494621,
+      "median": 0.137143560996615,
+      "p75": 0.199055704960406,
+      "p95": 0.325023976926623,
+      "maximum": 1.820644029798237
+    },
+    "walking_km": {
+      "minimum": 0.005580291091519083,
+      "p05": 0.06298370168719745,
+      "p25": 0.14530407963940276,
+      "median": 0.21872850236730523,
+      "p75": 0.31299452594119914,
+      "p95": 0.501556751665971,
+      "maximum": 3.4576859451779756
+    },
+    "nearest_measure_difference_km": {
+      "minimum": 4.4762341883455847e-07,
+      "p05": 0.013815737331797744,
+      "p25": 0.04178199937090374,
+      "median": 0.0730946295327751,
+      "p75": 0.11555603407878218,
+      "p95": 0.23036777584116208,
+      "maximum": 1.6370419153797386
+    },
+    "spearman": 0.8781161799552304,
+    "meaning": "Nearest category measures may choose different destinations; this is not same-destination route circuity"
+  },
+  {
+    "city": "oslo",
+    "concept": "food",
+    "minutes": 10,
+    "n": 8529,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 1.0,
+      "p25": 16.0,
+      "median": 63.0,
+      "p75": 139.0,
+      "p95": 335.0,
+      "maximum": 452.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 6.0,
+      "median": 35.0,
+      "p75": 85.0,
+      "p95": 205.0,
+      "maximum": 324.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -273.0,
+      "p05": -132.0,
+      "p25": -54.0,
+      "median": -24.0,
+      "p75": -6.0,
+      "p95": 0.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.044788369093680384,
+    "zero_walking_fraction": 0.09555633720248563,
+    "spearman": 0.9766576576095743
+  },
+  {
+    "city": "oslo",
+    "concept": "food",
+    "minutes": 15,
+    "n": 8529,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 3.0,
+      "p25": 37.0,
+      "median": 156.0,
+      "p75": 335.0,
+      "p95": 606.0,
+      "maximum": 690.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 1.0,
+      "p25": 20.0,
+      "median": 93.0,
+      "p75": 207.0,
+      "p95": 441.59999999999945,
+      "maximum": 565.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -303.0,
+      "p05": -190.0,
+      "p25": -112.0,
+      "median": -54.0,
+      "p75": -13.0,
+      "p95": -1.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.006096846054637121,
+    "zero_walking_fraction": 0.036229335209285965,
+    "spearman": 0.9835885427431897
+  },
+  {
+    "city": "oslo",
+    "concept": "food",
+    "minutes": 20,
+    "n": 8529,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 6.0,
+      "p25": 72.0,
+      "median": 288.0,
+      "p75": 570.0,
+      "p95": 832.5999999999995,
+      "maximum": 906.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 2.0,
+      "p25": 39.0,
+      "median": 183.0,
+      "p75": 403.0,
+      "p95": 682.0,
+      "maximum": 760.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -502.0,
+      "p05": -238.0,
+      "p25": -157.0,
+      "median": -96.0,
+      "p75": -25.0,
+      "p95": -2.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.0005862351975612616,
+    "zero_walking_fraction": 0.009145269081955681,
+    "spearman": 0.9869677065610061
+  },
+  {
+    "city": "oslo",
+    "concept": "culture",
+    "minutes": 10,
+    "n": 8529,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 2.0,
+      "median": 8.0,
+      "p75": 16.0,
+      "p95": 30.0,
+      "maximum": 51.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 1.0,
+      "median": 4.0,
+      "p75": 9.0,
+      "p95": 18.599999999999454,
+      "maximum": 39.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -28.0,
+      "p05": -15.0,
+      "p25": -8.0,
+      "median": -4.0,
+      "p75": -1.0,
+      "p95": 0.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.09907374838785321,
+    "zero_walking_fraction": 0.23414233790596786,
+    "spearman": 0.9339979361377695
+  },
+  {
+    "city": "oslo",
+    "concept": "culture",
+    "minutes": 15,
+    "n": 8529,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 1.0,
+      "p25": 6.0,
+      "median": 20.0,
+      "p75": 39.0,
+      "p95": 60.0,
+      "maximum": 85.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 2.0,
+      "median": 12.0,
+      "p75": 22.0,
+      "p95": 39.0,
+      "maximum": 71.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -39.0,
+      "p05": -24.0,
+      "p25": -15.0,
+      "median": -8.0,
+      "p75": -3.0,
+      "p95": 0.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.02333216086293821,
+    "zero_walking_fraction": 0.09391487864931411,
+    "spearman": 0.9509765197712777
+  },
+  {
+    "city": "oslo",
+    "concept": "culture",
+    "minutes": 20,
+    "n": 8529,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 3.0,
+      "p25": 14.0,
+      "median": 38.0,
+      "p75": 66.0,
+      "p95": 97.0,
+      "maximum": 116.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 1.0,
+      "p25": 6.0,
+      "median": 23.0,
+      "p75": 43.0,
+      "p95": 68.0,
+      "maximum": 93.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -55.0,
+      "p05": -36.0,
+      "p25": -22.0,
+      "median": -12.0,
+      "p75": -5.0,
+      "p95": -1.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.003400164145855317,
+    "zero_walking_fraction": 0.03165670066830813,
+    "spearman": 0.9648711811142816
+  },
+  {
+    "city": "stockholm",
+    "concept": "station",
+    "n": 2495,
+    "euclidean_km": {
+      "minimum": 0.002819305091578,
+      "p05": 0.1051646932267411,
+      "p25": 0.252005834479722,
+      "median": 0.388101255606976,
+      "p75": 0.60603205001065,
+      "p95": 1.228598007724449,
+      "maximum": 3.405868064400611
+    },
+    "walking_km": {
+      "minimum": 0.034145365120446663,
+      "p05": 0.21299675045703878,
+      "p25": 0.4154062455478734,
+      "median": 0.6403614879683803,
+      "p75": 0.961055929573212,
+      "p95": 1.8224630416757308,
+      "maximum": 4.646839386876852
+    },
+    "nearest_measure_difference_km": {
+      "minimum": 0.000547012333132757,
+      "p05": 0.05137696305157613,
+      "p25": 0.1241129483784553,
+      "median": 0.20277529233805397,
+      "p75": 0.35321271262473797,
+      "p95": 0.8140846603350564,
+      "maximum": 2.0124857408705172
+    },
+    "spearman": 0.8544935218971534,
+    "meaning": "Nearest category measures may choose different destinations; this is not same-destination route circuity"
+  },
+  {
+    "city": "stockholm",
+    "concept": "bus",
+    "n": 2495,
+    "euclidean_km": {
+      "minimum": 0.003169300853862,
+      "p05": 0.0298560167753278,
+      "p25": 0.07583012527203101,
+      "median": 0.123360300328742,
+      "p75": 0.188677260863512,
+      "p95": 0.333028577735692,
+      "maximum": 1.22439646599652
+    },
+    "walking_km": {
+      "minimum": 0.003169300853862,
+      "p05": 0.058185526507849826,
+      "p25": 0.14141748982629587,
+      "median": 0.21672895353581847,
+      "p75": 0.31166100621171555,
+      "p95": 0.5357472871017835,
+      "maximum": 1.5717186962542267
+    },
+    "nearest_measure_difference_km": {
+      "minimum": -4.996003610813204e-16,
+      "p05": 0.012696294023935399,
+      "p25": 0.048234850378511586,
+      "median": 0.0823836756506594,
+      "p75": 0.13042035886706227,
+      "p95": 0.2560036655283115,
+      "maximum": 0.9469658161598102
+    },
+    "spearman": 0.8608965107532919,
+    "meaning": "Nearest category measures may choose different destinations; this is not same-destination route circuity"
+  },
+  {
+    "city": "stockholm",
+    "concept": "food",
+    "minutes": 10,
+    "n": 2495,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 2.0,
+      "p25": 10.0,
+      "median": 51.0,
+      "p75": 217.5,
+      "p95": 334.59999999999945,
+      "maximum": 456.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 5.0,
+      "median": 28.0,
+      "p75": 138.0,
+      "p95": 227.0,
+      "maximum": 333.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -233.0,
+      "p05": -134.0,
+      "p25": -74.0,
+      "median": -20.0,
+      "p75": -5.0,
+      "p95": -1.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.012024048096192385,
+    "zero_walking_fraction": 0.05571142284569138,
+    "spearman": 0.9761953705075015
+  },
+  {
+    "city": "stockholm",
+    "concept": "food",
+    "minutes": 15,
+    "n": 2495,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 9.0,
+      "p25": 22.0,
+      "median": 107.0,
+      "p75": 419.0,
+      "p95": 597.0,
+      "maximum": 730.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 3.0,
+      "p25": 12.0,
+      "median": 57.0,
+      "p75": 273.0,
+      "p95": 420.2999999999997,
+      "maximum": 565.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -389.0,
+      "p05": -266.0,
+      "p25": -136.0,
+      "median": -48.0,
+      "p75": -11.0,
+      "p95": -3.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.0008016032064128256,
+    "zero_walking_fraction": 0.015230460921843688,
+    "spearman": 0.9712913478867602
+  },
+  {
+    "city": "stockholm",
+    "concept": "food",
+    "minutes": 20,
+    "n": 2495,
+    "euclidean_opportunities": {
+      "minimum": 3.0,
+      "p05": 20.0,
+      "p25": 41.0,
+      "median": 207.0,
+      "p75": 631.0,
+      "p95": 989.0,
+      "maximum": 1073.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 8.0,
+      "p25": 22.0,
+      "median": 101.0,
+      "p75": 454.0,
+      "p95": 672.0,
+      "maximum": 835.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -573.0,
+      "p05": -352.0,
+      "p25": -209.0,
+      "median": -90.0,
+      "p75": -20.0,
+      "p95": -6.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.0,
+    "zero_walking_fraction": 0.0016032064128256513,
+    "spearman": 0.9712316146716199
+  },
+  {
+    "city": "stockholm",
+    "concept": "culture",
+    "minutes": 10,
+    "n": 2495,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 1.0,
+      "median": 4.0,
+      "p75": 21.0,
+      "p95": 71.0,
+      "maximum": 94.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 0.0,
+      "median": 2.0,
+      "p75": 11.0,
+      "p95": 38.0,
+      "maximum": 83.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -42.0,
+      "p05": -30.0,
+      "p25": -9.0,
+      "median": -2.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.20761523046092184,
+    "zero_walking_fraction": 0.3623246492985972,
+    "spearman": 0.937972563915367
+  },
+  {
+    "city": "stockholm",
+    "concept": "culture",
+    "minutes": 15,
+    "n": 2495,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 3.0,
+      "median": 9.0,
+      "p75": 49.0,
+      "p95": 113.29999999999973,
+      "maximum": 139.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 1.0,
+      "median": 4.0,
+      "p75": 28.0,
+      "p95": 72.0,
+      "maximum": 97.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -91.0,
+      "p05": -44.0,
+      "p25": -21.0,
+      "median": -6.0,
+      "p75": -1.0,
+      "p95": 0.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.07294589178356714,
+    "zero_walking_fraction": 0.20080160320641283,
+    "spearman": 0.9538208286459048
+  },
+  {
+    "city": "stockholm",
+    "concept": "culture",
+    "minutes": 20,
+    "n": 2495,
+    "euclidean_opportunities": {
+      "minimum": 0.0,
+      "p05": 1.0,
+      "p25": 5.0,
+      "median": 18.0,
+      "p75": 94.0,
+      "p95": 169.0,
+      "maximum": 203.0
+    },
+    "walking_opportunities": {
+      "minimum": 0.0,
+      "p05": 0.0,
+      "p25": 2.0,
+      "median": 8.0,
+      "p75": 48.0,
+      "p95": 106.0,
+      "maximum": 122.0
+    },
+    "walking_minus_euclidean": {
+      "minimum": -136.0,
+      "p05": -78.0,
+      "p25": -39.0,
+      "median": -9.0,
+      "p75": -2.0,
+      "p95": 0.0,
+      "maximum": 0.0
+    },
+    "zero_euclidean_fraction": 0.017234468937875752,
+    "zero_walking_fraction": 0.11623246492985972,
+    "spearman": 0.9578891063844697
+  }
+]

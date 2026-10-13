@@ -343,3 +343,70 @@ reader returns nine selected reused records and geography groups11/17/11;
 compileall and whitespace PASS. The full227-test/183-PASS/44-skip suite and
 four owned PostGIS checks remain the latest relevant baseline. Public aggregate
 sharing/final report completion is not claimed before final review.
+
+## Final independent computation, publication review and handover — 13 October 2026
+
+Common-grid/measurement checkpoint51f61621aeb28ffeceae611942e8d3c8d2b4bee4
+pushed exclusively to recorded origin refs/heads/v4; remote/local equality
+verified. Every independently executable registered sensitivity has now
+completed, retaining full30-candidate/four-inner-fold tuning and paired rows.
+Exact authoritative completion registry:75 entries,304 sensitivity performance
+rows and380 paired contrasts independently recalculated from saved predictions.
+All38 predictive sensitivity city/family combinations completed; four native-
+density variants are NOT_APPLICABLE outside Stockholm, and Stockholm spatial/
+fixed-effect association checks remain BLOCKED_ASSOCIATION_MISSINGNESS.
+
+All three primary predictive city ladders, random/all six geometric variants
+and all six single-source relative-price directions completed freshly. No old
+numeric result, model, prediction, sample, feature table, SHAP value or thesis
+result prose substitutes for rerun evidence. Observed outcomes remain unfilled.
+No parameter/category/variable/grouping/accessibility threshold was chosen from
+outer-test results; neither target tuning nor target recalibration occurred.
+
+Release audit PASS with the explicit scientific blocker:87 source files and38
+receipts verified,742 immutable SQL package metadata checks,1176 saved model
+file hashes,48 target prediction sets reproduced from24 shared frozen source
+pipelines; exact source sample cardinalities for primary/random/six grids PASS.
+Initial59 public aggregate artifact hashes/privacy/cell-support checks PASS.
+Protected historical audit again PASS:1696 files,263 archived/unchanged tracked
+baseline files,20 original dedicated-store tables, five protected analytical
+fingerprints and original migration checksums. No historical row/raw file changed.
+
+Publication visual review caught overlapping shared colour bars in initial maps/
+transfer plots and an axis label. New constrained-layout publication copies
+correct presentation, retaining original outputs/statistics. Current association
+execution is separately annotated from historical pre-fit sample readiness.
+Generated RQ findings read verified SQL and explicitly report heterogeneous
+neighbourhood/geometric/transfer patterns, not universal network superiority,
+causality, equivalence or six pseudo-independent significance tests.
+
+Final publication check PASS:72 public artifacts, every report link and safe
+CSV/map support;20460 code-digest comparisons across682 fitted packages.
+One intermediate evaluation-driver digest was not present as a whole committed
+file. Exact bytes recovered from the committed primary driver plus preceding
+committed transfer function match immutable expected SHA256
+af857988835c843c34a58e238b6263058cc14c082538aa496401a58d390f25ee.
+Archived that exact snapshot; estimation/preprocessing and primary-fitting
+code are unchanged, with only later transfer artifact serialization differing.
+Initial failed strict current-file-only check is documented as corrected by
+exact preserved provenance, never an invented equivalent or changed SQL record.
+Post-fit CLI status/refit guards updated separately with exact prior CLI bytes
+archived; status correctly returns2 for the blocked full release, while exposing
+three fitted predictive cities and six completed transfers.
+
+Actual final tests:229 discovered,185 PASS,44 historical opt-in integration
+skips, zero failures (23.353s); all four owned disposable PostGIS tests pass.
+Final active-only checks32 discovered,28 PASS,4 PostGIS skips. Compileall and
+whitespace checks PASS. Publication figures inspected; source metadata, native
+density/group tables, sample flow, full coefficients/diagnostics, paired metrics,
+SHAP summaries, gains/asymmetry and code-generated findings are linked in the
+publication handover. Raw data, models, coordinates, private memberships and
+individual predictions remain ignored, outside the explicit public-stage list.
+
+Overall scientific status:PARTIAL/BLOCKED, solely the unchanged Stockholm
+association union-missingness guard and dependent inference. All independent
+work is complete. No imputed inferential substitute or silent gate relaxation.
+Prior checkpoint commits are generated in `checkpoint_history.json`; final
+checkpoint SHA/push equality is reported externally after actual completion,
+not written into its own commit. Public staging, final commit/push and remote
+equality verification follow review; main/v3/detached worktree remain preserved.

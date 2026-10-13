@@ -1,0 +1,14 @@
+{
+  "copenhagen": {
+    "run_id": "copenhagen_reporting_20261013t061501505871z",
+    "summary_sha256": "a64b68f12bab03156493b31f4136decc5036124196cc46847c2baad336d97748"
+  },
+  "oslo": {
+    "run_id": "oslo_reporting_20261013t061501539742z",
+    "summary_sha256": "578906c216d993438a19034d8aa9d862e63c16b22e42d0e996f548ad3e4ad68a"
+  },
+  "stockholm": {
+    "run_id": "stockholm_reporting_20261013t061501550644z",
+    "summary_sha256": "5e52826d1cb75088057277d734cf99733e94b7924409accb4ec59836dbf5bc41"
+  }
+}

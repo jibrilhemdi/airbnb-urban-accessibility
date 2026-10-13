@@ -1,0 +1,201 @@
+city,vif,term,model
+copenhagen,3.2084064995430452,accommodates,M0
+copenhagen,3.4097455577628693,bedrooms,M0
+copenhagen,1.5078188016066396,bathrooms_effective,M0
+copenhagen,1.054265332179494,log1p_minimum_nights,M0
+copenhagen,1.060534741473055,superhost,M0
+copenhagen,1.1264419355646544,log1p_host_listings_count,M0
+copenhagen,1.0411829275387379,amenity_wifi,M0
+copenhagen,1.1862596499245597,amenity_dishwasher,M0
+copenhagen,1.1341730125237228,amenity_washer,M0
+copenhagen,1.1580546003454923,amenity_dryer,M0
+copenhagen,1.0607187869517392,amenity_workspace,M0
+copenhagen,1.4479226772485458,amenity_free_parking,M0
+copenhagen,1.155069390359274,amenity_private_balcony,M0
+copenhagen,1.0956435248473633,amenity_self_checkin,M0
+copenhagen,1.0993646549410254,log_population_density,M0
+copenhagen,1.3430738481611446,distance_centre_euclidean_km,M0
+copenhagen,1.8525921764235045,property_type_Entire home,M0
+copenhagen,1.0190045101286427,property_type_Entire loft,M0
+copenhagen,1.37686128270801,property_type_Entire rental unit,M0
+copenhagen,1.144271310154347,property_type_Entire townhouse,M0
+copenhagen,1.1932899071781347,property_type_Entire villa,M0
+copenhagen,3.2093747728634683,accommodates,ME
+copenhagen,3.4128918998760973,bedrooms,ME
+copenhagen,1.5084495354606755,bathrooms_effective,ME
+copenhagen,1.0554439128283255,log1p_minimum_nights,ME
+copenhagen,1.0621623173906996,superhost,ME
+copenhagen,1.1284125375903191,log1p_host_listings_count,ME
+copenhagen,1.0415189603066226,amenity_wifi,ME
+copenhagen,1.1867544245085644,amenity_dishwasher,ME
+copenhagen,1.1354639372572064,amenity_washer,ME
+copenhagen,1.1604918141310019,amenity_dryer,ME
+copenhagen,1.0610234046910443,amenity_workspace,ME
+copenhagen,1.5265650207201247,amenity_free_parking,ME
+copenhagen,1.1619888981996698,amenity_private_balcony,ME
+copenhagen,1.096924609692997,amenity_self_checkin,ME
+copenhagen,1.366807037943585,log_population_density,ME
+copenhagen,3.6992216300803222,distance_centre_euclidean_km,ME
+copenhagen,1.1980559277208924,nearest_station_euclidean_km,ME
+copenhagen,1.0833379369751903,nearest_bus_euclidean_km,ME
+copenhagen,6.853040138005544,log1p_food_e,ME
+copenhagen,3.6392419939149385,log1p_culture_e,ME
+copenhagen,1.8956672721414218,property_type_Entire home,ME
+copenhagen,1.01938665128487,property_type_Entire loft,ME
+copenhagen,1.3775645623535622,property_type_Entire rental unit,ME
+copenhagen,1.1535073596357521,property_type_Entire townhouse,ME
+copenhagen,1.1958584390914644,property_type_Entire villa,ME
+copenhagen,3.2101691860102624,accommodates,MW
+copenhagen,3.413927616035728,bedrooms,MW
+copenhagen,1.5088989476563799,bathrooms_effective,MW
+copenhagen,1.0552864422977788,log1p_minimum_nights,MW
+copenhagen,1.062083192032616,superhost,MW
+copenhagen,1.1290063641410302,log1p_host_listings_count,MW
+copenhagen,1.0413793063178818,amenity_wifi,MW
+copenhagen,1.1870558979711425,amenity_dishwasher,MW
+copenhagen,1.135461435769109,amenity_washer,MW
+copenhagen,1.1604776887662833,amenity_dryer,MW
+copenhagen,1.0609757917663836,amenity_workspace,MW
+copenhagen,1.5303660274235507,amenity_free_parking,MW
+copenhagen,1.1619292528786287,amenity_private_balcony,MW
+copenhagen,1.0971678310274424,amenity_self_checkin,MW
+copenhagen,1.3106877132326755,log_population_density,MW
+copenhagen,2.7874636384098834,distance_centre_euclidean_km,MW
+copenhagen,1.2055626537298714,nearest_station_walking_minutes,MW
+copenhagen,1.0910973895294822,nearest_bus_walking_minutes,MW
+copenhagen,5.205632166426349,log1p_food_w,MW
+copenhagen,2.9528773452397172,log1p_culture_w,MW
+copenhagen,1.8869792139127008,property_type_Entire home,MW
+copenhagen,1.0194392947114572,property_type_Entire loft,MW
+copenhagen,1.3777485292986447,property_type_Entire rental unit,MW
+copenhagen,1.1542641164472385,property_type_Entire townhouse,MW
+copenhagen,1.1948060679090329,property_type_Entire villa,MW
+copenhagen,3.2143042104358024,accommodates,MEW
+copenhagen,3.4162589470148026,bedrooms,MEW
+copenhagen,1.5098268596298352,bathrooms_effective,MEW
+copenhagen,1.0555267605201253,log1p_minimum_nights,MEW
+copenhagen,1.062423974607254,superhost,MEW
+copenhagen,1.1294189605587897,log1p_host_listings_count,MEW
+copenhagen,1.0421060321396147,amenity_wifi,MEW
+copenhagen,1.1877968850947431,amenity_dishwasher,MEW
+copenhagen,1.136234199486114,amenity_washer,MEW
+copenhagen,1.1615143486147401,amenity_dryer,MEW
+copenhagen,1.0611265177891478,amenity_workspace,MEW
+copenhagen,1.5389802285840322,amenity_free_parking,MEW
+copenhagen,1.162897446490119,amenity_private_balcony,MEW
+copenhagen,1.0981017142462197,amenity_self_checkin,MEW
+copenhagen,1.405197170726142,log_population_density,MEW
+copenhagen,4.184301951869166,distance_centre_euclidean_km,MEW
+copenhagen,4.033288102991848,nearest_station_euclidean_km,MEW
+copenhagen,4.371982281227449,nearest_bus_euclidean_km,MEW
+copenhagen,22.842186744537692,log1p_food_e,MEW
+copenhagen,10.454722371156734,log1p_culture_e,MEW
+copenhagen,4.087813231054541,nearest_station_walking_minutes,MEW
+copenhagen,4.449299133405967,nearest_bus_walking_minutes,MEW
+copenhagen,16.364349037647486,log1p_food_w,MEW
+copenhagen,9.081165308288794,log1p_culture_w,MEW
+copenhagen,1.9048265463323704,property_type_Entire home,MEW
+copenhagen,1.0198536322790195,property_type_Entire loft,MEW
+copenhagen,1.378287536634709,property_type_Entire rental unit,MEW
+copenhagen,1.1563388464691653,property_type_Entire townhouse,MEW
+copenhagen,1.1983967441294678,property_type_Entire villa,MEW
+oslo,3.0712316867906515,accommodates,M0
+oslo,3.5815646500203453,bedrooms,M0
+oslo,1.8195108553185855,bathrooms_effective,M0
+oslo,1.0667852965300229,log1p_minimum_nights,M0
+oslo,1.120097714655152,superhost,M0
+oslo,1.1134286061296024,log1p_host_listings_count,M0
+oslo,1.082980410842468,amenity_wifi,M0
+oslo,1.2732960608940997,amenity_dishwasher,M0
+oslo,1.1654645275421747,amenity_washer,M0
+oslo,1.0814618292925855,amenity_dryer,M0
+oslo,1.087764790047698,amenity_workspace,M0
+oslo,1.6218891982014632,amenity_free_parking,M0
+oslo,1.2319333095512002,amenity_private_balcony,M0
+oslo,1.1527632494192481,amenity_self_checkin,M0
+oslo,1.1724113431066163,log_population_density,M0
+oslo,1.5473453571227587,distance_centre_euclidean_km,M0
+oslo,2.0493052235913445,property_type_Entire home,M0
+oslo,1.035770699320787,property_type_Entire loft,M0
+oslo,1.4594920967502496,property_type_Entire rental unit,M0
+oslo,1.0930424303895363,property_type_Entire townhouse,M0
+oslo,1.1126269715098545,property_type_Entire villa,M0
+oslo,3.0912212429477663,accommodates,ME
+oslo,3.6063714994121505,bedrooms,ME
+oslo,1.8265849937397807,bathrooms_effective,ME
+oslo,1.0686162939781942,log1p_minimum_nights,ME
+oslo,1.122867774862158,superhost,ME
+oslo,1.123266940257891,log1p_host_listings_count,ME
+oslo,1.0830035957064368,amenity_wifi,ME
+oslo,1.2741098426934314,amenity_dishwasher,ME
+oslo,1.1659897254167726,amenity_washer,ME
+oslo,1.0826466983382692,amenity_dryer,ME
+oslo,1.0885259671370875,amenity_workspace,ME
+oslo,1.6985835035224413,amenity_free_parking,ME
+oslo,1.2337315411893952,amenity_private_balcony,ME
+oslo,1.1548399554309834,amenity_self_checkin,ME
+oslo,1.29359458313593,log_population_density,ME
+oslo,4.266898261144411,distance_centre_euclidean_km,ME
+oslo,1.147559141088321,nearest_station_euclidean_km,ME
+oslo,1.1268475172190113,nearest_bus_euclidean_km,ME
+oslo,7.313554507051813,log1p_food_e,ME
+oslo,4.120446260143627,log1p_culture_e,ME
+oslo,2.065217649768253,property_type_Entire home,ME
+oslo,1.0365252918847316,property_type_Entire loft,ME
+oslo,1.4604831213482885,property_type_Entire rental unit,ME
+oslo,1.0937993333821487,property_type_Entire townhouse,ME
+oslo,1.1146709287069148,property_type_Entire villa,ME
+oslo,3.084492129266304,accommodates,MW
+oslo,3.6026251529154227,bedrooms,MW
+oslo,1.824286567025286,bathrooms_effective,MW
+oslo,1.0688067988699153,log1p_minimum_nights,MW
+oslo,1.121424072934653,superhost,MW
+oslo,1.1196803689391952,log1p_host_listings_count,MW
+oslo,1.0830198946292058,amenity_wifi,MW
+oslo,1.274548078894469,amenity_dishwasher,MW
+oslo,1.166072424061631,amenity_washer,MW
+oslo,1.082610153257814,amenity_dryer,MW
+oslo,1.0885122632551838,amenity_workspace,MW
+oslo,1.686649493909468,amenity_free_parking,MW
+oslo,1.2336143199993925,amenity_private_balcony,MW
+oslo,1.1548503863541375,amenity_self_checkin,MW
+oslo,1.2603885232009515,log_population_density,MW
+oslo,3.5283000745914332,distance_centre_euclidean_km,MW
+oslo,1.121656033755745,nearest_station_walking_minutes,MW
+oslo,1.21215917427558,nearest_bus_walking_minutes,MW
+oslo,5.930819330276647,log1p_food_w,MW
+oslo,3.2793371381340357,log1p_culture_w,MW
+oslo,2.0739904151724686,property_type_Entire home,MW
+oslo,1.036432820306254,property_type_Entire loft,MW
+oslo,1.4601567452385864,property_type_Entire rental unit,MW
+oslo,1.0949567759839085,property_type_Entire townhouse,MW
+oslo,1.114848732392729,property_type_Entire villa,MW
+oslo,3.092097556083689,accommodates,MEW
+oslo,3.608418088189411,bedrooms,MEW
+oslo,1.8292059516999655,bathrooms_effective,MEW
+oslo,1.0693002752063705,log1p_minimum_nights,MEW
+oslo,1.1232450649994685,superhost,MEW
+oslo,1.1235183082784836,log1p_host_listings_count,MEW
+oslo,1.0836332691847086,amenity_wifi,MEW
+oslo,1.2751625974157246,amenity_dishwasher,MEW
+oslo,1.1662273382653834,amenity_washer,MEW
+oslo,1.0833455047037575,amenity_dryer,MEW
+oslo,1.089060194760414,amenity_workspace,MEW
+oslo,1.7021725406830583,amenity_free_parking,MEW
+oslo,1.2344875958903405,amenity_private_balcony,MEW
+oslo,1.1552281860214793,amenity_self_checkin,MEW
+oslo,1.3118256739927603,log_population_density,MEW
+oslo,4.350217154383823,distance_centre_euclidean_km,MEW
+oslo,16.29350661023879,nearest_station_euclidean_km,MEW
+oslo,4.949274034082675,nearest_bus_euclidean_km,MEW
+oslo,23.34425087577503,log1p_food_e,MEW
+oslo,9.434775645039911,log1p_culture_e,MEW
+oslo,16.04339944214464,nearest_station_walking_minutes,MEW
+oslo,5.381584221487862,nearest_bus_walking_minutes,MEW
+oslo,18.836859330970057,log1p_food_w,MEW
+oslo,7.618748108304881,log1p_culture_w,MEW
+oslo,2.0771181455405685,property_type_Entire home,MEW
+oslo,1.0368670469821222,property_type_Entire loft,MEW
+oslo,1.4609659865646145,property_type_Entire rental unit,MEW
+oslo,1.0958074775723903,property_type_Entire townhouse,MEW
+oslo,1.1163145698492727,property_type_Entire villa,MEW

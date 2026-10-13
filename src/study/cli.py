@@ -5,6 +5,21 @@ import argparse
 import json
 
 from src.study.specification import load_design
+from src.ingestion.common import PROJECT_ROOT
+
+
+def completion_status(root=PROJECT_ROOT):
+    path=root/'docs/analysis/release_audit.json'
+    if not path.exists():
+        return {'status':'IMPLEMENTATION_IN_PROGRESS','final_samples_frozen':None,'models_fitted':None,
+                'completed_transfer_directions':None,'full_rerun_complete':False}
+    audit=json.loads(path.read_text())
+    return {'status':'COMPLETE' if audit['full_rerun_complete'] else 'PARTIAL_BLOCKED_INFERENCE',
+            'final_samples_frozen':audit['primary_prediction_cities_complete']==3,
+            'models_fitted':audit['primary_prediction_cities_complete']>0,
+            'completed_transfer_directions':6 if audit['six_transfer_directions_complete'] else None,
+            'full_rerun_complete':audit['full_rerun_complete'],'blocker':audit.get('blocker'),
+            'release_audit':'docs/analysis/release_audit.json'}
 
 
 def main(argv=None):
@@ -22,9 +37,16 @@ def main(argv=None):
         freeze_prefit();return 0
     if args.command=='within-city':
         if args.city is None:parser.error('--city is required')
+        valid={'neighbourhood','random'}|{f'blocks_{size}m_origin_{origin}' for size in [1000,1500,2000] for origin in ['0_0','0p5_0p5']}
+        if args.scheme and any(s not in valid for s in args.scheme):parser.error('Unknown frozen validation scheme')
+        label='all' if args.scheme is None else '_'.join(args.scheme)
+        if (PROJECT_ROOT/'runs'/args.city/('within_city_'+label+'_selection.json')).exists():
+            parser.error('Completed selector exists; audit it or provision explicit new run/output identities')
         from src.study.evaluation import run_within_city
         run_within_city(args.city,args.scheme);return 0
     if args.command=='transfer':
+        if (PROJECT_ROOT/'runs/transfer/selection.json').exists():
+            parser.error('Completed transfer selector exists; audit it or provision explicit new run/output identities')
         from src.study.evaluation import run_transfer
         run_transfer();return 0
     if args.command=='accessibility-freeze':
@@ -55,11 +77,11 @@ def main(argv=None):
     if args.command == 'design':
         print(json.dumps(design, indent=2, ensure_ascii=False))
         return 0
-    print(json.dumps({'design_id': design['design_id'], 'status': 'IMPLEMENTATION_IN_PROGRESS',
+    status=completion_status(PROJECT_ROOT)
+    print(json.dumps({'design_id': design['design_id'], **status,
                      'operational_counts': {c: cities[c]['operational_count'] for c in cities},
-                     'final_samples_frozen': False, 'models_fitted': False,
-                     'completed_transfer_directions': 0}, indent=2))
-    return 2
+                     }, indent=2))
+    return 0 if status['full_rerun_complete'] else 2
 
 
 if __name__ == '__main__':

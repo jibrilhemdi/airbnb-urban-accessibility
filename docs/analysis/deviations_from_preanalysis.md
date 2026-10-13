@@ -17,6 +17,9 @@ bytes and previous entry instructions are preserved in `history/`.
 | Stockholm association missingness | Pre-fit union missingness exceeds frozen5% guard | Association coefficients and dependent inference BLOCKED; predictive OLS/XGBoost and transfers remain eligible |
 | Price-tail implementation | Retains inherited1st/99th training quantiles; nests restriction and preprocessing inside every inner/outer fit | Full original held-out sample evaluated; no target-outcome restriction or imputation |
 | Public contribution figure label | Visual review after models frozen | Shorter axis label in a new publication artifact; original immutable output preserved; no numerical change |
+| Shared colour-bar overlap | Final figure inspection after all fits and audits | New constrained-layout publication figures and report; original artifacts/statistics preserved |
+| Association status annotation | Final report initially exposes historical sample readiness | Separate current execution table from verified SQL; no change to pre-fit evidence |
+| CLI status/refit guard | After all empirical fits and audits | Expose actual partial release and refuse accidental refitting; exact prior CLI bytes archived; analytical modules unchanged |
 | Joblib shutdown warning | After completed primary/transfer jobs exited0 | Resource-tracker ChildProcessError documented; cardinality/model/prediction audits independently pass |
 
 No estimator, candidate budget, feature/category, neighbourhood grouping, outer
