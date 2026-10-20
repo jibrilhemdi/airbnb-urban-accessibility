@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-20T11:16:09.213238+00:00",
+  "purpose": "Preserve the prior execution log before the LaTeX manuscript checkpoint; supplied template files remain unchanged in thesis_report/supplements.",
+  "files": [
+    {
+      "original_path": "docs/analysis/execution_log.md",
+      "archive_path": "archive/before_thesis_latex_20261020/docs/analysis/execution_log.md",
+      "sha256": "b314a55a4476d76fa04aeec33e3c8c67c7ee3363e64a33952dc0054214e5ebf7",
+      "bytes": 66063
+    }
+  ]
+}

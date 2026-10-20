@@ -1,0 +1,7 @@
+# Local rendered reading copies and LaTeX/Biber build products.
+/build/
+/main.pdf
+*.bcf
+*.bbl
+*.blg
+*.run.xml

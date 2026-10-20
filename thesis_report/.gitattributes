@@ -1,0 +1,2 @@
+# Preserve supplied PDF logo bytes and keep them out of text diffs/checks.
+supplements/logos/*.pdf binary

@@ -1009,3 +1009,62 @@ remain untouched and excluded from staging. No package rebuild or recertificatio
 Only the intended documentation relocation, archived safe documents and interface
 paths are staged. Normal incremental commit and explicit HEAD:refs/heads/v4 push
 are verified externally; the log does not record its own commit SHA.
+
+## 20 October 2026 — Editable LaTeX manuscript and writing workflow
+
+The researcher added thesis_report/ and requested the supplied example's format,
+a clearer explanation/chapter flow and an easy main.tex for iterative writing
+with ChatGPT, DeepSeek and Codex before manually moving to Overleaf. Read the
+current contract, registry, end-to-end plan, association amendment and execution
+log, then the existing results/RQ synthesis, claims and figure/table guidance.
+This is manuscript preparation, not a literature review or scientific rerun.
+
+Added thesis_report/main.tex as the active manuscript entry point. All chapter
+prose, metadata, stable labels and section prompts are in this single file;
+formatting is isolated in preamble.tex and verified citations can be added to
+the initially empty references.bib. Uses the supplied memoir/UCPH SAMF cover,
+Libertine text, numbered body chapters, Roman front matter and appendices.
+Supplied supplements/ files, including the old article starter, remain unchanged.
+The working title and submission date are explicitly provisional. The example's
+PhD submission statement, dummy prose and decorative image are not activated.
+
+The recommended seven-chapter argument is introduction; conceptual framework
+and literature; study areas/data; methods; results in RQ1/RQ2/RQ3/RQ4 order;
+discussion; conclusion. Three appendices hold provenance/definitions, extended
+diagnostics and robustness/decision chronology. Draft prompts refer to current
+generated aggregate evidence and preserve common samples/folds, the four model
+definitions, training-only preprocessing, source-only relative-price transfer,
+complete-case association and the post-observation uniform 10% amendment.
+No numerical results or invented citations were added to the manuscript.
+
+Added thesis_report/README.md with the chapter rationale, practical writing
+order, evidence links, a section-revision prompt for website/Codex exchange,
+LaTeX editing patterns and manual Overleaf instructions. Select the root
+main.tex and XeLaTeX; preserve supplements/logos when uploading the folder.
+Draft prompts can be hidden with draftnotesfalse. Build products stay ignored;
+the local reading copy is thesis_report/build/main.pdf. Preserved the prior log
+with exact checksum in archive/before_thesis_latex_20261020/manifest.json.
+Marked the supplied PDF logos as binary in local Git attributes to preserve
+their bytes and prevent text normalization or whitespace checks on PDF streams.
+
+Validation: TeX Live 2026 latexmk/XeLaTeX/Biber build PASS (18-page A4 draft).
+Visually inspected cover, contents and introduction. A separate temporary copy
+with prompts hidden compiles without any repository scientific-file dependency;
+its extracted PDF has no draft-task text. Both settled builds have no undefined
+references, LaTeX errors or overfull/underfull boxes. Remaining known warnings
+are the unchanged KU package's subdirectory name/path and the intentionally
+empty bibliography; Biber also notes the absence of citations. Forty unique
+labels, nine internal references and twelve README file links checked. All 76
+checksums of supplied template/public scientific outputs remain identical
+(14 supplied files and 62 output files). Scoped whitespace checks PASS.
+
+No database, source data, migration, fitted artifact, scientific output,
+dependency or analysis configuration changed. No package rebuild or study
+recertification. Pre-existing deletions of outputs/README.md and
+outputs/thesis_results.zip remain untouched and excluded from staging.
+Starting local v4 and recorded origin/v4 agree at the previous document
+checkpoint. Only intended safe manuscript/template files, this log and its
+preserved public predecessor are included in the checkpoint. Normal incremental
+commit, explicit HEAD:refs/heads/v4 push and remote/local SHA comparison occur
+after these checks; publication failure is LOCAL_ONLY. No own-commit SHA is
+written into this log.
