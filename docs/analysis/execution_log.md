@@ -1068,3 +1068,67 @@ preserved public predecessor are included in the checkpoint. Normal incremental
 commit, explicit HEAD:refs/heads/v4 push and remote/local SHA comparison occur
 after these checks; publication failure is LOCAL_ONLY. No own-commit SHA is
 written into this log.
+
+## 23 October 2026 — Results, discussion and conclusion manuscript draft
+
+The researcher requested Chapters 5, 6 and 7 in thesis_report/main.tex, based on
+the completed evidence and written for straightforward reviewer reading. Read
+the contract, executable design, current plan, association amendment, execution
+log, results/RQ synthesis, claims, placement guide and underlying final aggregate
+tables. All 62 public artifact checksums match the existing reporting manifest.
+No source acquisition, literature-search claims, scientific rerun or model fit.
+
+Replaced the three chapters' prompts with approximately 2,700 words. Results
+follow RQ1--RQ4, report both OLS and XGBoost, distinguish baseline contribution,
+walking replacement and add-on, and cover complete-case associations,
+neighbourhood/block variation, registered sensitivities and every transfer
+direction. Discussion separates observed evidence from possible explanations,
+explains the scope of geographic evaluation and relative-price transfer, and
+records outcome/selection, spatial-source, density-vintage, inference and
+decision-timing limitations. The conclusion answers each RQ without new
+evidence. All Chapters 1--4 and appendix text remain byte-identical.
+
+Added six compact reproducible LaTeX tables: accessibility medians, primary
+performance, XGBoost baseline contrasts/stability, all eight joint-model
+accessibility coefficients with wild-cluster p-values for each city, geographic
+validation/local sign counts, and all six directions/both estimators/four models
+of transfer performance. scripts/build_thesis_chapter_tables.py verifies the
+existing reporting-catalog checksum and each of twelve consulted aggregate
+exports, retains scientific run/source hashes in tables/manifest.json, and
+renders the presentation without analytical writes. It rejects missing,
+nonfinite, nonunique or altered inputs instead of filling them. --check compares
+the accepted tables/provenance with deterministic regeneration. The six table
+files compile from the manuscript folder without any external research paths.
+
+Visually checked results tables and chapter pages. Added the standard TeX float
+package solely to hold tables at their textual insertion points, avoiding a
+later RQ's table appearing above the preceding RQ's explanation. Updated the
+writing guide to distinguish completed chapter drafts from remaining prompts
+and explain table generation and Overleaf upload. No new bibliography entries
+or external factual/citation claims were invented. Preserved the prior main,
+guide, preamble, log and local reading PDF with exact hashes in
+archive/before_thesis_chapters_20261023/manifest.json before replacement.
+
+Validation: audited-environment Python compilation and table --check PASS.
+Independently checked primary rankings and prose percentages, replacement/add-on
+range statements, reported coefficient/HC3/wild-cluster values, transfer sign
+counts and ranges, and sensitivity examples against final CSV exports.
+TeX Live 2026 latexmk/XeLaTeX/Biber build PASS (24-page A4 draft); no unresolved
+references, LaTeX errors or overfull/underfull boxes. Separate temporary upload
+copy with prompts hidden also compiles, contains all six result tables and has
+no draft-task text. Forty-six unique labels and fifteen resolved references
+checked. The known unchanged KU package path/name and empty-bibliography
+warnings remain; Biber notes the absence of citations. All 111 pre-change
+source/output/study-config/template hashes remain identical. Whitespace PASS.
+
+PostgreSQL, raw sources, SQL identities, analytical definitions, fitted-code
+dependencies, predictions, models and the existing scientific exports are
+unchanged. The uniform post-observation 10% association gate remains disclosed;
+complete cases never fill bedrooms/outcomes. No release/package recertification.
+Pre-existing outputs/README.md and outputs/thesis_results.zip deletions remain
+untouched and excluded. Starting local/recorded-origin v4 agree at f476754;
+main/v3 heads are recorded separately and preserved. Only intended safe
+manuscript/table-generator files, this log and preserved public predecessors
+are included. Normal incremental commit, explicit HEAD:refs/heads/v4 push and
+remote/local SHA equality are checked after local validation. A push failure
+is LOCAL_ONLY; this entry contains no own-commit SHA.

@@ -1,0 +1,771 @@
+{
+  "generator": "scripts/build_thesis_chapter_tables.py",
+  "generator_sha256": "3cf0e0df4a5e383822ee6784420e464e5e850e498fe5a8a8d3c92c65876df44a",
+  "source_catalog": "reports/thesis_artifact_manifest.json",
+  "source_catalog_sha256": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52",
+  "inputs": {
+    "outputs/tables/city_sample_summary.csv": {
+      "sha256": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_sample_20261013t014237616829z",
+          "city": "copenhagen",
+          "family": "sample",
+          "summary_sha256": "f9e7dc8b643e25942a207ebfde11caa4bdc3a870570658d18398ea69aed96f3e",
+          "selector": "config/study/sample_selection.json"
+        },
+        {
+          "run_id": "oslo_sample_20261013t014519442961z",
+          "city": "oslo",
+          "family": "sample",
+          "summary_sha256": "3c55e819cf21bd1200edd815286458af7505e312854b5cf3f6b939a859264c42",
+          "selector": "config/study/sample_selection.json"
+        },
+        {
+          "run_id": "stockholm_sample_20261013t014730598505z",
+          "city": "stockholm",
+          "family": "sample",
+          "summary_sha256": "fb85fe4652493b9e2aec412193a2b67ca961e1d63f7ff61e4c578370e4f281c7",
+          "selector": "config/study/sample_selection.json"
+        },
+        {
+          "run_id": "copenhagen_reference_20261013t010826397169z",
+          "city": "copenhagen",
+          "family": "reference",
+          "summary_sha256": "431dbb8989d4f6a19e5542acefaf7677ae2e86917f211f7ed1d4ebfea5d5033c",
+          "selector": "config/study/reference_selection.json"
+        },
+        {
+          "run_id": "oslo_reference_20261013t010833786311z",
+          "city": "oslo",
+          "family": "reference",
+          "summary_sha256": "5e5b533b8542b86b6aab504711561b75ac9e698529820f31406d0a123b705410",
+          "selector": "config/study/reference_selection.json"
+        },
+        {
+          "run_id": "stockholm_reference_20261013t010837541611z",
+          "city": "stockholm",
+          "family": "reference",
+          "summary_sha256": "e904be076da3820ba40d49b71e176ca09c265a903c968021153222a2001ff4fa",
+          "selector": "config/study/reference_selection.json"
+        },
+        {
+          "run_id": "copenhagen_reporting_20261013t093516511037z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "a912bb844d5b01196ccc666d93c595fa9736cfb0588dfc41b077dd4f19bfdc6c",
+          "selector": "config/study/association_selection.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t093536688627z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "0663f8bad7e916c8137467b3891598809324b0a6c16d18498f07de7896c0bccc",
+          "selector": "config/study/association_selection.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t093547500148z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "a9b44e92134d579e1b80bf9ea1faf87742eaaaadba9069ced14d3745b15cc091",
+          "selector": "config/study/association_selection.json"
+        }
+      ]
+    },
+    "outputs/tables/accessibility_descriptive_statistics.csv": {
+      "sha256": "58f2871fa071fccc8726a67534eea960ff1a4a6c18e97417f524d46949f6857e",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t034220134905z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "fd61cfcb0c1fbc5b75a0abe207fc038cf7add26e4648c27c3fb373613a1c0951",
+          "selector": "config/study/interpretation_selection.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t034222043379z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "7a6ac45b6242d0d6a65fa34658173d0b9d516abb087792a8ed7b181041ec78a7",
+          "selector": "config/study/interpretation_selection.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t034223811788z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "319553ddaec759781997a5e9db339a4215a230e7fbbe09ae338c261f9c11daf1",
+          "selector": "config/study/interpretation_selection.json"
+        }
+      ]
+    },
+    "outputs/tables/primary_predictive_performance.csv": {
+      "sha256": "668068de61b0feba1134d0e5acfc142f837ea5f4f9f481139672e6b0e2144605",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t024314815498z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "0ee6bee4f2f135a8b0c0e829e57d84c5f4a3f887e388a55384409277d053998f",
+          "selector": "config/study/results_neighbourhood.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t024314839443z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "2649f5806147dd6f4ba476d4c4bac3649088d8302b920b0ed2edbbe1bdda0d6d",
+          "selector": "config/study/results_neighbourhood.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t024314844848z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "91526c65df8c5c18d998d67fd8f27b1b81979862f2b66ca638f009ec53bb4ad7",
+          "selector": "config/study/results_neighbourhood.json"
+        }
+      ]
+    },
+    "outputs/tables/paired_model_contrasts.csv": {
+      "sha256": "3af6d92a0a8423118882928605234d8a3abd4c194cfeeb52db819455f2eb3599",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t024314815498z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "0ee6bee4f2f135a8b0c0e829e57d84c5f4a3f887e388a55384409277d053998f",
+          "selector": "config/study/results_neighbourhood.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t024314839443z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "2649f5806147dd6f4ba476d4c4bac3649088d8302b920b0ed2edbbe1bdda0d6d",
+          "selector": "config/study/results_neighbourhood.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t024314844848z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "91526c65df8c5c18d998d67fd8f27b1b81979862f2b66ca638f009ec53bb4ad7",
+          "selector": "config/study/results_neighbourhood.json"
+        }
+      ]
+    },
+    "outputs/tables/association_results.csv": {
+      "sha256": "d2a9adb886c50103f48292218454040ad48296ccc32d853e7c5e1c427bb35b09",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t093516511037z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "a912bb844d5b01196ccc666d93c595fa9736cfb0588dfc41b077dd4f19bfdc6c",
+          "selector": "config/study/association_selection.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t093536688627z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "0663f8bad7e916c8137467b3891598809324b0a6c16d18498f07de7896c0bccc",
+          "selector": "config/study/association_selection.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t093547500148z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "a9b44e92134d579e1b80bf9ea1faf87742eaaaadba9069ced14d3745b15cc091",
+          "selector": "config/study/association_selection.json"
+        }
+      ]
+    },
+    "outputs/tables/validation_comparison.csv": {
+      "sha256": "040a1e3edb3ff1252a0059d028fbff084104a02c3a75435176d42c6b8b264435",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t024314815498z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "0ee6bee4f2f135a8b0c0e829e57d84c5f4a3f887e388a55384409277d053998f",
+          "selector": "config/study/results_neighbourhood.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t024314839443z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "2649f5806147dd6f4ba476d4c4bac3649088d8302b920b0ed2edbbe1bdda0d6d",
+          "selector": "config/study/results_neighbourhood.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t024314844848z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "91526c65df8c5c18d998d67fd8f27b1b81979862f2b66ca638f009ec53bb4ad7",
+          "selector": "config/study/results_neighbourhood.json"
+        },
+        {
+          "run_id": "copenhagen_reporting_20261013t030922616241z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "1d9fc11dce780b2036fee7841d522a168549008cf8235ec28000a85b1cdadb6d",
+          "selector": "config/study/results_random.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t030922659710z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "0c2236bbb19e56d2da0bda1a2b3aff4d7b329abc3866006823aa4aa50500cea9",
+          "selector": "config/study/results_random.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t030922669800z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "749f04a4d8ecdbbc6639d87bea071a8c27fd271929e75653020131900501b118",
+          "selector": "config/study/results_random.json"
+        },
+        {
+          "run_id": "copenhagen_reporting_20261013t050058636770z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "5f729e94d5bb0a2037e0ee3dec1435e935a011932daf6a92c8b4b72f2249f1e4",
+          "selector": "config/study/results_blocks_1000m_origin_0_0.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t050058701063z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "50bcf0389c103f46f77e4393cc8238f46c4f4931688eceb85c919dc915477b64",
+          "selector": "config/study/results_blocks_1000m_origin_0_0.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t050058714770z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "7f2df40e378f1067a5b162e52b5543d648b762b979679d57713979ecb3d6cdbd",
+          "selector": "config/study/results_blocks_1000m_origin_0_0.json"
+        },
+        {
+          "run_id": "copenhagen_reporting_20261013t050113103057z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "1ea409922e74a40875683abcab36b98465845bd13fcca0137d3d68ce4dc22ce2",
+          "selector": "config/study/results_blocks_1000m_origin_0p5_0p5.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t050113152093z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "ba2bdbc1f69a0f5d8e0084e82e0ff7eace4431ea5427cf6b0d83d91ef9b4febf",
+          "selector": "config/study/results_blocks_1000m_origin_0p5_0p5.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t050113162953z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "89b170111168e03295d2a622b800ec40f59d5f920b5193fa47684c213a22dc99",
+          "selector": "config/study/results_blocks_1000m_origin_0p5_0p5.json"
+        },
+        {
+          "run_id": "copenhagen_reporting_20261013t030931420186z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "f26f782ab79b3d13576bd93c134ae4d34ef1f679b2c0a92bc5e1071373503670",
+          "selector": "config/study/results_blocks_1500m_origin_0_0.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t030931469058z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "94201523d41b1c6fd46867eb0b6dfc28b6e365164f0bdaae169df3b0644f2e76",
+          "selector": "config/study/results_blocks_1500m_origin_0_0.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t030931480824z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "0fc1bb36e99256ee413fbf46305ede81728b549ca6788a56ce2daf0c9a2500e9",
+          "selector": "config/study/results_blocks_1500m_origin_0_0.json"
+        },
+        {
+          "run_id": "copenhagen_reporting_20261013t030938956160z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "72249413305e66b9f1df2e3df741ce274df5d56d4ec7a2c8218359d713001f7c",
+          "selector": "config/study/results_blocks_1500m_origin_0p5_0p5.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t030939011509z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "e3e61f8a2ddd5965308fd00b17afc1f0b8011461a8d8f92106d1fc00949bdfb2",
+          "selector": "config/study/results_blocks_1500m_origin_0p5_0p5.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t030939027270z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "1576ab9cd024ef4868b36e3bf9f6895e9bcf09f90760984e68f57d6ac3dd12a0",
+          "selector": "config/study/results_blocks_1500m_origin_0p5_0p5.json"
+        },
+        {
+          "run_id": "copenhagen_reporting_20261013t050129438010z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "56cc14e907ebd286a4ab628d0f83c52ba1fb34e6d0873cc8fa67be47ed398c9a",
+          "selector": "config/study/results_blocks_2000m_origin_0_0.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t050129500727z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "d702184c923ac50da90f96bb89fb4bc54a7d94a69b9a187b3df9b9c20a9f8556",
+          "selector": "config/study/results_blocks_2000m_origin_0_0.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t050129520321z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "bfdf720d76d45e2d9ad2514f9807579a52e273ab28bfea5c33e2762c374e8465",
+          "selector": "config/study/results_blocks_2000m_origin_0_0.json"
+        },
+        {
+          "run_id": "copenhagen_reporting_20261013t050143200636z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "0bdcd4d5501ae719dd10d17a47880d635bf0b2e49070b6a8ac8ee704d1944824",
+          "selector": "config/study/results_blocks_2000m_origin_0p5_0p5.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t050143254016z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "3eb21829eb6a800cc0d24439ea64b3f2019610b1924a8d9eb2bc2845d54e95d4",
+          "selector": "config/study/results_blocks_2000m_origin_0p5_0p5.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t050143268754z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "4d7dd85374ca4459ba6cee2b9f6031c4a63a9cfd8b327a0361112eb4dd11ee0b",
+          "selector": "config/study/results_blocks_2000m_origin_0p5_0p5.json"
+        }
+      ]
+    },
+    "outputs/tables/transfer_performance.csv": {
+      "sha256": "810c468e8370f3963634c9dc88dbe14d2e2c694d5ca26298447db7c94945018d",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t025314986565z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "29eb388d7233460effc0bc934d770ea31a2196f85a8bc685e5873b91cbef5c4d",
+          "selector": "config/study/results_transfer.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t025315035124z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "d7339538441056ab8e715195f23542d2263cc712004037a4d3cd02fc112269c0",
+          "selector": "config/study/results_transfer.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t025315046653z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "4fdadafb4ef007b9e06031324c1c7a09f62fbf191416d5be946ab768db146616",
+          "selector": "config/study/results_transfer.json"
+        }
+      ]
+    },
+    "outputs/tables/transfer_contrasts.csv": {
+      "sha256": "72edab7fd9fa412bfb927de23e6a9e39388ceeb15b1669f2a66286c6e367d12d",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t025314986565z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "29eb388d7233460effc0bc934d770ea31a2196f85a8bc685e5873b91cbef5c4d",
+          "selector": "config/study/results_transfer.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t025315035124z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "d7339538441056ab8e715195f23542d2263cc712004037a4d3cd02fc112269c0",
+          "selector": "config/study/results_transfer.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t025315046653z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "4fdadafb4ef007b9e06031324c1c7a09f62fbf191416d5be946ab768db146616",
+          "selector": "config/study/results_transfer.json"
+        }
+      ]
+    },
+    "outputs/tables/robustness_registry.csv": {
+      "sha256": "5ab268dd9a3d151e64fecf4e82ce86efdb68d713604247513af928346aa75162",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t093900370700z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "101a0e107e0b009ff14a5c5453aded7f835c95f686e145e56d1ff0cab1cd11cb",
+          "selector": "config/study/robustness_results_selection.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t093900400622z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "4cbf377b4aa87ad9c95be1cc1f8443dcb3ad692980c7f670d0adb37955305f9d",
+          "selector": "config/study/robustness_results_selection.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t093900409289z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "019ea2860bef5a5dc9541aacfe247910a8f7640156326cd10a3976bc9c7109c2",
+          "selector": "config/study/robustness_results_selection.json"
+        }
+      ]
+    },
+    "outputs/metrics/neighbourhood_performance.csv": {
+      "sha256": "45a736767149253db89a195d3ab5a9c73a9fb7bff33a9afd1432e3ffd61eb8ca",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_within_city_20261013t022813409353z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "dfd6fd3f76230fbe831edc6ef7431ea17ce344324e483f3274b2af5d7258072f",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t022843182021z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "2e044add126762979a343dd3f238f7227230a0cb7d74aa9e6c3d58d3acef214b",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t022912744915z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "0697c85ce4298167e97d9fdd5be9aba7306d6bf269df9558d80fa18c22d8d6f2",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t022941712538z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "c5ba7eab18291798027b8d9c6296632ac5f070f394383e9dd66400c162a0a095",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t023024616084z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "39e784272439b2a4412ffb6fed5d33d7c5cb19e2021eb200e06066ca0b960c95",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t023130321409z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "746a22b936fb1a98c6e24199a8110854880bb79994863f94643236a8dc6e33c4",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t023237418122z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "63ba504898ba2bcaf450439ef6605cdac1130a54e6833387a0fa5614a9754b0d",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t023411605576z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "630afec16313287245b28b91e3c583f7d218aec18de804ffc1bb68a18e49faa8",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t023505338112z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "b74e2e7e08da6bf01c171cc3541b27ff91569a2783d9ffd4b966fb53bc42d8bf",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t023555910017z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "36a038ec4a7c90104acec5fbf973be01222bf205f978c2bb690b9dbd9d32b3be",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "copenhagen_within_city_20261013t023658320099z",
+          "city": "copenhagen",
+          "family": "within_city",
+          "summary_sha256": "269c002d54376e86aea687a45d506636de9ef05a05f604a84d0e2f1b7755dbd1",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023003888613z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "073e0987dd11e0584bb3c9fa3d6148c4317e825328370502c7ae8d4919693f8c",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023049624009z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "e53da31436c2ef88de1f4bdc2850fcb43e8ff99b0f6edf1670f782eb74077956",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023130210172z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "e8c59817c0e583aea0f1c9f37ab567e778d4ccedef82b3020d244cad13efda67",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023224114985z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "82357abf2f37b7f06f41d0cbe71b642643c03f9253b9a6ca2a02c05c7a29aed9",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023329659493z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "2a7f403c7079fbf0be5e052bcea38ea07df8e1794d6becbd0df6464a2af430c5",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023411607086z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "c5df6642db0f502f75f5f411fbd666755795a481124ff1e917d0afc5c3fb41d4",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023507496934z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "23d464c33f1e0230e990e09e00dfc7407400338dc14668ce2b3a7a563414d58d",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023546617522z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "e5b2e19376e40e32492c53dec410383307601b9b922afb72071c4145062deba6",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023626829152z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "159358dcda189abd6592ecb83c7d5b6005a6d937cd96ae3ce679f1ef5f071ae0",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023702372788z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "33ce3e7b762bab31ea569bbe8cdbbfd62e4b6c00a6482219194d50b390c31c94",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023746058701z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "7a3dc796a3c43f3bf9faa4f8b1609e5db534e78eabfb1b2bf602beaccf75c10e",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023812053331z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "e965a30f66f11d745a71cab3a1ac7b40dc0138bfdf0ca5d6547d4a5ce47af837",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023839579262z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "242c70c5ab5afd3b3a674d0cd88192fe05657bedd41b8c4040fab41fc1621b37",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023904687359z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "41e8c82b4082beb1f80f6c2ce2f42eeab8d3ea811991f89b41c5009b762f8db1",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023931434236z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "fe87640d33ccae3804df76d90ea81e897c69a8d12ff7acdd5724dd036a61230b",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t023958235838z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "a34bf3dec320e34bc6587fdb75a53bbd402898c596f3a164e6b0cdbf6ec8ec50",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "oslo_within_city_20261013t024024945972z",
+          "city": "oslo",
+          "family": "within_city",
+          "summary_sha256": "9daa2161c6c1941885f98ad741422a240dfd2f0d3f1cf2d8209433d1d1ca3bdb",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023006889473z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "120f5087efcdcdb88d21480e864bf0ea2293024e4a213ab81a19d13264888ebc",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023034172300z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "eebdd0af250ac5663276850a545e686888e68c5263963f278ce02846da6e99b4",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023059709267z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "00e7edc4e8a2f6640b446d0cae6e4fbc8d263c5de914624f753028ece109429e",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023122126250z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "091b047f7fe220e7ca7721de94bffe90918a7c346a83766ee13cd4d95ad5dca9",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023147480957z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "691eb0488cbd96d74ec07eb5ff75b46fae01d048bbb3307f9707cd2f8e46808e",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023211132623z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "6a4125b27151b42577cb1c0e644b3cfc35798b316e84983f8c5a8bd6a1ab77da",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023228613258z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "f840eeb77a3b8d50bc7cfb1e14dab7ecb52a5f765d45b39aed9d708e24b98dea",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023252877751z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "e3bb56db9d7f21220e1a03b2f79588e608a3852c6940bd5c2fc0c799685ccb90",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023324240678z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "12f720175fad7d1a449518f0bcdbff70c4d0517e51a04ffdf012966a97f6109c",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023351956242z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "6acd029fb95f181eec860693fb25a0605a200d269b31e5883c3228852522b957",
+          "artifact": "predictions; metrics"
+        },
+        {
+          "run_id": "stockholm_within_city_20261013t023412576356z",
+          "city": "stockholm",
+          "family": "within_city",
+          "summary_sha256": "8bc3347e1d7f1321598b5959759c8cd67ae9c336e5590480edd9a60abcc6da5b",
+          "artifact": "predictions; metrics"
+        }
+      ]
+    },
+    "outputs/metrics/robustness_contrasts.csv": {
+      "sha256": "ed86cce24b22ec30d52cf1681442da15421e2b76f41cd80e94e93ff034fefc7e",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t093900370700z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "101a0e107e0b009ff14a5c5453aded7f835c95f686e145e56d1ff0cab1cd11cb",
+          "selector": "config/study/robustness_results_selection.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t093900400622z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "4cbf377b4aa87ad9c95be1cc1f8443dcb3ad692980c7f670d0adb37955305f9d",
+          "selector": "config/study/robustness_results_selection.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t093900409289z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "019ea2860bef5a5dc9541aacfe247910a8f7640156326cd10a3976bc9c7109c2",
+          "selector": "config/study/robustness_results_selection.json"
+        }
+      ]
+    },
+    "outputs/metrics/residual_spatial_diagnostics.csv": {
+      "sha256": "45611a0d2860e298c50ac644510e8b961e8d92f52e22b510051e3e9c39f805d7",
+      "source_run_artifact": [
+        {
+          "run_id": "copenhagen_reporting_20261013t093638839508z",
+          "city": "copenhagen",
+          "family": "reporting",
+          "summary_sha256": "5af6f6bcb3d65354d81b107c6abf09b3077bc3c416bfcdb285e79e40947ebcae",
+          "selector": "config/study/spatial_diagnostic_selection.json"
+        },
+        {
+          "run_id": "oslo_reporting_20261013t093642240431z",
+          "city": "oslo",
+          "family": "reporting",
+          "summary_sha256": "41ce8d60b5ef7ba695c90445cad1377d8ac56aa690c2e95f2e64a4f8751c39e1",
+          "selector": "config/study/spatial_diagnostic_selection.json"
+        },
+        {
+          "run_id": "stockholm_reporting_20261013t093643484716z",
+          "city": "stockholm",
+          "family": "reporting",
+          "summary_sha256": "93999558db43e00480bea70cefb5c6bc3b06c1c2f13410943f2c45a7a68a6a3a",
+          "selector": "config/study/spatial_diagnostic_selection.json"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "accessibility.tex": "1a59e398f7bd403e10064adfcae6e422df3c6a3695dc798b04dbf3ebce41a43a",
+    "primary.tex": "bf9612622f010bed291a062c4bb16400a5e27844016e433bfdd3514e6a828603",
+    "gains.tex": "afec4c07d7a68b21ea858a8a3487e6caa4753c369f437ca6943f2e7c1648bdd1",
+    "associations.tex": "6cda058796d764e1a44d5c4b4e0f9cffbe80d7623e4f4abc1d22342b86cae7ab",
+    "geography.tex": "54769164693635e94391e56982d82d421dcb4a053b2fc8748933392b07496c43",
+    "transfer.tex": "07a0da234abfdfa3be266a9b23451ba19f1a65aa339202032a00e7fdc93f75bd"
+  },
+  "models_refitted": false,
+  "scientific_values_changed": false
+}

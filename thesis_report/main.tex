@@ -275,57 +275,205 @@ Describe code/SQL provenance without exposing private records.}
 \chapter{Results}
 \label{ch:results}
 
+The results distinguish differences in accessibility measurement from gains in
+price prediction. Copenhagen refers to Copenhagen--Frederiksberg throughout.
+The common predictive samples contain 12,408 listings in Copenhagen, 8,529 in
+Oslo and 2,495 in Stockholm. Within each city, every model comparison uses the
+same observations and evaluation folds. The control model is $M_0$; $M_E$ adds
+Euclidean accessibility, $M_W$ adds walking accessibility, and $M_{EW}$ adds both.
+
 \section{RQ1: Accessibility measurement differences}
 \label{sec:rq1-results}
 % Evidence: accessibility_descriptive_statistics; nearest_access_divergence.
-% Figures: nearest_access_relationship.png; opportunity_comparison.png.
-\draftnote{Start with a direct answer. Compare nearest-category access and
-opportunities with units and city differences. Insert the generated summaries,
-then close with what this establishes for the modelling comparison.}
+Walking accessibility gives longer median distances to transport and fewer
+reachable destinations than Euclidean accessibility in all three samples
+(Table~\ref{tab:accessibility}). For example, Copenhagen's median rail distance
+is 0.404 km in straight-line terms and 0.638 km by walking. Oslo has the largest
+median rail distance under both representations, while median bus distances
+are shorter than rail distances in every city.
+
+\input{tables/accessibility}
+
+The opportunity counts show the same distinction. Under the nominally matched
+833 m and 10-minute budgets, median walking food/social counts are a little
+over half their Euclidean counterparts. Culture/tourism medians are also lower
+under walking access. Thus, matching destination categories and nominal travel
+budgets does not make the two representations interchangeable.
+
+These are comparisons of category-level accessibility. The nearest destination
+can change when travel is measured on the walking network, so the distance
+differences do not measure the detour to a single fixed destination. The
+measurement differences establish the basis for RQ2: whether the additional
+network detail also improves prediction.
 
 \section{RQ2: Within-city prediction and adjusted associations}
 \label{sec:rq2-results}
 \subsection{Predictive performance and accessibility contributions}
 \label{sec:rq2-prediction}
 % Tables: primary_predictive_performance; paired_model_contrasts.
-% Figures: primary_model_performance.png; paired_accessibility_contrasts.png.
-\draftnote{Show all four models and both estimators before emphasizing a
-contrast. Separate baseline gains, replacement and add-on. The frozen
-XGBoost point gains in Copenhagen/Stockholm and adverse Oslo changes require
-city-specific qualifications and stability ranges.}
+Accessibility lowers neighbourhood-held-out RMSE in Copenhagen and Stockholm
+for both estimators, but all three accessibility specifications slightly
+increase error in Oslo (Table~\ref{tab:primary}). Under XGBoost, Copenhagen's
+lowest point RMSE is obtained with $M_{EW}$, falling from 0.3392 to 0.3286, a
+3.14\% reduction. Stockholm's lowest point RMSE is obtained with $M_W$, falling
+from 0.4063 to 0.3864, a 4.90\% reduction. Oslo's lowest point error remains the
+control model's 0.3495.
+
+\input{tables/primary}
+
+The broad city pattern also appears under OLS, although the specification
+ordering differs. Euclidean accessibility alone gives the lowest OLS error in
+Copenhagen, whereas the joint specification gives the lowest OLS error in
+Stockholm. OLS achieves a lower minimum point error than XGBoost in Copenhagen;
+XGBoost achieves the lower minimum in the other two cities. The evidence
+therefore supports a city-specific contribution of accessibility rather than
+a single estimator or representation ranking.
+
+Table~\ref{tab:gains} shows the size and stability of the XGBoost changes.
+Negative $\Delta$RMSE means lower error than $M_0$. The ranges describe
+variation when neighbourhood composition is resampled, conditional on the
+saved predictions. Copenhagen's Euclidean and joint-model ranges remain below
+zero, as does Stockholm's walking-model range. The other ranges include zero.
+These conditional stability summaries neither establish statistical equivalence
+nor provide independent-sample confidence intervals.
+
+\input{tables/gains}
+
+Replacing Euclidean with walking accessibility and adding walking to an
+existing Euclidean model answer different questions. For XGBoost, replacement
+changes RMSE by $-0.0004$ in Copenhagen, $+0.0002$ in Oslo and $-0.0028$ in
+Stockholm; all three replacement ranges include zero. Adding walking to
+Euclidean accessibility changes RMSE by $-0.0017$, $+0.0017$ and $-0.0015$,
+respectively. Only Oslo's add-on range stays entirely above zero
+($[0.00084,\,0.00266]$). Under OLS, replacing Euclidean with walking measures
+increases point error in all three cities, while the joint model improves on
+Euclidean alone only in Stockholm. Walking accessibility consequently has no
+consistent predictive advantage over Euclidean accessibility.
 
 \subsection{Complementary adjusted associations}
 \label{sec:rq2-associations}
-% Evidence: association_results; appendix figure association_accessibility.png.
-\draftnote{Summarize the complete-case association evidence with units and
-uncertainty. Keep full coefficients/diagnostics in the appendix. Do not
-equate coefficients or descriptive feature contributions with causal effects
-or held-out predictive gains.}
+% Evidence: association_results; residual_spatial_diagnostics; robustness_registry.
+The association analysis describes conditional price relationships on genuine
+complete cases: 12,285 listings in Copenhagen, 8,152 in Oslo and 2,348 in
+Stockholm. Table~\ref{tab:associations} presents the accessibility coefficients
+from the joint $M_{EW}$ specification, which adjusts simultaneously for the
+common controls and both accessibility representations.
+
+\input{tables/associations}
+
+The clearest individual wild-cluster results in this specification concern
+Euclidean opportunity counts. Copenhagen's culture/tourism coefficient is
+positive ($\beta=0.0769$; HC3 interval $[0.0604,\,0.0935]$; wild-cluster
+$p=0.0126$), while Oslo's food/social coefficient is negative
+($\beta=-0.0467$; HC3 interval $[-0.0693,\,-0.0241]$; wild-cluster $p=0.0263$).
+These are unadjusted individual tests across a larger coefficient set, so they
+should be read as descriptive association evidence rather than a set of
+confirmed discoveries.
+
+Most remaining terms have weaker wild-cluster evidence. In Stockholm, for
+example, the positive Euclidean rail-distance coefficient has an HC3 interval
+above zero but a wild-cluster $p$-value of 0.0512. Inference therefore depends
+on how uncertainty is represented. The coefficients also use different units
+and condition on related Euclidean and walking measures; their magnitudes
+cannot rank accessibility importance. Residual spatial diagnostics triggered
+the registered spatial-error sensitivity in all three cities, and the
+area-fixed-effect checks were completed. These qualifications matter when
+interpreting the adjusted relationships, which do not identify causal price
+effects.
 
 \section{RQ3: Geographic generalization and heterogeneity}
 \label{sec:rq3-results}
 % Evidence: validation_comparison; neighbourhood_performance.
-% Figures: validation_strategy_comparison.png;
-% neighbourhood_performance_variation.png.
-\draftnote{Compare primary, random and fixed-block tasks, then show
-neighbourhood variation. Explain reversals and unequal support. Summarize
-registered robustness patterns without ranking scores across changed samples
-or counting overlapping grids as independent replications.}
+\subsection{Validation geography and neighbourhood variation}
+The control model has higher error under neighbourhood holdouts than under
+random cross-validation for both estimators in every city
+(Table~\ref{tab:geography}). The largest XGBoost difference occurs in Stockholm,
+where RMSE rises from 0.3669 under random validation to 0.4063 under
+neighbourhood holdouts. Random allocation and prediction in an unseen
+neighbourhood consequently give different assessments of performance.
+
+\input{tables/geography}
+
+Citywide gains are also uneven within cities. XGBoost's walking model improves
+on the control model in seven of eleven neighbourhoods in both Copenhagen and
+Stockholm, and eight of seventeen in Oslo. Oslo therefore contains local
+improvements despite its adverse pooled change. Test support varies
+substantially: Oslo's neighbourhood holdouts range from 32 to 1,589 listings.
+A count of improving neighbourhoods gives each group equal weight, whereas
+pooled RMSE reflects the errors across all held-out observations.
+
+Changing the holdout geometry can change the accessibility ranking. Across the
+six fixed block configurations, XGBoost's walking model improves on $M_0$ in
+five Copenhagen configurations, none in Oslo and two in Stockholm. Under OLS,
+the corresponding counts are six, three and six. Stockholm's primary XGBoost
+gain therefore does not extend consistently to the block evaluations. These
+configurations reuse observations and overlapping training sets; their counts
+describe sensitivity to geography rather than independent replications.
+
+\subsection{Registered sensitivity checks}
+% Evidence: robustness_registry; robustness_contrasts.
+The sample, control and accessibility checks broadly preserve the negative
+walking-versus-baseline point changes in Copenhagen and Stockholm, but their
+magnitude and stability vary. For example, excluding training observations
+within 1 km of the held-out area reduces Copenhagen's XGBoost gain from
+$\Delta$RMSE $=-0.0095$ in the primary analysis to $-0.0012$, with a range that
+includes zero. In Oslo, extending the walking budget to 20 minutes produces
+a small favourable change ($-0.0003$), also with a range including zero.
+The adverse primary Oslo result is therefore not a claim that every alternative
+accessibility definition must worsen prediction.
+
+Stockholm's land-only density variant retains a favourable XGBoost point
+change ($-0.0167$), although its stability range includes zero. The registry
+records 71 completed city/check entries and four density alternatives that
+are not applicable to Copenhagen or Oslo. Completion of these checks does
+not imply that every contrast is favourable or equally precise. Because some
+variants change samples or measurement definitions, their paired within-variant
+changes are more informative here than a ranking of their absolute RMSEs.
 
 \section{RQ4: Directional cross-city transfer}
 \label{sec:rq4-results}
-% Tables: transfer_performance; transfer_contrasts.
-% Figures: transfer_performance.png; transfer_network_comparison.png;
-% directional_transfer_asymmetry.png. Use landscape when needed.
-\draftnote{Cover every direction and both estimators. Explain relative-price
-errors, baseline gains, walking replacement/add-on and directional asymmetry.
-Do not average away reversals or imply six independent replications.}
+% Evidence: transfer_performance; transfer_contrasts; directional_transfer_asymmetry.
+Transfer performance depends on the source--target direction and estimator
+(Table~\ref{tab:transfer}). The outcome is each listing's log asking price
+relative to its city's frozen reference mean. All preprocessing, tuning and
+fitting use the source city; the target supplies its observed-price benchmark
+and evaluation observations.
+
+\input{tables/transfer}
+
+Under OLS, each accessibility specification lowers point RMSE relative to
+$M_0$ in five of the six directions; Stockholm to Oslo is the exception.
+Under XGBoost, Euclidean accessibility improves four directions, walking
+accessibility three and the joint specification four. Even for one direction,
+the estimators can disagree: Copenhagen-to-Oslo accessibility models improve
+on the OLS baseline, while all three worsen the XGBoost baseline.
+
+The clearest XGBoost joint-model gain occurs from Copenhagen to Stockholm:
+RMSE falls from 0.4286 to 0.4136, with
+$\Delta$RMSE $=-0.01505$ and a stability range of
+$[-0.02174,\,-0.00996]$. Reverse-direction errors differ: Stockholm-to-Copenhagen
+joint-model RMSE is 0.3460. This asymmetry describes two different prediction
+tasks, each with its own target distribution, rather than an intrinsic ranking
+of which city is easier to transfer from.
+
+Walking alone has higher XGBoost point RMSE than Euclidean accessibility in
+all six directions. The replacement ranges remain above zero for the two
+Copenhagen-source directions and include zero for the other four. Adding
+walking to Euclidean accessibility gives mixed point changes, with all six
+add-on ranges including zero. Thus, the transfer experiments provide no
+consistent additional gain from the walking representation. The directions
+share source pipelines and target observations, so their outcomes cannot be
+counted as six independent significance-test replications.
 
 \section{Summary of answers}
 \label{sec:results-summary}
-\draftnote{Give one concise, evidence-qualified answer to each question.
-Use this as the bridge to discussion; do not repeat all tables or numerical
-results. Check every statement against the current claims document.}
+The two accessibility representations yield consistently different
+measurements, but their predictive contribution varies across cities,
+estimators and evaluation geographies. Copenhagen and Stockholm show primary
+within-city gains, while Oslo shows small adverse point changes. Neither
+walking replacement nor cross-city transfer produces a uniform advantage.
+The discussion considers what this distinction between measurement detail
+and predictive usefulness implies.
 
 % ======================================================================
 % CHAPTER 6 -- DISCUSSION
@@ -337,31 +485,126 @@ results. Check every statement against the current claims document.}
 
 \section{What accessibility representation changes}
 \label{sec:discussion-measurement}
-\draftnote{Connect RQ1 measurement differences to RQ2 predictive patterns and
-the literature. Explain why representational detail and predictive gain can
-diverge. Distinguish observed evidence from plausible explanations.}
+The central finding is that a clear measurement difference can coexist with
+a small or inconsistent predictive difference. Walking-network measures
+describe reachable destinations under the specified pedestrian graph and
+travel budget. Euclidean measures describe proximity without those routing
+constraints. RQ1 shows that this choice materially changes the recorded access
+available to a listing. RQ2 shows that the change does not translate directly
+into lower price-prediction error.
+
+The predictive comparisons evaluate the information accessibility adds after
+the common controls are already available. Those controls include population
+density and distance to the civic centre, which
+may share location information with accessibility. Overlap is one plausible
+reason why a substantial measurement difference can add little predictive
+information. The analysis does not isolate this explanation, and Oslo's small
+adverse changes do not establish that accessibility is unimportant to its
+visitors or hosts. They establish that these accessibility features did not
+improve the specified primary prediction task there.
+
+The different OLS and XGBoost rankings also caution against reading a model
+comparison as a property of the accessibility measure alone. Performance
+reflects the estimator, controls and evaluation task together. Likewise, an
+association coefficient measures a conditional relationship rather than an
+out-of-sample error reduction. Mixed coefficient signs in the joint model
+should therefore not be converted into a simple gradient in which greater
+accessibility necessarily means higher asking prices.
 
 \section{Geography and the limits of transportability}
 \label{sec:discussion-geography}
-\draftnote{Read RQ3 and RQ4 together. Discuss validation geography,
-source--target differences and directional dependence. Explain the scope of
-generalization supported by three observed city samples.}
+The validation results show why the prediction setting must be specified
+before interpreting performance. Random folds distribute observations across
+the same city, allowing training and test listings to occupy nearby locations.
+Neighbourhood holdouts ask the model to predict an operational area excluded
+from training. The higher baseline errors under the latter design show that
+success under random allocation does not fully describe performance in an
+unseen neighbourhood in these samples.
+
+Neighbourhood and block holdouts also impose different geographic separations
+and training compositions. Stockholm illustrates the consequence: a favourable
+citywide walking-model result under neighbourhood validation appears in only
+two of the six XGBoost block comparisons. A conclusion that walking
+accessibility improves geographic generalization without specifying the
+holdout design would conceal this variation. Reporting the fixed alternatives
+and local results makes the scope of the primary gain more precise.
+
+Cross-city transfer extends this issue to a different market. Mean centring
+removes the reference citywide log-price level, while differences in price
+dispersion, covariate support and conditional relationships remain. These
+differences can contribute to directional asymmetry, but the experiments do
+not separate their individual contributions. Reversing source and target
+changes both the learned relationship and the population being scored.
+
+The target reference is also a practical limit on the transfer claim. Its mean
+is calculated from observed target asking prices before feature filtering.
+The experiments consequently assess transfer of relative-price predictions
+with a known market benchmark. They do not test absolute-price prediction in
+a market whose price level is unknown. Shared source pipelines and repeated
+target populations further mean that the six directions provide related
+comparisons, not independent replications.
 
 \section{Limitations and methodological decisions}
 \label{sec:limitations}
-\draftnote{Connect each limitation to its consequence: asking-price and
-missing-outcome selection, displaced listing coordinates, OSM completeness,
-native density/vintage mismatches, operational groups, few clusters, correlated
-features and residual spatial dependence. Disclose decision timing and the
-post-observation 10\% amendment. Transfer also requires observed target prices
-for centring. Avoid unsupported causal housing/displacement claims.}
+The outcome limits the substantive interpretation. These are advertised
+nightly asking prices, not completed transactions, bookings or host revenue.
+Listings without an observed positive price are excluded, and substantial
+attrition occurs before the final predictive samples. The results therefore
+describe the retained listings rather than all short-term accommodation or
+realized visitor expenditure. No missing outcome is reconstructed or imputed.
+
+Accessibility is also measured with imperfect spatial inputs. Displaced
+listing coordinates, incomplete OSM destinations, network connectivity,
+snap connectors and the finite extraction extent can affect recorded access.
+Between-city opportunity differences can reflect both actual destination
+supply and differences in source coverage. Provider neighbourhoods used for
+validation are distinct from the accepted study masks and native population
+areas. Density comparisons retain source-vintage and denominator differences,
+including Stockholm's published population/area pairing. These qualifications
+limit how literally fine spatial contrasts and cross-city levels can be read.
+
+The association samples introduce additional selection. The uniform missingness
+eligibility limit was raised from 5\% to 10\% after Stockholm's 5.8918\%
+missingness had been observed. This amendment allowed the prescribed
+complete-case analysis; it did not fill the 147 missing bedroom values or
+correct selection into complete cases. The 15-test/500-training support gate
+was likewise chosen after inspecting support, before final fitting. Both
+decisions should be evaluated with their actual timing rather than described
+as wholly preregistered choices.
+
+Uncertainty remains constrained by the geographic structure. There are only
+11, 17 and 11 primary groups, training sets overlap, and residual spatial
+dependence persists. The group-resampled ranges describe sensitivity to
+geographic composition conditional on the fitted predictions. Individual
+association tests are not adjusted for the full set of comparisons, and the
+related accessibility terms complicate separate coefficient interpretation.
+These considerations favour attention to the pattern across specifications
+over isolated thresholds or small point differences.
+
+Finally, the design is observational and covers three selected capital-city
+samples in one listing period. Adjusted relationships cannot establish that
+accessibility changes asking prices, and they do not identify housing
+displacement or wider welfare effects. Income and residential-price variables
+remain outside the implemented design. Generalization to other cities,
+accommodation types or periods requires further evidence.
 
 \section{Implications and future research}
 \label{sec:implications}
-\draftnote{State what a researcher learns about choosing accessibility
-representations and evaluation geography. Tie future work to specific
-limitations. No-density prediction, same-object circuity and median-centred
-transfer are possible future analyses, not completed study results.}
+For empirical work, accessibility representation and prediction evaluation
+should be treated as separate choices. A walking network is appropriate when
+the substantive quantity is access along the specified pedestrian routes;
+its predictive value still needs to be established against a common control
+model on the intended geographic task. The four-model comparison helps by
+separating the contribution of either representation from the gain obtained
+by adding one to the other, while keeping observations and folds constant.
+
+Future work could examine whether the patterns persist across listing periods
+and additional cities, and assess how improved coordinate and destination
+coverage changes measurement. A study of route circuity would need paths to
+the same fixed destinations. A deployment study would need to specify how a
+new market's price benchmark is obtained without using its evaluation prices.
+These extensions address limits of the present evidence; they are not
+completed analyses in this thesis.
 
 % ======================================================================
 % CHAPTER 7 -- CONCLUSION
@@ -369,10 +612,37 @@ transfer are possible future analyses, not completed study results.}
 % ======================================================================
 \chapter{Conclusion}
 \label{ch:conclusion}
-\draftnote{Answer RQ1--RQ4 briefly, then state the combined contribution and
-its scope. End on what the comparison establishes about accessibility,
-geographic evaluation and transfer. Do not add new results or a universal
-walking-superiority claim.}
+This thesis compared Euclidean and walking accessibility in Airbnb asking-price
+models for Copenhagen--Frederiksberg, Oslo and Stockholm. It examined the
+measurements themselves, their within-city predictive contribution, geographic
+generalization and source-only relative-price transfer.
+
+For RQ1, walking accessibility produced longer median transport distances and
+fewer reachable destinations in all three samples. The representations
+therefore describe different access even when destination categories and
+nominal budgets are matched.
+
+For RQ2, accessibility improved primary predictive point errors in Copenhagen
+and Stockholm for both OLS and XGBoost, while Oslo retained the control model
+as its lowest-error specification. Walking measures did not consistently
+outperform Euclidean measures, and the complete-case associations supplied
+conditional, noncausal evidence rather than a common price gradient.
+
+For RQ3, neighbourhood holdouts produced higher baseline errors than random
+validation, and accessibility gains varied across neighbourhoods and fixed
+block configurations. The primary citywide gains consequently have a
+geographic scope that a single pooled score cannot fully describe.
+
+For RQ4, relative-price transfer depended on direction and estimator. Some
+accessibility models improved on the source-only control baseline, but walking
+replacement and add-on offered no consistent advantage. The use of observed
+target reference prices confines this evidence to benchmarked relative-price
+transfer.
+
+The contribution is a matched comparison that separates measurement detail
+from predictive usefulness and tests both within and across cities. More
+detailed accessibility changed what was measured; its value for asking-price
+prediction depended on the city, estimator and geography of evaluation.
 
 % ======================================================================
 % APPENDICES -- detailed evidence that supports, but interrupts, the argument.

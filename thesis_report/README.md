@@ -3,8 +3,10 @@
 Edit [main.tex](main.tex). It contains the cover details, all prose, chapter
 order, figure/table placements and appendix prompts. The supplied UCPH example
 provides the `memoir` class and SAMF cover; body chapters use numbered sections.
-This is a working manuscript scaffold, with a short factual opening and writing
-prompts. It is not a finished thesis or a newly reviewed literature survey.
+Chapters 5--7 contain the results, discussion and conclusion draft based on the
+frozen final evidence. The earlier chapters and appendices still contain writing
+prompts. The manuscript is not a finished thesis or a newly reviewed literature
+survey.
 
 | File | What to edit |
 | --- | --- |
@@ -12,6 +14,7 @@ prompts. It is not a finished thesis or a newly reviewed literature survey.
 | `preamble.tex` | Fonts, margins, spacing, bibliography style and draft-note appearance |
 | `references.bib` | Verified bibliographic entries |
 | `figures/` | Copies of final generated figures selected for the manuscript |
+| `tables/` | Generated aggregate result tables and their checksum/source manifest |
 | `supplements/` | Original supplied template, examples and licensed UCPH logos; leave intact |
 
 The active entry point is **`thesis_report/main.tex`**. The original
@@ -44,6 +47,23 @@ No repository-relative research file is required to compile: evidence paths
 in comments are writing references, not LaTeX dependencies. Upload selected
 public figures separately when you add them; do not upload the research repo,
 private data, credentials, individual predictions or model files.
+
+Keep `tables/` in the upload: the six result tables are included by `main.tex`.
+Their accepted numerical content is generated from the final aggregate exports,
+with original paths, checksums and scientific run identities recorded in
+`tables/manifest.json`. Edit chapter prose in `main.tex`; edit table presentation
+in `scripts/build_thesis_chapter_tables.py`, then regenerate from the repository
+root using the audited environment:
+
+```sh
+.venv/bin/python scripts/build_thesis_chapter_tables.py
+.venv/bin/python scripts/build_thesis_chapter_tables.py --check
+```
+
+Regeneration requires the existing local `outputs/tables/`, `outputs/metrics/`
+and pinned reporting manifest. Compiling the uploaded manuscript only needs the
+generated files already in `tables/`. The script verifies source checksums and
+does not refit models, rerun scientific stages or alter analytical exports.
 
 ## Recommended explanation flow
 

@@ -1,0 +1,408 @@
+% ======================================================================
+% THESIS DRAFT -- edit this file for metadata, prose and chapter order.
+% Compile from thesis_report/ with XeLaTeX (latexmk -xelatex main.tex).
+% Overleaf: upload this folder, select main.tex, choose XeLaTeX.
+% Formatting: preamble.tex | References: references.bib | Help: README.md
+% All chapter text stays here so sections are easy to exchange with an AI.
+% ======================================================================
+\documentclass[11pt,a4paper,oneside,openany]{memoir}
+\input{preamble}
+
+% ---- EDIT: cover details -----------------------------------------------
+% Working title: revise freely. Keep it short to fit the example's cover.
+\newcommand{\ThesisTitle}{Urban Accessibility\\and Airbnb Prices}
+\newcommand{\ThesisSubtitle}{Euclidean and walking measures across three Nordic capitals}
+\newcommand{\ThesisAuthor}{Ahmad Jibril Hemdi}
+\newcommand{\ThesisDate}{Submission date to be confirmed}
+\newcommand{\ThesisAdvisors}{Supervisors: Sandro Sousa \& Jason Burton}
+
+\assignment{Master's thesis}
+\author{\ThesisAuthor}
+\title{\ThesisTitle}
+\subtitle{\ThesisSubtitle}
+\date{\ThesisDate}
+\advisor{\ThesisAdvisors}
+\frontpageauthor{\ThesisAuthor}
+\frontpagetitle{\ThesisTitle}
+\frontpagesubtitle{\ThesisSubtitle}
+\frontpagedate{\ThesisDate}
+% Optional cover illustration, placed in figures/:
+% \frontpageimage{cover.png}
+\kupdfsetup{\ThesisTitle}{MSc Social Data Science}{\ThesisAuthor}
+
+% ---- EDIT: writing mode -----------------------------------------------
+\draftnotestrue % Change to \draftnotesfalse to hide visible writing prompts.
+% Hiding prompts does not mean the draft is complete; search for them first.
+
+\begin{document}
+\frontmatter
+\begingroup
+  \SingleSpacing
+  \maketitle
+\endgroup
+
+% ======================================================================
+% FRONT MATTER -- write the abstract after the results and conclusion.
+% ======================================================================
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\draftnote{Write the final abstract last: problem, three-city data, matched
+measurements, geographic evaluation, main qualified findings and contribution.
+Report asking prices and observational evidence. Add verified numbers only.}
+
+% Add acknowledgements or required declarations here after checking the
+% programme's requirements. The example's PhD statement is not used.
+
+\cleardoublepage
+\tableofcontents
+% Uncomment once actual figures/tables have been inserted:
+% \listoffigures
+% \listoftables
+
+\mainmatter
+% ======================================================================
+% CHAPTER 1 -- INTRODUCTION
+% Purpose: establish the problem, the gap, the questions and the contribution.
+% Authority: ../docs/design/scientific_proposal.md (not a literature review).
+% ======================================================================
+\chapter{Introduction}
+\label{ch:introduction}
+
+\section{Motivation and research problem}
+\label{sec:motivation}
+This thesis examines how straight-line and walking-network representations of
+urban accessibility relate to Airbnb nightly asking prices in
+Copenhagen--Frederiksberg, Oslo and Stockholm. It compares what the two
+representations measure, the information they add to price prediction,
+geographic variation within cities, and transfer between cities.
+
+\draftnote{Explain why accessibility measurement matters for the research
+problem. Define asking price early. Support the motivation with literature
+you have read and verified; distinguish listings from bookings or revenue.}
+
+\section{Research gap and contribution}
+\label{sec:gap}
+\draftnote{Build one argument from the literature to the gap: representation,
+geographic evaluation and transfer. State the contribution of their combined
+comparison without claiming universal novelty or a causal effect.}
+
+\section{Research questions}
+\label{sec:research-questions}
+The analysis is organized around four research questions:
+\begin{enumerate}
+  \item[RQ1.] How do matched Euclidean and walking accessibility measurements
+  differ across the three cities?
+  \item[RQ2.] What information do these measurements add to within-city price
+  prediction, and what complementary adjusted associations are observed?
+  \item[RQ3.] How do predictive performance and accessibility contributions
+  vary across geographic validation designs and held-out neighbourhoods?
+  \item[RQ4.] How do relative-price predictions and accessibility contributions
+  transfer across the six source--target city directions?
+\end{enumerate}
+
+\section{Scope and thesis roadmap}
+\label{sec:roadmap}
+The study uses June 2026 Inside Airbnb listings for conventional entire
+dwellings. Its evidence is observational. Chapter~\ref{ch:literature} develops
+the conceptual framework; Chapter~\ref{ch:data} describes the data and study
+areas; and Chapter~\ref{ch:methods} defines measurement and evaluation.
+Chapter~\ref{ch:results} presents the evidence in research-question order,
+followed by discussion in Chapter~\ref{ch:discussion} and conclusions in
+Chapter~\ref{ch:conclusion}.
+
+% ======================================================================
+% CHAPTER 2 -- CONCEPTS AND LITERATURE
+% Purpose: explain the reasoning behind the design before technical details.
+% Add only checked sources to references.bib; use \textcite / \parencite.
+% ======================================================================
+\chapter{Conceptual Framework and Related Literature}
+\label{ch:literature}
+
+\section{Accessibility and the spatial context of asking prices}
+\label{sec:accessibility-concept}
+\draftnote{Define accessibility, proximity and reachable opportunities.
+Explain plausible relationships to asking prices, then identify confounding
+and selection issues that prevent a causal interpretation here.}
+
+\section{Euclidean and walking representations}
+\label{sec:representations-literature}
+\draftnote{Explain straight-line distance, network restrictions and
+threshold-based opportunities. Build an expectation for measurement
+differences without assuming that a richer network measure predicts better.}
+
+\section{Prediction, geographic generalization and transfer}
+\label{sec:generalization-literature}
+\draftnote{Connect price-modelling literature to spatial dependence,
+geographic holdouts and source--target distribution differences. Distinguish
+prediction, adjusted association and transfer as separate questions.}
+
+\section{Synthesis and analytical expectations}
+\label{sec:expectations}
+\draftnote{End with a short bridge to RQ1--RQ4. Label expectations as
+conceptual; do not retrospectively call observed patterns preregistered
+hypotheses. Avoid another full summary of the introduction.}
+
+% ======================================================================
+% CHAPTER 3 -- STUDY AREAS AND DATA
+% Purpose: explain what is observed and which populations the results cover.
+% Sources: ../docs/analysis/data_dictionary.md, source_registry.md,
+% sample_audit.json, context_audit.json; ../outputs/tables/sample_flow.md.
+% ======================================================================
+\chapter{Study Areas and Data}
+\label{ch:data}
+
+\section{Study areas and operational neighbourhoods}
+\label{sec:study-areas}
+\draftnote{Introduce Copenhagen--Frederiksberg, Oslo and Stockholm. Separate
+accepted study masks, provider validation groups and native density areas.
+Explain the 11/17/11 operational groups without certifying them as current
+official boundaries. Insert study\_areas.png and retain its CRS/source notes.}
+
+\section{Sources, dates and geographic coverage}
+\label{sec:sources}
+\draftnote{Summarize Inside Airbnb, historical OSM networks/destinations and
+native official population density. Separate acquisition dates from reference
+dates. State coverage, licensing and vintage limitations. Income and
+residential prices are excluded. Put detailed provenance in the appendix.}
+
+\section{Sample construction and missingness}
+\label{sec:samples}
+\draftnote{Walk from raw listings to eligible positive-price references,
+common predictive samples and genuine complete-case association samples.
+Use the generated sample-flow and city-summary tables. Explain missing-price
+exclusion and training-only predictive preprocessing separately.}
+
+\section{Outcome and control variables}
+\label{sec:variables}
+Within-city models use the natural logarithm of original observed positive
+nightly asking prices in native currency. Cross-city transfer uses the
+city-relative outcome defined in Section~\ref{sec:transfer-method}.
+Missing outcomes are never imputed.
+
+\draftnote{Describe the common dwelling, host, amenity, density and centrality
+controls with units and transformations. Record the native density
+denominators and vintage caveats, especially Stockholm. Place the complete
+variable dictionary in Appendix~\ref{app:definitions}.}
+
+% ======================================================================
+% CHAPTER 4 -- METHODS
+% Purpose: explain how each question is answered; keep findings in Chapter 5.
+% Authorities: ../config/study/design.json; ../docs/analysis/
+% preanalysis_specification.md; association_missingness_amendment_20261013.md.
+% ======================================================================
+\chapter{Methods}
+\label{ch:methods}
+
+\section{Analytical design and model comparisons}
+\label{sec:model-design}
+Let $X$ denote the common controls, $E$ Euclidean accessibility and $W$
+walking accessibility. The four model specifications are
+\[
+  M_0=X,\qquad M_E=X+E,\qquad M_W=X+W,\qquad M_{EW}=X+E+W.
+\]
+Within each city, all four predictive models use the same observations,
+outcomes and evaluation folds. OLS and XGBoost are the specified estimators.
+
+\draftnote{Explain the baseline, accessibility-versus-baseline comparisons,
+walking replacement ($M_W-M_E$) and walking add-on ($M_{EW}-M_E$).
+Introduce a compact design diagram only if it makes the sequence clearer.}
+
+\section{Constructing matched accessibility measurements}
+\label{sec:accessibility-method}
+\draftnote{Define nearest rail/bus access and food/social and culture/tourism
+opportunities on matched category universes. Explain the historical OSM
+timestamp, directed graph and both snap connectors. The primary comparison
+uses 5 km/h, 10 minutes and a rounded matched 833 m radius. Nearest destinations
+may differ between representations; do not label their excess same-object
+route circuity. Distinguish measured zeros from routing/source missingness.}
+
+\section{Geographic validation and training procedure}
+\label{sec:validation-method}
+\draftnote{Explain leave-one-operational-neighbourhood-out evaluation and
+the fixed 15-test/500-training support gate. Then describe random five-fold
+and fixed-grid comparisons. Explain training-only fitted preprocessing and
+the 30-candidate, four-inner-spatial-fold XGBoost search. Outer test folds
+never select variables, thresholds, preprocessing or hyperparameters.}
+
+\section{Metrics, paired contrasts and stability}
+\label{sec:metrics-method}
+\draftnote{Define RMSE and supporting metrics on their outcome scales.
+Define candidate-minus-reference contrasts so negative RMSE change means
+improvement. Explain 2,000 group resamples as conditional
+geographic-composition stability, with overlapping training data and few
+groups. These ranges do not establish independent-sample inference or
+equivalence.}
+
+\section{Complementary complete-case associations}
+\label{sec:association-method}
+\draftnote{Separate adjusted OLS associations from predictive evaluation.
+Explain common complete cases on $X+E+W$, HC3, restricted Webb inference and
+spatial diagnostics/sensitivities. Disclose the uniform 5\% to 10\% eligibility
+amendment on 13 October 2026 after observing Stockholm's missingness.
+Missing bedrooms and outcomes remain unfilled in association inference.}
+
+\section{Source-only cross-city transfer}
+\label{sec:transfer-method}
+For listing $i$ in city $c$, the transfer outcome is
+\[
+  y^{\mathrm{rel}}_{ic}=\log(p_{ic})-\mu_c,
+\]
+where $p_{ic}$ is observed positive nightly asking price and $\mu_c$ is the
+frozen mean log price of the city's eligible inside-mask positive-price
+reference population before feature filtering.
+
+\draftnote{Describe all six directions. Preprocessing, tuning and fitting
+use the source city only. Target prices supply the frozen target benchmark
+and evaluation, with no target refitting or recalibration. Explain why this
+is a relative-price transfer test and why directions are dependent.}
+
+\section{Registered robustness and reproducibility}
+\label{sec:robustness-method}
+\draftnote{Group the completed checks by validation, sample/control,
+accessibility and association purpose. Explain what each challenges rather
+than repeating every setting. Keep full configurations and NOT\_APPLICABLE
+statuses in Appendix~\ref{app:robustness}. Record the metric CRSs:
+EPSG:25832 (Copenhagen), EPSG:25833 (Oslo), EPSG:3006 (Stockholm).
+Describe code/SQL provenance without exposing private records.}
+
+% ======================================================================
+% CHAPTER 5 -- RESULTS (same order as the four research questions)
+% Purpose: answer each question with evidence before discussing mechanisms.
+% Primary handover: ../reports/findings_by_research_question.md,
+% research_results.md and thesis_figure_recommendations.md.
+% Every number/figure must trace to the pinned final generated outputs.
+% ======================================================================
+\chapter{Results}
+\label{ch:results}
+
+\section{RQ1: Accessibility measurement differences}
+\label{sec:rq1-results}
+% Evidence: accessibility_descriptive_statistics; nearest_access_divergence.
+% Figures: nearest_access_relationship.png; opportunity_comparison.png.
+\draftnote{Start with a direct answer. Compare nearest-category access and
+opportunities with units and city differences. Insert the generated summaries,
+then close with what this establishes for the modelling comparison.}
+
+\section{RQ2: Within-city prediction and adjusted associations}
+\label{sec:rq2-results}
+\subsection{Predictive performance and accessibility contributions}
+\label{sec:rq2-prediction}
+% Tables: primary_predictive_performance; paired_model_contrasts.
+% Figures: primary_model_performance.png; paired_accessibility_contrasts.png.
+\draftnote{Show all four models and both estimators before emphasizing a
+contrast. Separate baseline gains, replacement and add-on. The frozen
+XGBoost point gains in Copenhagen/Stockholm and adverse Oslo changes require
+city-specific qualifications and stability ranges.}
+
+\subsection{Complementary adjusted associations}
+\label{sec:rq2-associations}
+% Evidence: association_results; appendix figure association_accessibility.png.
+\draftnote{Summarize the complete-case association evidence with units and
+uncertainty. Keep full coefficients/diagnostics in the appendix. Do not
+equate coefficients or descriptive feature contributions with causal effects
+or held-out predictive gains.}
+
+\section{RQ3: Geographic generalization and heterogeneity}
+\label{sec:rq3-results}
+% Evidence: validation_comparison; neighbourhood_performance.
+% Figures: validation_strategy_comparison.png;
+% neighbourhood_performance_variation.png.
+\draftnote{Compare primary, random and fixed-block tasks, then show
+neighbourhood variation. Explain reversals and unequal support. Summarize
+registered robustness patterns without ranking scores across changed samples
+or counting overlapping grids as independent replications.}
+
+\section{RQ4: Directional cross-city transfer}
+\label{sec:rq4-results}
+% Tables: transfer_performance; transfer_contrasts.
+% Figures: transfer_performance.png; transfer_network_comparison.png;
+% directional_transfer_asymmetry.png. Use landscape when needed.
+\draftnote{Cover every direction and both estimators. Explain relative-price
+errors, baseline gains, walking replacement/add-on and directional asymmetry.
+Do not average away reversals or imply six independent replications.}
+
+\section{Summary of answers}
+\label{sec:results-summary}
+\draftnote{Give one concise, evidence-qualified answer to each question.
+Use this as the bridge to discussion; do not repeat all tables or numerical
+results. Check every statement against the current claims document.}
+
+% ======================================================================
+% CHAPTER 6 -- DISCUSSION
+% Purpose: explain what the combined findings mean, with literature support.
+% Claim boundaries: ../docs/final_claims_for_thesis.md.
+% ======================================================================
+\chapter{Discussion}
+\label{ch:discussion}
+
+\section{What accessibility representation changes}
+\label{sec:discussion-measurement}
+\draftnote{Connect RQ1 measurement differences to RQ2 predictive patterns and
+the literature. Explain why representational detail and predictive gain can
+diverge. Distinguish observed evidence from plausible explanations.}
+
+\section{Geography and the limits of transportability}
+\label{sec:discussion-geography}
+\draftnote{Read RQ3 and RQ4 together. Discuss validation geography,
+source--target differences and directional dependence. Explain the scope of
+generalization supported by three observed city samples.}
+
+\section{Limitations and methodological decisions}
+\label{sec:limitations}
+\draftnote{Connect each limitation to its consequence: asking-price and
+missing-outcome selection, displaced listing coordinates, OSM completeness,
+native density/vintage mismatches, operational groups, few clusters, correlated
+features and residual spatial dependence. Disclose decision timing and the
+post-observation 10\% amendment. Transfer also requires observed target prices
+for centring. Avoid unsupported causal housing/displacement claims.}
+
+\section{Implications and future research}
+\label{sec:implications}
+\draftnote{State what a researcher learns about choosing accessibility
+representations and evaluation geography. Tie future work to specific
+limitations. No-density prediction, same-object circuity and median-centred
+transfer are possible future analyses, not completed study results.}
+
+% ======================================================================
+% CHAPTER 7 -- CONCLUSION
+% Purpose: leave a direct answer to the original problem; introduce no evidence.
+% ======================================================================
+\chapter{Conclusion}
+\label{ch:conclusion}
+\draftnote{Answer RQ1--RQ4 briefly, then state the combined contribution and
+its scope. End on what the comparison establishes about accessibility,
+geographic evaluation and transfer. Do not add new results or a universal
+walking-superiority claim.}
+
+% ======================================================================
+% APPENDICES -- detailed evidence that supports, but interrupts, the argument.
+% ======================================================================
+\appendix
+\chapter{Data Provenance and Variable Definitions}
+\label{app:definitions}
+\draftnote{Include source/reference/acquisition dates, geographic extents,
+CRSs, checksums where available, sample-flow details, category definitions,
+controls and qualified native density denominators. Use aggregate evidence.}
+
+\chapter{Extended Results and Diagnostics}
+\label{app:extended-results}
+\draftnote{Place full associations, descriptive held-out contributions,
+neighbourhood detail, transfer diagnostics and spatial residual checks here.
+Retain source captions and privacy suppression for published maps/bins.}
+
+\chapter{Robustness and Specification Decisions}
+\label{app:robustness}
+\draftnote{Include the complete generated registry, fixed-grid/settings
+details and explicit non-applicable entries. Record decision chronology,
+especially support gates and the association amendment. Historical drafts
+and unexecuted suggestions are not current results.}
+
+\backmatter
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
+\draftnote{Add checked entries to references.bib and cite them using
+\texttt{\string\parencite\{key\}} or \texttt{\string\textcite\{key\}}.
+The initial bibliography is intentionally empty; no citations are invented.}
+\printbibliography[heading=none]
+
+\end{document}

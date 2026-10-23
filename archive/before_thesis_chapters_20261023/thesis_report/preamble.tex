@@ -1,0 +1,55 @@
+% Formatting lives here; edit thesis prose and metadata in main.tex.
+% Based on the supplied supplements/example.tex and its unchanged KU package.
+\usepackage{fontspec}
+\usepackage{libertine}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=authoryear,sorting=nyt,maxcitenames=2]{biblatex}
+\addbibresource{references.bib}
+
+% Find the original KU package and its logos without moving or changing them.
+\makeatletter
+\def\input@path{{supplements/}}
+\makeatother
+\graphicspath{{figures/}{supplements/}}
+\usepackage[english,samf,hyperref]{ku-frontpage}
+% The template requests a semibold series absent from this font setup.
+% Select bold explicitly instead of relying on repeated font substitutions.
+\renewcommand{\KUsemibold}{\bfseries}
+\pdfstringdefDisableCommands{\def\\{ }}
+
+% Memoir controls the body layout; the KU package controls the cover.
+\setlrmarginsandblock{30mm}{30mm}{*}
+\setulmarginsandblock{28mm}{28mm}{*}
+\checkandfixthelayout
+\OnehalfSpacing
+\chapterstyle{hangnum}
+\pagestyle{plain}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+\setlength{\emergencystretch}{2em}
+
+% Memoir can prevent the template from patching some title commands.
+% These fallbacks support both patched and unpatched versions of memoir.
+\providecommand{\frontpageauthor}[1]{}
+\providecommand{\frontpagetitle}[1]{}
+\providecommand{\frontpagesubtitle}[1]{}
+\providecommand{\frontpagedate}[1]{}
+
+% Visible writing prompts can be hidden using \draftnotesfalse in main.tex.
+\newif\ifdraftnotes
+\draftnotestrue
+\newcommand{\draftnote}[1]{%
+  \ifdraftnotes
+    \par\smallskip
+    {\small\noindent\textcolor{KU}{\textbf{Draft task:} #1}\par}%
+    \smallskip
+  \fi
+}
