@@ -1,6 +1,6 @@
 {
   "generator": "scripts/build_thesis_explanatory_figures.py",
-  "generator_sha256": "7d3ee9b70b108bb49ab48d259d052165f0c79b4ebd85f3135179492012127c32",
+  "generator_sha256": "bb8efd12faf2b49d3bd90d1a66205078e200142090a7edcc307ecee16fd8cde1",
   "inputs": {
     "config/study/design.json": "d8df5d0e50f4b0bb63ad8697d19c3d76a1a3becae45e37e0473c69645b52c6ef",
     "config/study/cities.json": "c9e6a920796d2a06c741f6734cde63cb72c224364fe971dfca85c327686e6487",
@@ -42,19 +42,39 @@
       "record_sha256": "9459460b35ced9c46211317dc47db5f5af9f318241f163a1f965d7d205f8c53e",
       "n": 2495
     },
-    "validation": {
+    "validation:copenhagen": {
       "run_id": "copenhagen_validation_20261013t014255808061z",
       "summary_sha256": "50def7a107d7e089d03795b666b69674cdd2322fd6486811673a18f6b02167c3",
       "outer_hash": "1cfc02f276c773d31d0bcd95deb75cadb13416139d618fdb0a0a4d09bd7ccba1"
     },
-    "accessibility": {
+    "accessibility:copenhagen": {
       "run_id": "copenhagen_accessibility_20261013t013729389414z",
       "summary_sha256": "d70bbb1676d74ea763098e740ec10cfdd22d9058b9724802a20a5bdfcf3f8223"
     },
-    "geography": {
+    "geography:copenhagen": {
       "run_id": "copenhagen_geography_20261013t010820402377z",
       "summary_sha256": "133acd0e0c94f583a2d2bd1b2ccb931b52ebc1a398d51264bb53425d46b5cc0b",
       "geometry_sha256": "73e2543d57a78bcf2fc5971b2270bbbecc8d9316d639bb64b75eb823a2d38b09"
+    },
+    "validation:oslo": {
+      "run_id": "oslo_validation_20261013t014532783538z",
+      "summary_sha256": "604af9cabf58bc47f81378bf5866c50f7295fab31c462fba3756db9301cd8f4f",
+      "outer_hash": "42b4c4a3478a3b29b671fe6bfb1b599e3621efe161ae01abb31fbdb1b17e4d23"
+    },
+    "geography:oslo": {
+      "run_id": "oslo_geography_20261013t010830555916z",
+      "summary_sha256": "7e584dd425732d8df57421b3683f8ba3c60d730fd62b3617f8bdef6fcf8fbdc8",
+      "geometry_sha256": "fb34bacfd25a462902c0b1d0a3ea393ac91a536012d1b7856e35517b0fd4d590"
+    },
+    "validation:stockholm": {
+      "run_id": "stockholm_validation_20261013t014735145956z",
+      "summary_sha256": "b73c444eb532bcabb34b1303072db76786415128ece55cb56c99a0dc294db756",
+      "outer_hash": "0f42c90230e211e47718691968b622613440fa43b0358feaeb08f15e201d152f"
+    },
+    "geography:stockholm": {
+      "run_id": "stockholm_geography_20261013t010836230517z",
+      "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9",
+      "geometry_sha256": "7fbe1132bfda821869059ac5505fe829dfe0be7fb5a3d34a5d87031ffce92a49"
     },
     "cartographic_context": {
       "path": "config/reporting/map_context.json",
@@ -871,6 +891,17 @@
       }
     },
     "random_vs_loao_validation_schematic": {
+      "city": "copenhagen",
+      "metric_crs": "EPSG:25832",
+      "neighbourhood_example_rule": "Named public central neighbourhood, selected without prices or model performance",
+      "shared_map_bounds_km": [
+        716.5512460263103,
+        6168.225026702551,
+        734.9724438389653,
+        6182.446103322687
+      ],
+      "marker_area_rule": "1.5 + 0.15 * role count in square points",
+      "display_rule": "Both roles use the same 500 m cell centre; cell total N>=5; no individual locations",
       "random": {
         "heldout": "1",
         "train_n": 9926,
@@ -887,6 +918,8 @@
       }
     },
     "spatial_grid_sensitivities": {
+      "city": "copenhagen",
+      "metric_crs": "EPSG:25832",
       "blocks_1000m_origin_0_0": {
         "cell_size_m": 1000,
         "origin_fraction": [
@@ -946,6 +979,188 @@
         "visible_cells": 32,
         "suppressed_cells": 0,
         "test_n": 12408
+      }
+    },
+    "random_vs_loao_validation_schematic_oslo": {
+      "city": "oslo",
+      "metric_crs": "EPSG:25833",
+      "neighbourhood_example_rule": "Named public central neighbourhood, selected without prices or model performance",
+      "shared_map_bounds_km": [
+        247.9155486000001,
+        6636.7003786,
+        274.6676514000001,
+        6675.270411399999
+      ],
+      "marker_area_rule": "1.5 + 0.15 * role count in square points",
+      "display_rule": "Both roles use the same 500 m cell centre; cell total N>=5; no individual locations",
+      "random": {
+        "heldout": "1",
+        "train_n": 6823,
+        "test_n": 1706,
+        "display_cells": 281,
+        "suppressed_listings": 539
+      },
+      "neighbourhood": {
+        "heldout": "Grünerløkka",
+        "train_n": 6940,
+        "test_n": 1589,
+        "display_cells": 281,
+        "suppressed_listings": 539
+      }
+    },
+    "spatial_grid_sensitivities_oslo": {
+      "city": "oslo",
+      "metric_crs": "EPSG:25833",
+      "blocks_1000m_origin_0_0": {
+        "cell_size_m": 1000,
+        "origin_fraction": [
+          0,
+          0
+        ],
+        "visible_cells": 135,
+        "suppressed_cells": 43,
+        "test_n": 8529
+      },
+      "blocks_1500m_origin_0_0": {
+        "cell_size_m": 1500,
+        "origin_fraction": [
+          0,
+          0
+        ],
+        "visible_cells": 71,
+        "suppressed_cells": 18,
+        "test_n": 8529
+      },
+      "blocks_2000m_origin_0_0": {
+        "cell_size_m": 2000,
+        "origin_fraction": [
+          0,
+          0
+        ],
+        "visible_cells": 50,
+        "suppressed_cells": 7,
+        "test_n": 8529
+      },
+      "blocks_1000m_origin_0p5_0p5": {
+        "cell_size_m": 1000,
+        "origin_fraction": [
+          0.5,
+          0.5
+        ],
+        "visible_cells": 137,
+        "suppressed_cells": 39,
+        "test_n": 8529
+      },
+      "blocks_1500m_origin_0p5_0p5": {
+        "cell_size_m": 1500,
+        "origin_fraction": [
+          0.5,
+          0.5
+        ],
+        "visible_cells": 74,
+        "suppressed_cells": 19,
+        "test_n": 8529
+      },
+      "blocks_2000m_origin_0p5_0p5": {
+        "cell_size_m": 2000,
+        "origin_fraction": [
+          0.5,
+          0.5
+        ],
+        "visible_cells": 49,
+        "suppressed_cells": 11,
+        "test_n": 8529
+      }
+    },
+    "random_vs_loao_validation_schematic_stockholm": {
+      "city": "stockholm",
+      "metric_crs": "EPSG:3006",
+      "neighbourhood_example_rule": "Named public central neighbourhood, selected without prices or model performance",
+      "shared_map_bounds_km": [
+        656.2592115072312,
+        6568.977245542879,
+        682.9998736850241,
+        6593.181405234462
+      ],
+      "marker_area_rule": "1.5 + 0.15 * role count in square points",
+      "display_rule": "Both roles use the same 500 m cell centre; cell total N>=5; no individual locations",
+      "random": {
+        "heldout": "1",
+        "train_n": 1996,
+        "test_n": 499,
+        "display_cells": 135,
+        "suppressed_listings": 700
+      },
+      "neighbourhood": {
+        "heldout": "Södermalm",
+        "train_n": 1800,
+        "test_n": 695,
+        "display_cells": 135,
+        "suppressed_listings": 700
+      }
+    },
+    "spatial_grid_sensitivities_stockholm": {
+      "city": "stockholm",
+      "metric_crs": "EPSG:3006",
+      "blocks_1000m_origin_0_0": {
+        "cell_size_m": 1000,
+        "origin_fraction": [
+          0,
+          0
+        ],
+        "visible_cells": 115,
+        "suppressed_cells": 67,
+        "test_n": 2495
+      },
+      "blocks_1500m_origin_0_0": {
+        "cell_size_m": 1500,
+        "origin_fraction": [
+          0,
+          0
+        ],
+        "visible_cells": 80,
+        "suppressed_cells": 17,
+        "test_n": 2495
+      },
+      "blocks_2000m_origin_0_0": {
+        "cell_size_m": 2000,
+        "origin_fraction": [
+          0,
+          0
+        ],
+        "visible_cells": 51,
+        "suppressed_cells": 11,
+        "test_n": 2495
+      },
+      "blocks_1000m_origin_0p5_0p5": {
+        "cell_size_m": 1000,
+        "origin_fraction": [
+          0.5,
+          0.5
+        ],
+        "visible_cells": 118,
+        "suppressed_cells": 71,
+        "test_n": 2495
+      },
+      "blocks_1500m_origin_0p5_0p5": {
+        "cell_size_m": 1500,
+        "origin_fraction": [
+          0.5,
+          0.5
+        ],
+        "visible_cells": 78,
+        "suppressed_cells": 19,
+        "test_n": 2495
+      },
+      "blocks_2000m_origin_0p5_0p5": {
+        "cell_size_m": 2000,
+        "origin_fraction": [
+          0.5,
+          0.5
+        ],
+        "visible_cells": 52,
+        "suppressed_cells": 10,
+        "test_n": 2495
       }
     }
   },
@@ -1053,12 +1268,18 @@
     "random_vs_loao_validation_schematic": [
       "N",
       "2 km",
-      "Saved fold 1 of 5\nTrain 9,926 · Test 2,482",
-      "A  Random validation",
       "N",
       "2 km",
-      "Nørrebro held out; 11 neighbourhood folds\nTrain 10,227 · Test 2,181",
-      "B  Neighbourhood holdout",
+      "Nørrebro\nTest area",
+      "Two ways to test prediction",
+      "Copenhagen & Frederiksberg · 12,408 listings · one saved split per design",
+      "A  Random cross-validation",
+      "Fold 1 of 5  |  Train 9,926 · Test 2,482",
+      "Training and test listings are spatially mixed.\nNearby listings can enter both sets.",
+      "B  Leave-one-area-out cross-validation",
+      "Nørrebro held out · 11 area folds  |  Train 10,227 · Test 2,181",
+      "One whole neighbourhood is held out.\nPrediction is tested in an unseen area.",
+      "500 m cell centres, N >= 5; larger dots = more listings · Saved sample, folds and provider boundaries · EPSG:25832",
       "Training",
       "Test"
     ],
@@ -1081,6 +1302,97 @@
       "N",
       "2 km",
       "2 km · half-cell shift",
+      "Copenhagen · six spatial block designs · EPSG:25832",
+      "Saved test fold",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "random_vs_loao_validation_schematic_oslo": [
+      "N",
+      "5 km",
+      "N",
+      "5 km",
+      "Grünerløkka\nTest area",
+      "Two ways to test prediction",
+      "Oslo · 8,529 listings · one saved split per design",
+      "A  Random cross-validation",
+      "Fold 1 of 5  |  Train 6,823 · Test 1,706",
+      "Training and test listings are spatially mixed.\nNearby listings can enter both sets.",
+      "B  Leave-one-area-out cross-validation",
+      "Grünerløkka held out · 17 area folds  |  Train 6,940 · Test 1,589",
+      "One whole neighbourhood is held out.\nPrediction is tested in an unseen area.",
+      "500 m cell centres, N >= 5; larger dots = more listings · Saved sample, folds and provider boundaries · EPSG:25833",
+      "Training",
+      "Test"
+    ],
+    "spatial_grid_sensitivities_oslo": [
+      "N",
+      "5 km",
+      "1 km · no shift",
+      "N",
+      "5 km",
+      "1.5 km · no shift",
+      "N",
+      "5 km",
+      "2 km · no shift",
+      "N",
+      "5 km",
+      "1 km · half-cell shift",
+      "N",
+      "5 km",
+      "1.5 km · half-cell shift",
+      "N",
+      "5 km",
+      "2 km · half-cell shift",
+      "Oslo · six spatial block designs · EPSG:25833",
+      "Saved test fold",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "random_vs_loao_validation_schematic_stockholm": [
+      "N",
+      "5 km",
+      "N",
+      "5 km",
+      "Södermalm\nTest area",
+      "Two ways to test prediction",
+      "Stockholm · 2,495 listings · one saved split per design",
+      "A  Random cross-validation",
+      "Fold 1 of 5  |  Train 1,996 · Test 499",
+      "Training and test listings are spatially mixed.\nNearby listings can enter both sets.",
+      "B  Leave-one-area-out cross-validation",
+      "Södermalm held out · 11 area folds  |  Train 1,800 · Test 695",
+      "One whole neighbourhood is held out.\nPrediction is tested in an unseen area.",
+      "500 m cell centres, N >= 5; larger dots = more listings · Saved sample, folds and provider boundaries · EPSG:3006",
+      "Training",
+      "Test"
+    ],
+    "spatial_grid_sensitivities_stockholm": [
+      "N",
+      "5 km",
+      "1 km · no shift",
+      "N",
+      "5 km",
+      "1.5 km · no shift",
+      "N",
+      "5 km",
+      "2 km · no shift",
+      "N",
+      "5 km",
+      "1 km · half-cell shift",
+      "N",
+      "5 km",
+      "1.5 km · half-cell shift",
+      "N",
+      "5 km",
+      "2 km · half-cell shift",
+      "Stockholm · six spatial block designs · EPSG:3006",
       "Saved test fold",
       "1",
       "2",
@@ -1092,13 +1404,22 @@
   "outputs": {
     "figures/catchment_comparison.png": "35ab99af52f745b4c3324e17dce04684e2d055a5b12e17587f751d83d72272af",
     "figures/price_distributions.png": "ec86be3bf118b95bed2bfbd3653eda3209d300faeaed3eb9695fbc4f189fad8f",
-    "figures/random_vs_loao_validation_schematic.png": "ae1aedd9bee9c4f53daad86f8d8b006540b7eb6fe0ea0ca28fdebde7cb487c61",
-    "figures/spatial_grid_sensitivities.png": "f846a47877318d2c475f2fd96a6727bdfaf6dd6b1ee9f5d0808d939ea7b6128f"
+    "figures/random_vs_loao_validation_schematic.png": "a190071cd90ff2c961985bdfcd7dd687a6cf084ee4f16d34062b819d7b23f3f9",
+    "figures/spatial_grid_sensitivities.png": "320cdf71b0c5dc5ef766b1004702530fdcc943d55a928d84942fb381d1a8246f",
+    "figures/random_vs_loao_validation_schematic_oslo.png": "16f667397d596f8011502e23920b1fc6bf37dfbfd894bb2c0fd258559a526a78",
+    "figures/spatial_grid_sensitivities_oslo.png": "f19c6a610ab8046f8ee2863808af030fe027c973e11b4f6264d33750a366a342",
+    "figures/random_vs_loao_validation_schematic_stockholm.png": "cbbed2a731785aa85ab8d5fd47ff91f2db586c9db75c535be37ddff926334329",
+    "figures/spatial_grid_sensitivities_stockholm.png": "02903187b99c74348f3c47a55d700022bad6d78c86b44a1c0425d98432e21c49"
   },
-  "privacy": "No listing points/identifiers exported. Listing-based maps use 500 m cells with N>=5; block maps suppress cells with N<5.",
+  "privacy": "No individual listing coordinates or identifiers exported. Dot maps show 500 m cell centres with total N>=5; block maps suppress cells with N<5.",
+  "style_request": "Archived blue/orange dot-map layout; researcher explicitly retained the 500 m aggregation rule",
   "crs": {
     "listing_source": "EPSG:4326",
-    "copenhagen_maps": "EPSG:25832",
+    "city_maps": {
+      "copenhagen": "EPSG:25832",
+      "oslo": "EPSG:25833",
+      "stockholm": "EPSG:3006"
+    },
     "sample_coordinates": {
       "copenhagen": "EPSG:25832",
       "oslo": "EPSG:25833",

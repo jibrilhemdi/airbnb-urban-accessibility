@@ -1429,3 +1429,69 @@ Completed scientific outputs, raw bytes, SQL identities, models and predictions
 remain unchanged. Normal incremental commit/push uses existing v4 and recorded
 origin, explicit HEAD:refs/heads/v4 and remote/local SHA verification. Failed
 publication is LOCAL_ONLY. This entry does not contain its own commit SHA.
+
+## 27 October 2026 — Archived-style dots and multi-city validation companions
+
+At the researcher's request, replaced Figure 5.2's pie symbols with the archived
+reporting layout: blue/orange dots, paired random/area panels, compact headings,
+held-out polygon/callout, legend and explanatory lines. The researcher explicitly
+chose aggregated dots preserving the contract's 500 m / at-least-five rule.
+No display/privacy waiver or individual-location export is inferred.
+Dots occupy 500 m cell centres, with marker area 1.5 + 0.15 × role count in
+square points. Training is drawn first, test over it; larger symbols indicate
+more listings. Source counts include all saved observations, including those
+suppressed only from display. Captions/footer distinguish aggregates from
+listing points. Full frozen study extents are retained.
+
+Extended the existing generator to all three saved geography/validation
+packages, with canonical record/summary hashes and complete one-test-membership
+and fold-support checks. Current random fold 1 train/test counts are
+9,926/2,482 (Copenhagen), 6,823/1,706 (Oslo) and 1,996/499 (Stockholm).
+Named public central-neighbourhood examples, chosen without price/performance
+criteria, are Nørrebro (10,227/2,181), Grünerløkka (6,940/1,589) and Södermalm
+(1,800/695). Visible 500 m cells number 277/281/135; 151/539/700 listings are
+suppressed only from those maps. No analytical sample or saved fold is changed.
+
+Created Oslo and Stockholm versions of both the random/area comparison and
+six-grid maps. Each uses its own mask, provider groups, current saved block
+memberships and metric CRS (EPSG:25832/25833/3006). Source geometry is EPSG:4326;
+N arrows indicate grid north. Grid cells still require N>=5 and one saved fold
+per cell; fold colours apply within each panel. Explicit framing corrected
+annotation clipping in an initial Stockholm render, without changing geometry,
+coordinates or analytical assignments. Catchment and price PNGs remain exactly
+byte-identical to the preceding checkpoint.
+
+Main-text Figure 5.2/5.3 remain Copenhagen, with cross-references to Appendix B.
+Added the four city companions there as B.1–B.4 to keep all panels readable.
+Updated guide, source note and eight-figure manifest. Shortened repeated
+Discussion wording to reserve character space; retained measurement/prediction
+distinctions, control overlap as an unisolated explanation, estimator dependence,
+Stockholm's two-of-six block scope, benchmarked relative transfer, directional
+dependence, all material limitations, post-observation decision timing,
+conditional/noncausal inference and future-work boundaries. Researcher
+Introduction/Literature/Theory and working bibliography bytes are unchanged.
+Old output deletions remain untouched and excluded from staging.
+
+Preserved exact pre-feedback script, manuscript, bibliography, two maps, manifest,
+guide, source note, log and reading preview, with hashes, in
+archive/before_multicity_validation_figures_20261027/. All archived reference
+images and completed scientific artifacts remain unchanged. No acquisition,
+SQL write, feature/fold replacement, tuning, model fitting or prediction change.
+
+Validation: eight-figure deterministic --check, existing six-result-table
+--check, Methods-assets --check, audited Python compilation and scoped whitespace
+PASS. Working and isolated checkpoint-only XeLaTeX/latexmk/Biber builds PASS,
+without undefined references/citations, overfull boxes or oversized floats.
+Visually checked all city images and manuscript/appendix pages. Known KU package
+warning, inherited local bibliography duplicates and one underfull bibliography
+paragraph remain. Refreshed the local 13-page Data/Methods/Appendix-B preview
+at thesis_report/build/data_and_methods.pdf.
+
+Estimated main-body length, including Appendix B and page numbers: 67,667
+normalized PDF-text characters + 3,459 embedded characters in the eight PNGs
++ 455 in the unchanged study-area map = 71,581 including spaces. References
+and front matter remain excluded under the previously disclosed counting-scope
+assumption; no programme-specific or all-content length certification is made.
+Normal incremental commit/push uses existing v4, recorded origin, explicit
+HEAD:refs/heads/v4 and remote/local SHA verification. Publication failure is
+LOCAL_ONLY. This entry does not contain its own commit SHA.

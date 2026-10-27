@@ -376,11 +376,11 @@ this design with random allocation.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth]{random_vs_loao_validation_schematic.png}
-  \caption{Two saved Copenhagen evaluation splits. Fixed-size circles show
-  training/test shares in 500 m cells with at least five listings, not listing
-  locations. Random allocation mixes the sets spatially; the primary design
-  holds out Nørrebro. Sources: frozen sample, fold assignments and provider
-  boundaries; EPSG:25832; grid north.}
+  \caption{Two saved Copenhagen splits. Dots show training/test counts at
+  500 m cell centres with at least five listings; larger dots indicate more
+  listings. Nørrebro is held out on the right. Sources: frozen sample, folds
+  and provider boundaries; EPSG:25832; grid north. Oslo and Stockholm versions
+  appear in Appendix~\ref{app:extended-results}.}
   \label{fig:validation-comparison}
 \end{figure}
 
@@ -456,7 +456,8 @@ change the areas assigned to each test fold.
   lower row shifts both axes by half a cell. Fold colours are not comparable
   across panels. Cells with fewer than five
   listings are suppressed. Source: frozen sample, fold assignments and provider
-  boundaries; EPSG:25832; grid north.}
+  boundaries; EPSG:25832; grid north. Companion cities appear in
+  Appendix~\ref{app:extended-results}.}
   \label{fig:spatial-grid-sensitivities}
 \end{figure}
 
@@ -682,126 +683,88 @@ and predictive usefulness implies.
 
 \section{What accessibility representation changes}
 \label{sec:discussion-measurement}
-The central finding is that a clear measurement difference can coexist with
-a small or inconsistent predictive difference. Walking-network measures
-describe reachable destinations under the specified pedestrian graph and
-travel budget. Euclidean measures describe proximity without those routing
-constraints. RQ1 shows that this choice materially changes the recorded access
-available to a listing. RQ2 shows that the change does not translate directly
-into lower price-prediction error.
+Walking networks measure access along pedestrian routes; Euclidean measures
+record proximity without routing constraints. RQ1 shows that this distinction
+changes recorded access, while RQ2 shows that it need not lower prediction error.
+Measurement detail and predictive usefulness are therefore separate findings.
 
-The predictive comparisons evaluate the information accessibility adds after
-the common controls are already available. Those controls include population
-density and distance to the civic centre, which
-may share location information with accessibility. Overlap is one plausible
-reason why a substantial measurement difference can add little predictive
-information. The analysis does not isolate this explanation, and Oslo's small
-adverse changes do not establish that accessibility is unimportant to its
-visitors or hosts. They establish that these accessibility features did not
-improve the specified primary prediction task there.
+Accessibility adds information after controls such as density and civic-centre
+distance are available. Shared location information could explain limited
+additional gains, but this explanation was not isolated. Oslo's adverse changes
+concern these features and this prediction task; they do not establish that
+accessibility is unimportant to visitors or hosts.
 
-The different OLS and XGBoost rankings also caution against reading a model
-comparison as a property of the accessibility measure alone. Performance
-reflects the estimator, controls and evaluation task together. Likewise, an
-association coefficient measures a conditional relationship rather than an
-out-of-sample error reduction. Mixed coefficient signs in the joint model
-should therefore not be converted into a simple gradient in which greater
-accessibility necessarily means higher asking prices.
+Different OLS and XGBoost rankings show that performance depends on the
+estimator, controls and task together. Conditional association coefficients
+also differ from out-of-sample gains. Mixed joint-model signs do not support
+a general rule that greater accessibility means higher asking prices.
 
 \section{Geography and the limits of transportability}
 \label{sec:discussion-geography}
-The validation results show why the prediction setting must be specified
-before interpreting performance. Random folds distribute observations across
-the same city, allowing training and test listings to occupy nearby locations.
-Neighbourhood holdouts ask the model to predict an operational area excluded
-from training. The higher baseline errors under the latter design show that
-success under random allocation does not fully describe performance in an
-unseen neighbourhood in these samples.
+Random folds allow training and test listings to be nearby. Neighbourhood
+holdouts exclude a whole operational area. Their higher baseline errors show
+that random-validation success does not fully describe prediction in an
+unseen neighbourhood.
 
-Neighbourhood and block holdouts also impose different geographic separations
-and training compositions. Stockholm illustrates the consequence: a favourable
-citywide walking-model result under neighbourhood validation appears in only
-two of the six XGBoost block comparisons. A conclusion that walking
-accessibility improves geographic generalization without specifying the
-holdout design would conceal this variation. Reporting the fixed alternatives
-and local results makes the scope of the primary gain more precise.
+Block designs change separation and training composition again. Stockholm's
+favourable primary walking result appears in only two of six XGBoost block
+comparisons. Geographic generalization claims must therefore specify the
+holdout design and recognise variation within cities.
 
-Cross-city transfer extends this issue to a different market. Mean centring
-removes the reference citywide log-price level, while differences in price
-dispersion, covariate support and conditional relationships remain. These
-differences can contribute to directional asymmetry, but the experiments do
-not separate their individual contributions. Reversing source and target
-changes both the learned relationship and the population being scored.
+City-mean centring removes the reference log-price level, leaving differences
+in dispersion, covariate support and conditional relationships. These could
+contribute to directional asymmetry, but their contributions are not separated.
+Reversing direction changes both the learned relationship and target population.
 
-The target reference is also a practical limit on the transfer claim. Its mean
-is calculated from observed target asking prices before feature filtering.
-The experiments consequently assess transfer of relative-price predictions
-with a known market benchmark. They do not test absolute-price prediction in
-a market whose price level is unknown. Shared source pipelines and repeated
-target populations further mean that the six directions provide related
-comparisons, not independent replications.
+The target mean uses observed asking prices before feature filtering. Transfer
+thus concerns relative prices with a known market benchmark, not absolute prices
+in a market with an unknown level. Shared pipelines and repeated target
+populations also make the six directions related comparisons.
 
 \section{Limitations and methodological decisions}
 \label{sec:limitations}
-The outcome limits the substantive interpretation. These are advertised
-nightly asking prices, not completed transactions, bookings or host revenue.
-Listings without an observed positive price are excluded, and substantial
-attrition occurs before the final predictive samples. The results therefore
-describe the retained listings rather than all short-term accommodation or
-realized visitor expenditure. No missing outcome is reconstructed or imputed.
+Advertised asking prices are not transactions, bookings or revenue. Excluding
+missing and nonpositive prices causes substantial attrition, so findings concern
+the retained listings rather than all accommodation or realised expenditure.
+No missing outcome is reconstructed or imputed.
 
-Accessibility is also measured with imperfect spatial inputs. Displaced
-listing coordinates, incomplete OSM destinations, network connectivity,
-snap connectors and the finite extraction extent can affect recorded access.
-Between-city opportunity differences can reflect both actual destination
-supply and differences in source coverage. Provider neighbourhoods used for
-validation are distinct from the accepted study masks and native population
-areas. Density comparisons retain source-vintage and denominator differences,
-including Stockholm's published population/area pairing. These qualifications
-limit how literally fine spatial contrasts and cross-city levels can be read.
+Displaced coordinates, incomplete OSM destinations, network connectivity,
+connectors and finite extraction extent affect access measurement. City
+opportunity differences may reflect both supply and source coverage. Validation
+neighbourhoods, study masks and native population areas serve different purposes.
+Density retains source-vintage and denominator differences, including Stockholm's
+published population/area pairing. Fine spatial contrasts and cross-city levels
+therefore require qualification.
 
-The association samples introduce additional selection. The uniform missingness
-eligibility limit was raised from 5\% to 10\% after Stockholm's 5.8918\%
-missingness had been observed. This amendment allowed the prescribed
-complete-case analysis; it did not fill the 147 missing bedroom values or
-correct selection into complete cases. The 15-test/500-training support gate
-was likewise chosen after inspecting support, before final fitting. Both
-decisions should be evaluated with their actual timing rather than described
-as wholly preregistered choices.
+The uniform association eligibility limit rose from 5\% to 10\% after Stockholm's
+5.8918\% missingness was observed. This allowed complete cases without filling
+147 bedroom blanks or correcting selection. The 15-test/500-training gate was
+also chosen after support inspection, before final fitting. Neither decision
+should be described as wholly preregistered.
 
-Uncertainty remains constrained by the geographic structure. There are only
-11, 17 and 11 primary groups, training sets overlap, and residual spatial
-dependence persists. The group-resampled ranges describe sensitivity to
-geographic composition conditional on the fitted predictions. Individual
-association tests are not adjusted for the full set of comparisons, and the
-related accessibility terms complicate separate coefficient interpretation.
-These considerations favour attention to the pattern across specifications
-over isolated thresholds or small point differences.
+Only 11, 17 and 11 primary groups are available; training sets overlap and
+residual spatial dependence persists. Resampled ranges describe geographic
+composition conditional on fitted predictions. Individual association tests
+are not adjusted for multiple comparisons, and related accessibility terms
+complicate separate coefficients. Patterns across specifications deserve more
+weight than isolated thresholds or small point differences.
 
-Finally, the design is observational and covers three selected capital-city
-samples in one listing period. Adjusted relationships cannot establish that
-accessibility changes asking prices, and they do not identify housing
-displacement or wider welfare effects. Income and residential-price variables
-remain outside the implemented design. Generalization to other cities,
-accommodation types or periods requires further evidence.
+The observational design covers three selected capitals in one period. It
+cannot establish causal price changes, housing displacement or welfare effects.
+Income and residential prices remain excluded. Other cities, accommodation
+types and periods require further evidence.
 
 \section{Implications and future research}
 \label{sec:implications}
-For empirical work, accessibility representation and prediction evaluation
-should be treated as separate choices. A walking network is appropriate when
-the substantive quantity is access along the specified pedestrian routes;
-its predictive value still needs to be established against a common control
-model on the intended geographic task. The four-model comparison helps by
-separating the contribution of either representation from the gain obtained
-by adding one to the other, while keeping observations and folds constant.
+Use walking networks when pedestrian-route access is the substantive quantity,
+and test their predictive value against common controls on the intended
+geographic task. The four models separate individual contributions, replacement
+and add-on gains using common observations and folds.
 
-Future work could examine whether the patterns persist across listing periods
-and additional cities, and assess how improved coordinate and destination
-coverage changes measurement. A study of route circuity would need paths to
-the same fixed destinations. A deployment study would need to specify how a
-new market's price benchmark is obtained without using its evaluation prices.
-These extensions address limits of the present evidence; they are not
-completed analyses in this thesis.
+Future work could extend cities and periods and improve coordinate/destination
+coverage. Route circuity requires paths to the same fixed destinations. Deployment
+requires a new-market benchmark obtained without its evaluation prices. These
+extensions address present limits; they are not completed thesis analyses.
 
 % ======================================================================
 % CHAPTER 8 -- CONCLUSION
@@ -856,6 +819,38 @@ controls and qualified native density denominators. Use aggregate evidence.}
 \draftnote{Place full associations, descriptive held-out contributions,
 neighbourhood detail, transfer diagnostics and spatial residual checks here.
 Retain source captions and privacy suppression for published maps/bins.}
+
+The Oslo and Stockholm companions to Figures~\ref{fig:validation-comparison}
+and~\ref{fig:spatial-grid-sensitivities} retain their source and display rules.
+The example neighbourhoods are Grünerløkka and Södermalm, respectively.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,height=.66\textheight,keepaspectratio]{random_vs_loao_validation_schematic_oslo.png}
+  \caption{Oslo validation examples; EPSG:25833.}
+  \label{fig:validation-oslo}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{spatial_grid_sensitivities_oslo.png}
+  \caption{Oslo's six block designs; EPSG:25833.}
+  \label{fig:grid-oslo}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,height=.70\textheight,keepaspectratio]{random_vs_loao_validation_schematic_stockholm.png}
+  \caption{Stockholm validation examples; EPSG:3006.}
+  \label{fig:validation-stockholm}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{spatial_grid_sensitivities_stockholm.png}
+  \caption{Stockholm's six block designs; EPSG:3006.}
+  \label{fig:grid-stockholm}
+\end{figure}
 
 \chapter{Robustness and Specification Decisions}
 \label{app:robustness}

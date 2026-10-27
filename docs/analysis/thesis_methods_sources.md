@@ -129,3 +129,42 @@ byte. No acquisition, database write, feature replacement, fold regeneration,
 fitting, tuning or new scientific result is performed. The simpler native
 LaTeX workflow remains reproducible but is replaced in the manuscript by the
 more informative geographic illustration.
+
+
+## Multi-city validation style feedback — 27 October 2026
+
+Supersedes the preceding Copenhagen-only/pie presentation, preserving that
+checkpoint's exact files in archive/before_multicity_validation_figures_20261027/.
+The researcher explicitly chose to match the archived layout and colours with
+aggregated dots, preserving the 500 m / N>=5 public display rule. No privacy
+rule is waived and no individual listing locations or identifiers are exported.
+
+The updated generator reads all three frozen validation/geography packages,
+checks every saved membership and support count, and creates the random/area
+and six-grid views for each city. The main-text filenames remain Copenhagen;
+_oslo and _stockholm companions are in Appendix B. Example holdouts are
+Nørrebro, Grünerløkka and Södermalm, named public central neighbourhoods chosen
+without price or predictive-performance criteria. Full sample/support counts
+refer to all saved observations, including those suppressed from the display.
+
+Blue training and orange test dots occupy the same 500 m cell centre, with
+marker area 1.5 + 0.15 × role count in square points. The test dot is drawn over
+the training dot, so mixed cells can show both colours. These are aggregate
+symbols, not individual locations or a reconstructed point cloud. The archive's
+heading, paired panels, held-out polygon/callout, legend and explanatory lines
+are retained in the current style; the footer discloses aggregation.
+
+Maps retain each full frozen study-mask extent, with the same extent in the two
+validation panels. Large unpopulated areas in Oslo are not cropped to create a
+denser-looking sample. North is projected grid north; city CRSs are
+EPSG:25832, EPSG:25833 and EPSG:3006. Six block configurations use the same full
+extent per city and the actual saved cell/fold memberships, with N<5 cells
+suppressed. Explicit map framing fixes annotation clipping in the initial
+Stockholm preview. No analytical coordinate or fold correction is made.
+
+Catchment and price distributions are unchanged. Existing selectors, raw bytes,
+SQL identities and completed fitted/prediction artifacts stay fixed. The figure
+manifest now records all three cities' geography/validation sources, current
+style and all eight PNG/text hashes. Repeated Discussion wording is shortened
+to reserve space for companion captions/figure labels without changing findings,
+methodological timing, causal qualifications or transfer/uncertainty limits.

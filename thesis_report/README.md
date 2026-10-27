@@ -102,7 +102,7 @@ place of the optional three-box workflow. The inputs and code hashes for the
 table/workflow are in `tables/methods_assets_manifest.json`; reference/implementation
 checks are in [the Methods source note](../docs/analysis/thesis_methods_sources.md).
 
-Four further figures are regenerated for the current study rather than copied
+Eight further figures are regenerated for the current study rather than copied
 from the archived single-city analysis:
 
 ```sh
@@ -114,8 +114,9 @@ from the archived single-city analysis:
 in Chapter 4. `catchment_comparison.png`,
 `random_vs_loao_validation_schematic.png` and `spatial_grid_sensitivities.png`
 explain accessibility, neighbourhood holdouts and the six block configurations
-in Methods. The map illustrations use Copenhagen; the same registered designs
-apply in all cities. Keep these four PNGs in the Overleaf upload.
+in Methods. The main-text maps use Copenhagen; `_oslo.png` and `_stockholm.png`
+companions to both validation figures appear in Appendix B. Keep all eight PNGs
+in the Overleaf upload.
 
 The generator reads the existing PostGIS samples, saved outer memberships,
 destinations and geometry in read-only transactions. The catchment alone
@@ -123,7 +124,12 @@ reconstructs the public pedestrian graph in memory from its exact preserved
 OSM sources, checking it against the frozen graph summary. It routes from a
 public node, never a listing, and does not recompute listing features or fit
 models. Listing-based displays aggregate locations; the old individual-point
-map is not reused. Hashes, sources, CRSs, histogram counts, display exclusions
+map is not reused. At the researcher's explicit choice, the archived layout,
+blue/orange dots and held-out-area callout are matched while retaining 500 m
+cell centres with N>=5. Larger dots indicate higher training/test counts; the
+prior pies are replaced. Oslo holds out Grünerløkka and Stockholm Södermalm,
+using their saved memberships and native projected CRSs.
+Hashes, sources, CRSs, histogram counts, display exclusions
 and public-origin details are in `tables/explanatory_figures_manifest.json`.
 The archived figures and completed analytical outputs remain unchanged.
 

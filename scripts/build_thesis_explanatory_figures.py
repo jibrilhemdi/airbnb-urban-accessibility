@@ -21,7 +21,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 from matplotlib.lines import Line2D
-from matplotlib.patches import Circle, Patch, Rectangle, Wedge
+from matplotlib.patches import Circle, Patch, Rectangle
 from matplotlib.ticker import MaxNLocator
 from matplotlib.text import Text
 import networkx as nx
@@ -65,7 +65,8 @@ def load():
     pointers = {f: json.loads((ROOT / f"config/study/{f}_selection.json").read_text())
                 for f in ("sample", "validation", "geography", "accessibility")}
     data = {"design": design, "cities": cities, "frames": {}, "sources": {},
-            "catalog_sha256": sha256_file(ROOT / "reports/frozen_reporting_sources.json")}
+            "catalog_sha256": sha256_file(ROOT / "reports/frozen_reporting_sources.json"),
+            "geometries": {}, "folds": {}, "validation": {}, "assignments": {}}
     engine = get_engine()
     try:
         with engine.connect() as conn:
@@ -90,54 +91,57 @@ def load():
                     raise ValueError("Invalid original observed prices or sample coordinates")
                 data["frames"][city] = frame
                 data["sources"][f"sample:{city}"] = {**item, "record_sha256": summary["record_sha256"], "n": len(frame)}
-            city = "copenhagen"
-            for family in ("validation", "accessibility", "geography"):
-                item = pointers[family][city]
-                summary, deps = read_package(conn, item["run_id"], city, family)
-                if canonical_hash(summary) != item["summary_sha256"]:
-                    raise ValueError("Frozen selection changed: " + family)
-                data["sources"][family] = item
-                if family == "validation":
-                    rows = records(conn, pointers[family], city, family, "outer_test")
-                    if canonical_hash(rows) != summary["outer_hash"]:
-                        raise ValueError("Saved outer fold assignments changed")
-                    data["folds"] = pd.DataFrame(rows)
-                    data["validation"] = summary
-                    data["sources"][family] = {**item, "outer_hash": summary["outer_hash"]}
-                elif family == "accessibility":
-                    rows = records(conn, pointers[family], city, family, "destinations")
-                    if canonical_hash(rows) != summary["destination_universe_sha256"]:
-                        raise ValueError("Frozen destination universe changed")
-                    data["destinations"] = pd.DataFrame(rows)
-                    data["accessibility"], data["accessibility_deps"] = summary, deps
-                else:
-                    rows = [dict(r) for r in conn.execute(text(
-                        "SELECT geometry_key,properties,ST_AsGeoJSON(geom,15) AS geometry "
-                        "FROM study.geometries WHERE run_id=:run AND city=:city AND family='geography' "
-                        "ORDER BY geometry_key"), {"run": item["run_id"], "city": city}).mappings()]
-                    data["geometries"] = {r["geometry_key"]: shape(json.loads(r["geometry"])) for r in rows}
-                    data["sources"][family] = {**item, "geometry_sha256": canonical_hash(rows)}
+            for city in CITIES:
+                for family in ("validation", "accessibility", "geography"):
+                    if family == "accessibility" and city != "copenhagen":
+                        continue
+                    item = pointers[family][city]
+                    summary, deps = read_package(conn, item["run_id"], city, family)
+                    if canonical_hash(summary) != item["summary_sha256"]:
+                        raise ValueError("Frozen selection changed: " + family)
+                    data["sources"][family + ":" + city] = item
+                    if family == "validation":
+                        rows = records(conn, pointers[family], city, family, "outer_test")
+                        if canonical_hash(rows) != summary["outer_hash"]:
+                            raise ValueError("Saved outer fold assignments changed")
+                        data["folds"][city] = pd.DataFrame(rows)
+                        data["validation"][city] = summary
+                        data["sources"][family + ":" + city] = {**item, "outer_hash": summary["outer_hash"]}
+                    elif family == "accessibility":
+                        rows = records(conn, pointers[family], city, family, "destinations")
+                        if canonical_hash(rows) != summary["destination_universe_sha256"]:
+                            raise ValueError("Frozen destination universe changed")
+                        data["destinations"] = pd.DataFrame(rows)
+                        data["accessibility"], data["accessibility_deps"] = summary, deps
+                    else:
+                        rows = [dict(r) for r in conn.execute(text(
+                            "SELECT geometry_key,properties,ST_AsGeoJSON(geom,15) AS geometry "
+                            "FROM study.geometries WHERE run_id=:run AND city=:city AND family='geography' "
+                            "ORDER BY geometry_key"), {"run": item["run_id"], "city": city}).mappings()]
+                        data["geometries"][city] = {r["geometry_key"]: shape(json.loads(r["geometry"])) for r in rows}
+                        data["sources"][family + ":" + city] = {**item, "geometry_sha256": canonical_hash(rows)}
             data["context"], data["sources"]["cartographic_context"] = load_layers(conn)
             if package_identities(conn) != identities:
                 raise ValueError("SQL identities changed during read-only loading")
     finally:
         engine.dispose()
-    frame = data["frames"]["copenhagen"].copy()
-    frame["listing_id"] = frame.listing_id.astype(str)
-    merged = data["folds"].merge(frame[["listing_id", "metric_x", "metric_y", "operational_group"]],
-                                 on="listing_id", validate="many_to_one")
-    if len(merged) != len(data["folds"]):
-        raise ValueError("Incomplete sample/fold join")
-    for scheme, part in merged.groupby("scheme"):
-        if len(part) != len(frame) or part.listing_id.duplicated().any():
-            raise ValueError("Invalid common held-out membership: " + scheme)
-        actual = part.groupby("outer_test_fold").size().to_dict()
-        expected = {r["fold"]: r["test_n"] for r in data["validation"]["folds"] if r["scheme"] == scheme}
-        if actual != expected:
-            raise ValueError("Saved fold counts differ")
-        if scheme == "neighbourhood" and not part.outer_test_fold.eq(part.operational_group).all():
-            raise ValueError("Neighbourhood holdout membership differs")
-    data["assignments"] = merged
+    for city in CITIES:
+        frame = data["frames"][city].copy()
+        frame["listing_id"] = frame.listing_id.astype(str)
+        merged = data["folds"][city].merge(frame[["listing_id", "metric_x", "metric_y", "operational_group"]],
+                                     on="listing_id", validate="many_to_one")
+        if len(merged) != len(data["folds"][city]):
+            raise ValueError("Incomplete sample/fold join")
+        for scheme, part in merged.groupby("scheme"):
+            if len(part) != len(frame) or part.listing_id.duplicated().any():
+                raise ValueError("Invalid common held-out membership: " + scheme)
+            actual = part.groupby("outer_test_fold").size().to_dict()
+            expected = {r["fold"]: r["test_n"] for r in data["validation"][city]["folds"] if r["scheme"] == scheme}
+            if actual != expected:
+                raise ValueError("Saved fold counts differ")
+            if scheme == "neighbourhood" and not part.outer_test_fold.eq(part.operational_group).all():
+                raise ValueError("Neighbourhood holdout membership differs")
+        data["assignments"][city] = merged
     return data
 
 
@@ -193,73 +197,133 @@ def prices(data):
     return png(fig), details
 
 
-def base_map(ax, data):
-    project = Transformer.from_crs(4326, 25832, always_xy=True).transform
-    mask = transform(project, data["geometries"]["mask"])
-    for item in data["context"]["copenhagen"]:
+def base_map(ax, data, city="copenhagen", *, bounds=None):
+    project = Transformer.from_crs(4326, data["cities"][city]["metric_crs"], always_xy=True).transform
+    mask = transform(project, data["geometries"][city]["mask"])
+    for item in data["context"][city]:
         if item["role"] == "surrounding_municipality":
             outline(ax, transform(project, item["geometry"]), facecolor="#E4EAE7", edgecolor="#BCC8C4", lw=.6, zorder=1)
     outline(ax, mask, facecolor="#F8FAF9", edgecolor=theme.DARK[0], lw=1, zorder=2)
-    for key, geometry in data["geometries"].items():
+    for key, geometry in data["geometries"][city].items():
         if key.startswith("group:"):
             outline(ax, transform(project, geometry).intersection(mask), facecolor="none", edgecolor="#9EB4C0", lw=.6, zorder=7)
     xmin, ymin, xmax, ymax = np.asarray(mask.bounds) / 1000
     span = max(xmax-xmin, ymax-ymin) * 1.08
     xc, yc = (xmin+xmax)/2, (ymin+ymax)/2
     ax.set(xlim=(xc-span/2, xc+span/2), ylim=(yc-span/2, yc+span/2))
-    theme.map_frame(ax)
-    for item in ax.texts:
-        if item.get_text() == "N\n(grid)":
-            item.set_text("N")
-        item.set_fontsize(11)
+    if bounds is None:
+        theme.map_frame(ax)
+        for item in ax.texts:
+            if item.get_text() == "N\n(grid)":
+                item.set_text("N")
+            item.set_fontsize(11)
+    else:
+        ax.set(xlim=(bounds[0],bounds[2]), ylim=(bounds[1],bounds[3]), aspect="equal", xticks=[], yticks=[])
+        ax.set_facecolor("#EEF4F7")
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+        ax.annotate("N",xy=(.92,.95),xytext=(.92,.82),xycoords="axes fraction",ha="center",
+                    fontsize=10,weight="bold",color=theme.NAVY,
+                    arrowprops={"arrowstyle":"-|>","color":theme.NAVY},zorder=20)
+        span = bounds[2]-bounds[0]
+        distance = 2 if span < 25 else 5
+        x, y = bounds[0]+.06*span, bounds[1]+.04*(bounds[3]-bounds[1])
+        ax.plot([x,x+distance],[y,y],color=theme.NAVY,lw=2,zorder=20)
+        ax.text(x+distance/2,y+.02*(bounds[3]-bounds[1]),f"{distance} km",ha="center",fontsize=10,
+                bbox={"facecolor":"white","edgecolor":"none","alpha":.9,"pad":2},zorder=20)
     return mask
 
 
-def validation(data):
-    fig, axes = plt.subplots(1, 2, figsize=(11.5, 5.8))
-    fig.subplots_adjust(left=.01, right=.99, top=.84, bottom=.14, wspace=.035)
-    details = {}
-    for ax, scheme, heldout, title in zip(axes, ("random", "neighbourhood"), ("1", "Nørrebro"),
-                                         ("A  Random validation", "B  Neighbourhood holdout")):
-        part = data["assignments"].loc[lambda f: f.scheme.eq(scheme)].copy()
+TEST_AREAS = {"copenhagen": "Nørrebro", "oslo": "Grünerløkka", "stockholm": "Södermalm"}
+
+
+def validation(data, city="copenhagen"):
+    project = Transformer.from_crs(4326, data["cities"][city]["metric_crs"], always_xy=True).transform
+    mask = transform(project, data["geometries"][city]["mask"])
+    xmin, ymin, xmax, ymax = np.asarray(mask.bounds)/1000
+    padding = .02*max(xmax-xmin, ymax-ymin)
+    bounds = (xmin-padding, ymin-padding, xmax+padding, ymax+padding)
+    width, margin, gutter = 12.4, .22, .22
+    panel_width = (width-2*margin-gutter)/2
+    panel_height = panel_width*(bounds[3]-bounds[1])/(bounds[2]-bounds[0])
+    footer, header = .98, 1.14
+    height = footer+panel_height+header
+    fig = plt.figure(figsize=(width, height))
+    lefts = [margin, margin+panel_width+gutter]
+    axes = [fig.add_axes([left/width, footer/height, panel_width/width, panel_height/height]) for left in lefts]
+    top = footer+panel_height
+    fig.text(margin/width, (top+.86)/height, "Two ways to test prediction", fontsize=18, weight="bold")
+    label = "Copenhagen & Frederiksberg" if city == "copenhagen" else data["cities"][city]["display_name"]
+    fig.text(margin/width, (top+.58)/height,
+             f"{label} · {len(data['frames'][city]):,} listings · one saved split per design", fontsize=10.5, color=theme.INK)
+    details = {"city": city, "metric_crs": data["cities"][city]["metric_crs"],
+               "neighbourhood_example_rule": "Named public central neighbourhood, selected without prices or model performance",
+               "shared_map_bounds_km": list(bounds), "marker_area_rule": "1.5 + 0.15 * role count in square points",
+               "display_rule": "Both roles use the same 500 m cell centre; cell total N>=5; no individual locations"}
+    descriptions = ["Training and test listings are spatially mixed.\nNearby listings can enter both sets.",
+                    "One whole neighbourhood is held out.\nPrediction is tested in an unseen area."]
+    for i, (ax, scheme, heldout, title) in enumerate(zip(axes, ("random", "neighbourhood"),
+            ("1", TEST_AREAS[city]), ("Random cross-validation", "Leave-one-area-out cross-validation"), strict=True)):
+        part = data["assignments"][city].loc[lambda f: f.scheme.eq(scheme)].copy()
         part["test"] = part.outer_test_fold.eq(heldout).astype(int)
         if not part.test.any():
-            raise ValueError("Requested saved split is unavailable")
-        part["gx"] = np.floor(part.metric_x / 500).astype(int)
-        part["gy"] = np.floor(part.metric_y / 500).astype(int)
+            raise ValueError("Requested saved split is unavailable: " + city)
+        part["gx"] = np.floor(part.metric_x/500).astype(int)
+        part["gy"] = np.floor(part.metric_y/500).astype(int)
         cells = part.groupby(["gx", "gy"]).agg(n=("test", "size"), test=("test", "sum")).reset_index()
+        cells["train"] = cells.n-cells.test
         visible = cells.loc[cells.n >= 5]
-        mask = base_map(ax, data)
+        base_map(ax, data, city, bounds=bounds)
         if scheme == "neighbourhood":
-            geom = transform(Transformer.from_crs(4326, 25832, always_xy=True).transform,
-                             data["geometries"]["group:" + heldout])
-            outline(ax, geom.intersection(mask), facecolor=theme.SAND, edgecolor=theme.DARK[1], lw=1.5, alpha=.35, zorder=3)
-        for row in visible.itertuples():
-            centre = ((row.gx*500+250)/1000, (row.gy*500+250)/1000)
-            ax.add_patch(Circle(centre, .21, facecolor=theme.BLUE, edgecolor="none", zorder=4))
-            if row.test:
-                ax.add_patch(Wedge(centre, .21, 90, 90+360*row.test/row.n, facecolor=theme.SAND, edgecolor="none", zorder=5))
+            geom = transform(project, data["geometries"][city]["group:"+heldout]).intersection(mask)
+            outline(ax, geom, facecolor=theme.SAND, edgecolor=theme.DARK[1], lw=1.4, alpha=.42, zorder=2.5)
+        for role, color, alpha in (("train", theme.BLUE, .78), ("test", theme.SAND, .95)):
+            shown = visible.loc[visible[role] > 0]
+            ax.scatter((shown.gx*500+250)/1000, (shown.gy*500+250)/1000,
+                       s=1.5+.15*shown[role], color=color, alpha=alpha, linewidths=0,
+                       zorder=3 if role == "train" else 4)
+        if scheme == "neighbourhood":
+            outline(ax, geom, facecolor="none", edgecolor=theme.DARK[1], lw=1.4, zorder=9)
+            target = geom.representative_point()
+            ax.annotate(heldout+"\nTest area", xy=(target.x/1000, target.y/1000),
+                        xytext=(.04,.92), textcoords="axes fraction", fontsize=11, weight="bold",
+                        color=theme.DARK[1], ha="left", va="top",
+                        bbox={"boxstyle":"round,pad=.35","facecolor":"white","edgecolor":"none","alpha":.94},
+                        arrowprops={"arrowstyle":"->","color":theme.DARK[1],"lw":1.1}, zorder=11)
         ntest = int(part.test.sum())
-        ax.set_title(title, loc="left", fontsize=16, pad=40)
-        subtitle = ("Saved fold 1 of 5" if scheme == "random" else "Nørrebro held out; 11 neighbourhood folds")
-        ax.text(0, 1.02, subtitle + f"\nTrain {len(part)-ntest:,} · Test {ntest:,}",
-                transform=ax.transAxes, fontsize=13, color=theme.INK, linespacing=1.4)
-        details[scheme] = {"heldout": heldout, "train_n": len(part)-ntest, "test_n": ntest,
-                           "display_cells": len(visible), "suppressed_listings": int(cells.loc[cells.n < 5, "n"].sum())}
-    fig.legend(handles=[Patch(color=theme.BLUE, label="Training"), Patch(color=theme.SAND, label="Test")],
-               loc="lower center", bbox_to_anchor=(.5, .02), ncol=2, fontsize=13)
+        fig.text(lefts[i]/width, (top+.31)/height, f"{chr(65+i)}  {title}", fontsize=13, weight="bold")
+        example = "Fold 1 of 5" if i == 0 else f"{heldout} held out · {data['cities'][city]['operational_count']} area folds"
+        fig.text(lefts[i]/width, (top+.085)/height,
+                 f"{example}  |  Train {len(part)-ntest:,} · Test {ntest:,}", fontsize=10, color=theme.INK)
+        fig.text((lefts[i]+panel_width/2)/width, (footer-.055)/height, descriptions[i],
+                 ha="center", va="top", fontsize=10, color=theme.INK, linespacing=1.3)
+        details[scheme] = {"heldout":heldout, "train_n":len(part)-ntest, "test_n":ntest,
+                           "display_cells":len(visible), "suppressed_listings":int(cells.loc[cells.n<5,"n"].sum())}
+    fig.legend(handles=[Line2D([],[],marker="o",linestyle="",color=c,markersize=6,label=l)
+                        for c,l in ((theme.BLUE,"Training"),(theme.SAND,"Test"))],
+               loc="upper center", bbox_to_anchor=(.5,(footer-.40)/height), ncol=2, fontsize=10, borderaxespad=0)
+    fig.text(margin/width, .075/height,
+             "500 m cell centres, N >= 5; larger dots = more listings · Saved sample, folds and provider boundaries · "
+             +data["cities"][city]["metric_crs"], fontsize=8.5, color=theme.INK)
     return png(fig), details
 
 
-def grids(data):
+def grids(data, city="copenhagen"):
     fig, axes = plt.subplots(2, 3, figsize=(11.5, 9))
-    fig.subplots_adjust(left=.015, right=.985, top=.95, bottom=.065, wspace=.04, hspace=.15)
-    details = {}
+    fig.subplots_adjust(left=.015, right=.985, top=.915, bottom=.065, wspace=.04, hspace=.15)
+    fig.text(.015, .99, data["cities"][city]["display_name"]+" · six spatial block designs · "
+             +data["cities"][city]["metric_crs"], va="top", fontsize=17, weight="bold")
+    details = {"city":city, "metric_crs":data["cities"][city]["metric_crs"]}
+    project = Transformer.from_crs(4326,data["cities"][city]["metric_crs"],always_xy=True).transform
+    xmin,ymin,xmax,ymax = np.asarray(transform(project,data["geometries"][city]["mask"]).bounds)/1000
+    side = max(xmax-xmin,ymax-ymin)*1.08
+    xc,yc = (xmin+xmax)/2,(ymin+ymax)/2
+    bounds = (xc-side/2,yc-side/2,xc+side/2,yc+side/2)
     for row, shift in enumerate((0, .5)):
         for col, size in enumerate((1000, 1500, 2000)):
             ax = axes[row, col]
             scheme = f"blocks_{size}m_origin_{shift:g}_{shift:g}".replace(".", "p")
-            part = data["assignments"].loc[lambda f: f.scheme.eq(scheme)].copy()
+            part = data["assignments"][city].loc[lambda f: f.scheme.eq(scheme)].copy()
             if part.empty:
                 raise ValueError("Missing saved block configuration")
             part["gx"] = np.floor((part.metric_x-size*shift)/size).astype(int)
@@ -268,7 +332,7 @@ def grids(data):
                         fold=("outer_test_fold", "first"), unique=("outer_test_fold", "nunique")).reset_index()
             if not cells.unique.eq(1).all() or set(part.outer_test_fold) != set("12345"):
                 raise ValueError("Saved spatial cell crosses folds or fold is missing")
-            base_map(ax, data)
+            base_map(ax, data, city, bounds=bounds)
             visible = cells.loc[cells.n >= 5]
             for cell in visible.itertuples():
                 ax.add_patch(Rectangle(((cell.gx*size+size*shift)/1000, (cell.gy*size+size*shift)/1000),
@@ -374,7 +438,11 @@ def render():
                          "xtick.labelsize": 12, "ytick.labelsize": 12})
     data = load()
     outputs, details, embedded_text = {}, {}, {}
-    for name, function in zip(NAMES, (catchment, prices, validation, grids), strict=True):
+    jobs = list(zip(NAMES, (catchment, prices, validation, grids), strict=True))
+    for city in ("oslo", "stockholm"):
+        jobs.extend([(f"random_vs_loao_validation_schematic_{city}", lambda d, c=city: validation(d,c)),
+                     (f"spatial_grid_sensitivities_{city}", lambda d, c=city: grids(d,c))])
+    for name, function in jobs:
         content, info = function(data)
         outputs[f"figures/{name}.png"] = content
         details[name] = info
@@ -401,8 +469,9 @@ def render():
                 "archived_visual_references": originals, "figures": details,
                 "embedded_figure_text": embedded_text,
                 "outputs": {p: hashlib.sha256(raw).hexdigest() for p, raw in outputs.items()},
-                "privacy": "No listing points/identifiers exported. Listing-based maps use 500 m cells with N>=5; block maps suppress cells with N<5.",
-                "crs": {"listing_source": "EPSG:4326", "copenhagen_maps": "EPSG:25832",
+                "privacy": "No individual listing coordinates or identifiers exported. Dot maps show 500 m cell centres with total N>=5; block maps suppress cells with N<5.",
+                "style_request": "Archived blue/orange dot-map layout; researcher explicitly retained the 500 m aggregation rule",
+                "crs": {"listing_source": "EPSG:4326", "city_maps": {c:data["cities"][c]["metric_crs"] for c in CITIES},
                         "sample_coordinates": {c: data["cities"][c]["metric_crs"] for c in CITIES}},
                 "models_refitted": False, "listing_features_recomputed": False, "database_writes": False}
     outputs["tables/explanatory_figures_manifest.json"] = (json.dumps(manifest, indent=2, ensure_ascii=False)+"\n").encode()
@@ -421,7 +490,7 @@ def main():
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(content)
-    print("PASS: four current-study figures and provenance" if args.check else "Wrote four current-study thesis figures")
+    print("PASS: eight current-study figures and provenance" if args.check else "Wrote eight current-study thesis figures")
 
 
 if __name__ == "__main__":
