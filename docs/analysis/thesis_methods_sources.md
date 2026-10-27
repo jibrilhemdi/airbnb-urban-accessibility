@@ -74,3 +74,58 @@ The working bibliography itself remains byte-identical. An isolated build using
 only checkpoint content also compiles, so it does not depend on the researcher's
 uncommitted literature or bibliography additions. The full local reading build
 continues to include those researcher drafts.
+
+## Figure regeneration feedback — 27 October 2026
+
+The four requested images under `archive/before_output_cleanup/outputs/figures/reporting/`
+are visual references from the earlier Copenhagen analysis. In particular, its
+price/validation sample of 12,412 is not the final 12,408. The historical
+pipeline is not rerun and the archived PNGs/manifests remain byte-preserved.
+
+`scripts/build_thesis_explanatory_figures.py` creates four manuscript PNGs from
+the current pinned study, without changing scientific selectors or fits:
+
+- Price histograms read the final common predictive samples in PostGIS for
+  Copenhagen (12,408), Oslo (8,529) and Stockholm (2,495). Native-currency panels
+  stop at each city's 99th percentile for display; log panels include every
+  observation. The manifest records bins/counts, quantiles and observations
+  above the display range. No analytical trimming or outcome filling occurs.
+- The catchment uses current SQL destinations and the exact OSM network sources
+  recorded in the final Copenhagen accessibility package. The executed graph
+  builder and pedestrian-direction code must match that package's hashes, and
+  all graph QA fields must reproduce exactly. A read-only public illustration
+  then routes from the nearest node on the largest weak component to City Hall
+  Square +1,500 m east/-1,050 m northing, with a node-ID tie break. This retains
+  the earlier public location rule, independent of prices/listing locations.
+  Origin connector is zero; destination snap connectors count against the
+  10-minute/5 km/h budget. Both panels show identical current destinations
+  within 833 m. No listing feature is rebuilt and no service-area polygon is
+  inferred. Node ID, counts, current snapshot, graph QA and source receipts
+  are recorded in the new manifest. Coincidentally unchanged displayed counts
+  do not mean old analytical values were copied.
+- The random/neighbourhood illustration joins the saved outer-test memberships
+  to the exact common sample. It displays random fold 1 and the saved Nørrebro
+  holdout. Every scheme has one membership per listing; full support counts
+  match the frozen validation summary. Fixed-size pies show the training/test
+  shares at 500 m cell centres only where total N is at least five. No listing
+  coordinates, identifiers or membership rows are exported. Display suppression
+  does not alter training/test counts or fitted evaluations.
+- The six grid panels use the saved 1/1.5/2 km configurations, at zero and
+  half-cell shifts on both axes. Every occupied cell must belong to a single
+  saved test fold. Cells with fewer than five observations are suppressed.
+  Colours are local fold identifiers, not corresponding regions across panels.
+  The maps explain holdout geometry; they are not new performance results.
+
+The two validation illustrations use the frozen Copenhagen provider geography;
+surrounding municipalities are the existing presentation-only context. They
+are examples of the three-city design, not claimed to display all cities.
+Spatial source coordinates are EPSG:4326 and all illustration operations are
+EPSG:25832. North arrows use N, with grid north specified in captions.
+
+The new manifest pins SQL summary and record hashes, all scientific package
+identities, source selectors, archived visual-reference hashes, code and output
+hashes. The generator's deterministic `--check` compares every PNG and manifest
+byte. No acquisition, database write, feature replacement, fold regeneration,
+fitting, tuning or new scientific result is performed. The simpler native
+LaTeX workflow remains reproducible but is replaced in the manuscript by the
+more informative geographic illustration.

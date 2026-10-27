@@ -1359,3 +1359,73 @@ scientific exports changed. No scientific rerun or release recertification.
 Normal incremental checkpoint uses existing v4 and recorded origin with explicit
 HEAD:refs/heads/v4 and remote/local SHA verification; failed publication is
 LOCAL_ONLY. This entry does not contain its own commit SHA.
+
+## 27 October 2026 — Regenerated explanatory figures for Data and Methods
+
+Applied the researcher's request for four archived reporting figures. The old
+single-city price/validation images describe 12,412 Copenhagen listings, not
+the final common sample of 12,408; they are visual references only. Preserved
+all four archived images and their manifest hashes. Did not rerun the historical
+pipeline or copy its scientific values into current evidence.
+
+Added scripts/build_thesis_explanatory_figures.py. Reads checksum-pinned SQL
+samples, destinations, saved outer memberships and provider geography in enforced
+READ ONLY transactions; checks all scientific package identities against the
+frozen reporting catalog. No source acquisition, database write, feature
+replacement, fold regeneration, tuning, model fitting or prediction change.
+The public catchment reconstructs only the exact June 2026 pedestrian graph
+in memory using the recorded source receipts and executed builder/direction
+code hashes, and requires every frozen graph-QA field to reproduce. Routes
+from the existing public-origin rule, not any listing, using the full directed
+graph and destination connectors. Both current panels contain 87 destinations,
+of which 44 are reachable. This matches the old illustration's counts through
+recalculation, not reuse of its measurements.
+
+The price figure covers the three current common predictive samples. Its
+native-price panels stop at their own 99th percentiles for readability; the
+log-price panels retain every observation. Bin counts account for every price,
+including those above the display range; no analytical trimming or filling.
+The validation illustration uses current saved random fold 1 (9,926 training /
+2,482 test) and the Nørrebro holdout (10,227 / 2,181). Fixed-size pies represent
+training/test proportions in 500 m cells with N>=5; no individual listing points
+or private rows are exported. The six block panels use the saved 1/1.5/2 km
+zero/half-cell configurations, verify one fold per occupied cell and suppress
+cells with N<5. Fold colours are not corresponding regions across panels.
+Source spatial CRS is EPSG:4326; the Copenhagen illustrations use EPSG:25832.
+North-arrow labels are N, with projected grid north disclosed in captions.
+
+Inserted the all-city price figure in Data and the catchment, validation and
+grid illustrations in Methods, each with explanatory text and qualified source
+captions. The latter two maps are Copenhagen examples of the three-city design.
+The simpler native LaTeX workflow remains reproducible but is no longer included.
+Shortened repeated Data/Methods wording and improved page breaks, retaining
+sample rules, missingness/timing disclosures, source/density qualifications,
+noncausal inference, conditional stability and source-only benchmarked transfer.
+No other chapter or working bibliography bytes were changed. Existing researcher
+literature/theory edits and old output deletions remain excluded from staging.
+
+The new tables/explanatory_figures_manifest.json records current package/record
+hashes, source receipts, archived visual hashes, code/output hashes, CRSs,
+histogram counts, display suppression and embedded figure text. Updated the
+writing guide and Methods source note. Exact prior manuscript, bibliography,
+guide, log, source note and reading preview are preserved with checksums in
+archive/before_thesis_figure_feedback_20261027/.
+
+Validation: four-figure byte-for-byte --check PASS; six-result-table --check and
+Methods-assets --check PASS; audited Python compilation and scoped whitespace
+PASS. Original study-area map reproduces byte-for-byte. Full working and isolated
+checkpoint-only XeLaTeX/latexmk/Biber builds PASS, with no undefined references,
+overfull boxes or oversized floats. Visually checked all figures at print size
+and final page breaks. Inherited KU package warning, local duplicate literature
+keys and one underfull bibliography paragraph remain. Refreshed the local
+10-page Chapters 4–5 preview at thesis_report/build/data_and_methods.pdf.
+
+Approximate main-body length is 70,003 normalized PDF text characters (including
+page numbers), plus 1,371 embedded characters in the four new PNGs and 455 in
+the unchanged study-area map: 71,829 including spaces. References and front
+matter remain excluded under the previously disclosed counting-scope assumption;
+this is not programme-specific length certification or an all-content claim.
+Completed scientific outputs, raw bytes, SQL identities, models and predictions
+remain unchanged. Normal incremental commit/push uses existing v4 and recorded
+origin, explicit HEAD:refs/heads/v4 and remote/local SHA verification. Failed
+publication is LOCAL_ONLY. This entry does not contain its own commit SHA.

@@ -89,17 +89,43 @@ and scientific source identities are in
 `tables/data_assets_manifest.json`. The new source bibliography is documented
 in [the reference checks](../docs/analysis/thesis_data_chapter_sources.md).
 
-The Methods comparison table and native LaTeX workflow diagram are explanatory
-assets from the executed design, without new estimates or fitting:
+The Methods comparison table and an optional native LaTeX workflow diagram are
+generated from the executed design, without new estimates or fitting:
 
 ```sh
 .venv/bin/python scripts/build_thesis_methods_assets.py
 .venv/bin/python scripts/build_thesis_methods_assets.py --check
 ```
 
-Keep `figures/validation_workflow.tex` in the Overleaf upload. The inputs and
-code hashes are in `tables/methods_assets_manifest.json`; reference/implementation
+The manuscript uses the geographic validation comparison described below in
+place of the optional three-box workflow. The inputs and code hashes for the
+table/workflow are in `tables/methods_assets_manifest.json`; reference/implementation
 checks are in [the Methods source note](../docs/analysis/thesis_methods_sources.md).
+
+Four further figures are regenerated for the current study rather than copied
+from the archived single-city analysis:
+
+```sh
+.venv/bin/python scripts/build_thesis_explanatory_figures.py
+.venv/bin/python scripts/build_thesis_explanatory_figures.py --check
+```
+
+`price_distributions.png` describes all three current common predictive samples
+in Chapter 4. `catchment_comparison.png`,
+`random_vs_loao_validation_schematic.png` and `spatial_grid_sensitivities.png`
+explain accessibility, neighbourhood holdouts and the six block configurations
+in Methods. The map illustrations use Copenhagen; the same registered designs
+apply in all cities. Keep these four PNGs in the Overleaf upload.
+
+The generator reads the existing PostGIS samples, saved outer memberships,
+destinations and geometry in read-only transactions. The catchment alone
+reconstructs the public pedestrian graph in memory from its exact preserved
+OSM sources, checking it against the frozen graph summary. It routes from a
+public node, never a listing, and does not recompute listing features or fit
+models. Listing-based displays aggregate locations; the old individual-point
+map is not reused. Hashes, sources, CRSs, histogram counts, display exclusions
+and public-origin details are in `tables/explanatory_figures_manifest.json`.
+The archived figures and completed analytical outputs remain unchanged.
 
 ## Recommended explanation flow
 

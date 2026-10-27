@@ -190,29 +190,14 @@ preregistered hypotheses. Avoid repeating the introduction.}
 \chapter{Study Areas and Data}
 \label{ch:data}
 
-The analysis combines Airbnb listing records, mapped destinations and pedestrian
-networks, and official population statistics for Copenhagen--Frederiksberg,
-Oslo and Stockholm. This chapter defines the populations represented by the
-samples, the spatial units used to organise them, and the main qualifications
-of the resulting measurements.
-
 \section{Study areas and validation geography}
 \label{sec:study-areas}
-Copenhagen denotes the combined Copenhagen and Frederiksberg study area
-throughout. Oslo and Stockholm use their accepted city study masks. These
-three capital-city samples provide separate settings for comparing accessibility
-representations and testing geographic prediction; they are not a representative
-sample of cities.
-
-Three spatial definitions serve different purposes. Accepted study masks
-determine which listings are included. Inside Airbnb neighbourhood polygons
-define operational validation groups: 11 in Copenhagen, 17 in Oslo and 11 in
-Stockholm. Copenhagen combines ten districts with Frederiksberg; Oslo retains
-Sentrum and Marka alongside its fifteen boroughs. Stockholm's fourteen provider
-labels are mapped to eleven fixed groups. These are documented analytical
-assignments, rather than certification that provider polygons reproduce current
-official boundaries. Official native statistical areas separately provide the
-denominators for population density.
+Three spatial definitions serve different purposes. Study masks determine
+listing inclusion. Inside Airbnb polygons define validation groups: Copenhagen's
+ten districts plus Frederiksberg; Oslo's fifteen boroughs plus Sentrum and Marka;
+and eleven Stockholm groups mapped from fourteen provider labels. These
+analytical assignments do not certify current official boundaries. Native
+statistical areas separately supply population-density denominators.
 
 Figure~\ref{fig:study-areas} shows the validation geography. Source coordinates
 are handled in EPSG:4326; metric operations use EPSG:25832 in Copenhagen,
@@ -241,12 +226,10 @@ are display context and do not determine sample membership.
 The listing sources are Inside Airbnb's detailed city datasets in the catalogue
 batch dated 30 June 2026
 \parencite{data_inside_cph2026,data_inside_oslo2026,data_inside_stockholm2026}.
-This is a common snapshot designation, not evidence that every listing was
-observed at the same instant. The records describe advertised accommodation.
-Inside Airbnb notes that listing coordinates are displaced and that a snapshot
-can include listings subsequently removed from the platform
+This batch label does not imply simultaneous observation. Inside Airbnb notes
+that coordinates are displaced and snapshots may include listings later removed
 \parencite{data_inside_assumptions}. Coordinates therefore support approximate
-spatial measurement, rather than identification of exact properties.
+spatial measurement, not exact property identification.
 
 \input{tables/data_sources}
 
@@ -257,37 +240,19 @@ a 2 km buffer around the study extent. The extracts were acquired later;
 reference time and acquisition time are recorded separately. Destination
 coverage and network connectivity remain source limitations. A finite zero
 opportunity count is retained as zero, while unavailable routing or source
-support remains missing. Chapter~\ref{ch:methods} defines the matched measures.
-
-The source register records URLs, acquisition dates, geographic extents,
-CRSs, licences and checksums. Raw bytes are retained unchanged, and
-PostgreSQL/PostGIS holds the persistent analytical tables. The accompanying
-provenance register documents source-specific qualifications and variable
-definitions.
+support remains missing.
 
 \section{Sample selection and missing data}
 \label{sec:samples}
-Eligibility is restricted to listings classified as entire homes/apartments in
-six conventional dwelling types: rental units, condominiums, houses, lofts,
-townhouses and villas. Shared and private rooms are excluded. Each retained
-listing must have an original observed positive nightly asking price, fall
-inside the accepted study mask, and have unique operational geography and
-qualified context. Missing or nonpositive prices are excluded; quote prices
-are not substituted.
+Eligible listings are entire homes/apartments in six types: rental units,
+condominiums, houses, lofts, townhouses and villas. Rooms are excluded. Listings
+require an original positive asking price, inside-mask location, unique
+validation-group assignment and qualified context. Missing or nonpositive
+prices are excluded; quote prices are not substituted.
 
 \input{tables/data_samples}
 
-Table~\ref{tab:data-samples} distinguishes the inside-mask price-reference
-population from the common predictive sample. Accessibility support removes
-100, 28 and 15 further listings in Copenhagen, Oslo and Stockholm, respectively.
-Every predictive specification uses the resulting common rows and folds,
-including the control model. The substantial earlier price-related attrition
-limits the population to which the findings apply; its causes are not inferred
-from the retained records.
-
-Table~\ref{tab:data-missingness} shows missing asking-price counts and percentages
-before sample selection, including rooms. Its denominators differ from the
-predictive samples.
+Price-related attrition limits the population represented by these samples.
 
 \input{tables/data_missingness}
 
@@ -297,58 +262,60 @@ minimum-night value. Predictive preprocessing learns its replacements from
 training data only. Association inference instead uses genuine complete cases.
 The uniform eligibility limit for that analysis was raised from 5\% to 10\%
 on 13 October 2026 after Stockholm's 5.8918\% missingness was observed. This
-amendment permits the complete-case analysis without filling bedrooms or
-outcomes, and does not remove selection into the observed sample.
+amendment permits complete cases without filling bedrooms or outcomes, but
+does not remove selection.
 
 \section{Asking prices and control variables}
 \label{sec:variables}
-The within-city outcome is the natural logarithm of the original observed
-positive nightly asking price in DKK, NOK or SEK. It represents an advertised
-price, rather than a completed booking or host revenue. Cross-city transfer
-subtracts each city's frozen mean log price from its eligible inside-mask
-reference population before accessibility filtering
-(Section~\ref{sec:transfer-method}). This preserves a separate distinction
-between native-currency asking prices and benchmarked relative prices.
+Within-city prediction uses the natural log of observed positive nightly asking
+price in DKK, NOK or SEK (Figure~\ref{fig:price-distributions}), not bookings or
+revenue. Transfer instead subtracts the city's frozen mean log price, calculated
+from the eligible inside-mask reference population before accessibility filtering
+(Section~\ref{sec:transfer-method}).
 
-Common controls describe accommodation capacity, bedrooms, bathrooms, property
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{price_distributions.png}
+  \caption{Common-sample asking prices in native currencies. Upper panels stop
+  at each city's 99th percentile; lower panels include all log prices. Display
+  limits remove no analytical observations. Source: Inside Airbnb frozen samples.}
+  \label{fig:price-distributions}
+\end{figure}
+
+Controls cover accommodation capacity, bedrooms, bathrooms, property
 type and minimum nights; Superhost status and host listing counts; and eight
 amenities: Wi-Fi, dishwasher, washer, dryer, workspace, free parking, private
 balcony and self check-in. Minimum nights and host listing counts use
-$\log(1+x)$. Bathrooms follow the audited structured-field/text-parser rule.
+$\log(1+x)$. Bathrooms combine structured fields and parsed text.
 Location controls are log population density and straight-line distance in
 kilometres to a frozen City Hall anchor. Income and residential prices are
 excluded.
 
-Density is population divided by the corresponding native area in square
-kilometres, not by the provider holdout polygon's area. Copenhagen and
-Frederiksberg use 2026Q3 population, with a 1 July reference date, one day after
-the listing batch. Oslo uses 1 January 2026 population and native gross areas.
-Stockholm pairs 31 December 2025 population with published 31 December 2024
-land-plus-water areas. The Stockholm areas are rounded and retain the source's
-historical derivation qualifications. These period, footprint and denominator
-differences limit comparisons of density levels across cities; the primary
-measure is not a harmonised land-only density.
+Density divides population by native area in square kilometres, not the
+holdout polygon. Copenhagen--Frederiksberg uses 2026Q3 population (1 July, one
+day after the listing batch); Oslo uses 1 January 2026 population and gross
+areas. Stockholm pairs 31 December 2025 population with published 31 December
+2024 land-plus-water areas, retaining their rounding and historical derivation
+qualifications. These periods, footprints and denominators limit cross-city
+comparison; density is not harmonised to land-only area.
 
+\clearpage
 \section{Legal and ethical considerations}
 \label{sec:legal-ethics}
-Inside Airbnb distributes its datasets under CC BY 4.0, while OpenStreetMap
-uses the Open Database Licence and requires contributor attribution
-\parencite{data_inside_license,data_osm_license}. These licences concern reuse;
-public availability alone is not evidence of individual consent to every
-subsequent analysis. The project records source-specific conditions. Where
-an explicit redistribution licence was not established for native Oslo or
-Stockholm inputs, raw statistics and geometries remain outside the public
-repository.
+Inside Airbnb uses CC BY 4.0; OpenStreetMap uses the Open Database Licence
+and requires contributor attribution
+\parencite{data_inside_license,data_osm_license}. Public availability does not
+establish individual consent to every reuse. Raw Oslo/Stockholm statistics and
+geometries without an established redistribution licence remain outside the
+public repository.
 
-The reporting approach follows the principles of data minimisation and
-confidentiality described by the Danish Data Protection Agency
-\parencite{data_dpa_principles}. Raw listing records, private coordinates,
-row-level predictions and fitted models are excluded from Git. Published
-listing-based spatial summaries use 500 m cells containing at least five
-observations; the study-area map above contains boundaries and civic markers,
-not individual listings. Displaced coordinates are not treated as a guarantee
-against re-identification. These aggregate asking-price results do not assess individual rental
-compliance or causal housing displacement.
+Reporting follows the Danish Data Protection Agency's data-minimisation and
+confidentiality principles \parencite{data_dpa_principles}. Git excludes raw
+listings, private coordinates, individual predictions and models. Listing
+summaries use 500 m cells with at least five observations; block maps suppress
+cells below five. The study-area map shows boundaries and civic markers.
+Coordinate displacement does not guarantee anonymity. Results do not assess
+individual rental compliance or causal housing displacement.
 
 % ======================================================================
 % CHAPTER 5 -- METHODS
@@ -377,34 +344,53 @@ curved relationships and effects that depend on other predictors
 
 \section{Constructing matched accessibility measurements}
 \label{sec:accessibility-method}
-Both representations use the same deduplicated destinations: rail stations,
-bus stops, food/social venues and culture/tourism sites. Euclidean measures
-use straight-line distance. Walking follows permitted pedestrian routes, with
-links from listing and destination coordinates to the network. Walking speed is
-5 km/h. Nearest rail/bus access uses kilometres for Euclidean distance and
-minutes for walking time. The nearest destination can differ between them.
+Both representations use the same deduplicated stations, bus stops, food/social
+venues and culture/tourism sites. Euclidean access is straight-line distance.
+Walking uses permitted routes and links from listing and destination coordinates
+to the network, at 5 km/h. Nearest rail/bus access enters models in kilometres
+or walking minutes; the nearest destination can differ.
 
-Opportunities count destinations within 833 m or ten walking minutes and enter
-models as $\log(1+\mathrm{count})$. Categories follow the frozen destination
-taxonomy. Coverage checks exclude listings with incomplete routing or extent
-coverage. Reference time, CRSs and missing-route handling follow Chapter~\ref{ch:data}.
+Opportunity counts use 833 m or ten walking minutes and enter models as
+$\log(1+\mathrm{count})$. Incomplete routing or extent coverage excludes listings.
+
+Figure~\ref{fig:catchment-comparison} illustrates the catchment difference.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{catchment_comparison.png}
+  \caption{Matched catchments at a public Copenhagen network node. Both panels
+  show the same destinations within 833 m; outlined symbols on the right are
+  reachable in ten minutes at 5 km/h, including destination connectors.
+  Lines show routes, not a service-area polygon.
+  Source: OpenStreetMap contributors, 30 June 2026; EPSG:25832; grid north.}
+  \label{fig:catchment-comparison}
+\end{figure}
 
 \section{Geographic validation and training procedure}
 \label{sec:validation-method}
 Each evaluation split (outer fold) holds out one neighbourhood and trains on
-the others. This targets prediction in unseen areas \parencite{roberts2017}. Every fold requires at least
-15 test and 500 training listings. This support rule was chosen after inspecting
-support, before final fitting.
+the others, targeting prediction in unseen areas \parencite{roberts2017}. Each fold needs
+15 test and 500 training listings, a rule chosen after support inspection,
+before final fitting. Figure~\ref{fig:validation-comparison} contrasts
+this design with random allocation.
 
-\input{figures/validation_workflow}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{random_vs_loao_validation_schematic.png}
+  \caption{Two saved Copenhagen evaluation splits. Fixed-size circles show
+  training/test shares in 500 m cells with at least five listings, not listing
+  locations. Random allocation mixes the sets spatially; the primary design
+  holds out Nørrebro. Sources: frozen sample, fold assignments and provider
+  boundaries; EPSG:25832; grid north.}
+  \label{fig:validation-comparison}
+\end{figure}
 
 Each training split replaces numeric predictor blanks with its medians and
 adds flags recording missingness. Property types become 0/1 categories seen in training.
 Within the outer training data, four inner folds of 1 km cells compare
 30 fixed XGBoost setting combinations.
-The pipeline with lowest mean RMSE is refitted on the outer training data. The outer test data never choose
-predictors, accessibility definitions, settings or preprocessing. OLS uses the same outer folds
-without tuning.
+The pipeline with lowest mean RMSE is refitted on outer training data. Test data
+never choose predictors, accessibility definitions, settings or preprocessing.
+OLS uses the same outer folds without tuning.
 
 \section{Metrics, paired contrasts and stability}
 \label{sec:metrics-method}
@@ -427,8 +413,8 @@ are not independent-sample confidence intervals or equivalence tests.
 \label{sec:association-method}
 All four association models use common complete cases on $X+E+W$, without filling bedrooms
 or outcomes. Eligibility follows the disclosed amendment in Chapter~\ref{ch:data}.
-Rank checks detect redundant columns; collinearity checks flag overlapping
-predictors. HC3 intervals allow unexplained variation to differ between
+Rank and collinearity checks identify redundant or overlapping predictors.
+HC3 intervals allow unexplained variation to differ between
 listings. Restricted wild-cluster tests perturb residuals (observed minus
 fitted log prices) together within neighbourhoods, using Webb six-point weights and
 9,999 draws \parencite{methods_mnw2023}. Individual tests have no correction
@@ -456,14 +442,25 @@ neighbourhoods; shared pipelines and targets make directions dependent.
 
 \section{Registered robustness and reproducibility}
 \label{sec:robustness-method}
-Sensitivity checks vary validation geography and buffers, samples and controls,
-accessibility budgets and speeds, distance decay, boundary exclusions and
-density definitions. Random five-fold validation is a benchmark. Six further
-designs use 1, 1.5 and 2 km blocks at zero and half-block origins. Comparisons
-share rows and folds within each variant; variants may have different samples.
+Checks vary geography and buffers, samples and controls, accessibility budgets and speeds,
+distance decay, boundaries and density. Random five-fold validation is a benchmark;
+six block designs use 1, 1.5 and 2 km cells at zero and half-cell origins.
+Models share rows and folds within each variant; samples can differ across variants.
+Figure~\ref{fig:spatial-grid-sensitivities} shows how block size and origin
+change the areas assigned to each test fold.
 
-PostgreSQL/PostGIS and code checksums link outputs to completed runs.
-Manuscript rendering never refits models.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{spatial_grid_sensitivities.png}
+  \caption{Six saved Copenhagen block designs. Columns vary cell width; the
+  lower row shifts both axes by half a cell. Fold colours are not comparable
+  across panels. Cells with fewer than five
+  listings are suppressed. Source: frozen sample, fold assignments and provider
+  boundaries; EPSG:25832; grid north.}
+  \label{fig:spatial-grid-sensitivities}
+\end{figure}
+
+PostgreSQL/PostGIS and checksums document the completed runs.
 
 % ======================================================================
 % CHAPTER 6 -- RESULTS (same order as the four research questions)
