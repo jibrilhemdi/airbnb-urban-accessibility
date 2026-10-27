@@ -1,4 +1,4 @@
-"""Render Chapter 4 tables and copy its map from pinned public evidence.
+"""Render Chapter 4 tables and map from pinned exports and read-only PostGIS.
 
 No SQL writes, source acquisition, model fitting or row-level exports.
 """
@@ -48,6 +48,8 @@ def render() -> dict[str, bytes]:
     by_city = {row["city"]: row for row in summary}
     if set(by_city) != set(CITIES) or len(summary) != 3:
         raise ValueError("Expected exactly three unique city summaries")
+    from thesis_data_detail import read_details, compact_map
+    map_data, missingness, detail_provenance = read_details()
 
     lines = []
     for label, stage in (
@@ -118,13 +120,51 @@ def render() -> dict[str, bytes]:
         r"Sources: \parencite{data_inside_cph2026,data_inside_oslo2026,data_inside_stockholm2026,data_osm_license,data_kkbef1,data_folk1a,data_oslo_bef001,data_stockholm_yearbook}. "
         "Reference periods describe the data, not download dates. Copenhagen's population "
         "reference is 1 July 2026. Area definitions and source vintages differ across cities.", flexible=True)
-    outputs["figures/study_areas.png"] = public("outputs/figures/study_areas.png")
+    order = ["Entire rental unit", "Entire condo", "Entire home", "Entire loft",
+             "Entire townhouse", "Entire villa", "Other entire property types",
+             "Entire dwelling: missing type", "Private room", "Shared room", "Hotel room", "Missing room type"]
+    observed = set().union(*(set(rows) for rows in missingness.values()))
+    if observed - set(order):
+        raise ValueError("Unreviewed accommodation grouping")
+    rows = []
+    for category in [name for name in order if name in observed] + ["All original listings"]:
+        values = []
+        for city in CITIES:
+            groups = missingness[city.lower()]
+            if category == "All original listings":
+                count = {key: sum(g[key] for g in groups.values()) for key in ("n", "missing_price", "missing_bedrooms")}
+                if count["n"] != int(by_city[city]["raw_listings"]):
+                    raise ValueError("Original source counts differ from final sample-flow export")
+            else:
+                # Exhaustive SQL source partition: an absent category has zero rows,
+                # rather than an unobserved field whose value is being imputed.
+                count = groups.get(category, {"n": 0, "missing_price": 0, "missing_bedrooms": 0})
+            values.extend(f"{count[key]:,}" for key in ("n", "missing_price", "missing_bedrooms"))
+        if category == "All original listings":
+            rows.append(r"\midrule")
+        rows.append(" & ".join([category, *values]) + r" \\")
+    outputs["tables/data_missingness.tex"] = table(
+        "data-missingness", "Missing source values by accommodation type before sample selection.",
+        "@{}lrrrrrrrrr@{}", r" & \multicolumn{3}{c}{Copenhagen} & \multicolumn{3}{c}{Oslo} & \multicolumn{3}{c}{Stockholm} \\ "
+        r"Accommodation type & $N$ & Price & Bed. & $N$ & Price & Bed. & $N$ & Price & Bed.", rows,
+        "Source: preserved Inside Airbnb ingestions. $N$ counts original listings; Price and Bed. "
+        "count absent/blank asking-price and bedroom fields. Zero bedrooms and nonpositive "
+        "prices are not counted as missing. Named entire-dwelling rows retain source property "
+        "types; other entire types are pooled. Room rows use source room type. Counts precede "
+        "all sample filters; rooms remain excluded from analysis.")
+    # Keep the completed original figure pinned and untouched; this is a distinct
+    # manuscript rendering of the same authoritative geometry.
+    public("outputs/figures/study_areas.png")
+    outputs["figures/study_areas.png"] = compact_map(map_data)
     manifest = {
         "generator": "scripts/build_thesis_data_assets.py",
         "generator_sha256": digest(Path(__file__).read_bytes()),
         "inputs": inputs,
         "source_run_artifacts": {p: registered[p]["source_run_artifact"] for p in inputs if p in registered},
         "outputs": {p: digest(raw) for p, raw in outputs.items()},
+        "read_only_details": detail_provenance,
+        "map_presentation": {"north_arrow_label": "N", "north_direction": "projected grid north",
+                             "layout": "compact; source attribution retained; no geometry changes"},
         "model_refits": False,
         "database_writes": False,
         "note": "Presentation only; earlier audit statuses remain historical. Current association eligibility follows the 13 October 2026 amendment.",
@@ -146,7 +186,7 @@ def main() -> None:
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(raw)
-    print("PASS: two Chapter 4 tables, unchanged map and provenance" if args.check else "Rendered Chapter 4 assets from pinned evidence")
+    print("PASS: three Chapter 4 tables, compact map and provenance" if args.check else "Rendered Chapter 4 assets from pinned evidence")
 
 
 if __name__ == "__main__":

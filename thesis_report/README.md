@@ -52,7 +52,7 @@ public figures separately when you add them; do not upload the research repo,
 private data, credentials, individual predictions or model files.
 
 Keep `tables/`, `figures/` and both bibliography files in the upload. The
-Chapter 4 map and two tables accompany the six result tables in `main.tex`.
+Chapter 4 map and three tables accompany the six result tables in `main.tex`.
 The six result tables are generated from the final aggregate exports,
 with original paths, checksums and scientific run identities recorded in
 `tables/manifest.json`. Edit chapter prose in `main.tex`; edit table presentation
@@ -70,15 +70,21 @@ generated files already in `tables/`. The script verifies source checksums and
 does not refit models, rerun scientific stages or alter analytical exports.
 
 Chapter 4 assets are reproduced from pinned final aggregate exports and audit
-metadata, without data acquisition, analytical writes or model fitting:
+metadata and read-only PostGIS queries, without data acquisition, analytical
+writes or model fitting:
 
 ```sh
 .venv/bin/python scripts/build_thesis_data_assets.py
 .venv/bin/python scripts/build_thesis_data_assets.py --check
 ```
 
-The map is an unchanged copy of `outputs/figures/study_areas.png`. Input/output
-checksums and scientific source identities are in
+The manuscript map rerenders the frozen geometry with compact spacing and `N`
+arrow labels. The completed original in `outputs/figures/study_areas.png` remains
+unchanged. The accommodation table counts blank prices and bedrooms in original
+source records before all filters; room categories are descriptive only. The
+generator and its `--check` require the existing local PostGIS connection from
+`.env` and issue read-only queries. Input/output checksums, query/code hashes
+and scientific source identities are in
 `tables/data_assets_manifest.json`. The new source bibliography is documented
 in [the reference checks](../docs/analysis/thesis_data_chapter_sources.md).
 

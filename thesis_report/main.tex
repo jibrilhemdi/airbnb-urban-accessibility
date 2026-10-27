@@ -219,17 +219,19 @@ are handled in EPSG:4326; metric operations use EPSG:25832 in Copenhagen,
 EPSG:25833 in Oslo and EPSG:3006 in Stockholm. The map's surrounding municipalities
 are display context and do not determine sample membership.
 
-% Original public map and SHA256 are pinned in tables/data_assets_manifest.json.
+% Manuscript map is rerendered from frozen SQL geometry; provenance and hashes
+% are recorded in tables/data_assets_manifest.json. Original public map is preserved.
 \begin{landscape}
 \begin{figure}[p]
   \centering
-  \includegraphics[width=0.88\linewidth]{study_areas.png}
+  \includegraphics[width=\linewidth]{study_areas.png}
   \caption{Study areas and operational validation neighbourhoods. White lines
   delineate the 11 Copenhagen--Frederiksberg, 17 Oslo and 11 Stockholm groups;
   grey borders show surrounding municipalities. Stars mark Copenhagen City
   Hall Square and Oslo and Stockholm City Halls. The Copenhagen display star
   differs from the City Hall building used for analytical centrality. Panels
-  use the city-specific CRSs shown and different scales. Sources: Inside Airbnb,
+  use the city-specific CRSs shown and different scales. North arrows indicate
+  projected grid north. Sources: Inside Airbnb,
   DAGI/DAWA, Kartverket, Statistics Sweden and the project's verified civic
   references. Surrounding boundaries were acquired for presentation in October
   2026 and are not the analytical June geography.}
@@ -285,6 +287,11 @@ Every predictive specification uses the resulting common rows and folds,
 including the control model. The substantial earlier price-related attrition
 limits the population to which the findings apply; its causes are not inferred
 from the retained records.
+
+Table~\ref{tab:data-missingness} counts source blanks before sample selection,
+including room listings. Its denominators differ from the predictive samples.
+
+\input{tables/data_missingness}
 
 Required-predictor missingness mainly concerns bedrooms: 123 values in
 Copenhagen, 376 in Oslo and 147 in Stockholm; Oslo also has one missing
@@ -342,9 +349,8 @@ row-level predictions and fitted models are excluded from Git. Published
 listing-based spatial summaries use 500 m cells containing at least five
 observations; the study-area map above contains boundaries and civic markers,
 not individual listings. Displaced coordinates are not treated as a guarantee
-against re-identification. The analysis concerns aggregate asking-price
-patterns and does not assess individual hosts' compliance with rental rules
-or identify causal housing-displacement effects.
+against re-identification. These aggregate asking-price results do not assess individual rental
+compliance or causal housing displacement.
 
 % ======================================================================
 % CHAPTER 5 -- METHODS

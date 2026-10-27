@@ -1247,3 +1247,57 @@ and predictions are unchanged. No release recertification or analytical rerun.
 Normal incremental commit goes only to v4 with explicit HEAD:refs/heads/v4 push
 and subsequent remote/local SHA verification; failure is LOCAL_ONLY. This entry
 does not contain its own commit SHA.
+
+## 27 October 2026 — Compact map and accommodation missingness table
+
+Applied the researcher's Chapter 4 feedback: rerendered the manuscript study-area
+map with tighter heading/legend/panel/footer spacing and N-only arrow labels.
+The arrows still denote projected grid north, recorded in caption/provenance.
+Uses the same frozen SQL masks, groups, surrounding context and civic points,
+with EPSG:4326 sources and EPSG:25832/25833/3006 panels. The PNG is now
+3623 by 1642 rather than 4500 by 2450; the completed original public figure and
+its registered hash remain unchanged. Existing map functions are reused without
+editing their protected source or any fitted-code dependency.
+
+The researcher explicitly selected original listings, including rooms, with
+missing asking-price and bedroom counts. Added Table 4.3 from the new reusable
+parameterised SQL query and read-only manuscript helper. All 41,341 source rows
+are represented before price, mask and modelling filters. The six named
+entire-dwelling property labels remain separate; other entire property types
+are pooled, while private/shared/hotel room rows follow source room_type.
+Missing means absent/blank source values. Zero bedrooms and nonpositive prices
+are not recoded as missing; no outcome or predictor is filled. Structural zero
+category counts describe exhaustive source counts, not imputed observations.
+The table does not change model eligibility or analytical samples.
+
+Authoritative source totals and eligible-dwelling missing-price totals agree
+with immutable ingestion audits. Independently read the checksum-verified
+original CSVs for validation only: every room-type/property-type count and each
+missing-field count agrees with SQL in all three cities. An initial ordered-hash
+comparison depended on database versus Python collation; keyed count comparison
+resolved that technical ordering difference without changing any values.
+SQL reads occur in an enforced READ ONLY transaction. No intermediate CSV,
+new SQL package, migration, database mutation or alternative data store was added.
+The updated generator/--check require the existing PostGIS connection, and the
+manifest retains query/code hashes, immutable source identities, geometry
+fingerprints, aggregate counts and CRSs.
+
+Preserved exact prior manuscript, map, preview, generator, manifest, source-check
+note, guide and log in archive/before_thesis_data_feedback_20261027/ with checksums.
+Researcher literature/theory/bibliography edits and old output deletions remain
+untouched and excluded from staging. Only the feedback diff within Chapter 4 is
+staged from main.tex. Refreshed the five-page local preview after shortening the
+new note to avoid a nearly empty final page. Main-body PDF text is approximately
+67,363 normalised characters; raster figure text and programme-specific counting
+rules remain outside that estimate.
+
+Validation: new asset --check PASS including deterministic map bytes; existing
+six-result-table --check PASS; Python compilation and scoped whitespace PASS.
+XeLaTeX/latexmk/Biber PASS; no undefined references/citations, overfull boxes or
+oversized floats. Visually reviewed the map, missingness table and final chapter
+pages. Existing KU package warning, duplicate researcher bibliography keys and
+one inherited underfull bibliography paragraph remain. No scientific rerun,
+source acquisition, model fit, prediction change or release recertification.
+Normal incremental commit/push uses existing v4 and recorded origin with
+HEAD:refs/heads/v4 and subsequent remote/local SHA equality; publication failure
+is LOCAL_ONLY. This entry contains no own-commit SHA.

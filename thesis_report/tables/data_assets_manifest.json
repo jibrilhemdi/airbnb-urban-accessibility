@@ -1,6 +1,6 @@
 {
   "generator": "scripts/build_thesis_data_assets.py",
-  "generator_sha256": "b3b1818aee39cbf42c2ad3d910440e820a93230bb779aa63eecf9a0be9bd864d",
+  "generator_sha256": "f5e17ece26b869f0816abe06865606af5708736be885ede1c5ba62c7eee49579",
   "inputs": {
     "reports/thesis_artifact_manifest.json": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52",
     "outputs/tables/city_sample_summary.csv": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
@@ -131,7 +131,240 @@
   "outputs": {
     "tables/data_samples.tex": "b715643d5129e631371551e7f1e4b575535f1ce8cabd2ccfcd9e54a86849d7d6",
     "tables/data_sources.tex": "73bbf82324e77eb77d9eed42eb84aefb40d533460ccf5022f020461e4d6693ce",
-    "figures/study_areas.png": "06deb208bdf60cd037ca81395fc8c223d4e3b881c6ef23f74b0a27a106900759"
+    "tables/data_missingness.tex": "1dcba4ea81832124470e4fd7e5b5f28ad21cb76577e6d45033fff08da1562579",
+    "figures/study_areas.png": "bac6f7ffd5b4597565ddb1fef06040e3d194c5d8a3038b00fdf3b5dc54052606"
+  },
+  "read_only_details": {
+    "transaction": "READ ONLY",
+    "sources": {
+      "copenhagen": {
+        "geography": {
+          "run_id": "copenhagen_geography_20261013t010820402377z",
+          "summary_sha256": "133acd0e0c94f583a2d2bd1b2ccb931b52ebc1a398d51264bb53425d46b5cc0b"
+        },
+        "geometry_records_sha256": "010ac074485ea368859ed3075ca182c0a040b0167506299751d35283e7414e02",
+        "listing_scope": {
+          "version": "research_design_v4",
+          "run_id": "research_v4_copenhagen_frederiksberg_20261011T143812Z",
+          "city": "copenhagen_frederiksberg",
+          "snapshot": "2026-06-30"
+        },
+        "listing_manifest_sha256": "e6dedcc9d12545559337cc3a512d97d6a8b8b636cd1ab329ad52dcd13c2e2b13",
+        "original_counts_sha256": "7c9185cfbb3e0206232c2db8ccb56f2125ca668cbbf850b7b83f13592087ee3a",
+        "source_category_aggregates_sha256": "574a09bd1d4f6b163e8e70cb7f1139c3ec179fe40d15b8fda23891c3f89dbf64",
+        "original_n": 23144
+      },
+      "oslo": {
+        "geography": {
+          "run_id": "oslo_geography_20261013t010830555916z",
+          "summary_sha256": "7e584dd425732d8df57421b3683f8ba3c60d730fd62b3617f8bdef6fcf8fbdc8"
+        },
+        "geometry_records_sha256": "c27b777a581523f519646a8d9561aa916a668f195d4b1d7f90a45a44915e86d4",
+        "listing_scope": {
+          "version": "research_design_v4",
+          "run_id": "research_v4_oslo_20261011T143812Z",
+          "city": "oslo",
+          "snapshot": "2026-06-30"
+        },
+        "listing_manifest_sha256": "c08f5ebdaf01ba445cc68e2e0c77b9290c246903f67408013556a071b84252f8",
+        "original_counts_sha256": "812cd4372333190948d23d53fa6b5fff9dab72452b552f46bea01903b0ce545a",
+        "source_category_aggregates_sha256": "2682500efa219fc9fd1a743a4ffadd44d443baad23f5f4857228d53ac27301a0",
+        "original_n": 13391
+      },
+      "stockholm": {
+        "geography": {
+          "run_id": "stockholm_geography_20261013t010836230517z",
+          "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9"
+        },
+        "geometry_records_sha256": "6b05592806ed2bde590962dcf7fb8ed88cfac13b2807f5d9208c387fd0477546",
+        "listing_scope": {
+          "version": "research_design_v4",
+          "run_id": "research_v4_stockholm_20261011T151637Z",
+          "city": "stockholm",
+          "snapshot": "2026-06-30"
+        },
+        "listing_manifest_sha256": "d1d923db415dbf2218560947e3fd862657e343317f36fee284fa36e36cc0d172",
+        "original_counts_sha256": "742b078a858728fbcb6c6c6c78e5eab5a8b295e0239f559edc310edc7e91786c",
+        "source_category_aggregates_sha256": "b02077f7c9626934acc0e38da33b63603f1ddf9d8f3a7bd7198ee5b96d6a0572",
+        "original_n": 4806
+      }
+    },
+    "cartography": {
+      "path": "config/reporting/map_context.json",
+      "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+      "artifact": "Public surrounding municipalities and verified civic reference points",
+      "spatial_crs": "EPSG:4326"
+    },
+    "accommodation_missingness": {
+      "copenhagen": {
+        "Other entire property types": {
+          "n": 288,
+          "missing_price": 30,
+          "missing_bedrooms": 13
+        },
+        "Entire condo": {
+          "n": 5599,
+          "missing_price": 2617,
+          "missing_bedrooms": 74
+        },
+        "Entire home": {
+          "n": 1260,
+          "missing_price": 427,
+          "missing_bedrooms": 5
+        },
+        "Entire loft": {
+          "n": 104,
+          "missing_price": 45,
+          "missing_bedrooms": 6
+        },
+        "Entire rental unit": {
+          "n": 13588,
+          "missing_price": 5260,
+          "missing_bedrooms": 149
+        },
+        "Entire townhouse": {
+          "n": 343,
+          "missing_price": 143,
+          "missing_bedrooms": 0
+        },
+        "Entire villa": {
+          "n": 186,
+          "missing_price": 67,
+          "missing_bedrooms": 0
+        },
+        "Private room": {
+          "n": 1756,
+          "missing_price": 694,
+          "missing_bedrooms": 1240
+        },
+        "Shared room": {
+          "n": 20,
+          "missing_price": 1,
+          "missing_bedrooms": 0
+        }
+      },
+      "oslo": {
+        "Other entire property types": {
+          "n": 153,
+          "missing_price": 21,
+          "missing_bedrooms": 21
+        },
+        "Entire condo": {
+          "n": 2546,
+          "missing_price": 804,
+          "missing_bedrooms": 100
+        },
+        "Entire home": {
+          "n": 871,
+          "missing_price": 182,
+          "missing_bedrooms": 7
+        },
+        "Entire loft": {
+          "n": 101,
+          "missing_price": 31,
+          "missing_bedrooms": 8
+        },
+        "Entire rental unit": {
+          "n": 8100,
+          "missing_price": 2157,
+          "missing_bedrooms": 438
+        },
+        "Entire townhouse": {
+          "n": 103,
+          "missing_price": 32,
+          "missing_bedrooms": 0
+        },
+        "Entire villa": {
+          "n": 55,
+          "missing_price": 13,
+          "missing_bedrooms": 0
+        },
+        "Private room": {
+          "n": 1398,
+          "missing_price": 305,
+          "missing_bedrooms": 898
+        },
+        "Shared room": {
+          "n": 64,
+          "missing_price": 5,
+          "missing_bedrooms": 18
+        }
+      },
+      "stockholm": {
+        "Other entire property types": {
+          "n": 147,
+          "missing_price": 23,
+          "missing_bedrooms": 22
+        },
+        "Entire condo": {
+          "n": 355,
+          "missing_price": 177,
+          "missing_bedrooms": 22
+        },
+        "Entire home": {
+          "n": 586,
+          "missing_price": 156,
+          "missing_bedrooms": 3
+        },
+        "Entire loft": {
+          "n": 41,
+          "missing_price": 17,
+          "missing_bedrooms": 4
+        },
+        "Entire rental unit": {
+          "n": 2622,
+          "missing_price": 893,
+          "missing_bedrooms": 193
+        },
+        "Entire townhouse": {
+          "n": 80,
+          "missing_price": 33,
+          "missing_bedrooms": 0
+        },
+        "Entire villa": {
+          "n": 150,
+          "missing_price": 48,
+          "missing_bedrooms": 1
+        },
+        "Hotel room": {
+          "n": 3,
+          "missing_price": 3,
+          "missing_bedrooms": 0
+        },
+        "Private room": {
+          "n": 794,
+          "missing_price": 190,
+          "missing_bedrooms": 444
+        },
+        "Shared room": {
+          "n": 28,
+          "missing_price": 2,
+          "missing_bedrooms": 8
+        }
+      }
+    },
+    "code": {
+      "scripts/thesis_data_detail.py": "4845615dc1d7eff4dea1bed7a09622548387717fe2b3439d223eeea1117fd87f",
+      "sql/queries/thesis_missingness_by_accommodation.sql": "243aa0f5acd184b4abcedbb222cb19339db3c2fec551f9cc95df17cfab90d1ef",
+      "src/reporting/thesis_outputs.py": "c04b99a3914339e51a7bdf129c3c2dbf91051b2a8e86a4e4b51669cae3f3f231",
+      "src/reporting/thesis_style.py": "4aeb8a0e5576558741f87108440fdd0df4d4e6f8085213c86c8b2f8efcf4901e",
+      "config/study/cities.json": "c9e6a920796d2a06c741f6734cde63cb72c224364fe971dfca85c327686e6487",
+      "config/study/geography_selection.json": "c0893bd2cad79728e94650bac8988d767aa13bf22247109401e22b697b6e9ea3",
+      "config/reporting/map_context.json": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e"
+    },
+    "spatial_crs": {
+      "source": "EPSG:4326",
+      "panels": {
+        "copenhagen": "EPSG:25832",
+        "oslo": "EPSG:25833",
+        "stockholm": "EPSG:3006"
+      }
+    }
+  },
+  "map_presentation": {
+    "north_arrow_label": "N",
+    "north_direction": "projected grid north",
+    "layout": "compact; source attribution retained; no geometry changes"
   },
   "model_refits": false,
   "database_writes": false,

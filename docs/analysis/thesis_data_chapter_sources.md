@@ -44,3 +44,28 @@ process does not modify PostgreSQL/PostGIS, source data, folds, models,
 predictions or scientific result exports. The old audit's earlier association
 blocker remains historical; the chapter uses the actual uniform post-observation
 10% amendment and final completed association counts.
+
+## Manuscript feedback — 27 October 2026
+
+The map is now a compact manuscript rendering of the same frozen SQL geometry,
+with N-only north-arrow labels; the directions still represent projected grid
+north. Original completed public figures remain untouched. The prior manuscript
+map, preview, generator, manifest and narrative are preserved with checksums in
+archive/before_thesis_data_feedback_20261027/.
+
+The researcher explicitly requested missing prices and bedrooms in the original
+listing data, including room listings. The additional table uses
+sql/queries/thesis_missingness_by_accommodation.sql against the approved immutable
+v4_raw.listing_audit scopes. Queries run in a PostgreSQL READ ONLY transaction.
+Missing means absent or blank source fields; zero bedrooms and nonpositive prices
+are not recoded. The six eligible entire-dwelling labels remain distinct;
+other entire property types are pooled, and private/shared/hotel room rows use
+the source room_type independently of property_type. Source totals and eligible-
+dwelling missing-price counts reconcile to the existing ingestion audit.
+
+The grouped output is descriptive, preceding price, mask and modelling filters;
+it does not expand analytical samples or introduce imputation. Query/code hashes,
+source manifest identities, aggregate counts, geometry fingerprints and CRSs are
+recorded in tables/data_assets_manifest.json. No intermediate CSV or additional
+persistent analytical store is introduced. The generator and --check now require
+the authoritative local PostGIS database in addition to pinned public exports.
