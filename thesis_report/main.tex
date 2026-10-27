@@ -103,82 +103,86 @@ The analysis is organized around four research questions:
 \section{Scope and thesis roadmap}
 \label{sec:roadmap}
 The study uses June 2026 Inside Airbnb listings for conventional entire
-dwellings. Its evidence is observational. Chapter~\ref{ch:literature} develops
-related literature and the theoretical framework; Chapter~\ref{ch:data} describes the data and study
-areas; and Chapter~\ref{ch:methods} defines measurement and evaluation.
+dwellings. Its evidence is observational. Chapter~\ref{ch:literature} reviews
+related literature, and Chapter~\ref{ch:theory} develops the theoretical
+framework. Chapter~\ref{ch:data} describes the data and study areas, and
+Chapter~\ref{ch:methods} defines measurement and evaluation.
 Chapter~\ref{ch:results} presents the evidence in research-question order,
 followed by discussion in Chapter~\ref{ch:discussion} and conclusions in
 Chapter~\ref{ch:conclusion}.
 
 % ======================================================================
-% CHAPTER 2 -- CONCEPTS AND LITERATURE
-% Purpose: explain the reasoning behind the design before technical details.
+% CHAPTER 2 -- RELATED LITERATURE
+% Purpose: review prior evidence and establish the research gap.
 % Add only checked sources to references.bib; use \textcite / \parencite.
 % ======================================================================
-\chapter{Conceptual Framework and Related Literature}
+\chapter{Related Literature}
 \label{ch:literature}
-
-\section{Related literature}
 \label{sec:related-literature}
 \draftnote{Synthesize verified studies around their data, accessibility
 measures, pricing outcomes and evaluation designs. Explain how they inform
 the research gap; avoid claiming universal novelty. Cite only sources that
 have been read and checked.}
 
-\subsection{Recent Airbnb research on accessibility and pricing}
+\section{Recent Airbnb research on accessibility and pricing}
 \label{sec:recent-airbnb-literature}
 \draftnote{Review recent relevant Airbnb studies of accessibility or asking
 prices. Identify their findings, contexts and limitations, and distinguish
 asking prices from transactions, bookings and revenue.}
 
-\subsection{Airbnb studies using Euclidean accessibility}
+\section{Airbnb studies using Euclidean accessibility}
 \label{sec:representations-literature}
 \draftnote{Review Airbnb studies that measure proximity or opportunities with
 straight-line distance. Describe the destinations, distance definitions and
 pricing outcomes, and explain what this representation captures and misses.}
 
-\subsection{Airbnb studies using walking-network accessibility}
+\section{Airbnb studies using walking-network accessibility}
 \label{sec:walking-literature}
 \draftnote{Review Airbnb studies using pedestrian-network distances, travel
 times or reachable opportunities. Compare their inputs and assumptions with
 Euclidean approaches without assuming that network measures predict better.}
 
-\subsection{Geographic generalization in Airbnb price prediction}
+\section{Geographic generalization in Airbnb price prediction}
 \label{sec:generalization-literature}
 \draftnote{Review Airbnb price-prediction studies that evaluate geographic
 generalization, including spatial holdouts or transfer where available.
 Distinguish these from random validation and identify any evidence gap; do not
 invent a study if a direct precedent cannot be verified.}
 
-\section{Theoretical framework}
+% ======================================================================
+% CHAPTER 3 -- THEORETICAL FRAMEWORK
+% Purpose: develop the concepts that motivate the analytical comparison.
+% ======================================================================
+\chapter{Theoretical Framework}
+\label{ch:theory}
 \label{sec:theoretical-framework}
-\subsection{Hedonic pricing}
+\section{Hedonic pricing}
 \label{sec:hedonic-pricing}
 \draftnote{Explain hedonic pricing as a framework for relating prices to
 property and location attributes. Connect it to Airbnb asking prices and
 conditional associations without treating estimated coefficients as causal.}
 
-\subsubsection{Spatial hedonic pricing}
+\subsection{Spatial hedonic pricing}
 \label{sec:spatial-hedonic-pricing}
 \draftnote{Explain the spatial context of hedonic prices, including location,
 spatial dependence and the limits of interpreting correlated attributes.
 Relate this framework to the study's controls and geographic evaluation.}
 
-\subsection{Accessibility}
+\section{Accessibility}
 \label{sec:accessibility-concept}
 \draftnote{Define accessibility, proximity and reachable opportunities.
 Explain Euclidean and walking representations and plausible relationships to
 asking prices, including confounding and selection. Link the framework to
 RQ1--RQ4 without assuming that measurement detail improves prediction.}
 
-\subsection{Synthesis and analytical expectations}
+\section{Synthesis and analytical expectations}
 \label{sec:expectations}
 \draftnote{Connect the literature and theoretical framework to RQ1--RQ4.
 Label expectations as conceptual; do not retrospectively call observed patterns
 preregistered hypotheses. Avoid repeating the introduction.}
 
 % ======================================================================
-% CHAPTER 3 -- STUDY AREAS AND DATA
+% CHAPTER 4 -- STUDY AREAS AND DATA
 % Purpose: explain what is observed and which populations the results cover.
 % Sources: ../docs/analysis/data_dictionary.md, source_registry.md,
 % sample_audit.json, context_audit.json; ../outputs/tables/sample_flow.md.
@@ -230,8 +234,8 @@ verified project practices from recommendations and avoid legal conclusions
 that have not been checked.}
 
 % ======================================================================
-% CHAPTER 4 -- METHODS
-% Purpose: explain how each question is answered; keep findings in Chapter 5.
+% CHAPTER 5 -- METHODS
+% Purpose: explain how each question is answered; keep findings in Chapter 6.
 % Authorities: ../config/study/design.json; ../docs/analysis/
 % preanalysis_specification.md; association_missingness_amendment_20261013.md.
 % ======================================================================
@@ -311,7 +315,7 @@ EPSG:25832 (Copenhagen), EPSG:25833 (Oslo), EPSG:3006 (Stockholm).
 Describe code/SQL provenance without exposing private records.}
 
 % ======================================================================
-% CHAPTER 5 -- RESULTS (same order as the four research questions)
+% CHAPTER 6 -- RESULTS (same order as the four research questions)
 % Purpose: answer each question with evidence before discussing mechanisms.
 % Primary handover: ../reports/findings_by_research_question.md,
 % research_results.md and thesis_figure_recommendations.md.
@@ -521,7 +525,7 @@ The discussion considers what this distinction between measurement detail
 and predictive usefulness implies.
 
 % ======================================================================
-% CHAPTER 6 -- DISCUSSION
+% CHAPTER 7 -- DISCUSSION
 % Purpose: explain what the combined findings mean, with literature support.
 % Claim boundaries: ../docs/final_claims_for_thesis.md.
 % ======================================================================
@@ -652,7 +656,7 @@ These extensions address limits of the present evidence; they are not
 completed analyses in this thesis.
 
 % ======================================================================
-% CHAPTER 7 -- CONCLUSION
+% CHAPTER 8 -- CONCLUSION
 % Purpose: leave a direct answer to the original problem; introduce no evidence.
 % ======================================================================
 \chapter{Conclusion}

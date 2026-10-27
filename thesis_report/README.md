@@ -3,7 +3,7 @@
 Edit [main.tex](main.tex). It contains the cover details, all prose, chapter
 order, figure/table placements and appendix prompts. The supplied UCPH example
 provides the `memoir` class and SAMF cover; body chapters use numbered sections.
-Chapters 5--7 contain the results, discussion and conclusion draft based on the
+Chapters 6--8 contain the results, discussion and conclusion draft based on the
 frozen final evidence. The earlier chapters and appendices still contain writing
 prompts. The manuscript is not a finished thesis or a newly reviewed literature
 survey.
@@ -74,12 +74,13 @@ shows → what it means**. A four-RQ structure is already the current study desi
 | Chapter | Reader's question | Keep the emphasis on |
 | --- | --- | --- |
 | 1. Introduction | Why compare accessibility representations? | Motivation, gap, contribution, RQ1–RQ4 and scope |
-| 2. Conceptual framework and related literature | What does prior Airbnb research show, and which theories frame the study? | Recent, Euclidean, walking-network and geographic-generalization literature; hedonic and spatial hedonic pricing; accessibility |
-| 3. Study areas and data | What population and measurements are available, and what are the legal and ethical considerations? | Geography, sources, selection, missingness, variables, privacy and verified source-use requirements |
-| 4. Methods | How is each question answered fairly? | Matched E/W definitions, four models, training-only evaluation, associations and transfer |
-| 5. Results | What is the answer to each question? | RQ1 measurement → RQ2 prediction/association → RQ3 geography → RQ4 transfer |
-| 6. Discussion | What do the combined answers mean? | Literature, explanations, limitations, implications and future work |
-| 7. Conclusion | What has the thesis established? | Direct qualified answers and the combined contribution |
+| 2. Related literature | What does prior Airbnb research show? | Recent accessibility/pricing studies, Euclidean and walking-network measures, and geographic generalization |
+| 3. Theoretical framework | Which theories frame the study? | Hedonic pricing, spatial hedonic pricing, accessibility and analytical expectations |
+| 4. Study areas and data | What population and measurements are available, and what are the legal and ethical considerations? | Geography, sources, selection, missingness, variables, privacy and verified source-use requirements |
+| 5. Methods | How is each question answered fairly? | Matched E/W definitions, four models, training-only evaluation, associations and transfer |
+| 6. Results | What is the answer to each question? | RQ1 measurement → RQ2 prediction/association → RQ3 geography → RQ4 transfer |
+| 7. Discussion | What do the combined answers mean? | Literature, explanations, limitations, implications and future work |
+| 8. Conclusion | What has the thesis established? | Direct qualified answers and the combined contribution |
 | Appendices | Where can I check details? | Provenance/dictionary, full diagnostics, robustness and decision chronology |
 
 Keep one results chapter initially: the same three cities and four models recur

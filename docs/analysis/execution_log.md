@@ -1153,3 +1153,21 @@ data, results, models, analysis configuration or bibliography entries changed.
 Pre-existing deletions of outputs/README.md and outputs/thesis_results.zip are
 untouched and excluded from this checkpoint. The recorded origin was not
 reachable in the sandbox; any failed publication is LOCAL_ONLY.
+
+## 27 October 2026 — Separate literature and theory chapters
+
+The researcher clarified that related literature and theoretical framework
+should be separate chapters. Split them into Chapters 2 and 3, promoted their
+internal headings one level, and retained spatial hedonic pricing under hedonic
+pricing. Updated the introductory roadmap, later chapter-number comments and
+writing guide to the resulting eight-chapter structure. Existing writing prompts
+and the overall 72,000-character ceiling remain in place. Legal and ethical
+considerations now sit in Chapter 4, Study Areas and Data.
+
+Validation: temporary XeLaTeX/latexmk build PASS (25 pages); scoped whitespace
+check PASS. Reviewed the diff: only chapter structure, headings, roadmap and
+writing guidance changed. Scientific inputs, methods and results were not
+revised. Pre-existing output deletions remain excluded. Checkpoint publication
+uses the recorded origin and explicit HEAD:refs/heads/v4; remote/local equality
+is checked afterwards, and failure is LOCAL_ONLY. No own-commit SHA is recorded
+in this entry.
