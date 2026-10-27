@@ -1191,3 +1191,59 @@ legal assertions, data or empirical results and does not change the overall
 Normal incremental checkpoint and explicit HEAD:refs/heads/v4 publication use
 the recorded origin, followed by remote/local SHA verification; a publication
 failure is LOCAL_ONLY. This entry contains no own-commit SHA.
+
+## 27 October 2026 — Study areas and data chapter draft
+
+Drafted Chapter 4 at the researcher's request using the current contract,
+design, plan, amendment, source/context/geography/sample audits and final public
+aggregate exports. Separates study masks, provider validation groups and native
+density areas; records city CRSs, listing/OSM reference times, sample attrition,
+missing controls, asking-price outcomes, density vintages and source/privacy
+qualifications. Retains the uniform post-observation 10% association amendment,
+genuine complete cases and training-only predictive preprocessing. No new
+legal-compliance, consent or institutional-approval claim is made.
+
+Included the unchanged approved study-area map and two code-generated tables:
+analytical sources/reference periods and sample selection/missingness. The new
+scripts/build_thesis_data_assets.py checks pinned catalog/audit/export hashes,
+checks sample counts against the frozen audit, copies the map byte-for-byte and
+records input/output hashes and scientific run identities. Added eleven distinct
+source/governance references in data_references.bib and a source-check note.
+Checked provider documentation, official population-table identities, OSM
+licensing and Danish Data Protection Agency principles with the web tool. No
+scientific source was reacquired. All six existing result tables pass their
+original deterministic check without changes.
+
+Preserved exact pre-edit manuscript, bibliography, preamble, guide and log in
+archive/before_thesis_data_chapter_20261027/ with checksums. The initial working
+tree already contained researcher literature/theory edits and bibliography
+additions, plus the longstanding output deletions. These remain untouched and
+are excluded from staging. Only the Chapter 4 replacement and stale empty-
+bibliography prompt correction are staged from main.tex, using a patch relative
+to its actual pre-edit bytes. Researcher bibliography bytes remain identical;
+its sixteen duplicate keys are inherited Biber warnings and were not silently
+resolved. Source entries use a separate bibliography file.
+
+Validation: audited-environment Python compilation, new asset --check, existing
+six-table --check and scoped whitespace PASS. Full local XeLaTeX/latexmk/Biber
+builds with visible and hidden prompts PASS. Visually reviewed the five chapter
+pages, landscape map, source/sample tables and reference wrapping. Added xurl
+and bibliography URL-break penalties; final hidden-prompt build has no overfull
+boxes, oversized floats or undefined references/citations. Known KU package-name
+warning, duplicate literature keys and one inherited underfull bibliography
+paragraph remain. A five-page chapter preview is local under thesis_report/build/;
+no old reading PDF was overwritten.
+
+Approximate normalised PDF text counts: 66,148 characters for body/tables,
+8,544 for references and 3,445 for cover/front matter/contents. Figure text in
+raster images is not extracted. The counting-scope clarification was requested;
+pending a reply the 72,000-character ceiling is treated as a main-body budget,
+with the all-content estimate (78,139) disclosed rather than certified compliant.
+Unfinished introduction/methods/appendix prompts still require writing and final
+programme-specific counting. No manuscript length certification is claimed.
+
+PostgreSQL/PostGIS, raw bytes, SQL identities, scientific exports, fitted models
+and predictions are unchanged. No release recertification or analytical rerun.
+Normal incremental commit goes only to v4 with explicit HEAD:refs/heads/v4 push
+and subsequent remote/local SHA verification; failure is LOCAL_ONLY. This entry
+does not contain its own commit SHA.

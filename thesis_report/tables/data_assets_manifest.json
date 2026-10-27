@@ -1,0 +1,139 @@
+{
+  "generator": "scripts/build_thesis_data_assets.py",
+  "generator_sha256": "b3b1818aee39cbf42c2ad3d910440e820a93230bb779aa63eecf9a0be9bd864d",
+  "inputs": {
+    "reports/thesis_artifact_manifest.json": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52",
+    "outputs/tables/city_sample_summary.csv": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
+    "outputs/tables/sample_flow.csv": "441a58c52de158d747d5a5df9189393a34ab89f867a18017cdc4875f98d8a82c",
+    "docs/analysis/context_audit.json": "896c75821992fa13318be5ef4a3bce0430bc93920020332c927e9a0acc67bdf6",
+    "docs/analysis/sample_audit.json": "af1c5ea5360069cd2e7b82a41c426c342afedd876846a64b25ffa4598cac60cf",
+    "outputs/figures/study_areas.png": "06deb208bdf60cd037ca81395fc8c223d4e3b881c6ef23f74b0a27a106900759"
+  },
+  "source_run_artifacts": {
+    "outputs/tables/city_sample_summary.csv": [
+      {
+        "run_id": "copenhagen_sample_20261013t014237616829z",
+        "city": "copenhagen",
+        "family": "sample",
+        "summary_sha256": "f9e7dc8b643e25942a207ebfde11caa4bdc3a870570658d18398ea69aed96f3e",
+        "selector": "config/study/sample_selection.json"
+      },
+      {
+        "run_id": "oslo_sample_20261013t014519442961z",
+        "city": "oslo",
+        "family": "sample",
+        "summary_sha256": "3c55e819cf21bd1200edd815286458af7505e312854b5cf3f6b939a859264c42",
+        "selector": "config/study/sample_selection.json"
+      },
+      {
+        "run_id": "stockholm_sample_20261013t014730598505z",
+        "city": "stockholm",
+        "family": "sample",
+        "summary_sha256": "fb85fe4652493b9e2aec412193a2b67ca961e1d63f7ff61e4c578370e4f281c7",
+        "selector": "config/study/sample_selection.json"
+      },
+      {
+        "run_id": "copenhagen_reference_20261013t010826397169z",
+        "city": "copenhagen",
+        "family": "reference",
+        "summary_sha256": "431dbb8989d4f6a19e5542acefaf7677ae2e86917f211f7ed1d4ebfea5d5033c",
+        "selector": "config/study/reference_selection.json"
+      },
+      {
+        "run_id": "oslo_reference_20261013t010833786311z",
+        "city": "oslo",
+        "family": "reference",
+        "summary_sha256": "5e5b533b8542b86b6aab504711561b75ac9e698529820f31406d0a123b705410",
+        "selector": "config/study/reference_selection.json"
+      },
+      {
+        "run_id": "stockholm_reference_20261013t010837541611z",
+        "city": "stockholm",
+        "family": "reference",
+        "summary_sha256": "e904be076da3820ba40d49b71e176ca09c265a903c968021153222a2001ff4fa",
+        "selector": "config/study/reference_selection.json"
+      },
+      {
+        "run_id": "copenhagen_reporting_20261013t093516511037z",
+        "city": "copenhagen",
+        "family": "reporting",
+        "summary_sha256": "a912bb844d5b01196ccc666d93c595fa9736cfb0588dfc41b077dd4f19bfdc6c",
+        "selector": "config/study/association_selection.json"
+      },
+      {
+        "run_id": "oslo_reporting_20261013t093536688627z",
+        "city": "oslo",
+        "family": "reporting",
+        "summary_sha256": "0663f8bad7e916c8137467b3891598809324b0a6c16d18498f07de7896c0bccc",
+        "selector": "config/study/association_selection.json"
+      },
+      {
+        "run_id": "stockholm_reporting_20261013t093547500148z",
+        "city": "stockholm",
+        "family": "reporting",
+        "summary_sha256": "a9b44e92134d579e1b80bf9ea1faf87742eaaaadba9069ced14d3745b15cc091",
+        "selector": "config/study/association_selection.json"
+      }
+    ],
+    "outputs/tables/sample_flow.csv": [
+      {
+        "run_id": "copenhagen_sample_20261013t014237616829z",
+        "city": "copenhagen",
+        "family": "sample",
+        "summary_sha256": "f9e7dc8b643e25942a207ebfde11caa4bdc3a870570658d18398ea69aed96f3e",
+        "selector": "config/study/sample_selection.json"
+      },
+      {
+        "run_id": "oslo_sample_20261013t014519442961z",
+        "city": "oslo",
+        "family": "sample",
+        "summary_sha256": "3c55e819cf21bd1200edd815286458af7505e312854b5cf3f6b939a859264c42",
+        "selector": "config/study/sample_selection.json"
+      },
+      {
+        "run_id": "stockholm_sample_20261013t014730598505z",
+        "city": "stockholm",
+        "family": "sample",
+        "summary_sha256": "fb85fe4652493b9e2aec412193a2b67ca961e1d63f7ff61e4c578370e4f281c7",
+        "selector": "config/study/sample_selection.json"
+      }
+    ],
+    "outputs/figures/study_areas.png": [
+      {
+        "run_id": "copenhagen_geography_20261013t010820402377z",
+        "city": "copenhagen",
+        "family": "geography",
+        "summary_sha256": "133acd0e0c94f583a2d2bd1b2ccb931b52ebc1a398d51264bb53425d46b5cc0b",
+        "selector": "config/study/geography_selection.json"
+      },
+      {
+        "run_id": "oslo_geography_20261013t010830555916z",
+        "city": "oslo",
+        "family": "geography",
+        "summary_sha256": "7e584dd425732d8df57421b3683f8ba3c60d730fd62b3617f8bdef6fcf8fbdc8",
+        "selector": "config/study/geography_selection.json"
+      },
+      {
+        "run_id": "stockholm_geography_20261013t010836230517z",
+        "city": "stockholm",
+        "family": "geography",
+        "summary_sha256": "ddd945298180dd756e469ff67d67709e84e4fad31bb963c0f88df03aaa68d4c9",
+        "selector": "config/study/geography_selection.json"
+      },
+      {
+        "path": "config/reporting/map_context.json",
+        "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+        "artifact": "Public surrounding municipalities and verified civic reference points",
+        "spatial_crs": "EPSG:4326"
+      }
+    ]
+  },
+  "outputs": {
+    "tables/data_samples.tex": "b715643d5129e631371551e7f1e4b575535f1ce8cabd2ccfcd9e54a86849d7d6",
+    "tables/data_sources.tex": "73bbf82324e77eb77d9eed42eb84aefb40d533460ccf5022f020461e4d6693ce",
+    "figures/study_areas.png": "06deb208bdf60cd037ca81395fc8c223d4e3b881c6ef23f74b0a27a106900759"
+  },
+  "model_refits": false,
+  "database_writes": false,
+  "note": "Presentation only; earlier audit statuses remain historical. Current association eligibility follows the 13 October 2026 amendment."
+}

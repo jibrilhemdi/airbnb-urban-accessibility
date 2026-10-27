@@ -190,48 +190,161 @@ preregistered hypotheses. Avoid repeating the introduction.}
 \chapter{Study Areas and Data}
 \label{ch:data}
 
+The analysis combines Airbnb listing records, mapped destinations and pedestrian
+networks, and official population statistics for Copenhagen--Frederiksberg,
+Oslo and Stockholm. This chapter defines the populations represented by the
+samples, the spatial units used to organise them, and the main qualifications
+of the resulting measurements.
+
 \section{Study areas and validation geography}
 \label{sec:study-areas}
-\draftnote{Introduce Copenhagen--Frederiksberg, Oslo and Stockholm. Separate
-accepted study masks, provider validation groups and native density areas.
-Explain the 11/17/11 operational groups without certifying them as current
-official boundaries. Insert study\_areas.png and retain its CRS/source notes.}
+Copenhagen denotes the combined Copenhagen and Frederiksberg study area
+throughout. Oslo and Stockholm use their accepted city study masks. These
+three capital-city samples provide separate settings for comparing accessibility
+representations and testing geographic prediction; they are not a representative
+sample of cities.
+
+Three spatial definitions serve different purposes. Accepted study masks
+determine which listings are included. Inside Airbnb neighbourhood polygons
+define operational validation groups: 11 in Copenhagen, 17 in Oslo and 11 in
+Stockholm. Copenhagen combines ten districts with Frederiksberg; Oslo retains
+Sentrum and Marka alongside its fifteen boroughs. Stockholm's fourteen provider
+labels are mapped to eleven fixed groups. These are documented analytical
+assignments, rather than certification that provider polygons reproduce current
+official boundaries. Official native statistical areas separately provide the
+denominators for population density.
+
+Figure~\ref{fig:study-areas} shows the validation geography. Source coordinates
+are handled in EPSG:4326; metric operations use EPSG:25832 in Copenhagen,
+EPSG:25833 in Oslo and EPSG:3006 in Stockholm. The map's surrounding municipalities
+are display context and do not determine sample membership.
+
+% Original public map and SHA256 are pinned in tables/data_assets_manifest.json.
+\begin{landscape}
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.88\linewidth]{study_areas.png}
+  \caption{Study areas and operational validation neighbourhoods. White lines
+  delineate the 11 Copenhagen--Frederiksberg, 17 Oslo and 11 Stockholm groups;
+  grey borders show surrounding municipalities. Stars mark Copenhagen City
+  Hall Square and Oslo and Stockholm City Halls. The Copenhagen display star
+  differs from the City Hall building used for analytical centrality. Panels
+  use the city-specific CRSs shown and different scales. Sources: Inside Airbnb,
+  DAGI/DAWA, Kartverket, Statistics Sweden and the project's verified civic
+  references. Surrounding boundaries were acquired for presentation in October
+  2026 and are not the analytical June geography.}
+  \label{fig:study-areas}
+\end{figure}
+\end{landscape}
 
 \section{Data sources and spatial coverage}
 \label{sec:sources}
-\draftnote{Summarize Inside Airbnb, historical OSM networks/destinations and
-native official population density. Separate acquisition dates from reference
-dates. State coverage, licensing and vintage limitations. Income and
-residential prices are excluded. Put detailed provenance in the appendix.}
+The listing sources are Inside Airbnb's detailed city datasets in the catalogue
+batch dated 30 June 2026
+\parencite{data_inside_cph2026,data_inside_oslo2026,data_inside_stockholm2026}.
+This is a common snapshot designation, not evidence that every listing was
+observed at the same instant. The records describe advertised accommodation.
+Inside Airbnb notes that listing coordinates are displaced and that a snapshot
+can include listings subsequently removed from the platform
+\parencite{data_inside_assumptions}. Coordinates therefore support approximate
+spatial measurement, rather than identification of exact properties.
+
+\input{tables/data_sources}
+
+OpenStreetMap supplies the pedestrian graph, rail and bus destinations,
+food/social and culture/tourism opportunities, and civic anchors. Analytical
+extracts use a common historical timestamp of 30 June 2026 at 23:59:59 UTC and
+a 2 km buffer around the study extent. The extracts were acquired later;
+reference time and acquisition time are recorded separately. Destination
+coverage and network connectivity remain source limitations. A finite zero
+opportunity count is retained as zero, while unavailable routing or source
+support remains missing. Chapter~\ref{ch:methods} defines the matched measures.
+
+The source register records URLs, acquisition dates, geographic extents,
+CRSs, licences and checksums. Raw bytes are retained unchanged, and
+PostgreSQL/PostGIS holds the persistent analytical tables. The accompanying
+provenance register documents source-specific qualifications and variable
+definitions.
 
 \section{Sample selection and missing data}
 \label{sec:samples}
-\draftnote{Walk from raw listings to eligible positive-price references,
-common predictive samples and genuine complete-case association samples.
-Use the generated sample-flow and city-summary tables. Explain missing-price
-exclusion and training-only predictive preprocessing separately.}
+Eligibility is restricted to listings classified as entire homes/apartments in
+six conventional dwelling types: rental units, condominiums, houses, lofts,
+townhouses and villas. Shared and private rooms are excluded. Each retained
+listing must have an original observed positive nightly asking price, fall
+inside the accepted study mask, and have unique operational geography and
+qualified context. Missing or nonpositive prices are excluded; quote prices
+are not substituted.
+
+\input{tables/data_samples}
+
+Table~\ref{tab:data-samples} distinguishes the inside-mask price-reference
+population from the common predictive sample. Accessibility support removes
+100, 28 and 15 further listings in Copenhagen, Oslo and Stockholm, respectively.
+Every predictive specification uses the resulting common rows and folds,
+including the control model. The substantial earlier price-related attrition
+limits the population to which the findings apply; its causes are not inferred
+from the retained records.
+
+Required-predictor missingness mainly concerns bedrooms: 123 values in
+Copenhagen, 376 in Oslo and 147 in Stockholm; Oslo also has one missing
+minimum-night value. Predictive preprocessing learns its replacements from
+training data only. Association inference instead uses genuine complete cases.
+The uniform eligibility limit for that analysis was raised from 5\% to 10\%
+on 13 October 2026 after Stockholm's 5.8918\% missingness was observed. This
+amendment permits the complete-case analysis without filling bedrooms or
+outcomes, and does not remove selection into the observed sample.
 
 \section{Asking prices and control variables}
 \label{sec:variables}
-Within-city models use the natural logarithm of original observed positive
-nightly asking prices in native currency. Cross-city transfer uses the
-city-relative outcome defined in Section~\ref{sec:transfer-method}.
-Missing outcomes are never imputed.
+The within-city outcome is the natural logarithm of the original observed
+positive nightly asking price in DKK, NOK or SEK. It represents an advertised
+price, rather than a completed booking or host revenue. Cross-city transfer
+subtracts each city's frozen mean log price from its eligible inside-mask
+reference population before accessibility filtering
+(Section~\ref{sec:transfer-method}). This preserves a separate distinction
+between native-currency asking prices and benchmarked relative prices.
 
-\draftnote{Describe the common dwelling, host, amenity, density and centrality
-controls with units and transformations. Record the native density
-denominators and vintage caveats, especially Stockholm. Place the complete
-variable dictionary in Appendix~\ref{app:definitions}.}
+Common controls describe accommodation capacity, bedrooms, bathrooms, property
+type and minimum nights; Superhost status and host listing counts; and eight
+amenities: Wi-Fi, dishwasher, washer, dryer, workspace, free parking, private
+balcony and self check-in. Minimum nights and host listing counts use
+$\log(1+x)$. Bathrooms follow the audited structured-field/text-parser rule.
+Location controls are log population density and straight-line distance in
+kilometres to a frozen City Hall anchor. Income and residential prices are
+excluded.
+
+Density is population divided by the corresponding native area in square
+kilometres, not by the provider holdout polygon's area. Copenhagen and
+Frederiksberg use 2026Q3 population, with a 1 July reference date, one day after
+the listing batch. Oslo uses 1 January 2026 population and native gross areas.
+Stockholm pairs 31 December 2025 population with published 31 December 2024
+land-plus-water areas. The Stockholm areas are rounded and retain the source's
+historical derivation qualifications. These period, footprint and denominator
+differences limit comparisons of density levels across cities; the primary
+measure is not a harmonised land-only density.
 
 \section{Legal and ethical considerations}
 \label{sec:legal-ethics}
-\draftnote{Explain the legal and ethical considerations relevant to the actual
-sources and research use. Verify applicable source licences, terms and legal
-requirements before stating them. Address public listing data, privacy and
-re-identification risks, displaced coordinates, secure handling and aggregated
-reporting, and the limits of consent and potential community impacts. Distinguish
-verified project practices from recommendations and avoid legal conclusions
-that have not been checked.}
+Inside Airbnb distributes its datasets under CC BY 4.0, while OpenStreetMap
+uses the Open Database Licence and requires contributor attribution
+\parencite{data_inside_license,data_osm_license}. These licences concern reuse;
+public availability alone is not evidence of individual consent to every
+subsequent analysis. The project records source-specific conditions. Where
+an explicit redistribution licence was not established for native Oslo or
+Stockholm inputs, raw statistics and geometries remain outside the public
+repository.
+
+The reporting approach follows the principles of data minimisation and
+confidentiality described by the Danish Data Protection Agency
+\parencite{data_dpa_principles}. Raw listing records, private coordinates,
+row-level predictions and fitted models are excluded from Git. Published
+listing-based spatial summaries use 500 m cells containing at least five
+observations; the study-area map above contains boundaries and civic markers,
+not individual listings. Displaced coordinates are not treated as a guarantee
+against re-identification. The analysis concerns aggregate asking-price
+patterns and does not assess individual hosts' compliance with rental rules
+or identify causal housing-displacement effects.
 
 % ======================================================================
 % CHAPTER 5 -- METHODS
@@ -719,9 +832,9 @@ and unexecuted suggestions are not current results.}
 \backmatter
 \chapter*{References}
 \addcontentsline{toc}{chapter}{References}
-\draftnote{Add checked entries to references.bib and cite them using
-\texttt{\string\parencite\{key\}} or \texttt{\string\textcite\{key\}}.
-The initial bibliography is intentionally empty; no citations are invented.}
+\draftnote{Verify bibliography entries and their cited claims. Resolve duplicate
+citation keys in the literature bibliography before submission. Use
+\texttt{\string\parencite\{key\}} or \texttt{\string\textcite\{key\}}.}
 \printbibliography[heading=none]
 
 \end{document}

@@ -3,16 +3,17 @@
 Edit [main.tex](main.tex). It contains the cover details, all prose, chapter
 order, figure/table placements and appendix prompts. The supplied UCPH example
 provides the `memoir` class and SAMF cover; body chapters use numbered sections.
-Chapters 6--8 contain the results, discussion and conclusion draft based on the
-frozen final evidence. The earlier chapters and appendices still contain writing
-prompts. The manuscript is not a finished thesis or a newly reviewed literature
-survey.
+Chapter 4 contains the study-area/data draft; Chapters 6--8 contain the results,
+discussion and conclusion drafts based on frozen final evidence. Other chapters
+and appendices may contain researcher-written text or writing prompts. The
+manuscript still requires a final editorial and citation review.
 
 | File | What to edit |
 | --- | --- |
 | `main.tex` | Title, author, supervisors, submission date and all thesis text |
 | `preamble.tex` | Fonts, margins, spacing, bibliography style and draft-note appearance |
-| `references.bib` | Verified bibliographic entries |
+| `references.bib` | Researcher-edited literature bibliography |
+| `data_references.bib` | Verified Chapter 4 dataset, source and governance references |
 | `figures/` | Copies of final generated figures selected for the manuscript |
 | `tables/` | Generated aggregate result tables and their checksum/source manifest |
 | `supplements/` | Original supplied template, examples and licensed UCPH logos; leave intact |
@@ -34,9 +35,11 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error -outdir=build main.tex
 
 This produces `build/main.pdf`. The LaTeX dependencies use a TeX distribution,
 separate from the project's unchanged Python `requirements.txt`. The bibliography
-uses Biber, which `latexmk` invokes when needed. The initial `.bib` file contains
-no invented entries; an empty-bibliography warning is expected until references
-are added and cited.
+uses Biber, which `latexmk` invokes when needed. The bibliography combines
+`references.bib` and `data_references.bib`. The
+local researcher-edited literature file may contain duplicate keys; Biber
+reports these and retains the first entry. Reconcile any such entries during
+literature editing. Chapter 4 source entries use separate keys.
 The unchanged KU package also emits a harmless package-name/path warning when
 loaded from `supplements/`.
 
@@ -48,8 +51,9 @@ in comments are writing references, not LaTeX dependencies. Upload selected
 public figures separately when you add them; do not upload the research repo,
 private data, credentials, individual predictions or model files.
 
-Keep `tables/` in the upload: the six result tables are included by `main.tex`.
-Their accepted numerical content is generated from the final aggregate exports,
+Keep `tables/`, `figures/` and both bibliography files in the upload. The
+Chapter 4 map and two tables accompany the six result tables in `main.tex`.
+The six result tables are generated from the final aggregate exports,
 with original paths, checksums and scientific run identities recorded in
 `tables/manifest.json`. Edit chapter prose in `main.tex`; edit table presentation
 in `scripts/build_thesis_chapter_tables.py`, then regenerate from the repository
@@ -64,6 +68,19 @@ Regeneration requires the existing local `outputs/tables/`, `outputs/metrics/`
 and pinned reporting manifest. Compiling the uploaded manuscript only needs the
 generated files already in `tables/`. The script verifies source checksums and
 does not refit models, rerun scientific stages or alter analytical exports.
+
+Chapter 4 assets are reproduced from pinned final aggregate exports and audit
+metadata, without data acquisition, analytical writes or model fitting:
+
+```sh
+.venv/bin/python scripts/build_thesis_data_assets.py
+.venv/bin/python scripts/build_thesis_data_assets.py --check
+```
+
+The map is an unchanged copy of `outputs/figures/study_areas.png`. Input/output
+checksums and scientific source identities are in
+`tables/data_assets_manifest.json`. The new source bibliography is documented
+in [the reference checks](../docs/analysis/thesis_data_chapter_sources.md).
 
 ## Recommended explanation flow
 
