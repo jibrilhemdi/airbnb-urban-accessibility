@@ -1171,3 +1171,23 @@ revised. Pre-existing output deletions remain excluded. Checkpoint publication
 uses the recorded origin and explicit HEAD:refs/heads/v4; remote/local equality
 is checked afterwards, and failure is LOCAL_ONLY. No own-commit SHA is recorded
 in this entry.
+
+## 27 October 2026 — Refine section and subsection titles
+
+At the researcher's request, revised the section and subsection names in
+Chapters 2–4 to use concise academic topic titles. Literature headings now
+identify accessibility/pricing, Euclidean accessibility and walking accessibility
+in Airbnb research. Theory headings distinguish hedonic pricing theory, its
+spatial extensions, accessibility concepts/representations and theoretical
+synthesis. Data headings identify validation geography, data sources/spatial
+coverage, sample selection/missing data and asking-price/control variables.
+The existing geographic-generalization and legal/ethical titles remain suitable.
+All section labels, hierarchy, prompts and scientific prose are retained.
+
+Validation: scoped whitespace and diff review PASS; temporary XeLaTeX/latexmk
+build PASS (25 pages). This change adds no literature,
+legal assertions, data or empirical results and does not change the overall
+72,000-character ceiling. Pre-existing output deletions remain excluded.
+Normal incremental checkpoint and explicit HEAD:refs/heads/v4 publication use
+the recorded origin, followed by remote/local SHA verification; a publication
+failure is LOCAL_ONLY. This entry contains no own-commit SHA.
