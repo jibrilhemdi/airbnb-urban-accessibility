@@ -104,7 +104,7 @@ The analysis is organized around four research questions:
 \label{sec:roadmap}
 The study uses June 2026 Inside Airbnb listings for conventional entire
 dwellings. Its evidence is observational. Chapter~\ref{ch:literature} develops
-the conceptual framework; Chapter~\ref{ch:data} describes the data and study
+related literature and the theoretical framework; Chapter~\ref{ch:data} describes the data and study
 areas; and Chapter~\ref{ch:methods} defines measurement and evaluation.
 Chapter~\ref{ch:results} presents the evidence in research-question order,
 followed by discussion in Chapter~\ref{ch:discussion} and conclusions in
@@ -118,29 +118,64 @@ Chapter~\ref{ch:conclusion}.
 \chapter{Conceptual Framework and Related Literature}
 \label{ch:literature}
 
-\section{Accessibility and the spatial context of asking prices}
+\section{Related literature}
+\label{sec:related-literature}
+\draftnote{Synthesize verified studies around their data, accessibility
+measures, pricing outcomes and evaluation designs. Explain how they inform
+the research gap; avoid claiming universal novelty. Cite only sources that
+have been read and checked.}
+
+\subsection{Recent Airbnb research on accessibility and pricing}
+\label{sec:recent-airbnb-literature}
+\draftnote{Review recent relevant Airbnb studies of accessibility or asking
+prices. Identify their findings, contexts and limitations, and distinguish
+asking prices from transactions, bookings and revenue.}
+
+\subsection{Airbnb studies using Euclidean accessibility}
+\label{sec:representations-literature}
+\draftnote{Review Airbnb studies that measure proximity or opportunities with
+straight-line distance. Describe the destinations, distance definitions and
+pricing outcomes, and explain what this representation captures and misses.}
+
+\subsection{Airbnb studies using walking-network accessibility}
+\label{sec:walking-literature}
+\draftnote{Review Airbnb studies using pedestrian-network distances, travel
+times or reachable opportunities. Compare their inputs and assumptions with
+Euclidean approaches without assuming that network measures predict better.}
+
+\subsection{Geographic generalization in Airbnb price prediction}
+\label{sec:generalization-literature}
+\draftnote{Review Airbnb price-prediction studies that evaluate geographic
+generalization, including spatial holdouts or transfer where available.
+Distinguish these from random validation and identify any evidence gap; do not
+invent a study if a direct precedent cannot be verified.}
+
+\section{Theoretical framework}
+\label{sec:theoretical-framework}
+\subsection{Hedonic pricing}
+\label{sec:hedonic-pricing}
+\draftnote{Explain hedonic pricing as a framework for relating prices to
+property and location attributes. Connect it to Airbnb asking prices and
+conditional associations without treating estimated coefficients as causal.}
+
+\subsubsection{Spatial hedonic pricing}
+\label{sec:spatial-hedonic-pricing}
+\draftnote{Explain the spatial context of hedonic prices, including location,
+spatial dependence and the limits of interpreting correlated attributes.
+Relate this framework to the study's controls and geographic evaluation.}
+
+\subsection{Accessibility}
 \label{sec:accessibility-concept}
 \draftnote{Define accessibility, proximity and reachable opportunities.
-Explain plausible relationships to asking prices, then identify confounding
-and selection issues that prevent a causal interpretation here.}
+Explain Euclidean and walking representations and plausible relationships to
+asking prices, including confounding and selection. Link the framework to
+RQ1--RQ4 without assuming that measurement detail improves prediction.}
 
-\section{Euclidean and walking representations}
-\label{sec:representations-literature}
-\draftnote{Explain straight-line distance, network restrictions and
-threshold-based opportunities. Build an expectation for measurement
-differences without assuming that a richer network measure predicts better.}
-
-\section{Prediction, geographic generalization and transfer}
-\label{sec:generalization-literature}
-\draftnote{Connect price-modelling literature to spatial dependence,
-geographic holdouts and source--target distribution differences. Distinguish
-prediction, adjusted association and transfer as separate questions.}
-
-\section{Synthesis and analytical expectations}
+\subsection{Synthesis and analytical expectations}
 \label{sec:expectations}
-\draftnote{End with a short bridge to RQ1--RQ4. Label expectations as
-conceptual; do not retrospectively call observed patterns preregistered
-hypotheses. Avoid another full summary of the introduction.}
+\draftnote{Connect the literature and theoretical framework to RQ1--RQ4.
+Label expectations as conceptual; do not retrospectively call observed patterns
+preregistered hypotheses. Avoid repeating the introduction.}
 
 % ======================================================================
 % CHAPTER 3 -- STUDY AREAS AND DATA
@@ -183,6 +218,16 @@ Missing outcomes are never imputed.
 controls with units and transformations. Record the native density
 denominators and vintage caveats, especially Stockholm. Place the complete
 variable dictionary in Appendix~\ref{app:definitions}.}
+
+\section{Legal and ethical considerations}
+\label{sec:legal-ethics}
+\draftnote{Explain the legal and ethical considerations relevant to the actual
+sources and research use. Verify applicable source licences, terms and legal
+requirements before stating them. Address public listing data, privacy and
+re-identification risks, displaced coordinates, secure handling and aggregated
+reporting, and the limits of consent and potential community impacts. Distinguish
+verified project practices from recommendations and avoid legal conclusions
+that have not been checked.}
 
 % ======================================================================
 % CHAPTER 4 -- METHODS

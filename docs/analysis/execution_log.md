@@ -1132,3 +1132,24 @@ manuscript/table-generator files, this log and preserved public predecessors
 are included. Normal incremental commit, explicit HEAD:refs/heads/v4 push and
 remote/local SHA equality are checked after local validation. A push failure
 is LOCAL_ONLY; this entry contains no own-commit SHA.
+
+## 27 October 2026 — Thesis literature and theory structure
+
+At the researcher's request, reorganized Chapter 2 of the editable LaTeX
+manuscript into related literature and theoretical framework. Added writing
+prompts for recent Airbnb accessibility/pricing research, Euclidean and
+walking-network studies, and geographic generalization in price prediction;
+theory prompts cover hedonic pricing, spatial hedonic pricing and accessibility.
+Added a Chapter 3 legal and ethical considerations prompt. These are writing
+scaffolds, not verified literature findings or legal determinations. Updated the
+writing guide and website drafting prompt to use the requested overall 72,000
+character ceiling, subject to the programme's counting rules.
+
+A temporary XeLaTeX/latexmk build passed. All 53 labels are unique, all 15
+local references resolve, previous labels remain, and Methods through the end
+of the manuscript are unchanged. The 39,132 characters in main.tex include
+LaTeX markup and prompts and are not a submission character count. No source
+data, results, models, analysis configuration or bibliography entries changed.
+Pre-existing deletions of outputs/README.md and outputs/thesis_results.zip are
+untouched and excluded from this checkpoint. The recorded origin was not
+reachable in the sandbox; any failed publication is LOCAL_ONLY.

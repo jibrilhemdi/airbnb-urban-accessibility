@@ -74,8 +74,8 @@ shows → what it means**. A four-RQ structure is already the current study desi
 | Chapter | Reader's question | Keep the emphasis on |
 | --- | --- | --- |
 | 1. Introduction | Why compare accessibility representations? | Motivation, gap, contribution, RQ1–RQ4 and scope |
-| 2. Conceptual framework and literature | Why might representation and geography matter? | Concepts and checked literature that motivate the comparison |
-| 3. Study areas and data | What population and measurements are available? | Geography, sources, selection, missingness, outcomes and controls |
+| 2. Conceptual framework and related literature | What does prior Airbnb research show, and which theories frame the study? | Recent, Euclidean, walking-network and geographic-generalization literature; hedonic and spatial hedonic pricing; accessibility |
+| 3. Study areas and data | What population and measurements are available, and what are the legal and ethical considerations? | Geography, sources, selection, missingness, variables, privacy and verified source-use requirements |
 | 4. Methods | How is each question answered fairly? | Matched E/W definitions, four models, training-only evaluation, associations and transfer |
 | 5. Results | What is the answer to each question? | RQ1 measurement → RQ2 prediction/association → RQ3 geography → RQ4 transfer |
 | 6. Discussion | What do the combined answers mean? | Literature, explanations, limitations, implications and future work |
@@ -99,8 +99,12 @@ a specific sentence rather than adding all available outputs.
 Write in this order: **data and methods → RQ results → discussion → introduction
 and conclusion → abstract**. Revise the introduction after writing the results
 so the promised contribution matches the completed evidence. Keep the abstract
-until the end. No fixed chapter word budget is imposed here; use the programme's
-actual requirements and supervisor advice.
+until the end. The requested overall ceiling is **72,000 characters** (30 ×
+2,400), including spaces. Treat it as a shared budget across the manuscript,
+not a separate allowance for each chapter. Check the programme's rules for what
+counts (for example, references, tables and appendices) before submission;
+reserve room for the unfinished sections and verify the final count under those
+rules.
 
 ## Moving sections between ChatGPT, DeepSeek and Codex
 
@@ -124,7 +128,9 @@ Copy and adapt this prompt:
 ```text
 Task: revise only [section title and LaTeX label] for my MSc thesis.
 Purpose: [what this section must establish for the reader].
-Length and tone: [approximate words; clear academic English].
+Length and tone: [character budget including spaces; clear academic English].
+Overall thesis ceiling: 72,000 characters including spaces; reserve space for
+other sections and apply the programme's counting rules.
 Current section: [paste LaTeX].
 Evidence: [paste verified aggregate output, definitions or checked sources].
 Required qualifications: [paste the relevant study/claim constraints].
