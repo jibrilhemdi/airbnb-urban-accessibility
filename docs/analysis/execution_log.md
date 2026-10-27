@@ -1301,3 +1301,61 @@ source acquisition, model fit, prediction change or release recertification.
 Normal incremental commit/push uses existing v4 and recorded origin with
 HEAD:refs/heads/v4 and subsequent remote/local SHA equality; publication failure
 is LOCAL_ONLY. This entry contains no own-commit SHA.
+
+## 27 October 2026 — Missing-price percentages and Methods draft
+
+Replaced Table 4.3's bedroom-count display with the within-city/type missing
+asking-price percentage, alongside N and the original missing-price count.
+Totals divide total missing prices by total listings; they do not average
+category percentages. N=0 remains undefined and displays a dash. Original
+SQL counts and the full missingness audit are unchanged. Independently verified
+all 33 percentage cells using decimal arithmetic. The existing map and other
+two Chapter 4 tables remain byte-identical.
+
+Drafted all seven Methods sections from the executed specification and actual
+model/validation/accessibility/inference/reporting code. Explains the exact
+four models, common rows/folds, OLS versus XGBoost, matched measurements,
+training-only medians/indicators/category coding, 30-candidate/four-inner-fold
+selection, untouched outer holdouts, pooled RMSE/paired stability, union
+complete cases, HC3 and restricted Webb tests, registered Moran/spatial-error
+and fixed-effect checks, six source-only relative-price transfers and robustness.
+Retains the observed support decision and association-amendment timing, via the
+existing disclosure; no outcome/bedroom inference imputation, causal effect,
+new estimator or independent-replication claim is introduced.
+
+Added a compact five-contrast table and native LaTeX three-step evaluation
+figure, generated from the executed registry with source/code hashes by
+scripts/build_thesis_methods_assets.py. These explain the design and contain no
+new empirical estimates. Checked Chen/Guestrin and MacKinnon/Nielsen/Webb against
+primary papers; rechecked Roberts publication metadata and original abstract.
+Two new entries are in methods_references.bib. Only the existing verified Roberts
+entry is selectively staged from references.bib, so the checkpoint compiles
+independently of unrelated researcher bibliography additions. The working
+bibliography bytes and researcher introduction/literature/theory text remain
+unchanged; those unrelated edits and longstanding output deletions stay unstaged.
+
+Preserved prior manuscript, bibliography, preamble, guide, generator, data-table
+manifest/table, preview, source note and log with hashes in
+archive/before_thesis_methods_20261027/. Staged only this task's manuscript diff.
+Shortened repeated map-caption/source-note wording to accommodate Methods within
+the current main-body budget while preserving provenance and geographic caveats.
+The approximately 71,585 normalised main-body characters exclude references,
+front matter and text embedded in raster figures. The earlier counting-scope
+assumption remains explicit; this is not programme-specific length certification.
+
+Validation: Chapter 4 assets --check, Methods assets --check, existing six
+result-table --check, Python compilation and scoped whitespace PASS. Full working
+XeLaTeX/latexmk/Biber build and an isolated checkpoint-only build PASS. No undefined
+citations/references, overfull lines or oversized floats. Visually checked the
+percentage table, comparison table, workflow diagram and all three Methods pages.
+The inherited local duplicate bibliography keys, KU package warning and one
+underfull literature-reference paragraph remain; the isolated checkpoint build
+does not require the unrelated bibliography. Created an eight-page combined
+Chapters 4–5 preview locally at thesis_report/build/data_and_methods.pdf.
+
+PostGIS queries were read-only. No raw bytes, applied migrations, sample/fold
+identities, source selectors, fitted code, predictions, models, dependencies or
+scientific exports changed. No scientific rerun or release recertification.
+Normal incremental checkpoint uses existing v4 and recorded origin with explicit
+HEAD:refs/heads/v4 and remote/local SHA verification; failed publication is
+LOCAL_ONLY. This entry does not contain its own commit SHA.

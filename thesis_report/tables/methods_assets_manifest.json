@@ -1,0 +1,22 @@
+{
+  "generator": "scripts/build_thesis_methods_assets.py",
+  "generator_sha256": "c6dc3bdeda786caa6c564a1b6ac87772b953efa4109ce4e844d6f6d08442dc36",
+  "inputs": {
+    "config/study/design.json": "d8df5d0e50f4b0bb63ad8697d19c3d76a1a3becae45e37e0473c69645b52c6ef",
+    "config/xgboost_candidates.json": "35cd1586fc5386777f2aea044226130f000be7742e1ddb4585365d08f8d2a0ac",
+    "src/study/modeling.py": "fd314333178e8754ae677e504719a9babaea1b70db4abf73ca7ce50c3ae2388a",
+    "src/study/validation.py": "53851c3bb6272dd840300f2e689f5f9b983425ec4d1f64ddaf24a9f01652ae59",
+    "src/study/accessibility.py": "25fdcb206ca6cc664b5e40710e9fb9f4cb4af90ee697c3a7a40ab33576b46b02",
+    "src/reporting/study_results.py": "ba75a03793073404cac94c64192d633904d9c2079e4dcbbe95d24031db8a071b",
+    "src/reporting/study_diagnostics.py": "d51ae06542612ca719cc8594013b3665c6306acd22fe6546bd95e4c870395b5f",
+    "src/pipeline/inference.py": "78aa6c28f95e2361c673d46a240b64fffd75222fa5230323fc8c7e98405c72bb",
+    "src/reporting/study_spatial.py": "80bb313f1ec4513c7c002db2a1c78c9b0788dcb1e3ac48884a4715f18efd58ae"
+  },
+  "outputs": {
+    "tables/method_contrasts.tex": "57f0880b86aef23d2fe29c8fdacdcca8dd1ae6a582651e0883ac8bfae90a7c97",
+    "figures/validation_workflow.tex": "c49fa1d70a8067769ccb4a250eb8330eb8f4ab5d1f1c6000f6a2d858698bd068"
+  },
+  "kind": "Executed-design explanation; no new empirical estimates",
+  "models_refitted": false,
+  "database_writes": false
+}

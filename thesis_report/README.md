@@ -3,7 +3,7 @@
 Edit [main.tex](main.tex). It contains the cover details, all prose, chapter
 order, figure/table placements and appendix prompts. The supplied UCPH example
 provides the `memoir` class and SAMF cover; body chapters use numbered sections.
-Chapter 4 contains the study-area/data draft; Chapters 6--8 contain the results,
+Chapters 4--5 contain the study-area/data and methods drafts; Chapters 6--8 contain the results,
 discussion and conclusion drafts based on frozen final evidence. Other chapters
 and appendices may contain researcher-written text or writing prompts. The
 manuscript still requires a final editorial and citation review.
@@ -14,7 +14,8 @@ manuscript still requires a final editorial and citation review.
 | `preamble.tex` | Fonts, margins, spacing, bibliography style and draft-note appearance |
 | `references.bib` | Researcher-edited literature bibliography |
 | `data_references.bib` | Verified Chapter 4 dataset, source and governance references |
-| `figures/` | Copies of final generated figures selected for the manuscript |
+| `methods_references.bib` | Verified Methods references |
+| `figures/` | Manuscript maps and code-generated explanatory diagrams |
 | `tables/` | Generated aggregate result tables and their checksum/source manifest |
 | `supplements/` | Original supplied template, examples and licensed UCPH logos; leave intact |
 
@@ -36,7 +37,7 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error -outdir=build main.tex
 This produces `build/main.pdf`. The LaTeX dependencies use a TeX distribution,
 separate from the project's unchanged Python `requirements.txt`. The bibliography
 uses Biber, which `latexmk` invokes when needed. The bibliography combines
-`references.bib` and `data_references.bib`. The
+`references.bib`, `data_references.bib` and `methods_references.bib`. The
 local researcher-edited literature file may contain duplicate keys; Biber
 reports these and retains the first entry. Reconcile any such entries during
 literature editing. Chapter 4 source entries use separate keys.
@@ -51,7 +52,7 @@ in comments are writing references, not LaTeX dependencies. Upload selected
 public figures separately when you add them; do not upload the research repo,
 private data, credentials, individual predictions or model files.
 
-Keep `tables/`, `figures/` and both bibliography files in the upload. The
+Keep `tables/`, `figures/` and all bibliography files in the upload. The
 Chapter 4 map and three tables accompany the six result tables in `main.tex`.
 The six result tables are generated from the final aggregate exports,
 with original paths, checksums and scientific run identities recorded in
@@ -80,13 +81,25 @@ writes or model fitting:
 
 The manuscript map rerenders the frozen geometry with compact spacing and `N`
 arrow labels. The completed original in `outputs/figures/study_areas.png` remains
-unchanged. The accommodation table counts blank prices and bedrooms in original
+unchanged. The accommodation table reports blank-price counts and percentages in original
 source records before all filters; room categories are descriptive only. The
 generator and its `--check` require the existing local PostGIS connection from
 `.env` and issue read-only queries. Input/output checksums, query/code hashes
 and scientific source identities are in
 `tables/data_assets_manifest.json`. The new source bibliography is documented
 in [the reference checks](../docs/analysis/thesis_data_chapter_sources.md).
+
+The Methods comparison table and native LaTeX workflow diagram are explanatory
+assets from the executed design, without new estimates or fitting:
+
+```sh
+.venv/bin/python scripts/build_thesis_methods_assets.py
+.venv/bin/python scripts/build_thesis_methods_assets.py --check
+```
+
+Keep `figures/validation_workflow.tex` in the Overleaf upload. The inputs and
+code hashes are in `tables/methods_assets_manifest.json`; reference/implementation
+checks are in [the Methods source note](../docs/analysis/thesis_methods_sources.md).
 
 ## Recommended explanation flow
 

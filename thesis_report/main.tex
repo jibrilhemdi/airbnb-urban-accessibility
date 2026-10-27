@@ -225,16 +225,13 @@ are display context and do not determine sample membership.
 \begin{figure}[p]
   \centering
   \includegraphics[width=\linewidth]{study_areas.png}
-  \caption{Study areas and operational validation neighbourhoods. White lines
-  delineate the 11 Copenhagen--Frederiksberg, 17 Oslo and 11 Stockholm groups;
-  grey borders show surrounding municipalities. Stars mark Copenhagen City
-  Hall Square and Oslo and Stockholm City Halls. The Copenhagen display star
-  differs from the City Hall building used for analytical centrality. Panels
-  use the city-specific CRSs shown and different scales. North arrows indicate
-  projected grid north. Sources: Inside Airbnb,
-  DAGI/DAWA, Kartverket, Statistics Sweden and the project's verified civic
-  references. Surrounding boundaries were acquired for presentation in October
-  2026 and are not the analytical June geography.}
+  \caption{Operational validation groups (white): 11 Copenhagen--Frederiksberg,
+  17 Oslo and 11 Stockholm groups. Grey borders are October 2026 municipal
+  context, not analytical June geography. Stars mark Copenhagen City Hall Square
+  and Oslo/Stockholm City Halls; Copenhagen's analytical anchor is the City Hall
+  building. Panels use the indicated CRSs, grid-north arrows and different scales.
+  Sources: Inside Airbnb, DAGI/DAWA, Kartverket, Statistics Sweden and verified
+  civic references.}
   \label{fig:study-areas}
 \end{figure}
 \end{landscape}
@@ -288,8 +285,9 @@ including the control model. The substantial earlier price-related attrition
 limits the population to which the findings apply; its causes are not inferred
 from the retained records.
 
-Table~\ref{tab:data-missingness} counts source blanks before sample selection,
-including room listings. Its denominators differ from the predictive samples.
+Table~\ref{tab:data-missingness} shows missing asking-price counts and percentages
+before sample selection, including rooms. Its denominators differ from the
+predictive samples.
 
 \input{tables/data_missingness}
 
@@ -363,75 +361,109 @@ compliance or causal housing displacement.
 
 \section{Analytical design and model comparisons}
 \label{sec:model-design}
-Let $X$ denote the common controls, $E$ Euclidean accessibility and $W$
-walking accessibility. The four model specifications are
+The common controls are $X$, Euclidean accessibility is $E$, and walking
+accessibility is $W$:
 \[
-  M_0=X,\qquad M_E=X+E,\qquad M_W=X+W,\qquad M_{EW}=X+E+W.
+ M_0=X,\qquad M_E=X+E,\qquad M_W=X+W,\qquad M_{EW}=X+E+W.
 \]
-Within each city, all four predictive models use the same observations,
-outcomes and evaluation folds. OLS and XGBoost are the specified estimators.
+All comparisons share observations, outcomes and folds within each city.
+Table~\ref{tab:method-contrasts} defines the comparisons. Ordinary least squares
+(OLS) fits an
+additive linear relationship. XGBoost combines decision trees to capture
+curved relationships and effects that depend on other predictors
+\parencite{methods_chen2016}.
 
-\draftnote{Explain the baseline, accessibility-versus-baseline comparisons,
-walking replacement ($M_W-M_E$) and walking add-on ($M_{EW}-M_E$).
-Introduce a compact design diagram only if it makes the sequence clearer.}
+\input{tables/method_contrasts}
 
 \section{Constructing matched accessibility measurements}
 \label{sec:accessibility-method}
-\draftnote{Define nearest rail/bus access and food/social and culture/tourism
-opportunities on matched category universes. Explain the historical OSM
-timestamp, directed graph and both snap connectors. The primary comparison
-uses 5 km/h, 10 minutes and a rounded matched 833 m radius. Nearest destinations
-may differ between representations; do not label their excess same-object
-route circuity. Distinguish measured zeros from routing/source missingness.}
+Both representations use the same deduplicated destinations: rail stations,
+bus stops, food/social venues and culture/tourism sites. Euclidean measures
+use straight-line distance. Walking follows permitted pedestrian routes, with
+links from listing and destination coordinates to the network. Walking speed is
+5 km/h. Nearest rail/bus access uses kilometres for Euclidean distance and
+minutes for walking time. The nearest destination can differ between them.
+
+Opportunities count destinations within 833 m or ten walking minutes and enter
+models as $\log(1+\mathrm{count})$. Categories follow the frozen destination
+taxonomy. Coverage checks exclude listings with incomplete routing or extent
+coverage. Reference time, CRSs and missing-route handling follow Chapter~\ref{ch:data}.
 
 \section{Geographic validation and training procedure}
 \label{sec:validation-method}
-\draftnote{Explain leave-one-operational-neighbourhood-out evaluation and
-the fixed 15-test/500-training support gate. Then describe random five-fold
-and fixed-grid comparisons. Explain training-only fitted preprocessing and
-the 30-candidate, four-inner-spatial-fold XGBoost search. Outer test folds
-never select variables, thresholds, preprocessing or hyperparameters.}
+Each evaluation split (outer fold) holds out one neighbourhood and trains on
+the others. This targets prediction in unseen areas \parencite{roberts2017}. Every fold requires at least
+15 test and 500 training listings. This support rule was chosen after inspecting
+support, before final fitting.
+
+\input{figures/validation_workflow}
+
+Each training split replaces numeric predictor blanks with its medians and
+adds flags recording missingness. Property types become 0/1 categories seen in training.
+Within the outer training data, four inner folds of 1 km cells compare
+30 fixed XGBoost setting combinations.
+The pipeline with lowest mean RMSE is refitted on the outer training data. The outer test data never choose
+predictors, accessibility definitions, settings or preprocessing. OLS uses the same outer folds
+without tuning.
 
 \section{Metrics, paired contrasts and stability}
 \label{sec:metrics-method}
-\draftnote{Define RMSE and supporting metrics on their outcome scales.
-Define candidate-minus-reference contrasts so negative RMSE change means
-improvement. Explain 2,000 group resamples as conditional
-geographic-composition stability, with overlapping training data and few
-groups. These ranges do not establish independent-sample inference or
-equivalence.}
+For observed log price $y_i$ and held-out prediction $\hat y_i$,
+\[
+ \mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat y_i)^2}.
+\]
+Lower RMSE means smaller errors; squaring gives large errors greater weight.
+Scores pool held-out listings, rather than averaging neighbourhood RMSEs.
+Mean absolute error (MAE), $R^2$ and Pearson/Spearman correlations supplement
+RMSE.
+Changes are candidate minus reference; negative $\Delta$RMSE means improvement.
+
+Stability ranges resample whole neighbourhoods 2,000 times, keeping paired
+model errors and all listings. The central 95\% of recomputed changes describes
+geographic composition with predictions fixed. Training sets overlap, so these
+are not independent-sample confidence intervals or equivalence tests.
 
 \section{Complementary complete-case associations}
 \label{sec:association-method}
-\draftnote{Separate adjusted OLS associations from predictive evaluation.
-Explain common complete cases on $X+E+W$, HC3, restricted Webb inference and
-spatial diagnostics/sensitivities. Disclose the uniform 5\% to 10\% eligibility
-amendment on 13 October 2026 after observing Stockholm's missingness.
-Missing bedrooms and outcomes remain unfilled in association inference.}
+All four association models use common complete cases on $X+E+W$, without filling bedrooms
+or outcomes. Eligibility follows the disclosed amendment in Chapter~\ref{ch:data}.
+Rank checks detect redundant columns; collinearity checks flag overlapping
+predictors. HC3 intervals allow unexplained variation to differ between
+listings. Restricted wild-cluster tests perturb residuals (observed minus
+fitted log prices) together within neighbourhoods, using Webb six-point weights and
+9,999 draws \parencite{methods_mnw2023}. Individual tests have no correction
+for multiple testing.
+
+Moran diagnostics test whether nearby held-out OLS $M_W$ errors are related,
+using eight neighbours and 499 permutations. The trigger $|I|>0.05$ and $p<0.05$
+activates an $M_W$ spatial-error sensitivity, allowing nearby errors to be related. Area fixed
+effects add neighbourhood baselines and absorb area-constant density.
+These associations are noncausal.
 
 \section{Source-only cross-city transfer}
 \label{sec:transfer-method}
-For listing $i$ in city $c$, the transfer outcome is
+All six ordered city pairs use the relative-price outcome
 \[
-  y^{\mathrm{rel}}_{ic}=\log(p_{ic})-\mu_c,
+ y^{\mathrm{rel}}_{ic}=\log(p_{ic})-\mu_c,
 \]
-where $p_{ic}$ is observed positive nightly asking price and $\mu_c$ is the
-frozen mean log price of the city's eligible inside-mask positive-price
-reference population before feature filtering.
-
-\draftnote{Describe all six directions. Preprocessing, tuning and fitting
-use the source city only. Target prices supply the frozen target benchmark
-and evaluation, with no target refitting or recalibration. Explain why this
-is a relative-price transfer test and why directions are dependent.}
+Here $p_{ic}$ is observed price; $\mu_c$ is the city's frozen mean log price
+(Section~\ref{sec:variables}).
+Preprocessing, tuning and fitting use only the source city. The fitted pipeline
+is applied unchanged to the target. Target prices enter only the benchmark
+and scoring, so evaluation requires observed target-price information.
+Stability resamples target
+neighbourhoods; shared pipelines and targets make directions dependent.
 
 \section{Registered robustness and reproducibility}
 \label{sec:robustness-method}
-\draftnote{Group the completed checks by validation, sample/control,
-accessibility and association purpose. Explain what each challenges rather
-than repeating every setting. Keep full configurations and NOT\_APPLICABLE
-statuses in Appendix~\ref{app:robustness}. Record the metric CRSs:
-EPSG:25832 (Copenhagen), EPSG:25833 (Oslo), EPSG:3006 (Stockholm).
-Describe code/SQL provenance without exposing private records.}
+Sensitivity checks vary validation geography and buffers, samples and controls,
+accessibility budgets and speeds, distance decay, boundary exclusions and
+density definitions. Random five-fold validation is a benchmark. Six further
+designs use 1, 1.5 and 2 km blocks at zero and half-block origins. Comparisons
+share rows and folds within each variant; variants may have different samples.
+
+PostgreSQL/PostGIS and code checksums link outputs to completed runs.
+Manuscript rendering never refits models.
 
 % ======================================================================
 % CHAPTER 6 -- RESULTS (same order as the four research questions)

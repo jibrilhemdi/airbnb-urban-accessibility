@@ -1,6 +1,6 @@
 {
   "generator": "scripts/build_thesis_data_assets.py",
-  "generator_sha256": "f5e17ece26b869f0816abe06865606af5708736be885ede1c5ba62c7eee49579",
+  "generator_sha256": "8a677f5e02059dccc7435c407c83a7d6fae1a28c83ddda9a4309ce198dc7e282",
   "inputs": {
     "reports/thesis_artifact_manifest.json": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52",
     "outputs/tables/city_sample_summary.csv": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
@@ -131,7 +131,7 @@
   "outputs": {
     "tables/data_samples.tex": "b715643d5129e631371551e7f1e4b575535f1ce8cabd2ccfcd9e54a86849d7d6",
     "tables/data_sources.tex": "73bbf82324e77eb77d9eed42eb84aefb40d533460ccf5022f020461e4d6693ce",
-    "tables/data_missingness.tex": "1dcba4ea81832124470e4fd7e5b5f28ad21cb76577e6d45033fff08da1562579",
+    "tables/data_missingness.tex": "fab425ba9ef72ed297ad750b58df6a93c8460247f42a13cfd446b8691ffc81eb",
     "figures/study_areas.png": "bac6f7ffd5b4597565ddb1fef06040e3d194c5d8a3038b00fdf3b5dc54052606"
   },
   "read_only_details": {

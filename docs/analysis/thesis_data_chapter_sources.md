@@ -69,3 +69,12 @@ source manifest identities, aggregate counts, geometry fingerprints and CRSs are
 recorded in tables/data_assets_manifest.json. No intermediate CSV or additional
 persistent analytical store is introduced. The generator and --check now require
 the authoritative local PostGIS database in addition to pinned public exports.
+
+## Percentage display — 27 October 2026
+
+At the researcher's request, Table 4.3 now displays N, missing asking-price
+count and percentage, replacing the bedroom-count column. The percentage is
+100 × missing price / N within city and type; city totals use total counts,
+and N=0 is shown with a dash. No original count or source value changed.
+All 33 displayed percentages were checked independently with decimal arithmetic.
+The original map and the other two Chapter 4 tables remain byte-identical.
