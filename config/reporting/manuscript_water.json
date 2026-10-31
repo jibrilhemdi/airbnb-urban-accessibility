@@ -1,0 +1,592 @@
+{
+  "purpose": "Figure 4.1 water display only; frozen analytical geography and all fits unchanged",
+  "source_receipts": [
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/copenhagen_0.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/0/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "12.395964776682483,55.556717109619754,12.785501575804258,55.78555882624349",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/0/query?f=geojson&where=1%3D1&geometry=12.395964776682483%2C55.556717109619754%2C12.785501575804258%2C55.78555882624349&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:26.691114+00:00",
+      "geographic_extent": {
+        "bbox": [
+          12.395964776682483,
+          55.556717109619754,
+          12.785501575804258,
+          55.78555882624349
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "e7d1b27db1774ed5d85e9a289a0e799cfd1527a936f3bf8fd7f1cffdea36c8b8",
+      "bytes": 93543,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/copenhagen_1.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/1/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "12.395964776682483,55.556717109619754,12.785501575804258,55.78555882624349",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/1/query?f=geojson&where=1%3D1&geometry=12.395964776682483%2C55.556717109619754%2C12.785501575804258%2C55.78555882624349&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:26.045746+00:00",
+      "geographic_extent": {
+        "bbox": [
+          12.395964776682483,
+          55.556717109619754,
+          12.785501575804258,
+          55.78555882624349
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c",
+      "bytes": 42,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/copenhagen_19.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/19/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "12.395964776682483,55.556717109619754,12.785501575804258,55.78555882624349",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/19/query?f=geojson&where=1%3D1&geometry=12.395964776682483%2C55.556717109619754%2C12.785501575804258%2C55.78555882624349&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:26.355529+00:00",
+      "geographic_extent": {
+        "bbox": [
+          12.395964776682483,
+          55.556717109619754,
+          12.785501575804258,
+          55.78555882624349
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c",
+      "bytes": 42,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/copenhagen_2.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/2/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "12.395964776682483,55.556717109619754,12.785501575804258,55.78555882624349",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/2/query?f=geojson&where=1%3D1&geometry=12.395964776682483%2C55.556717109619754%2C12.785501575804258%2C55.78555882624349&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:32.567985+00:00",
+      "geographic_extent": {
+        "bbox": [
+          12.395964776682483,
+          55.556717109619754,
+          12.785501575804258,
+          55.78555882624349
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "ab59b9fb2189b31626a96d9a36f910f1557260b9fbb1b548d72bd38e12b7b15e",
+      "bytes": 45983,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/data_policy.html",
+      "source_url": "https://land.copernicus.eu/en/data-policy",
+      "request_parameters": null,
+      "final_url": "https://land.copernicus.eu/en/data-policy",
+      "acquired_at_utc": "2026-10-31T04:22:25.737470+00:00",
+      "geographic_extent": "European EU-Hydro product documentation",
+      "sha256": "73e7e110e47712e72d871faedbeff6431aac766e22841f0aad15e6149bfd88cb",
+      "bytes": 977346,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/layer_0.json",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/0",
+      "request_parameters": {
+        "f": "json"
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/0?f=json",
+      "acquired_at_utc": "2026-10-31T04:22:25.780434+00:00",
+      "geographic_extent": "European service layer",
+      "sha256": "bd99534823f691debe81900a2c43c78c5d43eeea692787b4e06356b7a8b4c7b0",
+      "bytes": 5075,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/layer_1.json",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/1",
+      "request_parameters": {
+        "f": "json"
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/1?f=json",
+      "acquired_at_utc": "2026-10-31T04:22:25.821147+00:00",
+      "geographic_extent": "European service layer",
+      "sha256": "8da725b1c517829ca24e7ad6e310c7716e48ab0f4acbd494a256129b4891c49a",
+      "bytes": 5070,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/layer_19.json",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/19",
+      "request_parameters": {
+        "f": "json"
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/19?f=json",
+      "acquired_at_utc": "2026-10-31T04:22:25.913189+00:00",
+      "geographic_extent": "European service layer",
+      "sha256": "331a708a6ed83ddddeb287f0279aa9e50760add93cca2b430f0af4257020dc1a",
+      "bytes": 4991,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/layer_2.json",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/2",
+      "request_parameters": {
+        "f": "json"
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/2?f=json",
+      "acquired_at_utc": "2026-10-31T04:22:25.871042+00:00",
+      "geographic_extent": "European service layer",
+      "sha256": "3528248800eaabae2f3a06f0c24a4557be74b72737e71426584d072a3f6db23c",
+      "bytes": 6733,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/oslo_0.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/0/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "10.268568056068576,59.740213199732324,11.17032071046563,60.202190838892086",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/0/query?f=geojson&where=1%3D1&geometry=10.268568056068576%2C59.740213199732324%2C11.17032071046563%2C60.202190838892086&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:26.848027+00:00",
+      "geographic_extent": {
+        "bbox": [
+          10.268568056068576,
+          59.740213199732324,
+          11.17032071046563,
+          60.202190838892086
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "262290a0c12d46d37a8628192fed81fb02c814e5183872cac160b5cef5ccd7ec",
+      "bytes": 362375,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/oslo_1.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/1/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "10.268568056068576,59.740213199732324,11.17032071046563,60.202190838892086",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/1/query?f=geojson&where=1%3D1&geometry=10.268568056068576%2C59.740213199732324%2C11.17032071046563%2C60.202190838892086&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:26.786753+00:00",
+      "geographic_extent": {
+        "bbox": [
+          10.268568056068576,
+          59.740213199732324,
+          11.17032071046563,
+          60.202190838892086
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c",
+      "bytes": 42,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/oslo_19.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/19/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "10.268568056068576,59.740213199732324,11.17032071046563,60.202190838892086",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/19/query?f=geojson&where=1%3D1&geometry=10.268568056068576%2C59.740213199732324%2C11.17032071046563%2C60.202190838892086&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:27.216588+00:00",
+      "geographic_extent": {
+        "bbox": [
+          10.268568056068576,
+          59.740213199732324,
+          11.17032071046563,
+          60.202190838892086
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "2649cea79320b66350379bc97722525ff32db357d6a84c236ce91b77c08ac9d0",
+      "bytes": 64800,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/oslo_2.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/2/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "10.268568056068576,59.740213199732324,11.17032071046563,60.202190838892086",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/2/query?f=geojson&where=1%3D1&geometry=10.268568056068576%2C59.740213199732324%2C11.17032071046563%2C60.202190838892086&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:27.204796+00:00",
+      "geographic_extent": {
+        "bbox": [
+          10.268568056068576,
+          59.740213199732324,
+          11.17032071046563,
+          60.202190838892086
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "80d332525f9c7f9406fcac677f439b1ccd973fe2a7bceee27ff4993fbb9fbc8f",
+      "bytes": 719760,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/product.html",
+      "source_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "request_parameters": null,
+      "final_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "acquired_at_utc": "2026-10-31T04:22:25.426015+00:00",
+      "geographic_extent": "European EU-Hydro product documentation",
+      "sha256": "3e4143d6d23a651594dc784c6a84be820aaa585476949496d33cab7e062ee259",
+      "bytes": 1015137,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/stockholm_0.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/0/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "17.67860320167185,59.17348709587801,18.288034170538822,59.494633439259296",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/0/query?f=geojson&where=1%3D1&geometry=17.67860320167185%2C59.17348709587801%2C18.288034170538822%2C59.494633439259296&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:27.340442+00:00",
+      "geographic_extent": {
+        "bbox": [
+          17.67860320167185,
+          59.17348709587801,
+          18.288034170538822,
+          59.494633439259296
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "6e9b040973324e3e40109d2d2a5b326426d55abb8e48e1cc510ebafa3fa9d685",
+      "bytes": 197322,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/stockholm_1.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/1/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "17.67860320167185,59.17348709587801,18.288034170538822,59.494633439259296",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/1/query?f=geojson&where=1%3D1&geometry=17.67860320167185%2C59.17348709587801%2C18.288034170538822%2C59.494633439259296&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:27.295305+00:00",
+      "geographic_extent": {
+        "bbox": [
+          17.67860320167185,
+          59.17348709587801,
+          18.288034170538822,
+          59.494633439259296
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c",
+      "bytes": 42,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/stockholm_19.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/19/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "17.67860320167185,59.17348709587801,18.288034170538822,59.494633439259296",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/19/query?f=geojson&where=1%3D1&geometry=17.67860320167185%2C59.17348709587801%2C18.288034170538822%2C59.494633439259296&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:27.713570+00:00",
+      "geographic_extent": {
+        "bbox": [
+          17.67860320167185,
+          59.17348709587801,
+          18.288034170538822,
+          59.494633439259296
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c",
+      "bytes": 42,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    },
+    {
+      "path": "data/raw/cartographic_context/eu_hydro/2026-10-31/stockholm_2.geojson",
+      "source_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/2/query",
+      "request_parameters": {
+        "f": "geojson",
+        "where": "1=1",
+        "geometry": "17.67860320167185,59.17348709587801,18.288034170538822,59.494633439259296",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": 4326,
+        "outSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "OBJECTID",
+        "returnGeometry": "true",
+        "geometryPrecision": 7,
+        "maxAllowableOffset": 2e-05,
+        "orderByFields": "OBJECTID",
+        "resultRecordCount": 1000
+      },
+      "final_url": "https://copernicus.discomap.eea.europa.eu/ArcGIS/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer/2/query?f=geojson&where=1%3D1&geometry=17.67860320167185%2C59.17348709587801%2C18.288034170538822%2C59.494633439259296&geometryType=esriGeometryEnvelope&inSR=4326&outSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID&returnGeometry=true&geometryPrecision=7&maxAllowableOffset=2e-05&orderByFields=OBJECTID&resultRecordCount=1000",
+      "acquired_at_utc": "2026-10-31T04:22:27.825054+00:00",
+      "geographic_extent": {
+        "bbox": [
+          17.67860320167185,
+          59.17348709587801,
+          18.288034170538822,
+          59.494633439259296
+        ],
+        "crs": "EPSG:4326"
+      },
+      "sha256": "c770f654976db01db9e19bc7edc2a81062112374def07ffef9d081b98bf99c03",
+      "bytes": 1103079,
+      "http_status": 200,
+      "source_crs": "Service EPSG:3857; requested GeoJSON EPSG:4326",
+      "reference_period": "2006–2012, EU-Hydro River Network Database V1",
+      "licence": "Copernicus full, open and free access; attribution and adaptation statement required",
+      "data_policy_url": "https://land.copernicus.eu/en/data-policy",
+      "product_url": "https://land.copernicus.eu/en/products/eu-hydro/eu-hydro-river-network-database",
+      "role": "display_only; never an analytical input"
+    }
+  ],
+  "records_sha256": "e6712c9498a0540b272d6711b194e0293e5e4317c523dcf94efd1aabef5bcfd0",
+  "migration_sha256": "a18ab8320b7c9dbe186c7ef2989c422a8dc08f5c68e3ff4403a483914350f120",
+  "geometry_crs": "EPSG:4326",
+  "panel_crs": {
+    "copenhagen": "EPSG:25832",
+    "oslo": "EPSG:25833",
+    "stockholm": "EPSG:3006"
+  },
+  "frozen_sql_packages_sha256": "250ac2d589207382443048b449244d674d3973918149243dc57c4c16fc77e80b"
+}

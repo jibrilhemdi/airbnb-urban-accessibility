@@ -1495,3 +1495,75 @@ assumption; no programme-specific or all-content length certification is made.
 Normal incremental commit/push uses existing v4, recorded origin, explicit
 HEAD:refs/heads/v4 and remote/local SHA verification. Publication failure is
 LOCAL_ONLY. This entry does not contain its own commit SHA.
+
+
+## 31 October 2026 — Canonical manuscript build and Figure 4.1 water context
+
+Applied the researcher's instruction to use main.tex, references.bib and one
+main.pdf. Merged all 42 unique existing literature/data/Methods entries into
+references.bib, preserving each first active entry byte-for-byte. Removed 16
+later duplicate-key entries, matching prior Biber resolution, and retired the
+two auxiliary bibliographies. Added the verified EU-Hydro dataset citation.
+Preamble now loads only references.bib. The local .latexmkrc places auxiliary
+files in build/ and produces thesis_report/main.pdf beside main.tex. Removed
+active chapter-preview PDFs and stale build/main.pdf after preserving their
+exact bytes and checksums. Kept the original supplied template intact. The
+canonical PDF includes the researcher's current working prose and draft prompts.
+
+Diagnosed the coastline omission: the old map filled complete administrative
+polygons and had no hydrographic display layer. Added a separate official
+Copernicus EU-Hydro layer for all three panels, showing sea, transitional waters,
+lakes and wide rivers. Attribution, adaptation and the 2006–2012 reference period
+are visible in the image and main.tex caption. Sources and limitations are in
+docs/analysis/thesis_canonical_sources_20261031.md. Source pages, API metadata,
+per-city bbox responses and acquisition receipts are write-once local raw bytes.
+Checksums, extents, requested EPSG:4326 coordinates, service generalisation and
+native panel CRSs are recorded. No invalid source geometry was repaired.
+
+The new append-only migration 002_manuscript_water.sql creates only the isolated
+cartography.manuscript_water table. Three immutable display geometries were
+persisted, with raw-source metadata, and pinned by
+config/reporting/manuscript_water.json. The acquisition script verifies all
+frozen scientific identities before writing this presentation-only table.
+Normal asset generation and --check use enforced read-only PostGIS queries.
+Clipping/union uses EPSG:4326; panels retain EPSG:25832/25833/3006, native extents,
+group boundaries, civic points and scales. No CSV is an alternative authority.
+Existing cartography source/feature rows and their selector remain unchanged.
+
+Validation: deterministic Chapter 4 asset --check and display-water source/SQL
+hash checks PASS. All three Chapter 4 tables, selected analytical geometries
+and original listing-source digests are unchanged. Six-result-table --check,
+Methods-assets --check, audited Python compilation, bibliography-union/citation
+checks, source-archive checksum verification and scoped whitespace checks PASS.
+All 751 scientific checkpoint identities still equal the frozen reporting
+catalog; all preserved completed public artifacts verify. No outcome filling,
+sample/feature/fold replacement, model fitting, prediction change, analytical
+area adjustment or completed result export overwrite. Existing 500 m/N>=5
+listing-map rules remain in force.
+
+Canonical full-source and isolated staged-source XeLaTeX/latexmk/Biber builds
+PASS. The canonical output is one 42-page main.pdf with one bibliography; no
+unresolved citations/references, duplicate-key warnings,
+overfull boxes or oversized floats. Visually reviewed the map, study-area/data
+pages, table layout, contents and consolidated bibliography, then rerendered
+the final map/citation pages. Known KU package-name warning and one harmless
+underfull bibliography paragraph remain. No stale chapter PDFs remain active.
+
+Approximate working-body length is 63,294 normalised PDF-text characters plus
+3,439 in the eight existing explanatory images and roughly 670 in the revised
+study map: about 67,400 including spaces, appendices and draft prompts. This
+continues the earlier disclosed exclusion of front matter and references.
+All extracted PDF text is 75,827 characters before raster figure text; an
+all-content interpretation of the 72,000-character ceiling is therefore not
+satisfied. No programme-specific length certification is made, and no unrelated
+researcher prose was cut to impose an unconfirmed counting convention.
+
+Exact pre-edit manuscript, bibliographies, PDFs, map, scripts and metadata are
+preserved with SHA-256 in archive/thesis_canonical_sources_20261031/. The merge
+report records the duplicate choices. Researcher Introduction/Literature/Theory
+edits remain unchanged and unstaged; only this task's main.tex caption and
+bibliography-prompt patch is staged. The bibliography itself is intentionally
+consolidated in full, as requested. Unrelated old output deletions remain
+untouched and excluded. A normal incremental checkpoint uses existing v4,
+recorded origin, explicit HEAD:refs/heads/v4 and remote/local SHA verification;
+a publication failure is LOCAL_ONLY. No commit contains its own SHA.

@@ -1,6 +1,6 @@
 {
   "generator": "scripts/build_thesis_data_assets.py",
-  "generator_sha256": "8a677f5e02059dccc7435c407c83a7d6fae1a28c83ddda9a4309ce198dc7e282",
+  "generator_sha256": "f6672cad2aeb1ab9ae5a06395d5e0efb9a24557bc292864fbb8af2de38eff629",
   "inputs": {
     "reports/thesis_artifact_manifest.json": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52",
     "outputs/tables/city_sample_summary.csv": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
@@ -132,7 +132,7 @@
     "tables/data_samples.tex": "b715643d5129e631371551e7f1e4b575535f1ce8cabd2ccfcd9e54a86849d7d6",
     "tables/data_sources.tex": "73bbf82324e77eb77d9eed42eb84aefb40d533460ccf5022f020461e4d6693ce",
     "tables/data_missingness.tex": "fab425ba9ef72ed297ad750b58df6a93c8460247f42a13cfd446b8691ffc81eb",
-    "figures/study_areas.png": "bac6f7ffd5b4597565ddb1fef06040e3d194c5d8a3038b00fdf3b5dc54052606"
+    "figures/study_areas.png": "7f7253affc4384d3679f80832dc1539cb3abb74918be65853ed58cb493882aaa"
   },
   "read_only_details": {
     "transaction": "READ ONLY",
@@ -194,6 +194,12 @@
       "sha256": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
       "artifact": "Public surrounding municipalities and verified civic reference points",
       "spatial_crs": "EPSG:4326"
+    },
+    "display_water": {
+      "selector": "config/reporting/manuscript_water.json",
+      "sha256": "2e74859843d0e3fafe1df974ad8a978e288f06d1b62deea75213dd2bf2268716",
+      "records_sha256": "e6712c9498a0540b272d6711b194e0293e5e4317c523dcf94efd1aabef5bcfd0",
+      "role": "display only"
     },
     "accommodation_missingness": {
       "copenhagen": {
@@ -344,13 +350,16 @@
       }
     },
     "code": {
-      "scripts/thesis_data_detail.py": "4845615dc1d7eff4dea1bed7a09622548387717fe2b3439d223eeea1117fd87f",
+      "scripts/thesis_data_detail.py": "8dd568d2b18da490d7a441c49b7fb9bf70ba01d053bceaabd62f1650e6608fac",
       "sql/queries/thesis_missingness_by_accommodation.sql": "243aa0f5acd184b4abcedbb222cb19339db3c2fec551f9cc95df17cfab90d1ef",
       "src/reporting/thesis_outputs.py": "c04b99a3914339e51a7bdf129c3c2dbf91051b2a8e86a4e4b51669cae3f3f231",
       "src/reporting/thesis_style.py": "4aeb8a0e5576558741f87108440fdd0df4d4e6f8085213c86c8b2f8efcf4901e",
       "config/study/cities.json": "c9e6a920796d2a06c741f6734cde63cb72c224364fe971dfca85c327686e6487",
       "config/study/geography_selection.json": "c0893bd2cad79728e94650bac8988d767aa13bf22247109401e22b697b6e9ea3",
-      "config/reporting/map_context.json": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e"
+      "config/reporting/map_context.json": "fcd93f54ab158dde00db517b398dec8425e57c26373b61004c352824e969d91e",
+      "scripts/thesis_water_context.py": "eeadf5bc550643439bb7239cd90506c1eb32a64f613e77b37e39596461eda23a",
+      "sql/cartography/002_manuscript_water.sql": "a18ab8320b7c9dbe186c7ef2989c422a8dc08f5c68e3ff4403a483914350f120",
+      "config/reporting/manuscript_water.json": "2e74859843d0e3fafe1df974ad8a978e288f06d1b62deea75213dd2bf2268716"
     },
     "spatial_crs": {
       "source": "EPSG:4326",
@@ -364,7 +373,8 @@
   "map_presentation": {
     "north_arrow_label": "N",
     "north_direction": "projected grid north",
-    "layout": "compact; source attribution retained; no geometry changes"
+    "layout": "compact; source attribution retained; frozen analytical boundaries unchanged",
+    "water": "Separate EU-Hydro 2006–2012 display overlay; no analytical use"
   },
   "model_refits": false,
   "database_writes": false,

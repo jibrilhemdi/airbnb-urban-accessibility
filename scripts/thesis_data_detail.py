@@ -16,7 +16,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
+from pyproj import Transformer
 from shapely.geometry import shape
+from shapely.ops import transform
 from sqlalchemy import text
 
 from src.ingestion.common import sha256_file
@@ -27,8 +29,9 @@ from src.provenance.specification import DEFINITION_VERSION
 from src.reporting import thesis_style as theme
 from src.reporting.thesis_cartography import load_layers
 from src.reporting.thesis_outputs import (
-    CAPITAL_COLOURS, CONTEXT_BORDER, CONTEXT_FILL, STAR_COLOUR, map_geography,
+    CAPITAL_COLOURS, CONTEXT_BORDER, CONTEXT_FILL, STAR_COLOUR, map_geography, outline,
 )
+from thesis_water_context import load_water
 from src.study.sources import get_engine
 from src.study.specification import CITIES, load_design
 from src.study.store import read_package
@@ -49,6 +52,7 @@ def read_details():
                 raise ValueError("Wrong authoritative database")
             data["cartographic_context"], cartography = load_layers(conn)
             provenance["cartography"] = cartography
+            data["display_water"], provenance["display_water"] = load_water(conn)
             for city in CITIES:
                 pointer = selected[city]
                 summary, _ = read_package(conn, pointer["run_id"], city, "geography")
@@ -110,19 +114,27 @@ def read_details():
         "src/reporting/thesis_outputs.py", "src/reporting/thesis_style.py",
         "config/study/cities.json", "config/study/geography_selection.json",
         "config/reporting/map_context.json",
+        "scripts/thesis_water_context.py", "sql/cartography/002_manuscript_water.sql",
+        "config/reporting/manuscript_water.json",
     )}
     provenance["spatial_crs"] = {"source": "EPSG:4326", "panels": {c: cities[c]["metric_crs"] for c in CITIES}}
     return data, counts, provenance
 
 
 def compact_map(data):
-    """Rerender original geometry; compact layout and N labels are presentation only."""
+    """Keep frozen boundaries; overlay separate display-only sea/lake polygons."""
     theme.setup()
     fig = plt.figure(figsize=(12.5, 5.7))
     panel_width = .306
     for i, city in enumerate(CITIES):
         ax = fig.add_axes([.02 + i * .327, .129, panel_width, panel_width * 12.5 / 5.7])
         map_geography(ax, data, city)
+        project = Transformer.from_crs(4326, data["cities"][city]["metric_crs"], always_xy=True).transform
+        outline(ax, transform(project, data["display_water"][city]),
+                facecolor="#EEF4F7", edgecolor="#C7D8E0", linewidth=.35, zorder=3)
+        for label in ax.texts:
+            if label.get_text().startswith("EPSG:"):
+                label.set_zorder(21)
         arrows = [item for item in ax.texts if item.get_text() == "N\n(grid)"]
         if len(arrows) != 1:
             raise ValueError("Expected one grid-north annotation per city")
@@ -136,11 +148,14 @@ def compact_map(data):
         Patch(facecolor=CONTEXT_FILL, edgecolor=CONTEXT_BORDER, label="Surrounding municipalities"),
         Line2D([], [], marker="*", markersize=10, color=STAR_COLOUR,
                markeredgecolor="white", linestyle="None", label="City Hall / Square"),
+        Patch(facecolor="#EEF4F7", edgecolor="#C7D8E0", label="Sea, lakes and rivers"),
     ])
-    fig.legend(handles=handles, ncol=5, loc="upper center", bbox_to_anchor=(.5, .89),
-               frameon=False, fontsize=9)
+    fig.legend(handles=handles, ncol=6, loc="upper center", bbox_to_anchor=(.5, .89),
+               frameon=False, fontsize=8)
     fig.text(.02, .058, "Sources: Inside Airbnb; DAGI/DAWA; Kartverket; Statistics Sweden; verified civic references. "
-             "Surrounding municipalities are display context only.", fontsize=8, color=theme.INK, va="top")
+             "Municipal context is display only.\n"
+             "Generated using European Union's Copernicus Land Monitoring Service information: "
+             "EU-Hydro 2006–2012 (adapted; display only).", fontsize=8, color=theme.INK, va="top")
     fig.canvas.draw()
     renderer = fig.canvas.get_renderer()
     for ax in fig.axes:

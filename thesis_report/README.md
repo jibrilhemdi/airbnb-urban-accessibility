@@ -12,9 +12,9 @@ manuscript still requires a final editorial and citation review.
 | --- | --- |
 | `main.tex` | Title, author, supervisors, submission date and all thesis text |
 | `preamble.tex` | Fonts, margins, spacing, bibliography style and draft-note appearance |
-| `references.bib` | Researcher-edited literature bibliography |
-| `data_references.bib` | Verified Chapter 4 dataset, source and governance references |
-| `methods_references.bib` | Verified Methods references |
+| `references.bib` | All literature, dataset, governance and Methods references |
+| `main.pdf` | Canonical compiled thesis; generated locally and excluded from Git |
+| `.latexmkrc` | XeLaTeX build settings; auxiliary files stay in `build/` |
 | `figures/` | Manuscript maps and code-generated explanatory diagrams |
 | `tables/` | Generated aggregate result tables and their checksum/source manifest |
 | `supplements/` | Original supplied template, examples and licensed UCPH logos; leave intact |
@@ -31,16 +31,19 @@ From the project root:
 
 ```sh
 cd thesis_report
-latexmk -xelatex -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+latexmk -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-This produces `build/main.pdf`. The LaTeX dependencies use a TeX distribution,
-separate from the project's unchanged Python `requirements.txt`. The bibliography
-uses Biber, which `latexmk` invokes when needed. The bibliography combines
-`references.bib`, `data_references.bib` and `methods_references.bib`. The
-local researcher-edited literature file may contain duplicate keys; Biber
-reports these and retains the first entry. Reconcile any such entries during
-literature editing. Chapter 4 source entries use separate keys.
+This produces **`main.pdf` beside `main.tex`**. The local `.latexmkrc` selects
+XeLaTeX and places auxiliary files in `build/`. The LaTeX dependencies use a TeX
+distribution, separate from the project's unchanged Python `requirements.txt`.
+Biber reads only `references.bib`; all unique entries from the former data and
+Methods bibliographies have been merged there. Duplicate literature keys were
+removed while retaining the first definition previously selected by Biber.
+The former chapter-preview PDFs and separate bibliography files are retired;
+their pre-consolidation copies and checksums remain in the local archive.
+Do not maintain separate chapter drafts or PDFs. Edit all prose in `main.tex`
+and all citations in `references.bib`, then rebuild this one manuscript.
 The unchanged KU package also emits a harmless package-name/path warning when
 loaded from `supplements/`.
 
@@ -52,7 +55,7 @@ in comments are writing references, not LaTeX dependencies. Upload selected
 public figures separately when you add them; do not upload the research repo,
 private data, credentials, individual predictions or model files.
 
-Keep `tables/`, `figures/` and all bibliography files in the upload. The
+Keep `tables/`, `figures/` and `references.bib` in the upload. The
 Chapter 4 map and three tables accompany the six result tables in `main.tex`.
 The six result tables are generated from the final aggregate exports,
 with original paths, checksums and scientific run identities recorded in
@@ -80,7 +83,14 @@ writes or model fitting:
 ```
 
 The manuscript map rerenders the frozen geometry with compact spacing and `N`
-arrow labels. The completed original in `outputs/figures/study_areas.png` remains
+arrow labels. Sea, lakes and rivers are shown using a separate, adapted
+Copernicus EU-Hydro 2006--2012 display layer; analytical masks, group boundaries,
+area denominators and samples remain unchanged. Its immutable source responses,
+checksums and acquisition receipts are local under `data/raw/cartographic_context/`,
+and its authoritative geometry is isolated in `cartography.manuscript_water`
+in PostGIS. The frozen selector is `config/reporting/manuscript_water.json`;
+`scripts/thesis_water_context.py` checks it without reacquisition.
+The completed original in `outputs/figures/study_areas.png` remains
 unchanged. The accommodation table reports blank-price counts and percentages in original
 source records before all filters; room categories are descriptive only. The
 generator and its `--check` require the existing local PostGIS connection from
