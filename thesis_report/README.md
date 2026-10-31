@@ -56,7 +56,7 @@ public figures separately when you add them; do not upload the research repo,
 private data, credentials, individual predictions or model files.
 
 Keep `tables/`, `figures/` and `references.bib` in the upload. The
-Chapter 4 map and three tables accompany the six result tables in `main.tex`.
+Chapter 4 map and four tables accompany the six result tables in `main.tex`.
 The six result tables are generated from the final aggregate exports,
 with original paths, checksums and scientific run identities recorded in
 `tables/manifest.json`. Edit chapter prose in `main.tex`; edit table presentation
@@ -86,6 +86,11 @@ writes or model fitting:
 .venv/bin/python scripts/build_thesis_data_assets.py
 .venv/bin/python scripts/build_thesis_data_assets.py --check
 ```
+
+The Section 4.1 district table lists the frozen operational group names from
+PostGIS and verifies them against the accepted provider mapping and final group
+counts (11/17/11). It distinguishes these analytical labels from a claim about
+current official districts.
 
 The manuscript map rerenders the frozen geometry with compact spacing and `N`
 arrow labels. Sea, lakes and rivers are shown using a separate, adapted
@@ -130,8 +135,10 @@ in Chapter 4. `catchment_comparison.png`,
 `random_vs_loao_validation_schematic.png` and `spatial_grid_sensitivities.png`
 explain accessibility, neighbourhood holdouts and the six block configurations
 in Methods. The main-text maps use Copenhagen; `_oslo.png` and `_stockholm.png`
-companions to both validation figures appear in Appendix B. Keep all eight PNGs
-in the Overleaf upload.
+companions to both validation figures appear in Appendix B. The three block
+figures reserve a white gap above the “Saved test fold” legend; the generator
+verifies at least 10 points between the legend and the maps. Keep all eight
+PNGs in the Overleaf upload.
 
 The generator reads the existing PostGIS samples, saved outer memberships,
 destinations and geometry in read-only transactions. The catchment alone

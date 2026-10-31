@@ -42,7 +42,7 @@ QUERY = ROOT / "sql/queries/thesis_missingness_by_accommodation.sql"
 def read_details():
     design, cities = load_design()
     selected = json.loads((ROOT / "config/study/geography_selection.json").read_text())
-    data = {"cities": cities, "geometries": {}}
+    data = {"cities": cities, "geometries": {}, "districts": {}}
     counts, provenance = {}, {"transaction": "READ ONLY", "sources": {}}
     engine = get_engine()
     try:
@@ -65,8 +65,21 @@ def read_details():
                     "ORDER BY geometry_key"), {"run": pointer["run_id"], "city": city}).mappings().all()
                 data["geometries"][city] = [
                     {"key": r["geometry_key"], "properties": r["properties"],
-                     "geometry": shape(json.loads(r["geometry"]))} for r in rows
+                    "geometry": shape(json.loads(r["geometry"]))} for r in rows
                 ]
+                groups = [r["properties"] for r in rows if r["geometry_key"].startswith("group:")]
+                names = [r["group"] for r in groups]
+                mapping = cities[city]["operational_mapping"]
+                if (len(names) != cities[city]["operational_count"]
+                        or len(names) != len(set(names))
+                        or set(names) != set(mapping.values())
+                        or set(names) != {r["name"] for r in summary["groups"]}):
+                    raise ValueError("Frozen district names/counts disagree with study geography")
+                for group in groups:
+                    expected = sorted(raw for raw, name in mapping.items() if name == group["group"])
+                    if sorted(group["raw_components"]) != expected:
+                        raise ValueError("Frozen provider-to-group mapping differs")
+                data["districts"][city] = sorted(groups, key=lambda r: r["group"])
                 geometry_digest = canonical_hash([dict(r) for r in rows])
                 old = cities[city]["historical_listing_selection"]
                 scope = Scope(old["source_version"], old["city"], old["snapshot"],
@@ -109,6 +122,7 @@ def read_details():
     finally:
         engine.dispose()
     provenance["accommodation_missingness"] = counts
+    provenance["operational_groups"] = data["districts"]
     provenance["code"] = {p: sha256_file(ROOT / p) for p in (
         "scripts/thesis_data_detail.py", "sql/queries/thesis_missingness_by_accommodation.sql",
         "src/reporting/thesis_outputs.py", "src/reporting/thesis_style.py",

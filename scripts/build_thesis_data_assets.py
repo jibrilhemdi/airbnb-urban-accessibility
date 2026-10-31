@@ -99,6 +99,23 @@ def render() -> dict[str, bytes]:
         "least one required predictor. All four predictive models share rows and folds; "
         "no missing outcome is imputed.")}
 
+    rows = []
+    for city in CITIES:
+        names = [r["group"] for r in map_data["districts"][city.lower()]]
+        if len(names) != int(by_city[city]["operational_neighbourhoods"]):
+            raise ValueError("District table count differs from final sample summary")
+        rows.append(" & ".join([city, str(len(names)), "; ".join(names)]) + r" \\")
+        if city != CITIES[-1]:
+            rows.append(r"\addlinespace")
+    outputs["tables/data_districts.tex"] = table(
+        "data-districts", "Districts and other operational validation areas by city.",
+        r"@{}>{\raggedright\arraybackslash}p{0.17\textwidth}r >{\raggedright\arraybackslash}X@{}",
+        "City & Groups & District and area names", rows,
+        r"Source: frozen Inside Airbnb geography \parencite{data_inside_cph2026,data_inside_oslo2026,data_inside_stockholm2026}. "
+        "Names identify the study's validation groups, not a certification of current official districts. "
+        "Copenhagen includes Frederiksberg; Oslo includes Sentrum and Marka. "
+        "Stockholm's eleven groups combine fourteen provider labels.", flexible=True)
+
     periods = [u["reference_period"] for u in context["copenhagen"]["density_units"]]
     if not all("2026Q3" in p for p in periods):
         raise ValueError("Copenhagen density period changed")
@@ -187,7 +204,7 @@ def main() -> None:
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(raw)
-    print("PASS: three Chapter 4 tables, compact map and provenance" if args.check else "Rendered Chapter 4 assets from pinned evidence")
+    print("PASS: four Chapter 4 tables, compact map and provenance" if args.check else "Rendered Chapter 4 assets from pinned evidence")
 
 
 if __name__ == "__main__":

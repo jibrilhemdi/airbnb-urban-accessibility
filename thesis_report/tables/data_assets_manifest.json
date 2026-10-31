@@ -1,6 +1,6 @@
 {
   "generator": "scripts/build_thesis_data_assets.py",
-  "generator_sha256": "f6672cad2aeb1ab9ae5a06395d5e0efb9a24557bc292864fbb8af2de38eff629",
+  "generator_sha256": "71b6c3eab3f134440082b0a5fdd663a13b1bddb44beb482d9c0c7787bd199b1b",
   "inputs": {
     "reports/thesis_artifact_manifest.json": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52",
     "outputs/tables/city_sample_summary.csv": "3b5869d36e98ce72f44db992219799a99728c3e1fc7cc56929ecb13dc803d57f",
@@ -130,6 +130,7 @@
   },
   "outputs": {
     "tables/data_samples.tex": "b715643d5129e631371551e7f1e4b575535f1ce8cabd2ccfcd9e54a86849d7d6",
+    "tables/data_districts.tex": "ad8061910c2f7282e6f43b5a0b16d1cd5b90535e415d89b29d10de4f9ffcd9fd",
     "tables/data_sources.tex": "73bbf82324e77eb77d9eed42eb84aefb40d533460ccf5022f020461e4d6693ce",
     "tables/data_missingness.tex": "fab425ba9ef72ed297ad750b58df6a93c8460247f42a13cfd446b8691ffc81eb",
     "figures/study_areas.png": "7f7253affc4384d3679f80832dc1539cb3abb74918be65853ed58cb493882aaa"
@@ -349,8 +350,253 @@
         }
       }
     },
+    "operational_groups": {
+      "copenhagen": [
+        {
+          "group": "Amager Vest",
+          "raw_components": [
+            "Amager Vest"
+          ]
+        },
+        {
+          "group": "Amager Øst",
+          "raw_components": [
+            "Amager st"
+          ]
+        },
+        {
+          "group": "Bispebjerg",
+          "raw_components": [
+            "Bispebjerg"
+          ]
+        },
+        {
+          "group": "Brønshøj-Husum",
+          "raw_components": [
+            "Brnshj-Husum"
+          ]
+        },
+        {
+          "group": "Frederiksberg",
+          "raw_components": [
+            "Frederiksberg"
+          ]
+        },
+        {
+          "group": "Indre By",
+          "raw_components": [
+            "Indre By"
+          ]
+        },
+        {
+          "group": "Nørrebro",
+          "raw_components": [
+            "Nrrebro"
+          ]
+        },
+        {
+          "group": "Valby",
+          "raw_components": [
+            "Valby"
+          ]
+        },
+        {
+          "group": "Vanløse",
+          "raw_components": [
+            "Vanlse"
+          ]
+        },
+        {
+          "group": "Vesterbro-Kongens Enghave",
+          "raw_components": [
+            "Vesterbro-Kongens Enghave"
+          ]
+        },
+        {
+          "group": "Østerbro",
+          "raw_components": [
+            "sterbro"
+          ]
+        }
+      ],
+      "oslo": [
+        {
+          "group": "Alna",
+          "raw_components": [
+            "Alna"
+          ]
+        },
+        {
+          "group": "Bjerke",
+          "raw_components": [
+            "Bjerke"
+          ]
+        },
+        {
+          "group": "Frogner",
+          "raw_components": [
+            "Frogner"
+          ]
+        },
+        {
+          "group": "Gamle Oslo",
+          "raw_components": [
+            "Gamle Oslo"
+          ]
+        },
+        {
+          "group": "Grorud",
+          "raw_components": [
+            "Grorud"
+          ]
+        },
+        {
+          "group": "Grünerløkka",
+          "raw_components": [
+            "Grünerløkka"
+          ]
+        },
+        {
+          "group": "Marka",
+          "raw_components": [
+            "Marka"
+          ]
+        },
+        {
+          "group": "Nordre Aker",
+          "raw_components": [
+            "Nordre Aker"
+          ]
+        },
+        {
+          "group": "Nordstrand",
+          "raw_components": [
+            "Nordstrand"
+          ]
+        },
+        {
+          "group": "Sagene",
+          "raw_components": [
+            "Sagene"
+          ]
+        },
+        {
+          "group": "Sentrum",
+          "raw_components": [
+            "Sentrum"
+          ]
+        },
+        {
+          "group": "St. Hanshaugen",
+          "raw_components": [
+            "St. Hanshaugen"
+          ]
+        },
+        {
+          "group": "Stovner",
+          "raw_components": [
+            "Stovner"
+          ]
+        },
+        {
+          "group": "Søndre Nordstrand",
+          "raw_components": [
+            "Søndre Nordstrand"
+          ]
+        },
+        {
+          "group": "Ullern",
+          "raw_components": [
+            "Ullern"
+          ]
+        },
+        {
+          "group": "Vestre Aker",
+          "raw_components": [
+            "Vestre Aker"
+          ]
+        },
+        {
+          "group": "Østensjø",
+          "raw_components": [
+            "Østensjø"
+          ]
+        }
+      ],
+      "stockholm": [
+        {
+          "group": "Bromma",
+          "raw_components": [
+            "Bromma"
+          ]
+        },
+        {
+          "group": "Enskede-Årsta-Vantör",
+          "raw_components": [
+            "Enskede-Årsta-Vantörs"
+          ]
+        },
+        {
+          "group": "Farsta",
+          "raw_components": [
+            "Farsta"
+          ]
+        },
+        {
+          "group": "Hägersten-Älvsjö",
+          "raw_components": [
+            "Hägersten-Liljeholmens",
+            "Älvsjö"
+          ]
+        },
+        {
+          "group": "Hässelby-Vällingby",
+          "raw_components": [
+            "Hässelby-Vällingby"
+          ]
+        },
+        {
+          "group": "Järva",
+          "raw_components": [
+            "Rinkeby-Tensta",
+            "Spånga-Tensta"
+          ]
+        },
+        {
+          "group": "Kungsholmen",
+          "raw_components": [
+            "Kungsholmens"
+          ]
+        },
+        {
+          "group": "Norra innerstaden",
+          "raw_components": [
+            "Norrmalms",
+            "Östermalms"
+          ]
+        },
+        {
+          "group": "Skarpnäck",
+          "raw_components": [
+            "Skarpnäcks"
+          ]
+        },
+        {
+          "group": "Skärholmen",
+          "raw_components": [
+            "Skärholmens"
+          ]
+        },
+        {
+          "group": "Södermalm",
+          "raw_components": [
+            "Södermalms"
+          ]
+        }
+      ]
+    },
     "code": {
-      "scripts/thesis_data_detail.py": "8dd568d2b18da490d7a441c49b7fb9bf70ba01d053bceaabd62f1650e6608fac",
+      "scripts/thesis_data_detail.py": "a0cdd034c9101c1d4d1cfc6521c11c72f1bf56955810a32b8d1f449d27207e88",
       "sql/queries/thesis_missingness_by_accommodation.sql": "243aa0f5acd184b4abcedbb222cb19339db3c2fec551f9cc95df17cfab90d1ef",
       "src/reporting/thesis_outputs.py": "c04b99a3914339e51a7bdf129c3c2dbf91051b2a8e86a4e4b51669cae3f3f231",
       "src/reporting/thesis_style.py": "4aeb8a0e5576558741f87108440fdd0df4d4e6f8085213c86c8b2f8efcf4901e",

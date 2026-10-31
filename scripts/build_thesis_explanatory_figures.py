@@ -316,7 +316,7 @@ def validation(data, city="copenhagen"):
 
 def grids(data, city="copenhagen"):
     fig, axes = plt.subplots(2, 3, figsize=(11.5, 9))
-    fig.subplots_adjust(left=.015, right=.985, top=.915, bottom=.065, wspace=.04, hspace=.15)
+    fig.subplots_adjust(left=.015, right=.985, top=.915, bottom=.10, wspace=.04, hspace=.15)
     fig.text(.015, .99, data["cities"][city]["display_name"]+" · six spatial block designs · "
              +data["cities"][city]["metric_crs"], va="top", fontsize=17, weight="bold")
     details = {"city":city, "metric_crs":data["cities"][city]["metric_crs"]}
@@ -347,9 +347,16 @@ def grids(data, city="copenhagen"):
             ax.set_title(f"{size/1000:g} km · {label}", loc="left", fontsize=15)
             details[scheme] = {"cell_size_m": size, "origin_fraction": [shift, shift], "visible_cells": len(visible),
                                "suppressed_cells": len(cells)-len(visible), "test_n": len(part)}
-    fig.legend(handles=[Patch(color=c, label=str(i)) for i, c in enumerate(FOLDS, 1)],
+    legend = fig.legend(handles=[Patch(color=c, label=str(i)) for i, c in enumerate(FOLDS, 1)],
                title="Saved test fold", title_fontsize=13,
                ncol=5, loc="lower center", bbox_to_anchor=(.5, .005), fontsize=13)
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    gap = min(ax.get_window_extent(renderer).y0 for ax in axes[1]) - legend.get_window_extent(renderer).y1
+    gap_points = gap * 72 / fig.dpi
+    if gap_points < 10:
+        raise ValueError("Grid legend needs at least 10 points of white space below the maps")
+    details["legend_gap_points"] = round(gap_points, 3)
     return png(fig), details
 
 

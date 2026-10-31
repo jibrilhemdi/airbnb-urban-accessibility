@@ -1,6 +1,6 @@
 {
   "generator": "scripts/build_thesis_explanatory_figures.py",
-  "generator_sha256": "236e276dc676aa02275dc8d8431d5c2b64972db70cb463a3b0b7898396272004",
+  "generator_sha256": "9725958f5a3850a7a7ef49bde4fb66ef8f1dafacc3986c12cbe37ba8ac0c2605",
   "inputs": {
     "config/study/design.json": "d8df5d0e50f4b0bb63ad8697d19c3d76a1a3becae45e37e0473c69645b52c6ef",
     "config/study/cities.json": "c9e6a920796d2a06c741f6734cde63cb72c224364fe971dfca85c327686e6487",
@@ -982,7 +982,8 @@
         "visible_cells": 32,
         "suppressed_cells": 0,
         "test_n": 12408
-      }
+      },
+      "legend_gap_points": 12.24
     },
     "random_vs_loao_validation_schematic_oslo": {
       "city": "oslo",
@@ -1076,7 +1077,8 @@
         "visible_cells": 49,
         "suppressed_cells": 11,
         "test_n": 8529
-      }
+      },
+      "legend_gap_points": 12.24
     },
     "random_vs_loao_validation_schematic_stockholm": {
       "city": "stockholm",
@@ -1170,7 +1172,8 @@
         "visible_cells": 52,
         "suppressed_cells": 10,
         "test_n": 2495
-      }
+      },
+      "legend_gap_points": 12.24
     }
   },
   "embedded_figure_text": {
@@ -1414,11 +1417,11 @@
     "figures/catchment_comparison.png": "35ab99af52f745b4c3324e17dce04684e2d055a5b12e17587f751d83d72272af",
     "figures/price_distributions.png": "ec86be3bf118b95bed2bfbd3653eda3209d300faeaed3eb9695fbc4f189fad8f",
     "figures/random_vs_loao_validation_schematic.png": "dab8f95a82ae00e05f12b382dbbfb5a0ec66abf08f9038bd7afe20ae8698224f",
-    "figures/spatial_grid_sensitivities.png": "320cdf71b0c5dc5ef766b1004702530fdcc943d55a928d84942fb381d1a8246f",
+    "figures/spatial_grid_sensitivities.png": "3e99886ced9552761104aa1d9c94cfcbed5f7921a223d8a9373acdabf422e0d2",
     "figures/random_vs_loao_validation_schematic_oslo.png": "8218dd4438ac971a74c305ea1d3b58ca045af19155f4818c9dac86eeaad46fc3",
-    "figures/spatial_grid_sensitivities_oslo.png": "f19c6a610ab8046f8ee2863808af030fe027c973e11b4f6264d33750a366a342",
+    "figures/spatial_grid_sensitivities_oslo.png": "36f3710e02768d028b548b1822513cd78cf26b95e8c44a4b37402ea1d5571f55",
     "figures/random_vs_loao_validation_schematic_stockholm.png": "a38a43476711a5fae3d31461bbf2751e97841e6250ae05c418221c3bcd3f9e33",
-    "figures/spatial_grid_sensitivities_stockholm.png": "02903187b99c74348f3c47a55d700022bad6d78c86b44a1c0425d98432e21c49"
+    "figures/spatial_grid_sensitivities_stockholm.png": "33d5f8b3787c6ce834a72f351a1936b47c02a732a679791d3a3bce12bdfcf5ce"
   },
   "privacy": "Validation PNGs show individual approximate provider locations at researcher request. No identifiers or coordinate tables are exported. Block maps suppress cells with N<5; other aggregation rules are unchanged.",
   "style_request": "31 October 2026: archived blue/orange layout with one actual dot per listing, superseding the prior aggregated-dot choice for the three validation illustrations",
