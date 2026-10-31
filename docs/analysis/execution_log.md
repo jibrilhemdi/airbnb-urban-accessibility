@@ -1567,3 +1567,88 @@ consolidated in full, as requested. Unrelated old output deletions remain
 untouched and excluded. A normal incremental checkpoint uses existing v4,
 recorded origin, explicit HEAD:refs/heads/v4 and remote/local SHA verification;
 a publication failure is LOCAL_ONLY. No commit contains its own SHA.
+
+
+## 31 October 2026 — Individual validation dots, metric equations and Table 6.1 means
+
+Applied the researcher's new explicit request for Figure 5.2 to use actual
+listing dots in the archived layout. This replaces the earlier aggregated-dot
+choice for the validation illustration and its Oslo/Stockholm companions only.
+The frozen implementation contract remains dated historical evidence; the
+current exception and its scope are recorded in
+thesis_dots_metrics_means_20261031.md and the figure manifest. No general
+aggregation-rule waiver or scientific design change is inferred.
+
+Each validation panel now plots every frozen common-sample listing once at its
+existing approximate provider coordinates, without jitter, sampling or cell
+snapping. Equal marker area is 3 square points, with blue training/orange test.
+Raw coordinates, IDs and memberships are not exported as tables; only raster
+illustrations are published. Captions and the Data legal/ethical paragraph
+accurately disclose the display. Coordinate displacement is not described as
+an anonymity guarantee. Other location-summary rules and block cells' N>=5
+suppression remain unchanged. All maps retain saved folds, geometry, extents,
+CRSs, scale bars and named holdouts; no outcome chooses an illustrated split.
+
+Verified actual plot offsets and map bounds: Copenhagen random train/test
+9,926/2,482, Nørrebro 10,227/2,181; Oslo random 6,823/1,706, Grünerløkka
+6,940/1,589; Stockholm random 1,996/499, Södermalm 1,800/695. Each split covers
+its entire common sample. The archived image's old 12,412 Copenhagen rows are
+not reused. Existing 500 m summary maps and five other explanatory PNGs retain
+exact prior bytes. All eight figures pass deterministic --check.
+
+Section 5.4 now defines MAE and predictive R² alongside RMSE and explains the
+symbols, log-price units, direction of improvement, negative R² and the
+constant-outcome limitation. The R² benchmark is the evaluated sample's
+observed mean, matching the executed metrics function. That mean is not passed
+into model fitting. Held-out scores remain pooled rather than averaged across
+neighbourhoods. No scores, predictions or models are replaced by this edit.
+
+Table 6.1 now displays median/mean pairs under Euclidean and Walking. The
+original descriptive CSV lacks means and remains unchanged. Added
+scripts/thesis_accessibility_summary.py to read the same frozen prediction
+samples from authoritative PostGIS in enforced READ ONLY transactions, verify
+sample/record hashes and all 751 scientific checkpoint identities, and compare
+N plus all seven published quantiles/extrema for every one of 24 descriptive
+cells. These checks pass. Only then are arithmetic means computed. Missing or
+nonfinite inputs stop calculation; no values are filled. Count means use
+original *_e_10/*_w_10 counts, not log-transformed measures; walking-distance
+means use saved minutes ×5/60. Distances use three decimals, mean counts one.
+Full-precision aggregates, column definitions and source/code identities are in
+tables/manifest.json. The five other result tables retain exact prior bytes.
+No CSV is introduced as an alternative analytical source.
+
+Updated the reusable generators, generated views/manifests, main.tex and writing
+guide. References.bib is byte-identical to the pre-task copy. The only canonical
+compiled manuscript remains thesis_report/main.pdf; no chapter PDF or extra
+bibliography is reintroduced. All raw bytes, study selectors, persisted SQL
+identities, completed scientific exports, fitted artifacts and saved predictions
+remain unchanged. No acquisition, analytical SQL write, feature reconstruction,
+tuning, model fitting or outcome imputation occurs.
+
+Validation: six-table deterministic --check with all quantile comparisons,
+eight-figure deterministic --check with dot counts/bounds, Methods-assets
+--check, audited Python compilation, archive/source hash checks and scoped
+whitespace checks PASS. Full working and isolated staged-source XeLaTeX/latexmk/Biber builds PASS;
+the canonical manuscript has 44 pages without undefined citations/references, bibliography warnings,
+overfull boxes or oversized floats. Visually checked Figure 5.2 and companion
+images, Section 5.4 equations/explanations and Table 6.1 in rendered PDF pages.
+The inherited KU package-name warning and one underfull bibliography paragraph
+remain. No additional warning or new reference is needed for the standard
+metric equations.
+
+The working main body is approximately 64,537 normalised PDF-text characters,
+plus 3,442 in eight explanatory PNGs and roughly 670 in the study-area map:
+about 68,600 including spaces, appendices and draft prompts. Front matter and
+references remain excluded under the previously disclosed counting assumption.
+All extracted PDF text is 77,070 characters before raster text, so a strict
+all-content 72,000-character count remains above the ceiling; no contrary
+length certification is made.
+
+Exact pre-feedback manuscript, bibliography, PDF, scripts, affected images and
+manifests are preserved with checksums in
+archive/thesis_dots_metrics_means_20261031/. Researcher Introduction/Literature/
+Theory prose is unchanged and excluded from staging. Only this task's main.tex
+hunks are staged; unrelated output README/ZIP deletions remain untouched. Normal
+incremental checkpoint uses existing v4 and recorded origin, explicit
+HEAD:refs/heads/v4 and remote/local SHA verification. Failed publication is
+LOCAL_ONLY. No commit contains its own SHA.

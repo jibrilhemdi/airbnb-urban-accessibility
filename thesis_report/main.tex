@@ -314,9 +314,11 @@ public repository.
 
 Reporting follows the Danish Data Protection Agency's data-minimisation and
 confidentiality principles \parencite{data_dpa_principles}. Git excludes raw
-listings, private coordinates, individual predictions and models. Listing
-summaries use 500 m cells with at least five observations; block maps suppress
-cells below five. The study-area map shows boundaries and civic markers.
+listing and coordinate files, individual predictions and models. Validation
+illustrations show one dot per listing at the provider's approximate coordinates,
+without listing identifiers. Other location summaries use 500 m cells with at
+least five observations; block maps suppress cells below five. The study-area
+map shows boundaries and civic markers.
 Coordinate displacement does not guarantee anonymity. Results do not assess
 individual rental compliance or causal housing displacement.
 
@@ -379,9 +381,10 @@ this design with random allocation.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth]{random_vs_loao_validation_schematic.png}
-  \caption{Two saved Copenhagen splits. Dots show training/test counts at
-  500 m cell centres with at least five listings; larger dots indicate more
-  listings. Nørrebro is held out on the right. Sources: frozen sample, folds
+  \caption{Two saved Copenhagen splits. Each dot represents one listing at
+  its approximate Inside Airbnb location: blue for training and orange for
+  testing. Overlapping dots can obscure individual listings. Nørrebro is held
+  out on the right. Sources: frozen sample, folds
   and provider boundaries; EPSG:25832; grid north. Oslo and Stockholm versions
   appear in Appendix~\ref{app:extended-results}.}
   \label{fig:validation-comparison}
@@ -397,14 +400,25 @@ OLS uses the same outer folds without tuning.
 
 \section{Metrics, paired contrasts and stability}
 \label{sec:metrics-method}
-For observed log price $y_i$ and held-out prediction $\hat y_i$,
-\[
- \mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat y_i)^2}.
-\]
-Lower RMSE means smaller errors; squaring gives large errors greater weight.
-Scores pool held-out listings, rather than averaging neighbourhood RMSEs.
-Mean absolute error (MAE), $R^2$ and Pearson/Spearman correlations supplement
-RMSE.
+For observed log price $y_i$ and held-out prediction $\hat y_i$, root mean
+squared error (RMSE), mean absolute error (MAE) and the coefficient of
+determination ($R^2$) are
+\begin{align*}
+ \mathrm{RMSE}&=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat y_i)^2},\\
+ \mathrm{MAE}&=\frac{1}{n}\sum_{i=1}^{n}|y_i-\hat y_i|,\\
+ R^2&=1-\frac{\sum_{i=1}^{n}(y_i-\hat y_i)^2}
+                  {\sum_{i=1}^{n}(y_i-\bar y)^2},
+ \qquad \bar y=\frac{1}{n}\sum_{i=1}^{n}y_i.
+\end{align*}
+Here $n$ is the number of evaluated listings and $\bar y$ is their observed
+mean log price. Lower RMSE and MAE mean smaller errors. RMSE gives large errors
+greater weight; MAE is the average absolute error in log-price units.
+Higher $R^2$ is better: 1 indicates perfect predictions, 0 matches prediction
+by the evaluated sample's observed mean, and negative values indicate worse
+performance than that benchmark. This mean defines a scoring benchmark; it
+does not enter model fitting. $R^2$ is undefined when observed prices have no
+variation. Scores pool held-out listings, rather than averaging neighbourhood
+scores. Pearson and Spearman correlations supplement these metrics.
 Changes are candidate minus reference; negative $\Delta$RMSE means improvement.
 
 Stability ranges resample whole neighbourhoods 2,000 times, keeping paired
@@ -830,7 +844,8 @@ The example neighbourhoods are Grünerløkka and Södermalm, respectively.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth,height=.66\textheight,keepaspectratio]{random_vs_loao_validation_schematic_oslo.png}
-  \caption{Oslo validation examples; EPSG:25833.}
+  \caption{Oslo validation examples, with one dot per listing at its approximate
+  provider location; blue denotes training and orange testing. EPSG:25833.}
   \label{fig:validation-oslo}
 \end{figure}
 
@@ -844,7 +859,9 @@ The example neighbourhoods are Grünerløkka and Södermalm, respectively.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth,height=.70\textheight,keepaspectratio]{random_vs_loao_validation_schematic_stockholm.png}
-  \caption{Stockholm validation examples; EPSG:3006.}
+  \caption{Stockholm validation examples, with one dot per listing at its
+  approximate provider location; blue denotes training and orange testing.
+  EPSG:3006.}
   \label{fig:validation-stockholm}
 \end{figure}
 

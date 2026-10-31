@@ -1,6 +1,7 @@
 """Render manuscript tables from checksum-pinned, final aggregate exports.
 
-No database writes, model fitting, row-level data or new scientific estimates.
+No database writes, model fitting or row-level exports. Additional descriptive
+means are computed from verified frozen PostGIS samples, without refitting.
 Run from any directory; --check verifies the committed presentation artifacts.
 """
 from __future__ import annotations
@@ -77,6 +78,8 @@ def render() -> dict[str, str]:
     paths.update({name: f"outputs/metrics/{name}.csv" for name in (
         "neighbourhood_performance", "robustness_contrasts", "residual_spatial_diagnostics")})
     data = {name: read(path) for name, path in paths.items()}
+    from thesis_accessibility_summary import summarise
+    accessibility_summary, summary_provenance = summarise(data["accessibility_descriptive_statistics"])
     outputs = {}
 
     def emit(name, caption, columns, header, body, note, source_names):
@@ -89,19 +92,26 @@ def render() -> dict[str, str]:
                                       ("bus", "Bus distance (km)", 3),
                                       ("food", "Food/social destinations", 0),
                                       ("culture", "Culture/tourism destinations", 0)):
-            values = [one(data["accessibility_descriptive_statistics"], city=city,
-                          concept=concept, representation=rep)["median"]
-                      for rep in ("Euclidean", "Walking")]
+            values = []
+            for rep in ("Euclidean", "Walking"):
+                row = accessibility_summary[f"{city}:{concept}:{rep}"]
+                values.extend([number(row["median"], places), number(row["mean"], places if places else 1)])
             body.append(" & ".join([city if concept == "station" else "", label,
-                                    *(number(v, places) for v in values)]) + r" \\")
+                                    *values]) + r" \\")
         if city != CITIES[-1]: body.append(r"\addlinespace")
-    emit("accessibility", "Median accessibility on the common predictive samples.",
-         "llrr", "City & Measure & Euclidean & Walking", body,
+    emit("accessibility", "Median and mean accessibility on the common predictive samples.",
+         "llrrrr", r" & & \multicolumn{2}{c}{Euclidean} & \multicolumn{2}{c}{Walking} \\ "
+         r"\cmidrule(lr){3-4}\cmidrule(lr){5-6} City & Measure & Median & Mean & Median & Mean", body,
          "Distances refer to the nearest destination within each matched category. "
          "Walking distances are converted from saved walking times at 5 km/h for this "
          "display; the models retain walking minutes. Opportunity counts use 833 m "
-         "and 10 minutes, respectively. Nearest destinations may differ between representations.",
+         "and 10 minutes, respectively. Means average original distances and counts. "
+         "Nearest destinations may differ between representations.",
          ["accessibility_descriptive_statistics"])
+    outputs["accessibility.tex"] = (
+        "% Additional means source: read-only study.records prediction_sample; "
+        "frozen selection config/study/sample_selection.json; "
+        "sample/code hashes in tables/manifest.json.\n" + outputs["accessibility.tex"])
 
     body = []
     for city in CITIES:
@@ -227,6 +237,7 @@ def render() -> dict[str, str]:
         "outputs": {name: digest(content.encode()) for name, content in outputs.items()},
         "models_refitted": False,
         "scientific_values_changed": False,
+        "additional_descriptive_summary": summary_provenance,
     }
     outputs["manifest.json"] = json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     return outputs

@@ -1,6 +1,6 @@
 {
   "generator": "scripts/build_thesis_chapter_tables.py",
-  "generator_sha256": "3cf0e0df4a5e383822ee6784420e464e5e850e498fe5a8a8d3c92c65876df44a",
+  "generator_sha256": "8c47cc3c1bfd459be61d090aeed49e68266927712101dda57e62346aa45ebcd2",
   "source_catalog": "reports/thesis_artifact_manifest.json",
   "source_catalog_sha256": "29bf5b8334080cd4e8050a2d86dd415927aa3f051b38b7d9583996be3e007a52",
   "inputs": {
@@ -759,7 +759,7 @@
     }
   },
   "outputs": {
-    "accessibility.tex": "1a59e398f7bd403e10064adfcae6e422df3c6a3695dc798b04dbf3ebce41a43a",
+    "accessibility.tex": "8a711ee12eb1028178e0c1ba86a7c332af1f7d9430909205711aee771f0261a2",
     "primary.tex": "bf9612622f010bed291a062c4bb16400a5e27844016e433bfdd3514e6a828603",
     "gains.tex": "afec4c07d7a68b21ea858a8a3487e6caa4753c369f437ca6943f2e7c1648bdd1",
     "associations.tex": "6cda058796d764e1a44d5c4b4e0f9cffbe80d7623e4f4abc1d22342b86cae7ab",
@@ -767,5 +767,213 @@
     "transfer.tex": "07a0da234abfdfa3be266a9b23451ba19f1a65aa339202032a00e7fdc93f75bd"
   },
   "models_refitted": false,
-  "scientific_values_changed": false
+  "scientific_values_changed": false,
+  "additional_descriptive_summary": {
+    "transaction": "READ ONLY",
+    "sql_packages_sha256": "250ac2d589207382443048b449244d674d3973918149243dc57c4c16fc77e80b",
+    "sources": {
+      "copenhagen": {
+        "run_id": "copenhagen_sample_20261013t014237616829z",
+        "summary_sha256": "f9e7dc8b643e25942a207ebfde11caa4bdc3a870570658d18398ea69aed96f3e",
+        "record_sha256": "938d7a392759882988b12f7f38e0d21492eef8e48218fa3f0814465a8cdd95e9",
+        "n": 12408,
+        "metric_crs": "EPSG:25832"
+      },
+      "oslo": {
+        "run_id": "oslo_sample_20261013t014519442961z",
+        "summary_sha256": "3c55e819cf21bd1200edd815286458af7505e312854b5cf3f6b939a859264c42",
+        "record_sha256": "7fb83885c86cf43a2f3488b1ead8d8a48bfba0382c55f16740ce171da3513a51",
+        "n": 8529,
+        "metric_crs": "EPSG:25833"
+      },
+      "stockholm": {
+        "run_id": "stockholm_sample_20261013t014730598505z",
+        "summary_sha256": "fb85fe4652493b9e2aec412193a2b67ca961e1d63f7ff61e4c578370e4f281c7",
+        "record_sha256": "9459460b35ced9c46211317dc47db5f5af9f318241f163a1f965d7d205f8c53e",
+        "n": 2495,
+        "metric_crs": "EPSG:3006"
+      }
+    },
+    "code_and_selection": {
+      "scripts/thesis_accessibility_summary.py": "ba784501ba804664b04c87050d5c88a4cb19d4f8885b1dcd5bc0b0f707cfa977",
+      "src/study/sample_freeze.py": "5a84ae1026bb5be3c9d6d47491879c3b6b34f28520f11b06254f36ccd9a5c6fd",
+      "src/study/store.py": "8decbe749a16952a0ee47d82873da86418889eecd54f6fb1a713e313c72fc5cd",
+      "src/pipeline/protocol.py": "22590e52cc0d36838a3df6dc8e26d4840a9a94ee240351b1f952495ca6d17286",
+      "src/pipeline/storage.py": "7ec3f8dce331ba3a421e4d1c37c6fff277edc47fda6909cecdad3414c20a4e3c",
+      "config/study/sample_selection.json": "a572a791ec74a5e0495fd5aa2bce5ce93843426306f06feade59238b5d7ce120",
+      "config/study/design.json": "d8df5d0e50f4b0bb63ad8697d19c3d76a1a3becae45e37e0473c69645b52c6ef"
+    },
+    "summaries": {
+      "Copenhagen:station:Euclidean": {
+        "mean": 0.4527252082990608,
+        "median": 0.404388456143006,
+        "n": 12408,
+        "source_column": "nearest_station_euclidean_km",
+        "display_conversion": "original units"
+      },
+      "Copenhagen:station:Walking": {
+        "mean": 0.7014731787158996,
+        "median": 0.637526574681781,
+        "n": 12408,
+        "source_column": "nearest_station_walking_minutes",
+        "display_conversion": "minutes × 5/60 to km"
+      },
+      "Copenhagen:bus:Euclidean": {
+        "mean": 0.14376745179949169,
+        "median": 0.12957288066004952,
+        "n": 12408,
+        "source_column": "nearest_bus_euclidean_km",
+        "display_conversion": "original units"
+      },
+      "Copenhagen:bus:Walking": {
+        "mean": 0.23587206481515147,
+        "median": 0.21861666112307665,
+        "n": 12408,
+        "source_column": "nearest_bus_walking_minutes",
+        "display_conversion": "minutes × 5/60 to km"
+      },
+      "Copenhagen:food:Euclidean": {
+        "mean": 123.04609929078015,
+        "median": 84.0,
+        "n": 12408,
+        "source_column": "food_e_10",
+        "display_conversion": "original units"
+      },
+      "Copenhagen:food:Walking": {
+        "mean": 73.4449548678272,
+        "median": 47.0,
+        "n": 12408,
+        "source_column": "food_w_10",
+        "display_conversion": "original units"
+      },
+      "Copenhagen:culture:Euclidean": {
+        "mean": 12.520228884590587,
+        "median": 6.0,
+        "n": 12408,
+        "source_column": "culture_e_10",
+        "display_conversion": "original units"
+      },
+      "Copenhagen:culture:Walking": {
+        "mean": 6.579464861379755,
+        "median": 3.0,
+        "n": 12408,
+        "source_column": "culture_w_10",
+        "display_conversion": "original units"
+      },
+      "Oslo:station:Euclidean": {
+        "mean": 0.7311529864861184,
+        "median": 0.668308503189484,
+        "n": 8529,
+        "source_column": "nearest_station_euclidean_km",
+        "display_conversion": "original units"
+      },
+      "Oslo:station:Walking": {
+        "mean": 0.9672956691630454,
+        "median": 0.896560773634723,
+        "n": 8529,
+        "source_column": "nearest_station_walking_minutes",
+        "display_conversion": "minutes × 5/60 to km"
+      },
+      "Oslo:bus:Euclidean": {
+        "mean": 0.1535600446039148,
+        "median": 0.137143560996615,
+        "n": 8529,
+        "source_column": "nearest_bus_euclidean_km",
+        "display_conversion": "original units"
+      },
+      "Oslo:bus:Walking": {
+        "mean": 0.24448779788527875,
+        "median": 0.21872850236730523,
+        "n": 8529,
+        "source_column": "nearest_bus_walking_minutes",
+        "display_conversion": "minutes × 5/60 to km"
+      },
+      "Oslo:food:Euclidean": {
+        "mean": 95.97537812170243,
+        "median": 63.0,
+        "n": 8529,
+        "source_column": "food_e_10",
+        "display_conversion": "original units"
+      },
+      "Oslo:food:Walking": {
+        "mean": 57.91183022628679,
+        "median": 35.0,
+        "n": 8529,
+        "source_column": "food_w_10",
+        "display_conversion": "original units"
+      },
+      "Oslo:culture:Euclidean": {
+        "mean": 10.87712510259116,
+        "median": 8.0,
+        "n": 8529,
+        "source_column": "culture_e_10",
+        "display_conversion": "original units"
+      },
+      "Oslo:culture:Walking": {
+        "mean": 5.838316332512604,
+        "median": 4.0,
+        "n": 8529,
+        "source_column": "culture_w_10",
+        "display_conversion": "original units"
+      },
+      "Stockholm:station:Euclidean": {
+        "mean": 0.49168224758783946,
+        "median": 0.388101255606976,
+        "n": 2495,
+        "source_column": "nearest_station_euclidean_km",
+        "display_conversion": "original units"
+      },
+      "Stockholm:station:Walking": {
+        "mean": 0.7738503958889492,
+        "median": 0.6403614879683803,
+        "n": 2495,
+        "source_column": "nearest_station_walking_minutes",
+        "display_conversion": "minutes × 5/60 to km"
+      },
+      "Stockholm:bus:Euclidean": {
+        "mean": 0.14824578704005242,
+        "median": 0.123360300328742,
+        "n": 2495,
+        "source_column": "nearest_bus_euclidean_km",
+        "display_conversion": "original units"
+      },
+      "Stockholm:bus:Walking": {
+        "mean": 0.24968807165454676,
+        "median": 0.21672895353581847,
+        "n": 2495,
+        "source_column": "nearest_bus_walking_minutes",
+        "display_conversion": "minutes × 5/60 to km"
+      },
+      "Stockholm:food:Euclidean": {
+        "mean": 112.36152304609219,
+        "median": 51.0,
+        "n": 2495,
+        "source_column": "food_e_10",
+        "display_conversion": "original units"
+      },
+      "Stockholm:food:Walking": {
+        "mean": 69.5498997995992,
+        "median": 28.0,
+        "n": 2495,
+        "source_column": "food_w_10",
+        "display_conversion": "original units"
+      },
+      "Stockholm:culture:Euclidean": {
+        "mean": 14.670941883767535,
+        "median": 4.0,
+        "n": 2495,
+        "source_column": "culture_e_10",
+        "display_conversion": "original units"
+      },
+      "Stockholm:culture:Walking": {
+        "mean": 8.068537074148297,
+        "median": 2.0,
+        "n": 2495,
+        "source_column": "culture_w_10",
+        "display_conversion": "original units"
+      }
+    },
+    "missing_data_filled": false,
+    "definition": "Arithmetic mean of original distances/counts, not mean log accessibility"
+  }
 }

@@ -2,7 +2,9 @@
 
 Only the public-origin catchment rebuilds a pedestrian graph in memory, using
 the exact checksummed OSM sources and executed graph builder. It never rebuilds
-listing features. No raw listing coordinates or fold memberships are exported.
+listing features. Validation PNGs display individual approximate provider
+locations at the researcher's request; no coordinate tables or identifiers
+are exported. Block maps retain their minimum-five display rule.
 """
 from __future__ import annotations
 
@@ -258,8 +260,9 @@ def validation(data, city="copenhagen"):
              f"{label} · {len(data['frames'][city]):,} listings · one saved split per design", fontsize=10.5, color=theme.INK)
     details = {"city": city, "metric_crs": data["cities"][city]["metric_crs"],
                "neighbourhood_example_rule": "Named public central neighbourhood, selected without prices or model performance",
-               "shared_map_bounds_km": list(bounds), "marker_area_rule": "1.5 + 0.15 * role count in square points",
-               "display_rule": "Both roles use the same 500 m cell centre; cell total N>=5; no individual locations"}
+               "shared_map_bounds_km": list(bounds), "marker_area_rule": "3 square points per listing, equal for train and test",
+               "display_rule": "One dot at each listing's approximate provider location; no aggregation, jitter or sampling",
+               "authorisation": "31 October 2026 feedback explicitly requests actual dots to represent listings; replaces earlier aggregated-dot choice for validation illustrations only"}
     descriptions = ["Training and test listings are spatially mixed.\nNearby listings can enter both sets.",
                     "One whole neighbourhood is held out.\nPrediction is tested in an unseen area."]
     for i, (ax, scheme, heldout, title) in enumerate(zip(axes, ("random", "neighbourhood"),
@@ -268,20 +271,22 @@ def validation(data, city="copenhagen"):
         part["test"] = part.outer_test_fold.eq(heldout).astype(int)
         if not part.test.any():
             raise ValueError("Requested saved split is unavailable: " + city)
-        part["gx"] = np.floor(part.metric_x/500).astype(int)
-        part["gy"] = np.floor(part.metric_y/500).astype(int)
-        cells = part.groupby(["gx", "gy"]).agg(n=("test", "size"), test=("test", "sum")).reset_index()
-        cells["train"] = cells.n-cells.test
-        visible = cells.loc[cells.n >= 5]
+        x, y = part.metric_x/1000, part.metric_y/1000
+        if not (x.between(bounds[0], bounds[2]) & y.between(bounds[1], bounds[3])).all():
+            raise ValueError("Listing would be clipped by the map bounds")
         base_map(ax, data, city, bounds=bounds)
         if scheme == "neighbourhood":
             geom = transform(project, data["geometries"][city]["group:"+heldout]).intersection(mask)
             outline(ax, geom, facecolor=theme.SAND, edgecolor=theme.DARK[1], lw=1.4, alpha=.42, zorder=2.5)
-        for role, color, alpha in (("train", theme.BLUE, .78), ("test", theme.SAND, .95)):
-            shown = visible.loc[visible[role] > 0]
-            ax.scatter((shown.gx*500+250)/1000, (shown.gy*500+250)/1000,
-                       s=1.5+.15*shown[role], color=color, alpha=alpha, linewidths=0,
+        plotted = {}
+        for role, test, color, alpha in (("train", 0, theme.BLUE, .62), ("test", 1, theme.SAND, .9)):
+            shown = part.loc[part.test.eq(test)]
+            points = ax.scatter(shown.metric_x/1000, shown.metric_y/1000,
+                       s=3, color=color, alpha=alpha, linewidths=0,
                        zorder=3 if role == "train" else 4)
+            plotted[role] = len(points.get_offsets())
+        if sum(plotted.values()) != len(part):
+            raise ValueError("Every listing must have exactly one plotted dot")
         if scheme == "neighbourhood":
             outline(ax, geom, facecolor="none", edgecolor=theme.DARK[1], lw=1.4, zorder=9)
             target = geom.representative_point()
@@ -298,12 +303,13 @@ def validation(data, city="copenhagen"):
         fig.text((lefts[i]+panel_width/2)/width, (footer-.055)/height, descriptions[i],
                  ha="center", va="top", fontsize=10, color=theme.INK, linespacing=1.3)
         details[scheme] = {"heldout":heldout, "train_n":len(part)-ntest, "test_n":ntest,
-                           "display_cells":len(visible), "suppressed_listings":int(cells.loc[cells.n<5,"n"].sum())}
+                           "plotted_training_dots":plotted["train"], "plotted_test_dots":plotted["test"],
+                           "suppressed_listings":0}
     fig.legend(handles=[Line2D([],[],marker="o",linestyle="",color=c,markersize=6,label=l)
                         for c,l in ((theme.BLUE,"Training"),(theme.SAND,"Test"))],
                loc="upper center", bbox_to_anchor=(.5,(footer-.40)/height), ncol=2, fontsize=10, borderaxespad=0)
     fig.text(margin/width, .075/height,
-             "500 m cell centres, N >= 5; larger dots = more listings · Saved sample, folds and provider boundaries · "
+             "One dot per listing at its approximate provider location · Saved sample, folds and provider boundaries · "
              +data["cities"][city]["metric_crs"], fontsize=8.5, color=theme.INK)
     return png(fig), details
 
@@ -469,8 +475,8 @@ def render():
                 "archived_visual_references": originals, "figures": details,
                 "embedded_figure_text": embedded_text,
                 "outputs": {p: hashlib.sha256(raw).hexdigest() for p, raw in outputs.items()},
-                "privacy": "No individual listing coordinates or identifiers exported. Dot maps show 500 m cell centres with total N>=5; block maps suppress cells with N<5.",
-                "style_request": "Archived blue/orange dot-map layout; researcher explicitly retained the 500 m aggregation rule",
+                "privacy": "Validation PNGs show individual approximate provider locations at researcher request. No identifiers or coordinate tables are exported. Block maps suppress cells with N<5; other aggregation rules are unchanged.",
+                "style_request": "31 October 2026: archived blue/orange layout with one actual dot per listing, superseding the prior aggregated-dot choice for the three validation illustrations",
                 "crs": {"listing_source": "EPSG:4326", "city_maps": {c:data["cities"][c]["metric_crs"] for c in CITIES},
                         "sample_coordinates": {c: data["cities"][c]["metric_crs"] for c in CITIES}},
                 "models_refitted": False, "listing_features_recomputed": False, "database_writes": False}

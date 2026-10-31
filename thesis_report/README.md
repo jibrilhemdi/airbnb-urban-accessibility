@@ -68,9 +68,14 @@ root using the audited environment:
 .venv/bin/python scripts/build_thesis_chapter_tables.py --check
 ```
 
-Regeneration requires the existing local `outputs/tables/`, `outputs/metrics/`
-and pinned reporting manifest. Compiling the uploaded manuscript only needs the
-generated files already in `tables/`. The script verifies source checksums and
+Regeneration requires the existing local `outputs/tables/`, `outputs/metrics/`,
+pinned reporting manifest and local PostGIS connection from `.env`. Table 6.1
+adds arithmetic means from the frozen common predictive samples through
+`scripts/thesis_accessibility_summary.py`. It checks every original quantile
+against the pinned export, averages original counts/distances, and records
+sample/code hashes in `tables/manifest.json`. The original export is unchanged.
+Compiling the uploaded manuscript only needs the generated files already in
+`tables/`. The script verifies source checksums and
 does not refit models, rerun scientific stages or alter analytical exports.
 
 Chapter 4 assets are reproduced from pinned final aggregate exports and audit
@@ -133,12 +138,16 @@ destinations and geometry in read-only transactions. The catchment alone
 reconstructs the public pedestrian graph in memory from its exact preserved
 OSM sources, checking it against the frozen graph summary. It routes from a
 public node, never a listing, and does not recompute listing features or fit
-models. Listing-based displays aggregate locations; the old individual-point
-map is not reused. At the researcher's explicit choice, the archived layout,
-blue/orange dots and held-out-area callout are matched while retaining 500 m
-cell centres with N>=5. Larger dots indicate higher training/test counts; the
-prior pies are replaced. Oslo holds out Grünerløkka and Stockholm Södermalm,
-using their saved memberships and native projected CRSs.
+models. At the researcher's explicit request on 31 October 2026, the three
+validation illustrations now show one dot per listing at its approximate
+Inside Airbnb location, with equal marker sizes and the archived blue/orange
+layout and held-out-area callout. This replaces the earlier 500 m cell-centre
+dot display for these illustrations only. No coordinate table or listing
+identifier is exported. There is no jitter, sampling or cell suppression in
+the validation dot maps; coincident locations may overlap. Block-map
+minimum-five suppression and other location-summary rules remain unchanged.
+Oslo holds out Grünerløkka and Stockholm Södermalm, using their saved
+memberships and native projected CRSs.
 Hashes, sources, CRSs, histogram counts, display exclusions
 and public-origin details are in `tables/explanatory_figures_manifest.json`.
 The archived figures and completed analytical outputs remain unchanged.

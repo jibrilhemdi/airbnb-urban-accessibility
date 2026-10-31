@@ -1,6 +1,6 @@
 {
   "generator": "scripts/build_thesis_explanatory_figures.py",
-  "generator_sha256": "bb8efd12faf2b49d3bd90d1a66205078e200142090a7edcc307ecee16fd8cde1",
+  "generator_sha256": "236e276dc676aa02275dc8d8431d5c2b64972db70cb463a3b0b7898396272004",
   "inputs": {
     "config/study/design.json": "d8df5d0e50f4b0bb63ad8697d19c3d76a1a3becae45e37e0473c69645b52c6ef",
     "config/study/cities.json": "c9e6a920796d2a06c741f6734cde63cb72c224364fe971dfca85c327686e6487",
@@ -900,21 +900,24 @@
         734.9724438389653,
         6182.446103322687
       ],
-      "marker_area_rule": "1.5 + 0.15 * role count in square points",
-      "display_rule": "Both roles use the same 500 m cell centre; cell total N>=5; no individual locations",
+      "marker_area_rule": "3 square points per listing, equal for train and test",
+      "display_rule": "One dot at each listing's approximate provider location; no aggregation, jitter or sampling",
+      "authorisation": "31 October 2026 feedback explicitly requests actual dots to represent listings; replaces earlier aggregated-dot choice for validation illustrations only",
       "random": {
         "heldout": "1",
         "train_n": 9926,
         "test_n": 2482,
-        "display_cells": 277,
-        "suppressed_listings": 151
+        "plotted_training_dots": 9926,
+        "plotted_test_dots": 2482,
+        "suppressed_listings": 0
       },
       "neighbourhood": {
         "heldout": "Nørrebro",
         "train_n": 10227,
         "test_n": 2181,
-        "display_cells": 277,
-        "suppressed_listings": 151
+        "plotted_training_dots": 10227,
+        "plotted_test_dots": 2181,
+        "suppressed_listings": 0
       }
     },
     "spatial_grid_sensitivities": {
@@ -991,21 +994,24 @@
         274.6676514000001,
         6675.270411399999
       ],
-      "marker_area_rule": "1.5 + 0.15 * role count in square points",
-      "display_rule": "Both roles use the same 500 m cell centre; cell total N>=5; no individual locations",
+      "marker_area_rule": "3 square points per listing, equal for train and test",
+      "display_rule": "One dot at each listing's approximate provider location; no aggregation, jitter or sampling",
+      "authorisation": "31 October 2026 feedback explicitly requests actual dots to represent listings; replaces earlier aggregated-dot choice for validation illustrations only",
       "random": {
         "heldout": "1",
         "train_n": 6823,
         "test_n": 1706,
-        "display_cells": 281,
-        "suppressed_listings": 539
+        "plotted_training_dots": 6823,
+        "plotted_test_dots": 1706,
+        "suppressed_listings": 0
       },
       "neighbourhood": {
         "heldout": "Grünerløkka",
         "train_n": 6940,
         "test_n": 1589,
-        "display_cells": 281,
-        "suppressed_listings": 539
+        "plotted_training_dots": 6940,
+        "plotted_test_dots": 1589,
+        "suppressed_listings": 0
       }
     },
     "spatial_grid_sensitivities_oslo": {
@@ -1082,21 +1088,24 @@
         682.9998736850241,
         6593.181405234462
       ],
-      "marker_area_rule": "1.5 + 0.15 * role count in square points",
-      "display_rule": "Both roles use the same 500 m cell centre; cell total N>=5; no individual locations",
+      "marker_area_rule": "3 square points per listing, equal for train and test",
+      "display_rule": "One dot at each listing's approximate provider location; no aggregation, jitter or sampling",
+      "authorisation": "31 October 2026 feedback explicitly requests actual dots to represent listings; replaces earlier aggregated-dot choice for validation illustrations only",
       "random": {
         "heldout": "1",
         "train_n": 1996,
         "test_n": 499,
-        "display_cells": 135,
-        "suppressed_listings": 700
+        "plotted_training_dots": 1996,
+        "plotted_test_dots": 499,
+        "suppressed_listings": 0
       },
       "neighbourhood": {
         "heldout": "Södermalm",
         "train_n": 1800,
         "test_n": 695,
-        "display_cells": 135,
-        "suppressed_listings": 700
+        "plotted_training_dots": 1800,
+        "plotted_test_dots": 695,
+        "suppressed_listings": 0
       }
     },
     "spatial_grid_sensitivities_stockholm": {
@@ -1279,7 +1288,7 @@
       "B  Leave-one-area-out cross-validation",
       "Nørrebro held out · 11 area folds  |  Train 10,227 · Test 2,181",
       "One whole neighbourhood is held out.\nPrediction is tested in an unseen area.",
-      "500 m cell centres, N >= 5; larger dots = more listings · Saved sample, folds and provider boundaries · EPSG:25832",
+      "One dot per listing at its approximate provider location · Saved sample, folds and provider boundaries · EPSG:25832",
       "Training",
       "Test"
     ],
@@ -1324,7 +1333,7 @@
       "B  Leave-one-area-out cross-validation",
       "Grünerløkka held out · 17 area folds  |  Train 6,940 · Test 1,589",
       "One whole neighbourhood is held out.\nPrediction is tested in an unseen area.",
-      "500 m cell centres, N >= 5; larger dots = more listings · Saved sample, folds and provider boundaries · EPSG:25833",
+      "One dot per listing at its approximate provider location · Saved sample, folds and provider boundaries · EPSG:25833",
       "Training",
       "Test"
     ],
@@ -1369,7 +1378,7 @@
       "B  Leave-one-area-out cross-validation",
       "Södermalm held out · 11 area folds  |  Train 1,800 · Test 695",
       "One whole neighbourhood is held out.\nPrediction is tested in an unseen area.",
-      "500 m cell centres, N >= 5; larger dots = more listings · Saved sample, folds and provider boundaries · EPSG:3006",
+      "One dot per listing at its approximate provider location · Saved sample, folds and provider boundaries · EPSG:3006",
       "Training",
       "Test"
     ],
@@ -1404,15 +1413,15 @@
   "outputs": {
     "figures/catchment_comparison.png": "35ab99af52f745b4c3324e17dce04684e2d055a5b12e17587f751d83d72272af",
     "figures/price_distributions.png": "ec86be3bf118b95bed2bfbd3653eda3209d300faeaed3eb9695fbc4f189fad8f",
-    "figures/random_vs_loao_validation_schematic.png": "a190071cd90ff2c961985bdfcd7dd687a6cf084ee4f16d34062b819d7b23f3f9",
+    "figures/random_vs_loao_validation_schematic.png": "dab8f95a82ae00e05f12b382dbbfb5a0ec66abf08f9038bd7afe20ae8698224f",
     "figures/spatial_grid_sensitivities.png": "320cdf71b0c5dc5ef766b1004702530fdcc943d55a928d84942fb381d1a8246f",
-    "figures/random_vs_loao_validation_schematic_oslo.png": "16f667397d596f8011502e23920b1fc6bf37dfbfd894bb2c0fd258559a526a78",
+    "figures/random_vs_loao_validation_schematic_oslo.png": "8218dd4438ac971a74c305ea1d3b58ca045af19155f4818c9dac86eeaad46fc3",
     "figures/spatial_grid_sensitivities_oslo.png": "f19c6a610ab8046f8ee2863808af030fe027c973e11b4f6264d33750a366a342",
-    "figures/random_vs_loao_validation_schematic_stockholm.png": "cbbed2a731785aa85ab8d5fd47ff91f2db586c9db75c535be37ddff926334329",
+    "figures/random_vs_loao_validation_schematic_stockholm.png": "a38a43476711a5fae3d31461bbf2751e97841e6250ae05c418221c3bcd3f9e33",
     "figures/spatial_grid_sensitivities_stockholm.png": "02903187b99c74348f3c47a55d700022bad6d78c86b44a1c0425d98432e21c49"
   },
-  "privacy": "No individual listing coordinates or identifiers exported. Dot maps show 500 m cell centres with total N>=5; block maps suppress cells with N<5.",
-  "style_request": "Archived blue/orange dot-map layout; researcher explicitly retained the 500 m aggregation rule",
+  "privacy": "Validation PNGs show individual approximate provider locations at researcher request. No identifiers or coordinate tables are exported. Block maps suppress cells with N<5; other aggregation rules are unchanged.",
+  "style_request": "31 October 2026: archived blue/orange layout with one actual dot per listing, superseding the prior aggregated-dot choice for the three validation illustrations",
   "crs": {
     "listing_source": "EPSG:4326",
     "city_maps": {
